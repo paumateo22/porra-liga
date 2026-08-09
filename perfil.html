@@ -56,7 +56,7 @@ async function iniciar() {
 
   const selector = document.getElementById("selector-jugador");
   selector.innerHTML = CLAS.clasificacion
-    .map((c) => `<option value="${c.slug}">${c.nombre}</option>`).join("");
+    .map((c) => `<option value="${c.slug}">${nombreConDistintivo(c)}</option>`).join("");
 
   const pedido = new URLSearchParams(location.search).get("j");
   if (pedido && CLAS.clasificacion.some((c) => c.slug === pedido)) selector.value = pedido;

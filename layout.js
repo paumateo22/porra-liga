@@ -91,6 +91,13 @@ function jornadaActual(realidad, claves) {
   return claves[claves.length - 1];
 }
 
+/* Nombre + distintivo (🏆, ⭐...) que el admin le haya asignado. El objeto
+   puede venir de clasificacion.json o de data/analisis/*.json, ambos llevan
+   el campo "distintivo" (cadena vacía si no tiene). */
+function nombreConDistintivo(c) {
+  return c.distintivo ? `${c.nombre} ${c.distintivo}` : c.nombre;
+}
+
 /* Mismo esquema que ofuscar_marcador/desofuscar_marcador en scripts/utils.py —
    tienen que coincidir símbolo a símbolo. NO es cifrado real: la clave y el
    esquema viven en este mismo fichero, público en el navegador de cualquiera,

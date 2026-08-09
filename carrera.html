@@ -81,6 +81,7 @@ async function iniciar() {
     return {
       slug: c.slug,
       nombre: c.nombre,
+      distintivo: c.distintivo || "",
       color: COLORES[i % COLORES.length],
       puntos: CLAVES.map((k) => {
         const j = c.por_jornada[k];
@@ -112,7 +113,7 @@ function construirMarcador() {
     <div class="fila-jugador" id="fila-${s.slug}" onclick="alternarJugador('${s.slug}')">
       <span class="puesto" id="puesto-${s.slug}">-</span>
       <span class="punto-color" style="background:${s.color}"></span>
-      <span class="nombre">${s.nombre}</span>
+      <span class="nombre">${s.nombre}${s.distintivo ? " " + s.distintivo : ""}</span>
       <span class="total" id="total-${s.slug}">0</span>
       <span class="delta" id="delta-${s.slug}">+0</span>
     </div>`).join("");
@@ -177,7 +178,7 @@ function pintarGrafico(hasta) {
       <path d="${d}" fill="none" stroke="${s.color}" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
       <circle cx="${x(pts.length - 1).toFixed(1)}" cy="${y(ultimo.acumulado).toFixed(1)}" r="4.5" fill="${s.color}"/>
       <text x="${(x(pts.length - 1) + 8).toFixed(1)}" y="${(y(ultimo.acumulado) + 4).toFixed(1)}"
-            fill="${s.color}" font-size="11" font-weight="bold">${s.nombre.slice(0, 8)} ${ultimo.acumulado}</text>`;
+            fill="${s.color}" font-size="11" font-weight="bold">${s.nombre.slice(0, 8)}${s.distintivo ? " " + s.distintivo : ""} ${ultimo.acumulado}</text>`;
   }).join("");
 
   document.getElementById("grafico").innerHTML = `

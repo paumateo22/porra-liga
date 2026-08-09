@@ -148,6 +148,10 @@ async function probarEscenarioReset() {
       `una fila por jugador en el resumen (${nJugadores})`);
     check(texto(doc, "#cuerpo-resumen tr td:nth-child(2)").includes(lider.nombre),
       `${lider.nombre} encabeza la tabla`);
+    if (lider.distintivo) {
+      check(texto(doc, "#cuerpo-resumen tr td:nth-child(2)").includes(lider.distintivo),
+        `el distintivo del líder (${lider.distintivo}) aparece junto a su nombre`);
+    }
     check(texto(doc, "#cuerpo-resumen tr td.col-total").startsWith(String(lider.puntos_totales)),
       "los puntos totales del líder coinciden");
     check(texto(doc, "#cuerpo-resumen tr td.col-aciertos").includes(`${lider.aciertos_exactos} / ${lider.aciertos_1x2}`),
@@ -290,6 +294,11 @@ async function probarEscenarioReset() {
       "la cabecera ya no muestra siglas de equipo, solo escudos y resultado");
     check(cuenta(doc, "#tabla-cruzada tbody .pts") > 0,
       "cada celda de pronóstico muestra el desglose de puntos debajo");
+    const jugadorConDistintivo = analisis.jugadores.find((j) => j.distintivo);
+    if (jugadorConDistintivo) {
+      check(texto(doc, "#tabla-cruzada tbody").includes(jugadorConDistintivo.distintivo),
+        `el distintivo (${jugadorConDistintivo.distintivo}) aparece en la tabla cruzada del análisis`);
+    }
 
     check(cuenta(doc, "#por-partido .match-card") === 0,
       "no queda el desglose partido a partido");
@@ -314,6 +323,10 @@ async function probarEscenarioReset() {
       "tarjetas destacadas del top 4");
     check(doc.querySelector('#cuerpo a[href^="perfil.html?j="]') !== null,
       "enlaza al perfil de cada jugador");
+    if (lider.distintivo) {
+      check(texto(doc, "#cuerpo").includes(lider.distintivo),
+        `el distintivo del líder (${lider.distintivo}) aparece en la tabla de participantes`);
+    }
   }
 
   console.log("\n═══ perfil.html ═══");
@@ -322,6 +335,10 @@ async function probarEscenarioReset() {
     check(errores.length === 0, `sin errores de JS ${errores[0] || ""}`);
     check(doc.querySelector("#selector-jugador").value === lider.slug,
       "respeta el jugador pedido por la URL");
+    if (lider.distintivo) {
+      check(doc.querySelector(`#selector-jugador option[value="${lider.slug}"]`)?.textContent.includes(lider.distintivo),
+        `el distintivo del líder (${lider.distintivo}) aparece en el selector de perfil`);
+    }
     check(cuenta(doc, "#tarjetas .match-card") === 8, "8 tarjetas de estadísticas");
     check(doc.querySelector("#grafico svg") !== null, "dibuja el gráfico de evolución");
     check(cuenta(doc, "#grafico svg circle") === lider.jornadas_jugadas,
@@ -348,6 +365,10 @@ async function probarEscenarioReset() {
       "en la última jornada el líder muestra su total real en el marcador");
     check(doc.querySelector(`#puesto-${lider.slug}`).textContent === "1",
       "el líder aparece en el puesto 1 del marcador");
+    if (lider.distintivo) {
+      check(doc.querySelector(`#fila-${lider.slug} .nombre`)?.textContent.includes(lider.distintivo),
+        `el distintivo del líder (${lider.distintivo}) aparece en su fila del marcador de carrera`);
+    }
 
     const barra = doc.querySelector("#barra");
     barra.value = "0";

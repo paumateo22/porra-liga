@@ -168,6 +168,7 @@ def main():
 
     pronosticos = {p["slug"]: cargar_pronosticos(p["slug"]) for p in participantes}
     nombres = {p["slug"]: p["nombre"] for p in participantes}
+    distintivos = {p["slug"]: p.get("distintivo", "") for p in participantes}
     ANALISIS_DIR.mkdir(parents=True, exist_ok=True)
 
     reporte = {}
@@ -220,6 +221,7 @@ def main():
                 {
                     "slug": s,
                     "nombre": nombres.get(s, s),
+                    "distintivo": distintivos.get(s, ""),
                     "aciertos_1x2": f["aciertos_1x2"],
                     "aciertos_exactos": f["aciertos_exactos"],
                     "bonus": f["bonus_rendimiento"],
@@ -267,7 +269,7 @@ def main():
     for s, a in acumulado.items():
         guardar_json(
             carpeta_participante(s) / "estadisticas" / "historial_puntos.json",
-            {"participante": s, "nombre": nombres[s], **a},
+            {"participante": s, "nombre": nombres[s], "distintivo": distintivos.get(s, ""), **a},
         )
 
     # Clasificación ordenada con desempates
@@ -284,6 +286,7 @@ def main():
             "puesto": i,
             "slug": s,
             "nombre": nombres[s],
+            "distintivo": distintivos.get(s, ""),
             "puntos_totales": a["puntos_totales"],
             "puntos_partidos": a["puntos_partidos"],
             "bonus_rendimiento": a["bonus_rendimiento"],

@@ -50,6 +50,7 @@ llama a uno de los comandos de abajo.
 | 8 | Comprueba que el motor calcula bien los casos difíciles | `test_casos_limite.py` |
 | 9 | Prepara datos de mentira para desarrollar sin red | `99_simulador.py` |
 | r | Resetea todo + descarga el calendario (inicio de temporada) | `reset.py` |
+| d | Gestiona distintivos de jugadores (🏆, ⭐...) | `gestionar_distintivos.py` |
 
 ---
 
@@ -168,6 +169,34 @@ de una shell concreta.
 
 **Cuándo usarlo:** al arrancar una temporada nueva, o para volver a un estado
 limpio después de probar cosas.
+
+---
+
+### `gestionar_distintivos.py` — Insignias junto al nombre (🏆, ⭐...)
+
+```bash
+python scripts/gestionar_distintivos.py
+```
+
+Un distintivo es un emoji que acompaña al nombre de un jugador en **toda la
+web**: clasificación, análisis, perfil, carrera y participantes. Se guarda en
+`config/participantes.json` y el motor lo copia a `data/clasificacion.json` y
+a `data/analisis/*.json` cada vez que se ejecuta — por eso, tras cualquier
+cambio, hace falta volver a correr `06_motor_puntuacion.py` para que se vea.
+
+El menú interactivo permite:
+
+- Asignar o cambiar el distintivo a alguien que ya está en la lista.
+- **Dar de alta a alguien nuevo con su distintivo por adelantado**, aunque
+  todavía no haya mandado ningún pronóstico — útil para dejarle puesto el
+  distintivo desde antes de que empiece a jugar. Cuando esa persona mande su
+  primer pronóstico, tiene que usar exactamente ese mismo nombre para que
+  encaje con el registro ya creado.
+- Quitar un distintivo.
+
+**Cuándo usarlo:** cuando quieras premiar a alguien con una insignia visual
+(campeón de una edición anterior, ganador de otra porra, etc.), en cualquier
+momento de la temporada.
 
 ---
 

@@ -43,6 +43,7 @@ def registrar_participante(nombre):
             "slug": s,
             "nombre": nombre.strip(),
             "alta": datetime.now().isoformat(timespec="seconds"),
+            "distintivo": "",
         })
         datos["participantes"].sort(key=lambda p: p["slug"])
         guardar_json(PARTICIPANTES_FILE, datos)

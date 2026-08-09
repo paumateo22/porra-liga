@@ -50,7 +50,7 @@ async function iniciar() {
   if (!clas || !clas.clasificacion.length) {
     const lista = registro.participantes;
     document.getElementById("tarjetas").innerHTML = lista.length
-      ? lista.map((p) => tarjeta({ nombre: p.nombre, slug: p.slug }, altas)).join("")
+      ? lista.map((p) => tarjeta({ nombre: p.nombre, slug: p.slug, distintivo: p.distintivo }, altas)).join("")
       : "";
     document.getElementById("cuerpo").innerHTML = `<tr><td colspan="8" class="vacio">
       ${lista.length ? "Aún no hay jornadas calculadas." : "Todavía no se ha apuntado nadie."}
@@ -69,7 +69,7 @@ async function iniciar() {
     return `
       <tr class="${c.puesto === 1 ? "podio-1" : ""}">
         <td>${c.puesto}</td>
-        <td style="text-align:left"><a href="perfil.html?j=${c.slug}" class="mult-link">${c.nombre}</a></td>
+        <td style="text-align:left"><a href="perfil.html?j=${c.slug}" class="mult-link">${nombreConDistintivo(c)}</a></td>
         <td class="nota">${altas[c.slug] ? formatearFecha(altas[c.slug]).split(",")[0] : "—"}</td>
         <td class="pts-totales">${c.puntos_totales}</td>
         <td>${c.jornadas_jugadas}</td>
@@ -89,7 +89,7 @@ function tarjeta(c, altas) {
   return `
     <div class="match-card" style="padding:16px;text-align:center">
       <div class="match-header">${c.puesto ? `${c.puesto}º clasificado` : "Participante"}</div>
-      <div class="match-score"><span>${c.nombre}</span></div>
+      <div class="match-score"><span>${nombreConDistintivo(c)}</span></div>
       <p class="nota" style="margin:8px 0 0">
         ${c.puntos_totales !== undefined ? `${c.puntos_totales} puntos · media ${media}` : "Sin datos todavía"}
       </p>

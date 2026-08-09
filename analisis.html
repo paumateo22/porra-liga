@@ -113,12 +113,12 @@ function pintarBanner() {
     <div class="banner-resultado">
       <div class="tarjeta-banner campeon">
         <div class="etiqueta">🏆 Campeón de la jornada</div>
-        <div class="nombres">${ganadores.map((j) => j.nombre).join(" y ") || "—"}</div>
+        <div class="nombres">${ganadores.map((j) => nombreConDistintivo(j)).join(" y ") || "—"}</div>
         <div class="aciertos-pie">${ganadores[0]?.aciertos_1x2 ?? 0} aciertos 1X2</div>
       </div>
       <div class="tarjeta-banner perdedores">
         <div class="etiqueta">💀 Perdedores de la jornada</div>
-        <div class="nombres">${perdedores.map((j) => j.nombre).join(" y ") || "—"}</div>
+        <div class="nombres">${perdedores.map((j) => nombreConDistintivo(j)).join(" y ") || "—"}</div>
         <div class="aciertos-pie">${perdedores[0]?.aciertos_1x2 ?? 0} aciertos 1X2</div>
       </div>
     </div>`;
@@ -149,7 +149,7 @@ function pintarTabla() {
       ${DATOS.jugadores.map((j) => `
         <tr>
           <td class="col-jugador">
-            <a href="perfil.html?j=${j.slug}" class="mult-link">${j.nombre}</a>
+            <a href="perfil.html?j=${j.slug}" class="mult-link">${nombreConDistintivo(j)}</a>
           </td>
           ${partidos.map((p) => {
             const pred = j.predicciones[p.id];
@@ -195,10 +195,10 @@ function pintarBarras() {
     return `
       <rect x="${x.toFixed(1)}" y="${y(j.puntos).toFixed(1)}" width="${w.toFixed(1)}" height="${Math.max(alto, 0).toFixed(1)}"
             fill="goldenrod" fill-opacity="${opacidad.toFixed(2)}" rx="3">
-        <title>${j.nombre}: ${desglose}</title>
+        <title>${nombreConDistintivo(j)}: ${desglose}</title>
       </rect>
       <text x="${(x + w / 2).toFixed(1)}" y="${(y(j.puntos) - 6).toFixed(1)}" text-anchor="middle" fill="#e0e0e0" font-size="12" font-weight="bold">${j.puntos}</text>
-      <text x="${(x + w / 2).toFixed(1)}" y="${H - 12}" text-anchor="middle" fill="#9ca3af" font-size="11">${j.nombre.slice(0, 8)}</text>`;
+      <text x="${(x + w / 2).toFixed(1)}" y="${H - 12}" text-anchor="middle" fill="#9ca3af" font-size="11">${j.nombre.slice(0, 7)}${j.distintivo ? " " + j.distintivo : ""}</text>`;
   }).join("");
 
   const lineasGuia = [0, Math.round(maxY / 2), maxY].map((v) => `

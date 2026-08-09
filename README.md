@@ -306,6 +306,7 @@ python main.py
   7. 🌍 Temporada demo con datos reales de SofaScore
   8. 🧪 Test de casos límite
   9. 🎲 Simulador — fase 1
+  d. 🏅 Gestionar distintivos de jugadores
 ```
 
 ### El buzón `entradas/`
@@ -352,6 +353,25 @@ En `habilitadores` puedes apagar reglas enteras poniendo `0` (por ejemplo,
 `"bonus_rendimiento": 0` desactiva el bonus para toda la temporada).
 
 Tras cualquier cambio, ejecuta la opción 4 y la clasificación se recalcula entera.
+
+### Distintivos de jugadores (🏆, ⭐...)
+
+```bash
+python scripts/gestionar_distintivos.py
+```
+
+Un emoji junto al nombre de un jugador, visible en toda la web (clasificación,
+análisis, perfil, carrera, participantes). Se guarda como campo `distintivo`
+en `config/participantes.json` y el motor lo propaga automáticamente a
+`data/clasificacion.json` y `data/analisis/*.json` en cada ejecución — tras
+asignar uno, hay que volver a correr el motor (opción 4) para que se vea.
+
+El script permite dar de alta a alguien **por adelantado, con distintivo
+incluido, aunque todavía no haya mandado ningún pronóstico** — aparecerá en la
+clasificación con 0 puntos hasta que empiece a jugar. Cuando esa persona mande
+su primer pronóstico, tiene que usar exactamente el mismo nombre para que
+encaje con el registro ya creado, si no se le crea una ficha nueva sin el
+distintivo.
 
 ### Nombres de equipo
 
