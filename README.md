@@ -306,7 +306,6 @@ python main.py
   7. 🌍 Temporada demo con datos reales de SofaScore
   8. 🧪 Test de casos límite
   9. 🎲 Simulador — fase 1
-  d. 🏅 Gestionar distintivos de jugadores
 ```
 
 ### El buzón `entradas/`
@@ -354,24 +353,46 @@ En `habilitadores` puedes apagar reglas enteras poniendo `0` (por ejemplo,
 
 Tras cualquier cambio, ejecuta la opción 4 y la clasificación se recalcula entera.
 
-### Distintivos de jugadores (🏆, ⭐...)
-
-```bash
-python scripts/gestionar_distintivos.py
-```
+### Insignias de jugadores (🏆, ⭐...)
 
 Un emoji junto al nombre de un jugador, visible en toda la web (clasificación,
-análisis, perfil, carrera, participantes). Se guarda como campo `distintivo`
-en `config/participantes.json` y el motor lo propaga automáticamente a
-`data/clasificacion.json` y `data/analisis/*.json` en cada ejecución — tras
-asignar uno, hay que volver a correr el motor (opción 4) para que se vea.
+análisis, perfil, carrera, participantes). No hace falta ningún script: se
+edita a mano un fichero de texto, `config/nombres.txt`, uno por línea:
 
-El script permite dar de alta a alguien **por adelantado, con distintivo
-incluido, aunque todavía no haya mandado ningún pronóstico** — aparecerá en la
-clasificación con 0 puntos hasta que empiece a jugar. Cuando esa persona mande
-su primer pronóstico, tiene que usar exactamente el mismo nombre para que
-encaje con el registro ya creado, si no se le crea una ficha nueva sin el
-distintivo.
+```
+Pau; Pau 🏆(Liga 2025/26)
+Ivan; Ivan ⭐(Mundial 2026)
+Miguel Dykan; Miguel Dykan 🏆(Liga 2025/26) ⭐(Mundial 2026)
+```
+
+- Antes del `;`: el nombre con el que esa persona pronostica (tal cual lo
+  escribe en `pronosticar.html`). No cambia su identidad ni cómo se casan sus
+  pronósticos — solo sirve para saber a quién va destinada la línea.
+- Después del `;`: el nombre tal como se muestra en la web, seguido de cero o
+  más insignias pegadas al final con la forma `emoji(descripción)`. La
+  descripción puede llevar espacios y símbolos (`Liga 2025/26`) — es lo que
+  aparece al pasar el cursor por encima del emoji, o al tocarlo/hacer clic en
+  él (para que funcione igual en el móvil que en el ordenador).
+- **Las insignias son acumulables**: pon tantos `emoji(descripción)` seguidos
+  como haga falta, siempre al final de la línea.
+- Una insignia **necesita sus paréntesis** para reconocerse como tal, aunque
+  la descripción quede vacía (`🔥()`); un emoji suelto sin paréntesis se trata
+  como texto normal del nombre, no como insignia. Y tienen que ir todas
+  seguidas al final: si escribes algo después de la última insignia, ninguna
+  se reconoce.
+- Líneas vacías o que empiecen por `#` se ignoran (sirven de comentario).
+
+Tras editar el fichero, ejecuta la opción 4 (o cualquiera que incluya el
+motor) para que se refleje en la web — el motor lee `nombres.txt` en cada
+pasada y actualiza `data/clasificacion.json` y `data/analisis/*.json` solo.
+
+**Se puede dar de alta a alguien por adelantado**, con insignia incluida,
+aunque todavía no haya mandado ningún pronóstico: basta con añadir su línea en
+`nombres.txt` y ejecutar el motor — se registra solo en
+`config/participantes.json` y aparece en la clasificación con 0 puntos hasta
+que empiece a jugar. Eso sí, cuando esa persona mande su primer pronóstico
+tiene que usar exactamente el mismo nombre que pusiste antes del `;`, para que
+encaje con la ficha ya creada.
 
 ### Nombres de equipo
 

@@ -17,6 +17,7 @@ PARTICIPANTES_DIR = ROOT / "participantes"
 SETTINGS_FILE = CONFIG_DIR / "settings.json"
 CALENDARIO_FILE = CONFIG_DIR / "calendario.json"
 PARTICIPANTES_FILE = CONFIG_DIR / "participantes.json"
+NOMBRES_FILE = CONFIG_DIR / "nombres.txt"
 REALIDAD_FILE = RESULTADOS_DIR / "realidad_oficial.json"
 CLASIFICACION_FILE = DATA_DIR / "clasificacion.json"
 
@@ -92,6 +93,52 @@ def listar_participantes():
     """Devuelve la lista de participantes desde config/participantes.json."""
     datos = cargar_json(PARTICIPANTES_FILE, {"participantes": []})
     return datos.get("participantes", [])
+
+
+PATRON_INSIGNIA_FINAL = re.compile(r"\s*([^\s(]+)\(([^)]*)\)$")
+
+
+def cargar_nombres_mostrados():
+    """Lee config/nombres.txt y devuelve {slug: (nombre_base, [insignias])}.
+
+    Formato del fichero, una persona por línea:
+
+        Pau; Pau 🏆(Liga 2025/26) ⭐(Mundial 2026)
+        Ivan; Ivan
+
+    Lo de antes de ";" es el nombre con el que esa persona pronostica (se
+    convierte a slug para casar con participantes/<slug>/). Lo de después es
+    lo que se muestra en la web: el nombre, seguido de cero o más insignias
+    pegadas al final con la forma "emoji(descripción)" — la descripción puede
+    llevar espacios, como "Liga 2025/26". Las insignias son acumulables y se
+    van despegando siempre desde el final de la línea. Líneas vacías o que
+    empiezan por # se ignoran.
+    """
+    resultado = {}
+    if not NOMBRES_FILE.exists():
+        return resultado
+
+    for linea in NOMBRES_FILE.read_text(encoding="utf-8").splitlines():
+        linea = linea.strip()
+        if not linea or linea.startswith("#") or ";" not in linea:
+            continue
+        login, mostrado = linea.split(";", 1)
+        login, mostrado = login.strip(), mostrado.strip()
+        if not login or not mostrado:
+            continue
+
+        insignias = []
+        resto = mostrado
+        while True:
+            m = PATRON_INSIGNIA_FINAL.search(resto)
+            if not m:
+                break
+            insignias.insert(0, {"emoji": m.group(1), "descripcion": m.group(2).strip()})
+            resto = resto[:m.start()]
+        nombre_base = resto.strip() or mostrado
+
+        resultado[slug(login)] = (nombre_base, insignias)
+    return resultado
 
 
 # Mismo esquema que ofuscarMarcador/desofuscarMarcador en layout.js — tienen

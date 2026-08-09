@@ -111,7 +111,7 @@ function pintarResumen(datos) {
   document.getElementById("cuerpo-resumen").innerHTML = tabla.map((c) => `
     <tr class="${c.puesto === 1 ? "podio-1" : ""}">
       <td>${c.puesto}</td>
-      <td style="text-align:left">${nombreConDistintivo(c)}</td>
+      <td style="text-align:left">${nombreConInsignias(c)}</td>
       <td class="col-aciertos">${c.aciertos_exactos} / ${c.aciertos_1x2}</td>
       <td class="col-aciertos">${c.bonus_rendimiento || 0}</td>
       <td class="col-jg">${c.jornadas_ganadas}</td>
@@ -134,7 +134,7 @@ function pintarJornadas(datos) {
 
   document.getElementById("cuerpo-jornadas").innerHTML = datos.clasificacion.map((c) => `
     <tr>
-      <td class="nombre-fila">${nombreConDistintivo(c)}</td>
+      <td class="nombre-fila">${nombreConInsignias(c)}</td>
       ${claves.map((k) => {
         const j = c.por_jornada[k];
         if (!j) return `<td class="celda-jornada">—</td>`;
@@ -170,7 +170,7 @@ function pintarHeatmap(datos) {
 
   document.getElementById("cuerpo-heatmap").innerHTML = datos.clasificacion.map((c) => `
     <tr>
-      <td class="nombre-fila">${nombreConDistintivo(c)}</td>
+      <td class="nombre-fila">${nombreConInsignias(c)}</td>
       ${claves.map((k) => {
         const j = c.por_jornada[k];
         const valor = j ? j.aciertos_exactos : null;

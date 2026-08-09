@@ -23,9 +23,11 @@ from utils import (
     ANALISIS_DIR,
     CALENDARIO_FILE,
     CLASIFICACION_FILE,
+    PARTICIPANTES_FILE,
     REALIDAD_FILE,
     REPORTES_DIR,
     cargar_json,
+    cargar_nombres_mostrados,
     cargar_settings,
     carpeta_participante,
     clave_partido,
@@ -156,10 +158,37 @@ def evaluar_jornada(clave, partidos_reales, total_partidos, pronosticos_todos, s
     return {"cerrada": cerrada, "filas": filas}
 
 
+def sincronizar_altas_anticipadas(nombres_mostrados):
+    """Si config/nombres.txt menciona a alguien que todavía no está en
+    config/participantes.json (no ha mandado ningún pronóstico), se le da de
+    alta con 0 pronósticos, para que ya aparezca en la clasificación con su
+    insignia puesta desde antes de empezar a jugar."""
+    registro = cargar_json(PARTICIPANTES_FILE, {"participantes": []})
+    existentes = {p["slug"] for p in registro["participantes"]}
+    nuevos = []
+    for s, (nombre_base, _) in nombres_mostrados.items():
+        if s not in existentes:
+            registro["participantes"].append({
+                "slug": s,
+                "nombre": nombre_base,
+                "alta": datetime.now().isoformat(timespec="seconds"),
+            })
+            nuevos.append(nombre_base)
+    if nuevos:
+        registro["participantes"].sort(key=lambda p: p["slug"])
+        guardar_json(PARTICIPANTES_FILE, registro)
+        print(f"   👤 Alta anticipada desde nombres.txt: {', '.join(nuevos)}")
+
+
 def main():
     settings = cargar_settings()
     calendario = cargar_json(CALENDARIO_FILE, None)
     realidad = cargar_json(REALIDAD_FILE, {})
+
+    nombres_mostrados = cargar_nombres_mostrados()
+    if nombres_mostrados:
+        sincronizar_altas_anticipadas(nombres_mostrados)
+
     participantes = listar_participantes()
 
     if not participantes:
@@ -167,8 +196,15 @@ def main():
         return 0
 
     pronosticos = {p["slug"]: cargar_pronosticos(p["slug"]) for p in participantes}
+    # El nombre que se muestra y sus insignias pueden venir de config/nombres.txt;
+    # si un slug no está ahí, se usa el nombre tal cual quedó registrado y sin
+    # insignias.
     nombres = {p["slug"]: p["nombre"] for p in participantes}
-    distintivos = {p["slug"]: p.get("distintivo", "") for p in participantes}
+    insignias_por_slug = {s: [] for s in nombres}
+    for s, (nombre_base, insignias) in nombres_mostrados.items():
+        if s in nombres:
+            nombres[s] = nombre_base
+            insignias_por_slug[s] = insignias
     ANALISIS_DIR.mkdir(parents=True, exist_ok=True)
 
     reporte = {}
@@ -221,7 +257,7 @@ def main():
                 {
                     "slug": s,
                     "nombre": nombres.get(s, s),
-                    "distintivo": distintivos.get(s, ""),
+                    "insignias": insignias_por_slug.get(s, []),
                     "aciertos_1x2": f["aciertos_1x2"],
                     "aciertos_exactos": f["aciertos_exactos"],
                     "bonus": f["bonus_rendimiento"],
@@ -269,7 +305,7 @@ def main():
     for s, a in acumulado.items():
         guardar_json(
             carpeta_participante(s) / "estadisticas" / "historial_puntos.json",
-            {"participante": s, "nombre": nombres[s], "distintivo": distintivos.get(s, ""), **a},
+            {"participante": s, "nombre": nombres[s], "insignias": insignias_por_slug.get(s, []), **a},
         )
 
     # Clasificación ordenada con desempates
@@ -286,7 +322,7 @@ def main():
             "puesto": i,
             "slug": s,
             "nombre": nombres[s],
-            "distintivo": distintivos.get(s, ""),
+            "insignias": insignias_por_slug.get(s, []),
             "puntos_totales": a["puntos_totales"],
             "puntos_partidos": a["puntos_partidos"],
             "bonus_rendimiento": a["bonus_rendimiento"],

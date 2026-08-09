@@ -21,8 +21,6 @@ MENU = [
      [ROOT / "tests" / "test_casos_limite.py"]),
     ("9", "🎲 Simulador — fase 1: preparar datos falsos",
      [ROOT / "simuladores" / "99_simulador.py"]),
-    ("d", "🏅 Gestionar distintivos de jugadores (🏆, ⭐...)",
-     [SCRIPTS / "gestionar_distintivos.py"]),
     ("r", "🧹 RESETEAR TODO + descargar calendario (inicio de temporada)",
      [ROOT / "reset.py"]),
 ]

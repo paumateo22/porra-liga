@@ -50,7 +50,6 @@ llama a uno de los comandos de abajo.
 | 8 | Comprueba que el motor calcula bien los casos difíciles | `test_casos_limite.py` |
 | 9 | Prepara datos de mentira para desarrollar sin red | `99_simulador.py` |
 | r | Resetea todo + descarga el calendario (inicio de temporada) | `reset.py` |
-| d | Gestiona distintivos de jugadores (🏆, ⭐...) | `gestionar_distintivos.py` |
 
 ---
 
@@ -172,31 +171,36 @@ limpio después de probar cosas.
 
 ---
 
-### `gestionar_distintivos.py` — Insignias junto al nombre (🏆, ⭐...)
+### `config/nombres.txt` — Insignias junto al nombre (🏆, ⭐...)
 
-```bash
-python scripts/gestionar_distintivos.py
+No es un script, es un fichero de texto que editas a mano con cualquier
+editor. Una línea por persona:
+
+```
+Pau; Pau 🏆(Liga 2025/26)
+Ivan; Ivan ⭐(Mundial 2026)
 ```
 
-Un distintivo es un emoji que acompaña al nombre de un jugador en **toda la
-web**: clasificación, análisis, perfil, carrera y participantes. Se guarda en
-`config/participantes.json` y el motor lo copia a `data/clasificacion.json` y
-a `data/analisis/*.json` cada vez que se ejecuta — por eso, tras cualquier
-cambio, hace falta volver a correr `06_motor_puntuacion.py` para que se vea.
+- Antes del `;`: el nombre con el que esa persona pronostica.
+- Después del `;`: el nombre a mostrar, con cero o más insignias pegadas al
+  final en la forma `emoji(descripción)` — acumulables, la descripción puede
+  llevar espacios. Sale al pasar el cursor por el emoji o al tocarlo/hacer
+  clic (funciona igual en móvil).
 
-El menú interactivo permite:
+Después de editar el fichero, ejecuta la opción **4** (o la 5) para que el
+motor lo lea y actualice `data/clasificacion.json` y `data/analisis/*.json`.
 
-- Asignar o cambiar el distintivo a alguien que ya está en la lista.
-- **Dar de alta a alguien nuevo con su distintivo por adelantado**, aunque
-  todavía no haya mandado ningún pronóstico — útil para dejarle puesto el
-  distintivo desde antes de que empiece a jugar. Cuando esa persona mande su
-  primer pronóstico, tiene que usar exactamente ese mismo nombre para que
-  encaje con el registro ya creado.
-- Quitar un distintivo.
+**Dar de alta a alguien por adelantado**: añade su línea en `nombres.txt`
+aunque todavía no haya mandado ningún pronóstico, y ejecuta el motor — se
+registra solo con 0 puntos, insignia incluida. Cuando esa persona mande su
+primer pronóstico tiene que usar exactamente el mismo nombre de antes del
+`;`, para que encaje con la ficha ya creada.
 
-**Cuándo usarlo:** cuando quieras premiar a alguien con una insignia visual
-(campeón de una edición anterior, ganador de otra porra, etc.), en cualquier
-momento de la temporada.
+Detalles del formato en `README.md` → "Insignias de jugadores".
+
+**Cuándo usarlo:** para premiar a alguien con una insignia visual (campeón de
+una edición anterior, ganador de otra porra, etc.), en cualquier momento de
+la temporada.
 
 ---
 

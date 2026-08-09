@@ -91,11 +91,52 @@ function jornadaActual(realidad, claves) {
   return claves[claves.length - 1];
 }
 
-/* Nombre + distintivo (🏆, ⭐...) que el admin le haya asignado. El objeto
-   puede venir de clasificacion.json o de data/analisis/*.json, ambos llevan
-   el campo "distintivo" (cadena vacía si no tiene). */
-function nombreConDistintivo(c) {
-  return c.distintivo ? `${c.nombre} ${c.distintivo}` : c.nombre;
+/* Insignias (🏆, ⭐...) que el admin le haya puesto a un jugador desde
+   config/nombres.txt. El objeto viene de clasificacion.json o de
+   data/analisis/*.json, ambos llevan "insignias": [{emoji, descripcion}, ...]
+   (lista vacía si no tiene ninguna). Son acumulables: pueden ser varias. */
+
+/* Para <option>, texto de SVG y sitios donde no se puede meter HTML: el
+   nombre seguido de los emojis pegados, sin tooltip clicable (los desplegables
+   y el texto SVG no admiten spans interactivos dentro). */
+function nombrePlano(c) {
+  const emojis = (c.insignias || []).map((i) => i.emoji).join("");
+  return emojis ? `${c.nombre} ${emojis}` : c.nombre;
+}
+
+/* Para celdas de tabla, enlaces y cualquier sitio con HTML de verdad: cada
+   insignia es un span con su descripción en el "title" (aparece al pasar el
+   cursor) y también accesible tocándola/haciéndole clic (mostrarInsigniaPopover),
+   para que funcione igual en móvil que en escritorio. */
+function nombreConInsignias(c) {
+  const insignias = c.insignias || [];
+  if (!insignias.length) return c.nombre;
+  const badges = insignias.map((ins) => {
+    const desc = String(ins.descripcion || "").replace(/"/g, "&quot;");
+    return `<span class="insignia-jugador" title="${desc}" data-desc="${desc}" onclick="mostrarInsigniaPopover(event)">${ins.emoji}</span>`;
+  }).join(" ");
+  return `${c.nombre} ${badges}`;
+}
+
+/* Al tocar/hacer clic en una insignia: muestra su descripción en una burbuja
+   flotante durante unos segundos. No navega el enlace que la contenga ni
+   dispara el onclick del elemento padre (por ejemplo, la fila de la carrera). */
+function mostrarInsigniaPopover(evento) {
+  evento.preventDefault();
+  evento.stopPropagation();
+  document.querySelectorAll(".insignia-popover").forEach((el) => el.remove());
+  const texto = evento.currentTarget.dataset.desc;
+  if (!texto) return;
+  const pop = document.createElement("div");
+  pop.className = "insignia-popover";
+  pop.textContent = texto;
+  const rect = evento.currentTarget.getBoundingClientRect();
+  pop.style.position = "fixed";
+  pop.style.left = Math.max(4, rect.left) + "px";
+  pop.style.top = (rect.bottom + 6) + "px";
+  document.body.appendChild(pop);
+  setTimeout(() => pop.remove(), 3000);
+  document.addEventListener("click", () => pop.remove(), { once: true });
 }
 
 /* Mismo esquema que ofuscar_marcador/desofuscar_marcador en scripts/utils.py —

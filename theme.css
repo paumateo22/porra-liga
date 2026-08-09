@@ -193,3 +193,11 @@ tr:hover { background-color: #2a2a2a; }
 .insignia.p { background: rgba(255,76,76,0.15); color: var(--maroon); }
 .mini-jornadas { display: flex; gap: 3px; justify-content: center; flex-wrap: wrap; }
 .mini-jornadas span { width: 22px; height: 22px; line-height: 22px; border-radius: 4px; font-size: 0.75em; background: #2a2a2a; color: #9ca3af; }
+
+/* Insignias de jugador (🏆, ⭐...) desde config/nombres.txt */
+.insignia-jugador { cursor: help; margin-left: 1px; }
+.insignia-popover {
+  background: #1a1a1a; border: 1px solid var(--gold); color: #fff; padding: 6px 10px;
+  border-radius: 6px; font-size: 0.8em; z-index: 2000; box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  max-width: 220px; pointer-events: none;
+}
