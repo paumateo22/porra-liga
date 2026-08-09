@@ -1,0 +1,28 @@
+{
+    "competicion": "LaLiga 2026-27",
+    "generado": "2026-08-09T21:32:37",
+    "jornadas_calculadas": [],
+    "desempates": [
+        "jornadas_ganadas",
+        "aciertos_exactos",
+        "aciertos_1x2"
+    ],
+    "clasificacion": [
+        {
+            "puesto": 1,
+            "slug": "pau",
+            "nombre": "Pau",
+            "puntos_totales": 0,
+            "puntos_partidos": 0,
+            "bonus_rendimiento": 0,
+            "puntos_ganador_perdedor": 0,
+            "aciertos_1x2": 0,
+            "aciertos_exactos": 0,
+            "partidos_pronosticados": 0,
+            "jornadas_jugadas": 0,
+            "jornadas_ganadas": 0,
+            "jornadas_perdidas": 0,
+            "por_jornada": {}
+        }
+    ]
+}
