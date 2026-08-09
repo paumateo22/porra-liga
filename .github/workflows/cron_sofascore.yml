@@ -1,8 +1,8 @@
 name: Scraper Horario SofaScore
 
 on:
-#  schedule:
-#    - cron: '3,23,43 * * * *'
+  schedule:
+    - cron: '3,23,43 * * * *'
   workflow_dispatch:
 
 permissions:
@@ -35,12 +35,6 @@ jobs:
       - name: Clonar el repositorio
         if: steps.date_check.outputs.is_active == 'true'
         uses: actions/checkout@v4
-
-      - name: Configurar Python
-        if: steps.date_check.outputs.is_active == 'true'
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
 
       - name: Instalar librerias
         if: steps.date_check.outputs.is_active == 'true'
