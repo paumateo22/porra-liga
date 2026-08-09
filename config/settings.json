@@ -1,0 +1,39 @@
+{
+    "competicion": {
+        "nombre": "LaLiga 2026-27",
+        "sofascore_unique_tournament_id": 8,
+        "sofascore_season_id": null,
+        "total_jornadas": 38,
+        "zona_horaria": "Europe/Madrid"
+    },
+    "habilitadores": {
+        "acierto_1x2": 1,
+        "acierto_exacto": 1,
+        "bonus_rendimiento": 1,
+        "ganador_perdedor_jornada": 1
+    },
+    "puntuaciones": {
+        "puntos_1x2": 1,
+        "puntos_exacto": 1,
+        "bonus_rendimiento": {
+            "umbral_minimo": 8,
+            "tabla": {
+                "8": 2,
+                "9": 3,
+                "10": 5
+            }
+        },
+        "ganador_jornada": 1,
+        "perdedor_jornada": -1,
+        "porcentaje_minimo_participacion": 0.55
+    },
+    "desempates": [
+        "jornadas_ganadas",
+        "aciertos_exactos",
+        "aciertos_1x2"
+    ],
+    "cierre": {
+        "modo": "por_partido",
+        "minutos_antes": 0
+    }
+}

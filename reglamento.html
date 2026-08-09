@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reglamento · Porra LaLiga</title>
+<link rel="stylesheet" href="theme.css">
+</head>
+<body>
+
+<div class="container">
+  <p class="nota" style="text-align:center">
+    Este reglamento se genera directamente desde <code>config/settings.json</code>,
+    el mismo fichero que usa el motor de puntuación. Si aquí pone un número, es
+    exactamente el que se aplica al calcular los puntos.
+  </p>
+  <div id="contenido"></div>
+</div>
+
+<script src="layout.js"></script>
+<script>
+montarCabecera({
+  titulo: "📜 Reglamento",
+  subtitulo: "Las normas, tal y como las aplica el motor",
+  pagina: "reglamento",
+});
+
+const NOMBRES_DESEMPATE = {
+  jornadas_ganadas: "número de jornadas ganadas",
+  aciertos_exactos: "aciertos exactos acumulados",
+  aciertos_1x2: "aciertos 1X2 acumulados",
+  puntos_totales: "puntos totales",
+};
+
+async function iniciar() {
+  const s = await cargar("config/settings.json", null);
+  if (!s) {
+    document.getElementById("contenido").innerHTML =
+      `<div class="vacio">No se pudo cargar la configuración.</div>`;
+    return;
+  }
+
+  const p = s.puntuaciones, h = s.habilitadores || {};
+  const bonus = p.bonus_rendimiento || { umbral_minimo: 0, tabla: {} };
+  const pct = Math.round(p.porcentaje_minimo_participacion * 100);
+
+  const bloques = [];
+
+  bloques.push(seccion("Puntos por partido", `
+    <div class="table-wrapper"><table>
+      <thead><tr><th style="text-align:left">Concepto</th><th>Puntos</th><th style="text-align:left">Detalle</th></tr></thead>
+      <tbody>
+        <tr>
+          <td style="text-align:left">Acierto 1X2</td>
+          <td class="pts-totales">${h.acierto_1x2 === 0 ? "desactivado" : "+" + p.puntos_1x2}</td>
+          <td style="text-align:left">Aciertas quién gana o el empate, sin importar el marcador.</td>
+        </tr>
+        <tr>
+          <td style="text-align:left">Acierto exacto</td>
+          <td class="pts-totales pred-exact">${h.acierto_exacto === 0 ? "desactivado" : "+" + p.puntos_exacto}</td>
+          <td style="text-align:left">
+            Se suma <strong>además</strong> del punto de 1X2, así que un marcador clavado
+            vale <strong>${p.puntos_1x2 + p.puntos_exacto} puntos</strong> en total.
+          </td>
+        </tr>
+      </tbody>
+    </table></div>`));
+
+  const filasBonus = Object.entries(bonus.tabla || {})
+    .sort((a, b) => a[0] - b[0])
+    .map(([aciertos, pts]) => `<tr><td>${aciertos} aciertos 1X2</td><td class="pts-totales">+${pts}</td></tr>`)
+    .join("");
+
+  bloques.push(seccion("Bonus de rendimiento", h.bonus_rendimiento === 0
+    ? `<p class="vacio">Desactivado esta temporada.</p>`
+    : `<p>Premio adicional al final de cada jornada según cuántos aciertos
+       <strong>1X2</strong> hayas conseguido en ella. Por debajo de
+       <strong>${bonus.umbral_minimo}</strong> aciertos no hay bonus.</p>
+       <div class="table-wrapper"><table>
+         <thead><tr><th style="text-align:left">Aciertos</th><th>Bonus</th></tr></thead>
+         <tbody>${filasBonus}</tbody>
+       </table></div>`));
+
+  bloques.push(seccion("Ganador y perdedor de la jornada", h.ganador_perdedor_jornada === 0
+    ? `<p class="vacio">Desactivado esta temporada.</p>`
+    : `<ul>
+        <li>Quien tenga <strong>más aciertos 1X2</strong> de la jornada:
+            <span class="ganador-jornada">${p.ganador_jornada >= 0 ? "+" : ""}${p.ganador_jornada} punto</span>.</li>
+        <li>Quien tenga <strong>menos aciertos 1X2</strong> de la jornada:
+            <span class="perdedor-jornada">${p.perdedor_jornada} punto</span>.</li>
+        <li>En caso de empate, <strong>todos</strong> los empatados en el máximo ganan
+            y todos los empatados en el mínimo pierden.</li>
+        <li>Si el máximo y el mínimo coinciden (todos empatados), no hay ni ganador ni perdedor.</li>
+      </ul>
+      <p class="nota">El criterio es siempre el número de aciertos 1X2, nunca los
+      puntos totales: así el bonus de rendimiento no distorsiona quién ha acertado más partidos.</p>`));
+
+  bloques.push(seccion("Requisito de participación", `
+    <p>Para <strong>optar</strong> a ganador o perdedor de jornada hay que haber
+    pronosticado <strong>más del ${pct} %</strong> de los partidos de esa jornada.</p>
+    <p>Quien no llegue a ese umbral sigue sumando los puntos de sus aciertos, pero
+    queda fuera del reparto. Evita que quien pronostica dos partidos se lleve el premio,
+    y que quien apenas juega cargue con el castigo.</p>`));
+
+  bloques.push(seccion("Cuándo se cierra una jornada", `
+    <p>El ganador y el perdedor <strong>solo se asignan cuando todos los partidos de
+    la jornada han terminado</strong>. Mientras la jornada está en curso los puntos de
+    aciertos sí se actualizan en vivo, pero el reparto de
+    ${p.ganador_jornada >= 0 ? "+" : ""}${p.ganador_jornada} / ${p.perdedor_jornada} espera.</p>
+    <p>Esto importa con los <strong>partidos aplazados</strong>: una jornada con un
+    partido pendiente en marzo no reparte ganador hasta marzo, aunque el resto se haya
+    jugado en septiembre.</p>`));
+
+  bloques.push(seccion("Cierre de pronósticos", `
+    <p><strong>El cierre es por partido, no por jornada.</strong> Cada partido se
+    bloquea en cuanto llega su hora, independientemente del resto.</p>
+    <ul>
+      <li>Puedes <strong>mandar la misma jornada tantas veces como quieras</strong>.
+          Cada envío se fusiona con lo anterior, no lo sustituye.</li>
+      <li>Los partidos <strong>ya jugados no se pueden tocar</strong>: se conserva el
+          pronóstico que enviaste en su momento.</li>
+      <li>Los partidos <strong>aún sin jugar sí se actualizan</strong>, aunque otros de
+          esa misma jornada ya se hayan disputado.</li>
+    </ul>
+    <p class="nota">El bloqueo se comprueba dos veces: en la web y otra vez al procesar
+    el fichero. Editar el JSON a mano no sirve de nada.</p>`));
+
+  bloques.push(seccion("Desempate en la clasificación general", `
+    <p>A igualdad de puntos totales, por este orden:</p>
+    <ol>${(s.desempates || []).map((d) => `<li>${NOMBRES_DESEMPATE[d] || d}</li>`).join("")}</ol>`));
+
+  bloques.push(seccion("Cómo se participa", `
+    <ol>
+      <li>Entra en <a href="pronosticar.html" class="mult-link">✍️ Pronosticar</a> y escribe tu nombre.
+          <strong>Usa siempre el mismo</strong>: es lo que te identifica.</li>
+      <li>Elige la jornada y rellena los marcadores. Los partidos ya empezados salen bloqueados.</li>
+      <li>Pulsa <em>Descargar mis pronósticos</em>. Obtendrás un fichero
+          <code>J02_TuNombre.json</code>.</li>
+      <li>Mándaselo al administrador. En cuanto lo procese, tus puntos aparecen en la
+          <a href="index.html" class="mult-link">clasificación</a>.</li>
+    </ol>
+    <p class="nota">Si vuelves a la web después de que se haya procesado tu envío, al
+    escribir tu nombre se recuperan los marcadores que mandaste.</p>`));
+
+  bloques.push(seccion("Partidos adelantados y aplazados", `
+    <p>Una jornada de LaLiga no siempre se juega entera el mismo fin de semana.
+    El sistema lo contempla:</p>
+    <ul>
+      <li>Un partido <strong>adelantado</strong> (se juega meses antes que su jornada)
+          puntúa en cuanto termina. Su jornada suma esos puntos pero sigue abierta.</li>
+      <li>Un partido <strong>aplazado</strong> no impide que el resto de la jornada
+          puntúe. El bonus se calcula sobre lo jugado hasta el momento y se ajusta solo
+          cuando llega el partido pendiente.</li>
+      <li>Puedes pronosticar un partido adelantado sin haber rellenado el resto de su
+          jornada, y completar los demás más adelante.</li>
+    </ul>`));
+
+  bloques.push(seccion("Si no pronosticas", `
+    <ul>
+      <li>Un partido sin pronóstico simplemente <strong>no suma nada</strong>. No hay
+          penalización por dejarlo en blanco.</li>
+      <li>Pero cuenta para el <strong>umbral del ${pct} %</strong>: si dejas demasiados
+          en blanco quedas fuera del reparto de ganador y perdedor de esa jornada.</li>
+      <li>Una jornada entera sin pronosticar no aparece en tu historial y no cuenta
+          como jornada jugada al calcular tu media.</li>
+      <li>Un pronóstico que llega <strong>después</strong> de que el partido haya
+          empezado se descarta. No se puede pronosticar hacia atrás.</li>
+    </ul>`));
+
+  bloques.push(seccion("Cómo se te identifica", `
+    <p>El nombre que escribes en el formulario es tu identidad en toda la porra.
+    Se convierte en una etiqueta interna: <code>Miguel Dykan</code> pasa a ser
+    <code>miguel_dykan</code>.</p>
+    <p><strong>Escribe siempre el mismo nombre.</strong> Si una jornada pones
+    <code>Pau</code> y otra <code>Pau M.</code>, el sistema entiende que sois dos
+    personas distintas y tus puntos se reparten entre dos fichas.</p>
+    <p class="nota">Mayúsculas y espacios sobrantes no importan. El navegador recuerda
+    tu nombre, así que normalmente solo lo escribes la primera vez.</p>`));
+
+  bloques.push(seccion("Ejemplo de una jornada", ejemplo(p, bonus, pct)));
+
+  bloques.push(seccion("Preguntas frecuentes", `
+    <p><strong>¿Puedo cambiar un pronóstico?</strong><br>
+    Sí, tantas veces como quieras, mientras el partido no haya empezado. Vuelve a
+    descargar la jornada y mándala otra vez: se fusiona con lo anterior.</p>
+
+    <p><strong>¿Y si mando la jornada a medias?</strong><br>
+    No pasa nada. Manda lo que tengas y completa el resto después. Cada envío se suma
+    al anterior.</p>
+
+    <p><strong>¿Puedo entrar a mitad de temporada?</strong><br>
+    Sí. Empiezas a puntuar desde tu primera jornada. Las anteriores no cuentan ni a
+    favor ni en contra, así que la clasificación general te queda cuesta arriba pero
+    puedes ganar jornadas desde el primer día.</p>
+
+    <p><strong>¿Qué pasa si el resultado que veo no cuadra?</strong><br>
+    Los resultados se toman de SofaScore automáticamente. Si detectas un error,
+    avisa al administrador: se corrige y se recalcula la temporada entera al instante.</p>
+
+    <p><strong>¿Se puede hacer trampa editando el fichero?</strong><br>
+    No sirve de nada. Al procesarlo se comprueba otra vez qué partidos estaban
+    abiertos, y los ids de partido tienen que coincidir con el calendario oficial.</p>`));
+
+  document.getElementById("contenido").innerHTML = bloques.join("");
+}
+
+/* Ejemplo numérico calculado con los valores reales de settings.json */
+function ejemplo(p, bonus, pct) {
+  const total = 10;
+  const minimo = Math.floor(total * (p.porcentaje_minimo_participacion)) + 1;
+  const umbral = bonus.umbral_minimo;
+  const bonusUmbral = (bonus.tabla || {})[umbral] || 0;
+  const exacto = p.puntos_1x2 + p.puntos_exacto;
+
+  const casos = [
+    {
+      nombre: "Ana", desc: `${umbral} aciertos 1X2, de los cuales 3 exactos`,
+      calculo: [
+        [`${umbral} aciertos 1X2 × ${p.puntos_1x2}`, umbral * p.puntos_1x2],
+        [`3 exactos × ${p.puntos_exacto}`, 3 * p.puntos_exacto],
+        [`Bonus por ${umbral} aciertos`, bonusUmbral],
+        ["Ganadora de la jornada", p.ganador_jornada],
+      ],
+    },
+    {
+      nombre: "Bruno", desc: "4 aciertos 1X2, ninguno exacto",
+      calculo: [
+        [`4 aciertos 1X2 × ${p.puntos_1x2}`, 4 * p.puntos_1x2],
+        [`Sin bonus (menos de ${umbral})`, 0],
+        ["Perdedor de la jornada", p.perdedor_jornada],
+      ],
+    },
+    {
+      nombre: "Clara", desc: `solo pronosticó ${minimo - 1} partidos y acertó 1`,
+      calculo: [
+        [`1 acierto 1X2 × ${p.puntos_1x2}`, p.puntos_1x2],
+        [`Fuera del reparto (no llega al ${pct} %)`, 0],
+      ],
+    },
+  ];
+
+  return `
+    <p>Una jornada de ${total} partidos. Para optar a ganador o perdedor hay que
+    pronosticar al menos <strong>${minimo}</strong> de ellos.</p>
+    <div class="latest-grid">
+      ${casos.map((c) => {
+        const suma = c.calculo.reduce((a, [, v]) => a + v, 0);
+        return `
+          <div class="match-card" style="padding:16px">
+            <div class="match-header">${c.nombre} — ${c.desc}</div>
+            <table style="background:transparent;margin-top:8px">
+              ${c.calculo.map(([etiqueta, valor]) => `
+                <tr>
+                  <td style="text-align:left;padding:5px 0;border:none">${etiqueta}</td>
+                  <td style="text-align:right;padding:5px 0;border:none">${valor >= 0 ? "+" : ""}${valor}</td>
+                </tr>`).join("")}
+              <tr>
+                <td style="text-align:left;padding:8px 0 0;border-top:1px solid #444"><strong>Total</strong></td>
+                <td style="text-align:right;padding:8px 0 0;border-top:1px solid #444" class="pts-totales">${suma}</td>
+              </tr>
+            </table>
+          </div>`;
+      }).join("")}
+    </div>
+    <p class="nota">Fíjate en Clara: acertó, y sus puntos cuentan. Lo único que pierde
+    por no llegar al mínimo es el derecho a ganar (o sufrir) el
+    ${p.ganador_jornada >= 0 ? "+" : ""}${p.ganador_jornada} / ${p.perdedor_jornada} de la jornada.
+    Y fíjate en que un marcador clavado vale <strong>${exacto} puntos</strong>, no ${p.puntos_exacto}.</p>`;
+}
+
+function seccion(titulo, html) {
+  return `<details open><summary><h2>${titulo}</h2></summary>${html}</details>`;
+}
+
+iniciar();
+</script>
+</body>
+</html>

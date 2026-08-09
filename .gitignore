@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+simuladores/_resultados_simulados.json
+node_modules/

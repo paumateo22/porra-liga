@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Análisis de jornada · Porra LaLiga</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  .banner-resultado { display: flex; gap: 16px; flex-wrap: wrap; margin: 20px 0; }
+  .tarjeta-banner { flex: 1; min-width: 220px; border-radius: 10px; padding: 18px 20px; text-align: center; }
+  .tarjeta-banner.campeon { background: linear-gradient(180deg, #4a3a0a, #2a2205); border: 2px solid var(--gold); }
+  .tarjeta-banner.perdedores { background: #1c1c1c; border: 2px solid #444; }
+  .tarjeta-banner .etiqueta { font-size: 0.8em; text-transform: uppercase; letter-spacing: 1.5px; color: #b0b0b0; margin-bottom: 6px; }
+  .tarjeta-banner.campeon .etiqueta { color: #f0d98a; }
+  .tarjeta-banner .nombres { font-size: 1.6em; font-weight: 900; color: #fff; }
+  .tarjeta-banner.campeon .nombres { color: var(--gold); }
+  .tarjeta-banner .aciertos-pie { margin-top: 6px; font-size: 0.85em; color: #9ca3af; }
+
+  table.tabla-analisis { table-layout: fixed; width: 100%; font-size: 0.72em; }
+  table.tabla-analisis td, table.tabla-analisis th { padding: 5px 3px; text-align: center; }
+  table.tabla-analisis th.col-jugador, table.tabla-analisis td.col-jugador {
+    width: 78px; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  table.tabla-analisis th.col-total, table.tabla-analisis td.col-total { width: 44px; }
+  table.tabla-analisis thead .cabecera-partido { display: flex; align-items: center; justify-content: center; gap: 3px; white-space: nowrap; }
+  table.tabla-analisis thead .cabecera-partido img.escudo { flex-shrink: 0; }
+  table.tabla-analisis thead .marcador-cabecera { color: var(--gold); font-weight: 700; font-size: 0.95em; }
+  .celda-pronostico { line-height: 1.25; }
+  .celda-pronostico .pts { display: block; font-size: 0.82em; font-weight: 600; }
+  .celda-pronostico .pred-miss.pts { color: #6b7280; }
+
+  #grafico-barras svg text { font-family: inherit; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div id="barra-jornadas"></div>
+
+  <div id="banner-resultado"></div>
+
+  <div class="table-wrapper">
+    <table class="tabla-analisis" id="tabla-cruzada"></table>
+  </div>
+
+  <div id="grafico-barras" style="margin-top:26px"></div>
+</div>
+
+<script src="layout.js"></script>
+<script>
+montarCabecera({
+  titulo: "🔍 Análisis de jornada",
+  pagina: "analisis",
+});
+
+let CLAVES = [], indice = 0, DATOS = null, barra = null;
+
+async function iniciar() {
+  const calendario = await cargar("config/calendario.json", {});
+  CLAVES = ordenJornadas(Object.keys(calendario));
+
+  if (!CLAVES.length) {
+    document.getElementById("banner-resultado").innerHTML =
+      `<div class="vacio">Todavía no hay calendario. Ejecuta el script 00.</div>`;
+    return;
+  }
+
+  // Por defecto: la última jornada con análisis ya calculado. Si ninguna se
+  // ha calculado todavía (temporada recién reseteada), se abre en la primera
+  // del calendario y se muestra vacía con su propio aviso.
+  const clas = await cargar("data/clasificacion.json", null);
+  const calculadas = clas ? ordenJornadas(clas.jornadas_calculadas.slice()) : [];
+  const claveInicial = calculadas.length ? calculadas[calculadas.length - 1] : CLAVES[0];
+  indice = CLAVES.indexOf(claveInicial);
+
+  barra = montarBarraJornadas("barra-jornadas", CLAVES, CLAVES[indice], (clave) => {
+    indice = CLAVES.indexOf(clave);
+    pintar();
+  });
+
+  pintar();
+}
+
+async function pintar() {
+  const clave = CLAVES[indice];
+  barra.marcarActiva(clave);
+
+  DATOS = await cargar(`data/analisis/${clave}.json`, null);
+  if (!DATOS) {
+    document.getElementById("banner-resultado").innerHTML =
+      `<div class="vacio">Todavía no hay análisis para la jornada ${parseInt(clave.slice(1))}: no se ha jugado ningún partido.</div>`;
+    document.getElementById("tabla-cruzada").innerHTML = "";
+    document.getElementById("grafico-barras").innerHTML = "";
+    return;
+  }
+
+  pintarBanner();
+  pintarTabla();
+  pintarBarras();
+}
+
+function pintarBanner() {
+  const ganadores = DATOS.jugadores.filter((j) => j.ganador);
+  const perdedores = DATOS.jugadores.filter((j) => j.perdedor);
+
+  if (!DATOS.cerrada || (!ganadores.length && !perdedores.length)) {
+    document.getElementById("banner-resultado").innerHTML = `
+      <div class="vacio">La jornada sigue en curso. El campeón y los perdedores se conocen al terminar todos los partidos.</div>`;
+    return;
+  }
+
+  document.getElementById("banner-resultado").innerHTML = `
+    <div class="banner-resultado">
+      <div class="tarjeta-banner campeon">
+        <div class="etiqueta">🏆 Campeón de la jornada</div>
+        <div class="nombres">${ganadores.map((j) => j.nombre).join(" y ") || "—"}</div>
+        <div class="aciertos-pie">${ganadores[0]?.aciertos_1x2 ?? 0} aciertos 1X2</div>
+      </div>
+      <div class="tarjeta-banner perdedores">
+        <div class="etiqueta">💀 Perdedores de la jornada</div>
+        <div class="nombres">${perdedores.map((j) => j.nombre).join(" y ") || "—"}</div>
+        <div class="aciertos-pie">${perdedores[0]?.aciertos_1x2 ?? 0} aciertos 1X2</div>
+      </div>
+    </div>`;
+}
+
+function pintarTabla() {
+  const partidos = DATOS.partidos;
+
+  const cabecera = `
+    <thead><tr>
+      <th class="col-jugador">Jugador</th>
+      ${partidos.map((p) => {
+        const r = DATOS.resultados[p.id] || {};
+        const marcador = r.estado === "finished" ? `${r.goles_local}-${r.goles_visitante}` : "vs";
+        return `<th title="${p.local} ${marcador} ${p.visitante}">
+          <div class="cabecera-partido">
+            ${escudoHtml(p.id_escudo_local, p.local, 18)}
+            <span class="marcador-cabecera">${marcador}</span>
+            ${escudoHtml(p.id_escudo_visitante, p.visitante, 18)}
+          </div>
+        </th>`;
+      }).join("")}
+      <th class="col-total">Total</th>
+    </tr></thead>`;
+
+  const cuerpo = `
+    <tbody>
+      ${DATOS.jugadores.map((j) => `
+        <tr>
+          <td class="col-jugador">
+            <a href="perfil.html?j=${j.slug}" class="mult-link">${j.nombre}</a>
+          </td>
+          ${partidos.map((p) => {
+            const pred = j.predicciones[p.id];
+            if (!pred) return `<td class="celda-pronostico pred-miss">—</td>`;
+            const clase = pred.acierto_exacto ? "pred-exact" : pred.acierto_1x2 ? "pred-1x2" : "pred-miss";
+            return `<td class="celda-pronostico">
+              <span class="${clase}">${pred.pronostico}</span>
+              <span class="pts ${clase}">${pred.puntos > 0 ? "+" + pred.puntos : "0"} pts</span>
+            </td>`;
+          }).join("")}
+          <td class="col-total ${j.ganador ? "ganador-jornada" : j.perdedor ? "perdedor-jornada" : "pts-totales"}">${j.puntos}</td>
+        </tr>`).join("")}
+    </tbody>`;
+
+  document.getElementById("tabla-cruzada").innerHTML = cabecera + cuerpo;
+}
+
+function pintarBarras() {
+  const jugadores = [...DATOS.jugadores].sort((a, b) => b.puntos - a.puntos);
+  if (!jugadores.length) { document.getElementById("grafico-barras").innerHTML = ""; return; }
+
+  const W = 900, H = 260, M = { t: 15, r: 10, b: 34, l: 30 };
+  const maxY = Math.max(...jugadores.map((j) => j.puntos), 1);
+  const anchoBarra = (W - M.l - M.r) / jugadores.length;
+
+  const y = (v) => H - M.b - (v / maxY) * (H - M.t - M.b);
+
+  const barras = jugadores.map((j, i) => {
+    const x = M.l + i * anchoBarra + anchoBarra * 0.12;
+    const w = anchoBarra * 0.76;
+    const alto = (H - M.b) - y(j.puntos);
+    const opacidad = 0.45 + 0.55 * (j.puntos / maxY);
+
+    const sumaPartidos = Object.values(j.predicciones).reduce((s, d) => s + d.puntos, 0);
+    const extra = j.puntos - sumaPartidos - j.bonus;
+    const desglose = [
+      `${j.aciertos_1x2} aciertos 1X2 y ${j.aciertos_exactos} exactos → ${sumaPartidos} pts`,
+      j.bonus ? `Bonus de rendimiento: +${j.bonus}` : null,
+      extra ? `${extra > 0 ? "Ganador" : "Perdedor"} de la jornada: ${extra > 0 ? "+" : ""}${extra}` : null,
+      `Total: ${j.puntos} pts`,
+    ].filter(Boolean).join(" · ");
+
+    return `
+      <rect x="${x.toFixed(1)}" y="${y(j.puntos).toFixed(1)}" width="${w.toFixed(1)}" height="${Math.max(alto, 0).toFixed(1)}"
+            fill="goldenrod" fill-opacity="${opacidad.toFixed(2)}" rx="3">
+        <title>${j.nombre}: ${desglose}</title>
+      </rect>
+      <text x="${(x + w / 2).toFixed(1)}" y="${(y(j.puntos) - 6).toFixed(1)}" text-anchor="middle" fill="#e0e0e0" font-size="12" font-weight="bold">${j.puntos}</text>
+      <text x="${(x + w / 2).toFixed(1)}" y="${H - 12}" text-anchor="middle" fill="#9ca3af" font-size="11">${j.nombre.slice(0, 8)}</text>`;
+  }).join("");
+
+  const lineasGuia = [0, Math.round(maxY / 2), maxY].map((v) => `
+    <line x1="${M.l}" y1="${y(v).toFixed(1)}" x2="${W - M.r}" y2="${y(v).toFixed(1)}" stroke="#2a2a2a"/>
+    <text x="4" y="${(y(v) + 4).toFixed(1)}" fill="#9ca3af" font-size="10">${v}</text>`).join("");
+
+  document.getElementById("grafico-barras").innerHTML = `
+    <svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto">
+      ${lineasGuia}
+      ${barras}
+    </svg>`;
+}
+
+iniciar();
+</script>
+</body>
+</html>

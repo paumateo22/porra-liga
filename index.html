@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clasificación · Porra LaLiga</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  .col-aciertos { color: #c4b5fd; font-weight: 700; }
+  .col-jg { color: #4ade80; font-weight: 700; }
+  .col-jp { color: #ff6b6b; font-weight: 700; }
+  .col-total { color: var(--gold); font-weight: 900; }
+  th.col-aciertos-th { width: 140px; white-space: nowrap; }
+
+  .celda-jornada { font-weight: 700; }
+  .celda-jornada.ganador { background: rgba(74, 222, 128, 0.28); color: #eafff0; }
+  .celda-jornada.perdedor { background: rgba(255, 76, 76, 0.28); color: #ffecec; }
+  .celda-jornada .con-bonus { color: #60a5fa; text-shadow: 0 0 6px rgba(96,165,250,0.5); }
+  .celda-heatmap { font-weight: 700; color: #111; }
+
+  .nombre-fila { text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+  table.tabla-ancha { table-layout: fixed; width: 100%; }
+  table.tabla-ancha th.nombre-fila, table.tabla-ancha td.nombre-fila { width: 60px; }
+  table.tabla-ancha th.col-total, table.tabla-ancha td.col-total { width: 42px; }
+  table.tabla-ancha td, table.tabla-ancha th { padding: 5px 2px; text-align: center; font-size: 0.68em; }
+  table.tabla-ancha thead th { font-size: 0.62em; padding: 4px 1px; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <details open>
+    <summary><h2>Clasificación general</h2></summary>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th style="text-align:left">Jugador</th>
+            <th class="col-aciertos-th">Aciertos <span class="nota">(exactos / 1X2)</span></th>
+            <th>Bonus</th>
+            <th>JG</th>
+            <th>JP</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody id="cuerpo-resumen"></tbody>
+      </table>
+    </div>
+    <p class="nota" id="pie-clasificacion"></p>
+  </details>
+
+  <details open>
+    <summary><h2>Aciertos 1X2 por jornada</h2></summary>
+    <div>
+      <table class="tabla-ancha">
+        <thead><tr id="cabecera-jornadas"></tr></thead>
+        <tbody id="cuerpo-jornadas"></tbody>
+      </table>
+    </div>
+    <p class="nota">
+      Número de aciertos 1X2 (0-10) de cada jugador en esa jornada, junto a los puntos totales de la temporada. ·
+      <span class="celda-jornada ganador" style="padding:2px 8px;border-radius:4px">Verde</span> = ganador de la jornada ·
+      <span class="celda-jornada perdedor" style="padding:2px 8px;border-radius:4px">Rojo</span> = perdedor ·
+      <span class="con-bonus">Número en azul</span> = jornada con bonus de rendimiento.
+    </p>
+  </details>
+
+  <details open>
+    <summary><h2>Mapa de aciertos exactos</h2></summary>
+    <div>
+      <table class="tabla-ancha">
+        <thead><tr id="cabecera-heatmap"></tr></thead>
+        <tbody id="cuerpo-heatmap"></tbody>
+      </table>
+    </div>
+    <p class="nota">Cuantos más marcadores exactos en la jornada, más verde la casilla. Rojo = ninguno.</p>
+  </details>
+</div>
+
+<script src="layout.js"></script>
+<script>
+montarCabecera({
+  titulo: "🏆 Porra LaLiga",
+  subtitulo: "Clasificación general de la temporada",
+  pagina: "clasificacion",
+});
+
+async function iniciar() {
+  const datos = await cargar("data/clasificacion.json", null);
+  const cuerpo = document.getElementById("cuerpo-resumen");
+
+  if (!datos || !datos.clasificacion.length) {
+    cuerpo.innerHTML = `<tr><td colspan="7" class="vacio">
+      Todavía no hay puntuaciones. En cuanto se juegue la primera jornada aparecerán aquí.
+    </td></tr>`;
+    document.getElementById("cabecera-jornadas").innerHTML = "";
+    document.getElementById("cabecera-heatmap").innerHTML = "";
+    return;
+  }
+
+  pintarResumen(datos);
+  pintarJornadas(datos);
+  pintarHeatmap(datos);
+}
+
+function pintarResumen(datos) {
+  const tabla = datos.clasificacion;
+
+  document.getElementById("cuerpo-resumen").innerHTML = tabla.map((c) => `
+    <tr class="${c.puesto === 1 ? "podio-1" : ""}">
+      <td>${c.puesto}</td>
+      <td style="text-align:left">${c.nombre}</td>
+      <td class="col-aciertos">${c.aciertos_exactos} / ${c.aciertos_1x2}</td>
+      <td class="col-aciertos">${c.bonus_rendimiento || 0}</td>
+      <td class="col-jg">${c.jornadas_ganadas}</td>
+      <td class="col-jp">${c.jornadas_perdidas}</td>
+      <td class="col-total">${c.puntos_totales}</td>
+    </tr>
+  `).join("");
+
+  document.getElementById("pie-clasificacion").textContent =
+    `Desempate: ${datos.desempates.join(" → ")}. Actualizado el ${formatearFecha(datos.generado)}.`;
+}
+
+function pintarJornadas(datos) {
+  const claves = ordenJornadas(datos.jornadas_calculadas.slice());
+
+  document.getElementById("cabecera-jornadas").innerHTML =
+    `<th class="nombre-fila">Jugador</th>` +
+    claves.map((c) => `<th>${c}</th>`).join("") +
+    `<th class="col-total">Total</th>`;
+
+  document.getElementById("cuerpo-jornadas").innerHTML = datos.clasificacion.map((c) => `
+    <tr>
+      <td class="nombre-fila">${c.nombre}</td>
+      ${claves.map((k) => {
+        const j = c.por_jornada[k];
+        if (!j) return `<td class="celda-jornada">—</td>`;
+        const clase = j.ganador ? "ganador" : j.perdedor ? "perdedor" : "";
+        const numero = j.bonus > 0 ? `<span class="con-bonus">${j.aciertos_1x2}</span>` : j.aciertos_1x2;
+        return `<td class="celda-jornada ${clase}"
+                     title="J${k.slice(1)}: ${j.aciertos_1x2} 1X2, ${j.aciertos_exactos} exactos, bonus ${j.bonus}, ${j.puntos} pts">${numero}</td>`;
+      }).join("")}
+      <td class="col-total">${c.puntos_totales}</td>
+    </tr>
+  `).join("");
+}
+
+/* Interpola entre rojo y verde según la proporción de exactos respecto al máximo de la temporada. */
+function colorHeatmap(valor, maximo) {
+  if (maximo === 0) return "background:#2a2a2a";
+  const t = valor / maximo;
+  const r = Math.round(214 - t * (214 - 74));
+  const g = Math.round(76 + t * (222 - 76));
+  const b = Math.round(76 + t * (128 - 76));
+  return `background: rgb(${r},${g},${b})`;
+}
+
+function pintarHeatmap(datos) {
+  const claves = ordenJornadas(datos.jornadas_calculadas.slice());
+  const maximo = Math.max(
+    1,
+    ...datos.clasificacion.flatMap((c) => claves.map((k) => c.por_jornada[k]?.aciertos_exactos || 0))
+  );
+
+  document.getElementById("cabecera-heatmap").innerHTML =
+    `<th class="nombre-fila">Jugador</th>` + claves.map((c) => `<th>${c}</th>`).join("");
+
+  document.getElementById("cuerpo-heatmap").innerHTML = datos.clasificacion.map((c) => `
+    <tr>
+      <td class="nombre-fila">${c.nombre}</td>
+      ${claves.map((k) => {
+        const j = c.por_jornada[k];
+        const valor = j ? j.aciertos_exactos : null;
+        if (valor === null) return `<td class="celda-heatmap" style="background:#1a1a1a;color:#555">—</td>`;
+        return `<td class="celda-heatmap" style="${colorHeatmap(valor, maximo)}" title="J${k.slice(1)}: ${valor} exactos">${valor}</td>`;
+      }).join("")}
+    </tr>
+  `).join("");
+}
+
+iniciar();
+</script>
+</body>
+</html>

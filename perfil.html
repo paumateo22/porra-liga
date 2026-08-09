@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perfil · Porra LaLiga</title>
+<link rel="stylesheet" href="theme.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="selector-jornada">
+    <select id="selector-jugador"></select>
+  </div>
+
+  <div id="tarjetas" class="latest-grid"></div>
+
+  <details open>
+    <summary><h2>Evolución de puntos</h2></summary>
+    <div id="grafico"></div>
+  </details>
+
+  <details open>
+    <summary><h2>Jornada a jornada</h2></summary>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Jornada</th><th>1X2</th><th>Exactos</th><th>Bonus</th>
+            <th>G/P</th><th>Puntos</th><th>Acumulado</th>
+          </tr>
+        </thead>
+        <tbody id="cuerpo-jornadas"></tbody>
+      </table>
+    </div>
+  </details>
+</div>
+
+<script src="layout.js"></script>
+<script>
+montarCabecera({
+  titulo: "👤 Perfil de jugador",
+  subtitulo: "Evolución, rachas y mejores jornadas",
+  pagina: "participantes",
+});
+
+let CLAS = null;
+
+async function iniciar() {
+  CLAS = await cargar("data/clasificacion.json", null);
+  if (!CLAS || !CLAS.clasificacion.length) {
+    document.getElementById("tarjetas").innerHTML =
+      `<div class="vacio">Todavía no hay datos de ningún jugador.</div>`;
+    return;
+  }
+
+  const selector = document.getElementById("selector-jugador");
+  selector.innerHTML = CLAS.clasificacion
+    .map((c) => `<option value="${c.slug}">${c.nombre}</option>`).join("");
+
+  const pedido = new URLSearchParams(location.search).get("j");
+  if (pedido && CLAS.clasificacion.some((c) => c.slug === pedido)) selector.value = pedido;
+
+  selector.onchange = () => {
+    history.replaceState(null, "", `?j=${selector.value}`);
+    pintar(selector.value);
+  };
+  pintar(selector.value);
+}
+
+function pintar(slug) {
+  const c = CLAS.clasificacion.find((x) => x.slug === slug);
+  const claves = ordenJornadas(CLAS.jornadas_calculadas.slice());
+  const jugadas = claves.filter((k) => c.por_jornada[k]);
+
+  // Acumulado y rachas
+  let acumulado = 0;
+  const serie = jugadas.map((k) => ({ clave: k, ...c.por_jornada[k], acumulado: (acumulado += c.por_jornada[k].puntos) }));
+
+  const mejor = serie.reduce((a, b) => (b.puntos > a.puntos ? b : a), serie[0]);
+  const peor = serie.reduce((a, b) => (b.puntos < a.puntos ? b : a), serie[0]);
+  const rachaG = rachaMax(serie, (s) => s.ganador);
+  const media = (c.puntos_totales / (c.jornadas_jugadas || 1)).toFixed(1);
+  const pct = c.partidos_pronosticados
+    ? Math.round((c.aciertos_1x2 / c.partidos_pronosticados) * 100) : 0;
+
+  document.getElementById("tarjetas").innerHTML = [
+    ["Posición", `${c.puesto}º`, `${c.puntos_totales} puntos`],
+    ["Media por jornada", media, `${c.jornadas_jugadas} jornadas jugadas`],
+    ["Acierto 1X2", `${pct} %`, `${c.aciertos_1x2} de ${c.partidos_pronosticados}`],
+    ["Exactos", c.aciertos_exactos, `${c.bonus_rendimiento} pts de bonus`],
+    ["Mejor jornada", mejor ? `${mejor.puntos} pts` : "—", mejor ? `Jornada ${parseInt(mejor.clave.slice(1))}` : ""],
+    ["Peor jornada", peor ? `${peor.puntos} pts` : "—", peor ? `Jornada ${parseInt(peor.clave.slice(1))}` : ""],
+    ["Jornadas ganadas", c.jornadas_ganadas, rachaG > 1 ? `Mejor racha: ${rachaG} seguidas` : "—"],
+    ["Jornadas perdidas", c.jornadas_perdidas, `${c.puntos_ganador_perdedor >= 0 ? "+" : ""}${c.puntos_ganador_perdedor} pts netos`],
+  ].map(([titulo, valor, pie]) => `
+    <div class="match-card" style="padding:16px;text-align:center">
+      <div class="match-header">${titulo}</div>
+      <div class="match-score"><span>${valor}</span></div>
+      <p class="nota" style="margin:6px 0 0">${pie}</p>
+    </div>`).join("");
+
+  pintarGrafico(serie);
+
+  document.getElementById("cuerpo-jornadas").innerHTML = serie.map((s) => `
+    <tr>
+      <td><a href="analisis.html" class="mult-link">J${parseInt(s.clave.slice(1))}</a></td>
+      <td>${s.aciertos_1x2}</td>
+      <td class="pred-exact">${s.aciertos_exactos}</td>
+      <td>${s.bonus || 0}</td>
+      <td>${s.ganador ? '<span class="ganador-jornada">🏅</span>' : s.perdedor ? '<span class="perdedor-jornada">💀</span>' : "—"}</td>
+      <td class="${s.ganador ? "ganador-jornada" : s.perdedor ? "perdedor-jornada" : ""}">${s.puntos}</td>
+      <td class="pts-totales">${s.acumulado}</td>
+    </tr>`).join("");
+}
+
+function rachaMax(serie, test) {
+  let max = 0, actual = 0;
+  for (const s of serie) {
+    actual = test(s) ? actual + 1 : 0;
+    max = Math.max(max, actual);
+  }
+  return max;
+}
+
+function pintarGrafico(serie) {
+  if (!serie.length) return;
+  const W = 900, H = 260, M = { t: 20, r: 20, b: 30, l: 40 };
+  const maxY = Math.max(...serie.map((s) => s.acumulado), 1);
+  const minY = Math.min(...serie.map((s) => s.acumulado), 0);
+  const rango = maxY - minY || 1;
+
+  const x = (i) => M.l + (i * (W - M.l - M.r)) / Math.max(serie.length - 1, 1);
+  const y = (v) => H - M.b - ((v - minY) / rango) * (H - M.t - M.b);
+
+  const linea = serie.map((s, i) => `${i ? "L" : "M"}${x(i).toFixed(1)},${y(s.acumulado).toFixed(1)}`).join(" ");
+  const area = `${linea} L${x(serie.length - 1).toFixed(1)},${H - M.b} L${x(0).toFixed(1)},${H - M.b} Z`;
+
+  document.getElementById("grafico").innerHTML = `
+    <svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto">
+      <line x1="${M.l}" y1="${H - M.b}" x2="${W - M.r}" y2="${H - M.b}" stroke="#444"/>
+      <line x1="${M.l}" y1="${M.t}" x2="${M.l}" y2="${H - M.b}" stroke="#444"/>
+      <text x="8" y="${y(maxY) + 4}" fill="#9ca3af" font-size="11">${maxY}</text>
+      <text x="8" y="${y(minY) + 4}" fill="#9ca3af" font-size="11">${minY}</text>
+      <path d="${area}" fill="rgba(218,165,32,0.12)"/>
+      <path d="${linea}" fill="none" stroke="goldenrod" stroke-width="2.5"/>
+      ${serie.map((s, i) => `
+        <circle cx="${x(i).toFixed(1)}" cy="${y(s.acumulado).toFixed(1)}" r="4"
+                fill="${s.ganador ? "goldenrod" : s.perdedor ? "#ff4c4c" : "#1e1e1e"}"
+                stroke="goldenrod" stroke-width="2">
+          <title>Jornada ${parseInt(s.clave.slice(1))}: ${s.puntos} pts (acumulado ${s.acumulado})</title>
+        </circle>`).join("")}
+      ${serie.map((s, i) => serie.length <= 20 || i % 3 === 0
+        ? `<text x="${x(i).toFixed(1)}" y="${H - 10}" fill="#9ca3af" font-size="10" text-anchor="middle">${parseInt(s.clave.slice(1))}</text>`
+        : "").join("")}
+    </svg>`;
+}
+
+iniciar();
+</script>
+</body>
+</html>

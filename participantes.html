@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Participantes · Porra LaLiga</title>
+<link rel="stylesheet" href="theme.css">
+</head>
+<body>
+
+<div class="container">
+  <div id="tarjetas" class="latest-grid"></div>
+
+  <details open>
+    <summary><h2>Resumen</h2></summary>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th style="text-align:left">Jugador</th>
+            <th>Desde</th>
+            <th>Puntos</th>
+            <th>Jornadas</th>
+            <th>Media/jornada</th>
+            <th>% acierto 1X2</th>
+            <th>Insignias</th>
+          </tr>
+        </thead>
+        <tbody id="cuerpo"></tbody>
+      </table>
+    </div>
+  </details>
+</div>
+
+<script src="layout.js"></script>
+<script>
+montarCabecera({
+  titulo: "👥 Participantes",
+  subtitulo: "Quién juega y cómo le va",
+  pagina: "participantes",
+});
+
+async function iniciar() {
+  const registro = await cargar("config/participantes.json", { participantes: [] });
+  const clas = await cargar("data/clasificacion.json", null);
+
+  const altas = Object.fromEntries(registro.participantes.map((p) => [p.slug, p.alta]));
+
+  if (!clas || !clas.clasificacion.length) {
+    const lista = registro.participantes;
+    document.getElementById("tarjetas").innerHTML = lista.length
+      ? lista.map((p) => tarjeta({ nombre: p.nombre, slug: p.slug }, altas)).join("")
+      : "";
+    document.getElementById("cuerpo").innerHTML = `<tr><td colspan="8" class="vacio">
+      ${lista.length ? "Aún no hay jornadas calculadas." : "Todavía no se ha apuntado nadie."}
+    </td></tr>`;
+    return;
+  }
+
+  const tabla = clas.clasificacion;
+  document.getElementById("tarjetas").innerHTML = tabla.slice(0, 4).map((c) => tarjeta(c, altas)).join("");
+
+  document.getElementById("cuerpo").innerHTML = tabla.map((c) => {
+    const media = c.jornadas_jugadas ? (c.puntos_totales / c.jornadas_jugadas).toFixed(1) : "—";
+    const pct = c.partidos_pronosticados
+      ? Math.round((c.aciertos_1x2 / c.partidos_pronosticados) * 100) + " %"
+      : "—";
+    return `
+      <tr class="${c.puesto === 1 ? "podio-1" : ""}">
+        <td>${c.puesto}</td>
+        <td style="text-align:left"><a href="perfil.html?j=${c.slug}" class="mult-link">${c.nombre}</a></td>
+        <td class="nota">${altas[c.slug] ? formatearFecha(altas[c.slug]).split(",")[0] : "—"}</td>
+        <td class="pts-totales">${c.puntos_totales}</td>
+        <td>${c.jornadas_jugadas}</td>
+        <td>${media}</td>
+        <td>${pct}</td>
+        <td>
+          ${c.jornadas_ganadas ? `<span class="insignia g">🏅 ${c.jornadas_ganadas}</span>` : ""}
+          ${c.jornadas_perdidas ? `<span class="insignia p">💀 ${c.jornadas_perdidas}</span>` : ""}
+          ${!c.jornadas_ganadas && !c.jornadas_perdidas ? '<span class="nota">—</span>' : ""}
+        </td>
+      </tr>`;
+  }).join("");
+}
+
+function tarjeta(c, altas) {
+  const media = c.jornadas_jugadas ? (c.puntos_totales / c.jornadas_jugadas).toFixed(1) : "—";
+  return `
+    <div class="match-card" style="padding:16px;text-align:center">
+      <div class="match-header">${c.puesto ? `${c.puesto}º clasificado` : "Participante"}</div>
+      <div class="match-score"><span>${c.nombre}</span></div>
+      <p class="nota" style="margin:8px 0 0">
+        ${c.puntos_totales !== undefined ? `${c.puntos_totales} puntos · media ${media}` : "Sin datos todavía"}
+      </p>
+      <p style="margin:10px 0 0">
+        <a href="perfil.html?j=${c.slug}" class="mult-link">Ver perfil</a>
+      </p>
+    </div>`;
+}
+
+iniciar();
+</script>
+</body>
+</html>

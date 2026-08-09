@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pronosticar · Porra LaLiga</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  .fila-nombre-compacta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 4px; }
+  .fila-nombre-compacta label { font-size: 0.78em; color: var(--table-header); text-transform: uppercase; letter-spacing: 1px; white-space: nowrap; }
+  .campo-nombre-compacto {
+    width: auto; max-width: 220px; padding: 7px 12px; border-radius: 5px; border: 1px solid #555;
+    background: #111; color: #fff; font-size: 0.95em; text-align: left; outline: none;
+  }
+  .campo-nombre-compacto:focus { border-color: var(--gold); }
+  .fila-nombre-compacta .nota { margin: 0; font-size: 0.8em; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <details open>
+    <summary><h2>Pronosticar</h2></summary>
+
+    <div class="fila-nombre-compacta">
+      <label for="nombre">Tu nombre</label>
+      <input type="text" id="nombre" class="campo-nombre-compacto" placeholder="Ej. Mateo" autocomplete="off">
+      <p class="nota">Usa siempre el mismo nombre: es lo que te identifica en la clasificación.</p>
+    </div>
+
+    <div id="barra-jornadas"></div>
+    <div id="partidos" class="lista-partidos"></div>
+  </details>
+</div>
+
+<div class="barra-acciones">
+  <a href="javascript:void(0)" class="btn-participa" id="btn-descargar">⬇️ Descargar mis pronósticos</a>
+  <div class="aviso" id="aviso"></div>
+</div>
+
+<script src="layout.js"></script>
+<script>
+montarCabecera({
+  titulo: "✍️ Pronosticar",
+  subtitulo: "Rellena, descarga el fichero y mándalo",
+  pagina: "pronosticar",
+});
+
+let CALENDARIO = {}, REALIDAD = {}, CLAVES = [], indice = 0, barra = null;
+
+const slug = (n) => n.trim().toLowerCase()
+  .replace(/\s+/g, "_")
+  .replace(/[^\w_áéíóúüñ]/gu, "");
+
+async function iniciar() {
+  CALENDARIO = await cargar("config/calendario.json", {});
+  REALIDAD = await cargar("data/resultados/realidad_oficial.json", {});
+  CLAVES = ordenJornadas(Object.keys(CALENDARIO));
+
+  if (!CLAVES.length) {
+    document.getElementById("partidos").innerHTML =
+      `<div class="vacio">No hay calendario todavía.</div>`;
+    return;
+  }
+
+  const nombre = document.getElementById("nombre");
+  nombre.value = localStorage.getItem("porra_nombre") || "";
+  nombre.oninput = () => {
+    localStorage.setItem("porra_nombre", nombre.value);
+    avisar("");
+  };
+  nombre.onblur = precargarGuardados;
+
+  indice = Math.max(0, CLAVES.indexOf(jornadaActual(REALIDAD, CLAVES)));
+  document.getElementById("btn-descargar").onclick = descargar;
+
+  barra = montarBarraJornadas("barra-jornadas", CLAVES, CLAVES[indice], (clave) => {
+    indice = CLAVES.indexOf(clave);
+    pintar();
+  });
+
+  pintar();
+}
+
+function pintar() {
+  const clave = CLAVES[indice];
+  barra.marcarActiva(clave);
+
+  const reales = Object.fromEntries((REALIDAD[clave] || []).map((p) => [p.id, p]));
+
+  document.getElementById("partidos").innerHTML = CALENDARIO[clave].map((p) => {
+    const empezado = reales[p.id] && reales[p.id].estado !== "notstarted";
+    return `
+      <div class="partido">
+        <span class="fecha-partido">${formatearFechaCorta(p.fecha)}</span>
+        <span class="equipo local">${p.local}${escudoHtml(p.id_escudo_local, p.local)}</span>
+        <span class="entrada-marcador">
+          <input type="number" min="0" max="30" inputmode="numeric"
+                 data-id="${p.id}" data-lado="l" ${empezado ? "disabled" : ""}>
+          <span>-</span>
+          <input type="number" min="0" max="30" inputmode="numeric"
+                 data-id="${p.id}" data-lado="v" ${empezado ? "disabled" : ""}>
+        </span>
+        <span class="equipo visitante">${escudoHtml(p.id_escudo_visitante, p.visitante)}${p.visitante}</span>
+      </div>`;
+  }).join("");
+
+  avisar("");
+  PREVIOS = {};
+  marcarBloqueados();
+  precargarGuardados();
+}
+
+/* Pronósticos ya enviados de la jornada visible: {id: {goles_local, goles_visitante}} */
+let PREVIOS = {};
+
+/* Si ya mandaste esta jornada, se recuperan tus marcadores del repo. */
+async function precargarGuardados() {
+  const nombre = document.getElementById("nombre").value;
+  if (!nombre.trim()) return;
+  const clave = CLAVES[indice];
+  const datos = await cargar(`participantes/${slug(nombre)}/pronosticos/${clave}.json`, null);
+  if (!datos) {
+    PREVIOS = {};
+    marcarBloqueados();
+    return;
+  }
+
+  PREVIOS = Object.fromEntries(datos.predicciones.map((p) => [p.id, p]));
+
+  for (const pred of datos.predicciones) {
+    const l = document.querySelector(`input[data-id="${pred.id}"][data-lado="l"]`);
+    const v = document.querySelector(`input[data-id="${pred.id}"][data-lado="v"]`);
+    if (l && !l.value) l.value = pred.goles_local;
+    if (v && !v.value) v.value = pred.goles_visitante;
+  }
+  marcarBloqueados();
+  avisar(`Recuperados tus pronósticos ya enviados de ${clave}. Puedes cambiar los partidos que aún no se han jugado.`, "ok");
+}
+
+/* Etiqueta cada partido cerrado según si tenías o no pronóstico guardado. */
+function marcarBloqueados() {
+  for (const l of document.querySelectorAll('input[data-lado="l"][disabled]')) {
+    const fila = l.closest(".partido");
+    fila.querySelector(".etiqueta-bloqueo")?.remove();
+    const id = parseInt(l.dataset.id);
+    const texto = PREVIOS[id]
+      ? "🔒 ya jugado · se conserva tu pronóstico"
+      : "🔒 ya jugado · sin pronóstico";
+    fila.insertAdjacentHTML("beforeend",
+      `<span class="etiqueta-bloqueo nota" style="grid-column:1/-1;text-align:center">${texto}</span>`);
+  }
+}
+
+function recogerPredicciones() {
+  const clave = CLAVES[indice];
+  const predicciones = [];
+  let incompletos = 0, conservados = 0;
+
+  for (const p of CALENDARIO[clave]) {
+    const l = document.querySelector(`input[data-id="${p.id}"][data-lado="l"]`);
+    const v = document.querySelector(`input[data-id="${p.id}"][data-lado="v"]`);
+    const base = { id: p.id, local: p.local, visitante: p.visitante, fecha: p.fecha };
+
+    // Partido ya empezado: se arrastra el pronóstico que ya habías enviado.
+    if (l.disabled) {
+      const previo = PREVIOS[p.id];
+      if (previo) {
+        predicciones.push({
+          ...base,
+          goles_local: previo.goles_local,
+          goles_visitante: previo.goles_visitante,
+        });
+        conservados++;
+      }
+      continue;
+    }
+
+    if (l.value === "" || v.value === "") { incompletos++; continue; }
+    predicciones.push({
+      ...base,
+      goles_local: parseInt(l.value),
+      goles_visitante: parseInt(v.value),
+    });
+  }
+  return { predicciones, incompletos, conservados };
+}
+
+function descargar() {
+  const nombre = document.getElementById("nombre").value.trim();
+  if (!nombre) return avisar("Escribe tu nombre antes de descargar.", "error");
+
+  const clave = CLAVES[indice];
+  const { predicciones, incompletos, conservados } = recogerPredicciones();
+
+  if (!predicciones.length) return avisar("No has rellenado ningún marcador.", "error");
+  if (incompletos && !confirm(`Te faltan ${incompletos} partidos por rellenar. ¿Descargar igualmente?`)) return;
+
+  const contenido = {
+    participante: nombre,
+    jornada: parseInt(clave.slice(1)),
+    generado: new Date().toISOString().slice(0, 19),
+    predicciones,
+  };
+
+  const blob = new Blob([JSON.stringify(contenido, null, 4)], { type: "application/json" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = `${clave}_${nombre.replace(/\s+/g, "")}.json`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(a.href);
+
+  avisar(`Descargado ${a.download} con ${predicciones.length} partidos`
+    + (conservados ? ` (${conservados} ya jugados, conservados tal cual)` : "")
+    + `. Ahora mándalo.`, "ok");
+}
+
+function avisar(texto, clase = "") {
+  const aviso = document.getElementById("aviso");
+  aviso.textContent = texto;
+  aviso.className = `aviso ${clase}`;
+}
+
+iniciar();
+</script>
+</body>
+</html>

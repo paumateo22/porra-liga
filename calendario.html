@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calendario · Porra LaLiga</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  .fila-acciones-calendario { text-align: center; margin: 4px 0 18px; }
+  .btn-ver-todas {
+    background: #252525; color: var(--gold); border: 1px solid var(--gold); border-radius: 6px;
+    padding: 7px 18px; font-size: 0.95em; cursor: pointer; transition: 0.2s;
+  }
+  .btn-ver-todas:hover { background: var(--gold); color: #000; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div id="barra-jornadas"></div>
+  <div class="fila-acciones-calendario">
+    <button type="button" class="btn-ver-todas" id="btn-todas">Ver todas las jornadas</button>
+  </div>
+  <div id="contenido"></div>
+</div>
+
+<script src="layout.js"></script>
+<script>
+montarCabecera({
+  titulo: "📅 Calendario",
+  subtitulo: "LaLiga 2026-27",
+  pagina: "calendario",
+});
+
+let CALENDARIO = {}, REALIDAD = {}, CLAVES = [], indice = 0, barra = null;
+
+async function iniciar() {
+  CALENDARIO = await cargar("config/calendario.json", {});
+  REALIDAD = await cargar("data/resultados/realidad_oficial.json", {});
+  CLAVES = ordenJornadas(Object.keys(CALENDARIO));
+
+  if (!CLAVES.length) {
+    document.getElementById("contenido").innerHTML =
+      `<div class="vacio">No hay calendario todavía. Ejecuta el script 00.</div>`;
+    return;
+  }
+
+  indice = CLAVES.indexOf(jornadaActual(REALIDAD, CLAVES));
+  if (indice < 0) indice = 0;
+
+  barra = montarBarraJornadas("barra-jornadas", CLAVES, CLAVES[indice], (clave) => {
+    indice = CLAVES.indexOf(clave);
+    pintarUna();
+  });
+  document.getElementById("btn-todas").onclick = pintarTodas;
+
+  pintarUna();
+}
+
+function bloqueJornada(clave) {
+  const partidos = CALENDARIO[clave];
+  const reales = Object.fromEntries((REALIDAD[clave] || []).map((p) => [p.id, p]));
+  const jugados = (REALIDAD[clave] || []).filter((p) => p.estado === "finished").length;
+
+  return `
+    <div class="cabecera-jornada">
+      <h3 id="ancla-${clave}">Jornada ${parseInt(clave.slice(1))}</h3>
+      <span class="nota">${jugados}/${partidos.length} jugados</span>
+    </div>
+    <div class="lista-partidos">
+      ${partidos.map((p) => {
+        const r = reales[p.id] || {};
+        const terminado = r.estado === "finished";
+        const marcador = terminado
+          ? `${r.goles_local}-${r.goles_visitante}`
+          : formatearHora(p.fecha) || "—";
+        return `
+          <div class="partido ${terminado ? "jugado" : ""}">
+            <span class="fecha-partido">${formatearFechaCorta(p.fecha)}</span>
+            <span class="equipo local">${p.local}${escudoHtml(p.id_escudo_local, p.local)}</span>
+            <span class="${terminado ? "marcador" : "hora"}">${marcador}</span>
+            <span class="equipo visitante">${escudoHtml(p.id_escudo_visitante, p.visitante)}${p.visitante}</span>
+          </div>`;
+      }).join("")}
+    </div>`;
+}
+
+function pintarUna() {
+  barra.marcarActiva(CLAVES[indice]);
+  document.getElementById("contenido").innerHTML = bloqueJornada(CLAVES[indice]);
+}
+
+function pintarTodas() {
+  document.getElementById("contenido").innerHTML = CLAVES.map(bloqueJornada).join("");
+  document.getElementById("ancla-" + CLAVES[indice])
+    ?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+}
+
+iniciar();
+</script>
+</body>
+</html>
