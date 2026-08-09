@@ -238,6 +238,36 @@ async function probarEscenarioReset() {
       "muestra la fecha de cada partido en el formulario de pronósticos");
   }
 
+  console.log("\n═══ pronosticar.html · precarga de pronósticos ya enviados (marcador ofuscado) ═══");
+  {
+    const jugadorPrueba = clas.clasificacion[0];
+    const rutaGuardado = path.join(RAIZ, `participantes/${jugadorPrueba.slug}/pronosticos/${claveActual}.json`);
+
+    if (fs.existsSync(rutaGuardado)) {
+      const { dom, doc, errores } = await render("pronosticar.html");
+      check(errores.length === 0, `sin errores de JS al cargar ${errores[0] || ""}`);
+
+      const nombreInput = doc.querySelector("#nombre");
+      nombreInput.value = jugadorPrueba.nombre;
+      nombreInput.dispatchEvent(new dom.window.Event("blur"));
+      await new Promise((r) => setTimeout(r, 250));
+
+      const guardado = leer(`participantes/${jugadorPrueba.slug}/pronosticos/${claveActual}.json`);
+      check(!texto(doc, "body").includes(guardado.predicciones[0].marcador),
+        "el token ofuscado no aparece nunca como texto plano en la página");
+
+      const primeraPred = guardado.predicciones.find((p) =>
+        doc.querySelector(`input[data-id="${p.id}"][data-lado="l"]`));
+      if (primeraPred) {
+        const { gl, gv } = dom.window.desofuscarMarcador(primeraPred.marcador);
+        const lInput = doc.querySelector(`input[data-id="${primeraPred.id}"][data-lado="l"]`);
+        const vInput = doc.querySelector(`input[data-id="${primeraPred.id}"][data-lado="v"]`);
+        check(lInput && String(lInput.value) === String(gl) && vInput && String(vInput.value) === String(gv),
+          `la precarga descodifica el marcador ofuscado y rellena los campos correctamente (${gl}-${gv})`);
+      }
+    }
+  }
+
   console.log("\n═══ analisis.html ═══");
   {
     const { doc, errores } = await render("analisis.html");

@@ -448,8 +448,7 @@ porra-liga/
             "local": "Betis",
             "visitante": "Girona",
             "fecha": "2026-08-23T21:00:00",
-            "goles_local": 2,
-            "goles_visitante": 1
+            "marcador": "٤٩٠٤٢٧٤٢八٤٣٣水火"
         }
     ]
 }
@@ -457,6 +456,25 @@ porra-liga/
 
 Nombre del fichero: **`J02_Mateo.json`**. La ingesta comprueba que la jornada del
 nombre coincida con la de dentro.
+
+**El marcador va ofuscado**, no en claro (nada de `"goles_local": 2,
+"goles_visitante": 1`). El objetivo es que nadie pueda copiarse mirando el
+JSON directamente en GitHub o si el fichero se reenvía por el grupo de
+WhatsApp. `pronosticar.html` lo codifica al generar la descarga;
+`03_ingesta_pronosticos.py` y `06_motor_puntuacion.py` lo descodifican para
+validar y puntuar.
+
+El esquema: XOR con clave fija, y en vez de Base64 normal (que se reconoce a
+simple vista) cada byte se parte en dos mitades y cada una se sustituye por un
+símbolo de una tabla de dígitos arábigos y caracteres chinos, con símbolos de
+"ruido" intercalados que no significan nada y un prefijo/sufijo decorativos
+fijos — todo pensado para que no se parezca a ningún formato reconocible
+(`ofuscarMarcador`/`desofuscarMarcador` en `layout.js`,
+`ofuscar_marcador`/`desofuscar_marcador` en `scripts/utils.py`, tienen que
+coincidir símbolo a símbolo entre los dos). **No es cifrado real**: la clave y
+el esquema viven en código público, así que alguien con conocimientos
+técnicos que abra la consola del navegador podría revertirlo. Sirve para el
+vistazo casual, no para un ataque dirigido.
 
 ### Formato de `clasificacion.json`
 

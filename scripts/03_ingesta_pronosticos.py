@@ -25,6 +25,7 @@ from utils import (
     cargar_json,
     carpeta_participante,
     clave_jornada,
+    desofuscar_marcador,
     guardar_json,
     slug,
 )
@@ -91,13 +92,14 @@ def validar(contenido, ruta, calendario):
         if pid in vistos:
             errores.append(f"predicción #{i + 1}: partido id {pid} duplicado")
             continue
-        gl, gv = pred.get("goles_local"), pred.get("goles_visitante")
-        if gl is None or gv is None:
+
+        token = pred.get("marcador")
+        if token is None:
             continue  # partido sin rellenar: se ignora sin ser error
         try:
-            gl, gv = int(gl), int(gv)
-        except (TypeError, ValueError):
-            errores.append(f"predicción #{i + 1}: goles no numéricos")
+            gl, gv = desofuscar_marcador(token)
+        except Exception:  # noqa: BLE001
+            errores.append(f"predicción #{i + 1}: marcador ilegible o manipulado")
             continue
         if gl < 0 or gv < 0 or gl > 30 or gv > 30:
             errores.append(f"predicción #{i + 1}: marcador fuera de rango ({gl}-{gv})")
@@ -110,8 +112,7 @@ def validar(contenido, ruta, calendario):
             "local": oficial["local"],
             "visitante": oficial["visitante"],
             "fecha": oficial["fecha"],
-            "goles_local": gl,
-            "goles_visitante": gv,
+            "marcador": token,  # se guarda ofuscado tal cual llegó, nunca en claro
         })
 
     if not limpias:
@@ -172,8 +173,7 @@ def procesar_fichero(ruta, calendario, realidad, sin_cierre=False):
             rechazadas += 1
             continue  # llega tarde y no había nada guardado
         if pid in guardadas:
-            if (guardadas[pid]["goles_local"], guardadas[pid]["goles_visitante"]) != \
-                    (pred["goles_local"], pred["goles_visitante"]):
+            if guardadas[pid]["marcador"] != pred["marcador"]:
                 actualizadas += 1
         else:
             nuevas += 1

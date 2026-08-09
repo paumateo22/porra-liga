@@ -199,7 +199,13 @@ async function iniciar() {
 
     <p><strong>¿Se puede hacer trampa editando el fichero?</strong><br>
     No sirve de nada. Al procesarlo se comprueba otra vez qué partidos estaban
-    abiertos, y los ids de partido tienen que coincidir con el calendario oficial.</p>`));
+    abiertos, y los ids de partido tienen que coincidir con el calendario oficial.</p>
+
+    <p><strong>¿Alguien puede ver mi pronóstico antes de que acabe la jornada?</strong><br>
+    El marcador no se guarda como número normal en el fichero, va codificado
+    con dígitos arábigos y caracteres chinos (algo como
+    <code>٤٩٠٤٢٧٤٢八٤٣٣水火</code> en vez de <code>2-1</code>), así que abrir el
+    JSON en GitHub o reenviarlo por el grupo no revela nada a simple vista.</p>`));
 
   document.getElementById("contenido").innerHTML = bloques.join("");
 }

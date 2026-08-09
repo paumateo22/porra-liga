@@ -31,7 +31,9 @@ from utils import (  # noqa: E402
     REALIDAD_FILE,
     REPORTES_DIR,
     cargar_json,
+    desofuscar_marcador,
     guardar_json,
+    ofuscar_marcador,
 )
 
 EQUIPOS = ["Barcelona", "Real Madrid", "Atlético", "Athletic", "Real Sociedad",
@@ -123,7 +125,7 @@ def escribir_entrada(nombre, jornada, predicciones):
 
 def pred(p, gl, gv):
     return {"id": p["id"], "local": p["local"], "visitante": p["visitante"],
-            "fecha": p["fecha"], "goles_local": gl, "goles_visitante": gv}
+            "fecha": p["fecha"], "marcador": ofuscar_marcador(gl, gv)}
 
 
 def correr(script):
@@ -137,7 +139,7 @@ def correr(script):
 
 def guardadas(slug_jugador, clave):
     datos = cargar_json(PARTICIPANTES_DIR / slug_jugador / "pronosticos" / f"{clave}.json")
-    return {p["id"]: (p["goles_local"], p["goles_visitante"]) for p in datos["predicciones"]}
+    return {p["id"]: desofuscar_marcador(p["marcador"]) for p in datos["predicciones"]}
 
 
 def main():

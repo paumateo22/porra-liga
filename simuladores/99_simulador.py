@@ -27,6 +27,7 @@ from utils import (  # noqa: E402
     cargar_json,
     clave_jornada,
     guardar_json,
+    ofuscar_marcador,
 )
 
 EQUIPOS = [
@@ -95,7 +96,7 @@ def preparar(n_jornadas):
                     gl, gv = real
                 else:
                     gl, gv = random.randint(0, 4), random.randint(0, 3)
-                predicciones.append({**p, "goles_local": gl, "goles_visitante": gv})
+                predicciones.append({**p, "marcador": ofuscar_marcador(gl, gv)})
 
             guardar_json(ENTRADAS_DIR / f"{clave}_{jugador}.json", {
                 "participante": jugador,

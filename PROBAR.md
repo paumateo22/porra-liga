@@ -42,12 +42,14 @@ python simuladores/99_simulador.py --jugar 1     # se juega la J01 entera
 
 # Reenvío manual de Pau para la J01: intenta cambiar un partido ya jugado
 python -c "
-import json
+import json, sys
+sys.path.insert(0, 'scripts')
+from utils import ofuscar_marcador
 cal = json.load(open('config/calendario.json'))['J01']
 p = cal[0]
 json.dump({
     'participante': 'Pau', 'jornada': 1, 'generado': '2026-01-01T00:00:00',
-    'predicciones': [{**p, 'goles_local': 9, 'goles_visitante': 9}]
+    'predicciones': [{**p, 'marcador': ofuscar_marcador(9, 9)}]
 }, open('entradas/J01_Pau.json', 'w'), indent=4)
 "
 python scripts/03_ingesta_pronosticos.py
@@ -193,11 +195,13 @@ fichero debe seguir en `entradas/` (no se mueve a `procesadas/`).
 ```bash
 python simuladores/99_simulador.py 1
 python -c "
-import json
+import json, sys
+sys.path.insert(0, 'scripts')
+from utils import ofuscar_marcador
 cal = json.load(open('config/calendario.json'))['J01'][0]
 json.dump({
     'participante': 'Fantasma', 'jornada': 1, 'generado': '2026-01-01T00:00:00',
-    'predicciones': [{**cal, 'id': 99999999, 'goles_local': 1, 'goles_visitante': 0}]
+    'predicciones': [{**cal, 'id': 99999999, 'marcador': ofuscar_marcador(1, 0)}]
 }, open('entradas/J01_Fantasma.json', 'w'), indent=4)
 "
 python scripts/03_ingesta_pronosticos.py

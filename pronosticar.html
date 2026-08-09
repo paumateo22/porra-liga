@@ -111,10 +111,13 @@ function pintar() {
   precargarGuardados();
 }
 
-/* Pronósticos ya enviados de la jornada visible: {id: {goles_local, goles_visitante}} */
+/* Pronósticos ya enviados de la jornada visible: {id: {gl, gv}}, ya
+   descodificados en memoria (el fichero guarda el marcador ofuscado). */
 let PREVIOS = {};
 
-/* Si ya mandaste esta jornada, se recuperan tus marcadores del repo. */
+/* Si ya mandaste esta jornada, se recuperan tus marcadores del repo. El
+   fichero guarda el marcador ofuscado (campo "marcador"); se descodifica
+   aquí, en memoria, solo para rellenar los campos del formulario. */
 async function precargarGuardados() {
   const nombre = document.getElementById("nombre").value;
   if (!nombre.trim()) return;
@@ -126,13 +129,16 @@ async function precargarGuardados() {
     return;
   }
 
-  PREVIOS = Object.fromEntries(datos.predicciones.map((p) => [p.id, p]));
+  PREVIOS = Object.fromEntries(
+    datos.predicciones.map((p) => [p.id, desofuscarMarcador(p.marcador)])
+  );
 
   for (const pred of datos.predicciones) {
+    const { gl, gv } = desofuscarMarcador(pred.marcador);
     const l = document.querySelector(`input[data-id="${pred.id}"][data-lado="l"]`);
     const v = document.querySelector(`input[data-id="${pred.id}"][data-lado="v"]`);
-    if (l && !l.value) l.value = pred.goles_local;
-    if (v && !v.value) v.value = pred.goles_visitante;
+    if (l && !l.value) l.value = gl;
+    if (v && !v.value) v.value = gv;
   }
   marcarBloqueados();
   avisar(`Recuperados tus pronósticos ya enviados de ${clave}. Puedes cambiar los partidos que aún no se han jugado.`, "ok");
@@ -152,6 +158,10 @@ function marcarBloqueados() {
   }
 }
 
+/* El marcador va ofuscado en el JSON final (campo "marcador"), para que no se
+   pueda leer a simple vista si el fichero se reenvía por WhatsApp o se mira
+   directamente en GitHub. No es cifrado real: la función que lo revierte
+   vive en este mismo layout.js, público. Ver la nota en desofuscarMarcador. */
 function recogerPredicciones() {
   const clave = CLAVES[indice];
   const predicciones = [];
@@ -166,22 +176,14 @@ function recogerPredicciones() {
     if (l.disabled) {
       const previo = PREVIOS[p.id];
       if (previo) {
-        predicciones.push({
-          ...base,
-          goles_local: previo.goles_local,
-          goles_visitante: previo.goles_visitante,
-        });
+        predicciones.push({ ...base, marcador: ofuscarMarcador(previo.gl, previo.gv) });
         conservados++;
       }
       continue;
     }
 
     if (l.value === "" || v.value === "") { incompletos++; continue; }
-    predicciones.push({
-      ...base,
-      goles_local: parseInt(l.value),
-      goles_visitante: parseInt(v.value),
-    });
+    predicciones.push({ ...base, marcador: ofuscarMarcador(parseInt(l.value), parseInt(v.value)) });
   }
   return { predicciones, incompletos, conservados };
 }
