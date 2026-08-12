@@ -1,14 +1,3 @@
 {
-    "participantes": [
-        {
-            "slug": "ivan",
-            "nombre": "Ivan",
-            "alta": "2026-08-12T10:43:11"
-        },
-        {
-            "slug": "pau",
-            "nombre": "Pau",
-            "alta": "2026-08-12T10:43:11"
-        }
-    ]
+    "participantes": []
 }

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pronósticos del jugador · Porra LaLiga</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  .partido .linea-pronostico {
+    grid-column: 1 / -1; text-align: center; font-size: 0.85em; margin-top: 6px;
+    padding-top: 6px; border-top: 1px dashed #3a3a3a;
+  }
+  .partido .linea-pronostico .etiqueta { color: #7d7d7d; margin-right: 4px; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <p style="text-align:center">
+    <a href="perfil.html?j=" id="enlace-perfil" class="mult-link">← Volver al perfil</a>
+  </p>
+  <div id="barra-jornadas"></div>
+  <div id="contenido"></div>
+</div>
+
+<script src="layout.js"></script>
+<script>
+montarCabecera({
+  titulo: "🗒️ Pronósticos de un jugador",
+  pagina: "participantes",
+});
+
+let CALENDARIO = {}, CLAS = null, CLAVES = [], indice = 0, barra = null, JUGADOR = null;
+
+async function iniciar() {
+  const parametros = new URLSearchParams(location.search);
+  const slug = parametros.get("j");
+  const jornadaPedida = parametros.get("jornada");
+
+  CLAS = await cargar("data/clasificacion.json", null);
+  CALENDARIO = await cargar("config/calendario.json", {});
+  CLAVES = ordenJornadas(Object.keys(CALENDARIO));
+
+  if (!slug || !CLAS) {
+    document.getElementById("contenido").innerHTML =
+      `<div class="vacio">Falta indicar de qué jugador (?j=slug). Vuelve al <a href="participantes.html" class="mult-link">listado de participantes</a>.</div>`;
+    return;
+  }
+
+  JUGADOR = CLAS.clasificacion.find((c) => c.slug === slug);
+  if (!JUGADOR) {
+    document.getElementById("contenido").innerHTML = `<div class="vacio">No se encuentra ese jugador.</div>`;
+    return;
+  }
+
+  document.getElementById("enlace-perfil").href = `perfil.html?j=${slug}`;
+  document.querySelector("header .subtitulo")?.remove();
+  document.querySelector("header h1").insertAdjacentHTML("afterend",
+    `<p class="subtitulo">Los pronósticos de ${nombrePlano(JUGADOR)}, jornada a jornada</p>`);
+
+  if (!CLAVES.length) {
+    document.getElementById("contenido").innerHTML = `<div class="vacio">Todavía no hay calendario.</div>`;
+    return;
+  }
+
+  indice = jornadaPedida && CLAVES.includes(jornadaPedida) ? CLAVES.indexOf(jornadaPedida) : CLAVES.length - 1;
+
+  barra = montarBarraJornadas("barra-jornadas", CLAVES, CLAVES[indice], (clave) => {
+    indice = CLAVES.indexOf(clave);
+    history.replaceState(null, "", `?j=${slug}&jornada=${clave}`);
+    pintar(slug);
+  });
+
+  pintar(slug);
+}
+
+async function pintar(slug) {
+  const clave = CLAVES[indice];
+  barra.marcarActiva(clave);
+
+  const partidos = CALENDARIO[clave] || [];
+  if (!partidos.length) {
+    document.getElementById("contenido").innerHTML = `<div class="vacio">Esta jornada no tiene partidos.</div>`;
+    return;
+  }
+
+  // Si la jornada ya tiene análisis (al menos un partido evaluado), viene todo
+  // ya descodificado y puntuado desde el servidor — no hace falta tocar nada.
+  const analisis = await cargar(`data/analisis/${clave}.json`, null);
+  const jugadorAnalisis = analisis?.jugadores.find((j) => j.slug === slug);
+
+  // Si no, se lee el pronóstico crudo del jugador y se descodifica aquí mismo
+  // (jornada futura o todavía sin ningún partido jugado).
+  let prediccionesCrudas = null;
+  if (!jugadorAnalisis) {
+    const datos = await cargar(`participantes/${slug}/pronosticos/${clave}.json`, null);
+    if (datos) {
+      prediccionesCrudas = Object.fromEntries(
+        datos.predicciones
+          .filter((p) => p.marcador)
+          .map((p) => [p.id, desofuscarMarcador(p.marcador, p.fecha, clave)])
+      );
+    }
+  }
+
+  const reales = Object.fromEntries((analisis ? Object.entries(analisis.resultados) : []));
+
+  document.getElementById("contenido").innerHTML = `
+    <div class="cabecera-jornada">
+      <h3>Jornada ${parseInt(clave.slice(1))}</h3>
+    </div>
+    <div class="lista-partidos">
+      ${partidos.map((p) => bloquePartido(p, jugadorAnalisis, prediccionesCrudas, reales[p.id])).join("")}
+    </div>`;
+}
+
+function bloquePartido(p, jugadorAnalisis, prediccionesCrudas, real) {
+  const terminado = real && real.estado === "finished";
+  const marcadorReal = terminado ? `${real.goles_local}-${real.goles_visitante}` : "vs";
+
+  let lineaPronostico;
+  if (jugadorAnalisis) {
+    const pred = jugadorAnalisis.predicciones[p.id];
+    if (pred) {
+      const clase = pred.acierto_exacto ? "pred-exact" : pred.acierto_1x2 ? "pred-1x2" : "pred-miss";
+      lineaPronostico = `<div class="linea-pronostico">
+        <span class="etiqueta">Su pronóstico:</span>
+        <span class="${clase}">${pred.pronostico}</span>
+        <span class="${clase}">(${pred.puntos > 0 ? "+" + pred.puntos : "0"} pts)</span>
+      </div>`;
+    } else {
+      lineaPronostico = `<div class="linea-pronostico"><span class="etiqueta">Su pronóstico:</span> <span class="pred-miss">sin pronosticar</span></div>`;
+    }
+  } else if (prediccionesCrudas) {
+    const pred = prediccionesCrudas[p.id];
+    lineaPronostico = pred
+      ? `<div class="linea-pronostico"><span class="etiqueta">Su pronóstico:</span> ${pred.gl}-${pred.gv} <span class="nota">(partido aún sin jugar)</span></div>`
+      : `<div class="linea-pronostico"><span class="etiqueta">Su pronóstico:</span> <span class="pred-miss">sin pronosticar</span></div>`;
+  } else {
+    lineaPronostico = `<div class="linea-pronostico"><span class="nota">Este jugador todavía no ha mandado esta jornada.</span></div>`;
+  }
+
+  return `
+    <div class="partido ${terminado ? "jugado" : ""}">
+      <span class="fecha-partido">${formatearFechaHora(p.fecha)}</span>
+      <span class="equipo local">${p.local}${escudoHtml(p.id_escudo_local, p.local)}</span>
+      <span class="marcador">${marcadorReal}</span>
+      <span class="equipo visitante">${escudoHtml(p.id_escudo_visitante, p.visitante)}${p.visitante}</span>
+      ${lineaPronostico}
+    </div>`;
+}
+
+iniciar();
+</script>
+</body>
+</html>

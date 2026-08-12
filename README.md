@@ -57,9 +57,18 @@ arrastre el castigo de perdedor.
 
 ### Cuándo se cierra una jornada
 
-El ganador y el perdedor **solo se asignan cuando los 10 partidos de la jornada
-han terminado**. Mientras la jornada está en curso los puntos de aciertos sí se
-van actualizando en vivo, pero el +1 / −1 no se reparte para que no baile.
+El ganador y el perdedor **solo se asignan de verdad (los puntos +1 / −1) cuando
+los 10 partidos de la jornada han terminado**. Mientras la jornada está en
+curso los puntos de aciertos sí se van actualizando en vivo, pero el +1 / −1
+no se reparte para que no baile.
+
+Aun así, en `analisis.html` se muestra siempre quién **iría** ganando o
+perdiendo ahora mismo, con un aviso: **"⏳ Aún puede cambiar"** si a alguien
+le quedan partidos con los que remontar, o **"✔ Ya es matemáticamente
+seguro"** si ya es imposible que nadie más alcance al líder ni esquive al
+farolillo rojo (aunque acertaran absolutamente todo lo que les queda por
+pronosticar). Esto es solo para que se vea en la web — los puntos de verdad
+siguen esperando a que la jornada cierre del todo.
 
 ### Desempate en la clasificación general
 
@@ -175,7 +184,8 @@ la carpeta.
 | **🔍 Análisis** (`analisis.html`) | Quién acertó qué: tabla cruzada jugadores × partidos, y el detalle de cada partido |
 | **📈 Carrera** (`carrera.html`) | Gráfico de evolución + marcador tipo "carrera de barras": las filas se reordenan animadas al mover la barra temporal, con reproducción automática y velocidad ajustable |
 | **👥 Participantes** (`participantes.html`) | Quién juega, desde cuándo, media y porcentaje de acierto |
-| **👤 Perfil** (`perfil.html?j=slug`) | Dashboard individual: rachas, mejor y peor jornada, gráfico de acumulado |
+| **👤 Perfil** (`perfil.html?j=slug`) | Dashboard individual: rachas, mejor y peor jornada, gráfico de acumulado comparable con otros jugadores |
+| **🗒️ Pronósticos de un jugador** (`pronosticos_jugador.html?j=slug&jornada=Jxx`) | Vista tipo calendario con lo que pronosticó esa persona junto al resultado real, partido a partido — se llega desde la tabla "jornada a jornada" del perfil |
 | **📜 Reglamento** (`reglamento.html`) | Las normas, generadas en vivo desde `settings.json` |
 
 Las cuatro primeras están en la barra superior; el resto, en el menú lateral.
@@ -386,13 +396,13 @@ Tras editar el fichero, ejecuta la opción 4 (o cualquiera que incluya el
 motor) para que se refleje en la web — el motor lee `nombres.txt` en cada
 pasada y actualiza `data/clasificacion.json` y `data/analisis/*.json` solo.
 
-**Se puede dar de alta a alguien por adelantado**, con insignia incluida,
-aunque todavía no haya mandado ningún pronóstico: basta con añadir su línea en
-`nombres.txt` y ejecutar el motor — se registra solo en
-`config/participantes.json` y aparece en la clasificación con 0 puntos hasta
-que empiece a jugar. Eso sí, cuando esa persona mande su primer pronóstico
-tiene que usar exactamente el mismo nombre que pusiste antes del `;`, para que
-encaje con la ficha ya creada.
+**Solo decora a quien ya esté registrado de verdad.** Poner a alguien en
+`nombres.txt` no lo da de alta ni lo hace aparecer en la clasificación: hasta
+que esa persona no mande al menos un pronóstico real (y quede registrada en
+`config/participantes.json` como cualquier otro jugador), su línea en
+`nombres.txt` se ignora sin más. En cuanto mande su primer pronóstico —usando
+exactamente el mismo nombre que pusiste antes del `;`— aparecerá con su
+insignia puesta desde ese primer pronóstico.
 
 ### Nombres de equipo
 

@@ -71,14 +71,12 @@ function bloqueJornada(clave) {
       ${partidos.map((p) => {
         const r = reales[p.id] || {};
         const terminado = r.estado === "finished";
-        const marcador = terminado
-          ? `${r.goles_local}-${r.goles_visitante}`
-          : formatearHora(p.fecha) || "—";
+        const marcador = terminado ? `${r.goles_local}-${r.goles_visitante}` : "vs";
         return `
           <div class="partido ${terminado ? "jugado" : ""}">
-            <span class="fecha-partido">${formatearFechaCorta(p.fecha)}</span>
+            <span class="fecha-partido">${formatearFechaHora(p.fecha)}</span>
             <span class="equipo local">${p.local}${escudoHtml(p.id_escudo_local, p.local)}</span>
-            <span class="${terminado ? "marcador" : "hora"}">${marcador}</span>
+            <span class="marcador">${marcador}</span>
             <span class="equipo visitante">${escudoHtml(p.id_escudo_visitante, p.visitante)}${p.visitante}</span>
           </div>`;
       }).join("")}

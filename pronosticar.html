@@ -92,7 +92,7 @@ function pintar() {
     const empezado = reales[p.id] && reales[p.id].estado !== "notstarted";
     return `
       <div class="partido">
-        <span class="fecha-partido">${formatearFechaCorta(p.fecha)}</span>
+        <span class="fecha-partido">${formatearFechaHora(p.fecha)}</span>
         <span class="equipo local">${p.local}${escudoHtml(p.id_escudo_local, p.local)}</span>
         <span class="entrada-marcador">
           <input type="number" min="0" max="30" inputmode="numeric"
@@ -130,11 +130,14 @@ async function precargarGuardados() {
   }
 
   PREVIOS = Object.fromEntries(
-    datos.predicciones.map((p) => [p.id, desofuscarMarcador(p.marcador)])
+    datos.predicciones
+      .filter((p) => p.marcador)
+      .map((p) => [p.id, desofuscarMarcador(p.marcador, p.fecha, clave)])
   );
 
   for (const pred of datos.predicciones) {
-    const { gl, gv } = desofuscarMarcador(pred.marcador);
+    if (!pred.marcador) continue;
+    const { gl, gv } = desofuscarMarcador(pred.marcador, pred.fecha, clave);
     const l = document.querySelector(`input[data-id="${pred.id}"][data-lado="l"]`);
     const v = document.querySelector(`input[data-id="${pred.id}"][data-lado="v"]`);
     if (l && !l.value) l.value = gl;
@@ -158,10 +161,15 @@ function marcarBloqueados() {
   }
 }
 
-/* El marcador va ofuscado en el JSON final (campo "marcador"), para que no se
-   pueda leer a simple vista si el fichero se reenvía por WhatsApp o se mira
-   directamente en GitHub. No es cifrado real: la función que lo revierte
-   vive en este mismo layout.js, público. Ver la nota en desofuscarMarcador. */
+/* El marcador va ofuscado en el JSON final (campo "marcador"), mezclado con
+   la fecha del partido y la jornada — así el mismo 2-1 en dos partidos
+   distintos no produce el mismo texto, y no hay patrón que reconocer a
+   simple vista. No es cifrado real: la función que lo revierte vive en este
+   mismo layout.js, público. Ver la nota en desofuscarMarcador.
+
+   Se incluyen los 10 partidos de la jornada siempre, aunque no los hayas
+   rellenado todos — los que faltan van con "marcador": null, para que se
+   vea en el propio fichero qué partidos quedaron sin pronosticar. */
 function recogerPredicciones() {
   const clave = CLAVES[indice];
   const predicciones = [];
@@ -176,14 +184,20 @@ function recogerPredicciones() {
     if (l.disabled) {
       const previo = PREVIOS[p.id];
       if (previo) {
-        predicciones.push({ ...base, marcador: ofuscarMarcador(previo.gl, previo.gv) });
+        predicciones.push({ ...base, marcador: ofuscarMarcador(previo.gl, previo.gv, p.fecha, clave) });
         conservados++;
+      } else {
+        predicciones.push({ ...base, marcador: null });
       }
       continue;
     }
 
-    if (l.value === "" || v.value === "") { incompletos++; continue; }
-    predicciones.push({ ...base, marcador: ofuscarMarcador(parseInt(l.value), parseInt(v.value)) });
+    if (l.value === "" || v.value === "") {
+      incompletos++;
+      predicciones.push({ ...base, marcador: null });
+      continue;
+    }
+    predicciones.push({ ...base, marcador: ofuscarMarcador(parseInt(l.value), parseInt(v.value), p.fecha, clave) });
   }
   return { predicciones, incompletos, conservados };
 }
@@ -194,8 +208,9 @@ function descargar() {
 
   const clave = CLAVES[indice];
   const { predicciones, incompletos, conservados } = recogerPredicciones();
+  const rellenados = predicciones.filter((p) => p.marcador).length;
 
-  if (!predicciones.length) return avisar("No has rellenado ningún marcador.", "error");
+  if (!rellenados) return avisar("No has rellenado ningún marcador.", "error");
   if (incompletos && !confirm(`Te faltan ${incompletos} partidos por rellenar. ¿Descargar igualmente?`)) return;
 
   const contenido = {
@@ -214,7 +229,7 @@ function descargar() {
   document.body.removeChild(a);
   URL.revokeObjectURL(a.href);
 
-  avisar(`Descargado ${a.download} con ${predicciones.length} partidos`
+  avisar(`Descargado ${a.download} con ${rellenados} partidos`
     + (conservados ? ` (${conservados} ya jugados, conservados tal cual)` : "")
     + `. Ahora mándalo.`, "ok");
 }

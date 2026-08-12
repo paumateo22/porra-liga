@@ -23,7 +23,6 @@ from utils import (
     ANALISIS_DIR,
     CALENDARIO_FILE,
     CLASIFICACION_FILE,
-    PARTICIPANTES_FILE,
     REALIDAD_FILE,
     REPORTES_DIR,
     cargar_json,
@@ -56,8 +55,10 @@ def cargar_pronosticos(slug_jugador):
         clave = fichero.stem
         marcadores = {}
         for p in datos.get("predicciones", []):
+            if p.get("marcador") is None:
+                continue
             try:
-                marcadores[p["id"]] = desofuscar_marcador(p["marcador"])
+                marcadores[p["id"]] = desofuscar_marcador(p["marcador"], p["fecha"], clave)
             except Exception:  # noqa: BLE001
                 continue
         salida[clave] = marcadores
@@ -138,46 +139,62 @@ def evaluar_jornada(clave, partidos_reales, total_partidos, pronosticos_todos, s
             "detalle": detalle,
         }
 
-    # Ganador / perdedor: solo cuando la jornada está completa
-    if cerrada and hab.get("ganador_perdedor_jornada", 1):
+    # Ganador / perdedor de la jornada: se calcula un resultado PROVISIONAL
+    # siempre que haya al menos un partido jugado, no solo cuando la jornada
+    # está completa. Además de quién va ganando/perdiendo ahora mismo, se
+    # calcula si eso ya es matemáticamente imposible que cambie: a cada
+    # jugador le puede quedar, como mucho, tantos aciertos 1X2 extra como
+    # partidos pendientes tenga pronosticados (en el mejor de los casos, los
+    # acierta todos). Si con ese máximo nadie más podría alcanzar al que va
+    # primero (o esquivar al que va último), el resultado ya es seguro.
+    #
+    # Los PUNTOS de verdad (+1/-1 en la clasificación) solo se reparten
+    # cuando la jornada está cerrada de verdad — esto es solo para mostrarlo
+    # en la web con el aviso correspondiente, no cambia cómo puntúa nadie.
+    resultado_jornada = None
+    if hab.get("ganador_perdedor_jornada", 1):
         elegibles = {s: f for s, f in filas.items() if f["elegible_jornada"]}
         if len(elegibles) >= 2:
-            # El criterio es siempre el número de aciertos 1X2 de la jornada.
-            valores = {s: f["aciertos_1x2"] for s, f in elegibles.items()}
-            maximo, minimo = max(valores.values()), min(valores.values())
+            actuales = {s: f["aciertos_1x2"] for s, f in elegibles.items()}
+            maximo, minimo = max(actuales.values()), min(actuales.values())
+
             if maximo != minimo:
-                for s, v in valores.items():
-                    if v == maximo:
+                ganadores_prov = sorted(s for s, v in actuales.items() if v == maximo)
+                perdedores_prov = sorted(s for s, v in actuales.items() if v == minimo)
+
+                if cerrada:
+                    ganador_seguro = perdedor_seguro = True
+                else:
+                    restantes = {
+                        s: sum(1 for pid in pronosticos_todos.get(s, {}).get(clave, {}) if pid not in reales)
+                        for s in elegibles
+                    }
+                    potencial_max = {s: actuales[s] + restantes[s] for s in elegibles}
+                    ganador_seguro = len(ganadores_prov) == 1 and all(
+                        potencial_max[s] < maximo for s in elegibles if s != ganadores_prov[0]
+                    )
+                    perdedor_seguro = len(perdedores_prov) == 1 and all(
+                        actuales[s] > potencial_max[perdedores_prov[0]] for s in elegibles if s != perdedores_prov[0]
+                    )
+
+                resultado_jornada = {
+                    "ganadores": ganadores_prov,
+                    "perdedores": perdedores_prov,
+                    "ganador_seguro": ganador_seguro,
+                    "perdedor_seguro": perdedor_seguro,
+                }
+
+                if cerrada:
+                    for s in ganadores_prov:
                         filas[s]["es_ganador_jornada"] = True
                         filas[s]["puntos_ganador_perdedor"] += pts["ganador_jornada"]
-                    if v == minimo:
+                        filas[s]["puntos_totales"] += pts["ganador_jornada"]
+                    for s in perdedores_prov:
                         filas[s]["es_perdedor_jornada"] = True
                         filas[s]["puntos_ganador_perdedor"] += pts["perdedor_jornada"]
-                    filas[s]["puntos_totales"] += filas[s]["puntos_ganador_perdedor"]
+                        filas[s]["puntos_totales"] += pts["perdedor_jornada"]
 
-    return {"cerrada": cerrada, "filas": filas}
-
-
-def sincronizar_altas_anticipadas(nombres_mostrados):
-    """Si config/nombres.txt menciona a alguien que todavía no está en
-    config/participantes.json (no ha mandado ningún pronóstico), se le da de
-    alta con 0 pronósticos, para que ya aparezca en la clasificación con su
-    insignia puesta desde antes de empezar a jugar."""
-    registro = cargar_json(PARTICIPANTES_FILE, {"participantes": []})
-    existentes = {p["slug"] for p in registro["participantes"]}
-    nuevos = []
-    for s, (nombre_base, _) in nombres_mostrados.items():
-        if s not in existentes:
-            registro["participantes"].append({
-                "slug": s,
-                "nombre": nombre_base,
-                "alta": datetime.now().isoformat(timespec="seconds"),
-            })
-            nuevos.append(nombre_base)
-    if nuevos:
-        registro["participantes"].sort(key=lambda p: p["slug"])
-        guardar_json(PARTICIPANTES_FILE, registro)
-        print(f"   👤 Alta anticipada desde nombres.txt: {', '.join(nuevos)}")
+    return {"cerrada": cerrada, "filas": filas, "resultado_jornada": resultado_jornada}
 
 
 def main():
@@ -185,9 +202,12 @@ def main():
     calendario = cargar_json(CALENDARIO_FILE, None)
     realidad = cargar_json(REALIDAD_FILE, {})
 
+    # config/nombres.txt solo decora a quien YA esté registrado (es decir,
+    # a quien ya haya mandado al menos un pronóstico real). No da de alta a
+    # nadie por su cuenta: mientras no exista un pronóstico con ese nombre
+    # base, la línea de nombres.txt se ignora sin más — ni aparece en la
+    # clasificación ni se le pone la insignia.
     nombres_mostrados = cargar_nombres_mostrados()
-    if nombres_mostrados:
-        sincronizar_altas_anticipadas(nombres_mostrados)
 
     participantes = listar_participantes()
 
@@ -245,6 +265,14 @@ def main():
             "clave": clave,
             "jornada": int(clave[1:]),
             "cerrada": resultado["cerrada"],
+            "resultado_jornada": {
+                "ganadores": [{"slug": s, "nombre": nombres.get(s, s)}
+                              for s in resultado["resultado_jornada"]["ganadores"]],
+                "perdedores": [{"slug": s, "nombre": nombres.get(s, s)}
+                               for s in resultado["resultado_jornada"]["perdedores"]],
+                "ganador_seguro": resultado["resultado_jornada"]["ganador_seguro"],
+                "perdedor_seguro": resultado["resultado_jornada"]["perdedor_seguro"],
+            } if resultado["resultado_jornada"] else None,
             "partidos": calendario.get(clave, []),
             "resultados": {
                 str(p["id"]): {

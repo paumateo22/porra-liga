@@ -21,6 +21,8 @@ MENU = [
      [ROOT / "tests" / "test_casos_limite.py"]),
     ("9", "🎲 Simulador — fase 1: preparar datos falsos",
      [ROOT / "simuladores" / "99_simulador.py"]),
+    ("p", "🧪 Laboratorio de escenarios de prueba (temporada/jornada a medias...)",
+     [ROOT / "simuladores" / "laboratorio.py"]),
     ("r", "🧹 RESETEAR TODO + descargar calendario (inicio de temporada)",
      [ROOT / "reset.py"]),
 ]

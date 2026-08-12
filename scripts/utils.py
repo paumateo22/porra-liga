@@ -161,11 +161,43 @@ PREFIJO_OFUSCACION = "٤٩٠"
 SUFIJO_OFUSCACION = "水火"
 
 
-def ofuscar_marcador(gl, gv):
-    """(2, 1) -> token opaco. Determinista: mismo marcador, mismo token."""
+def _semilla_contexto(fecha, jornada):
+    contexto = f"{CLAVE_OFUSCACION}#{fecha}#{jornada}"
+    h = 0
+    for c in contexto:
+        h = (h * 131 + ord(c)) % 4294967296  # 2**32
+    return h
+
+
+def _flujo_clave(fecha, jornada, longitud):
+    """'longitud' bytes pseudoaleatorios deterministas, distintos para cada
+    combinación de fecha+jornada (generador congruencial lineal clásico,
+    parámetros de Numerical Recipes). Antes probé solo con rotar la clave
+    base, pero con una clave de 26 caracteres solo hay 26 rotaciones posibles
+    — dos partidos con fecha distinta podían caer en la misma por pura
+    casualidad (1 entre 26).
+
+    Importante: se toma el BYTE ALTO de cada paso (x >> 24), no el bajo
+    (x % 256). Con un módulo potencia de 2 como este, los bits bajos de un
+    generador congruencial lineal tienen un periodo carísimo (256 valores
+    nada más, se repiten en bucle muy pronto) aunque el estado interno sea de
+    32 bits — es un fallo clásico y bien documentado de este tipo de
+    generador. Los bits altos no tienen ese problema."""
+    x = _semilla_contexto(fecha, jornada)
+    flujo = []
+    for _ in range(longitud):
+        x = (1664525 * x + 1013904223) % 4294967296
+        flujo.append((x >> 24) & 0xFF)
+    return flujo
+
+
+def ofuscar_marcador(gl, gv, fecha, jornada):
+    """(2, 1, fecha, jornada) -> token opaco. Determinista: mismo marcador +
+    misma fecha + misma jornada, mismo token — pero cambia con cualquiera de
+    los tres, así el mismo 2-1 en dos partidos distintos no se parece en nada."""
     texto = f"{gl}-{gv}"
-    clave = CLAVE_OFUSCACION
-    xor = [ord(c) ^ ord(clave[i % len(clave)]) for i, c in enumerate(texto)]
+    flujo = _flujo_clave(fecha, jornada, len(texto))
+    xor = [ord(c) ^ flujo[i] for i, c in enumerate(texto)]
     nucleo = "".join(NIBBLES[b // 16] + NIBBLES[b % 16] for b in xor)
     con_ruido = "".join(
         nucleo[i:i + 2] + RUIDO[(i // 2) % len(RUIDO)]
@@ -174,15 +206,17 @@ def ofuscar_marcador(gl, gv):
     return PREFIJO_OFUSCACION + con_ruido + SUFIJO_OFUSCACION
 
 
-def desofuscar_marcador(token):
-    """Token opaco -> (goles_local, goles_visitante). Lanza ValueError/IndexError
-    si el token está corrupto o manipulado a mano (el llamador debe capturarlo)."""
-    clave = CLAVE_OFUSCACION
+def desofuscar_marcador(token, fecha, jornada):
+    """Token opaco -> (goles_local, goles_visitante). Hacen falta la misma
+    fecha y jornada que se usaron para generarlo (van al lado en el propio
+    fichero, así que siempre están disponibles). Lanza ValueError/IndexError
+    si el token está corrupto, manipulado a mano, o no coincide la fecha."""
     cuerpo = token[len(PREFIJO_OFUSCACION):-len(SUFIJO_OFUSCACION)] \
         if SUFIJO_OFUSCACION else token[len(PREFIJO_OFUSCACION):]
     nucleo = "".join(cuerpo[i:i + 2] for i in range(0, len(cuerpo), 3))
     crudo = [NIBBLES.index(nucleo[i]) * 16 + NIBBLES.index(nucleo[i + 1])
              for i in range(0, len(nucleo), 2)]
-    texto = "".join(chr(b ^ ord(clave[i % len(clave)])) for i, b in enumerate(crudo))
+    flujo = _flujo_clave(fecha, jornada, len(crudo))
+    texto = "".join(chr(b ^ flujo[i]) for i, b in enumerate(crudo))
     gl, gv = texto.split("-")
     return int(gl), int(gv)

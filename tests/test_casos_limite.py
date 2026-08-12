@@ -97,21 +97,21 @@ def construir_calendario():
 
 
 def jugar(realidad, clave, ids, marcadores):
-    """Simula que unos partidos se juegan: pasan a 'finished' y su fecha queda atrás."""
+    """Simula que unos partidos se juegan: pasan a 'finished' con su resultado.
+
+    Ojo: NO se toca la fecha. En la vida real la hora de un partido no
+    cambia solo porque termine — solo cambia si de verdad se aplaza o se
+    adelanta, y eso ya lo simulan por separado los escenarios A y B. Cambiar
+    la fecha aquí también rompía la ofuscación del marcador (que ahora usa
+    la fecha como parte de la clave): el bloqueo de "partido ya empezado" ya
+    lo decide el campo "estado" de realidad_oficial.json, no hace falta
+    tocar la fecha para conseguirlo."""
     for p in realidad[clave]:
         if p["id"] in ids:
             gl, gv = marcadores[p["id"]]
             p["goles_local"], p["goles_visitante"] = gl, gv
             p["estado"] = "finished"
-            p["fecha"] = (AHORA - timedelta(days=1)).isoformat(timespec="seconds")
     guardar_json(REALIDAD_FILE, realidad)
-
-    # El calendario también refleja que ya se jugó (es lo que ve la web).
-    calendario = cargar_json(CALENDARIO_FILE)
-    for p in calendario[clave]:
-        if p["id"] in ids:
-            p["fecha"] = (AHORA - timedelta(days=1)).isoformat(timespec="seconds")
-    guardar_json(CALENDARIO_FILE, calendario)
 
 
 def escribir_entrada(nombre, jornada, predicciones):
@@ -123,9 +123,9 @@ def escribir_entrada(nombre, jornada, predicciones):
     })
 
 
-def pred(p, gl, gv):
+def pred(p, gl, gv, clave):
     return {"id": p["id"], "local": p["local"], "visitante": p["visitante"],
-            "fecha": p["fecha"], "marcador": ofuscar_marcador(gl, gv)}
+            "fecha": p["fecha"], "marcador": ofuscar_marcador(gl, gv, p["fecha"], clave)}
 
 
 def correr(script):
@@ -139,7 +139,7 @@ def correr(script):
 
 def guardadas(slug_jugador, clave):
     datos = cargar_json(PARTICIPANTES_DIR / slug_jugador / "pronosticos" / f"{clave}.json")
-    return {p["id"]: desofuscar_marcador(p["marcador"]) for p in datos["predicciones"]}
+    return {p["id"]: desofuscar_marcador(p["marcador"], p["fecha"], clave) for p in datos["predicciones"]}
 
 
 def main():
@@ -151,11 +151,11 @@ def main():
     # ---- Todos pronostican mientras no se ha jugado nada ----
     marcador_real = {p["id"]: (2, 1) for p in j02 + j10}
 
-    escribir_entrada("Pau", 10, [pred(p, 2, 1) for p in j10])          # lo clava todo
-    escribir_entrada("Aitor", 10, [pred(p, 0, 3) for p in j10])        # falla todo
-    escribir_entrada("Pau", 2, [pred(p, 2, 1) for p in j02])
-    escribir_entrada("Aitor", 2, [pred(p, 0, 3) for p in j02])
-    escribir_entrada("Javi", 2, [pred(p, 1, 1) for p in j02])          # empate: falla todo
+    escribir_entrada("Pau", 10, [pred(p, 2, 1, "J10") for p in j10])          # lo clava todo
+    escribir_entrada("Aitor", 10, [pred(p, 0, 3, "J10") for p in j10])        # falla todo
+    escribir_entrada("Pau", 2, [pred(p, 2, 1, "J02") for p in j02])
+    escribir_entrada("Aitor", 2, [pred(p, 0, 3, "J02") for p in j02])
+    escribir_entrada("Javi", 2, [pred(p, 1, 1, "J02") for p in j02])          # empate: falla todo
     correr("03_ingesta_pronosticos.py")
 
     check(len(guardadas("pau", "J10")) == 10, "se guardan los 10 partidos de la J10")
@@ -198,8 +198,8 @@ def main():
     jugado_id = j02[0]["id"]
 
     escribir_entrada("Pau", 2, [
-        pred(j02[0], 7, 7),        # ya jugado -> debe ignorarse
-        pred(aplazado, 3, 0),      # aún sin jugar -> debe aceptarse
+        pred(j02[0], 7, 7, "J02"),        # ya jugado -> debe ignorarse
+        pred(aplazado, 3, 0, "J02"),      # aún sin jugar -> debe aceptarse
     ])
     salida = correr("03_ingesta_pronosticos.py")
     despues = guardadas("pau", "J02")

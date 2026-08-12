@@ -3,8 +3,7 @@
 #   nombre_con_el_que_pronostica; nombre_a_mostrar emoji(descripción) emoji(descripción)
 #
 # - Lo de antes del ";" es el nombre tal cual esa persona lo escribe en
-#   pronosticar.html. No hace falta que exista todavía: si no está registrado,
-#   se da de alta solo (con 0 puntos) la próxima vez que corra el motor.
+#   pronosticar.html.
 # - Lo de después del ";" es lo que se ve en la web: el nombre, seguido de
 #   cero o más insignias pegadas al final. La descripción puede llevar
 #   espacios y símbolos, y sale al pasar el cursor por el emoji o al
@@ -16,7 +15,13 @@
 #   normal del nombre.
 # - Las líneas que empiezan por # (como estas) se ignoran.
 #
+# IMPORTANTE: esto solo decora a quien YA haya mandado al menos un
+# pronóstico real. Poner aquí a alguien que todavía no ha pronosticado nada
+# no lo da de alta ni lo hace aparecer en la clasificación — su línea se
+# ignora hasta que mande su primer pronóstico con ese mismo nombre.
+#
 # Ejemplos (descomenta y edita con tus jugadores reales):
 #
-Pau; Pau 🏆(Liga 2023/24)
-Ivan; Ivan ⭐(Mundial 2026)
+# Pau; Pau 🏆(Liga 2025/26)
+# Ivan; Ivan ⭐(Mundial 2026)
+# Miguel Dykan; Miguel Dykan 🏆(Liga 2025/26) ⭐(Mundial 2026)

@@ -212,7 +212,7 @@ def generar_participantes(calendario, realidad, hasta_jornada):
                 gl, gv = resultado
                 predicciones.append({
                     "id": p["id"], "local": p["local"], "visitante": p["visitante"],
-                    "fecha": p["fecha"], "marcador": ofuscar_marcador(gl, gv),
+                    "fecha": p["fecha"], "marcador": ofuscar_marcador(gl, gv, p["fecha"], clave),
                 })
 
             if not predicciones:

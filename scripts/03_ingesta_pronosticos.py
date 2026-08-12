@@ -96,8 +96,9 @@ def validar(contenido, ruta, calendario):
         token = pred.get("marcador")
         if token is None:
             continue  # partido sin rellenar: se ignora sin ser error
+        oficial = partidos_oficiales[pid]
         try:
-            gl, gv = desofuscar_marcador(token)
+            gl, gv = desofuscar_marcador(token, oficial["fecha"], clave)
         except Exception:  # noqa: BLE001
             errores.append(f"predicción #{i + 1}: marcador ilegible o manipulado")
             continue
@@ -105,7 +106,6 @@ def validar(contenido, ruta, calendario):
             errores.append(f"predicción #{i + 1}: marcador fuera de rango ({gl}-{gv})")
             continue
 
-        oficial = partidos_oficiales[pid]
         vistos.add(pid)
         limpias.append({
             "id": pid,

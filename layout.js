@@ -78,6 +78,19 @@ function formatearFechaCorta(iso) {
   return d.toLocaleDateString("es-ES", { day: "numeric", month: "short" });
 }
 
+/* Fecha + hora en una sola línea: "5 ago - 19:30". Para que la hora no
+   desaparezca sin más en cuanto el partido se juega (cuando el hueco central
+   pasa a mostrar el resultado en vez de la hora), se pone aquí arriba junto
+   a la fecha, siempre visible, se haya jugado el partido o no. */
+function formatearFechaHora(iso) {
+  if (!iso) return "";
+  const d = new Date(iso);
+  if (isNaN(d)) return "";
+  const fecha = d.toLocaleDateString("es-ES", { day: "numeric", month: "short" });
+  const hora = d.toLocaleTimeString("es-ES", { hour: "2-digit", minute: "2-digit" });
+  return `${fecha} - ${hora}`;
+}
+
 /* Jornada "actual": la primera que aún tenga partidos sin terminar. Si no hay
    ningún dato de resultados para una jornada (temporada recién reseteada,
    antes de correr el extractor), se trata como "sin empezar" en vez de
@@ -158,11 +171,35 @@ const RUIDO_OFUSCACION = ["٧", "八", "٣", "九", "٥", "二", "٩", "龍"];
 const PREFIJO_OFUSCACION = "٤٩٠";
 const SUFIJO_OFUSCACION = "水火";
 
-function ofuscarMarcador(gl, gv) {
+function _semillaContexto(fecha, jornada) {
+  const contexto = `${CLAVE_OFUSCACION}#${fecha}#${jornada}`;
+  let h = 0;
+  for (let i = 0; i < contexto.length; i++) {
+    h = (h * 131 + contexto.charCodeAt(i)) % 4294967296; // 2**32
+  }
+  return h;
+}
+
+function _flujoClave(fecha, jornada, longitud) {
+  let x = _semillaContexto(fecha, jornada);
+  const flujo = [];
+  for (let i = 0; i < longitud; i++) {
+    x = (1664525 * x + 1013904223) % 4294967296;
+    // Byte ALTO (x >>> 24), no el bajo: con módulo potencia de 2 los bits
+    // bajos de un LCG tienen un periodo cortísimo. ">>> " (sin signo) es
+    // necesario porque x puede superar el rango de un entero de 32 bits con
+    // signo que usa el operador ">>" normal de JS.
+    flujo.push((x >>> 24) & 0xff);
+  }
+  return flujo;
+}
+
+function ofuscarMarcador(gl, gv, fecha, jornada) {
   const texto = `${gl}-${gv}`;
+  const flujo = _flujoClave(fecha, jornada, texto.length);
   const xor = [];
   for (let i = 0; i < texto.length; i++) {
-    xor.push(texto.charCodeAt(i) ^ CLAVE_OFUSCACION.charCodeAt(i % CLAVE_OFUSCACION.length));
+    xor.push(texto.charCodeAt(i) ^ flujo[i]);
   }
   let nucleo = "";
   for (const b of xor) nucleo += NIBBLES_OFUSCACION[b >> 4] + NIBBLES_OFUSCACION[b & 15];
@@ -173,7 +210,7 @@ function ofuscarMarcador(gl, gv) {
   return PREFIJO_OFUSCACION + conRuido + SUFIJO_OFUSCACION;
 }
 
-function desofuscarMarcador(token) {
+function desofuscarMarcador(token, fecha, jornada) {
   const cuerpo = SUFIJO_OFUSCACION
     ? token.slice(PREFIJO_OFUSCACION.length, -SUFIJO_OFUSCACION.length)
     : token.slice(PREFIJO_OFUSCACION.length);
@@ -183,9 +220,10 @@ function desofuscarMarcador(token) {
   for (let i = 0; i < nucleo.length; i += 2) {
     bytes.push(NIBBLES_OFUSCACION.indexOf(nucleo[i]) * 16 + NIBBLES_OFUSCACION.indexOf(nucleo[i + 1]));
   }
+  const flujo = _flujoClave(fecha, jornada, bytes.length);
   let texto = "";
   for (let i = 0; i < bytes.length; i++) {
-    texto += String.fromCharCode(bytes[i] ^ CLAVE_OFUSCACION.charCodeAt(i % CLAVE_OFUSCACION.length));
+    texto += String.fromCharCode(bytes[i] ^ flujo[i]);
   }
   const [gl, gv] = texto.split("-").map(Number);
   return { gl, gv };

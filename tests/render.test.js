@@ -266,7 +266,7 @@ async function probarEscenarioReset() {
       const primeraPred = guardado.predicciones.find((p) =>
         doc.querySelector(`input[data-id="${p.id}"][data-lado="l"]`));
       if (primeraPred) {
-        const { gl, gv } = dom.window.desofuscarMarcador(primeraPred.marcador);
+        const { gl, gv } = dom.window.desofuscarMarcador(primeraPred.marcador, primeraPred.fecha, claveActual);
         const lInput = doc.querySelector(`input[data-id="${primeraPred.id}"][data-lado="l"]`);
         const vInput = doc.querySelector(`input[data-id="${primeraPred.id}"][data-lado="v"]`);
         check(lInput && String(lInput.value) === String(gl) && vInput && String(vInput.value) === String(gv),

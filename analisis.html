@@ -15,6 +15,9 @@
   .tarjeta-banner .nombres { font-size: 1.6em; font-weight: 900; color: #fff; }
   .tarjeta-banner.campeon .nombres { color: var(--gold); }
   .tarjeta-banner .aciertos-pie { margin-top: 6px; font-size: 0.85em; color: #9ca3af; }
+  .tarjeta-banner .aviso-estado { margin-top: 8px; font-size: 0.72em; padding: 3px 10px; border-radius: 10px; display: inline-block; }
+  .tarjeta-banner .aviso-estado.provisional { background: rgba(96,165,250,0.15); color: #60a5fa; }
+  .tarjeta-banner .aviso-estado.seguro { background: rgba(74,222,128,0.15); color: #4ade80; }
 
   table.tabla-analisis { table-layout: fixed; width: 100%; font-size: 0.72em; }
   table.tabla-analisis td, table.tabla-analisis th { padding: 5px 3px; text-align: center; }
@@ -100,26 +103,49 @@ async function pintar() {
 }
 
 function pintarBanner() {
-  const ganadores = DATOS.jugadores.filter((j) => j.ganador);
-  const perdedores = DATOS.jugadores.filter((j) => j.perdedor);
+  const resultado = DATOS.resultado_jornada;
 
-  if (!DATOS.cerrada || (!ganadores.length && !perdedores.length)) {
+  if (!resultado) {
     document.getElementById("banner-resultado").innerHTML = `
-      <div class="vacio">La jornada sigue en curso. El campeón y los perdedores se conocen al terminar todos los partidos.</div>`;
+      <div class="vacio">
+        ${DATOS.cerrada
+          ? "Todos empatados esta jornada: no hay campeón ni perdedor."
+          : "Todavía no hay suficientes partidos jugados para saber quién va ganando o perdiendo."}
+      </div>`;
     return;
   }
+
+  const aciertosDe = (slug) => DATOS.jugadores.find((j) => j.slug === slug)?.aciertos_1x2 ?? 0;
+
+  const avisoCampeon = DATOS.cerrada
+    ? ""
+    : resultado.ganador_seguro
+      ? `<div class="aviso-estado seguro">✔ Ya es matemáticamente seguro</div>`
+      : `<div class="aviso-estado provisional">⏳ Aún puede cambiar</div>`;
+  const avisoPerdedor = DATOS.cerrada
+    ? ""
+    : resultado.perdedor_seguro
+      ? `<div class="aviso-estado seguro">✔ Ya es matemáticamente seguro</div>`
+      : `<div class="aviso-estado provisional">⏳ Aún puede cambiar</div>`;
+
+  const nombreConInsigniasPorSlug = (g) => {
+    const j = DATOS.jugadores.find((x) => x.slug === g.slug);
+    return j ? nombreConInsignias(j) : g.nombre;
+  };
 
   document.getElementById("banner-resultado").innerHTML = `
     <div class="banner-resultado">
       <div class="tarjeta-banner campeon">
-        <div class="etiqueta">🏆 Campeón de la jornada</div>
-        <div class="nombres">${ganadores.map((j) => nombreConInsignias(j)).join(" y ") || "—"}</div>
-        <div class="aciertos-pie">${ganadores[0]?.aciertos_1x2 ?? 0} aciertos 1X2</div>
+        <div class="etiqueta">🏆 ${DATOS.cerrada ? "Campeón" : "Va ganando"} de la jornada</div>
+        <div class="nombres">${resultado.ganadores.map(nombreConInsigniasPorSlug).join(" y ")}</div>
+        <div class="aciertos-pie">${aciertosDe(resultado.ganadores[0].slug)} aciertos 1X2</div>
+        ${avisoCampeon}
       </div>
       <div class="tarjeta-banner perdedores">
-        <div class="etiqueta">💀 Perdedores de la jornada</div>
-        <div class="nombres">${perdedores.map((j) => nombreConInsignias(j)).join(" y ") || "—"}</div>
-        <div class="aciertos-pie">${perdedores[0]?.aciertos_1x2 ?? 0} aciertos 1X2</div>
+        <div class="etiqueta">💀 ${DATOS.cerrada ? "Perdedores" : "Va perdiendo"} de la jornada</div>
+        <div class="nombres">${resultado.perdedores.map(nombreConInsigniasPorSlug).join(" y ")}</div>
+        <div class="aciertos-pie">${aciertosDe(resultado.perdedores[0].slug)} aciertos 1X2</div>
+        ${avisoPerdedor}
       </div>
     </div>`;
 }

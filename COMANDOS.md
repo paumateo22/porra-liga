@@ -49,6 +49,7 @@ llama a uno de los comandos de abajo.
 | 7 | Carga una temporada real terminada con 10 jugadores falsos | `98_temporada_demo.py` |
 | 8 | Comprueba que el motor calcula bien los casos difíciles | `test_casos_limite.py` |
 | 9 | Prepara datos de mentira para desarrollar sin red | `99_simulador.py` |
+| p | Laboratorio de escenarios de prueba (solo local) | `laboratorio.py` |
 | r | Resetea todo + descarga el calendario (inicio de temporada) | `reset.py` |
 
 ---
@@ -190,11 +191,11 @@ Ivan; Ivan ⭐(Mundial 2026)
 Después de editar el fichero, ejecuta la opción **4** (o la 5) para que el
 motor lo lea y actualice `data/clasificacion.json` y `data/analisis/*.json`.
 
-**Dar de alta a alguien por adelantado**: añade su línea en `nombres.txt`
-aunque todavía no haya mandado ningún pronóstico, y ejecuta el motor — se
-registra solo con 0 puntos, insignia incluida. Cuando esa persona mande su
-primer pronóstico tiene que usar exactamente el mismo nombre de antes del
-`;`, para que encaje con la ficha ya creada.
+**Solo decora a quien ya haya pronosticado de verdad.** Añadir a alguien en
+`nombres.txt` no lo registra ni lo hace aparecer en la clasificación — hasta
+que mande su primer pronóstico (usando exactamente el mismo nombre de antes
+del `;`), su línea se ignora sin más. En cuanto lo mande, sale con la insignia
+puesta desde ese primer pronóstico.
 
 Detalles del formato en `README.md` → "Insignias de jugadores".
 
@@ -223,6 +224,42 @@ adelantado en la última jornada.
 
 **Cuándo usarlo:** para probar cambios rápido, sin depender de SofaScore ni
 esperar a que se jueguen partidos reales.
+
+---
+
+### `laboratorio.py` — Escenarios de prueba concretos (solo local)
+
+```bash
+python simuladores/laboratorio.py
+```
+
+A diferencia de `99_simulador.py` (datos genéricos para desarrollar rápido),
+este monta **situaciones concretas difíciles de ver esperando a que pase la
+temporada real**: una liga a mitad de camino, una jornada justo a medio
+jugar, una jornada con partidos repartidos por meses de diferencia, o varios
+partidos sueltos aplazados/adelantados por toda la temporada. Genera
+calendario, resultados y pronósticos de 5 jugadores ficticios (Ana, Bruno,
+Clara, David, Elena — nombres claramente inventados para no chocar nunca con
+tus jugadores reales), corre la ingesta y el motor él solo, y al final te
+pregunta si quieres abrir la web local directamente para verlo.
+
+```
+  1. Temporada a medias (mitad jugada, mitad por delante)
+  2. Jornada actual a medias (6 de 10 jugados, 4 pendientes)
+  3. Una jornada repartida en el tiempo (adelantados + aplazados dentro de ella)
+  4. Temporada con varios partidos sueltos aplazados/adelantados
+```
+
+⚠️ **Solo para desarrollo local.** Cada escenario **borra** `participantes/`,
+`entradas/`, resultados y clasificación antes de generar el suyo (te pide
+confirmación antes de hacerlo). Nunca lo ejecutes sobre un checkout con
+pronósticos reales de tus amigos — es exclusivamente para mirar cómo se ve la
+web en una situación concreta, no forma parte del pipeline de producción.
+
+**Cuándo usarlo:** para comprobar visualmente cómo se comporta cada vista
+(calendario, pronosticar, análisis, clasificación) ante partidos aplazados,
+adelantados o una jornada a medio jugar, antes de que te pase de verdad en la
+temporada real.
 
 ---
 
