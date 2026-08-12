@@ -2,7 +2,7 @@
     "competicion": {
         "nombre": "LaLiga 2026-27",
         "sofascore_unique_tournament_id": 8,
-        "sofascore_season_id": null,
+        "sofascore_season_id": 97268,
         "total_jornadas": 38,
         "zona_horaria": "Europe/Madrid"
     },
