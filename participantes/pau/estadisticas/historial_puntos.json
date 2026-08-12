@@ -1,0 +1,21 @@
+{
+    "participante": "pau",
+    "nombre": "Pau",
+    "insignias": [
+        {
+            "emoji": "🏆",
+            "descripcion": "Liga 2023/24"
+        }
+    ],
+    "puntos_totales": 0,
+    "puntos_partidos": 0,
+    "bonus_rendimiento": 0,
+    "puntos_ganador_perdedor": 0,
+    "aciertos_1x2": 0,
+    "aciertos_exactos": 0,
+    "partidos_pronosticados": 0,
+    "jornadas_jugadas": 0,
+    "jornadas_ganadas": 0,
+    "jornadas_perdidas": 0,
+    "por_jornada": {}
+}
