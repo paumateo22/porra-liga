@@ -1,5 +1,37 @@
 /* Cabecera, navegación y utilidades compartidas. */
 
+/* Google Analytics (GA4) — mide visitas, páginas vistas y visitantes únicos,
+   sin servidor: funciona igual en GitHub Pages que en local.
+
+   Para activarlo:
+   1. Ve a https://analytics.google.com, crea una cuenta (o usa una que ya
+      tengas) y dentro de ella una "propiedad" para esta web.
+   2. Te da un "ID de medición" con forma G-XXXXXXXXXX. Pégalo abajo.
+   3. Haz push. En un par de minutos ya puedes ver las visitas en tiempo
+      real dentro de Analytics — no hace falta tocar nada más en el código.
+
+   Con el ID vacío (como está por defecto) no se carga nada — así en local,
+   mientras desarrollas, no ensucias tus propias estadísticas de visitas. */
+const GA_MEASUREMENT_ID = "G-3ZY6KGP9RZ";
+
+function montarAnalytics() {
+  if (!GA_MEASUREMENT_ID) return;
+
+  const script = document.createElement("script");
+  script.async = true;
+  script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+  document.head.appendChild(script);
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { window.dataLayer.push(arguments); }
+  gtag("js", new Date());
+  // Sin datos personales: no hace falta pedir consentimiento de cookies
+  // para una porra de amigos, pero por si acaso se pide a Google que
+  // anonimice cualquier rastro que pudiera identificar a alguien.
+  gtag("config", GA_MEASUREMENT_ID, { anonymize_ip: true });
+  window.gtag = gtag;
+}
+
 const PAGINAS = [
   { id: "clasificacion", texto: "🏆 Clasificación", href: "index.html", principal: true },
   { id: "calendario", texto: "📅 Calendario", href: "calendario.html", principal: true },
@@ -11,6 +43,7 @@ const PAGINAS = [
 ];
 
 function montarCabecera({ titulo, subtitulo, pagina }) {
+  montarAnalytics();
   const enlaces = PAGINAS
     .filter((p) => p.principal || p.id === pagina)
     .map((p) => `<a href="${p.href}"${p.id === pagina ? ' class="home-btn"' : ""}>${p.texto}</a>`)

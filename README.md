@@ -449,6 +449,25 @@ del script `00`, cuando veas los nombres reales de los 20 equipos de la temporad
 Settings → Pages → Source: rama `main`, carpeta raíz. No hay build step: lo que
 hay en el repo es exactamente lo que se sirve.
 
+### Estadísticas de visitas (Google Analytics)
+
+Cuántas visitas tiene la web, a qué páginas entra la gente y cuántos
+visitantes distintos hay — con Google Analytics (GA4), gratis y sin servidor
+propio, funciona igual en GitHub Pages.
+
+1. Ve a [analytics.google.com](https://analytics.google.com), crea una cuenta
+   (o usa una que ya tengas) y dentro una "propiedad" para esta web.
+2. Te da un **ID de medición** con forma `G-XXXXXXXXXX`.
+3. Pégalo en `layout.js`, en la constante `GA_MEASUREMENT_ID` (está casi al
+   principio del fichero, vacía por defecto).
+4. Haz push. En un par de minutos ya ves las visitas en tiempo real dentro
+   de Analytics.
+
+No hay que tocar nada más — al estar centralizado en `layout.js`, se activa
+en las 9 páginas a la vez. Con la constante vacía (como viene por defecto) no
+se carga nada, para no ensuciar tus propias estadísticas mientras pruebas en
+local.
+
 ### Corregir un resultado a mano
 
 `data/resultados/realidad_oficial.json` es un fichero de texto. Puedes editarlo
