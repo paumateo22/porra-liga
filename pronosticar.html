@@ -25,7 +25,8 @@
     <div class="fila-nombre-compacta">
       <label for="nombre">Tu nombre</label>
       <input type="text" id="nombre" class="campo-nombre-compacto" placeholder="Ej. Mateo" autocomplete="off">
-      <p class="nota">Usa siempre el mismo nombre: es lo que te identifica en la clasificación.</p>
+      <label for="clave">Clave de acceso</label>
+      <input type="password" id="clave" class="campo-nombre-compacto" style="max-width:140px" autocomplete="off">
     </div>
 
     <div id="barra-jornadas"></div>
@@ -69,7 +70,11 @@ async function iniciar() {
     localStorage.setItem("porra_nombre", nombre.value);
     avisar("");
   };
-  nombre.onblur = precargarGuardados;
+
+  const clave = document.getElementById("clave");
+  clave.value = localStorage.getItem("porra_clave") || "";
+  clave.oninput = () => localStorage.setItem("porra_clave", clave.value);
+  clave.onblur = verificarClave;
 
   indice = Math.max(0, CLAVES.indexOf(jornadaActual(REALIDAD, CLAVES)));
   document.getElementById("btn-descargar").onclick = descargar;
@@ -80,6 +85,7 @@ async function iniciar() {
   });
 
   pintar();
+  if (clave.value.trim()) await verificarClave(); // clave recordada de una visita anterior
 }
 
 function pintar() {
@@ -115,14 +121,47 @@ function pintar() {
    descodificados en memoria (el fichero guarda el marcador ofuscado). */
 let PREVIOS = {};
 
-/* Si ya mandaste esta jornada, se recuperan tus marcadores del repo. El
-   fichero guarda el marcador ofuscado (campo "marcador"); se descodifica
-   aquí, en memoria, solo para rellenar los campos del formulario. */
+/* Slug del jugador cuya clave de acceso se ha comprobado correcta esta
+   sesión — null si no se ha verificado ninguna. Es lo único que puede
+   destapar los pronósticos ya guardados de alguien: escribir su nombre YA
+   NO basta (antes sí, y eso dejaba ver los pronósticos de cualquiera con
+   solo saber su nombre). */
+let IDENTIDAD_VERIFICADA = null;
+
+/* Comprueba la clave contra config/participantes.json. Si coincide con
+   alguien, se rellena su nombre solo y se recuperan sus pronósticos ya
+   enviados. Si no coincide con nadie (o está vacía), no se revela nada. */
+async function verificarClave() {
+  const claveInput = document.getElementById("clave").value.trim();
+  IDENTIDAD_VERIFICADA = null;
+  PREVIOS = {};
+
+  if (!claveInput) { marcarBloqueados(); return; }
+
+  const registro = await cargar("config/participantes.json", { participantes: [] });
+  const encontrado = registro.participantes.find((p) => p.clave_acceso && p.clave_acceso === claveInput);
+
+  if (!encontrado) {
+    avisar("Esa clave no coincide con ningún jugador.", "error");
+    marcarBloqueados();
+    return;
+  }
+
+  IDENTIDAD_VERIFICADA = encontrado.slug;
+  const nombre = document.getElementById("nombre");
+  nombre.value = encontrado.nombre;
+  localStorage.setItem("porra_nombre", encontrado.nombre);
+  await precargarGuardados();
+}
+
+/* Recupera los pronósticos ya guardados del jugador verificado por clave.
+   Sin identidad verificada no se lee ni se descodifica nada — ni con el
+   nombre exacto alcanza. */
 async function precargarGuardados() {
-  const nombre = document.getElementById("nombre").value;
-  if (!nombre.trim()) return;
+  if (!IDENTIDAD_VERIFICADA) { PREVIOS = {}; marcarBloqueados(); return; }
+
   const clave = CLAVES[indice];
-  const datos = await cargar(`participantes/${slug(nombre)}/pronosticos/${clave}.json`, null);
+  const datos = await cargar(`participantes/${IDENTIDAD_VERIFICADA}/pronosticos/${clave}.json`, null);
   if (!datos) {
     PREVIOS = {};
     marcarBloqueados();
@@ -147,15 +186,17 @@ async function precargarGuardados() {
   avisar(`Recuperados tus pronósticos ya enviados de ${clave}. Puedes cambiar los partidos que aún no se han jugado.`, "ok");
 }
 
-/* Etiqueta cada partido cerrado según si tenías o no pronóstico guardado. */
+/* Etiqueta cada partido cerrado según si tenías o no pronóstico guardado —
+   o si ni siquiera se puede saber, por no haber verificado la clave. */
 function marcarBloqueados() {
   for (const l of document.querySelectorAll('input[data-lado="l"][disabled]')) {
     const fila = l.closest(".partido");
     fila.querySelector(".etiqueta-bloqueo")?.remove();
     const id = parseInt(l.dataset.id);
-    const texto = PREVIOS[id]
-      ? "🔒 ya jugado · se conserva tu pronóstico"
-      : "🔒 ya jugado · sin pronóstico";
+    let texto;
+    if (!IDENTIDAD_VERIFICADA) texto = "🔒 ya jugado";
+    else if (PREVIOS[id]) texto = "🔒 ya jugado · se conserva tu pronóstico";
+    else texto = "🔒 ya jugado · sin pronóstico";
     fila.insertAdjacentHTML("beforeend",
       `<span class="etiqueta-bloqueo nota" style="grid-column:1/-1;text-align:center">${texto}</span>`);
   }

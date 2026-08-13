@@ -1,0 +1,77 @@
+{
+    "participante": "David",
+    "jornada": 2,
+    "generado": "2026-08-12T21:05:22",
+    "predicciones": [
+        {
+            "id": 20000011,
+            "local": "Rayo",
+            "visitante": "Atlético",
+            "fecha": "2026-05-06T21:05:16",
+            "marcador": "٤٩٠水٦٧٥٩八山٤٣水火"
+        },
+        {
+            "id": 20000012,
+            "local": "Levante",
+            "visitante": "Espanyol",
+            "fecha": "2026-05-06T23:05:16",
+            "marcador": "٤٩٠山٨٧土١八٧木٣水火"
+        },
+        {
+            "id": 20000013,
+            "local": "Barcelona",
+            "visitante": "Betis",
+            "fecha": "2026-05-07T01:05:16",
+            "marcador": "٤٩٠٧٠٧火水八٤木٣水火"
+        },
+        {
+            "id": 20000014,
+            "local": "Osasuna",
+            "visitante": "Athletic",
+            "fecha": "2026-05-07T03:05:16",
+            "marcador": "٤٩٠٦٤٧٦٣八٠١٣水火"
+        },
+        {
+            "id": 20000015,
+            "local": "Girona",
+            "visitante": "Oviedo",
+            "fecha": "2026-05-07T05:05:16",
+            "marcador": "٤٩٠٥山٧٩水八木山٣水火"
+        },
+        {
+            "id": 20000016,
+            "local": "Mallorca",
+            "visitante": "Real Madrid",
+            "fecha": "2026-05-07T07:05:16",
+            "marcador": "٤٩٠٤金٧٣٣八٩٣٣水火"
+        },
+        {
+            "id": 20000017,
+            "local": "Valencia",
+            "visitante": "Alavés",
+            "fecha": "2026-05-07T09:05:16",
+            "marcador": "٤٩٠山٤٧山水八٦水٣水火"
+        },
+        {
+            "id": 20000018,
+            "local": "Elche",
+            "visitante": "Getafe",
+            "fecha": "2026-05-07T11:05:16",
+            "marcador": "٤٩٠金٥٧山٣八٤٣٣水火"
+        },
+        {
+            "id": 20000019,
+            "local": "Celta",
+            "visitante": "Sevilla",
+            "fecha": "2026-05-07T13:05:16",
+            "marcador": "٤٩٠木水٧木水八١水٣水火"
+        },
+        {
+            "id": 20000020,
+            "local": "Villarreal",
+            "visitante": "Real Sociedad",
+            "fecha": "2026-05-07T15:05:16",
+            "marcador": "٤٩٠火木٧٧٣八木٠٣水火"
+        }
+    ]
+}

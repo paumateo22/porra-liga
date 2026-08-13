@@ -182,10 +182,10 @@ la carpeta.
 | **📅 Calendario** (`calendario.html`) | Partidos y resultados, jornada a jornada o todas seguidas |
 | **✍️ Pronosticar** (`pronosticar.html`) | Formulario que genera el JSON descargable |
 | **🔍 Análisis** (`analisis.html`) | Quién acertó qué: tabla cruzada jugadores × partidos, y el detalle de cada partido |
-| **📈 Carrera** (`carrera.html`) | Gráfico de evolución + marcador tipo "carrera de barras": las filas se reordenan animadas al mover la barra temporal, con reproducción automática y velocidad ajustable |
+| **📈 Carrera** (`carrera.html`) | Gráfico de evolución + marcador tipo "carrera de barras", con reproducción fluida (interpolada, no a saltos) y velocidad ajustable. Eje Y con margen ajustado por defecto (opción para anclarlo a 0) y vista opcional centrada en un jugador, mostrando a los demás como diferencia respecto a él |
 | **👥 Participantes** (`participantes.html`) | Quién juega, desde cuándo, media y porcentaje de acierto |
 | **👤 Perfil** (`perfil.html?j=slug`) | Dashboard individual: rachas, mejor y peor jornada, gráfico de acumulado comparable con otros jugadores |
-| **🗒️ Pronósticos de un jugador** (`pronosticos_jugador.html?j=slug&jornada=Jxx`) | Vista tipo calendario con lo que pronosticó esa persona junto al resultado real, partido a partido — se llega desde la tabla "jornada a jornada" del perfil |
+| **🗒️ Pronósticos de un jugador** (`pronosticos_jugador.html?j=slug&jornada=Jxx`) | Escudos, resultado real y el pronóstico de esa persona, dos partidos por fila, con opción de ver toda la temporada seguida — el título cambia al nombre del jugador. Se llega con el botón "Ver sus pronósticos" del perfil o desde la tabla "jornada a jornada" |
 | **📜 Reglamento** (`reglamento.html`) | Las normas, generadas en vivo desde `settings.json` |
 
 Las cuatro primeras están en la barra superior; el resto, en el menú lateral.
@@ -362,6 +362,39 @@ En `habilitadores` puedes apagar reglas enteras poniendo `0` (por ejemplo,
 `"bonus_rendimiento": 0` desactiva el bonus para toda la temporada).
 
 Tras cualquier cambio, ejecuta la opción 4 y la clasificación se recalcula entera.
+
+### Clave de acceso: quién puede recuperar sus pronósticos guardados
+
+Por defecto, **nadie puede ver los pronósticos de nadie antes de que se juegue
+el partido** — ni en `pronosticos_jugador.html`, ni escribiendo el nombre de
+otra persona en `pronosticar.html`. La web solo revela un pronóstico cuando
+el partido termina de verdad.
+
+Eso tiene un efecto secundario: si un jugador quiere recuperar sus propios
+pronósticos ya enviados (para completar los que le faltan de una jornada, por
+ejemplo), necesita demostrar que es él. Para eso sirve `clave_acceso`: un
+campo opcional que tú añades a mano en `config/participantes.json`, en la
+ficha de la persona que quieras:
+
+```json
+{
+  "slug": "pau",
+  "nombre": "Pau",
+  "alta": "2026-08-01T10:00:00",
+  "clave_acceso": "lo-que-tú-quieras"
+}
+```
+
+Con eso puesto, esa persona escribe su clave en `pronosticar.html` (no su
+nombre — el nombre se autocompleta solo al validarla) y se le recuperan sus
+pronósticos ya enviados. Sin la clave correcta, no hay manera de verlos —
+ni siquiera escribiendo el nombre exacto.
+
+Nadie tiene una clave a menos que tú se la pongas y se la pases (por
+WhatsApp, en persona, como prefieras). Quien no tenga clave simplemente
+rellena sus pronósticos desde cero cada vez, tal como funcionaba la web
+antes de que existiera esta función — nada se rompe, solo se pierde la
+comodidad de la recuperación automática si no hay clave.
 
 ### Insignias de jugadores (🏆, ⭐...)
 

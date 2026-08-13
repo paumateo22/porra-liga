@@ -1,0 +1,49 @@
+{
+    "participante": "Elena",
+    "jornada": 8,
+    "generado": "2026-08-12T21:05:22",
+    "predicciones": [
+        {
+            "id": 20000078,
+            "local": "Barcelona",
+            "visitante": "Girona",
+            "fecha": "2026-06-18T11:05:16",
+            "marcador": "٤٩٠٨٣٧١٧八٨٧٣水火"
+        },
+        {
+            "id": 20000079,
+            "local": "Mallorca",
+            "visitante": "Villarreal",
+            "fecha": "2026-06-18T13:05:16",
+            "marcador": "٤٩٠土٨٧٨金八٥山٣水火"
+        },
+        {
+            "id": 20000077,
+            "local": "Atlético",
+            "visitante": "Getafe",
+            "fecha": "2026-06-18T09:05:16",
+            "marcador": "٤٩٠٤٦٧١金八山金٣水火"
+        },
+        {
+            "id": 20000071,
+            "local": "Athletic",
+            "visitante": "Oviedo",
+            "fecha": "2026-06-17T21:05:16",
+            "marcador": "٤٩٠٥٦٧٠火八金山٣水火"
+        },
+        {
+            "id": 20000072,
+            "local": "Real Madrid",
+            "visitante": "Espanyol",
+            "fecha": "2026-06-17T23:05:16",
+            "marcador": "٤٩٠٤山٧山٤八山٠٣水火"
+        },
+        {
+            "id": 20000075,
+            "local": "Valencia",
+            "visitante": "Real Sociedad",
+            "fecha": "2026-06-18T05:05:16",
+            "marcador": "٤٩٠٧金٧٤金八١火٣水火"
+        }
+    ]
+}

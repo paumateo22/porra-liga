@@ -1,0 +1,79 @@
+{
+    "participante": "bruno",
+    "nombre": "Bruno",
+    "jornada": 9,
+    "generado": "2026-08-12T21:05:22",
+    "ingerido": "2026-08-12T21:05:23",
+    "predicciones": [
+        {
+            "id": 20000081,
+            "local": "Athletic",
+            "visitante": "Celta",
+            "fecha": "2026-06-24T21:05:16",
+            "marcador": "٤٩٠٦٩٧٢金八٣٨٣水火"
+        },
+        {
+            "id": 20000082,
+            "local": "Real Sociedad",
+            "visitante": "Betis",
+            "fecha": "2026-06-24T23:05:16",
+            "marcador": "٤٩٠٥火٧٤٦八٨火٣水火"
+        },
+        {
+            "id": 20000083,
+            "local": "Girona",
+            "visitante": "Osasuna",
+            "fecha": "2026-06-25T01:05:16",
+            "marcador": "٤٩٠٢٧٧٥٩八木火٣水火"
+        },
+        {
+            "id": 20000084,
+            "local": "Barcelona",
+            "visitante": "Valencia",
+            "fecha": "2026-06-25T03:05:16",
+            "marcador": "٤٩٠١水٧土١八٩٧٣水火"
+        },
+        {
+            "id": 20000085,
+            "local": "Oviedo",
+            "visitante": "Elche",
+            "fecha": "2026-06-25T05:05:16",
+            "marcador": "٤٩٠٠土٧٦٨八٦土٣水火"
+        },
+        {
+            "id": 20000086,
+            "local": "Rayo",
+            "visitante": "Real Madrid",
+            "fecha": "2026-06-25T07:05:16",
+            "marcador": "٤٩٠٦٢٧٨٠八٢٤٣水火"
+        },
+        {
+            "id": 20000087,
+            "local": "Sevilla",
+            "visitante": "Getafe",
+            "fecha": "2026-06-25T09:05:16",
+            "marcador": "٤٩٠٥٦٧٣٨八土土٣水火"
+        },
+        {
+            "id": 20000088,
+            "local": "Mallorca",
+            "visitante": "Atlético",
+            "fecha": "2026-06-25T11:05:16",
+            "marcador": "٤٩٠٩٨٧٣١八木٢٣水火"
+        },
+        {
+            "id": 20000089,
+            "local": "Alavés",
+            "visitante": "Villarreal",
+            "fecha": "2026-06-25T13:05:16",
+            "marcador": "٤٩٠土٠٧山٨八山水٣水火"
+        },
+        {
+            "id": 20000090,
+            "local": "Levante",
+            "visitante": "Espanyol",
+            "fecha": "2026-06-25T15:05:16",
+            "marcador": "٤٩٠金٠٧火٠八٦٣٣水火"
+        }
+    ]
+}

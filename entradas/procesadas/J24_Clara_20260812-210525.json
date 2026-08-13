@@ -1,0 +1,77 @@
+{
+    "participante": "Clara",
+    "jornada": 24,
+    "generado": "2026-08-12T21:05:22",
+    "predicciones": [
+        {
+            "id": 20000231,
+            "local": "Athletic",
+            "visitante": "Celta",
+            "fecha": "2026-10-07T21:05:16",
+            "marcador": "٤٩٠٣水٧金火八水١٣水火"
+        },
+        {
+            "id": 20000232,
+            "local": "Real Sociedad",
+            "visitante": "Levante",
+            "fecha": "2026-10-07T23:05:16",
+            "marcador": "٤٩٠٢火٧٠٤八٠水٣水火"
+        },
+        {
+            "id": 20000233,
+            "local": "Barcelona",
+            "visitante": "Espanyol",
+            "fecha": "2026-10-08T01:05:16",
+            "marcador": "٤٩٠土٤٧١金八٥٦٣水火"
+        },
+        {
+            "id": 20000234,
+            "local": "Real Madrid",
+            "visitante": "Oviedo",
+            "fecha": "2026-10-08T03:05:16",
+            "marcador": "٤٩٠金٩٧水٦八٢火٣水火"
+        },
+        {
+            "id": 20000235,
+            "local": "Rayo",
+            "visitante": "Girona",
+            "fecha": "2026-10-08T05:05:16",
+            "marcador": "٤٩٠木土٧٢金八金٧٣水火"
+        },
+        {
+            "id": 20000236,
+            "local": "Sevilla",
+            "visitante": "Alavés",
+            "fecha": "2026-10-08T07:05:16",
+            "marcador": "٤٩٠٣٣٧٤٦八水火٣水火"
+        },
+        {
+            "id": 20000237,
+            "local": "Villarreal",
+            "visitante": "Elche",
+            "fecha": "2026-10-08T09:05:16",
+            "marcador": "٤٩٠٢٠٧土金八٧٥٣水火"
+        },
+        {
+            "id": 20000238,
+            "local": "Valencia",
+            "visitante": "Atlético",
+            "fecha": "2026-10-08T11:05:16",
+            "marcador": "٤٩٠٦山٧土٦八٦火٣水火"
+        },
+        {
+            "id": 20000239,
+            "local": "Mallorca",
+            "visitante": "Osasuna",
+            "fecha": "2026-10-08T13:05:16",
+            "marcador": "٤٩٠٥金٧٦金八٢٧٣水火"
+        },
+        {
+            "id": 20000240,
+            "local": "Getafe",
+            "visitante": "Betis",
+            "fecha": "2026-10-08T15:05:16",
+            "marcador": "٤٩٠水٢٧٨٦八土火٣水火"
+        }
+    ]
+}

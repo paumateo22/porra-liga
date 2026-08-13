@@ -1,0 +1,79 @@
+{
+    "participante": "clara",
+    "nombre": "Clara",
+    "jornada": 32,
+    "generado": "2026-08-12T21:05:22",
+    "ingerido": "2026-08-12T21:05:26",
+    "predicciones": [
+        {
+            "id": 20000311,
+            "local": "Barcelona",
+            "visitante": "Villarreal",
+            "fecha": "2026-12-02T21:05:16",
+            "marcador": "٤٩٠٧٢٧٦٣八水٦٣水火"
+        },
+        {
+            "id": 20000312,
+            "local": "Celta",
+            "visitante": "Espanyol",
+            "fecha": "2026-12-02T23:05:16",
+            "marcador": "٤٩٠٦٧٧٩水八٠木٣水火"
+        },
+        {
+            "id": 20000313,
+            "local": "Sevilla",
+            "visitante": "Real Madrid",
+            "fecha": "2026-12-03T01:05:16",
+            "marcador": "٤٩٠火金٧٩٢八٥水٣水火"
+        },
+        {
+            "id": 20000314,
+            "local": "Real Sociedad",
+            "visitante": "Betis",
+            "fecha": "2026-12-03T03:05:16",
+            "marcador": "٤٩٠٢٣٧٠山八١٣٣水火"
+        },
+        {
+            "id": 20000315,
+            "local": "Alavés",
+            "visitante": "Getafe",
+            "fecha": "2026-12-03T05:05:16",
+            "marcador": "٤٩٠١٧٧山٢八金水٣水火"
+        },
+        {
+            "id": 20000316,
+            "local": "Rayo",
+            "visitante": "Mallorca",
+            "fecha": "2026-12-03T07:05:16",
+            "marcador": "٤٩٠٠٨٧木٥八山٠٣水火"
+        },
+        {
+            "id": 20000317,
+            "local": "Elche",
+            "visitante": "Osasuna",
+            "fecha": "2026-12-03T09:05:16",
+            "marcador": "٤٩٠٧٨٧٤木八٧٨٣水火"
+        },
+        {
+            "id": 20000318,
+            "local": "Valencia",
+            "visitante": "Oviedo",
+            "fecha": "2026-12-03T11:05:16",
+            "marcador": "٤٩٠山٣٧٤山八٥٣٣水火"
+        },
+        {
+            "id": 20000319,
+            "local": "Athletic",
+            "visitante": "Levante",
+            "fecha": "2026-12-03T13:05:16",
+            "marcador": "٤٩٠٩٧٧金٢八٢٧٣水火"
+        },
+        {
+            "id": 20000320,
+            "local": "Atlético",
+            "visitante": "Girona",
+            "fecha": "2026-12-03T15:05:16",
+            "marcador": "٤٩٠٨٨٧١٥八土土٣水火"
+        }
+    ]
+}

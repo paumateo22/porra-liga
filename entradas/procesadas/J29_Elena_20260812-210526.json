@@ -1,0 +1,77 @@
+{
+    "participante": "Elena",
+    "jornada": 29,
+    "generado": "2026-08-12T21:05:22",
+    "predicciones": [
+        {
+            "id": 20000281,
+            "local": "Alavés",
+            "visitante": "Athletic",
+            "fecha": "2026-11-11T21:05:16",
+            "marcador": "٤٩٠٩٣٧٢١八٦土٣水火"
+        },
+        {
+            "id": 20000282,
+            "local": "Villarreal",
+            "visitante": "Levante",
+            "fecha": "2026-11-11T23:05:16",
+            "marcador": "٤٩٠٨٤٧٥٩八٢٥٣水火"
+        },
+        {
+            "id": 20000283,
+            "local": "Barcelona",
+            "visitante": "Getafe",
+            "fecha": "2026-11-12T01:05:16",
+            "marcador": "٤٩٠٦火٧٥٠八٧٢٣水火"
+        },
+        {
+            "id": 20000284,
+            "local": "Celta",
+            "visitante": "Atlético",
+            "fecha": "2026-11-12T03:05:16",
+            "marcador": "٤٩٠٤١٧火٨八火٩٣水火"
+        },
+        {
+            "id": 20000285,
+            "local": "Rayo",
+            "visitante": "Oviedo",
+            "fecha": "2026-11-12T05:05:16",
+            "marcador": "٤٩٠水٠٧٦٣八٨٠٣水火"
+        },
+        {
+            "id": 20000286,
+            "local": "Real Sociedad",
+            "visitante": "Betis",
+            "fecha": "2026-11-12T07:05:16",
+            "marcador": "٤٩٠山٨٧٩水八٥٨٣水火"
+        },
+        {
+            "id": 20000287,
+            "local": "Sevilla",
+            "visitante": "Espanyol",
+            "fecha": "2026-11-12T09:05:16",
+            "marcador": "٤٩٠٩٨٧٣٣八١٠٣水火"
+        },
+        {
+            "id": 20000288,
+            "local": "Mallorca",
+            "visitante": "Girona",
+            "fecha": "2026-11-12T11:05:16",
+            "marcador": "٤٩٠火١٧٠٨八٠٩٣水火"
+        },
+        {
+            "id": 20000289,
+            "local": "Elche",
+            "visitante": "Valencia",
+            "fecha": "2026-11-12T13:05:16",
+            "marcador": "٤٩٠٣٤٧山٠八火٠٣水火"
+        },
+        {
+            "id": 20000290,
+            "local": "Osasuna",
+            "visitante": "Real Madrid",
+            "fecha": "2026-11-12T15:05:16",
+            "marcador": "٤٩٠٢山٧木水八٩水٣水火"
+        }
+    ]
+}

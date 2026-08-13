@@ -1,0 +1,49 @@
+{
+    "participante": "Bruno",
+    "jornada": 37,
+    "generado": "2026-08-12T21:05:22",
+    "predicciones": [
+        {
+            "id": 20000361,
+            "local": "Getafe",
+            "visitante": "Girona",
+            "fecha": "2027-01-06T21:05:16",
+            "marcador": "٤٩٠٥土٧火٧八٣٥٣水火"
+        },
+        {
+            "id": 20000370,
+            "local": "Barcelona",
+            "visitante": "Real Sociedad",
+            "fecha": "2027-01-07T15:05:16",
+            "marcador": "٤٩٠木٢٧土٩八٦١٣水火"
+        },
+        {
+            "id": 20000369,
+            "local": "Rayo",
+            "visitante": "Espanyol",
+            "fecha": "2027-01-07T13:05:16",
+            "marcador": "٤٩٠金١٧٤١八山水٣水火"
+        },
+        {
+            "id": 20000363,
+            "local": "Alavés",
+            "visitante": "Celta",
+            "fecha": "2027-01-07T01:05:16",
+            "marcador": "٤٩٠١٧٧٧١八木金٣水火"
+        },
+        {
+            "id": 20000362,
+            "local": "Osasuna",
+            "visitante": "Athletic",
+            "fecha": "2027-01-06T23:05:16",
+            "marcador": "٤٩٠٤土٧٧土八٨金٣水火"
+        },
+        {
+            "id": 20000365,
+            "local": "Atlético",
+            "visitante": "Levante",
+            "fecha": "2027-01-07T05:05:16",
+            "marcador": "٤٩٠٧金٧٠١八٦水٣水火"
+        }
+    ]
+}

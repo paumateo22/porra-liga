@@ -1,0 +1,79 @@
+{
+    "participante": "ana",
+    "nombre": "Ana",
+    "jornada": 38,
+    "generado": "2026-08-12T21:05:21",
+    "ingerido": "2026-08-12T21:05:26",
+    "predicciones": [
+        {
+            "id": 20000371,
+            "local": "Athletic",
+            "visitante": "Betis",
+            "fecha": "2027-01-13T21:05:16",
+            "marcador": "٤٩٠٥٠٧金١八٠٥٣水火"
+        },
+        {
+            "id": 20000372,
+            "local": "Valencia",
+            "visitante": "Elche",
+            "fecha": "2027-01-13T23:05:16",
+            "marcador": "٤٩٠٤٧٧١٩八木土٣水火"
+        },
+        {
+            "id": 20000373,
+            "local": "Celta",
+            "visitante": "Villarreal",
+            "fecha": "2027-01-14T01:05:16",
+            "marcador": "٤٩٠٢木٧١٣八٢火٣水火"
+        },
+        {
+            "id": 20000374,
+            "local": "Levante",
+            "visitante": "Girona",
+            "fecha": "2027-01-14T03:05:16",
+            "marcador": "٤٩٠٠٠٧٨水八金١٣水火"
+        },
+        {
+            "id": 20000375,
+            "local": "Espanyol",
+            "visitante": "Getafe",
+            "fecha": "2027-01-14T05:05:16",
+            "marcador": "٤٩٠٧٦٧٢٣八水٨٣水火"
+        },
+        {
+            "id": 20000376,
+            "local": "Atlético",
+            "visitante": "Real Sociedad",
+            "fecha": "2027-01-14T07:05:16",
+            "marcador": "٤٩٠٦٨٧٥水八٧٠٣水火"
+        },
+        {
+            "id": 20000377,
+            "local": "Real Madrid",
+            "visitante": "Mallorca",
+            "fecha": "2027-01-14T09:05:16",
+            "marcador": "٤٩٠٥山٧土٣八火٩٣水火"
+        },
+        {
+            "id": 20000378,
+            "local": "Sevilla",
+            "visitante": "Rayo",
+            "fecha": "2027-01-14T11:05:16",
+            "marcador": "٤٩٠٨٢٧火水八٢٠٣水火"
+        },
+        {
+            "id": 20000379,
+            "local": "Osasuna",
+            "visitante": "Barcelona",
+            "fecha": "2027-01-14T13:05:16",
+            "marcador": "٤٩٠土٥٧٦٣八土山٣水火"
+        },
+        {
+            "id": 20000380,
+            "local": "Alavés",
+            "visitante": "Oviedo",
+            "fecha": "2027-01-14T15:05:16",
+            "marcador": "٤٩٠金山٧٩水八水٠٣水火"
+        }
+    ]
+}

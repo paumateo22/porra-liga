@@ -57,6 +57,9 @@ async function render(fichero, busqueda = "") {
       win.confirm = () => true;
       win.URL.createObjectURL = () => "blob:falso";
       win.URL.revokeObjectURL = () => {};
+      // jsdom no implementa requestAnimationFrame; un no-op basta para las
+      // comprobaciones estáticas (no ejecutamos varios fotogramas aquí).
+      win.requestAnimationFrame = win.requestAnimationFrame || (() => 0);
       win.addEventListener("unhandledrejection", (e) => errores.push(String(e.reason)));
     },
   });
@@ -148,6 +151,8 @@ async function probarEscenarioReset() {
       `una fila por jugador en el resumen (${nJugadores})`);
     check(texto(doc, "#cuerpo-resumen tr td:nth-child(2)").includes(lider.nombre),
       `${lider.nombre} encabeza la tabla`);
+    check(doc.querySelector(`#cuerpo-resumen a[href="perfil.html?j=${lider.slug}"]`) !== null,
+      "el nombre en la clasificación es un atajo a su perfil");
     if (lider.insignias && lider.insignias.length) {
       const primeraInsignia = lider.insignias[0];
       check(texto(doc, "#cuerpo-resumen tr td:nth-child(2)").includes(primeraInsignia.emoji),
@@ -204,6 +209,8 @@ async function probarEscenarioReset() {
       "pinta todos los partidos de esa jornada");
     check(cuenta(doc, "#contenido .fecha-partido") === calendario[claveActual].length,
       "muestra la fecha de cada partido, no solo la hora");
+    check(doc.querySelector(".enlace-analisis-jornada")?.getAttribute("href") === `analisis.html?jornada=${claveActual}`,
+      "cada jornada lleva un atajo directo a su análisis");
 
     doc.querySelector("#btn-todas").dispatchEvent(new dom.window.Event("click"));
     await new Promise((r) => setTimeout(r, 80));
@@ -245,32 +252,72 @@ async function probarEscenarioReset() {
       "muestra la fecha de cada partido en el formulario de pronósticos");
   }
 
-  console.log("\n═══ pronosticar.html · precarga de pronósticos ya enviados (marcador ofuscado) ═══");
+  console.log("\n═══ pronosticar.html · seguridad de la precarga (clave de acceso) ═══");
   {
     const jugadorPrueba = clas.clasificacion[0];
     const rutaGuardado = path.join(RAIZ, `participantes/${jugadorPrueba.slug}/pronosticos/${claveActual}.json`);
+    const rutaParticipantes = path.join(RAIZ, "config/participantes.json");
 
     if (fs.existsSync(rutaGuardado)) {
-      const { dom, doc, errores } = await render("pronosticar.html");
-      check(errores.length === 0, `sin errores de JS al cargar ${errores[0] || ""}`);
+      // Prueba A: escribir el nombre real de alguien SIN ninguna clave no
+      // debe rellenar nada — antes de este cambio, esto sí filtraba sus
+      // pronósticos con solo saber su nombre.
+      const { doc: docSinClave, dom: domSinClave, errores: erroresA } = await render("pronosticar.html");
+      check(erroresA.length === 0, `sin errores de JS al cargar ${erroresA[0] || ""}`);
 
-      const nombreInput = doc.querySelector("#nombre");
+      const nombreInput = docSinClave.querySelector("#nombre");
       nombreInput.value = jugadorPrueba.nombre;
-      nombreInput.dispatchEvent(new dom.window.Event("blur"));
-      await new Promise((r) => setTimeout(r, 250));
-
-      const guardado = leer(`participantes/${jugadorPrueba.slug}/pronosticos/${claveActual}.json`);
-      check(!texto(doc, "body").includes(guardado.predicciones[0].marcador),
+      nombreInput.dispatchEvent(new domSinClave.window.Event("input"));
+      await domSinClave.window.precargarGuardados();
+      await new Promise((r) => setTimeout(r, 150));
+      const rellenoSinClave = [...docSinClave.querySelectorAll('input[data-lado="l"]')].some((i) => i.value !== "");
+      check(!rellenoSinClave,
+        `escribir el nombre de ${jugadorPrueba.nombre} SIN clave no revela sus pronósticos`);
+      check(!texto(docSinClave, "body").includes(leer(`participantes/${jugadorPrueba.slug}/pronosticos/${claveActual}.json`).predicciones[0]?.marcador || "\0"),
         "el token ofuscado no aparece nunca como texto plano en la página");
 
-      const primeraPred = guardado.predicciones.find((p) =>
-        doc.querySelector(`input[data-id="${p.id}"][data-lado="l"]`));
-      if (primeraPred) {
-        const { gl, gv } = dom.window.desofuscarMarcador(primeraPred.marcador, primeraPred.fecha, claveActual);
-        const lInput = doc.querySelector(`input[data-id="${primeraPred.id}"][data-lado="l"]`);
-        const vInput = doc.querySelector(`input[data-id="${primeraPred.id}"][data-lado="v"]`);
-        check(lInput && String(lInput.value) === String(gl) && vInput && String(vInput.value) === String(gv),
-          `la precarga descodifica el marcador ofuscado y rellena los campos correctamente (${gl}-${gv})`);
+      // Se le asigna una clave de prueba (como haría el admin a mano) para
+      // comprobar el resto del flujo, y se restaura al terminar.
+      const registro = JSON.parse(fs.readFileSync(rutaParticipantes, "utf8"));
+      const backupRegistro = JSON.stringify(registro);
+      const entrada = registro.participantes.find((p) => p.slug === jugadorPrueba.slug);
+      entrada.clave_acceso = "clave-de-prueba-9x7";
+      fs.writeFileSync(rutaParticipantes, JSON.stringify(registro, null, 4));
+
+      try {
+        // Prueba B: clave incorrecta se rechaza y no revela nada.
+        const { doc: docClaveMala, dom: domClaveMala, errores: erroresB } = await render("pronosticar.html");
+        check(erroresB.length === 0, `sin errores de JS ${erroresB[0] || ""}`);
+        const claveInputMala = docClaveMala.querySelector("#clave");
+        claveInputMala.value = "esto-no-es-la-clave";
+        claveInputMala.dispatchEvent(new domClaveMala.window.Event("blur"));
+        await new Promise((r) => setTimeout(r, 150));
+        const rellenoClaveMala = [...docClaveMala.querySelectorAll('input[data-lado="l"]')].some((i) => i.value !== "");
+        check(!rellenoClaveMala, "una clave de acceso incorrecta no revela ningún pronóstico");
+
+        // Prueba C: clave correcta recupera los pronósticos Y autocompleta el nombre.
+        const { doc, dom, errores: erroresC } = await render("pronosticar.html");
+        check(erroresC.length === 0, `sin errores de JS ${erroresC[0] || ""}`);
+        const claveInput = doc.querySelector("#clave");
+        claveInput.value = "clave-de-prueba-9x7";
+        claveInput.dispatchEvent(new dom.window.Event("blur"));
+        await new Promise((r) => setTimeout(r, 250));
+
+        check(doc.querySelector("#nombre").value === jugadorPrueba.nombre,
+          "la clave correcta autocompleta el nombre del jugador, sin tener que escribirlo");
+
+        const guardado = leer(`participantes/${jugadorPrueba.slug}/pronosticos/${claveActual}.json`);
+        const primeraPred = guardado.predicciones.find((p) =>
+          doc.querySelector(`input[data-id="${p.id}"][data-lado="l"]`));
+        if (primeraPred) {
+          const { gl, gv } = dom.window.desofuscarMarcador(primeraPred.marcador, primeraPred.fecha, claveActual);
+          const lInput = doc.querySelector(`input[data-id="${primeraPred.id}"][data-lado="l"]`);
+          const vInput = doc.querySelector(`input[data-id="${primeraPred.id}"][data-lado="v"]`);
+          check(lInput && String(lInput.value) === String(gl) && vInput && String(vInput.value) === String(gv),
+            `con la clave correcta, la precarga descodifica el marcador y rellena los campos (${gl}-${gv})`);
+        }
+      } finally {
+        fs.writeFileSync(rutaParticipantes, backupRegistro);
       }
     }
   }
@@ -315,6 +362,15 @@ async function probarEscenarioReset() {
     const puntos = analisis.jugadores.map((j) => j.puntos);
     check(puntos.every((v, i) => i === 0 || v <= puntos[i - 1]),
       "los jugadores del análisis ya vienen ordenados de más a menos puntos");
+
+    // ?jornada= en la URL (el atajo desde calendario.html) tiene que ganar
+    // siempre a la jornada que se abriría por defecto.
+    const claveNoDefault = clas.jornadas_calculadas.find((c) => c !== claveAnalisis) || claveAnalisis;
+    const { doc: docJornada, errores: erroresJornada } = await render("analisis.html", `?jornada=${claveNoDefault}`);
+    check(erroresJornada.length === 0, `?jornada= sin errores de JS ${erroresJornada[0] || ""}`);
+    check(docJornada.querySelector(".celda-jornada-nav.activa")?.textContent.trim()
+      === String(parseInt(claveNoDefault.slice(1))),
+      `?jornada=${claveNoDefault} en la URL abre esa jornada, no la última calculada`);
   }
 
   console.log("\n═══ participantes.html ═══");
@@ -338,6 +394,10 @@ async function probarEscenarioReset() {
     check(errores.length === 0, `sin errores de JS ${errores[0] || ""}`);
     check(doc.querySelector("#selector-jugador").value === lider.slug,
       "respeta el jugador pedido por la URL");
+    check(doc.querySelector("#btn-ver-pronosticos")?.getAttribute("href") === `pronosticos_jugador.html?j=${lider.slug}`,
+      "el botón de acceso rápido apunta a los pronósticos del jugador seleccionado");
+    check(texto(doc, "header h1").includes(lider.nombre),
+      "el título de la cabecera muestra el nombre del jugador seleccionado, no un texto genérico");
     if (lider.insignias && lider.insignias.length) {
       check(doc.querySelector(`#selector-jugador option[value="${lider.slug}"]`)?.textContent.includes(lider.insignias[0].emoji),
         `la insignia del líder (${lider.insignias[0].emoji}) aparece en el selector de perfil`);
@@ -352,6 +412,32 @@ async function probarEscenarioReset() {
     const ultimo = +filas[filas.length - 1].lastElementChild.textContent;
     check(ultimo === lider.puntos_totales,
       `el acumulado final (${ultimo}) coincide con la clasificación (${lider.puntos_totales})`);
+  }
+
+  console.log("\n═══ pronosticos_jugador.html ═══");
+  {
+    const claveEvaluada = [...clas.jornadas_calculadas]
+      .sort((a, b) => parseInt(a.slice(1)) - parseInt(b.slice(1)))[0];
+
+    const { doc, dom, errores } = await render("pronosticos_jugador.html", `?j=${lider.slug}&jornada=${claveEvaluada}`);
+    check(errores.length === 0, `sin errores de JS ${errores[0] || ""}`);
+    check(texto(doc, "header h1") === `🗒️ Pronósticos de ${lider.nombre}`,
+      "el título muestra el nombre del jugador seleccionado, no un texto genérico");
+    check(cuenta(doc, ".partido") === calendario[claveEvaluada].length,
+      "pinta todos los partidos de la jornada pedida");
+    check(cuenta(doc, ".linea-pronostico") === calendario[claveEvaluada].length,
+      "cada partido lleva su línea de pronóstico");
+
+    const columnas = dom.window.getComputedStyle(doc.querySelector(".lista-partidos")).gridTemplateColumns;
+    check(columnas.trim().split(/\s+/).length === 2,
+      `los partidos se muestran en una cuadrícula de 2 columnas (vio "${columnas}")`);
+
+    const totalPartidosCalendario = Object.values(calendario).reduce((s, p) => s + p.length, 0);
+    doc.querySelector("#btn-todas").dispatchEvent(new dom.window.Event("click"));
+    await new Promise((r) => setTimeout(r, 400));
+    check(cuenta(doc, ".cabecera-jornada") === nJornadas, "'Ver todas' pinta las jornadas del calendario completo");
+    check(cuenta(doc, ".partido") === totalPartidosCalendario,
+      `'Ver todas' pinta los ${totalPartidosCalendario} partidos de toda la temporada`);
   }
 
   console.log("\n═══ carrera.html ═══");
@@ -388,6 +474,50 @@ async function probarEscenarioReset() {
     check(texto(doc, "#etiqueta") === `Jornada ${primera}`, "la barra viaja a la primera jornada");
     check(cuenta(doc, "#marcador .fila-jugador") === nJugadores, "el marcador se conserva al mover la barra");
     check(cuenta(doc, "#grafico svg path") === nJugadores, "el gráfico se repinta");
+
+    // Fluidez: al reproducir, el progreso tiene que avanzar en pasitos
+    // pequeños fotograma a fotograma (interpolando), no saltar de golpe de
+    // una jornada entera a la siguiente.
+    dom.window.alternar(); // pulsa "reproducir" con las funciones reales de la página
+    const valores = [];
+    let t = 1000;
+    for (let i = 0; i < 20; i++) {
+      t += 16; // ~16ms por fotograma, como un navegador real a 60fps
+      dom.window.bucleAnimacion(t);
+      valores.push(+barra.value);
+    }
+    const creceSiempre = valores.every((v, i) => i === 0 || v >= valores[i - 1]);
+    const saltoMaximo = Math.max(...valores.slice(1).map((v, i) => v - valores[i]));
+    check(creceSiempre, "la animación avanza de forma continua, nunca hacia atrás");
+    check(saltoMaximo > 0 && saltoMaximo < 0.1,
+      `cada fotograma avanza un paso pequeño (máximo visto: ${saltoMaximo.toFixed(4)}), no salta de jornada en jornada de golpe`);
+
+    // Límite del eje Y: desactivado por defecto (margen de 5 respecto al
+    // último, no ancla siempre en 0).
+    const chkLimite = doc.getElementById("limite-cero");
+    check(chkLimite && !chkLimite.checked, "el límite del eje a 0 está desactivado por defecto");
+
+    chkLimite.checked = true;
+    chkLimite.dispatchEvent(new dom.window.Event("change"));
+    const minEjeConLimite = doc.querySelectorAll("#grafico svg text")[1]?.textContent;
+    check(minEjeConLimite === "0", `al marcar "limitar a 0" el eje ancla en 0 (vio "${minEjeConLimite}")`);
+    chkLimite.checked = false;
+    chkLimite.dispatchEvent(new dom.window.Event("change"));
+
+    // Vista centrada en un jugador: una opción por jugador además de "Nadie",
+    // y al elegir uno aparece su línea de referencia con el eje en diferencias.
+    const opcionesCentrar = [...doc.querySelectorAll("#centrar-en option")].map((o) => o.value);
+    check(opcionesCentrar.length === nJugadores + 1,
+      "el selector de centrado tiene una opción por jugador, más 'Nadie'");
+
+    const selCentrar = doc.getElementById("centrar-en");
+    selCentrar.value = lider.slug;
+    selCentrar.dispatchEvent(new dom.window.Event("change"));
+    check(doc.querySelector("#grafico svg line[stroke-dasharray]") !== null,
+      "al centrar en un jugador aparece su línea de referencia discontinua");
+    const maxEjeCentrado = doc.querySelectorAll("#grafico svg text")[0]?.textContent;
+    check(/^[+-]\d+$/.test(maxEjeCentrado),
+      `en modo centrado el eje muestra diferencias con signo (vio "${maxEjeCentrado}")`);
   }
 
   console.log("\n═══ reglamento.html ═══");

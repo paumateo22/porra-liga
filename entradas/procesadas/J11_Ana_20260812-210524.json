@@ -1,0 +1,77 @@
+{
+    "participante": "Ana",
+    "jornada": 11,
+    "generado": "2026-08-12T21:05:21",
+    "predicciones": [
+        {
+            "id": 20000101,
+            "local": "Real Sociedad",
+            "visitante": "Real Madrid",
+            "fecha": "2026-07-08T21:05:16",
+            "marcador": "٤٩٠٣٦٧٤金八火土٣水火"
+        },
+        {
+            "id": 20000102,
+            "local": "Athletic",
+            "visitante": "Villarreal",
+            "fecha": "2026-07-08T23:05:16",
+            "marcador": "٤٩٠٢٩٧金٦八٨٥٣水火"
+        },
+        {
+            "id": 20000103,
+            "local": "Girona",
+            "visitante": "Celta",
+            "fecha": "2026-07-09T01:05:16",
+            "marcador": "٤٩٠土١٧土٩八木٥٣水火"
+        },
+        {
+            "id": 20000104,
+            "local": "Osasuna",
+            "visitante": "Rayo",
+            "fecha": "2026-07-09T03:05:16",
+            "marcador": "٤٩٠金٧٧١٠八山火٣水火"
+        },
+        {
+            "id": 20000105,
+            "local": "Barcelona",
+            "visitante": "Espanyol",
+            "fecha": "2026-07-09T05:05:16",
+            "marcador": "٤٩٠木水٧٨٨八٦٤٣水火"
+        },
+        {
+            "id": 20000106,
+            "local": "Oviedo",
+            "visitante": "Levante",
+            "fecha": "2026-07-09T07:05:16",
+            "marcador": "٤٩٠火火٧٢٠八٣金٣水火"
+        },
+        {
+            "id": 20000107,
+            "local": "Valencia",
+            "visitante": "Betis",
+            "fecha": "2026-07-09T09:05:16",
+            "marcador": "٤٩٠٢١٧٥٨八土١٣水火"
+        },
+        {
+            "id": 20000108,
+            "local": "Elche",
+            "visitante": "Alavés",
+            "fecha": "2026-07-09T11:05:16",
+            "marcador": "٤٩٠٦٤٧٥١八金山٣水火"
+        },
+        {
+            "id": 20000109,
+            "local": "Sevilla",
+            "visitante": "Getafe",
+            "fecha": "2026-07-09T13:05:16",
+            "marcador": "٤٩٠٥山٧火٨八山٠٣水火"
+        },
+        {
+            "id": 20000110,
+            "local": "Atlético",
+            "visitante": "Mallorca",
+            "fecha": "2026-07-09T15:05:16",
+            "marcador": "٤٩٠٤土٧٦٠八٧٩٣水火"
+        }
+    ]
+}

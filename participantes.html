@@ -89,7 +89,7 @@ function tarjeta(c, altas) {
   return `
     <div class="match-card" style="padding:16px;text-align:center">
       <div class="match-header">${c.puesto ? `${c.puesto}º clasificado` : "Participante"}</div>
-      <div class="match-score"><span>${nombreConInsignias(c)}</span></div>
+      <div class="match-score"><span>${enlaceNombre(c)}</span></div>
       <p class="nota" style="margin:8px 0 0">
         ${c.puntos_totales !== undefined ? `${c.puntos_totales} puntos · media ${media}` : "Sin datos todavía"}
       </p>

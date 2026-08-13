@@ -1,0 +1,79 @@
+{
+    "participante": "bruno",
+    "nombre": "Bruno",
+    "jornada": 36,
+    "generado": "2026-08-12T21:05:22",
+    "ingerido": "2026-08-12T21:05:26",
+    "predicciones": [
+        {
+            "id": 20000351,
+            "local": "Villarreal",
+            "visitante": "Betis",
+            "fecha": "2026-12-30T21:05:16",
+            "marcador": "٤٩٠٥木٧٧水八٤水٣水火"
+        },
+        {
+            "id": 20000352,
+            "local": "Real Madrid",
+            "visitante": "Elche",
+            "fecha": "2026-12-30T23:05:16",
+            "marcador": "٤٩٠٤土٧٩٣八٠٠٣水火"
+        },
+        {
+            "id": 20000353,
+            "local": "Mallorca",
+            "visitante": "Alavés",
+            "fecha": "2026-12-31T01:05:16",
+            "marcador": "٤٩٠١١٧金山八٥٢٣水火"
+        },
+        {
+            "id": 20000354,
+            "local": "Espanyol",
+            "visitante": "Barcelona",
+            "fecha": "2026-12-31T03:05:16",
+            "marcador": "٤٩٠٠٨٧٠٢八٢٦٣水火"
+        },
+        {
+            "id": 20000355,
+            "local": "Girona",
+            "visitante": "Rayo",
+            "fecha": "2026-12-31T05:05:16",
+            "marcador": "٤٩٠٧木٧水山八土木٣水火"
+        },
+        {
+            "id": 20000356,
+            "local": "Oviedo",
+            "visitante": "Atlético",
+            "fecha": "2026-12-31T07:05:16",
+            "marcador": "٤٩٠٥٢٧٢木八水٤٣水火"
+        },
+        {
+            "id": 20000357,
+            "local": "Sevilla",
+            "visitante": "Getafe",
+            "fecha": "2026-12-31T09:05:16",
+            "marcador": "٤٩٠٤٥٧٤٥八٠金٣水火"
+        },
+        {
+            "id": 20000358,
+            "local": "Osasuna",
+            "visitante": "Levante",
+            "fecha": "2026-12-31T11:05:16",
+            "marcador": "٤٩٠٨水٧٤٢八٦٤٣水火"
+        },
+        {
+            "id": 20000359,
+            "local": "Real Sociedad",
+            "visitante": "Celta",
+            "fecha": "2026-12-31T13:05:16",
+            "marcador": "٤٩٠土金٧土山八٣金٣水火"
+        },
+        {
+            "id": 20000360,
+            "local": "Valencia",
+            "visitante": "Athletic",
+            "fecha": "2026-12-31T15:05:16",
+            "marcador": "٤٩٠木٣٧١٢八土٧٣水火"
+        }
+    ]
+}

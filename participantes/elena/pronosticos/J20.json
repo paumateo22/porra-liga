@@ -1,0 +1,79 @@
+{
+    "participante": "elena",
+    "nombre": "Elena",
+    "jornada": 20,
+    "generado": "2026-08-12T21:05:22",
+    "ingerido": "2026-08-12T21:05:25",
+    "predicciones": [
+        {
+            "id": 20000191,
+            "local": "Villarreal",
+            "visitante": "Athletic",
+            "fecha": "2026-09-09T21:05:16",
+            "marcador": "٤٩٠٩٢٧水木八山٨٣水火"
+        },
+        {
+            "id": 20000192,
+            "local": "Real Sociedad",
+            "visitante": "Elche",
+            "fecha": "2026-09-09T23:05:16",
+            "marcador": "٤٩٠٨٦٧木٥八٧木٣水火"
+        },
+        {
+            "id": 20000193,
+            "local": "Real Madrid",
+            "visitante": "Mallorca",
+            "fecha": "2026-09-10T01:05:16",
+            "marcador": "٤٩٠٣٨٧山火八٧٥٣水火"
+        },
+        {
+            "id": 20000194,
+            "local": "Alavés",
+            "visitante": "Sevilla",
+            "fecha": "2026-09-10T03:05:16",
+            "marcador": "٤٩٠٢土٧火٤八火金٣水火"
+        },
+        {
+            "id": 20000195,
+            "local": "Celta",
+            "visitante": "Osasuna",
+            "fecha": "2026-09-10T05:05:16",
+            "marcador": "٤٩٠٠٣٧٧火八٨٧٣水火"
+        },
+        {
+            "id": 20000196,
+            "local": "Oviedo",
+            "visitante": "Rayo",
+            "fecha": "2026-09-10T07:05:16",
+            "marcador": "٤٩٠٧٥٧٩٧八٥火٣水火"
+        },
+        {
+            "id": 20000197,
+            "local": "Betis",
+            "visitante": "Atlético",
+            "fecha": "2026-09-10T09:05:16",
+            "marcador": "٤٩٠٦水٧٠土八١٤٣水火"
+        },
+        {
+            "id": 20000198,
+            "local": "Levante",
+            "visitante": "Espanyol",
+            "fecha": "2026-09-10T11:05:16",
+            "marcador": "٤٩٠山土٧٠٤八٠木٣水火"
+        },
+        {
+            "id": 20000199,
+            "local": "Getafe",
+            "visitante": "Girona",
+            "fecha": "2026-09-10T13:05:16",
+            "marcador": "٤٩٠٨٠٧水火八火٦٣水火"
+        },
+        {
+            "id": 20000200,
+            "local": "Valencia",
+            "visitante": "Barcelona",
+            "fecha": "2026-09-10T15:05:16",
+            "marcador": "٤٩٠土٧٧木٤八٩金٣水火"
+        }
+    ]
+}

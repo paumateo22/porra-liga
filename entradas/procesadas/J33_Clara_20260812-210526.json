@@ -1,0 +1,77 @@
+{
+    "participante": "Clara",
+    "jornada": 33,
+    "generado": "2026-08-12T21:05:22",
+    "predicciones": [
+        {
+            "id": 20000321,
+            "local": "Sevilla",
+            "visitante": "Espanyol",
+            "fecha": "2026-12-09T21:05:16",
+            "marcador": "٤٩٠水٩٧٩木八木٩٣水火"
+        },
+        {
+            "id": 20000322,
+            "local": "Oviedo",
+            "visitante": "Alavés",
+            "fecha": "2026-12-09T23:05:16",
+            "marcador": "٤٩٠山金٧٣٥八٩١٣水火"
+        },
+        {
+            "id": 20000323,
+            "local": "Celta",
+            "visitante": "Levante",
+            "fecha": "2026-12-10T01:05:16",
+            "marcador": "٤٩٠火١٧٨火八山山٣水火"
+        },
+        {
+            "id": 20000324,
+            "local": "Betis",
+            "visitante": "Real Sociedad",
+            "fecha": "2026-12-10T03:05:16",
+            "marcador": "٤٩٠٣١٧٢٤八٦٣٣水火"
+        },
+        {
+            "id": 20000325,
+            "local": "Osasuna",
+            "visitante": "Real Madrid",
+            "fecha": "2026-12-10T05:05:16",
+            "marcador": "٤٩٠٢山٧٥火八٣水٣水火"
+        },
+        {
+            "id": 20000326,
+            "local": "Barcelona",
+            "visitante": "Elche",
+            "fecha": "2026-12-10T07:05:16",
+            "marcador": "٤٩٠١火٧土٧八土٠٣水火"
+        },
+        {
+            "id": 20000327,
+            "local": "Athletic",
+            "visitante": "Atlético",
+            "fecha": "2026-12-10T09:05:16",
+            "marcador": "٤٩٠٧٥٧٦土八٤٩٣水火"
+        },
+        {
+            "id": 20000328,
+            "local": "Girona",
+            "visitante": "Villarreal",
+            "fecha": "2026-12-10T11:05:16",
+            "marcador": "٤٩٠水٦٧٦٤八山٠٣水火"
+        },
+        {
+            "id": 20000329,
+            "local": "Rayo",
+            "visitante": "Getafe",
+            "fecha": "2026-12-10T13:05:16",
+            "marcador": "٤٩٠山山٧٩火八٧٦٣水火"
+        },
+        {
+            "id": 20000330,
+            "local": "Mallorca",
+            "visitante": "Valencia",
+            "fecha": "2026-12-10T15:05:16",
+            "marcador": "٤٩٠٩木٧٣٤八火木٣水火"
+        }
+    ]
+}

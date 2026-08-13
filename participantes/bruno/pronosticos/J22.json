@@ -1,0 +1,79 @@
+{
+    "participante": "bruno",
+    "nombre": "Bruno",
+    "jornada": 22,
+    "generado": "2026-08-12T21:05:22",
+    "ingerido": "2026-08-12T21:05:25",
+    "predicciones": [
+        {
+            "id": 20000211,
+            "local": "Mallorca",
+            "visitante": "Betis",
+            "fecha": "2026-09-23T21:05:16",
+            "marcador": "٤٩٠水٨٧٧٩八火٧٣水火"
+        },
+        {
+            "id": 20000212,
+            "local": "Rayo",
+            "visitante": "Valencia",
+            "fecha": "2026-09-23T23:05:16",
+            "marcador": "٤٩٠山火٧٩١八٩土٣水火"
+        },
+        {
+            "id": 20000213,
+            "local": "Levante",
+            "visitante": "Osasuna",
+            "fecha": "2026-09-24T01:05:16",
+            "marcador": "٤٩٠٧水٧金٨八金土٣水火"
+        },
+        {
+            "id": 20000214,
+            "local": "Espanyol",
+            "visitante": "Atlético",
+            "fecha": "2026-09-24T03:05:16",
+            "marcador": "٤٩٠٦水٧٠٠八山٥٣水火"
+        },
+        {
+            "id": 20000215,
+            "local": "Villarreal",
+            "visitante": "Getafe",
+            "fecha": "2026-09-24T05:05:16",
+            "marcador": "٤٩٠٥水٧水水八٧土٣水火"
+        },
+        {
+            "id": 20000216,
+            "local": "Real Sociedad",
+            "visitante": "Sevilla",
+            "fecha": "2026-09-24T07:05:16",
+            "marcador": "٤٩٠水٠٧木٣八٣٥٣水火"
+        },
+        {
+            "id": 20000217,
+            "local": "Girona",
+            "visitante": "Alavés",
+            "fecha": "2026-09-24T09:05:16",
+            "marcador": "٤٩٠山٦٧٤水八٨水٣水火"
+        },
+        {
+            "id": 20000218,
+            "local": "Real Madrid",
+            "visitante": "Barcelona",
+            "fecha": "2026-09-24T11:05:16",
+            "marcador": "٤٩٠金火٧٤٠八金٢٣水火"
+        },
+        {
+            "id": 20000219,
+            "local": "Elche",
+            "visitante": "Oviedo",
+            "fecha": "2026-09-24T13:05:16",
+            "marcador": "٤٩٠火٣٧土٨八水山٣水火"
+        },
+        {
+            "id": 20000220,
+            "local": "Celta",
+            "visitante": "Athletic",
+            "fecha": "2026-09-24T15:05:16",
+            "marcador": "٤٩٠٣٠٧١٣八٧٢٣水火"
+        }
+    ]
+}

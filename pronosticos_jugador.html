@@ -11,6 +11,13 @@
     padding-top: 6px; border-top: 1px dashed #3a3a3a;
   }
   .partido .linea-pronostico .etiqueta { color: #7d7d7d; margin-right: 4px; }
+
+  /* 2 partidos en paralelo por fila (con 10 partidos, 5 filas de 2). En
+     pantallas estrechas se cae a una sola columna para que no se apriete. */
+  .lista-partidos { grid-template-columns: 1fr 1fr; gap: 12px; }
+  @media (max-width: 640px) { .lista-partidos { grid-template-columns: 1fr; } }
+
+  .fila-acciones-pronosticos { text-align: center; margin: 4px 0 18px; }
 </style>
 </head>
 <body>
@@ -20,6 +27,9 @@
     <a href="perfil.html?j=" id="enlace-perfil" class="mult-link">← Volver al perfil</a>
   </p>
   <div id="barra-jornadas"></div>
+  <div class="fila-acciones-pronosticos">
+    <button type="button" class="btn-ver-todas" id="btn-todas">Ver todas las jornadas</button>
+  </div>
   <div id="contenido"></div>
 </div>
 
@@ -30,7 +40,7 @@ montarCabecera({
   pagina: "participantes",
 });
 
-let CALENDARIO = {}, CLAS = null, CLAVES = [], indice = 0, barra = null, JUGADOR = null;
+let CALENDARIO = {}, CLAS = null, CLAVES = [], indice = 0, barra = null, JUGADOR = null, SLUG = null;
 
 async function iniciar() {
   const parametros = new URLSearchParams(location.search);
@@ -52,11 +62,11 @@ async function iniciar() {
     document.getElementById("contenido").innerHTML = `<div class="vacio">No se encuentra ese jugador.</div>`;
     return;
   }
+  SLUG = slug;
 
   document.getElementById("enlace-perfil").href = `perfil.html?j=${slug}`;
+  document.querySelector("header h1").textContent = `🗒️ Pronósticos de ${nombrePlano(JUGADOR)}`;
   document.querySelector("header .subtitulo")?.remove();
-  document.querySelector("header h1").insertAdjacentHTML("afterend",
-    `<p class="subtitulo">Los pronósticos de ${nombrePlano(JUGADOR)}, jornada a jornada</p>`);
 
   if (!CLAVES.length) {
     document.getElementById("contenido").innerHTML = `<div class="vacio">Todavía no hay calendario.</div>`;
@@ -68,58 +78,67 @@ async function iniciar() {
   barra = montarBarraJornadas("barra-jornadas", CLAVES, CLAVES[indice], (clave) => {
     indice = CLAVES.indexOf(clave);
     history.replaceState(null, "", `?j=${slug}&jornada=${clave}`);
-    pintar(slug);
+    pintarUna();
   });
+  document.getElementById("btn-todas").onclick = pintarTodas;
 
-  pintar(slug);
+  pintarUna();
 }
 
-async function pintar(slug) {
-  const clave = CLAVES[indice];
-  barra.marcarActiva(clave);
-
+async function datosDeJornada(clave) {
   const partidos = CALENDARIO[clave] || [];
-  if (!partidos.length) {
-    document.getElementById("contenido").innerHTML = `<div class="vacio">Esta jornada no tiene partidos.</div>`;
-    return;
-  }
+  if (!partidos.length) return null;
 
-  // Si la jornada ya tiene análisis (al menos un partido evaluado), viene todo
-  // ya descodificado y puntuado desde el servidor — no hace falta tocar nada.
+  // Solo se muestra lo que YA está evaluado (al menos ese partido jugado),
+  // que llega descodificado y puntuado desde el servidor. Los pronósticos de
+  // partidos sin jugar NUNCA se leen ni se descodifican aquí — esta página
+  // es pública y cualquiera puede entrar con el enlace de cualquier jugador,
+  // así que enseñar picks futuros sería dejar que la gente se copie.
   const analisis = await cargar(`data/analisis/${clave}.json`, null);
-  const jugadorAnalisis = analisis?.jugadores.find((j) => j.slug === slug);
+  const jugadorAnalisis = analisis?.jugadores.find((j) => j.slug === SLUG);
 
-  // Si no, se lee el pronóstico crudo del jugador y se descodifica aquí mismo
-  // (jornada futura o todavía sin ningún partido jugado).
-  let prediccionesCrudas = null;
-  if (!jugadorAnalisis) {
-    const datos = await cargar(`participantes/${slug}/pronosticos/${clave}.json`, null);
-    if (datos) {
-      prediccionesCrudas = Object.fromEntries(
-        datos.predicciones
-          .filter((p) => p.marcador)
-          .map((p) => [p.id, desofuscarMarcador(p.marcador, p.fecha, clave)])
-      );
-    }
-  }
+  const reales = analisis ? Object.fromEntries(Object.entries(analisis.resultados)) : {};
+  return { partidos, jugadorAnalisis, reales };
+}
 
-  const reales = Object.fromEntries((analisis ? Object.entries(analisis.resultados) : []));
-
-  document.getElementById("contenido").innerHTML = `
+function bloqueJornadaCompleto(clave, datos) {
+  return `
     <div class="cabecera-jornada">
-      <h3>Jornada ${parseInt(clave.slice(1))}</h3>
+      <h3 id="ancla-${clave}">Jornada ${parseInt(clave.slice(1))}</h3>
     </div>
     <div class="lista-partidos">
-      ${partidos.map((p) => bloquePartido(p, jugadorAnalisis, prediccionesCrudas, reales[p.id])).join("")}
+      ${datos.partidos.map((p) => bloquePartido(p, datos.jugadorAnalisis, datos.reales[p.id])).join("")}
     </div>`;
 }
 
-function bloquePartido(p, jugadorAnalisis, prediccionesCrudas, real) {
+async function pintarUna() {
+  const clave = CLAVES[indice];
+  barra.marcarActiva(clave);
+
+  const datos = await datosDeJornada(clave);
+  document.getElementById("contenido").innerHTML = datos
+    ? bloqueJornadaCompleto(clave, datos)
+    : `<div class="vacio">Esta jornada no tiene partidos.</div>`;
+}
+
+async function pintarTodas() {
+  document.getElementById("contenido").innerHTML = `<div class="vacio">Cargando todas las jornadas…</div>`;
+  const todas = await Promise.all(CLAVES.map(async (c) => [c, await datosDeJornada(c)]));
+  document.getElementById("contenido").innerHTML = todas
+    .filter(([, datos]) => datos)
+    .map(([c, datos]) => bloqueJornadaCompleto(c, datos))
+    .join("");
+  desplazarSiExiste(document.getElementById("ancla-" + CLAVES[indice]), { behavior: "smooth", block: "nearest" });
+}
+
+function bloquePartido(p, jugadorAnalisis, real) {
   const terminado = real && real.estado === "finished";
   const marcadorReal = terminado ? `${real.goles_local}-${real.goles_visitante}` : "vs";
 
   let lineaPronostico;
-  if (jugadorAnalisis) {
+  if (terminado && jugadorAnalisis) {
+    // Este partido concreto ya se jugó (aunque otros de la misma jornada
+    // sigan pendientes) — su pronóstico ya es historia, se puede revelar.
     const pred = jugadorAnalisis.predicciones[p.id];
     if (pred) {
       const clase = pred.acierto_exacto ? "pred-exact" : pred.acierto_1x2 ? "pred-1x2" : "pred-miss";
@@ -131,13 +150,12 @@ function bloquePartido(p, jugadorAnalisis, prediccionesCrudas, real) {
     } else {
       lineaPronostico = `<div class="linea-pronostico"><span class="etiqueta">Su pronóstico:</span> <span class="pred-miss">sin pronosticar</span></div>`;
     }
-  } else if (prediccionesCrudas) {
-    const pred = prediccionesCrudas[p.id];
-    lineaPronostico = pred
-      ? `<div class="linea-pronostico"><span class="etiqueta">Su pronóstico:</span> ${pred.gl}-${pred.gv} <span class="nota">(partido aún sin jugar)</span></div>`
-      : `<div class="linea-pronostico"><span class="etiqueta">Su pronóstico:</span> <span class="pred-miss">sin pronosticar</span></div>`;
   } else {
-    lineaPronostico = `<div class="linea-pronostico"><span class="nota">Este jugador todavía no ha mandado esta jornada.</span></div>`;
+    // Partido todavía sin jugar: nunca se muestra el pronóstico, sea de quien
+    // sea la página que estés mirando — solo se revela cuando el partido
+    // termina y pasa a formar parte del análisis. No importa que otros
+    // partidos de la misma jornada ya se hayan jugado: este en concreto no.
+    lineaPronostico = `<div class="linea-pronostico"><span class="nota">🔒 Se revela cuando termine el partido</span></div>`;
   }
 
   return `

@@ -1,0 +1,79 @@
+{
+    "participante": "bruno",
+    "nombre": "Bruno",
+    "jornada": 18,
+    "generado": "2026-08-12T21:05:22",
+    "ingerido": "2026-08-12T21:05:24",
+    "predicciones": [
+        {
+            "id": 20000171,
+            "local": "Sevilla",
+            "visitante": "Elche",
+            "fecha": "2026-08-26T21:05:16",
+            "marcador": "٤٩٠金٨٧木火八٤١٣水火"
+        },
+        {
+            "id": 20000172,
+            "local": "Oviedo",
+            "visitante": "Valencia",
+            "fecha": "2026-08-26T23:05:16",
+            "marcador": "٤٩٠火١٧٧٧八١٩٣水火"
+        },
+        {
+            "id": 20000173,
+            "local": "Real Madrid",
+            "visitante": "Mallorca",
+            "fecha": "2026-08-27T01:05:16",
+            "marcador": "٤٩٠山山٧٤金八٦٦٣水火"
+        },
+        {
+            "id": 20000174,
+            "local": "Alavés",
+            "visitante": "Espanyol",
+            "fecha": "2026-08-27T03:05:16",
+            "marcador": "٤٩٠٩金٧金٦八٣土٣水火"
+        },
+        {
+            "id": 20000175,
+            "local": "Real Sociedad",
+            "visitante": "Betis",
+            "fecha": "2026-08-27T05:05:16",
+            "marcador": "٤٩٠土٢٧١金八土٧٣水火"
+        },
+        {
+            "id": 20000176,
+            "local": "Villarreal",
+            "visitante": "Levante",
+            "fecha": "2026-08-27T07:05:16",
+            "marcador": "٤٩٠金٦٧水١八٤金٣水火"
+        },
+        {
+            "id": 20000177,
+            "local": "Celta",
+            "visitante": "Rayo",
+            "fecha": "2026-08-27T09:05:16",
+            "marcador": "٤٩٠木山٧٢٩八٠٥٣水火"
+        },
+        {
+            "id": 20000178,
+            "local": "Barcelona",
+            "visitante": "Osasuna",
+            "fecha": "2026-08-27T11:05:16",
+            "marcador": "٤٩٠١金٧٢٦八٧木٣水火"
+        },
+        {
+            "id": 20000179,
+            "local": "Atlético",
+            "visitante": "Getafe",
+            "fecha": "2026-08-27T13:05:16",
+            "marcador": "٤٩٠٧٢٧٥金八٣٦٣水火"
+        },
+        {
+            "id": 20000180,
+            "local": "Girona",
+            "visitante": "Athletic",
+            "fecha": "2026-08-27T15:05:16",
+            "marcador": "٤٩٠٦٧٧土٦八٨木٣水火"
+        }
+    ]
+}

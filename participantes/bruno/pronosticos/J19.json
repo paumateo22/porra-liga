@@ -1,0 +1,51 @@
+{
+    "participante": "bruno",
+    "nombre": "Bruno",
+    "jornada": 19,
+    "generado": "2026-08-12T21:05:22",
+    "ingerido": "2026-08-12T21:05:25",
+    "predicciones": [
+        {
+            "id": 20000182,
+            "local": "Elche",
+            "visitante": "Valencia",
+            "fecha": "2026-09-02T23:05:16",
+            "marcador": "٤٩٠٦木٧水١八٢٣٣水火"
+        },
+        {
+            "id": 20000183,
+            "local": "Athletic",
+            "visitante": "Espanyol",
+            "fecha": "2026-09-03T01:05:16",
+            "marcador": "٤٩٠٣山٧٨水八٠木٣水火"
+        },
+        {
+            "id": 20000184,
+            "local": "Getafe",
+            "visitante": "Mallorca",
+            "fecha": "2026-09-03T03:05:16",
+            "marcador": "٤٩٠٢金٧٢٣八火٧٣水火"
+        },
+        {
+            "id": 20000188,
+            "local": "Celta",
+            "visitante": "Real Sociedad",
+            "fecha": "2026-09-03T11:05:16",
+            "marcador": "٤٩٠山٩٧٦٣八٠٠٣水火"
+        },
+        {
+            "id": 20000189,
+            "local": "Girona",
+            "visitante": "Oviedo",
+            "fecha": "2026-09-03T13:05:16",
+            "marcador": "٤٩٠٨١٧٩水八木山٣水火"
+        },
+        {
+            "id": 20000190,
+            "local": "Levante",
+            "visitante": "Sevilla",
+            "fecha": "2026-09-03T15:05:16",
+            "marcador": "٤٩٠土٧٧٣٣八٩١٣水火"
+        }
+    ]
+}

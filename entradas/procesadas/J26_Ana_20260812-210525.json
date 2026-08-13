@@ -1,0 +1,77 @@
+{
+    "participante": "Ana",
+    "jornada": 26,
+    "generado": "2026-08-12T21:05:21",
+    "predicciones": [
+        {
+            "id": 20000251,
+            "local": "Oviedo",
+            "visitante": "Celta",
+            "fecha": "2026-10-21T21:05:16",
+            "marcador": "٤٩٠火٣٧山٨八木١٣水火"
+        },
+        {
+            "id": 20000252,
+            "local": "Levante",
+            "visitante": "Betis",
+            "fecha": "2026-10-21T23:05:16",
+            "marcador": "٤٩٠٣٦٧火٠八山山٣水火"
+        },
+        {
+            "id": 20000253,
+            "local": "Valencia",
+            "visitante": "Espanyol",
+            "fecha": "2026-10-22T01:05:16",
+            "marcador": "٤٩٠٩土٧木水八土٧٣水火"
+        },
+        {
+            "id": 20000254,
+            "local": "Osasuna",
+            "visitante": "Elche",
+            "fecha": "2026-10-22T03:05:16",
+            "marcador": "٤٩٠土٣٧٧٢八٤土٣水火"
+        },
+        {
+            "id": 20000255,
+            "local": "Girona",
+            "visitante": "Atlético",
+            "fecha": "2026-10-22T05:05:16",
+            "marcador": "٤٩٠金٥٧金山八٠٥٣水火"
+        },
+        {
+            "id": 20000256,
+            "local": "Real Sociedad",
+            "visitante": "Rayo",
+            "fecha": "2026-10-22T07:05:16",
+            "marcador": "٤٩٠木٨٧٠٢八木火٣水火"
+        },
+        {
+            "id": 20000257,
+            "local": "Alavés",
+            "visitante": "Real Madrid",
+            "fecha": "2026-10-22T09:05:16",
+            "marcador": "٤٩٠火木٧水山八٩٤٣水火"
+        },
+        {
+            "id": 20000258,
+            "local": "Getafe",
+            "visitante": "Mallorca",
+            "fecha": "2026-10-22T11:05:16",
+            "marcador": "٤٩٠٧١٧水٢八٨木٣水火"
+        },
+        {
+            "id": 20000259,
+            "local": "Villarreal",
+            "visitante": "Athletic",
+            "fecha": "2026-10-22T13:05:16",
+            "marcador": "٤٩٠٦٧٧٢山八٤٦٣水火"
+        },
+        {
+            "id": 20000260,
+            "local": "Sevilla",
+            "visitante": "Barcelona",
+            "fecha": "2026-10-22T15:05:16",
+            "marcador": "٤٩٠٥土٧٤٢八١٩٣水火"
+        }
+    ]
+}

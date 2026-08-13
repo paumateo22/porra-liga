@@ -1,0 +1,77 @@
+{
+    "participante": "Bruno",
+    "jornada": 8,
+    "generado": "2026-08-12T21:05:21",
+    "predicciones": [
+        {
+            "id": 20000071,
+            "local": "Athletic",
+            "visitante": "Oviedo",
+            "fecha": "2026-06-17T21:05:16",
+            "marcador": "٤٩٠٥٤٧٠火八金٨٣水火"
+        },
+        {
+            "id": 20000072,
+            "local": "Real Madrid",
+            "visitante": "Espanyol",
+            "fecha": "2026-06-17T23:05:16",
+            "marcador": "٤٩٠٤٨٧山٤八山١٣水火"
+        },
+        {
+            "id": 20000073,
+            "local": "Celta",
+            "visitante": "Sevilla",
+            "fecha": "2026-06-18T01:05:16",
+            "marcador": "٤٩٠١٢٧水土八٨金٣水火"
+        },
+        {
+            "id": 20000074,
+            "local": "Osasuna",
+            "visitante": "Rayo",
+            "fecha": "2026-06-18T03:05:16",
+            "marcador": "٤٩٠٠٤٧木٦八٤٥٣水火"
+        },
+        {
+            "id": 20000075,
+            "local": "Valencia",
+            "visitante": "Real Sociedad",
+            "fecha": "2026-06-18T05:05:16",
+            "marcador": "٤٩٠٧山٧٤金八١土٣水火"
+        },
+        {
+            "id": 20000076,
+            "local": "Levante",
+            "visitante": "Elche",
+            "fecha": "2026-06-18T07:05:16",
+            "marcador": "٤٩٠٦土٧金٦八木٥٣水火"
+        },
+        {
+            "id": 20000077,
+            "local": "Atlético",
+            "visitante": "Getafe",
+            "fecha": "2026-06-18T09:05:16",
+            "marcador": "٤٩٠٤١٧١金八山土٣水火"
+        },
+        {
+            "id": 20000078,
+            "local": "Barcelona",
+            "visitante": "Girona",
+            "fecha": "2026-06-18T11:05:16",
+            "marcador": "٤٩٠٨٧٧١٧八٨٧٣水火"
+        },
+        {
+            "id": 20000079,
+            "local": "Mallorca",
+            "visitante": "Villarreal",
+            "fecha": "2026-06-18T13:05:16",
+            "marcador": "٤٩٠土٨٧٨金八٥水٣水火"
+        },
+        {
+            "id": 20000080,
+            "local": "Betis",
+            "visitante": "Alavés",
+            "fecha": "2026-06-18T15:05:16",
+            "marcador": "٤٩٠金木٧٢٦八١٠٣水火"
+        }
+    ]
+}

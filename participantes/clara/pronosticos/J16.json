@@ -1,0 +1,79 @@
+{
+    "participante": "clara",
+    "nombre": "Clara",
+    "jornada": 16,
+    "generado": "2026-08-12T21:05:22",
+    "ingerido": "2026-08-12T21:05:24",
+    "predicciones": [
+        {
+            "id": 20000151,
+            "local": "Levante",
+            "visitante": "Osasuna",
+            "fecha": "2026-08-12T21:05:16",
+            "marcador": "٤٩٠山金٧٨٠八金٨٣水火"
+        },
+        {
+            "id": 20000152,
+            "local": "Villarreal",
+            "visitante": "Rayo",
+            "fecha": "2026-08-12T23:05:16",
+            "marcador": "٤٩٠٨٠٧٣水八山٠٣水火"
+        },
+        {
+            "id": 20000153,
+            "local": "Betis",
+            "visitante": "Oviedo",
+            "fecha": "2026-08-13T01:05:16",
+            "marcador": "٤٩٠٦٨٧٣٢八土٣٣水火"
+        },
+        {
+            "id": 20000154,
+            "local": "Espanyol",
+            "visitante": "Elche",
+            "fecha": "2026-08-13T03:05:16",
+            "marcador": "٤٩٠٥金٧山山八٤٨٣水火"
+        },
+        {
+            "id": 20000155,
+            "local": "Atlético",
+            "visitante": "Valencia",
+            "fecha": "2026-08-13T05:05:16",
+            "marcador": "٤٩٠水٢٧火٢八٠٢٣水火"
+        },
+        {
+            "id": 20000156,
+            "local": "Barcelona",
+            "visitante": "Real Sociedad",
+            "fecha": "2026-08-13T07:05:16",
+            "marcador": "٤٩٠山٦٧٧山八木٨٣水火"
+        },
+        {
+            "id": 20000157,
+            "local": "Real Madrid",
+            "visitante": "Celta",
+            "fecha": "2026-08-13T09:05:16",
+            "marcador": "٤٩٠٩山٧金木八山土٣水火"
+        },
+        {
+            "id": 20000158,
+            "local": "Sevilla",
+            "visitante": "Alavés",
+            "fecha": "2026-08-13T11:05:16",
+            "marcador": "٤٩٠木土٧金山八٨٦٣水火"
+        },
+        {
+            "id": 20000159,
+            "local": "Getafe",
+            "visitante": "Girona",
+            "fecha": "2026-08-13T13:05:16",
+            "marcador": "٤٩٠٣٢٧٠٢八٥火٣水火"
+        },
+        {
+            "id": 20000160,
+            "local": "Mallorca",
+            "visitante": "Athletic",
+            "fecha": "2026-08-13T15:05:16",
+            "marcador": "٤٩٠٢٧٧水山八١٥٣水火"
+        }
+    ]
+}

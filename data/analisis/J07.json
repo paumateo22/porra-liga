@@ -1,0 +1,444 @@
+{
+    "clave": "J07",
+    "jornada": 7,
+    "cerrada": true,
+    "resultado_jornada": {
+        "ganadores": [
+            {
+                "slug": "bruno",
+                "nombre": "Bruno"
+            }
+        ],
+        "perdedores": [
+            {
+                "slug": "clara",
+                "nombre": "Clara"
+            },
+            {
+                "slug": "elena",
+                "nombre": "Elena"
+            }
+        ],
+        "ganador_seguro": true,
+        "perdedor_seguro": true
+    },
+    "partidos": [
+        {
+            "id": 20000061,
+            "local": "Oviedo",
+            "visitante": "Sevilla",
+            "fecha": "2026-06-10T21:05:16"
+        },
+        {
+            "id": 20000062,
+            "local": "Girona",
+            "visitante": "Barcelona",
+            "fecha": "2026-06-10T23:05:16"
+        },
+        {
+            "id": 20000063,
+            "local": "Getafe",
+            "visitante": "Osasuna",
+            "fecha": "2026-06-11T01:05:16"
+        },
+        {
+            "id": 20000064,
+            "local": "Valencia",
+            "visitante": "Celta",
+            "fecha": "2026-06-11T03:05:16"
+        },
+        {
+            "id": 20000065,
+            "local": "Villarreal",
+            "visitante": "Levante",
+            "fecha": "2026-06-11T05:05:16"
+        },
+        {
+            "id": 20000066,
+            "local": "Elche",
+            "visitante": "Real Madrid",
+            "fecha": "2026-06-11T07:05:16"
+        },
+        {
+            "id": 20000067,
+            "local": "Betis",
+            "visitante": "Espanyol",
+            "fecha": "2026-06-11T09:05:16"
+        },
+        {
+            "id": 20000068,
+            "local": "Alavés",
+            "visitante": "Real Sociedad",
+            "fecha": "2026-06-11T11:05:16"
+        },
+        {
+            "id": 20000069,
+            "local": "Mallorca",
+            "visitante": "Rayo",
+            "fecha": "2026-06-11T13:05:16"
+        },
+        {
+            "id": 20000070,
+            "local": "Atlético",
+            "visitante": "Athletic",
+            "fecha": "2026-06-11T15:05:16"
+        }
+    ],
+    "resultados": {
+        "20000061": {
+            "goles_local": 0,
+            "goles_visitante": 3,
+            "estado": "finished"
+        },
+        "20000062": {
+            "goles_local": 3,
+            "goles_visitante": 3,
+            "estado": "finished"
+        },
+        "20000063": {
+            "goles_local": 3,
+            "goles_visitante": 0,
+            "estado": "finished"
+        },
+        "20000064": {
+            "goles_local": 2,
+            "goles_visitante": 2,
+            "estado": "finished"
+        },
+        "20000065": {
+            "goles_local": 3,
+            "goles_visitante": 2,
+            "estado": "finished"
+        },
+        "20000066": {
+            "goles_local": 3,
+            "goles_visitante": 2,
+            "estado": "finished"
+        },
+        "20000067": {
+            "goles_local": 4,
+            "goles_visitante": 0,
+            "estado": "finished"
+        },
+        "20000068": {
+            "goles_local": 2,
+            "goles_visitante": 1,
+            "estado": "finished"
+        },
+        "20000069": {
+            "goles_local": 2,
+            "goles_visitante": 0,
+            "estado": "finished"
+        },
+        "20000070": {
+            "goles_local": 0,
+            "goles_visitante": 3,
+            "estado": "finished"
+        }
+    },
+    "jugadores": [
+        {
+            "slug": "bruno",
+            "nombre": "Bruno",
+            "insignias": [],
+            "aciertos_1x2": 6,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "elegible": true,
+            "ganador": true,
+            "perdedor": false,
+            "puntos": 7,
+            "pronosticados": 10,
+            "predicciones": {
+                "20000061": {
+                    "pronostico": "3-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "20000062": {
+                    "pronostico": "3-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "20000063": {
+                    "pronostico": "4-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "20000064": {
+                    "pronostico": "1-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "20000065": {
+                    "pronostico": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "20000066": {
+                    "pronostico": "4-3",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "20000067": {
+                    "pronostico": "1-2",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "20000068": {
+                    "pronostico": "2-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "20000069": {
+                    "pronostico": "4-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "20000070": {
+                    "pronostico": "1-2",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                }
+            }
+        },
+        {
+            "slug": "ana",
+            "nombre": "Ana",
+            "insignias": [],
+            "aciertos_1x2": 4,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "elegible": true,
+            "ganador": false,
+            "perdedor": false,
+            "puntos": 4,
+            "pronosticados": 6,
+            "predicciones": {
+                "20000061": {
+                    "pronostico": "3-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "20000064": {
+                    "pronostico": "1-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "20000065": {
+                    "pronostico": "2-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "20000066": {
+                    "pronostico": "3-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "20000067": {
+                    "pronostico": "4-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "20000069": {
+                    "pronostico": "2-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                }
+            }
+        },
+        {
+            "slug": "david",
+            "nombre": "David",
+            "insignias": [],
+            "aciertos_1x2": 4,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "elegible": true,
+            "ganador": false,
+            "perdedor": false,
+            "puntos": 4,
+            "pronosticados": 6,
+            "predicciones": {
+                "20000061": {
+                    "pronostico": "3-2",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "20000064": {
+                    "pronostico": "1-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "20000065": {
+                    "pronostico": "1-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "20000066": {
+                    "pronostico": "3-3",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "20000068": {
+                    "pronostico": "3-2",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "20000069": {
+                    "pronostico": "4-3",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                }
+            }
+        },
+        {
+            "slug": "clara",
+            "nombre": "Clara",
+            "insignias": [],
+            "aciertos_1x2": 3,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "elegible": true,
+            "ganador": false,
+            "perdedor": true,
+            "puntos": 2,
+            "pronosticados": 10,
+            "predicciones": {
+                "20000061": {
+                    "pronostico": "2-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "20000062": {
+                    "pronostico": "4-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "20000063": {
+                    "pronostico": "2-3",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "20000064": {
+                    "pronostico": "0-2",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "20000065": {
+                    "pronostico": "3-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "20000066": {
+                    "pronostico": "4-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "20000067": {
+                    "pronostico": "2-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "20000068": {
+                    "pronostico": "1-3",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "20000069": {
+                    "pronostico": "1-2",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "20000070": {
+                    "pronostico": "3-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                }
+            }
+        },
+        {
+            "slug": "elena",
+            "nombre": "Elena",
+            "insignias": [],
+            "aciertos_1x2": 3,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "elegible": true,
+            "ganador": false,
+            "perdedor": true,
+            "puntos": 2,
+            "pronosticados": 6,
+            "predicciones": {
+                "20000062": {
+                    "pronostico": "0-2",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "20000065": {
+                    "pronostico": "2-3",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "20000066": {
+                    "pronostico": "2-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "20000067": {
+                    "pronostico": "0-2",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "20000068": {
+                    "pronostico": "1-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "20000070": {
+                    "pronostico": "0-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                }
+            }
+        }
+    ]
+}

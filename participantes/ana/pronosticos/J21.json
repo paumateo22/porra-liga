@@ -1,0 +1,79 @@
+{
+    "participante": "ana",
+    "nombre": "Ana",
+    "jornada": 21,
+    "generado": "2026-08-12T21:05:21",
+    "ingerido": "2026-08-12T21:05:25",
+    "predicciones": [
+        {
+            "id": 20000201,
+            "local": "Real Madrid",
+            "visitante": "Rayo",
+            "fecha": "2026-09-16T21:05:16",
+            "marcador": "٤٩٠山٥٧٥土八土山٣水火"
+        },
+        {
+            "id": 20000202,
+            "local": "Getafe",
+            "visitante": "Villarreal",
+            "fecha": "2026-09-16T23:05:16",
+            "marcador": "٤٩٠٩水٧土٧八٤金٣水火"
+        },
+        {
+            "id": 20000203,
+            "local": "Athletic",
+            "visitante": "Espanyol",
+            "fecha": "2026-09-17T01:05:16",
+            "marcador": "٤٩٠٦١٧火金八٩土٣水火"
+        },
+        {
+            "id": 20000204,
+            "local": "Oviedo",
+            "visitante": "Levante",
+            "fecha": "2026-09-17T03:05:16",
+            "marcador": "٤٩٠٥٧٧٦١八٥٤٣水火"
+        },
+        {
+            "id": 20000205,
+            "local": "Valencia",
+            "visitante": "Celta",
+            "fecha": "2026-09-17T05:05:16",
+            "marcador": "٤٩٠٤水٧٩٩八٢金٣水火"
+        },
+        {
+            "id": 20000206,
+            "local": "Osasuna",
+            "visitante": "Barcelona",
+            "fecha": "2026-09-17T07:05:16",
+            "marcador": "٤٩٠水土٧٣١八金٥٣水火"
+        },
+        {
+            "id": 20000207,
+            "local": "Girona",
+            "visitante": "Betis",
+            "fecha": "2026-09-17T09:05:16",
+            "marcador": "٤٩٠٩١٧山٩八水山٣水火"
+        },
+        {
+            "id": 20000208,
+            "local": "Elche",
+            "visitante": "Alavés",
+            "fecha": "2026-09-17T11:05:16",
+            "marcador": "٤٩٠木٤٧山٦八٩٢٣水火"
+        },
+        {
+            "id": 20000209,
+            "local": "Mallorca",
+            "visitante": "Real Sociedad",
+            "fecha": "2026-09-17T13:05:16",
+            "marcador": "٤٩٠火٨٧木٩八٦水٣水火"
+        },
+        {
+            "id": 20000210,
+            "local": "Sevilla",
+            "visitante": "Atlético",
+            "fecha": "2026-09-17T15:05:16",
+            "marcador": "٤٩٠٣火٧٧١八٢٠٣水火"
+        }
+    ]
+}

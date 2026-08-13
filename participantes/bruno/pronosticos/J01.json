@@ -1,0 +1,79 @@
+{
+    "participante": "bruno",
+    "nombre": "Bruno",
+    "jornada": 1,
+    "generado": "2026-08-12T21:05:21",
+    "ingerido": "2026-08-12T21:05:23",
+    "predicciones": [
+        {
+            "id": 20000001,
+            "local": "Alavés",
+            "visitante": "Real Sociedad",
+            "fecha": "2026-04-29T21:05:16",
+            "marcador": "٤٩٠١火٧٥木八金土٣水火"
+        },
+        {
+            "id": 20000002,
+            "local": "Sevilla",
+            "visitante": "Osasuna",
+            "fecha": "2026-04-29T23:05:16",
+            "marcador": "٤٩٠٧٠٧土٥八山٤٣水火"
+        },
+        {
+            "id": 20000003,
+            "local": "Oviedo",
+            "visitante": "Villarreal",
+            "fecha": "2026-04-30T01:05:16",
+            "marcador": "٤٩٠山٧٧٤火八水火٣水火"
+        },
+        {
+            "id": 20000004,
+            "local": "Getafe",
+            "visitante": "Real Madrid",
+            "fecha": "2026-04-30T03:05:16",
+            "marcador": "٤٩٠٩水٧金٤八٧٤٣水火"
+        },
+        {
+            "id": 20000005,
+            "local": "Valencia",
+            "visitante": "Atlético",
+            "fecha": "2026-04-30T05:05:16",
+            "marcador": "٤٩٠٨火٧١火八火金٣水火"
+        },
+        {
+            "id": 20000006,
+            "local": "Celta",
+            "visitante": "Athletic",
+            "fecha": "2026-04-30T07:05:16",
+            "marcador": "٤٩٠金٦٧水٧八٨٦٣水火"
+        },
+        {
+            "id": 20000007,
+            "local": "Girona",
+            "visitante": "Betis",
+            "fecha": "2026-04-30T09:05:16",
+            "marcador": "٤٩٠木٤٧٢土八٥٩٣水火"
+        },
+        {
+            "id": 20000008,
+            "local": "Mallorca",
+            "visitante": "Levante",
+            "fecha": "2026-04-30T11:05:16",
+            "marcador": "٤٩٠١٨٧٢٤八水٢٣水火"
+        },
+        {
+            "id": 20000009,
+            "local": "Espanyol",
+            "visitante": "Barcelona",
+            "fecha": "2026-04-30T13:05:16",
+            "marcador": "٤٩٠٠木٧٥火八٠٨٣水火"
+        },
+        {
+            "id": 20000010,
+            "local": "Rayo",
+            "visitante": "Elche",
+            "fecha": "2026-04-30T15:05:16",
+            "marcador": "٤٩٠٦٢٧土٧八火٠٣水火"
+        }
+    ]
+}

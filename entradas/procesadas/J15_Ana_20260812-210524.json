@@ -1,0 +1,49 @@
+{
+    "participante": "Ana",
+    "jornada": 15,
+    "generado": "2026-08-12T21:05:21",
+    "predicciones": [
+        {
+            "id": 20000150,
+            "local": "Girona",
+            "visitante": "Real Madrid",
+            "fecha": "2026-08-06T15:05:16",
+            "marcador": "٤٩٠١٦٧٩٨八火٧٣水火"
+        },
+        {
+            "id": 20000148,
+            "local": "Mallorca",
+            "visitante": "Villarreal",
+            "fecha": "2026-08-06T11:05:16",
+            "marcador": "٤٩٠火山٧火٨八水٦٣水火"
+        },
+        {
+            "id": 20000141,
+            "local": "Valencia",
+            "visitante": "Betis",
+            "fecha": "2026-08-05T21:05:16",
+            "marcador": "٤٩٠٩٨٧金٦八٩火٣水火"
+        },
+        {
+            "id": 20000147,
+            "local": "Rayo",
+            "visitante": "Oviedo",
+            "fecha": "2026-08-06T09:05:16",
+            "marcador": "٤٩٠٨٥٧土٣八٤١٣水火"
+        },
+        {
+            "id": 20000143,
+            "local": "Getafe",
+            "visitante": "Barcelona",
+            "fecha": "2026-08-06T01:05:16",
+            "marcador": "٤٩٠٥٧٧١٠八山١٣水火"
+        },
+        {
+            "id": 20000145,
+            "local": "Espanyol",
+            "visitante": "Athletic",
+            "fecha": "2026-08-06T05:05:16",
+            "marcador": "٤٩٠水木٧٢٠八٣٠٣水火"
+        }
+    ]
+}

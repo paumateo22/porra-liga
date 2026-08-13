@@ -1,0 +1,77 @@
+{
+    "participante": "David",
+    "jornada": 27,
+    "generado": "2026-08-12T21:05:22",
+    "predicciones": [
+        {
+            "id": 20000261,
+            "local": "Oviedo",
+            "visitante": "Atlético",
+            "fecha": "2026-10-28T21:05:16",
+            "marcador": "٤٩٠٠火٧火山八٧٥٣水火"
+        },
+        {
+            "id": 20000262,
+            "local": "Elche",
+            "visitante": "Levante",
+            "fecha": "2026-10-28T23:05:16",
+            "marcador": "٤٩٠٦٣٧٦٢八火土٣水火"
+        },
+        {
+            "id": 20000263,
+            "local": "Espanyol",
+            "visitante": "Osasuna",
+            "fecha": "2026-10-29T01:05:16",
+            "marcador": "٤٩٠火٩٧٧٤八١金٣水火"
+        },
+        {
+            "id": 20000264,
+            "local": "Sevilla",
+            "visitante": "Getafe",
+            "fecha": "2026-10-29T03:05:16",
+            "marcador": "٤٩٠٣火٧金火八木٥٣水火"
+        },
+        {
+            "id": 20000265,
+            "local": "Villarreal",
+            "visitante": "Real Madrid",
+            "fecha": "2026-10-29T05:05:16",
+            "marcador": "٤٩٠١٤٧٠٤八山木٣水火"
+        },
+        {
+            "id": 20000266,
+            "local": "Alavés",
+            "visitante": "Girona",
+            "fecha": "2026-10-29T07:05:16",
+            "marcador": "٤٩٠٠٦٧水火八٦٢٣水火"
+        },
+        {
+            "id": 20000267,
+            "local": "Valencia",
+            "visitante": "Athletic",
+            "fecha": "2026-10-29T09:05:16",
+            "marcador": "٤٩٠٧山٧木٧八٣٩٣水火"
+        },
+        {
+            "id": 20000268,
+            "local": "Betis",
+            "visitante": "Real Sociedad",
+            "fecha": "2026-10-29T11:05:16",
+            "marcador": "٤٩٠水土٧٢火八١٠٣水火"
+        },
+        {
+            "id": 20000269,
+            "local": "Rayo",
+            "visitante": "Mallorca",
+            "fecha": "2026-10-29T13:05:16",
+            "marcador": "٤٩٠٩٢٧٤٤八金٨٣水火"
+        },
+        {
+            "id": 20000270,
+            "local": "Celta",
+            "visitante": "Barcelona",
+            "fecha": "2026-10-29T15:05:16",
+            "marcador": "٤٩٠٨٥٧土火八山٣٣水火"
+        }
+    ]
+}

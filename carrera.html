@@ -34,12 +34,26 @@
     <input type="range" id="barra" min="0" value="0" style="flex:1;min-width:160px;accent-color:goldenrod">
     <button id="btn-siguiente">⏭</button>
     <select id="velocidad">
-      <option value="1200">0.5x</option>
-      <option value="700" selected>1x</option>
-      <option value="350">2x</option>
-      <option value="150">4x</option>
+      <option value="0.5">0.5x</option>
+      <option value="1" selected>1x</option>
+      <option value="2">2x</option>
+      <option value="4">4x</option>
     </select>
     <span id="etiqueta" style="min-width:100px;color:var(--gold);font-weight:bold;text-align:center">—</span>
+  </div>
+
+  <div class="selector-jornada" style="margin-top:-8px">
+    <label style="display:flex;align-items:center;gap:6px;cursor:pointer;font-size:0.9em">
+      <input type="checkbox" id="limite-cero" style="accent-color:goldenrod">
+      Limitar eje a 0
+    </label>
+    <span style="color:#444">|</span>
+    <label style="display:flex;align-items:center;gap:6px;font-size:0.9em">
+      Centrar en:
+      <select id="centrar-en">
+        <option value="">Nadie (vista normal)</option>
+      </select>
+    </label>
   </div>
 
   <div class="carrera-layout">
@@ -65,7 +79,16 @@ const COLORES = ["#e0a800", "#4ade80", "#60a5fa", "#f472b6", "#a78bfa",
                  "#fb923c", "#22d3ee", "#facc15", "#f87171", "#34d399",
                  "#c084fc", "#38bdf8"];
 
-let CLAVES = [], SERIES = [], corriendo = null, ocultos = new Set();
+/* Progreso a lo largo del eje de jornadas: no es un índice entero, es un
+   número real. 2.35 significa "un 35% de camino entre la jornada 3 y la 4".
+   La animación mueve este número poco a poco en cada fotograma (vía
+   requestAnimationFrame) e interpola los valores entre la jornada anterior y
+   la siguiente — así la línea y el marcador se deslizan en vez de saltar de
+   golpe de una jornada a otra. */
+let CLAVES = [], SERIES = [], ocultos = new Set();
+let progreso = 0, reproduciendo = false, ultimoTiempo = 0;
+let limitarCero = false, centradoEn = "";
+const VELOCIDAD_BASE = 1 / 900; // jornadas por milisegundo, a 1x
 
 async function iniciar() {
   const clas = await cargar("data/clasificacion.json", null);
@@ -93,18 +116,35 @@ async function iniciar() {
 
   construirMarcador();
 
+  const selectorCentro = document.getElementById("centrar-en");
+  SERIES.forEach((s) => {
+    selectorCentro.insertAdjacentHTML("beforeend", `<option value="${s.slug}">${s.nombre}</option>`);
+  });
+  selectorCentro.onchange = () => { centradoEn = selectorCentro.value; renderizar(); };
+  document.getElementById("limite-cero").onchange = (e) => { limitarCero = e.target.checked; renderizar(); };
+
   const barra = document.getElementById("barra");
   barra.max = CLAVES.length - 1;
   barra.value = CLAVES.length - 1;
-  barra.oninput = () => { parar(); pintar(+barra.value); };
+  barra.oninput = () => { parar(); progreso = +barra.value; renderizar(); };
   document.getElementById("btn-play").onclick = alternar;
-  document.getElementById("btn-anterior").onclick = () => { parar(); pintar(Math.max(0, +barra.value - 1)); barra.value = progresoActual; };
-  document.getElementById("btn-siguiente").onclick = () => { parar(); pintar(Math.min(CLAVES.length - 1, +barra.value + 1)); barra.value = progresoActual; };
+  document.getElementById("btn-anterior").onclick = () => {
+    parar();
+    progreso = Math.max(0, Math.round(progreso) - 1);
+    barra.value = progreso;
+    renderizar();
+  };
+  document.getElementById("btn-siguiente").onclick = () => {
+    parar();
+    progreso = Math.min(CLAVES.length - 1, Math.round(progreso) + 1);
+    barra.value = progreso;
+    renderizar();
+  };
 
-  pintar(CLAVES.length - 1);
+  progreso = CLAVES.length - 1;
+  renderizar();
+  requestAnimationFrame(bucleAnimacion);
 }
-
-let progresoActual = 0;
 
 function construirMarcador() {
   const cont = document.getElementById("marcador");
@@ -113,7 +153,7 @@ function construirMarcador() {
     <div class="fila-jugador" id="fila-${s.slug}" onclick="alternarJugador('${s.slug}')">
       <span class="puesto" id="puesto-${s.slug}">-</span>
       <span class="punto-color" style="background:${s.color}"></span>
-      <span class="nombre">${nombreConInsignias(s)}</span>
+      <span class="nombre"><a href="perfil.html?j=${s.slug}" class="enlace-jugador" onclick="event.stopPropagation()">${nombreConInsignias(s)}</a></span>
       <span class="total" id="total-${s.slug}">0</span>
       <span class="delta" id="delta-${s.slug}">+0</span>
     </div>`).join("");
@@ -124,61 +164,130 @@ function alternarJugador(slug) {
   const fila = document.getElementById(`fila-${slug}`);
   fila.style.opacity = ocultos.has(slug) ? "0.3" : "1";
   fila.style.filter = ocultos.has(slug) ? "grayscale(100%)" : "none";
-  pintarGrafico(progresoActual);
+  renderizar();
 }
 
 function alternar() {
-  if (corriendo) return parar();
-  const barra = document.getElementById("barra");
-  if (+barra.value >= CLAVES.length - 1) { barra.value = 0; pintar(0); }
+  if (reproduciendo) { parar(); return; }
+  if (progreso >= CLAVES.length - 1) progreso = 0;
+  reproduciendo = true;
+  ultimoTiempo = 0; // se recalcula solo en el próximo fotograma
   document.getElementById("btn-play").textContent = "⏸ Pausa";
-  const velocidad = () => +document.getElementById("velocidad").value;
-  const paso = () => {
-    const siguiente = progresoActual + 1;
-    if (siguiente > CLAVES.length - 1) return parar();
-    barra.value = siguiente;
-    pintar(siguiente);
-    corriendo = setTimeout(paso, velocidad());
-  };
-  corriendo = setTimeout(paso, velocidad());
 }
 
 function parar() {
-  clearTimeout(corriendo);
-  corriendo = null;
+  reproduciendo = false;
   document.getElementById("btn-play").textContent = "▶ Reproducir";
 }
 
-function pintar(hasta) {
-  progresoActual = hasta;
-  document.getElementById("etiqueta").textContent = `Jornada ${parseInt(CLAVES[hasta].slice(1))}`;
-  pintarGrafico(hasta);
-  pintarMarcador(hasta);
+function bucleAnimacion(tiempo) {
+  if (reproduciendo) {
+    if (!ultimoTiempo) ultimoTiempo = tiempo;
+    const delta = tiempo - ultimoTiempo;
+    ultimoTiempo = tiempo;
+    const multiplicador = +document.getElementById("velocidad").value;
+
+    progreso += delta * VELOCIDAD_BASE * multiplicador;
+    if (progreso >= CLAVES.length - 1) { progreso = CLAVES.length - 1; parar(); }
+
+    document.getElementById("barra").value = progreso;
+    renderizar();
+  }
+  requestAnimationFrame(bucleAnimacion);
 }
 
-function pintarGrafico(hasta) {
+/* Valor interpolado de un jugador en el instante "progreso": una mezcla
+   lineal entre lo que tenía en la jornada anterior y lo que tiene en la
+   siguiente, según lo lejos que esté el progreso de cada una. */
+function valorInterpolado(s, baseIdx, siguienteIdx, fraccion) {
+  const a = s.puntos[baseIdx].acumulado;
+  const b = s.puntos[siguienteIdx].acumulado;
+  return a + (b - a) * fraccion;
+}
+
+function renderizar() {
+  const baseIdx = Math.min(CLAVES.length - 1, Math.floor(progreso));
+  const siguienteIdx = Math.min(baseIdx + 1, CLAVES.length - 1);
+  const fraccion = progreso - baseIdx;
+  // Con el progreso justo a medio camino, se pasa a mostrar la etiqueta y el
+  // desglose de la jornada siguiente, no la anterior.
+  const idxMostrado = fraccion < 0.5 ? baseIdx : siguienteIdx;
+
+  document.getElementById("etiqueta").textContent = `Jornada ${parseInt(CLAVES[idxMostrado].slice(1))}`;
+  pintarGrafico(baseIdx, siguienteIdx, fraccion);
+  pintarMarcador(baseIdx, siguienteIdx, fraccion, idxMostrado);
+}
+
+function pintarGrafico(baseIdx, siguienteIdx, fraccion) {
   const W = 900, H = 400, M = { t: 20, r: 70, b: 30, l: 45 };
-  const visibles = SERIES.filter((s) => !ocultos.has(s.slug)).map((s) => ({ s, pts: s.puntos.slice(0, hasta + 1) }));
-  const todos = visibles.flatMap((v) => v.pts.map((p) => p.acumulado));
-  const maxY = Math.max(...todos, 1), minY = Math.min(...todos, 0);
+  const visibles = SERIES.filter((s) => !ocultos.has(s.slug));
+  const referencia = centradoEn ? SERIES.find((s) => s.slug === centradoEn) : null;
+
+  // Valor a dibujar de un jugador en una jornada concreta: el absoluto de
+  // siempre, o su diferencia respecto al jugador de referencia si hay uno
+  // centrado (0 = empatado con él, positivo = por delante, negativo = detrás).
+  const valorEn = (s, idx) => {
+    const abs = s.puntos[idx].acumulado;
+    return referencia ? abs - referencia.puntos[idx].acumulado : abs;
+  };
+  const valorActualDe = (s) => {
+    const abs = valorInterpolado(s, baseIdx, siguienteIdx, fraccion);
+    return referencia ? abs - valorInterpolado(referencia, baseIdx, siguienteIdx, fraccion) : abs;
+  };
+
+  const actuales = visibles.map(valorActualDe);
+  const historico = visibles.flatMap((s) => {
+    const vals = [];
+    for (let i = 0; i <= baseIdx; i++) vals.push(valorEn(s, i));
+    return vals;
+  });
+
+  let maxY, minY;
+  if (referencia) {
+    // Centrado en un jugador: su propia línea es el 0, y se deja el mismo
+    // margen arriba y abajo para que quede a media altura del gráfico.
+    const extremo = Math.max(...actuales.map(Math.abs), ...historico.map(Math.abs), 5);
+    maxY = extremo + 2;
+    minY = -extremo - 2;
+  } else if (limitarCero) {
+    // Casilla marcada: el eje siempre incluye el 0, como antes.
+    maxY = Math.max(...actuales, ...historico, 1);
+    minY = Math.min(...actuales, ...historico, 0);
+  } else {
+    // Por defecto: sin anclar a 0 — solo un margen de ~5 puntos por debajo
+    // del que va último ahora mismo, para separar mejor a los que van juntos.
+    maxY = Math.max(...actuales, ...historico, 1);
+    minY = Math.min(...actuales) - 5;
+  }
   const rango = maxY - minY || 1;
 
   const x = (i) => M.l + (i * (W - M.l - M.r)) / Math.max(CLAVES.length - 1, 1);
   const y = (v) => H - M.b - ((v - minY) / rango) * (H - M.t - M.b);
+  const formato = (v) => referencia && v > 0 ? `+${Math.round(v)}` : `${Math.round(v)}`;
 
   const fondoJornadas = CLAVES.map((k, i) => i % 2 === 0
     ? `<rect x="${x(i - 0.5).toFixed(1)}" y="${M.t}" width="${(x(i + 0.5) - x(i - 0.5)).toFixed(1)}"
              height="${H - M.t - M.b}" fill="rgba(255,255,255,0.02)"/>`
     : "").join("");
 
-  const lineas = visibles.map(({ s, pts }) => {
-    const d = pts.map((p, i) => `${i ? "L" : "M"}${x(i).toFixed(1)},${y(p.acumulado).toFixed(1)}`).join(" ");
-    const ultimo = pts[pts.length - 1];
+  const lineaReferencia = referencia
+    ? `<line x1="${M.l}" y1="${y(0).toFixed(1)}" x2="${W - M.r}" y2="${y(0).toFixed(1)}"
+             stroke="${referencia.color}" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.8"/>`
+    : "";
+
+  const lineas = visibles.map((s) => {
+    const puntos = [];
+    for (let i = 0; i <= baseIdx; i++) puntos.push({ x: i, y: valorEn(s, i) });
+    const actual = valorActualDe(s);
+    puntos.push({ x: baseIdx + fraccion, y: actual }); // el tramo "en vivo", interpolado
+
+    const d = puntos.map((pt, i) => `${i ? "L" : "M"}${x(pt.x).toFixed(1)},${y(pt.y).toFixed(1)}`).join(" ");
+    const px = x(baseIdx + fraccion);
     return `
       <path d="${d}" fill="none" stroke="${s.color}" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
-      <circle cx="${x(pts.length - 1).toFixed(1)}" cy="${y(ultimo.acumulado).toFixed(1)}" r="4.5" fill="${s.color}"/>
-      <text x="${(x(pts.length - 1) + 8).toFixed(1)}" y="${(y(ultimo.acumulado) + 4).toFixed(1)}"
-            fill="${s.color}" font-size="11" font-weight="bold">${s.nombre.slice(0, 8)}${(s.insignias || []).map((i) => i.emoji).join("")} ${ultimo.acumulado}</text>`;
+      <circle cx="${px.toFixed(1)}" cy="${y(actual).toFixed(1)}" r="4.5" fill="${s.color}"/>
+      <text x="${(px + 8).toFixed(1)}" y="${(y(actual) + 4).toFixed(1)}"
+            fill="${s.color}" font-size="11" font-weight="bold">${s.nombre.slice(0, 8)}${(s.insignias || []).map((i) => i.emoji).join("")} ${formato(actual)}</text>`;
   }).join("");
 
   document.getElementById("grafico").innerHTML = `
@@ -186,8 +295,9 @@ function pintarGrafico(hasta) {
       ${fondoJornadas}
       <line x1="${M.l}" y1="${H - M.b}" x2="${W - M.r}" y2="${H - M.b}" stroke="#444"/>
       <line x1="${M.l}" y1="${M.t}" x2="${M.l}" y2="${H - M.b}" stroke="#444"/>
-      <text x="8" y="${y(maxY) + 4}" fill="#9ca3af" font-size="11">${maxY}</text>
-      <text x="8" y="${y(minY) + 4}" fill="#9ca3af" font-size="11">${minY}</text>
+      ${lineaReferencia}
+      <text x="8" y="${y(maxY) + 4}" fill="#9ca3af" font-size="11">${formato(maxY)}</text>
+      <text x="8" y="${y(minY) + 4}" fill="#9ca3af" font-size="11">${formato(minY)}</text>
       ${CLAVES.map((k, i) => CLAVES.length <= 20 || i % 3 === 0
         ? `<text x="${x(i).toFixed(1)}" y="${H - 10}" fill="#9ca3af" font-size="10" text-anchor="middle">${parseInt(k.slice(1))}</text>`
         : "").join("")}
@@ -195,20 +305,20 @@ function pintarGrafico(hasta) {
     </svg>`;
 }
 
-function pintarMarcador(hasta) {
+function pintarMarcador(baseIdx, siguienteIdx, fraccion, idxMostrado) {
   const filas = SERIES.map((s) => ({
     slug: s.slug,
-    total: s.puntos[hasta].acumulado,
-    jornada: s.puntos[hasta].jornada,
-    ganador: s.puntos[hasta].ganador,
-    perdedor: s.puntos[hasta].perdedor,
+    total: valorInterpolado(s, baseIdx, siguienteIdx, fraccion),
+    jornada: s.puntos[idxMostrado].jornada,
+    ganador: s.puntos[idxMostrado].ganador,
+    perdedor: s.puntos[idxMostrado].perdedor,
   })).sort((a, b) => b.total - a.total);
 
   filas.forEach((f, rank) => {
     const fila = document.getElementById(`fila-${f.slug}`);
     fila.style.top = (rank * 48 + 4) + "px";
     document.getElementById(`puesto-${f.slug}`).textContent = rank + 1;
-    document.getElementById(`total-${f.slug}`).textContent = f.total;
+    document.getElementById(`total-${f.slug}`).textContent = Math.round(f.total);
 
     const delta = document.getElementById(`delta-${f.slug}`);
     if (f.jornada === null) { delta.textContent = "—"; delta.style.color = "#666"; }

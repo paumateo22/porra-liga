@@ -1,0 +1,79 @@
+{
+    "participante": "bruno",
+    "nombre": "Bruno",
+    "jornada": 5,
+    "generado": "2026-08-12T21:05:21",
+    "ingerido": "2026-08-12T21:05:23",
+    "predicciones": [
+        {
+            "id": 20000041,
+            "local": "Villarreal",
+            "visitante": "Athletic",
+            "fecha": "2026-05-27T21:05:16",
+            "marcador": "٤٩٠٨٨٧水٧八٦火٣水火"
+        },
+        {
+            "id": 20000042,
+            "local": "Betis",
+            "visitante": "Alavés",
+            "fecha": "2026-05-27T23:05:16",
+            "marcador": "٤٩٠土٨٧٢土八٢٢٣水火"
+        },
+        {
+            "id": 20000043,
+            "local": "Levante",
+            "visitante": "Rayo",
+            "fecha": "2026-05-28T01:05:16",
+            "marcador": "٤٩٠٤٥٧٢١八٧٠٣水火"
+        },
+        {
+            "id": 20000044,
+            "local": "Barcelona",
+            "visitante": "Getafe",
+            "fecha": "2026-05-28T03:05:16",
+            "marcador": "٤٩٠水٨٧٥٩八火٩٣水火"
+        },
+        {
+            "id": 20000045,
+            "local": "Atlético",
+            "visitante": "Espanyol",
+            "fecha": "2026-05-28T05:05:16",
+            "marcador": "٤٩٠山木٧土١八٨٠٣水火"
+        },
+        {
+            "id": 20000046,
+            "local": "Real Madrid",
+            "visitante": "Elche",
+            "fecha": "2026-05-28T07:05:16",
+            "marcador": "٤٩٠٨٣٧٦٩八٥山٣水火"
+        },
+        {
+            "id": 20000047,
+            "local": "Valencia",
+            "visitante": "Girona",
+            "fecha": "2026-05-28T09:05:16",
+            "marcador": "٤٩٠土٦٧٨١八٢土٣水火"
+        },
+        {
+            "id": 20000048,
+            "local": "Real Sociedad",
+            "visitante": "Mallorca",
+            "fecha": "2026-05-28T11:05:16",
+            "marcador": "٤٩٠٣٩٧٩٩八٠٦٣水火"
+        },
+        {
+            "id": 20000049,
+            "local": "Oviedo",
+            "visitante": "Celta",
+            "fecha": "2026-05-28T13:05:16",
+            "marcador": "٤٩٠٢木٧٣١八木火٣水火"
+        },
+        {
+            "id": 20000050,
+            "local": "Sevilla",
+            "visitante": "Osasuna",
+            "fecha": "2026-05-28T15:05:16",
+            "marcador": "٤٩٠٠١٧山٩八٩٤٣水火"
+        }
+    ]
+}

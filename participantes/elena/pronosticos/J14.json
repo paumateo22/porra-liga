@@ -1,0 +1,79 @@
+{
+    "participante": "elena",
+    "nombre": "Elena",
+    "jornada": 14,
+    "generado": "2026-08-12T21:05:22",
+    "ingerido": "2026-08-12T21:05:24",
+    "predicciones": [
+        {
+            "id": 20000131,
+            "local": "Osasuna",
+            "visitante": "Valencia",
+            "fecha": "2026-07-29T21:05:16",
+            "marcador": "٤٩٠٠٩٧山٤八土٧٣水火"
+        },
+        {
+            "id": 20000132,
+            "local": "Levante",
+            "visitante": "Real Madrid",
+            "fecha": "2026-07-29T23:05:16",
+            "marcador": "٤٩٠٧٩٧木火八٤金٣水火"
+        },
+        {
+            "id": 20000133,
+            "local": "Atlético",
+            "visitante": "Sevilla",
+            "fecha": "2026-07-30T01:05:16",
+            "marcador": "٤٩٠٩٢٧٥٧八٤٤٣水火"
+        },
+        {
+            "id": 20000134,
+            "local": "Getafe",
+            "visitante": "Oviedo",
+            "fecha": "2026-07-30T03:05:16",
+            "marcador": "٤٩٠٨٦٧火土八١木٣水火"
+        },
+        {
+            "id": 20000135,
+            "local": "Elche",
+            "visitante": "Athletic",
+            "fecha": "2026-07-30T05:05:16",
+            "marcador": "٤٩٠土٨٧٦٧八木١٣水火"
+        },
+        {
+            "id": 20000136,
+            "local": "Rayo",
+            "visitante": "Betis",
+            "fecha": "2026-07-30T07:05:16",
+            "marcador": "٤٩٠金土٧٩金八山山٣水火"
+        },
+        {
+            "id": 20000137,
+            "local": "Barcelona",
+            "visitante": "Mallorca",
+            "fecha": "2026-07-30T09:05:16",
+            "marcador": "٤٩٠火٢٧٣٦八٦٣٣水火"
+        },
+        {
+            "id": 20000138,
+            "local": "Espanyol",
+            "visitante": "Villarreal",
+            "fecha": "2026-07-30T11:05:16",
+            "marcador": "٤٩٠٠٦٧٠土八٥山٣水火"
+        },
+        {
+            "id": 20000139,
+            "local": "Alavés",
+            "visitante": "Real Sociedad",
+            "fecha": "2026-07-30T13:05:16",
+            "marcador": "٤٩٠٧٩٧山٧八١٣٣水火"
+        },
+        {
+            "id": 20000140,
+            "local": "Girona",
+            "visitante": "Celta",
+            "fecha": "2026-07-30T15:05:16",
+            "marcador": "٤٩٠٦土٧木土八金水٣水火"
+        }
+    ]
+}

@@ -1,0 +1,51 @@
+{
+    "participante": "david",
+    "nombre": "David",
+    "jornada": 24,
+    "generado": "2026-08-12T21:05:22",
+    "ingerido": "2026-08-12T21:05:25",
+    "predicciones": [
+        {
+            "id": 20000231,
+            "local": "Athletic",
+            "visitante": "Celta",
+            "fecha": "2026-10-07T21:05:16",
+            "marcador": "٤٩٠٣٨٧金火八水٠٣水火"
+        },
+        {
+            "id": 20000232,
+            "local": "Real Sociedad",
+            "visitante": "Levante",
+            "fecha": "2026-10-07T23:05:16",
+            "marcador": "٤٩٠٢木٧٠٤八٠٩٣水火"
+        },
+        {
+            "id": 20000234,
+            "local": "Real Madrid",
+            "visitante": "Oviedo",
+            "fecha": "2026-10-08T03:05:16",
+            "marcador": "٤٩٠金木٧水٦八٢金٣水火"
+        },
+        {
+            "id": 20000235,
+            "local": "Rayo",
+            "visitante": "Girona",
+            "fecha": "2026-10-08T05:05:16",
+            "marcador": "٤٩٠木土٧٢金八金٥٣水火"
+        },
+        {
+            "id": 20000236,
+            "local": "Sevilla",
+            "visitante": "Alavés",
+            "fecha": "2026-10-08T07:05:16",
+            "marcador": "٤٩٠٣٤٧٤٦八水木٣水火"
+        },
+        {
+            "id": 20000238,
+            "local": "Valencia",
+            "visitante": "Atlético",
+            "fecha": "2026-10-08T11:05:16",
+            "marcador": "٤٩٠٦山٧土٦八٦木٣水火"
+        }
+    ]
+}

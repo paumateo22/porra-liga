@@ -1,0 +1,77 @@
+{
+    "participante": "Bruno",
+    "jornada": 35,
+    "generado": "2026-08-12T21:05:22",
+    "predicciones": [
+        {
+            "id": 20000341,
+            "local": "Oviedo",
+            "visitante": "Getafe",
+            "fecha": "2026-12-23T21:05:16",
+            "marcador": "٤٩٠٤٧٧٥٩八٧水٣水火"
+        },
+        {
+            "id": 20000342,
+            "local": "Rayo",
+            "visitante": "Sevilla",
+            "fecha": "2026-12-23T23:05:16",
+            "marcador": "٤٩٠水水٧土١八٣٢٣水火"
+        },
+        {
+            "id": 20000343,
+            "local": "Barcelona",
+            "visitante": "Athletic",
+            "fecha": "2026-12-24T01:05:16",
+            "marcador": "٤٩٠٠٢٧火٨八٠١٣水火"
+        },
+        {
+            "id": 20000344,
+            "local": "Alavés",
+            "visitante": "Mallorca",
+            "fecha": "2026-12-24T03:05:16",
+            "marcador": "٤٩٠٧٤٧٦٠八木٧٣水火"
+        },
+        {
+            "id": 20000345,
+            "local": "Valencia",
+            "visitante": "Celta",
+            "fecha": "2026-12-24T05:05:16",
+            "marcador": "٤٩٠٦水٧٩水八山土٣水火"
+        },
+        {
+            "id": 20000346,
+            "local": "Osasuna",
+            "visitante": "Girona",
+            "fecha": "2026-12-24T07:05:16",
+            "marcador": "٤٩٠٥٨٧٣٣八٦٤٣水火"
+        },
+        {
+            "id": 20000347,
+            "local": "Villarreal",
+            "visitante": "Elche",
+            "fecha": "2026-12-24T09:05:16",
+            "marcador": "٤٩٠水٠٧山水八٣金٣水火"
+        },
+        {
+            "id": 20000348,
+            "local": "Levante",
+            "visitante": "Real Sociedad",
+            "fecha": "2026-12-24T11:05:16",
+            "marcador": "٤٩٠土٦٧山٠八١٤٣水火"
+        },
+        {
+            "id": 20000349,
+            "local": "Betis",
+            "visitante": "Espanyol",
+            "fecha": "2026-12-24T13:05:16",
+            "marcador": "٤٩٠金٨٧木٨八金木٣水火"
+        },
+        {
+            "id": 20000350,
+            "local": "Real Madrid",
+            "visitante": "Atlético",
+            "fecha": "2026-12-24T15:05:16",
+            "marcador": "٤٩٠木金٧٧٣八山٥٣水火"
+        }
+    ]
+}

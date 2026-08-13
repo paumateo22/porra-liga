@@ -11,6 +11,7 @@
 <div class="container">
   <div class="selector-jornada">
     <select id="selector-jugador"></select>
+    <a href="#" id="btn-ver-pronosticos" class="btn-ver-todas">🗒️ Ver sus pronósticos</a>
   </div>
 
   <div id="tarjetas" class="latest-grid"></div>
@@ -91,6 +92,8 @@ function construirEvolucion(c, claves) {
 
 function pintar(slug) {
   const c = CLAS.clasificacion.find((x) => x.slug === slug);
+  document.getElementById("btn-ver-pronosticos").href = `pronosticos_jugador.html?j=${slug}`;
+  document.querySelector("header h1").textContent = `👤 ${nombrePlano(c)}`;
   const claves = ordenJornadas(CLAS.jornadas_calculadas.slice());
   const jugadas = claves.filter((k) => c.por_jornada[k]);
 

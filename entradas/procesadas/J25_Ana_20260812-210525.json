@@ -1,0 +1,77 @@
+{
+    "participante": "Ana",
+    "jornada": 25,
+    "generado": "2026-08-12T21:05:21",
+    "predicciones": [
+        {
+            "id": 20000241,
+            "local": "Elche",
+            "visitante": "Alavés",
+            "fecha": "2026-10-14T21:05:16",
+            "marcador": "٤٩٠火土٧٨金八٨١٣水火"
+        },
+        {
+            "id": 20000242,
+            "local": "Mallorca",
+            "visitante": "Real Madrid",
+            "fecha": "2026-10-14T23:05:16",
+            "marcador": "٤٩٠٢٣٧٢٦八٥山٣水火"
+        },
+        {
+            "id": 20000243,
+            "local": "Atlético",
+            "visitante": "Rayo",
+            "fecha": "2026-10-15T01:05:16",
+            "marcador": "٤٩٠٨٩٧٣٨八山٧٣水火"
+        },
+        {
+            "id": 20000244,
+            "local": "Celta",
+            "visitante": "Athletic",
+            "fecha": "2026-10-15T03:05:16",
+            "marcador": "٤٩٠土木٧٥٠八٧土٣水火"
+        },
+        {
+            "id": 20000245,
+            "local": "Sevilla",
+            "visitante": "Osasuna",
+            "fecha": "2026-10-15T05:05:16",
+            "marcador": "٤٩٠木٣٧火٨八٣٧٣水火"
+        },
+        {
+            "id": 20000246,
+            "local": "Espanyol",
+            "visitante": "Valencia",
+            "fecha": "2026-10-15T07:05:16",
+            "marcador": "٤٩٠火٦٧٦٠八٨火٣水火"
+        },
+        {
+            "id": 20000247,
+            "local": "Villarreal",
+            "visitante": "Getafe",
+            "fecha": "2026-10-15T09:05:16",
+            "marcador": "٤٩٠٣水٧٩٨八٤٥٣水火"
+        },
+        {
+            "id": 20000248,
+            "local": "Levante",
+            "visitante": "Betis",
+            "fecha": "2026-10-15T11:05:16",
+            "marcador": "٤٩٠٧土٧٩٠八水金٣水火"
+        },
+        {
+            "id": 20000249,
+            "local": "Barcelona",
+            "visitante": "Girona",
+            "fecha": "2026-10-15T13:05:16",
+            "marcador": "٤٩٠٥١٧٠٨八٧٥٣水火"
+        },
+        {
+            "id": 20000250,
+            "local": "Real Sociedad",
+            "visitante": "Oviedo",
+            "fecha": "2026-10-15T15:05:16",
+            "marcador": "٤٩٠٤٦٧山٠八火山٣水火"
+        }
+    ]
+}

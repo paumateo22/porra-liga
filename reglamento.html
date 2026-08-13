@@ -202,10 +202,13 @@ async function iniciar() {
     abiertos, y los ids de partido tienen que coincidir con el calendario oficial.</p>
 
     <p><strong>¿Alguien puede ver mi pronóstico antes de que acabe la jornada?</strong><br>
-    El marcador no se guarda como número normal en el fichero, va codificado
-    con dígitos arábigos y caracteres chinos (algo como
-    <code>٤٩٠٤٢٧٤٢八٤٣٣水火</code> en vez de <code>2-1</code>), así que abrir el
-    JSON en GitHub o reenviarlo por el grupo no revela nada a simple vista.</p>`));
+    No. Antes de que el partido se juegue, la propia web no enseña el pronóstico
+    de nadie, ni el tuyo ni el de otro — ni entrando en su perfil, ni escribiendo
+    su nombre en el formulario. Solo se revela cuando el partido termina. Además,
+    el marcador va codificado dentro del fichero (algo como
+    <code>٤٩٠٤٢٧٤٢八٤٣٣水火</code> en vez de <code>2-1</code>), así que aunque
+    alguien mirase el JSON directamente en GitHub tampoco vería nada a simple
+    vista.</p>`));
 
   document.getElementById("contenido").innerHTML = bloques.join("");
 }

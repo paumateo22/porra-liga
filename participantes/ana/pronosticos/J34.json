@@ -1,0 +1,79 @@
+{
+    "participante": "ana",
+    "nombre": "Ana",
+    "jornada": 34,
+    "generado": "2026-08-12T21:05:21",
+    "ingerido": "2026-08-12T21:05:26",
+    "predicciones": [
+        {
+            "id": 20000331,
+            "local": "Barcelona",
+            "visitante": "Sevilla",
+            "fecha": "2026-12-16T21:05:16",
+            "marcador": "٤٩٠٤水٧水土八٢山٣水火"
+        },
+        {
+            "id": 20000332,
+            "local": "Espanyol",
+            "visitante": "Betis",
+            "fecha": "2026-12-16T23:05:16",
+            "marcador": "٤٩٠山٠٧木٧八金٠٣水火"
+        },
+        {
+            "id": 20000333,
+            "local": "Mallorca",
+            "visitante": "Rayo",
+            "fecha": "2026-12-17T01:05:16",
+            "marcador": "٤٩٠٠٩٧٢金八٣٠٣水火"
+        },
+        {
+            "id": 20000334,
+            "local": "Elche",
+            "visitante": "Celta",
+            "fecha": "2026-12-17T03:05:16",
+            "marcador": "٤٩٠٧金٧٤٦八٨٩٣水火"
+        },
+        {
+            "id": 20000335,
+            "local": "Real Sociedad",
+            "visitante": "Getafe",
+            "fecha": "2026-12-17T05:05:16",
+            "marcador": "٤٩٠٥٠٧土٩八٥金٣水火"
+        },
+        {
+            "id": 20000336,
+            "local": "Villarreal",
+            "visitante": "Valencia",
+            "fecha": "2026-12-17T07:05:16",
+            "marcador": "٤٩٠٤٤٧١١八١٦٣水火"
+        },
+        {
+            "id": 20000337,
+            "local": "Alavés",
+            "visitante": "Real Madrid",
+            "fecha": "2026-12-17T09:05:16",
+            "marcador": "٤٩٠水٨٧٨٩八金土٣水火"
+        },
+        {
+            "id": 20000338,
+            "local": "Levante",
+            "visitante": "Girona",
+            "fecha": "2026-12-17T11:05:16",
+            "marcador": "٤٩٠金٤٧٨٦八火٤٣水火"
+        },
+        {
+            "id": 20000339,
+            "local": "Atlético",
+            "visitante": "Osasuna",
+            "fecha": "2026-12-17T13:05:16",
+            "marcador": "٤٩٠木٠٧٣٩八٩火٣水火"
+        },
+        {
+            "id": 20000340,
+            "local": "Oviedo",
+            "visitante": "Athletic",
+            "fecha": "2026-12-17T15:05:16",
+            "marcador": "٤٩٠火水٧٥١八٥٦٣水火"
+        }
+    ]
+}

@@ -70,10 +70,18 @@ async function iniciar() {
 
   // Por defecto: la última jornada con análisis ya calculado. Si ninguna se
   // ha calculado todavía (temporada recién reseteada), se abre en la primera
-  // del calendario y se muestra vacía con su propio aviso.
-  const clas = await cargar("data/clasificacion.json", null);
-  const calculadas = clas ? ordenJornadas(clas.jornadas_calculadas.slice()) : [];
-  const claveInicial = calculadas.length ? calculadas[calculadas.length - 1] : CLAVES[0];
+  // del calendario y se muestra vacía con su propio aviso. Si la URL pide una
+  // jornada concreta (?jornada=J05, por ejemplo desde el atajo del calendario),
+  // esa gana siempre a la que se elegiría por defecto.
+  const jornadaPedida = new URLSearchParams(location.search).get("jornada");
+  let claveInicial;
+  if (jornadaPedida && CLAVES.includes(jornadaPedida)) {
+    claveInicial = jornadaPedida;
+  } else {
+    const clas = await cargar("data/clasificacion.json", null);
+    const calculadas = clas ? ordenJornadas(clas.jornadas_calculadas.slice()) : [];
+    claveInicial = calculadas.length ? calculadas[calculadas.length - 1] : CLAVES[0];
+  }
   indice = CLAVES.indexOf(claveInicial);
 
   barra = montarBarraJornadas("barra-jornadas", CLAVES, CLAVES[indice], (clave) => {
@@ -128,22 +136,22 @@ function pintarBanner() {
       ? `<div class="aviso-estado seguro">✔ Ya es matemáticamente seguro</div>`
       : `<div class="aviso-estado provisional">⏳ Aún puede cambiar</div>`;
 
-  const nombreConInsigniasPorSlug = (g) => {
+  const enlaceNombrePorSlug = (g) => {
     const j = DATOS.jugadores.find((x) => x.slug === g.slug);
-    return j ? nombreConInsignias(j) : g.nombre;
+    return j ? enlaceNombre(j) : g.nombre;
   };
 
   document.getElementById("banner-resultado").innerHTML = `
     <div class="banner-resultado">
       <div class="tarjeta-banner campeon">
         <div class="etiqueta">🏆 ${DATOS.cerrada ? "Campeón" : "Va ganando"} de la jornada</div>
-        <div class="nombres">${resultado.ganadores.map(nombreConInsigniasPorSlug).join(" y ")}</div>
+        <div class="nombres">${resultado.ganadores.map(enlaceNombrePorSlug).join(" y ")}</div>
         <div class="aciertos-pie">${aciertosDe(resultado.ganadores[0].slug)} aciertos 1X2</div>
         ${avisoCampeon}
       </div>
       <div class="tarjeta-banner perdedores">
         <div class="etiqueta">💀 ${DATOS.cerrada ? "Perdedores" : "Va perdiendo"} de la jornada</div>
-        <div class="nombres">${resultado.perdedores.map(nombreConInsigniasPorSlug).join(" y ")}</div>
+        <div class="nombres">${resultado.perdedores.map(enlaceNombrePorSlug).join(" y ")}</div>
         <div class="aciertos-pie">${aciertosDe(resultado.perdedores[0].slug)} aciertos 1X2</div>
         ${avisoPerdedor}
       </div>

@@ -1,0 +1,77 @@
+{
+    "participante": "Clara",
+    "jornada": 7,
+    "generado": "2026-08-12T21:05:22",
+    "predicciones": [
+        {
+            "id": 20000061,
+            "local": "Oviedo",
+            "visitante": "Sevilla",
+            "fecha": "2026-06-10T21:05:16",
+            "marcador": "٤٩٠٢金٧٩٢八٤٣٣水火"
+        },
+        {
+            "id": 20000062,
+            "local": "Girona",
+            "visitante": "Barcelona",
+            "fecha": "2026-06-10T23:05:16",
+            "marcador": "٤٩٠٠٤٧٠山八١٩٣水火"
+        },
+        {
+            "id": 20000063,
+            "local": "Getafe",
+            "visitante": "Osasuna",
+            "fecha": "2026-06-11T01:05:16",
+            "marcador": "٤٩٠金水٧١木八٦水٣水火"
+        },
+        {
+            "id": 20000064,
+            "local": "Valencia",
+            "visitante": "Celta",
+            "fecha": "2026-06-11T03:05:16",
+            "marcador": "٤٩٠木木٧水٥八٣木٣水火"
+        },
+        {
+            "id": 20000065,
+            "local": "Villarreal",
+            "visitante": "Levante",
+            "fecha": "2026-06-11T05:05:16",
+            "marcador": "٤٩٠٣٣٧٢木八土٦٣水火"
+        },
+        {
+            "id": 20000066,
+            "local": "Elche",
+            "visitante": "Real Madrid",
+            "fecha": "2026-06-11T07:05:16",
+            "marcador": "٤٩٠٢٠٧٤٤八٤土٣水火"
+        },
+        {
+            "id": 20000067,
+            "local": "Betis",
+            "visitante": "Espanyol",
+            "fecha": "2026-06-11T09:05:16",
+            "marcador": "٤٩٠١山٧土火八٠٧٣水火"
+        },
+        {
+            "id": 20000068,
+            "local": "Alavés",
+            "visitante": "Real Sociedad",
+            "fecha": "2026-06-11T11:05:16",
+            "marcador": "٤٩٠٥火٧土٥八٧金٣水火"
+        },
+        {
+            "id": 20000069,
+            "local": "Mallorca",
+            "visitante": "Rayo",
+            "fecha": "2026-06-11T13:05:16",
+            "marcador": "٤٩٠水٠٧٦木八٣٧٣水火"
+        },
+        {
+            "id": 20000070,
+            "local": "Atlético",
+            "visitante": "Athletic",
+            "fecha": "2026-06-11T15:05:16",
+            "marcador": "٤٩٠山٦٧٨٤八٨木٣水火"
+        }
+    ]
+}

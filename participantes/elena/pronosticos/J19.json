@@ -1,0 +1,79 @@
+{
+    "participante": "elena",
+    "nombre": "Elena",
+    "jornada": 19,
+    "generado": "2026-08-12T21:05:22",
+    "ingerido": "2026-08-12T21:05:25",
+    "predicciones": [
+        {
+            "id": 20000181,
+            "local": "Alavés",
+            "visitante": "Villarreal",
+            "fecha": "2026-09-02T21:05:16",
+            "marcador": "٤٩٠٧٨٧١٩八٦٩٣水火"
+        },
+        {
+            "id": 20000182,
+            "local": "Elche",
+            "visitante": "Valencia",
+            "fecha": "2026-09-02T23:05:16",
+            "marcador": "٤٩٠٦金٧水١八٢١٣水火"
+        },
+        {
+            "id": 20000183,
+            "local": "Athletic",
+            "visitante": "Espanyol",
+            "fecha": "2026-09-03T01:05:16",
+            "marcador": "٤٩٠٣山٧٨水八٠火٣水火"
+        },
+        {
+            "id": 20000184,
+            "local": "Getafe",
+            "visitante": "Mallorca",
+            "fecha": "2026-09-03T03:05:16",
+            "marcador": "٤٩٠٢土٧٢٣八火٧٣水火"
+        },
+        {
+            "id": 20000185,
+            "local": "Rayo",
+            "visitante": "Barcelona",
+            "fecha": "2026-09-03T05:05:16",
+            "marcador": "٤٩٠٠٤٧٥水八٩土٣水火"
+        },
+        {
+            "id": 20000186,
+            "local": "Osasuna",
+            "visitante": "Betis",
+            "fecha": "2026-09-03T07:05:16",
+            "marcador": "٤٩٠٧٧٧土٣八٥٦٣水火"
+        },
+        {
+            "id": 20000187,
+            "local": "Real Madrid",
+            "visitante": "Atlético",
+            "fecha": "2026-09-03T09:05:16",
+            "marcador": "٤٩٠٦٦٧٦水八٢金٣水火"
+        },
+        {
+            "id": 20000188,
+            "local": "Celta",
+            "visitante": "Real Sociedad",
+            "fecha": "2026-09-03T11:05:16",
+            "marcador": "٤٩٠山木٧٦٣八٠١٣水火"
+        },
+        {
+            "id": 20000189,
+            "local": "Girona",
+            "visitante": "Oviedo",
+            "fecha": "2026-09-03T13:05:16",
+            "marcador": "٤٩٠٨١٧٩水八木٨٣水火"
+        },
+        {
+            "id": 20000190,
+            "local": "Levante",
+            "visitante": "Sevilla",
+            "fecha": "2026-09-03T15:05:16",
+            "marcador": "٤٩٠土٧٧٣٣八٩٠٣水火"
+        }
+    ]
+}

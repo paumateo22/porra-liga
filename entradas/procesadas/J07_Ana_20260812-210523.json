@@ -1,0 +1,49 @@
+{
+    "participante": "Ana",
+    "jornada": 7,
+    "generado": "2026-08-12T21:05:21",
+    "predicciones": [
+        {
+            "id": 20000067,
+            "local": "Betis",
+            "visitante": "Espanyol",
+            "fecha": "2026-06-11T09:05:16",
+            "marcador": "٤٩٠١火٧土火八٠٧٣水火"
+        },
+        {
+            "id": 20000065,
+            "local": "Villarreal",
+            "visitante": "Levante",
+            "fecha": "2026-06-11T05:05:16",
+            "marcador": "٤٩٠٣٢٧٢木八土٦٣水火"
+        },
+        {
+            "id": 20000069,
+            "local": "Mallorca",
+            "visitante": "Rayo",
+            "fecha": "2026-06-11T13:05:16",
+            "marcador": "٤٩٠水٣٧٦木八٣٤٣水火"
+        },
+        {
+            "id": 20000066,
+            "local": "Elche",
+            "visitante": "Real Madrid",
+            "fecha": "2026-06-11T07:05:16",
+            "marcador": "٤٩٠٢٧٧٤٤八٤土٣水火"
+        },
+        {
+            "id": 20000064,
+            "local": "Valencia",
+            "visitante": "Celta",
+            "fecha": "2026-06-11T03:05:16",
+            "marcador": "٤٩٠木火٧水٥八٣土٣水火"
+        },
+        {
+            "id": 20000061,
+            "local": "Oviedo",
+            "visitante": "Sevilla",
+            "fecha": "2026-06-10T21:05:16",
+            "marcador": "٤٩٠٢土٧٩٢八٤٣٣水火"
+        }
+    ]
+}

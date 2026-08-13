@@ -1,0 +1,77 @@
+{
+    "participante": "David",
+    "jornada": 17,
+    "generado": "2026-08-12T21:05:22",
+    "predicciones": [
+        {
+            "id": 20000161,
+            "local": "Getafe",
+            "visitante": "Real Sociedad",
+            "fecha": "2026-08-19T21:05:16",
+            "marcador": "٤٩٠木٦٧٣木八٧٣٣水火"
+        },
+        {
+            "id": 20000162,
+            "local": "Villarreal",
+            "visitante": "Oviedo",
+            "fecha": "2026-08-19T23:05:16",
+            "marcador": "٤٩٠火٨٧٥٥八火山٣水火"
+        },
+        {
+            "id": 20000163,
+            "local": "Real Madrid",
+            "visitante": "Girona",
+            "fecha": "2026-08-20T01:05:16",
+            "marcador": "٤٩٠٧金٧٢火八火٣٣水火"
+        },
+        {
+            "id": 20000164,
+            "local": "Rayo",
+            "visitante": "Espanyol",
+            "fecha": "2026-08-20T03:05:16",
+            "marcador": "٤٩٠٥٠٧٤٤八٩٨٣水火"
+        },
+        {
+            "id": 20000165,
+            "local": "Athletic",
+            "visitante": "Atlético",
+            "fecha": "2026-08-20T05:05:16",
+            "marcador": "٤٩٠٤٦٧土火八٥٠٣水火"
+        },
+        {
+            "id": 20000166,
+            "local": "Alavés",
+            "visitante": "Osasuna",
+            "fecha": "2026-08-20T07:05:16",
+            "marcador": "٤٩٠水٩٧١٤八٢٥٣水火"
+        },
+        {
+            "id": 20000167,
+            "local": "Celta",
+            "visitante": "Levante",
+            "fecha": "2026-08-20T09:05:16",
+            "marcador": "٤٩٠山火٧٨火八土木٣水火"
+        },
+        {
+            "id": 20000168,
+            "local": "Valencia",
+            "visitante": "Elche",
+            "fecha": "2026-08-20T11:05:16",
+            "marcador": "٤٩٠木٤٧٨٤八木٧٣水火"
+        },
+        {
+            "id": 20000169,
+            "local": "Betis",
+            "visitante": "Barcelona",
+            "fecha": "2026-08-20T13:05:16",
+            "marcador": "٤٩٠火水٧٣火八山土٣水火"
+        },
+        {
+            "id": 20000170,
+            "local": "Mallorca",
+            "visitante": "Sevilla",
+            "fecha": "2026-08-20T15:05:16",
+            "marcador": "٤٩٠٣木٧٥٤八٦٥٣水火"
+        }
+    ]
+}

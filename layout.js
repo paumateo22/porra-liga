@@ -91,6 +91,17 @@ function formatearFechaHora(iso) {
   return `${fecha} - ${hora}`;
 }
 
+/* Como this.scrollIntoView no existe en todos los entornos (algunos navegadores
+   embebidos, y el jsdom que usamos para probar, ni siquiera lo definen como
+   función vacía), un simple "?.scrollIntoView(...)" revienta en cuanto el
+   elemento SÍ se encuentra — el "?." solo protege contra elemento nulo, no
+   contra método inexistente. */
+function desplazarSiExiste(elemento, opciones) {
+  if (elemento && typeof elemento.scrollIntoView === "function") {
+    elemento.scrollIntoView(opciones);
+  }
+}
+
 /* Jornada "actual": la primera que aún tenga partidos sin terminar. Si no hay
    ningún dato de resultados para una jornada (temporada recién reseteada,
    antes de correr el extractor), se trata como "sin empezar" en vez de
@@ -129,6 +140,15 @@ function nombreConInsignias(c) {
     return `<span class="insignia-jugador" title="${desc}" data-desc="${desc}" onclick="mostrarInsigniaPopover(event)">${ins.emoji}</span>`;
   }).join(" ");
   return `${c.nombre} ${badges}`;
+}
+
+/* Nombre (con sus insignias) siempre como atajo a su perfil — para usar en
+   cualquier sitio donde aparezca un jugador: tablas, carteles, marcadores...
+   Las insignias siguen siendo clicables por su cuenta (su propio manejador ya
+   corta la propagación y cancela la navegación del enlace, así que tocar una
+   insignia muestra su burbuja en vez de irse al perfil). */
+function enlaceNombre(c, claseExtra = "") {
+  return `<a href="perfil.html?j=${c.slug}" class="enlace-jugador ${claseExtra}">${nombreConInsignias(c)}</a>`;
 }
 
 /* Al tocar/hacer clic en una insignia: muestra su descripción en una burbuja

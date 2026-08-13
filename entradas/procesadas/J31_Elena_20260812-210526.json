@@ -1,0 +1,77 @@
+{
+    "participante": "Elena",
+    "jornada": 31,
+    "generado": "2026-08-12T21:05:22",
+    "predicciones": [
+        {
+            "id": 20000301,
+            "local": "Valencia",
+            "visitante": "Alavés",
+            "fecha": "2026-11-25T21:05:16",
+            "marcador": "٤٩٠木山٧٦٧八土木٣水火"
+        },
+        {
+            "id": 20000302,
+            "local": "Celta",
+            "visitante": "Real Madrid",
+            "fecha": "2026-11-25T23:05:16",
+            "marcador": "٤٩٠火木٧٩土八水٥٣水火"
+        },
+        {
+            "id": 20000303,
+            "local": "Real Sociedad",
+            "visitante": "Sevilla",
+            "fecha": "2026-11-26T01:05:16",
+            "marcador": "٤٩٠٩٥٧٩٦八٨٣٣水火"
+        },
+        {
+            "id": 20000304,
+            "local": "Osasuna",
+            "visitante": "Barcelona",
+            "fecha": "2026-11-26T03:05:16",
+            "marcador": "٤٩٠٨山٧٠金八٥水٣水火"
+        },
+        {
+            "id": 20000305,
+            "local": "Atlético",
+            "visitante": "Oviedo",
+            "fecha": "2026-11-26T05:05:16",
+            "marcador": "٤٩٠土火٧山٦八١٢٣水火"
+        },
+        {
+            "id": 20000306,
+            "local": "Getafe",
+            "visitante": "Rayo",
+            "fecha": "2026-11-26T07:05:16",
+            "marcador": "٤٩٠木٢٧木٩八金水٣水火"
+        },
+        {
+            "id": 20000307,
+            "local": "Villarreal",
+            "visitante": "Athletic",
+            "fecha": "2026-11-26T09:05:16",
+            "marcador": "٤٩٠火٥٧٧١八山٠٣水火"
+        },
+        {
+            "id": 20000308,
+            "local": "Girona",
+            "visitante": "Betis",
+            "fecha": "2026-11-26T11:05:16",
+            "marcador": "٤٩٠٠火٧٤金八٩٩٣水火"
+        },
+        {
+            "id": 20000309,
+            "local": "Mallorca",
+            "visitante": "Elche",
+            "fecha": "2026-11-26T13:05:16",
+            "marcador": "٤٩٠٦٢٧金٦八٥١٣水火"
+        },
+        {
+            "id": 20000310,
+            "local": "Espanyol",
+            "visitante": "Levante",
+            "fecha": "2026-11-26T15:05:16",
+            "marcador": "٤٩٠٥٠٧١金八٢٤٣水火"
+        }
+    ]
+}

@@ -7,11 +7,6 @@
 <link rel="stylesheet" href="theme.css">
 <style>
   .fila-acciones-calendario { text-align: center; margin: 4px 0 18px; }
-  .btn-ver-todas {
-    background: #252525; color: var(--gold); border: 1px solid var(--gold); border-radius: 6px;
-    padding: 7px 18px; font-size: 0.95em; cursor: pointer; transition: 0.2s;
-  }
-  .btn-ver-todas:hover { background: var(--gold); color: #000; }
 </style>
 </head>
 <body>
@@ -64,7 +59,10 @@ function bloqueJornada(clave) {
 
   return `
     <div class="cabecera-jornada">
-      <h3 id="ancla-${clave}">Jornada ${parseInt(clave.slice(1))}</h3>
+      <h3 id="ancla-${clave}">
+        Jornada ${parseInt(clave.slice(1))}
+        <a href="analisis.html?jornada=${clave}" class="enlace-analisis-jornada" title="Ver el análisis de esta jornada">🔍</a>
+      </h3>
       <span class="nota">${jugados}/${partidos.length} jugados</span>
     </div>
     <div class="lista-partidos">
@@ -90,8 +88,7 @@ function pintarUna() {
 
 function pintarTodas() {
   document.getElementById("contenido").innerHTML = CLAVES.map(bloqueJornada).join("");
-  document.getElementById("ancla-" + CLAVES[indice])
-    ?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  desplazarSiExiste(document.getElementById("ancla-" + CLAVES[indice]), { behavior: "smooth", block: "nearest" });
 }
 
 iniciar();

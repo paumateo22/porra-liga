@@ -1,0 +1,77 @@
+{
+    "participante": "Clara",
+    "jornada": 13,
+    "generado": "2026-08-12T21:05:22",
+    "predicciones": [
+        {
+            "id": 20000121,
+            "local": "Mallorca",
+            "visitante": "Celta",
+            "fecha": "2026-07-22T21:05:16",
+            "marcador": "٤٩٠火١٧٠山八٦土٣水火"
+        },
+        {
+            "id": 20000122,
+            "local": "Betis",
+            "visitante": "Oviedo",
+            "fecha": "2026-07-22T23:05:16",
+            "marcador": "٤٩٠٣٥٧山٢八٢٦٣水火"
+        },
+        {
+            "id": 20000123,
+            "local": "Getafe",
+            "visitante": "Osasuna",
+            "fecha": "2026-07-23T01:05:16",
+            "marcador": "٤٩٠٩火٧水٥八٧٤٣水火"
+        },
+        {
+            "id": 20000124,
+            "local": "Valencia",
+            "visitante": "Alavés",
+            "fecha": "2026-07-23T03:05:16",
+            "marcador": "٤٩٠土٢٧٢木八火金٣水火"
+        },
+        {
+            "id": 20000125,
+            "local": "Atlético",
+            "visitante": "Sevilla",
+            "fecha": "2026-07-23T05:05:16",
+            "marcador": "٤٩٠金٦٧٤٥八٨١٣水火"
+        },
+        {
+            "id": 20000126,
+            "local": "Elche",
+            "visitante": "Real Sociedad",
+            "fecha": "2026-07-23T07:05:16",
+            "marcador": "٤٩٠木٩٧土火八٥٩٣水火"
+        },
+        {
+            "id": 20000127,
+            "local": "Barcelona",
+            "visitante": "Real Madrid",
+            "fecha": "2026-07-23T09:05:16",
+            "marcador": "٤٩٠火土٧١٤八١٣٣水火"
+        },
+        {
+            "id": 20000128,
+            "local": "Espanyol",
+            "visitante": "Villarreal",
+            "fecha": "2026-07-23T11:05:16",
+            "marcador": "٤٩٠٧٥٧٦木八٠٨٣水火"
+        },
+        {
+            "id": 20000129,
+            "local": "Levante",
+            "visitante": "Rayo",
+            "fecha": "2026-07-23T13:05:16",
+            "marcador": "٤٩٠٦٥٧٨٥八火١٣水火"
+        },
+        {
+            "id": 20000130,
+            "local": "Girona",
+            "visitante": "Athletic",
+            "fecha": "2026-07-23T15:05:16",
+            "marcador": "٤٩٠٥山٧٣火八٩水٣水火"
+        }
+    ]
+}

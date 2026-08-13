@@ -1,0 +1,77 @@
+{
+    "participante": "Bruno",
+    "jornada": 28,
+    "generado": "2026-08-12T21:05:22",
+    "predicciones": [
+        {
+            "id": 20000271,
+            "local": "Real Madrid",
+            "visitante": "Alavés",
+            "fecha": "2026-11-04T21:05:16",
+            "marcador": "٤٩٠٩山٧٠٧八١土٣水火"
+        },
+        {
+            "id": 20000272,
+            "local": "Espanyol",
+            "visitante": "Sevilla",
+            "fecha": "2026-11-04T23:05:16",
+            "marcador": "٤٩٠٨金٧水土八木٥٣水火"
+        },
+        {
+            "id": 20000273,
+            "local": "Getafe",
+            "visitante": "Real Sociedad",
+            "fecha": "2026-11-05T01:05:16",
+            "marcador": "٤٩٠٥水٧水٦八٢٣٣水火"
+        },
+        {
+            "id": 20000274,
+            "local": "Betis",
+            "visitante": "Levante",
+            "fecha": "2026-11-05T03:05:16",
+            "marcador": "٤٩٠٤金٧٢٩八土٩٣水火"
+        },
+        {
+            "id": 20000275,
+            "local": "Villarreal",
+            "visitante": "Elche",
+            "fecha": "2026-11-05T05:05:16",
+            "marcador": "٤٩٠水火٧٤١八水٢٣水火"
+        },
+        {
+            "id": 20000276,
+            "local": "Athletic",
+            "visitante": "Rayo",
+            "fecha": "2026-11-05T07:05:16",
+            "marcador": "٤٩٠٩٠٧土٩八٠山٣水火"
+        },
+        {
+            "id": 20000277,
+            "local": "Celta",
+            "visitante": "Girona",
+            "fecha": "2026-11-05T09:05:16",
+            "marcador": "٤٩٠٨٦٧١١八火١٣水火"
+        },
+        {
+            "id": 20000278,
+            "local": "Oviedo",
+            "visitante": "Valencia",
+            "fecha": "2026-11-05T11:05:16",
+            "marcador": "٤٩٠火土٧٦金八٣水٣水火"
+        },
+        {
+            "id": 20000279,
+            "local": "Atlético",
+            "visitante": "Mallorca",
+            "fecha": "2026-11-05T13:05:16",
+            "marcador": "٤٩٠٢١٧٨١八土٣٣水火"
+        },
+        {
+            "id": 20000280,
+            "local": "Osasuna",
+            "visitante": "Barcelona",
+            "fecha": "2026-11-05T15:05:16",
+            "marcador": "٤٩٠١٧٧٣٩八٤٨٣水火"
+        }
+    ]
+}
