@@ -95,6 +95,8 @@ async function probarEscenarioReset() {
     check(errCal.length === 0, `calendario.html sin errores de JS ${errCal[0] || ""}`);
     check(docCal.querySelector(".celda-jornada-nav.activa")?.textContent.trim() === "1",
       "calendario.html abre en la jornada 1 recién reseteado, no en la última");
+    check(docCal.querySelectorAll(".widget-cabecera").length === 4,
+      "los widgets de cabecera siguen apareciendo aunque no haya resultados ni clasificación todavía");
 
     const { doc: docPro, errores: errPro } = await render("pronosticar.html");
     check(errPro.length === 0, `pronosticar.html sin errores de JS ${errPro[0] || ""}`);
@@ -196,6 +198,57 @@ async function probarEscenarioReset() {
       "el heatmap aplica color de fondo a las celdas");
   }
 
+  console.log("\n═══ index.html · flechas de movimiento en la clasificación ═══");
+  {
+    // Fixture aislado con movimiento real y verificable a mano: tras J01,
+    // Ana 1ª / Bruno 2º / Clara 3ª. En J02, Clara remonta mucho y Ana se
+    // hunde, así que el orden final tiene que quedar Clara / Bruno / Ana —
+    // exactamente lo que deben reflejar las flechas al comparar con J01
+    // (que es la jornada anterior a la última, J02, que está cerrada).
+    const rutaClas = path.join(RAIZ, "data/clasificacion.json");
+    const rutaAnalisisDir = path.join(RAIZ, "data/analisis");
+    const backupClas = fs.existsSync(rutaClas) ? fs.readFileSync(rutaClas) : null;
+    const backupAnalisisDir = rutaAnalisisDir + ".bak";
+    if (fs.existsSync(rutaAnalisisDir)) fs.renameSync(rutaAnalisisDir, backupAnalisisDir);
+    fs.mkdirSync(rutaAnalisisDir);
+
+    const porJornada = (puntos, ganador) => ({ puntos, ganador, aciertos_1x2: 0, aciertos_exactos: 0 });
+    const fixture = {
+      competicion: "Prueba", generado: new Date().toISOString(), desempates: ["jornadas_ganadas"],
+      jornadas_calculadas: ["J01", "J02"],
+      clasificacion: [
+        { puesto: 1, slug: "clara", nombre: "Clara", insignias: [], puntos_totales: 31, punto_partida: 0,
+          aciertos_exactos: 13, aciertos_1x2: 13, bonus_rendimiento: 0, jornadas_ganadas: 1, jornadas_perdidas: 0,
+          por_jornada: { J01: porJornada(6, false), J02: porJornada(25, true) } },
+        { puesto: 2, slug: "bruno", nombre: "Bruno", insignias: [], puntos_totales: 26, punto_partida: 0,
+          aciertos_exactos: 13, aciertos_1x2: 13, bonus_rendimiento: 0, jornadas_ganadas: 0, jornadas_perdidas: 0,
+          por_jornada: { J01: porJornada(12, false), J02: porJornada(14, false) } },
+        { puesto: 3, slug: "ana", nombre: "Ana", insignias: [], puntos_totales: 20, punto_partida: 0,
+          aciertos_exactos: 9, aciertos_1x2: 9, bonus_rendimiento: 0, jornadas_ganadas: 1, jornadas_perdidas: 1,
+          por_jornada: { J01: porJornada(18, true), J02: porJornada(2, false) } },
+      ],
+    };
+    fs.writeFileSync(rutaClas, JSON.stringify(fixture, null, 2));
+    fs.writeFileSync(path.join(rutaAnalisisDir, "J01.json"), JSON.stringify({ cerrada: true }));
+    fs.writeFileSync(path.join(rutaAnalisisDir, "J02.json"), JSON.stringify({ cerrada: true }));
+
+    try {
+      const { doc, errores } = await render("index.html");
+      check(errores.length === 0, `sin errores de JS ${errores[0] || ""}`);
+      const filas = [...doc.querySelectorAll("#cuerpo-resumen tr")].map((f) => f.textContent.replace(/\s+/g, " ").trim());
+      check(filas[0]?.includes("Clara") && filas[0]?.includes("▲ +2"),
+        `Clara sube 2 puestos (3ª → 1ª): "${filas[0]}"`);
+      check(filas[1]?.includes("Bruno") && filas[1]?.includes("—"),
+        `Bruno se mantiene igual (2º → 2º): "${filas[1]}"`);
+      check(filas[2]?.includes("Ana") && filas[2]?.includes("▼ -2"),
+        `Ana baja 2 puestos (1ª → 3ª): "${filas[2]}"`);
+    } finally {
+      if (backupClas) fs.writeFileSync(rutaClas, backupClas); else fs.unlinkSync(rutaClas);
+      fs.rmSync(rutaAnalisisDir, { recursive: true, force: true });
+      fs.renameSync(backupAnalisisDir, rutaAnalisisDir);
+    }
+  }
+
   console.log("\n═══ calendario.html ═══");
   {
     const { doc, dom, errores } = await render("calendario.html");
@@ -211,6 +264,32 @@ async function probarEscenarioReset() {
       "muestra la fecha de cada partido, no solo la hora");
     check(doc.querySelector(".enlace-analisis-jornada")?.getAttribute("href") === `analisis.html?jornada=${claveActual}`,
       "cada jornada lleva un atajo directo a su análisis");
+
+    const cabecera = doc.querySelector(".cabecera-jornada");
+    const orden = [...cabecera.children].map((c) => c.tagName);
+    check(orden.length === 3 && orden[1] === "BUTTON",
+      "el botón de clasificación de liga va justo en medio, entre la jornada y el contador de jugados");
+
+    const boton = doc.querySelector(".btn-tabla-liga");
+    const panel = doc.querySelector(".tabla-liga-panel");
+    check(boton !== null && panel.hidden, "el panel de la tabla de liga empieza oculto");
+    boton.dispatchEvent(new dom.window.Event("click"));
+    check(!panel.hidden, "el botón muestra la tabla de liga al pulsarlo");
+
+    const filasLiga = doc.querySelectorAll(".tabla-liga tbody tr");
+    check(filasLiga.length === 20, `la tabla de liga tiene los 20 equipos (vio ${filasLiga.length})`);
+
+    // Invariante cruzada: la suma de goles a favor de todos los equipos
+    // tiene que coincidir con la suma de goles en contra (todo gol marcado
+    // por uno lo encaja otro) — confirma que la tabla está bien calculada,
+    // no solo que tiene 20 filas.
+    const columnas = (fila) => [...fila.children].map((td) => td.textContent.trim());
+    const sumaColumna = (idx) => [...filasLiga].reduce((s, f) => s + parseInt(columnas(f)[idx]), 0);
+    check(sumaColumna(7) === sumaColumna(8),
+      `los goles a favor de todos (${sumaColumna(7)}) cuadran con los goles en contra de todos (${sumaColumna(8)})`);
+
+    boton.dispatchEvent(new dom.window.Event("click"));
+    check(panel.hidden, "un segundo clic vuelve a ocultar la tabla de liga");
 
     doc.querySelector("#btn-todas").dispatchEvent(new dom.window.Event("click"));
     await new Promise((r) => setTimeout(r, 80));
@@ -525,16 +604,15 @@ async function probarEscenarioReset() {
     const { doc, errores } = await render("reglamento.html");
     const s = leer("config/settings.json");
     check(errores.length === 0, `sin errores de JS ${errores[0] || ""}`);
-    check(cuenta(doc, "#contenido details") >= 10, "todas las secciones de normas");
+    check(cuenta(doc, "#contenido details") >= 9, "todas las secciones de normas");
     const todo = texto(doc, "#contenido");
     const exacto = s.puntuaciones.puntos_1x2 + s.puntuaciones.puntos_exacto;
     check(todo.includes(`${exacto} puntos`), `calcula que un exacto vale ${exacto} puntos`);
     check(todo.includes(`${Math.round(s.puntuaciones.porcentaje_minimo_participacion * 100)} %`),
       "muestra el umbral de participación desde settings.json");
-    check(todo.includes("Ejemplo"), "incluye el ejemplo numérico de una jornada");
     check(todo.includes("Preguntas frecuentes"), "incluye las preguntas frecuentes");
-    check(cuenta(doc, "#contenido .latest-grid .match-card") === 3,
-      "el ejemplo compara tres casos");
+    check(!/\bAna\b|\bBruno\b|\bClara\b|\bElena\b|Nico Herrera|\bMateo\b/.test(todo),
+      "no hay ejemplos con nombres de personas");
   }
 
   console.log("\n" + "─".repeat(62));

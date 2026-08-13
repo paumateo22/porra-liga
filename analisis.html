@@ -166,11 +166,13 @@ function pintarTabla() {
       <th class="col-jugador">Jugador</th>
       ${partidos.map((p) => {
         const r = DATOS.resultados[p.id] || {};
-        const marcador = r.estado === "finished" ? `${r.goles_local}-${r.goles_visitante}` : "vs";
+        const enDirecto = esPartidoEnDirecto(r);
+        const marcador = r.estado === "finished" ? `${r.goles_local}-${r.goles_visitante}`
+          : enDirecto ? `${r.goles_local ?? 0}-${r.goles_visitante ?? 0}` : "-";
         return `<th title="${p.local} ${marcador} ${p.visitante}">
           <div class="cabecera-partido">
             ${escudoHtml(p.id_escudo_local, p.local, 18)}
-            <span class="marcador-cabecera">${marcador}</span>
+            <span class="marcador-cabecera ${enDirecto ? "en-directo" : ""}">${marcador}${enDirecto ? ' <span class="balon-directo">⚽</span>' : ""}</span>
             ${escudoHtml(p.id_escudo_visitante, p.visitante, 18)}
           </div>
         </th>`;

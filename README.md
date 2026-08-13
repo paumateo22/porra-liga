@@ -178,8 +178,8 @@ la carpeta.
 
 | Página | Qué muestra |
 |---|---|
-| **🏆 Clasificación** (`index.html`) | Tabla general y rejilla de puntos por jornada |
-| **📅 Calendario** (`calendario.html`) | Partidos y resultados, jornada a jornada o todas seguidas |
+| **🏆 Clasificación** (`index.html`) | Tabla general y rejilla de puntos por jornada, con flecha de movimiento (▲/▼/—) respecto a la jornada de referencia |
+| **📅 Calendario** (`calendario.html`) | Partidos y resultados, jornada a jornada o todas seguidas — con botón para ver la clasificación real de LaLiga hasta esa jornada (PJ/PG/PE/PP/DG/GF/GC/Pts) |
 | **✍️ Pronosticar** (`pronosticar.html`) | Formulario que genera el JSON descargable |
 | **🔍 Análisis** (`analisis.html`) | Quién acertó qué: tabla cruzada jugadores × partidos, y el detalle de cada partido |
 | **📈 Carrera** (`carrera.html`) | Gráfico de evolución + marcador tipo "carrera de barras", con reproducción fluida (interpolada, no a saltos) y velocidad ajustable. Eje Y con margen ajustado por defecto (opción para anclarlo a 0) y vista opcional centrada en un jugador, mostrando a los demás como diferencia respecto a él |
@@ -467,6 +467,65 @@ No hay que tocar nada más — al estar centralizado en `layout.js`, se activa
 en las 9 páginas a la vez. Con la constante vacía (como viene por defecto) no
 se carga nada, para no ensuciar tus propias estadísticas mientras pruebas en
 local.
+
+### Flechas de movimiento en la clasificación
+
+Junto al nombre de cada jugador en `index.html` sale una flecha comparando su
+puesto actual con el que tenía tras una jornada de referencia: ▲ verde con
+el número de puestos que ha subido, ▼ roja con los que ha bajado, o un guion
+si sigue igual. Quien acaba de incorporarse (sin clasificación anterior con
+la que compararlo) también sale con un guion.
+
+La jornada de referencia se elige sola: si la última jornada con datos ya
+está cerrada del todo, se compara con la anterior a ella (para mostrar el
+movimiento de esa última jornada completa); si sigue en curso (algún
+partido pendiente), se busca hacia atrás la última que sí cerró. Todo el
+cálculo se hace en el navegador a partir de lo que ya trae
+`data/clasificacion.json` — no hace falta tocar el motor ni regenerar nada
+aparte.
+
+### Clasificación real de LaLiga (no confundir con la de la porra)
+
+En `calendario.html`, el botón "📊 Clasificación de la liga" (en el centro de
+la cabecera de cada jornada) muestra la tabla de liga REAL — no la de quién
+va ganando la porra, sino la del propio campeonato: PJ, PG, PE, PP, DG, GF,
+GC y Pts, calculada sumando todos los resultados ya terminados desde la
+primera jornada hasta la que estés viendo. Un partido en directo no cuenta
+todavía, igual que en cualquier tabla de liga de verdad — solo suma cuando
+termina.
+
+Se calcula entero en el navegador a partir de `config/calendario.json` y
+`data/resultados/realidad_oficial.json`, sin tocar el motor. En "Ver todas
+las jornadas" cada una tiene su propio botón, así que puedes ver cómo
+evolucionó la tabla real jornada a jornada.
+
+### Widgets de la cabecera (próximo partido, en directo...)
+
+En todas las páginas, debajo del título, salen cuatro tarjetas: próximo
+partido con cuenta atrás en vivo (segundos incluidos), próxima jornada que
+aún no ha empezado, último resultado terminado, y el partido en directo si
+lo hay (si no, el próximo). Se generan solas, sin tocar cada página — están
+colgadas de `montarCabecera()` en `layout.js`.
+
+Para que el marcador "en directo" se actualice de verdad mientras se juega,
+hace falta que `05_extractor_sofascore.py` se ejecute con frecuencia durante
+los partidos — normalmente vía el workflow `cron_sofascore.yml` (si lo
+desactivaste, reactívalo quitándole el `.disabled` del nombre).
+
+### Entrar a mitad de temporada (punto de partida)
+
+Si alguien manda su primer pronóstico en una jornada que no es la primera de
+la temporada, el motor le asigna automáticamente un **punto de partida**: los
+mismos puntos totales que llevara en ese momento quien fuera último en la
+clasificación (0 si es el primero en pronosticar de todos). Así no arranca
+con una clasificación general imposible de remontar.
+
+Es solo un punto de salida, no un premio: **no cuenta** como acierto 1X2,
+acierto exacto, jornada ganada ni jornada perdida — esas estadísticas
+arrancan de cero con su primer pronóstico real, igual que con cualquiera. Se
+calcula solo, sin que tengas que hacer nada — y se indica en su perfil
+(`punto_partida` en `data/clasificacion.json`) para que quede claro de dónde
+sale ese número si alguien pregunta.
 
 ### Corregir un resultado a mano
 

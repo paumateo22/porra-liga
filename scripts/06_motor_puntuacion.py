@@ -228,6 +228,13 @@ def main():
     ANALISIS_DIR.mkdir(parents=True, exist_ok=True)
 
     reporte = {}
+    # La primera jornada del calendario (normalmente "J01"): quien no
+    # pronostique hasta después de esta jornada se considera incorporado a
+    # mitad de temporada y recibe un punto de partida — ver más abajo.
+    todas_las_claves = sorted(calendario.keys(), key=lambda k: int(k[1:])) if calendario else []
+    primera_jornada_temporada = todas_las_claves[0] if todas_las_claves else None
+    ya_ha_jugado = set()
+
     acumulado = {
         s: {
             "puntos_totales": 0,
@@ -240,6 +247,7 @@ def main():
             "jornadas_jugadas": 0,
             "jornadas_ganadas": 0,
             "jornadas_perdidas": 0,
+            "punto_partida": 0,
             "por_jornada": {},
         }
         for s in nombres
@@ -307,6 +315,33 @@ def main():
                                    key=lambda kv: -kv[1]["puntos_totales"])
             ],
         })
+        # Primera pasada: a quien debuta esta jornada se le fija su punto de
+        # partida ANTES de sumarle nada de esta jornada a nadie. Si no se
+        # hiciera en una pasada separada, un veterano procesado antes (el
+        # orden depende del slug) podría sumar sus puntos de esta misma
+        # jornada antes de que se calcule el punto de partida del que
+        # debuta, y "el último" de referencia saldría contaminado con
+        # puntos de una jornada que todavía no le tocaba contar.
+        for s in resultado["filas"]:
+            if s in ya_ha_jugado:
+                continue
+            ya_ha_jugado.add(s)
+            if primera_jornada_temporada and clave != primera_jornada_temporada:
+                # Se ha incorporado a mitad de temporada: arranca con los
+                # mismos puntos totales que llevaba el último clasificado
+                # justo ANTES de esta jornada (0 si todavía no hay nadie
+                # más con quien compararse). Es solo un punto de partida,
+                # no un premio: no se registra como acierto, jornada
+                # ganada ni perdida — esas estadísticas empiezan de cero
+                # con su primer pronóstico real, igual que a cualquiera.
+                otros_totales = [
+                    acumulado[otro]["puntos_totales"]
+                    for otro in ya_ha_jugado if otro != s
+                ]
+                acumulado[s]["punto_partida"] = min(otros_totales) if otros_totales else 0
+                acumulado[s]["puntos_totales"] += acumulado[s]["punto_partida"]
+
+        # Segunda pasada: ahora sí, los puntos de esta jornada para todos.
         for s, f in resultado["filas"].items():
             a = acumulado[s]
             a["puntos_totales"] += f["puntos_totales"]
@@ -361,6 +396,7 @@ def main():
             "jornadas_jugadas": a["jornadas_jugadas"],
             "jornadas_ganadas": a["jornadas_ganadas"],
             "jornadas_perdidas": a["jornadas_perdidas"],
+            "punto_partida": a["punto_partida"],
             "por_jornada": {
                 k: {kk: vv for kk, vv in v.items() if kk != "detalle"}
                 for k, v in a["por_jornada"].items()

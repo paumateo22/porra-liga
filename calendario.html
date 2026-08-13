@@ -7,6 +7,15 @@
 <link rel="stylesheet" href="theme.css">
 <style>
   .fila-acciones-calendario { text-align: center; margin: 4px 0 18px; }
+  .cabecera-jornada { flex-wrap: wrap; gap: 8px; }
+  .btn-tabla-liga {
+    background: #252525; color: #60a5fa; border: 1px solid #60a5fa; border-radius: 6px;
+    padding: 5px 14px; font-size: 0.85em; cursor: pointer; transition: 0.2s;
+  }
+  .btn-tabla-liga:hover { background: #60a5fa; color: #000; }
+  .tabla-liga-panel { margin-bottom: 18px; }
+  .tabla-liga th, .tabla-liga td { text-align: center; padding: 6px 8px; font-size: 0.85em; }
+  .tabla-liga td:nth-child(2) { display: flex; align-items: center; gap: 6px; }
 </style>
 </head>
 <body>
@@ -52,6 +61,70 @@ async function iniciar() {
   pintarUna();
 }
 
+/* La clasificación REAL de LaLiga (no la de la porra): suma resultados de
+   verdad, partido a partido, de todas las jornadas hasta la que se pida
+   inclusive. Solo cuentan los partidos ya TERMINADOS — uno en directo no
+   suma hasta que acaba de verdad, igual que en cualquier tabla de liga. */
+function calcularTablaLiga(hastaClave) {
+  const equipos = {};
+  const equipo = (nombre, escudoId) => {
+    if (!equipos[nombre]) equipos[nombre] = { nombre, escudoId, PJ: 0, PG: 0, PE: 0, PP: 0, GF: 0, GC: 0 };
+    return equipos[nombre];
+  };
+
+  const idxHasta = CLAVES.indexOf(hastaClave);
+  for (const clave of CLAVES.slice(0, idxHasta + 1)) {
+    const reales = Object.fromEntries((REALIDAD[clave] || []).map((r) => [r.id, r]));
+    for (const p of CALENDARIO[clave] || []) {
+      const r = reales[p.id];
+      if (!r || r.estado !== "finished") continue;
+
+      const local = equipo(p.local, p.id_escudo_local);
+      const visitante = equipo(p.visitante, p.id_escudo_visitante);
+      local.PJ++; visitante.PJ++;
+      local.GF += r.goles_local; local.GC += r.goles_visitante;
+      visitante.GF += r.goles_visitante; visitante.GC += r.goles_local;
+
+      if (r.goles_local > r.goles_visitante) { local.PG++; visitante.PP++; }
+      else if (r.goles_local < r.goles_visitante) { visitante.PG++; local.PP++; }
+      else { local.PE++; visitante.PE++; }
+    }
+  }
+
+  return Object.values(equipos)
+    .map((e) => ({ ...e, DG: e.GF - e.GC, Pts: e.PG * 3 + e.PE }))
+    .sort((a, b) => b.Pts - a.Pts || b.DG - a.DG || b.GF - a.GF || a.nombre.localeCompare(b.nombre));
+}
+
+function alternarTablaLiga(clave) {
+  const panel = document.getElementById(`tabla-liga-${clave}`);
+  if (!panel.hidden) { panel.hidden = true; return; }
+
+  const tabla = calcularTablaLiga(clave);
+  panel.innerHTML = !tabla.length
+    ? `<div class="vacio">Todavía no se ha jugado ningún partido hasta esta jornada.</div>`
+    : `
+    <div class="table-wrapper">
+      <table class="tabla-liga">
+        <thead><tr>
+          <th>#</th><th style="text-align:left">Equipo</th>
+          <th>PJ</th><th>PG</th><th>PE</th><th>PP</th><th>DG</th><th>GF</th><th>GC</th><th>Pts</th>
+        </tr></thead>
+        <tbody>
+          ${tabla.map((e, i) => `
+            <tr>
+              <td>${i + 1}</td>
+              <td style="text-align:left">${escudoHtml(e.escudoId, e.nombre, 20)}${e.nombre}</td>
+              <td>${e.PJ}</td><td>${e.PG}</td><td>${e.PE}</td><td>${e.PP}</td>
+              <td>${e.DG >= 0 ? "+" : ""}${e.DG}</td><td>${e.GF}</td><td>${e.GC}</td>
+              <td class="col-total">${e.Pts}</td>
+            </tr>`).join("")}
+        </tbody>
+      </table>
+    </div>`;
+  panel.hidden = false;
+}
+
 function bloqueJornada(clave) {
   const partidos = CALENDARIO[clave];
   const reales = Object.fromEntries((REALIDAD[clave] || []).map((p) => [p.id, p]));
@@ -63,18 +136,19 @@ function bloqueJornada(clave) {
         Jornada ${parseInt(clave.slice(1))}
         <a href="analisis.html?jornada=${clave}" class="enlace-analisis-jornada" title="Ver el análisis de esta jornada">🔍</a>
       </h3>
+      <button type="button" class="btn-tabla-liga" onclick="alternarTablaLiga('${clave}')">📊 Clasificación de la liga</button>
       <span class="nota">${jugados}/${partidos.length} jugados</span>
     </div>
+    <div id="tabla-liga-${clave}" class="tabla-liga-panel" hidden></div>
     <div class="lista-partidos">
       ${partidos.map((p) => {
         const r = reales[p.id] || {};
         const terminado = r.estado === "finished";
-        const marcador = terminado ? `${r.goles_local}-${r.goles_visitante}` : "vs";
         return `
-          <div class="partido ${terminado ? "jugado" : ""}">
+          <div class="partido ${terminado ? "jugado" : ""} ${esPartidoEnDirecto(r) ? "en-directo" : ""}">
             <span class="fecha-partido">${formatearFechaHora(p.fecha)}</span>
             <span class="equipo local">${p.local}${escudoHtml(p.id_escudo_local, p.local)}</span>
-            <span class="marcador">${marcador}</span>
+            ${marcadorPartido(r)}
             <span class="equipo visitante">${escudoHtml(p.id_escudo_visitante, p.visitante)}${p.visitante}</span>
           </div>`;
       }).join("")}

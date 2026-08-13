@@ -242,6 +242,37 @@ def main():
           "la J10 mantiene los 2 puntos del adelantado")
     check(pau["puntos_totales"] == 28, "total = 26 (J02) + 2 (J10)")
 
+    print("\n═══ F: alguien se incorpora a mitad de temporada (punto de partida) ═══")
+    # "elena" no existía hasta ahora: manda su primera jornada en la J10, la
+    # segunda y última jornada del calendario de prueba (nunca jugó la J02).
+    # Alfabéticamente "elena" va DESPUÉS de "aitor" — si hubiera contaminación
+    # de orden (que veteranos ya hubieran sumado sus puntos de la J10 antes de
+    # calcular el punto de partida de elena), su valor saldría mal.
+    j10 = cargar_json(CALENDARIO_FILE)["J10"]
+    escribir_entrada("Elena", 10, [pred(p, 3, 0, "J10") for p in j10[:5]])
+    correr("03_ingesta_pronosticos.py")
+    correr("06_motor_puntuacion.py")
+
+    clas2 = cargar_json(CLASIFICACION_FILE)
+    elena = next(c for c in clas2["clasificacion"] if c["slug"] == "elena")
+    pau2 = next(c for c in clas2["clasificacion"] if c["slug"] == "pau")
+    # El último tras la J02 (antes de que nadie sume nada de la J10) — se
+    # recalcula aquí mismo a partir de lo que ya sabíamos de cada uno.
+    aitor2 = next(c for c in clas2["clasificacion"] if c["slug"] == "aitor")
+    javi2 = next(c for c in clas2["clasificacion"] if c["slug"] == "javi")
+    ultimo_tras_j02 = min(
+        aitor2["por_jornada"].get("J02", {}).get("puntos", 0),
+        javi2["por_jornada"].get("J02", {}).get("puntos", 0),
+    )
+    check(elena["punto_partida"] == ultimo_tras_j02,
+        f"el punto de partida de Elena ({elena['punto_partida']}) es el del último tras la J02 ({ultimo_tras_j02})")
+    check(elena["aciertos_1x2"] == elena["por_jornada"]["J10"]["aciertos_1x2"],
+        "los aciertos de Elena arrancan de cero, sin heredar nada del punto de partida")
+    check(elena["jornadas_ganadas"] == 0 and elena["jornadas_perdidas"] == 0,
+        "el punto de partida no cuenta como jornada ganada ni perdida")
+    check(pau2["puntos_totales"] == 28,
+        "el punto de partida de un jugador nuevo no altera los totales de los demás")
+
     print("\n" + "─" * 62)
     if fallos:
         print(f"❌ {len(fallos)} comprobación(es) fallida(s):")

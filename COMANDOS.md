@@ -50,6 +50,7 @@ llama a uno de los comandos de abajo.
 | 8 | Comprueba que el motor calcula bien los casos difíciles | `test_casos_limite.py` |
 | 9 | Prepara datos de mentira para desarrollar sin red | `99_simulador.py` |
 | p | Laboratorio de escenarios de prueba (solo local) | `laboratorio.py` |
+| e | Elimina a un participante por completo | `eliminar_participante.py` |
 | r | Resetea todo + descarga el calendario (inicio de temporada) | `reset.py` |
 
 ---

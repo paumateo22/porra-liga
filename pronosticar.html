@@ -189,16 +189,19 @@ async function precargarGuardados() {
 /* Etiqueta cada partido cerrado según si tenías o no pronóstico guardado —
    o si ni siquiera se puede saber, por no haber verificado la clave. */
 function marcarBloqueados() {
+  const reales = Object.fromEntries((REALIDAD[CLAVES[indice]] || []).map((p) => [p.id, p]));
   for (const l of document.querySelectorAll('input[data-lado="l"][disabled]')) {
     const fila = l.closest(".partido");
     fila.querySelector(".etiqueta-bloqueo")?.remove();
     const id = parseInt(l.dataset.id);
+    const enDirecto = esPartidoEnDirecto(reales[id]);
     let texto;
-    if (!IDENTIDAD_VERIFICADA) texto = "🔒 ya jugado";
+    if (enDirecto) texto = "⚽ en directo ahora mismo";
+    else if (!IDENTIDAD_VERIFICADA) texto = "🔒 ya jugado";
     else if (PREVIOS[id]) texto = "🔒 ya jugado · se conserva tu pronóstico";
     else texto = "🔒 ya jugado · sin pronóstico";
     fila.insertAdjacentHTML("beforeend",
-      `<span class="etiqueta-bloqueo nota" style="grid-column:1/-1;text-align:center">${texto}</span>`);
+      `<span class="etiqueta-bloqueo nota ${enDirecto ? "en-directo" : ""}" style="grid-column:1/-1;text-align:center">${texto}</span>`);
   }
 }
 

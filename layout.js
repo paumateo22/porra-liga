@@ -12,7 +12,7 @@
 
    Con el ID vacío (como está por defecto) no se carga nada — así en local,
    mientras desarrollas, no ensucias tus propias estadísticas de visitas. */
-const GA_MEASUREMENT_ID = "G-3ZY6KGP9RZ";
+const GA_MEASUREMENT_ID = "";
 
 function montarAnalytics() {
   if (!GA_MEASUREMENT_ID) return;
@@ -60,7 +60,10 @@ function montarCabecera({ titulo, subtitulo, pagina }) {
       ${subtitulo ? `<p class="subtitulo">${subtitulo}</p>` : ""}
       <nav class="top-nav">${enlaces}</nav>
     </header>
+    <div id="widgets-cabecera" class="widgets-cabecera"></div>
   `);
+
+  montarWidgetsCabecera();
 }
 
 function abrirMenu() {
@@ -122,6 +125,32 @@ function formatearFechaHora(iso) {
   const fecha = d.toLocaleDateString("es-ES", { day: "numeric", month: "short" });
   const hora = d.toLocaleTimeString("es-ES", { hour: "2-digit", minute: "2-digit" });
   return `${fecha} - ${hora}`;
+}
+
+/* Marcador de un partido según su estado real — un solo criterio para toda
+   la web, en vez de cada página decidiendo por su cuenta:
+   - sin empezar ("notstarted" o sin dato): un guion.
+   - en directo ("inprogress", o cualquier otra cosa que no sea "notstarted"
+     ni "finished" — SofaScore usa varios matices de "en juego"): el marcador
+     actual con un balón animado al lado.
+   - terminado ("finished"): el resultado final, tal cual.
+   Devuelve HTML listo para insertar. */
+function marcadorPartido(real) {
+  const estado = real?.estado;
+  if (estado === "finished") {
+    return `<span class="marcador">${real.goles_local}-${real.goles_visitante}</span>`;
+  }
+  if (estado && estado !== "notstarted") {
+    const gl = real.goles_local ?? 0, gv = real.goles_visitante ?? 0;
+    return `<span class="marcador en-directo">${gl}-${gv} <span class="balon-directo" title="En directo">⚽</span></span>`;
+  }
+  return `<span class="marcador">-</span>`;
+}
+
+/* true si el partido está siendo jugado ahora mismo. */
+function esPartidoEnDirecto(real) {
+  const estado = real?.estado;
+  return !!estado && estado !== "notstarted" && estado !== "finished";
 }
 
 /* Como this.scrollIntoView no existe en todos los entornos (algunos navegadores
@@ -342,4 +371,128 @@ function marcarEscudoRoto(img) {
   span.style.height = tam + "px";
   span.style.fontSize = Math.round(tam * 0.36) + "px";
   img.replaceWith(span);
+}
+
+/* ───────────────────── Widgets de la cabecera ─────────────────────
+   Próximo partido, próxima jornada, último resultado y partido en directo,
+   visibles en todas las páginas (colgados de montarCabecera). Se cargan sus
+   propios datos, independientemente de lo que cada página necesite para lo
+   suyo — así no hay que tocar cada página una por una. */
+
+let _intervaloCuentasAtras = null;
+
+async function montarWidgetsCabecera() {
+  const cont = document.getElementById("widgets-cabecera");
+  if (!cont) return;
+
+  const calendario = await cargar("config/calendario.json", {});
+  const realidad = await cargar("data/resultados/realidad_oficial.json", {});
+  const claves = ordenJornadas(Object.keys(calendario));
+  if (!claves.length) return; // sin calendario todavía (temporada recién reseteada)
+
+  // Todos los partidos de la temporada en una sola lista plana, con su
+  // resultado real fusionado (si lo hay) y la jornada a la que pertenecen.
+  const todos = [];
+  for (const clave of claves) {
+    const reales = Object.fromEntries((realidad[clave] || []).map((r) => [r.id, r]));
+    for (const p of calendario[clave] || []) {
+      todos.push({ ...p, ...(reales[p.id] || {}), jornada: clave });
+    }
+  }
+
+  const porFecha = (a, b) => new Date(a.fecha) - new Date(b.fecha);
+  const sinEmpezar = todos.filter((p) => (p.estado || "notstarted") === "notstarted").sort(porFecha);
+  const proximo = sinEmpezar[0] || null;
+  const enDirecto = todos.find((p) => esPartidoEnDirecto(p)) || null;
+  const ultimoTerminado = todos
+    .filter((p) => p.estado === "finished")
+    .sort((a, b) => new Date(b.fecha) - new Date(a.fecha))[0] || null;
+
+  // La próxima jornada que ni siquiera ha empezado: la primera, después de
+  // la actual, en la que ningún partido tenga ya resultado ni esté en juego.
+  const claveActual = jornadaActual(realidad, claves);
+  const idxActual = claves.indexOf(claveActual);
+  const claveProximaJornada = claves.slice(idxActual + 1).find((c) =>
+    (realidad[c] || []).every((r) => (r.estado || "notstarted") === "notstarted")
+  ) || null;
+  const primerPartidoProximaJornada = claveProximaJornada
+    ? (calendario[claveProximaJornada] || []).slice().sort(porFecha)[0]
+    : null;
+
+  cont.innerHTML = `
+    <div class="columna-widgets">
+      ${_widgetPartido("Próximo partido", proximo, true)}
+      ${_widgetJornada("Próxima jornada", claveProximaJornada, primerPartidoProximaJornada)}
+    </div>
+    <div class="columna-widgets">
+      ${_widgetPartido("Último resultado", ultimoTerminado, false)}
+      ${enDirecto
+        ? _widgetPartido("🔴 En directo", enDirecto, false)
+        : _widgetPartido("Próximo partido", proximo, true)}
+    </div>`;
+
+  _iniciarCuentasAtras();
+}
+
+function _widgetPartido(titulo, p, conCuentaAtras) {
+  if (!p) {
+    return `<div class="widget-cabecera"><div class="widget-titulo">${titulo}</div>
+      <div class="nota">No hay ningún partido que mostrar.</div></div>`;
+  }
+  const jornadaNum = parseInt(p.jornada.slice(1));
+  const pendiente = (p.estado || "notstarted") === "notstarted";
+  return `
+    <div class="widget-cabecera">
+      <div class="widget-titulo">${titulo}</div>
+      <div class="widget-fecha">Jornada ${jornadaNum} · ${formatearFechaHora(p.fecha)}</div>
+      <div class="widget-partido">
+        <span class="equipo-widget">${escudoHtml(p.id_escudo_local, p.local, 26)}<span>${p.local}</span></span>
+        ${marcadorPartido(p)}
+        <span class="equipo-widget"><span>${p.visitante}</span>${escudoHtml(p.id_escudo_visitante, p.visitante, 26)}</span>
+      </div>
+      ${conCuentaAtras && pendiente ? `<div class="cuenta-atras" data-fecha="${p.fecha}">calculando…</div>` : ""}
+    </div>`;
+}
+
+function _widgetJornada(titulo, clave, primerPartido) {
+  if (!clave || !primerPartido) {
+    return `<div class="widget-cabecera"><div class="widget-titulo">${titulo}</div>
+      <div class="nota">No hay ninguna jornada pendiente.</div></div>`;
+  }
+  return `
+    <div class="widget-cabecera">
+      <div class="widget-titulo">${titulo}</div>
+      <div class="widget-fecha">Jornada ${parseInt(clave.slice(1))} · comienza ${formatearFechaHora(primerPartido.fecha)}</div>
+      <div class="cuenta-atras" data-fecha="${primerPartido.fecha}">calculando…</div>
+    </div>`;
+}
+
+/* Cuenta atrás en vivo, actualizada cada segundo, para cualquier elemento
+   con la clase "cuenta-atras" y un atributo data-fecha con la hora destino
+   en ISO. Se reinicia cada vez que se repintan los widgets, para no
+   acumular temporizadores duplicados de una vuelta a otra. */
+function _iniciarCuentasAtras() {
+  if (_intervaloCuentasAtras) clearInterval(_intervaloCuentasAtras);
+
+  const actualizar = () => {
+    const ahora = Date.now();
+    document.querySelectorAll(".cuenta-atras[data-fecha]").forEach((el) => {
+      const restante = new Date(el.dataset.fecha).getTime() - ahora;
+      if (restante <= 0) { el.textContent = "🔴 ¡Ya está en juego!"; return; }
+
+      const s = Math.floor(restante / 1000);
+      const dias = Math.floor(s / 86400);
+      const horas = Math.floor((s % 86400) / 3600);
+      const minutos = Math.floor((s % 3600) / 60);
+      const segundos = s % 60;
+      const dos = (n) => String(n).padStart(2, "0");
+
+      el.textContent = dias > 0
+        ? `⏳ ${dias}d ${dos(horas)}h ${dos(minutos)}m ${dos(segundos)}s`
+        : `⏳ ${dos(horas)}:${dos(minutos)}:${dos(segundos)}`;
+    });
+  };
+
+  actualizar();
+  _intervaloCuentasAtras = setInterval(actualizar, 1000);
 }

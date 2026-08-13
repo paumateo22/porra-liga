@@ -20,6 +20,11 @@
 
   .nombre-fila { text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
+  .movimiento { font-size: 0.75em; font-weight: 700; margin-left: 4px; white-space: nowrap; }
+  .movimiento.sube { color: #4ade80; }
+  .movimiento.baja { color: #ff6b6b; }
+  .movimiento.nulo { color: #666; }
+
   table.tabla-ancha { table-layout: fixed; width: 100%; }
   table.tabla-ancha th.nombre-fila, table.tabla-ancha td.nombre-fila { width: 60px; }
   table.tabla-ancha th.col-total, table.tabla-ancha td.col-total { width: 42px; }
@@ -100,18 +105,103 @@ async function iniciar() {
     return;
   }
 
-  pintarResumen(datos);
+  const movimientos = await calcularMovimientos(datos);
+  pintarResumen(datos, movimientos);
   pintarJornadas(datos);
   pintarHeatmap(datos);
 }
 
-function pintarResumen(datos) {
+/* Con qué jornada se compara la clasificación actual para saber quién sube
+   o baja: la última jornada CERRADA del todo que no sea la más reciente con
+   datos (si la más reciente ya está cerrada, se usa la anterior a ella; si
+   sigue en curso, se busca hacia atrás la última que sí cerró). */
+async function claveDeComparacion(claves) {
+  if (claves.length < 2) return null;
+  const ultima = claves[claves.length - 1];
+  const analisisUltima = await cargar(`data/analisis/${ultima}.json`, null);
+
+  if (analisisUltima?.cerrada) return claves[claves.length - 2];
+
+  for (let i = claves.length - 2; i >= 0; i--) {
+    const a = await cargar(`data/analisis/${claves[i]}.json`, null);
+    if (a?.cerrada) return claves[i];
+  }
+  return null;
+}
+
+/* Reconstruye, a partir del desglose jornada a jornada que ya trae
+   data/clasificacion.json, cómo habría quedado la clasificación contando
+   solo hasta una jornada concreta — con los mismos criterios de desempate
+   que usa el motor de verdad. Quien todavía no había mandado su primer
+   pronóstico en esa jornada no entra en el cálculo (no tenía posición). */
+function posicionesHasta(datos, claveLimite, claves) {
+  const indiceLimite = claves.indexOf(claveLimite);
+  if (indiceLimite < 0) return {};
+
+  const clavesHasta = claves.slice(0, indiceLimite + 1);
+  const criterios = datos.desempates || ["jornadas_ganadas", "aciertos_exactos", "aciertos_1x2"];
+
+  const filas = datos.clasificacion.map((c) => {
+    const jornadasPropias = Object.keys(c.por_jornada);
+    if (!jornadasPropias.length) return null;
+    const primera = ordenJornadas(jornadasPropias.slice())[0];
+    if (claves.indexOf(primera) > indiceLimite) return null; // aún no había entrado
+
+    const a = { puntos_totales: c.punto_partida || 0, jornadas_ganadas: 0, aciertos_exactos: 0, aciertos_1x2: 0 };
+    for (const k of clavesHasta) {
+      const j = c.por_jornada[k];
+      if (!j) continue;
+      a.puntos_totales += j.puntos;
+      a.jornadas_ganadas += j.ganador ? 1 : 0;
+      a.aciertos_exactos += j.aciertos_exactos;
+      a.aciertos_1x2 += j.aciertos_1x2;
+    }
+    return { slug: c.slug, ...a };
+  }).filter(Boolean);
+
+  filas.sort((x, y) => {
+    if (y.puntos_totales !== x.puntos_totales) return y.puntos_totales - x.puntos_totales;
+    for (const crit of criterios) {
+      if (y[crit] !== x[crit]) return y[crit] - x[crit];
+    }
+    return 0;
+  });
+
+  return Object.fromEntries(filas.map((f, i) => [f.slug, i + 1]));
+}
+
+/* {slug: diferencia de puestos} — positivo si ha subido, negativo si ha
+   bajado, 0 si sigue igual. Sin entrada = no había clasificación anterior
+   con la que compararlo (recién llegado, o no hay jornada de referencia). */
+async function calcularMovimientos(datos) {
+  const claves = ordenJornadas(datos.jornadas_calculadas.slice());
+  const claveBase = await claveDeComparacion(claves);
+  if (!claveBase) return {};
+
+  const posAnteriores = posicionesHasta(datos, claveBase, claves);
+  const movimientos = {};
+  for (const c of datos.clasificacion) {
+    const anterior = posAnteriores[c.slug];
+    if (anterior === undefined) continue;
+    movimientos[c.slug] = anterior - c.puesto; // positivo = ha subido puestos
+  }
+  return movimientos;
+}
+
+function badgeMovimiento(diferencia) {
+  if (diferencia === undefined) return `<span class="movimiento nulo" title="Recién llegado, sin clasificación anterior">—</span>`;
+  if (diferencia > 0) return `<span class="movimiento sube" title="Ha subido ${diferencia} puesto(s)">▲ +${diferencia}</span>`;
+  if (diferencia < 0) return `<span class="movimiento baja" title="Ha bajado ${-diferencia} puesto(s)">▼ ${diferencia}</span>`;
+  return `<span class="movimiento nulo" title="Sigue en el mismo puesto">—</span>`;
+}
+
+function pintarResumen(datos, movimientos) {
   const tabla = datos.clasificacion;
 
   document.getElementById("cuerpo-resumen").innerHTML = tabla.map((c) => `
     <tr class="${c.puesto === 1 ? "podio-1" : ""}">
       <td>${c.puesto}</td>
-      <td style="text-align:left">${enlaceNombre(c)}</td>
+      <td style="text-align:left">${enlaceNombre(c)} ${badgeMovimiento(movimientos[c.slug])}</td>
       <td class="col-aciertos">${c.aciertos_exactos} / ${c.aciertos_1x2}</td>
       <td class="col-aciertos">${c.bonus_rendimiento || 0}</td>
       <td class="col-jg">${c.jornadas_ganadas}</td>

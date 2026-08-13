@@ -110,7 +110,10 @@ function pintar(slug) {
     ? Math.round((c.aciertos_1x2 / c.partidos_pronosticados) * 100) : 0;
 
   document.getElementById("tarjetas").innerHTML = [
-    ["Posición", `${c.puesto}º`, `${c.puntos_totales} puntos`],
+    ["Posición", `${c.puesto}º`,
+      c.punto_partida
+        ? `${c.puntos_totales} puntos (${c.punto_partida >= 0 ? "+" : ""}${c.punto_partida} de partida al incorporarse)`
+        : `${c.puntos_totales} puntos`],
     ["Media por jornada", media, `${c.jornadas_jugadas} jornadas jugadas`],
     ["Acierto 1X2", `${pct} %`, `${c.aciertos_1x2} de ${c.partidos_pronosticados}`],
     ["Exactos", c.aciertos_exactos, `${c.bonus_rendimiento} pts de bonus`],

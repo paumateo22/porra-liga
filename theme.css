@@ -170,6 +170,12 @@ tr:hover { background-color: #2a2a2a; }
 .partido .equipo.visitante { justify-content: flex-start; text-align: left; }
 .partido .marcador { font-weight: 900; color: #fff; min-width: 64px; text-align: center; letter-spacing: 2px; }
 .partido .hora { font-size: 0.85em; color: #9ca3af; min-width: 64px; text-align: center; }
+.marcador.en-directo, .marcador-cabecera.en-directo { color: #4ade80; }
+.balon-directo { display: inline-block; animation: rebote-balon 0.9s ease-in-out infinite; font-size: 0.85em; }
+@keyframes rebote-balon {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
 .partido.jugado { border-color: #3f5a3f; }
 .cabecera-jornada { display: flex; justify-content: space-between; align-items: baseline; margin: 26px 0 10px; }
 .cabecera-jornada h3 { color: var(--gold); margin: 0; font-size: 1.3em; }
@@ -217,3 +223,37 @@ tr:hover { background-color: #2a2a2a; }
   border-radius: 6px; font-size: 0.8em; z-index: 2000; box-shadow: 0 4px 10px rgba(0,0,0,0.5);
   max-width: 220px; pointer-events: none;
 }
+
+/* ───────────────────── Widgets de la cabecera ───────────────────── */
+.widgets-cabecera {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+  max-width: 1000px; margin: 18px auto 0; padding: 0 20px;
+}
+@media (max-width: 700px) { .widgets-cabecera { grid-template-columns: 1fr; } }
+
+.columna-widgets { display: flex; flex-direction: column; gap: 12px; }
+
+.widget-cabecera {
+  background: #1c1c1c; border: 1px solid #3a3a3a; border-radius: 10px;
+  padding: 12px 16px; text-align: center;
+}
+.widget-titulo {
+  color: var(--gold); font-weight: 700; font-size: 0.8em;
+  text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px;
+}
+.widget-fecha { color: #9ca3af; font-size: 0.78em; margin-bottom: 8px; }
+.widget-partido {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+}
+.widget-partido .equipo-widget {
+  display: flex; align-items: center; gap: 6px; font-weight: 600; font-size: 0.9em;
+  flex: 1; min-width: 0;
+}
+.widget-partido .equipo-widget:first-child { justify-content: flex-end; text-align: right; }
+.widget-partido .equipo-widget:last-child { justify-content: flex-start; text-align: left; }
+.widget-partido .marcador { min-width: 46px; font-size: 1.1em; }
+.widget-cabecera .cuenta-atras {
+  margin-top: 8px; font-weight: 700; color: var(--gold); font-size: 0.95em;
+  font-variant-numeric: tabular-nums;
+}
+.widget-cabecera .nota { color: #7d7d7d; font-size: 0.85em; }

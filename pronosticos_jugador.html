@@ -40,7 +40,7 @@ montarCabecera({
   pagina: "participantes",
 });
 
-let CALENDARIO = {}, CLAS = null, CLAVES = [], indice = 0, barra = null, JUGADOR = null, SLUG = null;
+let CALENDARIO = {}, REALIDAD = {}, CLAS = null, CLAVES = [], indice = 0, barra = null, JUGADOR = null, SLUG = null;
 
 async function iniciar() {
   const parametros = new URLSearchParams(location.search);
@@ -49,6 +49,7 @@ async function iniciar() {
 
   CLAS = await cargar("data/clasificacion.json", null);
   CALENDARIO = await cargar("config/calendario.json", {});
+  REALIDAD = await cargar("data/resultados/realidad_oficial.json", {});
   CLAVES = ordenJornadas(Object.keys(CALENDARIO));
 
   if (!slug || !CLAS) {
@@ -89,15 +90,21 @@ async function datosDeJornada(clave) {
   const partidos = CALENDARIO[clave] || [];
   if (!partidos.length) return null;
 
-  // Solo se muestra lo que YA está evaluado (al menos ese partido jugado),
-  // que llega descodificado y puntuado desde el servidor. Los pronósticos de
-  // partidos sin jugar NUNCA se leen ni se descodifican aquí — esta página
-  // es pública y cualquiera puede entrar con el enlace de cualquier jugador,
-  // así que enseñar picks futuros sería dejar que la gente se copie.
+  // Solo se muestra el PRONÓSTICO de lo que ya está evaluado (al menos ese
+  // partido jugado), que llega descodificado y puntuado desde el servidor.
+  // Los pronósticos de partidos sin jugar NUNCA se leen ni se descodifican
+  // aquí — esta página es pública y cualquiera puede entrar con el enlace
+  // de cualquier jugador, así que enseñar picks futuros dejaría copiarse.
+  //
+  // El RESULTADO real (marcador, en directo o no) es otra cosa: eso sale
+  // siempre de realidad_oficial.json directamente, no del análisis — el
+  // análisis de una jornada no existe hasta que algún partido suyo termina
+  // del todo, así que un partido en directo sin ningún otro ya acabado no
+  // se vería si dependiera solo de eso.
   const analisis = await cargar(`data/analisis/${clave}.json`, null);
   const jugadorAnalisis = analisis?.jugadores.find((j) => j.slug === SLUG);
 
-  const reales = analisis ? Object.fromEntries(Object.entries(analisis.resultados)) : {};
+  const reales = Object.fromEntries((REALIDAD[clave] || []).map((p) => [p.id, p]));
   return { partidos, jugadorAnalisis, reales };
 }
 
@@ -133,7 +140,6 @@ async function pintarTodas() {
 
 function bloquePartido(p, jugadorAnalisis, real) {
   const terminado = real && real.estado === "finished";
-  const marcadorReal = terminado ? `${real.goles_local}-${real.goles_visitante}` : "vs";
 
   let lineaPronostico;
   if (terminado && jugadorAnalisis) {
@@ -159,10 +165,10 @@ function bloquePartido(p, jugadorAnalisis, real) {
   }
 
   return `
-    <div class="partido ${terminado ? "jugado" : ""}">
+    <div class="partido ${terminado ? "jugado" : ""} ${esPartidoEnDirecto(real) ? "en-directo" : ""}">
       <span class="fecha-partido">${formatearFechaHora(p.fecha)}</span>
       <span class="equipo local">${p.local}${escudoHtml(p.id_escudo_local, p.local)}</span>
-      <span class="marcador">${marcadorReal}</span>
+      ${marcadorPartido(real)}
       <span class="equipo visitante">${escudoHtml(p.id_escudo_visitante, p.visitante)}${p.visitante}</span>
       ${lineaPronostico}
     </div>`;

@@ -23,6 +23,8 @@ MENU = [
      [ROOT / "simuladores" / "99_simulador.py"]),
     ("p", "🧪 Laboratorio de escenarios de prueba (temporada/jornada a medias...)",
      [ROOT / "simuladores" / "laboratorio.py"]),
+    ("e", "🗑️ Eliminar un participante por completo",
+     [SCRIPTS / "eliminar_participante.py"]),
     ("r", "🧹 RESETEAR TODO + descargar calendario (inicio de temporada)",
      [ROOT / "reset.py"]),
 ]

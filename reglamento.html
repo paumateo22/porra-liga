@@ -169,15 +169,13 @@ async function iniciar() {
 
   bloques.push(seccion("Cómo se te identifica", `
     <p>El nombre que escribes en el formulario es tu identidad en toda la porra.
-    Se convierte en una etiqueta interna: <code>Nico Herrera</code> pasa a ser
-    <code>nico_herrera</code>.</p>
-    <p><strong>Escribe siempre el mismo nombre.</strong> Si una jornada pones
-    <code>Elena</code> y otra <code>Elena R.</code>, el sistema entiende que sois dos
-    personas distintas y tus puntos se reparten entre dos fichas.</p>
+    Se convierte en una etiqueta interna en minúsculas y sin espacios (por ejemplo,
+    <code>Nombre Apellido</code> pasa a ser <code>nombre_apellido</code>).</p>
+    <p><strong>Escribe siempre el mismo nombre.</strong> Si una jornada pones tu
+    nombre de una forma y otra de otra distinta, el sistema entiende que sois dos
+    personas y tus puntos se reparten entre dos fichas.</p>
     <p class="nota">Mayúsculas y espacios sobrantes no importan. El navegador recuerda
     tu nombre, así que normalmente solo lo escribes la primera vez.</p>`));
-
-  bloques.push(seccion("Ejemplo de una jornada", ejemplo(p, bonus, pct)));
 
   bloques.push(seccion("Preguntas frecuentes", `
     <p><strong>¿Puedo cambiar un pronóstico?</strong><br>
@@ -189,9 +187,13 @@ async function iniciar() {
     al anterior.</p>
 
     <p><strong>¿Puedo entrar a mitad de temporada?</strong><br>
-    Sí. Empiezas a puntuar desde tu primera jornada. Las anteriores no cuentan ni a
-    favor ni en contra, así que la clasificación general te queda cuesta arriba pero
-    puedes ganar jornadas desde el primer día.</p>
+    Sí. Si tu primer pronóstico no es en la primera jornada de la temporada,
+    arrancas con los mismos puntos totales que llevara en ese momento quien
+    fuera último — así no empiezas con la clasificación general imposible.
+    Ojo: es solo un punto de salida, no cuenta como acierto ni como jornada
+    ganada o perdida — esas estadísticas arrancan de cero contigo, igual que
+    con cualquiera. Se indica en tu perfil para que quede claro de dónde
+    sale.</p>
 
     <p><strong>¿Qué pasa si el resultado que veo no cuadra?</strong><br>
     Los resultados se toman de SofaScore automáticamente. Si detectas un error,
@@ -211,70 +213,6 @@ async function iniciar() {
     vista.</p>`));
 
   document.getElementById("contenido").innerHTML = bloques.join("");
-}
-
-/* Ejemplo numérico calculado con los valores reales de settings.json */
-function ejemplo(p, bonus, pct) {
-  const total = 10;
-  const minimo = Math.floor(total * (p.porcentaje_minimo_participacion)) + 1;
-  const umbral = bonus.umbral_minimo;
-  const bonusUmbral = (bonus.tabla || {})[umbral] || 0;
-  const exacto = p.puntos_1x2 + p.puntos_exacto;
-
-  const casos = [
-    {
-      nombre: "Ana", desc: `${umbral} aciertos 1X2, de los cuales 3 exactos`,
-      calculo: [
-        [`${umbral} aciertos 1X2 × ${p.puntos_1x2}`, umbral * p.puntos_1x2],
-        [`3 exactos × ${p.puntos_exacto}`, 3 * p.puntos_exacto],
-        [`Bonus por ${umbral} aciertos`, bonusUmbral],
-        ["Ganadora de la jornada", p.ganador_jornada],
-      ],
-    },
-    {
-      nombre: "Bruno", desc: "4 aciertos 1X2, ninguno exacto",
-      calculo: [
-        [`4 aciertos 1X2 × ${p.puntos_1x2}`, 4 * p.puntos_1x2],
-        [`Sin bonus (menos de ${umbral})`, 0],
-        ["Perdedor de la jornada", p.perdedor_jornada],
-      ],
-    },
-    {
-      nombre: "Clara", desc: `solo pronosticó ${minimo - 1} partidos y acertó 1`,
-      calculo: [
-        [`1 acierto 1X2 × ${p.puntos_1x2}`, p.puntos_1x2],
-        [`Fuera del reparto (no llega al ${pct} %)`, 0],
-      ],
-    },
-  ];
-
-  return `
-    <p>Una jornada de ${total} partidos. Para optar a ganador o perdedor hay que
-    pronosticar al menos <strong>${minimo}</strong> de ellos.</p>
-    <div class="latest-grid">
-      ${casos.map((c) => {
-        const suma = c.calculo.reduce((a, [, v]) => a + v, 0);
-        return `
-          <div class="match-card" style="padding:16px">
-            <div class="match-header">${c.nombre} — ${c.desc}</div>
-            <table style="background:transparent;margin-top:8px">
-              ${c.calculo.map(([etiqueta, valor]) => `
-                <tr>
-                  <td style="text-align:left;padding:5px 0;border:none">${etiqueta}</td>
-                  <td style="text-align:right;padding:5px 0;border:none">${valor >= 0 ? "+" : ""}${valor}</td>
-                </tr>`).join("")}
-              <tr>
-                <td style="text-align:left;padding:8px 0 0;border-top:1px solid #444"><strong>Total</strong></td>
-                <td style="text-align:right;padding:8px 0 0;border-top:1px solid #444" class="pts-totales">${suma}</td>
-              </tr>
-            </table>
-          </div>`;
-      }).join("")}
-    </div>
-    <p class="nota">Fíjate en Clara: acertó, y sus puntos cuentan. Lo único que pierde
-    por no llegar al mínimo es el derecho a ganar (o sufrir) el
-    ${p.ganador_jornada >= 0 ? "+" : ""}${p.ganador_jornada} / ${p.perdedor_jornada} de la jornada.
-    Y fíjate en que un marcador clavado vale <strong>${exacto} puntos</strong>, no ${p.puntos_exacto}.</p>`;
 }
 
 function seccion(titulo, html) {
