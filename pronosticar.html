@@ -25,8 +25,7 @@
     <div class="fila-nombre-compacta">
       <label for="nombre">Tu nombre</label>
       <input type="text" id="nombre" class="campo-nombre-compacto" placeholder="Ej. Mateo" autocomplete="off">
-      <label for="clave">Clave de acceso</label>
-      <input type="password" id="clave" class="campo-nombre-compacto" style="max-width:140px" autocomplete="off">
+      <p class="nota">Usa siempre el mismo nombre: es lo que te identifica en la clasificación.</p>
     </div>
 
     <div id="barra-jornadas"></div>
@@ -36,6 +35,8 @@
 
 <div class="barra-acciones">
   <a href="javascript:void(0)" class="btn-participa" id="btn-descargar">⬇️ Descargar mis pronósticos</a>
+  <a href="javascript:void(0)" class="btn-participa btn-imagen" id="btn-descargar-imagen">🖼️ Descargar imagen</a>
+  <a href="javascript:void(0)" class="btn-participa btn-imagen" id="btn-copiar-imagen">📋 Copiar imagen</a>
   <div class="aviso" id="aviso"></div>
 </div>
 
@@ -70,14 +71,15 @@ async function iniciar() {
     localStorage.setItem("porra_nombre", nombre.value);
     avisar("");
   };
+  nombre.onblur = precargarGuardados;
 
-  const clave = document.getElementById("clave");
-  clave.value = localStorage.getItem("porra_clave") || "";
-  clave.oninput = () => localStorage.setItem("porra_clave", clave.value);
-  clave.onblur = verificarClave;
-
-  indice = Math.max(0, CLAVES.indexOf(jornadaActual(REALIDAD, CLAVES)));
+  const jornadaPedida = new URLSearchParams(location.search).get("jornada");
+  indice = jornadaPedida && CLAVES.includes(jornadaPedida)
+    ? CLAVES.indexOf(jornadaPedida)
+    : Math.max(0, CLAVES.indexOf(jornadaActual(REALIDAD, CLAVES)));
   document.getElementById("btn-descargar").onclick = descargar;
+  document.getElementById("btn-descargar-imagen").onclick = descargarImagen;
+  document.getElementById("btn-copiar-imagen").onclick = copiarImagen;
 
   barra = montarBarraJornadas("barra-jornadas", CLAVES, CLAVES[indice], (clave) => {
     indice = CLAVES.indexOf(clave);
@@ -85,7 +87,6 @@ async function iniciar() {
   });
 
   pintar();
-  if (clave.value.trim()) await verificarClave(); // clave recordada de una visita anterior
 }
 
 function pintar() {
@@ -121,47 +122,15 @@ function pintar() {
    descodificados en memoria (el fichero guarda el marcador ofuscado). */
 let PREVIOS = {};
 
-/* Slug del jugador cuya clave de acceso se ha comprobado correcta esta
-   sesión — null si no se ha verificado ninguna. Es lo único que puede
-   destapar los pronósticos ya guardados de alguien: escribir su nombre YA
-   NO basta (antes sí, y eso dejaba ver los pronósticos de cualquiera con
-   solo saber su nombre). */
-let IDENTIDAD_VERIFICADA = null;
-
-/* Comprueba la clave contra config/participantes.json. Si coincide con
-   alguien, se rellena su nombre solo y se recuperan sus pronósticos ya
-   enviados. Si no coincide con nadie (o está vacía), no se revela nada. */
-async function verificarClave() {
-  const claveInput = document.getElementById("clave").value.trim();
-  IDENTIDAD_VERIFICADA = null;
-  PREVIOS = {};
-
-  if (!claveInput) { marcarBloqueados(); return; }
-
-  const registro = await cargar("config/participantes.json", { participantes: [] });
-  const encontrado = registro.participantes.find((p) => p.clave_acceso && p.clave_acceso === claveInput);
-
-  if (!encontrado) {
-    avisar("Esa clave no coincide con ningún jugador.", "error");
-    marcarBloqueados();
-    return;
-  }
-
-  IDENTIDAD_VERIFICADA = encontrado.slug;
-  const nombre = document.getElementById("nombre");
-  nombre.value = encontrado.nombre;
-  localStorage.setItem("porra_nombre", encontrado.nombre);
-  await precargarGuardados();
-}
-
-/* Recupera los pronósticos ya guardados del jugador verificado por clave.
-   Sin identidad verificada no se lee ni se descodifica nada — ni con el
-   nombre exacto alcanza. */
+/* Si ya mandaste esta jornada, se recuperan tus marcadores del repo. El
+   fichero guarda el marcador ofuscado (campo "marcador"); se descodifica
+   aquí, en memoria, solo para rellenar los campos del formulario. */
 async function precargarGuardados() {
-  if (!IDENTIDAD_VERIFICADA) { PREVIOS = {}; marcarBloqueados(); return; }
-
+  const nombre = document.getElementById("nombre").value;
+  if (!nombre.trim()) return;
   const clave = CLAVES[indice];
-  const datos = await cargar(`participantes/${IDENTIDAD_VERIFICADA}/pronosticos/${clave}.json`, null);
+  const s = slug(nombre);
+  const datos = await cargar(`participantes/${s}/pronosticos/${clave}.json`, null);
   if (!datos) {
     PREVIOS = {};
     marcarBloqueados();
@@ -186,8 +155,7 @@ async function precargarGuardados() {
   avisar(`Recuperados tus pronósticos ya enviados de ${clave}. Puedes cambiar los partidos que aún no se han jugado.`, "ok");
 }
 
-/* Etiqueta cada partido cerrado según si tenías o no pronóstico guardado —
-   o si ni siquiera se puede saber, por no haber verificado la clave. */
+/* Etiqueta cada partido cerrado según si tenías o no pronóstico guardado. */
 function marcarBloqueados() {
   const reales = Object.fromEntries((REALIDAD[CLAVES[indice]] || []).map((p) => [p.id, p]));
   for (const l of document.querySelectorAll('input[data-lado="l"][disabled]')) {
@@ -197,7 +165,6 @@ function marcarBloqueados() {
     const enDirecto = esPartidoEnDirecto(reales[id]);
     let texto;
     if (enDirecto) texto = "⚽ en directo ahora mismo";
-    else if (!IDENTIDAD_VERIFICADA) texto = "🔒 ya jugado";
     else if (PREVIOS[id]) texto = "🔒 ya jugado · se conserva tu pronóstico";
     else texto = "🔒 ya jugado · sin pronóstico";
     fila.insertAdjacentHTML("beforeend",
@@ -283,6 +250,110 @@ function avisar(texto, clase = "") {
   aviso.textContent = texto;
   aviso.className = `aviso ${clase}`;
 }
+
+/* Dibuja en un <canvas> todos los pronósticos de la jornada visible, tal
+   como están puestos en el formulario ahora mismo (partido sin rellenar =
+   "—"). No se usa ninguna librería: solo Canvas 2D nativo. */
+function dibujarImagenJornada() {
+  const nombre = document.getElementById("nombre").value.trim() || "Sin nombre";
+  const clave = CLAVES[indice];
+  const partidos = CALENDARIO[clave].map((p) => {
+    const l = document.querySelector(`input[data-id="${p.id}"][data-lado="l"]`);
+    const v = document.querySelector(`input[data-id="${p.id}"][data-lado="v"]`);
+    const marcador = (l?.value !== "" && v?.value !== "" && l?.value != null && v?.value != null)
+      ? `${l.value} - ${v.value}` : "—";
+    return { local: p.local, visitante: p.visitante, marcador };
+  });
+
+  const ANCHO = 640, ALTO_FILA = 46, ALTO_CABECERA = 96, ALTO_PIE = 26;
+  const alto = ALTO_CABECERA + partidos.length * ALTO_FILA + ALTO_PIE;
+
+  const canvas = document.createElement("canvas");
+  canvas.width = ANCHO;
+  canvas.height = alto;
+  const ctx = canvas.getContext("2d");
+
+  ctx.fillStyle = "#121212";
+  ctx.fillRect(0, 0, ANCHO, alto);
+
+  const degradado = ctx.createLinearGradient(0, 0, ANCHO, 0);
+  degradado.addColorStop(0, "#1a2a6c");
+  degradado.addColorStop(1, "#2b5876");
+  ctx.fillStyle = degradado;
+  ctx.fillRect(0, 0, ANCHO, ALTO_CABECERA);
+
+  ctx.textAlign = "center";
+  ctx.fillStyle = "goldenrod";
+  ctx.font = "bold 24px 'Segoe UI', Tahoma, sans-serif";
+  ctx.fillText(`Pronósticos de ${nombre}`, ANCHO / 2, 42);
+  ctx.fillStyle = "#b0c4de";
+  ctx.font = "16px 'Segoe UI', Tahoma, sans-serif";
+  ctx.fillText(`Jornada ${parseInt(clave.slice(1))} · LaLiga 2026-27`, ANCHO / 2, 70);
+
+  partidos.forEach((p, i) => {
+    const y = ALTO_CABECERA + i * ALTO_FILA;
+    const centroY = y + ALTO_FILA / 2 + 5;
+
+    ctx.fillStyle = i % 2 === 0 ? "#1c1c1c" : "#232323";
+    ctx.fillRect(0, y, ANCHO, ALTO_FILA);
+
+    ctx.font = "15px 'Segoe UI', Tahoma, sans-serif";
+    ctx.fillStyle = "#fff";
+    ctx.textAlign = "right";
+    ctx.fillText(recortarTexto(ctx, p.local, 220), ANCHO / 2 - 46, centroY);
+
+    ctx.font = "bold 17px 'Segoe UI', Tahoma, sans-serif";
+    ctx.fillStyle = p.marcador === "—" ? "#666" : "goldenrod";
+    ctx.textAlign = "center";
+    ctx.fillText(p.marcador, ANCHO / 2, centroY);
+
+    ctx.font = "15px 'Segoe UI', Tahoma, sans-serif";
+    ctx.fillStyle = "#fff";
+    ctx.textAlign = "left";
+    ctx.fillText(recortarTexto(ctx, p.visitante, 220), ANCHO / 2 + 46, centroY);
+  });
+
+  ctx.fillStyle = "#555";
+  ctx.font = "11px 'Segoe UI', Tahoma, sans-serif";
+  ctx.textAlign = "center";
+  ctx.fillText("Porra LaLiga", ANCHO / 2, alto - 9);
+
+  return canvas;
+}
+
+function recortarTexto(ctx, texto, anchoMax) {
+  if (ctx.measureText(texto).width <= anchoMax) return texto;
+  let recortado = texto;
+  while (recortado.length > 1 && ctx.measureText(recortado + "…").width > anchoMax) {
+    recortado = recortado.slice(0, -1);
+  }
+  return recortado + "…";
+}
+
+function descargarImagen() {
+  const canvas = dibujarImagenJornada();
+  const nombre = (document.getElementById("nombre").value.trim() || "pronosticos").replace(/\s+/g, "");
+  const a = document.createElement("a");
+  a.href = canvas.toDataURL("image/png");
+  a.download = `${CLAVES[indice]}_${nombre}.png`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  avisar(`Descargada ${a.download}.`, "ok");
+}
+
+function copiarImagen() {
+  const canvas = dibujarImagenJornada();
+  canvas.toBlob(async (blob) => {
+    try {
+      await navigator.clipboard.write([new ClipboardItem({ "image/png": blob })]);
+      avisar("Imagen copiada al portapapeles — ya puedes pegarla donde quieras.", "ok");
+    } catch (e) {
+      avisar("Tu navegador no permite copiar la imagen directamente — usa \"Descargar imagen\" en su lugar.", "error");
+    }
+  }, "image/png");
+}
+
 
 iniciar();
 </script>

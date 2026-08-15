@@ -48,32 +48,71 @@ def main():
         return 1
 
     calendario = {}
-    sin_jornada = 0
+    sin_jornada = []
     for ev in eventos:
         p = ss.parsear_evento(ev)
         if not p["jornada"]:
-            sin_jornada += 1
+            sin_jornada.append(p)
             continue
         clave = clave_jornada(p["jornada"])
-        calendario.setdefault(clave, []).append({
-            "id": p["id"],
-            "local": p["local"],
-            "visitante": p["visitante"],
-            "id_escudo_local": p["id_escudo_local"],
-            "id_escudo_visitante": p["id_escudo_visitante"],
-            "fecha": p["fecha"],
-        })
+        calendario.setdefault(clave, []).append(p)
 
+    # descargar_eventos() ya deduplica por id (dos peticiones que devuelvan el
+    # mismo evento no producen dos entradas) — pero un mismo partido puede
+    # aparecer con DOS ids distintos si SofaScore lo reprogramó: el evento
+    # viejo se queda "fantasma" en la respuesta junto al nuevo, ambos con el
+    # mismo par de equipos y a veces la misma jornada. Eso es lo que produce
+    # un "11 partidos, con un X-Y duplicado" en vez de 10. Aquí se detecta
+    # por (jornada, local, visitante) y, si hay colisión, se conserva el id
+    # más alto (el creado más tarde — normalmente el partido reprogramado de
+    # verdad) y se avisa bien claro de los dos ids implicados, para poder
+    # revisarlo a mano si el criterio se equivoca.
+    for clave, partidos in calendario.items():
+        vistos = {}
+        for p in partidos:
+            fixture = (p["local"], p["visitante"])
+            if fixture in vistos:
+                anterior = vistos[fixture]
+                descartado, conservado = sorted([anterior, p], key=lambda x: x["id"])
+                print(f"   ⚠️  {clave}: {descartado['local']} - {descartado['visitante']} aparece dos veces "
+                      f"(ids {descartado['id']} y {conservado['id']}) — se conserva el id {conservado['id']} "
+                      f"(el más reciente) y se descarta el {descartado['id']}.")
+                vistos[fixture] = conservado
+            else:
+                vistos[fixture] = p
+        calendario[clave] = list(vistos.values())
+
+    ordenado_final = {}
     for clave in calendario:
-        calendario[clave].sort(key=lambda x: (x["fecha"] or "", x["local"]))
+        ordenado_final[clave] = sorted(
+            [{
+                "id": p["id"], "local": p["local"], "visitante": p["visitante"],
+                "id_escudo_local": p["id_escudo_local"], "id_escudo_visitante": p["id_escudo_visitante"],
+                "fecha": p["fecha"],
+            } for p in calendario[clave]],
+            key=lambda x: (x["fecha"] or "", x["local"]),
+        )
 
-    ordenado = {c: calendario[c] for c in sorted(calendario, key=lambda k: int(k[1:]))}
+    ordenado = {c: ordenado_final[c] for c in sorted(ordenado_final, key=lambda k: int(k[1:]))}
     guardar_json(CALENDARIO_FILE, ordenado)
 
     total = sum(len(v) for v in ordenado.values())
     print(f"✅ {len(ordenado)} jornadas, {total} partidos -> {CALENDARIO_FILE.name}")
+
+    # Cuántos partidos tiene cada jornada — para detectar de un vistazo una
+    # jornada corta (como la J6 con 9 en vez de 10) sin tener que abrir el
+    # JSON a mano. Solo se imprime si alguna se sale del número esperado.
+    por_jornada = settings["competicion"].get("partidos_por_jornada", 10)
+    irregulares = {c: len(v) for c, v in ordenado.items() if len(v) != por_jornada}
+    if irregulares:
+        print(f"   ⚠️  Jornadas con un número de partidos distinto de {por_jornada}:")
+        for c, n in irregulares.items():
+            print(f"      - {c}: {n} partidos")
+
     if sin_jornada:
-        print(f"   ⚠️  {sin_jornada} partidos descartados por no tener jornada asignada.")
+        print(f"   ⚠️  {len(sin_jornada)} partido(s) descartados por no tener jornada asignada:")
+        for p in sin_jornada:
+            print(f"      - id {p['id']}: {p['local']} - {p['visitante']} ({p['fecha'] or 'sin fecha'})")
 
     esperadas = settings["competicion"]["total_jornadas"]
     if len(ordenado) != esperadas:

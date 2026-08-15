@@ -49,4 +49,11 @@ jobs:
       - name: Lanzar Actualizador (resultados + recalculo completo)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh workflow run actualizador.yml
+        run: |
+          $cabeceras = @{
+            Authorization = "Bearer $env:GITHUB_TOKEN"
+            Accept        = "application/vnd.github+json"
+          }
+          Invoke-RestMethod `
+            -Uri "https://api.github.com/repos/$env:GITHUB_REPOSITORY/actions/workflows/actualizador.yml/dispatches" `
+            -Method Post -Headers $cabeceras -Body (@{ ref = "main" } | ConvertTo-Json)

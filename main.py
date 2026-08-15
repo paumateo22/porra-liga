@@ -19,6 +19,8 @@ MENU = [
      [ROOT / "simuladores" / "98_temporada_demo.py"]),
     ("8", "🧪 Test de casos límite (adelantados, aplazados, reenvíos)",
      [ROOT / "tests" / "test_casos_limite.py"]),
+    ("c", "🧪 Test del generador de calendario (duplicados, jornadas cortas)",
+     [ROOT / "tests" / "test_generador_calendario.py"]),
     ("9", "🎲 Simulador — fase 1: preparar datos falsos",
      [ROOT / "simuladores" / "99_simulador.py"]),
     ("p", "🧪 Laboratorio de escenarios de prueba (temporada/jornada a medias...)",

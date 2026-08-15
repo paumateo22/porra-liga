@@ -363,38 +363,20 @@ En `habilitadores` puedes apagar reglas enteras poniendo `0` (por ejemplo,
 
 Tras cualquier cambio, ejecuta la opción 4 y la clasificación se recalcula entera.
 
-### Clave de acceso: quién puede recuperar sus pronósticos guardados
+### Quién puede ver los pronósticos ya enviados
 
-Por defecto, **nadie puede ver los pronósticos de nadie antes de que se juegue
-el partido** — ni en `pronosticos_jugador.html`, ni escribiendo el nombre de
-otra persona en `pronosticar.html`. La web solo revela un pronóstico cuando
+En `pronosticar.html`, escribir un nombre recupera directamente los
+pronósticos que esa persona ya haya mandado (para completar los partidos que
+le falten de una jornada, o corregir uno que aún no haya empezado). No hace
+falta ninguna clave ni verificación — es abierto para todo el grupo, así
+que cualquiera que escriba el nombre de otra persona ve lo que esa persona
+haya pronosticado ya. Es una decisión deliberada de diseño para simplificar
+el uso entre amigos, no un descuido.
+
+`pronosticos_jugador.html` (la vista pública de pronósticos por jugador y
+jornada) sigue ocultando el marcador de los partidos que aún no se han
+jugado, sea quien sea el jugador cuyo enlace abras — solo se revela cuando
 el partido termina de verdad.
-
-Eso tiene un efecto secundario: si un jugador quiere recuperar sus propios
-pronósticos ya enviados (para completar los que le faltan de una jornada, por
-ejemplo), necesita demostrar que es él. Para eso sirve `clave_acceso`: un
-campo opcional que tú añades a mano en `config/participantes.json`, en la
-ficha de la persona que quieras:
-
-```json
-{
-  "slug": "pau",
-  "nombre": "Pau",
-  "alta": "2026-08-01T10:00:00",
-  "clave_acceso": "lo-que-tú-quieras"
-}
-```
-
-Con eso puesto, esa persona escribe su clave en `pronosticar.html` (no su
-nombre — el nombre se autocompleta solo al validarla) y se le recuperan sus
-pronósticos ya enviados. Sin la clave correcta, no hay manera de verlos —
-ni siquiera escribiendo el nombre exacto.
-
-Nadie tiene una clave a menos que tú se la pongas y se la pases (por
-WhatsApp, en persona, como prefieras). Quien no tenga clave simplemente
-rellena sus pronósticos desde cero cada vez, tal como funcionaba la web
-antes de que existiera esta función — nada se rompe, solo se pierde la
-comodidad de la recuperación automática si no hay clave.
 
 ### Insignias de jugadores (🏆, ⭐...)
 
@@ -436,6 +418,26 @@ que esa persona no mande al menos un pronóstico real (y quede registrada en
 `nombres.txt` se ignora sin más. En cuanto mande su primer pronóstico —usando
 exactamente el mismo nombre que pusiste antes del `;`— aparecerá con su
 insignia puesta desde ese primer pronóstico.
+
+### Partidos duplicados o jornadas cortas (calendario mal contado)
+
+Si una jornada sale con más o menos partidos de la cuenta (por ejemplo, 11 en
+vez de 10, con dos equipos repetidos), el motivo típico es que SofaScore
+reprogramó un partido: el evento viejo se queda "fantasma" en su respuesta,
+con un id distinto pero el mismo par de equipos, junto al nuevo. El script
+`00_generador_calendario.py` lo detecta solo (por jornada + mismo par de
+equipos, no solo por id) y se queda con el id más alto —el más reciente—,
+avisando bien claro en la consola de los dos ids implicados por si hace
+falta revisarlo a mano.
+
+Si una jornada se queda corta y no hay ningún aviso de duplicado, el script
+también imprime qué partidos se descartaron por no tener jornada asignada
+(`roundInfo.round` vacío en la respuesta de SofaScore) — revisa esa lista
+para ver si alguno de ellos era el que falta.
+
+`python tests/test_generador_calendario.py` (opción **c** del panel)
+reproduce este patrón con datos de prueba para comprobar que la
+deduplicación sigue funcionando.
 
 ### Nombres de equipo
 

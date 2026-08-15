@@ -11,7 +11,16 @@
 body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--bg-dark); color: var(--text-main); margin: 0; padding: 0; line-height: 1.6; }
 
 /* Cabecera y Navegación */
-header { background: linear-gradient(135deg, #1a2a6c, #112240, var(--accent)); padding: 30px 20px 30px 60px; text-align: center; border-bottom: 3px solid var(--gold); box-shadow: 0 4px 15px rgba(0,0,0,0.5); position: relative; }
+header { background: linear-gradient(135deg, #1a2a6c, #112240, var(--accent)); padding: 22px 20px 22px 60px; border-bottom: 3px solid var(--gold); box-shadow: 0 4px 15px rgba(0,0,0,0.5); position: relative; }
+.cabecera-interior { display: flex; align-items: center; justify-content: center; gap: 24px; max-width: 1400px; margin: 0 auto; }
+.cabecera-centro { flex: 0 1 auto; text-align: center; }
+.widgets-lado { flex: 1 1 0; display: flex; flex-direction: column; gap: 10px; max-width: 320px; }
+#widgets-izquierda { align-items: flex-end; }
+#widgets-derecha { align-items: flex-start; }
+@media (max-width: 1000px) {
+  .cabecera-interior { flex-direction: column; }
+  .widgets-lado { max-width: 100%; width: 100%; align-items: stretch !important; }
+}
 h1 { margin: 0; color: var(--gold); font-size: 2.5em; text-shadow: 2px 2px 4px rgba(0,0,0,0.6); }
 h2 { color: var(--gold); margin: 0; display: flex; justify-content: space-between; align-items: center; }
 .top-nav { display: flex; justify-content: center; gap: 15px; margin-top: 15px; flex-wrap: wrap; }
@@ -190,6 +199,15 @@ tr:hover { background-color: #2a2a2a; }
 .campo-nombre { padding: 12px; width: 100%; max-width: 340px; border-radius: 5px; border: 1px solid #555; background: #111; color: #fff; font-size: 1.05em; text-align: center; outline: none; }
 .campo-nombre:focus { border-color: var(--gold); }
 .barra-acciones { position: sticky; bottom: 0; background: rgba(18,18,18,0.95); border-top: 1px solid #333; padding: 14px; text-align: center; margin-top: 24px; backdrop-filter: blur(4px); }
+.barra-acciones .btn-imagen {
+  font-size: 0.7em; padding: 8px 16px; margin-left: 8px; text-transform: none;
+  background: #252525; color: var(--gold); border: 1px solid var(--gold);
+  box-shadow: none;
+}
+.barra-acciones .btn-imagen:hover { background: var(--gold); color: #000; transform: none; }
+@media (max-width: 600px) {
+  .barra-acciones .btn-imagen { display: inline-block; margin: 6px 4px 0; }
+}
 .aviso { margin-top: 10px; font-size: 0.95em; min-height: 1.2em; }
 .aviso.error { color: var(--maroon); }
 .aviso.ok { color: #4ade80; }
@@ -225,35 +243,33 @@ tr:hover { background-color: #2a2a2a; }
 }
 
 /* ───────────────────── Widgets de la cabecera ───────────────────── */
-.widgets-cabecera {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
-  max-width: 1000px; margin: 18px auto 0; padding: 0 20px;
-}
-@media (max-width: 700px) { .widgets-cabecera { grid-template-columns: 1fr; } }
-
-.columna-widgets { display: flex; flex-direction: column; gap: 12px; }
-
 .widget-cabecera {
-  background: #1c1c1c; border: 1px solid #3a3a3a; border-radius: 10px;
-  padding: 12px 16px; text-align: center;
+  background: rgba(0, 0, 0, 0.28); border: 1px solid rgba(218, 165, 32, 0.35); border-radius: 10px;
+  padding: 10px 14px; text-align: center; backdrop-filter: blur(2px);
 }
 .widget-titulo {
-  color: var(--gold); font-weight: 700; font-size: 0.8em;
-  text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px;
+  color: var(--gold); font-weight: 700; font-size: 0.75em;
+  text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 5px;
 }
-.widget-fecha { color: #9ca3af; font-size: 0.78em; margin-bottom: 8px; }
+.widget-fecha { color: #b0c4de; font-size: 0.75em; margin-bottom: 6px; }
 .widget-partido {
-  display: flex; align-items: center; justify-content: center; gap: 10px;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
 }
 .widget-partido .equipo-widget {
-  display: flex; align-items: center; gap: 6px; font-weight: 600; font-size: 0.9em;
+  display: flex; align-items: center; gap: 5px; font-weight: 600; font-size: 0.85em; color: #fff;
   flex: 1; min-width: 0;
 }
 .widget-partido .equipo-widget:first-child { justify-content: flex-end; text-align: right; }
 .widget-partido .equipo-widget:last-child { justify-content: flex-start; text-align: left; }
-.widget-partido .marcador { min-width: 46px; font-size: 1.1em; }
+.widget-partido .marcador { min-width: 42px; font-size: 1.05em; }
 .widget-cabecera .cuenta-atras {
-  margin-top: 8px; font-weight: 700; color: var(--gold); font-size: 0.95em;
+  margin-top: 6px; font-weight: 700; color: var(--gold); font-size: 0.9em;
   font-variant-numeric: tabular-nums;
 }
-.widget-cabecera .nota { color: #7d7d7d; font-size: 0.85em; }
+.widget-cabecera .nota { color: #93a5c4; font-size: 0.8em; }
+.widget-atajo {
+  display: inline-block; margin-top: 8px; color: #000; background: var(--gold);
+  font-size: 0.75em; font-weight: 700; text-decoration: none; padding: 4px 12px; border-radius: 20px;
+  transition: 0.2s;
+}
+.widget-atajo:hover { background: #fff; }

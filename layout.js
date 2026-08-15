@@ -56,11 +56,16 @@ function montarCabecera({ titulo, subtitulo, pagina }) {
     </div>
     <span class="menu-btn" onclick="abrirMenu()">&#9776;</span>
     <header>
-      <h1>${titulo}</h1>
-      ${subtitulo ? `<p class="subtitulo">${subtitulo}</p>` : ""}
-      <nav class="top-nav">${enlaces}</nav>
+      <div class="cabecera-interior">
+        <div id="widgets-izquierda" class="widgets-lado"></div>
+        <div class="cabecera-centro">
+          <h1>${titulo}</h1>
+          ${subtitulo ? `<p class="subtitulo">${subtitulo}</p>` : ""}
+          <nav class="top-nav">${enlaces}</nav>
+        </div>
+        <div id="widgets-derecha" class="widgets-lado"></div>
+      </div>
     </header>
-    <div id="widgets-cabecera" class="widgets-cabecera"></div>
   `);
 
   montarWidgetsCabecera();
@@ -382,8 +387,9 @@ function marcarEscudoRoto(img) {
 let _intervaloCuentasAtras = null;
 
 async function montarWidgetsCabecera() {
-  const cont = document.getElementById("widgets-cabecera");
-  if (!cont) return;
+  const contIzq = document.getElementById("widgets-izquierda");
+  const contDer = document.getElementById("widgets-derecha");
+  if (!contIzq || !contDer) return;
 
   const calendario = await cargar("config/calendario.json", {});
   const realidad = await cargar("data/resultados/realidad_oficial.json", {});
@@ -408,28 +414,31 @@ async function montarWidgetsCabecera() {
     .filter((p) => p.estado === "finished")
     .sort((a, b) => new Date(b.fecha) - new Date(a.fecha))[0] || null;
 
-  // La próxima jornada que ni siquiera ha empezado: la primera, después de
-  // la actual, en la que ningún partido tenga ya resultado ni esté en juego.
+  // La próxima jornada que ni siquiera ha empezado. Si la jornada "actual"
+  // (la que jornadaActual() ve como la que toca) todavía no tiene ningún
+  // partido arrancado, ES ella misma la próxima — no hay que saltar a la
+  // siguiente solo porque sea "la actual". Solo se busca una posterior
+  // cuando la actual ya está en marcha de verdad.
   const claveActual = jornadaActual(realidad, claves);
   const idxActual = claves.indexOf(claveActual);
-  const claveProximaJornada = claves.slice(idxActual + 1).find((c) =>
-    (realidad[c] || []).every((r) => (r.estado || "notstarted") === "notstarted")
-  ) || null;
+  const actualYaEmpezada = (realidad[claveActual] || []).some((r) => (r.estado || "notstarted") !== "notstarted");
+  const claveProximaJornada = actualYaEmpezada
+    ? claves.slice(idxActual + 1).find((c) =>
+        (realidad[c] || []).every((r) => (r.estado || "notstarted") === "notstarted")
+      ) || null
+    : claveActual;
   const primerPartidoProximaJornada = claveProximaJornada
     ? (calendario[claveProximaJornada] || []).slice().sort(porFecha)[0]
     : null;
 
-  cont.innerHTML = `
-    <div class="columna-widgets">
-      ${_widgetPartido("Próximo partido", proximo, true)}
-      ${_widgetJornada("Próxima jornada", claveProximaJornada, primerPartidoProximaJornada)}
-    </div>
-    <div class="columna-widgets">
-      ${_widgetPartido("Último resultado", ultimoTerminado, false)}
-      ${enDirecto
-        ? _widgetPartido("🔴 En directo", enDirecto, false)
-        : _widgetPartido("Próximo partido", proximo, true)}
-    </div>`;
+  contIzq.innerHTML = `
+    ${_widgetPartido("Próximo partido", proximo, true)}
+    ${_widgetJornada("Próxima jornada", claveProximaJornada, primerPartidoProximaJornada)}`;
+  contDer.innerHTML = `
+    ${_widgetPartido("Último resultado", ultimoTerminado, false)}
+    ${enDirecto
+      ? _widgetPartido("🔴 En directo", enDirecto, false)
+      : _widgetPartido("Próximo partido", proximo, true)}`;
 
   _iniciarCuentasAtras();
 }
@@ -464,6 +473,7 @@ function _widgetJornada(titulo, clave, primerPartido) {
       <div class="widget-titulo">${titulo}</div>
       <div class="widget-fecha">Jornada ${parseInt(clave.slice(1))} · comienza ${formatearFechaHora(primerPartido.fecha)}</div>
       <div class="cuenta-atras" data-fecha="${primerPartido.fecha}">calculando…</div>
+      <a href="pronosticar.html?jornada=${clave}" class="widget-atajo">✏️ Pronosticar esta jornada</a>
     </div>`;
 }
 

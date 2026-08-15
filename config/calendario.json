@@ -33,14 +33,6 @@
             "fecha": "2026-08-16T19:00:00"
         },
         {
-            "id": 16421057,
-            "local": "Celta",
-            "visitante": "Osasuna",
-            "id_escudo_local": 2821,
-            "id_escudo_visitante": 2820,
-            "fecha": "2026-08-16T21:30:00"
-        },
-        {
             "id": 16421050,
             "local": "Deportivo de A Coruña",
             "visitante": "Elche",
@@ -480,6 +472,14 @@
             "visitante": "Villarreal",
             "id_escudo_local": 2830,
             "id_escudo_visitante": 2819,
+            "fecha": "2026-09-16T21:00:00"
+        },
+        {
+            "id": 16416345,
+            "local": "Rayo",
+            "visitante": "Espanyol",
+            "id_escudo_local": 2818,
+            "id_escudo_visitante": 2814,
             "fecha": "2026-09-16T21:00:00"
         },
         {
@@ -1697,14 +1697,6 @@
             "fecha": "2027-01-24T20:00:00"
         },
         {
-            "id": 16462495,
-            "local": "Real Racing Club",
-            "visitante": "Celta",
-            "id_escudo_local": 2835,
-            "id_escudo_visitante": 2821,
-            "fecha": "2027-01-24T20:00:00"
-        },
-        {
             "id": 16462502,
             "local": "Real Sociedad",
             "visitante": "Málaga CF",
@@ -2279,14 +2271,6 @@
             "fecha": "2027-03-14T20:00:00"
         },
         {
-            "id": 16462688,
-            "local": "Real Madrid",
-            "visitante": "Espanyol",
-            "id_escudo_local": 2829,
-            "id_escudo_visitante": 2814,
-            "fecha": "2027-03-14T20:00:00"
-        },
-        {
             "id": 16462687,
             "local": "Real Racing Club",
             "visitante": "Atlético",
@@ -2432,6 +2416,14 @@
             "visitante": "Rayo",
             "id_escudo_local": 2849,
             "id_escudo_visitante": 2818,
+            "fecha": "2027-04-04T21:00:00"
+        },
+        {
+            "id": 16462706,
+            "local": "Málaga CF",
+            "visitante": "Osasuna",
+            "id_escudo_local": 2830,
+            "id_escudo_visitante": 2820,
             "fecha": "2027-04-04T21:00:00"
         },
         {
@@ -2665,14 +2657,6 @@
             "fecha": "2027-04-21T21:00:00"
         },
         {
-            "id": 16462539,
-            "local": "Real Racing Club",
-            "visitante": "Málaga CF",
-            "id_escudo_local": 2835,
-            "id_escudo_visitante": 2830,
-            "fecha": "2027-04-21T21:00:00"
-        },
-        {
             "id": 16462545,
             "local": "Sevilla",
             "visitante": "Levante UD",
@@ -2868,6 +2852,14 @@
             "visitante": "Rayo",
             "id_escudo_local": 2836,
             "id_escudo_visitante": 2818,
+            "fecha": "2027-05-16T21:00:00"
+        },
+        {
+            "id": 16462592,
+            "local": "Deportivo de A Coruña",
+            "visitante": "Alavés",
+            "id_escudo_local": 2832,
+            "id_escudo_visitante": 2885,
             "fecha": "2027-05-16T21:00:00"
         },
         {

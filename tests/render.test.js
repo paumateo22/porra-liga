@@ -60,6 +60,25 @@ async function render(fichero, busqueda = "") {
       // jsdom no implementa requestAnimationFrame; un no-op basta para las
       // comprobaciones estáticas (no ejecutamos varios fotogramas aquí).
       win.requestAnimationFrame = win.requestAnimationFrame || (() => 0);
+      // jsdom tampoco implementa canvas 2D de verdad ni la API del
+      // portapapeles — con un contexto falso que registra las llamadas basta
+      // para comprobar que la lógica de dibujo no revienta y usa los datos
+      // correctos, sin necesitar el paquete nativo "canvas".
+      win.__llamadasCanvas = { fillText: [], fillRect: [] };
+      win.HTMLCanvasElement.prototype.getContext = function (tipo) {
+        if (tipo !== "2d") return null;
+        return {
+          fillRect: (...a) => win.__llamadasCanvas.fillRect.push(a),
+          fillText: (...a) => win.__llamadasCanvas.fillText.push(a),
+          measureText: (t) => ({ width: t.length * 8 }),
+          createLinearGradient: () => ({ addColorStop: () => {} }),
+          set fillStyle(v) {}, set font(v) {}, set textAlign(v) {},
+        };
+      };
+      win.HTMLCanvasElement.prototype.toDataURL = () => "data:image/png;base64,FALSO";
+      win.HTMLCanvasElement.prototype.toBlob = function (cb) { cb(new win.Blob(["x"], { type: "image/png" })); };
+      win.ClipboardItem = win.ClipboardItem || class { constructor(o) { this.o = o; } };
+      win.navigator.clipboard = win.navigator.clipboard || { write: async () => {} };
       win.addEventListener("unhandledrejection", (e) => errores.push(String(e.reason)));
     },
   });
@@ -258,6 +277,25 @@ async function probarEscenarioReset() {
     check(doc.querySelector(".celda-jornada-nav.activa")?.textContent.trim()
       === String(parseInt(claveActual.slice(1))),
       `abre en la jornada en curso (${claveActual})`);
+
+    check(cuenta(doc, "header .widget-cabecera") === 4,
+      "los 4 widgets de la cabecera aparecen dentro del <header>, no debajo");
+    check(doc.querySelector("header .cabecera-interior .widgets-lado") !== null,
+      "los widgets viven a los lados del título, dentro del fondo azul");
+
+    // La jornada "actual" (la primera con algo pendiente) puede no haber
+    // arrancado ningún partido todavía — en ese caso, "próxima jornada"
+    // tiene que seguir siendo ELLA MISMA, no saltar a la siguiente solo
+    // por ser "la actual".
+    const actualYaEmpezada = (realidad[claveActual] || []).some((r) => r.estado && r.estado !== "notstarted");
+    if (!actualYaEmpezada) {
+      const widgetProxJornada = [...doc.querySelectorAll(".widget-cabecera")]
+        .find((w) => texto(w, ".widget-titulo") === "Próxima jornada");
+      check(texto(widgetProxJornada, ".widget-fecha").includes(`Jornada ${parseInt(claveActual.slice(1))}`),
+        `"próxima jornada" sigue siendo ${claveActual} mientras no arranque ningún partido suyo`);
+      check(widgetProxJornada?.querySelector(".widget-atajo")?.getAttribute("href") === `pronosticar.html?jornada=${claveActual}`,
+        "el atajo de \"próxima jornada\" lleva a pronosticar esa misma jornada");
+    }
     check(cuenta(doc, "#contenido .partido") === calendario[claveActual].length,
       "pinta todos los partidos de esa jornada");
     check(cuenta(doc, "#contenido .fecha-partido") === calendario[claveActual].length,
@@ -331,74 +369,70 @@ async function probarEscenarioReset() {
       "muestra la fecha de cada partido en el formulario de pronósticos");
   }
 
-  console.log("\n═══ pronosticar.html · seguridad de la precarga (clave de acceso) ═══");
+  console.log("\n═══ pronosticar.html · precarga de pronósticos ya enviados (marcador ofuscado) ═══");
   {
     const jugadorPrueba = clas.clasificacion[0];
     const rutaGuardado = path.join(RAIZ, `participantes/${jugadorPrueba.slug}/pronosticos/${claveActual}.json`);
-    const rutaParticipantes = path.join(RAIZ, "config/participantes.json");
 
     if (fs.existsSync(rutaGuardado)) {
-      // Prueba A: escribir el nombre real de alguien SIN ninguna clave no
-      // debe rellenar nada — antes de este cambio, esto sí filtraba sus
-      // pronósticos con solo saber su nombre.
-      const { doc: docSinClave, dom: domSinClave, errores: erroresA } = await render("pronosticar.html");
-      check(erroresA.length === 0, `sin errores de JS al cargar ${erroresA[0] || ""}`);
+      const { dom, doc, errores } = await render("pronosticar.html");
+      check(errores.length === 0, `sin errores de JS al cargar ${errores[0] || ""}`);
 
-      const nombreInput = docSinClave.querySelector("#nombre");
+      const nombreInput = doc.querySelector("#nombre");
       nombreInput.value = jugadorPrueba.nombre;
-      nombreInput.dispatchEvent(new domSinClave.window.Event("input"));
-      await domSinClave.window.precargarGuardados();
-      await new Promise((r) => setTimeout(r, 150));
-      const rellenoSinClave = [...docSinClave.querySelectorAll('input[data-lado="l"]')].some((i) => i.value !== "");
-      check(!rellenoSinClave,
-        `escribir el nombre de ${jugadorPrueba.nombre} SIN clave no revela sus pronósticos`);
-      check(!texto(docSinClave, "body").includes(leer(`participantes/${jugadorPrueba.slug}/pronosticos/${claveActual}.json`).predicciones[0]?.marcador || "\0"),
+      nombreInput.dispatchEvent(new dom.window.Event("blur"));
+      await new Promise((r) => setTimeout(r, 250));
+
+      const guardado = leer(`participantes/${jugadorPrueba.slug}/pronosticos/${claveActual}.json`);
+      check(!texto(doc, "body").includes(guardado.predicciones[0]?.marcador || "\0"),
         "el token ofuscado no aparece nunca como texto plano en la página");
 
-      // Se le asigna una clave de prueba (como haría el admin a mano) para
-      // comprobar el resto del flujo, y se restaura al terminar.
-      const registro = JSON.parse(fs.readFileSync(rutaParticipantes, "utf8"));
-      const backupRegistro = JSON.stringify(registro);
-      const entrada = registro.participantes.find((p) => p.slug === jugadorPrueba.slug);
-      entrada.clave_acceso = "clave-de-prueba-9x7";
-      fs.writeFileSync(rutaParticipantes, JSON.stringify(registro, null, 4));
-
-      try {
-        // Prueba B: clave incorrecta se rechaza y no revela nada.
-        const { doc: docClaveMala, dom: domClaveMala, errores: erroresB } = await render("pronosticar.html");
-        check(erroresB.length === 0, `sin errores de JS ${erroresB[0] || ""}`);
-        const claveInputMala = docClaveMala.querySelector("#clave");
-        claveInputMala.value = "esto-no-es-la-clave";
-        claveInputMala.dispatchEvent(new domClaveMala.window.Event("blur"));
-        await new Promise((r) => setTimeout(r, 150));
-        const rellenoClaveMala = [...docClaveMala.querySelectorAll('input[data-lado="l"]')].some((i) => i.value !== "");
-        check(!rellenoClaveMala, "una clave de acceso incorrecta no revela ningún pronóstico");
-
-        // Prueba C: clave correcta recupera los pronósticos Y autocompleta el nombre.
-        const { doc, dom, errores: erroresC } = await render("pronosticar.html");
-        check(erroresC.length === 0, `sin errores de JS ${erroresC[0] || ""}`);
-        const claveInput = doc.querySelector("#clave");
-        claveInput.value = "clave-de-prueba-9x7";
-        claveInput.dispatchEvent(new dom.window.Event("blur"));
-        await new Promise((r) => setTimeout(r, 250));
-
-        check(doc.querySelector("#nombre").value === jugadorPrueba.nombre,
-          "la clave correcta autocompleta el nombre del jugador, sin tener que escribirlo");
-
-        const guardado = leer(`participantes/${jugadorPrueba.slug}/pronosticos/${claveActual}.json`);
-        const primeraPred = guardado.predicciones.find((p) =>
-          doc.querySelector(`input[data-id="${p.id}"][data-lado="l"]`));
-        if (primeraPred) {
-          const { gl, gv } = dom.window.desofuscarMarcador(primeraPred.marcador, primeraPred.fecha, claveActual);
-          const lInput = doc.querySelector(`input[data-id="${primeraPred.id}"][data-lado="l"]`);
-          const vInput = doc.querySelector(`input[data-id="${primeraPred.id}"][data-lado="v"]`);
-          check(lInput && String(lInput.value) === String(gl) && vInput && String(vInput.value) === String(gv),
-            `con la clave correcta, la precarga descodifica el marcador y rellena los campos (${gl}-${gv})`);
-        }
-      } finally {
-        fs.writeFileSync(rutaParticipantes, backupRegistro);
+      const primeraPred = guardado.predicciones.find((p) =>
+        doc.querySelector(`input[data-id="${p.id}"][data-lado="l"]`));
+      if (primeraPred) {
+        const { gl, gv } = dom.window.desofuscarMarcador(primeraPred.marcador, primeraPred.fecha, claveActual);
+        const lInput = doc.querySelector(`input[data-id="${primeraPred.id}"][data-lado="l"]`);
+        const vInput = doc.querySelector(`input[data-id="${primeraPred.id}"][data-lado="v"]`);
+        check(lInput && String(lInput.value) === String(gl) && vInput && String(vInput.value) === String(gv),
+          `escribir el nombre de ${jugadorPrueba.nombre} recupera y descodifica sus pronósticos ya enviados (${gl}-${gv})`);
       }
     }
+  }
+
+  console.log("\n═══ pronosticar.html · imagen de la jornada (PNG / portapapeles) ═══");
+  {
+    const { doc, dom, errores } = await render("pronosticar.html");
+    check(errores.length === 0, `sin errores de JS ${errores[0] || ""}`);
+
+    doc.getElementById("nombre").value = "Prueba";
+    const primerInput = doc.querySelector('input[data-lado="l"]:not([disabled])');
+    if (primerInput) {
+      primerInput.value = "3";
+      doc.querySelector(`input[data-id="${primerInput.dataset.id}"][data-lado="v"]`).value = "1";
+    }
+
+    const canvas = dom.window.dibujarImagenJornada();
+    check(canvas.width === 640, "la imagen tiene un ancho fijo de 640px");
+    check(dom.window.__llamadasCanvas.fillText.some(([t]) => t.includes("Prueba")),
+      "la imagen incluye el nombre del jugador");
+    check(dom.window.__llamadasCanvas.fillText.some(([t]) => t.includes(`Jornada ${parseInt(claveActual.slice(1))}`)
+        || t.includes("Jornada")),
+      "la imagen incluye la jornada");
+    check(dom.window.__llamadasCanvas.fillText.some(([t]) => t === "3 - 1"),
+      "el marcador relleno (3 - 1) aparece en la imagen");
+
+    let ficheroDescargado = null;
+    dom.window.HTMLAnchorElement.prototype.click = function () { ficheroDescargado = this.download; };
+    dom.window.descargarImagen();
+    check(/^J\d{2}_Prueba\.png$/.test(ficheroDescargado || ""),
+      `"Descargar imagen" genera un nombre de fichero .png correcto (vio "${ficheroDescargado}")`);
+
+    let avisoTrasCopiar = "";
+    dom.window.copiarImagen();
+    await new Promise((r) => setTimeout(r, 150));
+    avisoTrasCopiar = texto(doc, "#aviso");
+    check(avisoTrasCopiar.includes("portapapeles"),
+      `"Copiar imagen" avisa de que se copió al portapapeles (vio "${avisoTrasCopiar}")`);
   }
 
   console.log("\n═══ analisis.html ═══");
