@@ -11,26 +11,6 @@
         ],
         "perdedores": [
             {
-                "slug": "adrián",
-                "nombre": "Adrián"
-            },
-            {
-                "slug": "aitor",
-                "nombre": "Aitor"
-            },
-            {
-                "slug": "iván",
-                "nombre": "Iván"
-            },
-            {
-                "slug": "javi",
-                "nombre": "Javi"
-            },
-            {
-                "slug": "pau",
-                "nombre": "Pau"
-            },
-            {
                 "slug": "álvaro",
                 "nombre": "Álvaro"
             }
@@ -127,9 +107,9 @@
             "estado": "finished"
         },
         "16421052": {
-            "goles_local": 1,
+            "goles_local": 2,
             "goles_visitante": 1,
-            "estado": "inprogress"
+            "estado": "finished"
         },
         "16421061": {
             "goles_local": null,
@@ -177,6 +157,60 @@
             "slug": "carlos",
             "nombre": "Carlos",
             "insignias": [],
+            "aciertos_1x2": 2,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "elegible": true,
+            "ganador": false,
+            "perdedor": false,
+            "puntos": 2,
+            "pronosticados": 10,
+            "predicciones": {
+                "16421047": {
+                    "pronostico": "2-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "16421052": {
+                    "pronostico": "3-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                }
+            }
+        },
+        {
+            "slug": "iván",
+            "nombre": "Iván",
+            "insignias": [],
+            "aciertos_1x2": 1,
+            "aciertos_exactos": 1,
+            "bonus": 0,
+            "elegible": true,
+            "ganador": false,
+            "perdedor": false,
+            "puntos": 2,
+            "pronosticados": 10,
+            "predicciones": {
+                "16421047": {
+                    "pronostico": "1-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "16421052": {
+                    "pronostico": "2-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": true,
+                    "puntos": 2
+                }
+            }
+        },
+        {
+            "slug": "adrián",
+            "nombre": "Adrián",
+            "insignias": [],
             "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "bonus": 0,
@@ -187,7 +221,13 @@
             "pronosticados": 10,
             "predicciones": {
                 "16421047": {
-                    "pronostico": "2-1",
+                    "pronostico": "1-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "16421052": {
+                    "pronostico": "3-2",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
@@ -195,37 +235,16 @@
             }
         },
         {
-            "slug": "adrián",
-            "nombre": "Adrián",
-            "insignias": [],
-            "aciertos_1x2": 0,
-            "aciertos_exactos": 0,
-            "bonus": 0,
-            "elegible": true,
-            "ganador": false,
-            "perdedor": false,
-            "puntos": 0,
-            "pronosticados": 10,
-            "predicciones": {
-                "16421047": {
-                    "pronostico": "1-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                }
-            }
-        },
-        {
             "slug": "aitor",
             "nombre": "Aitor",
             "insignias": [],
-            "aciertos_1x2": 0,
+            "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "bonus": 0,
             "elegible": true,
             "ganador": false,
             "perdedor": false,
-            "puntos": 0,
+            "puntos": 1,
             "pronosticados": 10,
             "predicciones": {
                 "16421047": {
@@ -233,27 +252,12 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
-                }
-            }
-        },
-        {
-            "slug": "iván",
-            "nombre": "Iván",
-            "insignias": [],
-            "aciertos_1x2": 0,
-            "aciertos_exactos": 0,
-            "bonus": 0,
-            "elegible": true,
-            "ganador": false,
-            "perdedor": false,
-            "puntos": 0,
-            "pronosticados": 10,
-            "predicciones": {
-                "16421047": {
-                    "pronostico": "1-1",
-                    "acierto_1x2": false,
+                },
+                "16421052": {
+                    "pronostico": "1-0",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         },
@@ -261,13 +265,13 @@
             "slug": "javi",
             "nombre": "Javi",
             "insignias": [],
-            "aciertos_1x2": 0,
+            "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "bonus": 0,
             "elegible": true,
             "ganador": false,
             "perdedor": false,
-            "puntos": 0,
+            "puntos": 1,
             "pronosticados": 10,
             "predicciones": {
                 "16421047": {
@@ -275,6 +279,12 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
+                },
+                "16421052": {
+                    "pronostico": "2-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         },
@@ -282,13 +292,13 @@
             "slug": "pau",
             "nombre": "Pau",
             "insignias": [],
-            "aciertos_1x2": 0,
+            "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "bonus": 0,
             "elegible": true,
             "ganador": false,
             "perdedor": false,
-            "puntos": 0,
+            "puntos": 1,
             "pronosticados": 10,
             "predicciones": {
                 "16421047": {
@@ -296,6 +306,12 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
+                },
+                "16421052": {
+                    "pronostico": "2-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         },
@@ -313,6 +329,12 @@
             "pronosticados": 10,
             "predicciones": {
                 "16421047": {
+                    "pronostico": "1-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "16421052": {
                     "pronostico": "1-1",
                     "acierto_1x2": false,
                     "acierto_exacto": false,

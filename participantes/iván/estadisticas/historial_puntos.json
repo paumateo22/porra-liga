@@ -2,12 +2,12 @@
     "participante": "iván",
     "nombre": "Iván",
     "insignias": [],
-    "puntos_totales": 0,
-    "puntos_partidos": 0,
+    "puntos_totales": 2,
+    "puntos_partidos": 2,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 0,
-    "aciertos_exactos": 0,
+    "aciertos_1x2": 1,
+    "aciertos_exactos": 1,
     "partidos_pronosticados": 10,
     "jornadas_jugadas": 1,
     "jornadas_ganadas": 0,
@@ -15,9 +15,9 @@
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
-            "puntos": 0,
-            "aciertos_1x2": 0,
-            "aciertos_exactos": 0,
+            "puntos": 2,
+            "aciertos_1x2": 1,
+            "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
             "perdedor": false,
@@ -29,6 +29,14 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
+                },
+                "Sevilla_vs_Rayo": {
+                    "id": 16421052,
+                    "pronostico": "2-1",
+                    "real": "2-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         }

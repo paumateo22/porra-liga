@@ -1,6 +1,6 @@
 {
     "competicion": "LaLiga 2026-27",
-    "generado": "2026-08-15T23:11:26",
+    "generado": "2026-08-15T23:53:59",
     "jornadas_calculadas": [
         "J01"
     ],
@@ -12,8 +12,62 @@
     "clasificacion": [
         {
             "puesto": 1,
+            "slug": "iván",
+            "nombre": "Iván",
+            "insignias": [],
+            "puntos_totales": 2,
+            "puntos_partidos": 2,
+            "bonus_rendimiento": 0,
+            "puntos_ganador_perdedor": 0,
+            "aciertos_1x2": 1,
+            "aciertos_exactos": 1,
+            "partidos_pronosticados": 10,
+            "jornadas_jugadas": 1,
+            "jornadas_ganadas": 0,
+            "jornadas_perdidas": 0,
+            "punto_partida": 0,
+            "por_jornada": {
+                "J01": {
+                    "puntos": 2,
+                    "aciertos_1x2": 1,
+                    "aciertos_exactos": 1,
+                    "bonus": 0,
+                    "ganador": false,
+                    "perdedor": false
+                }
+            }
+        },
+        {
+            "puesto": 2,
             "slug": "carlos",
             "nombre": "Carlos",
+            "insignias": [],
+            "puntos_totales": 2,
+            "puntos_partidos": 2,
+            "bonus_rendimiento": 0,
+            "puntos_ganador_perdedor": 0,
+            "aciertos_1x2": 2,
+            "aciertos_exactos": 0,
+            "partidos_pronosticados": 10,
+            "jornadas_jugadas": 1,
+            "jornadas_ganadas": 0,
+            "jornadas_perdidas": 0,
+            "punto_partida": 0,
+            "por_jornada": {
+                "J01": {
+                    "puntos": 2,
+                    "aciertos_1x2": 2,
+                    "aciertos_exactos": 0,
+                    "bonus": 0,
+                    "ganador": false,
+                    "perdedor": false
+                }
+            }
+        },
+        {
+            "puesto": 3,
+            "slug": "adrián",
+            "nombre": "Adrián",
             "insignias": [],
             "puntos_totales": 1,
             "puntos_partidos": 1,
@@ -38,42 +92,15 @@
             }
         },
         {
-            "puesto": 2,
-            "slug": "adrián",
-            "nombre": "Adrián",
-            "insignias": [],
-            "puntos_totales": 0,
-            "puntos_partidos": 0,
-            "bonus_rendimiento": 0,
-            "puntos_ganador_perdedor": 0,
-            "aciertos_1x2": 0,
-            "aciertos_exactos": 0,
-            "partidos_pronosticados": 10,
-            "jornadas_jugadas": 1,
-            "jornadas_ganadas": 0,
-            "jornadas_perdidas": 0,
-            "punto_partida": 0,
-            "por_jornada": {
-                "J01": {
-                    "puntos": 0,
-                    "aciertos_1x2": 0,
-                    "aciertos_exactos": 0,
-                    "bonus": 0,
-                    "ganador": false,
-                    "perdedor": false
-                }
-            }
-        },
-        {
-            "puesto": 3,
+            "puesto": 4,
             "slug": "aitor",
             "nombre": "Aitor",
             "insignias": [],
-            "puntos_totales": 0,
-            "puntos_partidos": 0,
+            "puntos_totales": 1,
+            "puntos_partidos": 1,
             "bonus_rendimiento": 0,
             "puntos_ganador_perdedor": 0,
-            "aciertos_1x2": 0,
+            "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "partidos_pronosticados": 10,
             "jornadas_jugadas": 1,
@@ -82,35 +109,8 @@
             "punto_partida": 0,
             "por_jornada": {
                 "J01": {
-                    "puntos": 0,
-                    "aciertos_1x2": 0,
-                    "aciertos_exactos": 0,
-                    "bonus": 0,
-                    "ganador": false,
-                    "perdedor": false
-                }
-            }
-        },
-        {
-            "puesto": 4,
-            "slug": "iván",
-            "nombre": "Iván",
-            "insignias": [],
-            "puntos_totales": 0,
-            "puntos_partidos": 0,
-            "bonus_rendimiento": 0,
-            "puntos_ganador_perdedor": 0,
-            "aciertos_1x2": 0,
-            "aciertos_exactos": 0,
-            "partidos_pronosticados": 10,
-            "jornadas_jugadas": 1,
-            "jornadas_ganadas": 0,
-            "jornadas_perdidas": 0,
-            "punto_partida": 0,
-            "por_jornada": {
-                "J01": {
-                    "puntos": 0,
-                    "aciertos_1x2": 0,
+                    "puntos": 1,
+                    "aciertos_1x2": 1,
                     "aciertos_exactos": 0,
                     "bonus": 0,
                     "ganador": false,
@@ -123,11 +123,11 @@
             "slug": "javi",
             "nombre": "Javi",
             "insignias": [],
-            "puntos_totales": 0,
-            "puntos_partidos": 0,
+            "puntos_totales": 1,
+            "puntos_partidos": 1,
             "bonus_rendimiento": 0,
             "puntos_ganador_perdedor": 0,
-            "aciertos_1x2": 0,
+            "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "partidos_pronosticados": 10,
             "jornadas_jugadas": 1,
@@ -136,8 +136,8 @@
             "punto_partida": 0,
             "por_jornada": {
                 "J01": {
-                    "puntos": 0,
-                    "aciertos_1x2": 0,
+                    "puntos": 1,
+                    "aciertos_1x2": 1,
                     "aciertos_exactos": 0,
                     "bonus": 0,
                     "ganador": false,
@@ -150,11 +150,11 @@
             "slug": "pau",
             "nombre": "Pau",
             "insignias": [],
-            "puntos_totales": 0,
-            "puntos_partidos": 0,
+            "puntos_totales": 1,
+            "puntos_partidos": 1,
             "bonus_rendimiento": 0,
             "puntos_ganador_perdedor": 0,
-            "aciertos_1x2": 0,
+            "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "partidos_pronosticados": 10,
             "jornadas_jugadas": 1,
@@ -163,8 +163,8 @@
             "punto_partida": 0,
             "por_jornada": {
                 "J01": {
-                    "puntos": 0,
-                    "aciertos_1x2": 0,
+                    "puntos": 1,
+                    "aciertos_1x2": 1,
                     "aciertos_exactos": 0,
                     "bonus": 0,
                     "ganador": false,
