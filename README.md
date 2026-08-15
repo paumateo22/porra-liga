@@ -341,7 +341,12 @@ Reenviar la misma jornada **fusiona** con lo ya guardado. La consola lo desglosa
 - **nuevos**: partidos que no habías pronosticado antes
 - **corregidos**: cambiaste el marcador y el partido aún no se había jugado
 - **bloqueados**: el partido ya se jugó, se conserva tu pronóstico original
-- **fuera de plazo**: el partido ya se jugó y no tenías nada guardado; se descarta
+- **fuera de plazo**: el partido ya se jugó, no tenías nada guardado, Y el
+  fichero se generó DESPUÉS de que empezara (el campo `"generado"`, que pone
+  `pronosticar.html` al descargar, se compara con la hora del partido). Si el
+  fichero se generó antes del pitido pero tarda en llegar al buzón — porque
+  el admin lo sube más tarde, por ejemplo — se acepta igual: llegar tarde al
+  buzón no es lo mismo que pronosticar tarde.
 
 ### Ajustar las normas
 
@@ -365,18 +370,12 @@ Tras cualquier cambio, ejecuta la opción 4 y la clasificación se recalcula ent
 
 ### Quién puede ver los pronósticos ya enviados
 
-En `pronosticar.html`, escribir un nombre recupera directamente los
-pronósticos que esa persona ya haya mandado (para completar los partidos que
-le falten de una jornada, o corregir uno que aún no haya empezado). No hace
-falta ninguna clave ni verificación — es abierto para todo el grupo, así
-que cualquiera que escriba el nombre de otra persona ve lo que esa persona
-haya pronosticado ya. Es una decisión deliberada de diseño para simplificar
-el uso entre amigos, no un descuido.
-
-`pronosticos_jugador.html` (la vista pública de pronósticos por jugador y
-jornada) sigue ocultando el marcador de los partidos que aún no se han
-jugado, sea quien sea el jugador cuyo enlace abras — solo se revela cuando
-el partido termina de verdad.
+Es abierto para todo el grupo, sin ninguna clave ni verificación: en
+`pronosticar.html`, escribir un nombre recupera directamente los pronósticos
+que esa persona ya haya mandado; y en `pronosticos_jugador.html` (la vista
+pública por jugador y jornada), el pronóstico se ve siempre, tanto si el
+partido ya se jugó como si no. Es una decisión deliberada de diseño para
+simplificar el uso entre amigos, no un descuido.
 
 ### Insignias de jugadores (🏆, ⭐...)
 

@@ -90,22 +90,22 @@ async function datosDeJornada(clave) {
   const partidos = CALENDARIO[clave] || [];
   if (!partidos.length) return null;
 
-  // Solo se muestra el PRONÓSTICO de lo que ya está evaluado (al menos ese
-  // partido jugado), que llega descodificado y puntuado desde el servidor.
-  // Los pronósticos de partidos sin jugar NUNCA se leen ni se descodifican
-  // aquí — esta página es pública y cualquiera puede entrar con el enlace
-  // de cualquier jugador, así que enseñar picks futuros dejaría copiarse.
-  //
-  // El RESULTADO real (marcador, en directo o no) es otra cosa: eso sale
-  // siempre de realidad_oficial.json directamente, no del análisis — el
-  // análisis de una jornada no existe hasta que algún partido suyo termina
-  // del todo, así que un partido en directo sin ningún otro ya acabado no
-  // se vería si dependiera solo de eso.
+  // Lo evaluado (partido ya jugado) llega puntuado desde el análisis, con
+  // colores de acierto/fallo. Lo que aún no se ha jugado se lee directo del
+  // fichero del jugador — ya no hace falta descodificar nada, el marcador se
+  // guarda en claro.
   const analisis = await cargar(`data/analisis/${clave}.json`, null);
   const jugadorAnalisis = analisis?.jugadores.find((j) => j.slug === SLUG);
 
+  const crudo = await cargar(`participantes/${SLUG}/pronosticos/${clave}.json`, null);
+  const prediccionesCrudas = Object.fromEntries(
+    (crudo?.predicciones || [])
+      .filter((p) => p.goles_local != null && p.goles_visitante != null)
+      .map((p) => [p.id, { gl: p.goles_local, gv: p.goles_visitante }])
+  );
+
   const reales = Object.fromEntries((REALIDAD[clave] || []).map((p) => [p.id, p]));
-  return { partidos, jugadorAnalisis, reales };
+  return { partidos, jugadorAnalisis, prediccionesCrudas, reales };
 }
 
 function bloqueJornadaCompleto(clave, datos) {
@@ -114,7 +114,7 @@ function bloqueJornadaCompleto(clave, datos) {
       <h3 id="ancla-${clave}">Jornada ${parseInt(clave.slice(1))}</h3>
     </div>
     <div class="lista-partidos">
-      ${datos.partidos.map((p) => bloquePartido(p, datos.jugadorAnalisis, datos.reales[p.id])).join("")}
+      ${datos.partidos.map((p) => bloquePartido(p, datos.jugadorAnalisis, datos.prediccionesCrudas, datos.reales[p.id])).join("")}
     </div>`;
 }
 
@@ -138,30 +138,24 @@ async function pintarTodas() {
   desplazarSiExiste(document.getElementById("ancla-" + CLAVES[indice]), { behavior: "smooth", block: "nearest" });
 }
 
-function bloquePartido(p, jugadorAnalisis, real) {
+function bloquePartido(p, jugadorAnalisis, prediccionesCrudas, real) {
   const terminado = real && real.estado === "finished";
 
   let lineaPronostico;
-  if (terminado && jugadorAnalisis) {
-    // Este partido concreto ya se jugó (aunque otros de la misma jornada
-    // sigan pendientes) — su pronóstico ya es historia, se puede revelar.
-    const pred = jugadorAnalisis.predicciones[p.id];
-    if (pred) {
-      const clase = pred.acierto_exacto ? "pred-exact" : pred.acierto_1x2 ? "pred-1x2" : "pred-miss";
-      lineaPronostico = `<div class="linea-pronostico">
-        <span class="etiqueta">Su pronóstico:</span>
-        <span class="${clase}">${pred.pronostico}</span>
-        <span class="${clase}">(${pred.puntos > 0 ? "+" + pred.puntos : "0"} pts)</span>
-      </div>`;
-    } else {
-      lineaPronostico = `<div class="linea-pronostico"><span class="etiqueta">Su pronóstico:</span> <span class="pred-miss">sin pronosticar</span></div>`;
-    }
+  const predEvaluada = jugadorAnalisis?.predicciones[p.id];
+  if (predEvaluada) {
+    // Partido ya evaluado: se conoce si acertó o no, así que se colorea.
+    const clase = predEvaluada.acierto_exacto ? "pred-exact" : predEvaluada.acierto_1x2 ? "pred-1x2" : "pred-miss";
+    lineaPronostico = `<div class="linea-pronostico">
+      <span class="etiqueta">Su pronóstico:</span>
+      <span class="${clase}">${predEvaluada.pronostico}</span>
+      <span class="${clase}">(${predEvaluada.puntos > 0 ? "+" + predEvaluada.puntos : "0"} pts)</span>
+    </div>`;
   } else {
-    // Partido todavía sin jugar: nunca se muestra el pronóstico, sea de quien
-    // sea la página que estés mirando — solo se revela cuando el partido
-    // termina y pasa a formar parte del análisis. No importa que otros
-    // partidos de la misma jornada ya se hayan jugado: este en concreto no.
-    lineaPronostico = `<div class="linea-pronostico"><span class="nota">🔒 Se revela cuando termine el partido</span></div>`;
+    const crudo = prediccionesCrudas[p.id];
+    lineaPronostico = crudo
+      ? `<div class="linea-pronostico"><span class="etiqueta">Su pronóstico:</span> ${crudo.gl}-${crudo.gv}</div>`
+      : `<div class="linea-pronostico"><span class="etiqueta">Su pronóstico:</span> <span class="pred-miss">sin pronosticar</span></div>`;
   }
 
   return `

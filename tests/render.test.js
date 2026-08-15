@@ -568,6 +568,16 @@ async function probarEscenarioReset() {
       "pinta todos los partidos de la jornada pedida");
     check(cuenta(doc, ".linea-pronostico") === calendario[claveEvaluada].length,
       "cada partido lleva su línea de pronóstico");
+    check(!texto(doc, ".lista-partidos").includes("🔒"),
+      "no aparece ningún candado — los pronósticos se ven siempre, jugado el partido o no");
+
+    const claveMax = Object.keys(calendario).sort((a, b) => parseInt(a.slice(1)) - parseInt(b.slice(1))).pop();
+    const { doc: docFutura, errores: erroresFutura } = await render("pronosticos_jugador.html", `?j=${lider.slug}&jornada=${claveMax}`);
+    check(erroresFutura.length === 0, `sin errores de JS en una jornada sin evaluar ${erroresFutura[0] || ""}`);
+    check(!texto(docFutura, ".lista-partidos").includes("🔒"),
+      `tampoco hay candados en ${claveMax}, que ni siquiera se ha evaluado`);
+    check(/\d-\d/.test(texto(docFutura, ".lista-partidos")),
+      `en ${claveMax} se ve al menos un marcador real (los pronósticos guardados, no bloqueados)`);
 
     const columnas = dom.window.getComputedStyle(doc.querySelector(".lista-partidos")).gridTemplateColumns;
     check(columnas.trim().split(/\s+/).length === 2,

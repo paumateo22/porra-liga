@@ -110,11 +110,11 @@ def jugar(realidad, clave, ids, marcadores):
     guardar_json(REALIDAD_FILE, realidad)
 
 
-def escribir_entrada(nombre, jornada, predicciones):
+def escribir_entrada(nombre, jornada, predicciones, generado=None):
     guardar_json(ENTRADAS_DIR / f"J{jornada:02d}_{nombre}.json", {
         "participante": nombre,
         "jornada": jornada,
-        "generado": datetime.now().isoformat(timespec="seconds"),
+        "generado": generado or datetime.now().isoformat(timespec="seconds"),
         "predicciones": predicciones,
     })
 
@@ -268,6 +268,30 @@ def main():
         "el punto de partida no cuenta como jornada ganada ni perdida")
     check(pau2["puntos_totales"] == 28,
         "el punto de partida de un jugador nuevo no altera los totales de los demás")
+
+    print("\n═══ G: pronóstico legítimo que llega tarde al buzón (generado a tiempo) ═══")
+    # Un partido de la J10 (distinto del adelantado) se juega, sin que nadie
+    # lo haya pronosticado todavía en el servidor — como si el fichero se
+    # hubiera generado a tiempo pero tardara en subirse al buzón.
+    otro_j10 = j10[1]
+    jugar(realidad, "J10", {otro_j10["id"]}, {otro_j10["id"]: (1, 0)})
+
+    fecha_partido = datetime.fromisoformat(otro_j10["fecha"])
+    generado_a_tiempo = (fecha_partido - timedelta(hours=2)).isoformat(timespec="seconds")
+    generado_tarde = (fecha_partido + timedelta(hours=1)).isoformat(timespec="seconds")
+
+    escribir_entrada("Nuria", 10, [pred(otro_j10, 1, 0, "J10")], generado=generado_a_tiempo)
+    escribir_entrada("Manolo", 10, [pred(otro_j10, 1, 0, "J10")], generado=generado_tarde)
+    correr("03_ingesta_pronosticos.py")
+
+    guardado_nuria = guardadas("nuria", "J10")
+    check(otro_j10["id"] in guardado_nuria,
+        "se acepta un pronóstico cuyo 'generado' es ANTERIOR al partido, aunque sea la primera vez que se ingiere y el partido ya haya terminado")
+
+    ruta_manolo = PARTICIPANTES_DIR / "manolo" / "pronosticos" / "J10.json"
+    guardado_manolo = guardadas("manolo", "J10") if ruta_manolo.exists() else {}
+    check(otro_j10["id"] not in guardado_manolo,
+        "un pronóstico genuinamente tarde ('generado' POSTERIOR al partido) se sigue rechazando")
 
     print("\n" + "─" * 62)
     if fallos:

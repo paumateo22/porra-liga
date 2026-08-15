@@ -158,6 +158,14 @@ def procesar_fichero(ruta, calendario, realidad, sin_cierre=False):
     s = registrar_participante(participante)
     destino = carpeta_participante(s) / "pronosticos" / f"{clave}.json"
 
+    # Cuándo se generó de verdad este fichero (lo pone pronosticar.html al
+    # descargarlo) — es la prueba de que el pronóstico se hizo a tiempo,
+    # aunque el fichero tarde en llegar al buzón y se ingiera después de que
+    # el partido ya haya terminado. Sin esto, cualquier pronóstico cuya
+    # PRIMERA ingesta llegue tarde (aunque se hubiera hecho a tiempo) se
+    # rechazaría como si hubiera llegado después del pitido inicial.
+    generado = contenido.get("generado")
+
     # Fusión: lo ya enviado manda en los partidos que ya han empezado.
     previo = cargar_json(destino, {})
     guardadas = {p["id"]: p for p in previo.get("predicciones", [])}
@@ -170,8 +178,16 @@ def procesar_fichero(ruta, calendario, realidad, sin_cierre=False):
             if pid in guardadas:
                 conservadas += 1
                 continue  # el partido ya se jugó: no se toca
+            if generado and pred.get("fecha") and generado <= pred["fecha"]:
+                # Bloqueado AHORA, pero el fichero prueba que se generó
+                # antes de que el partido empezara: llegó a tiempo, solo el
+                # buzón tardó en procesarlo. Se acepta como si no estuviera
+                # bloqueado.
+                nuevas += 1
+                guardadas[pid] = pred
+                continue
             rechazadas += 1
-            continue  # llega tarde y no había nada guardado
+            continue  # llega tarde de verdad y no había nada guardado
         if pid in guardadas:
             anterior = (guardadas[pid].get("goles_local"), guardadas[pid].get("goles_visitante"))
             if anterior != (pred["goles_local"], pred["goles_visitante"]):

@@ -3,8 +3,24 @@
     "nombre": "Carlos",
     "jornada": 1,
     "generado": "2026-08-15T17:27:08",
-    "ingerido": "2026-08-15T22:46:08",
+    "ingerido": "2026-08-15T23:11:19",
     "predicciones": [
+        {
+            "id": 16421047,
+            "local": "Alavés",
+            "visitante": "Getafe",
+            "fecha": "2026-08-15T19:30:00",
+            "goles_local": 2,
+            "goles_visitante": 1
+        },
+        {
+            "id": 16421052,
+            "local": "Sevilla",
+            "visitante": "Rayo",
+            "fecha": "2026-08-15T21:30:00",
+            "goles_local": 3,
+            "goles_visitante": 0
+        },
         {
             "id": 16421061,
             "local": "Real Racing Club",

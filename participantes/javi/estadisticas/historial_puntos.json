@@ -8,7 +8,7 @@
     "puntos_ganador_perdedor": 0,
     "aciertos_1x2": 0,
     "aciertos_exactos": 0,
-    "partidos_pronosticados": 8,
+    "partidos_pronosticados": 10,
     "jornadas_jugadas": 1,
     "jornadas_ganadas": 0,
     "jornadas_perdidas": 0,
@@ -21,7 +21,16 @@
             "bonus": 0,
             "ganador": false,
             "perdedor": false,
-            "detalle": {}
+            "detalle": {
+                "Alavés_vs_Getafe": {
+                    "id": 16421047,
+                    "pronostico": "1-3",
+                    "real": "3-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                }
+            }
         }
     }
 }
