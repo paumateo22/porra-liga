@@ -33,7 +33,6 @@ from utils import (  # noqa: E402
     cargar_json,
     clave_jornada,
     guardar_json,
-    ofuscar_marcador,
 )
 
 EQUIPOS = [
@@ -113,7 +112,7 @@ def derivar_realidad(calendario, ahora=AHORA):
 def generar_predicciones(calendario, realidad):
     """Predicciones de los 5 jugadores ficticios para TODO el calendario,
     coherentes con la habilidad de cada uno. Se escriben en entradas/ como
-    si vinieran de pronosticar.html (marcador ya ofuscado)."""
+    si vinieran de pronosticar.html (en claro, tal como se guardan de verdad)."""
     for nombre, habilidad, constancia in JUGADORES:
         for clave, partidos in calendario.items():
             if random.random() > constancia + 0.3:
@@ -127,7 +126,7 @@ def generar_predicciones(calendario, realidad):
                     gl, gv = random.randint(0, 3), random.randint(0, 2)
                 else:
                     gl, gv = random.randint(0, 4), random.randint(0, 3)
-                predicciones.append({**p, "marcador": ofuscar_marcador(gl, gv, p["fecha"], clave)})
+                predicciones.append({**p, "goles_local": gl, "goles_visitante": gv})
 
             if predicciones:
                 guardar_json(ENTRADAS_DIR / f"{clave}_{nombre}.json", {

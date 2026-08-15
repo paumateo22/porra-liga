@@ -25,7 +25,6 @@ from utils import (
     cargar_json,
     carpeta_participante,
     clave_jornada,
-    desofuscar_marcador,
     guardar_json,
     slug,
 )
@@ -93,14 +92,14 @@ def validar(contenido, ruta, calendario):
             errores.append(f"predicción #{i + 1}: partido id {pid} duplicado")
             continue
 
-        token = pred.get("marcador")
-        if token is None:
+        gl, gv = pred.get("goles_local"), pred.get("goles_visitante")
+        if gl is None or gv is None:
             continue  # partido sin rellenar: se ignora sin ser error
         oficial = partidos_oficiales[pid]
         try:
-            gl, gv = desofuscar_marcador(token, oficial["fecha"], clave)
-        except Exception:  # noqa: BLE001
-            errores.append(f"predicción #{i + 1}: marcador ilegible o manipulado")
+            gl, gv = int(gl), int(gv)
+        except (TypeError, ValueError):
+            errores.append(f"predicción #{i + 1}: el marcador no es un número válido")
             continue
         if gl < 0 or gv < 0 or gl > 30 or gv > 30:
             errores.append(f"predicción #{i + 1}: marcador fuera de rango ({gl}-{gv})")
@@ -112,7 +111,8 @@ def validar(contenido, ruta, calendario):
             "local": oficial["local"],
             "visitante": oficial["visitante"],
             "fecha": oficial["fecha"],
-            "marcador": token,  # se guarda ofuscado tal cual llegó, nunca en claro
+            "goles_local": gl,
+            "goles_visitante": gv,
         })
 
     if not limpias:
@@ -173,7 +173,8 @@ def procesar_fichero(ruta, calendario, realidad, sin_cierre=False):
             rechazadas += 1
             continue  # llega tarde y no había nada guardado
         if pid in guardadas:
-            if guardadas[pid]["marcador"] != pred["marcador"]:
+            anterior = (guardadas[pid].get("goles_local"), guardadas[pid].get("goles_visitante"))
+            if anterior != (pred["goles_local"], pred["goles_visitante"]):
                 actualizadas += 1
         else:
             nuevas += 1

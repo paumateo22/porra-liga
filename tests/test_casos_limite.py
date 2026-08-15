@@ -31,9 +31,7 @@ from utils import (  # noqa: E402
     REALIDAD_FILE,
     REPORTES_DIR,
     cargar_json,
-    desofuscar_marcador,
     guardar_json,
-    ofuscar_marcador,
 )
 
 EQUIPOS = ["Barcelona", "Real Madrid", "Atlético", "Athletic", "Real Sociedad",
@@ -101,11 +99,9 @@ def jugar(realidad, clave, ids, marcadores):
 
     Ojo: NO se toca la fecha. En la vida real la hora de un partido no
     cambia solo porque termine — solo cambia si de verdad se aplaza o se
-    adelanta, y eso ya lo simulan por separado los escenarios A y B. Cambiar
-    la fecha aquí también rompía la ofuscación del marcador (que ahora usa
-    la fecha como parte de la clave): el bloqueo de "partido ya empezado" ya
-    lo decide el campo "estado" de realidad_oficial.json, no hace falta
-    tocar la fecha para conseguirlo."""
+    adelanta, y eso ya lo simulan por separado los escenarios A y B. El
+    bloqueo de "partido ya empezado" lo decide el campo "estado" de
+    realidad_oficial.json, no hace falta tocar la fecha para conseguirlo."""
     for p in realidad[clave]:
         if p["id"] in ids:
             gl, gv = marcadores[p["id"]]
@@ -125,7 +121,7 @@ def escribir_entrada(nombre, jornada, predicciones):
 
 def pred(p, gl, gv, clave):
     return {"id": p["id"], "local": p["local"], "visitante": p["visitante"],
-            "fecha": p["fecha"], "marcador": ofuscar_marcador(gl, gv, p["fecha"], clave)}
+            "fecha": p["fecha"], "goles_local": gl, "goles_visitante": gv}
 
 
 def correr(script):
@@ -139,7 +135,7 @@ def correr(script):
 
 def guardadas(slug_jugador, clave):
     datos = cargar_json(PARTICIPANTES_DIR / slug_jugador / "pronosticos" / f"{clave}.json")
-    return {p["id"]: desofuscar_marcador(p["marcador"], p["fecha"], clave) for p in datos["predicciones"]}
+    return {p["id"]: (p["goles_local"], p["goles_visitante"]) for p in datos["predicciones"]}
 
 
 def main():

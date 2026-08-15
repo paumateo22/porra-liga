@@ -1,77 +1,87 @@
 {
-    "participante": "Aitor",
+    "participante": "Adrián",
     "jornada": 1,
-    "generado": "2026-08-15T17:21:50",
+    "generado": "2026-08-15T15:37:34",
     "predicciones": [
         {
             "id": 16421047,
             "local": "Alavés",
             "visitante": "Getafe",
             "fecha": "2026-08-15T19:30:00",
-            "marcador": "٤٩٠٧١٧山٧八水٧٣水火"
+            "goles_local": 1,
+            "goles_visitante": 1
         },
         {
             "id": 16421052,
             "local": "Sevilla",
             "visitante": "Rayo",
             "fecha": "2026-08-15T21:30:00",
-            "marcador": "٤٩٠水٧٧水土八山木٣水火"
+            "goles_local": 3,
+            "goles_visitante": 2
         },
         {
             "id": 16421061,
             "local": "Real Racing Club",
             "visitante": "Villarreal",
             "fecha": "2026-08-16T17:00:00",
-            "marcador": "٤٩٠٠٥٧山٤八٢٥٣水火"
+            "goles_local": 1,
+            "goles_visitante": 3
         },
         {
             "id": 16421053,
             "local": "Espanyol",
             "visitante": "Levante UD",
             "fecha": "2026-08-16T19:00:00",
-            "marcador": "٤٩٠٧٩٧木火八土金٣水火"
+            "goles_local": 1,
+            "goles_visitante": 1
         },
         {
             "id": 16421050,
             "local": "Deportivo de A Coruña",
             "visitante": "Elche",
             "fecha": "2026-08-17T21:00:00",
-            "marcador": "٤٩٠٤٦٧٩٧八٨٦٣水火"
+            "goles_local": 1,
+            "goles_visitante": 0
         },
         {
             "id": 16421055,
             "local": "Atlético",
             "visitante": "Málaga CF",
             "fecha": "2026-08-19T21:00:00",
-            "marcador": "٤٩٠٧٢٧١٠八٦٩٣水火"
+            "goles_local": 2,
+            "goles_visitante": 0
         },
         {
             "id": 16421049,
             "local": "Valencia",
             "visitante": "Betis",
             "fecha": "2026-08-25T21:00:00",
-            "marcador": "٤٩٠٧土٧٦水八٣山٣水火"
+            "goles_local": 2,
+            "goles_visitante": 2
         },
         {
             "id": 16421051,
             "local": "Real Madrid",
             "visitante": "Real Sociedad",
             "fecha": "2026-08-26T21:00:00",
-            "marcador": "٤٩٠٠٦٧٢٥八金٨٣水火"
+            "goles_local": 3,
+            "goles_visitante": 2
         },
         {
             "id": 16815992,
             "local": "Celta",
             "visitante": "Osasuna",
             "fecha": "2026-08-27T20:30:00",
-            "marcador": "٤٩٠٥土٧木木八金٥٣水火"
+            "goles_local": 2,
+            "goles_visitante": 1
         },
         {
             "id": 16421059,
             "local": "FC Barcelona",
             "visitante": "Athletic",
             "fecha": "2026-08-27T21:00:00",
-            "marcador": "٤٩٠٢٩٧金٤八٩水٣水火"
+            "goles_local": 3,
+            "goles_visitante": 1
         }
     ]
 }

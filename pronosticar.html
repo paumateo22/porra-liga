@@ -118,13 +118,11 @@ function pintar() {
   precargarGuardados();
 }
 
-/* Pronósticos ya enviados de la jornada visible: {id: {gl, gv}}, ya
-   descodificados en memoria (el fichero guarda el marcador ofuscado). */
+/* Pronósticos ya enviados de la jornada visible: {id: {gl, gv}}. */
 let PREVIOS = {};
 
-/* Si ya mandaste esta jornada, se recuperan tus marcadores del repo. El
-   fichero guarda el marcador ofuscado (campo "marcador"); se descodifica
-   aquí, en memoria, solo para rellenar los campos del formulario. */
+/* Si ya mandaste esta jornada, se recuperan tus marcadores del repo (van en
+   claro en el fichero) para rellenar los campos del formulario. */
 async function precargarGuardados() {
   const nombre = document.getElementById("nombre").value;
   if (!nombre.trim()) return;
@@ -139,17 +137,16 @@ async function precargarGuardados() {
 
   PREVIOS = Object.fromEntries(
     datos.predicciones
-      .filter((p) => p.marcador)
-      .map((p) => [p.id, desofuscarMarcador(p.marcador, p.fecha, clave)])
+      .filter((p) => p.goles_local != null && p.goles_visitante != null)
+      .map((p) => [p.id, { gl: p.goles_local, gv: p.goles_visitante }])
   );
 
   for (const pred of datos.predicciones) {
-    if (!pred.marcador) continue;
-    const { gl, gv } = desofuscarMarcador(pred.marcador, pred.fecha, clave);
+    if (pred.goles_local == null || pred.goles_visitante == null) continue;
     const l = document.querySelector(`input[data-id="${pred.id}"][data-lado="l"]`);
     const v = document.querySelector(`input[data-id="${pred.id}"][data-lado="v"]`);
-    if (l && !l.value) l.value = gl;
-    if (v && !v.value) v.value = gv;
+    if (l && !l.value) l.value = pred.goles_local;
+    if (v && !v.value) v.value = pred.goles_visitante;
   }
   marcarBloqueados();
   avisar(`Recuperados tus pronósticos ya enviados de ${clave}. Puedes cambiar los partidos que aún no se han jugado.`, "ok");
@@ -172,15 +169,18 @@ function marcarBloqueados() {
   }
 }
 
-/* El marcador va ofuscado en el JSON final (campo "marcador"), mezclado con
-   la fecha del partido y la jornada — así el mismo 2-1 en dos partidos
-   distintos no produce el mismo texto, y no hay patrón que reconocer a
-   simple vista. No es cifrado real: la función que lo revierte vive en este
-   mismo layout.js, público. Ver la nota en desofuscarMarcador.
+/* El marcador se guarda en claro (campos "goles_local"/"goles_visitante").
+   Los ficheros ya no van cifrados de ninguna forma — se pedía solo evitar
+   que el marcador se leyera a simple vista antes de que se jugara el
+   partido, pero eso ahora se garantiza de otra manera: la propia web nunca
+   enseña el pronóstico de un partido futuro a nadie (ver
+   pronosticos_jugador.html), así que ocultar el número en el fichero ya no
+   aportaba nada, solo complejidad.
 
    Se incluyen los 10 partidos de la jornada siempre, aunque no los hayas
-   rellenado todos — los que faltan van con "marcador": null, para que se
-   vea en el propio fichero qué partidos quedaron sin pronosticar. */
+   rellenado todos — los que faltan van con "goles_local"/"goles_visitante"
+   a null, para que se vea en el propio fichero qué partidos quedaron sin
+   pronosticar. */
 function recogerPredicciones() {
   const clave = CLAVES[indice];
   const predicciones = [];
@@ -195,20 +195,20 @@ function recogerPredicciones() {
     if (l.disabled) {
       const previo = PREVIOS[p.id];
       if (previo) {
-        predicciones.push({ ...base, marcador: ofuscarMarcador(previo.gl, previo.gv, p.fecha, clave) });
+        predicciones.push({ ...base, goles_local: previo.gl, goles_visitante: previo.gv });
         conservados++;
       } else {
-        predicciones.push({ ...base, marcador: null });
+        predicciones.push({ ...base, goles_local: null, goles_visitante: null });
       }
       continue;
     }
 
     if (l.value === "" || v.value === "") {
       incompletos++;
-      predicciones.push({ ...base, marcador: null });
+      predicciones.push({ ...base, goles_local: null, goles_visitante: null });
       continue;
     }
-    predicciones.push({ ...base, marcador: ofuscarMarcador(parseInt(l.value), parseInt(v.value), p.fecha, clave) });
+    predicciones.push({ ...base, goles_local: parseInt(l.value), goles_visitante: parseInt(v.value) });
   }
   return { predicciones, incompletos, conservados };
 }
@@ -219,7 +219,7 @@ function descargar() {
 
   const clave = CLAVES[indice];
   const { predicciones, incompletos, conservados } = recogerPredicciones();
-  const rellenados = predicciones.filter((p) => p.marcador).length;
+  const rellenados = predicciones.filter((p) => p.goles_local != null && p.goles_visitante != null).length;
 
   if (!rellenados) return avisar("No has rellenado ningún marcador.", "error");
   if (incompletos && !confirm(`Te faltan ${incompletos} partidos por rellenar. ¿Descargar igualmente?`)) return;
@@ -253,19 +253,49 @@ function avisar(texto, clase = "") {
 
 /* Dibuja en un <canvas> todos los pronósticos de la jornada visible, tal
    como están puestos en el formulario ahora mismo (partido sin rellenar =
-   "—"). No se usa ninguna librería: solo Canvas 2D nativo. */
-function dibujarImagenJornada() {
+   "—"). No se usa ninguna librería: solo Canvas 2D nativo.
+
+   Los escudos vienen del CDN de SofaScore. Si su servidor no permite el uso
+   en canvas entre dominios (CORS), el navegador "mancha" el lienzo y
+   exportarlo (descargar/copiar) lanza un error de seguridad — por eso se
+   intenta cargarlos con crossOrigin, y si al exportar falla igualmente, se
+   repite el dibujo sin escudos como red de seguridad (conEscudos=false) en
+   vez de dejar la función rota. */
+async function cargarImagenEscudo(idEscudo) {
+  if (!idEscudo) return null;
+  return new Promise((resolve) => {
+    const img = new Image();
+    img.crossOrigin = "anonymous";
+    img.onload = () => resolve(img);
+    img.onerror = () => resolve(null);
+    img.src = `https://img.sofascore.com/api/v1/team/${idEscudo}/image`;
+  });
+}
+
+async function dibujarImagenJornada(conEscudos = true) {
   const nombre = document.getElementById("nombre").value.trim() || "Sin nombre";
   const clave = CLAVES[indice];
-  const partidos = CALENDARIO[clave].map((p) => {
+  const partidosCalendario = CALENDARIO[clave];
+  const partidos = partidosCalendario.map((p) => {
     const l = document.querySelector(`input[data-id="${p.id}"][data-lado="l"]`);
     const v = document.querySelector(`input[data-id="${p.id}"][data-lado="v"]`);
     const marcador = (l?.value !== "" && v?.value !== "" && l?.value != null && v?.value != null)
       ? `${l.value} - ${v.value}` : "—";
-    return { local: p.local, visitante: p.visitante, marcador };
+    return {
+      local: p.local, visitante: p.visitante, marcador,
+      idEscudoLocal: p.id_escudo_local, idEscudoVisitante: p.id_escudo_visitante,
+    };
   });
 
-  const ANCHO = 640, ALTO_FILA = 46, ALTO_CABECERA = 96, ALTO_PIE = 26;
+  const escudos = {};
+  if (conEscudos) {
+    await Promise.all(partidosCalendario.flatMap((p) => [
+      cargarImagenEscudo(p.id_escudo_local).then((img) => { escudos[p.id_escudo_local] = img; }),
+      cargarImagenEscudo(p.id_escudo_visitante).then((img) => { escudos[p.id_escudo_visitante] = img; }),
+    ]));
+  }
+
+  const ANCHO = 640, ALTO_FILA = 46, ALTO_CABECERA = 96, ALTO_PIE = 26, TAM_ESCUDO = 26;
   const alto = ALTO_CABECERA + partidos.length * ALTO_FILA + ALTO_PIE;
 
   const canvas = document.createElement("canvas");
@@ -293,6 +323,7 @@ function dibujarImagenJornada() {
   partidos.forEach((p, i) => {
     const y = ALTO_CABECERA + i * ALTO_FILA;
     const centroY = y + ALTO_FILA / 2 + 5;
+    const yEscudo = y + (ALTO_FILA - TAM_ESCUDO) / 2;
 
     ctx.fillStyle = i % 2 === 0 ? "#1c1c1c" : "#232323";
     ctx.fillRect(0, y, ANCHO, ALTO_FILA);
@@ -300,7 +331,13 @@ function dibujarImagenJornada() {
     ctx.font = "15px 'Segoe UI', Tahoma, sans-serif";
     ctx.fillStyle = "#fff";
     ctx.textAlign = "right";
-    ctx.fillText(recortarTexto(ctx, p.local, 220), ANCHO / 2 - 46, centroY);
+    const nombreLocal = recortarTexto(ctx, p.local, 190);
+    const anchoLocal = ctx.measureText(nombreLocal).width;
+    ctx.fillText(nombreLocal, ANCHO / 2 - 46, centroY);
+    const escudoLocal = escudos[p.idEscudoLocal];
+    if (escudoLocal) {
+      ctx.drawImage(escudoLocal, ANCHO / 2 - 46 - anchoLocal - 8 - TAM_ESCUDO, yEscudo, TAM_ESCUDO, TAM_ESCUDO);
+    }
 
     ctx.font = "bold 17px 'Segoe UI', Tahoma, sans-serif";
     ctx.fillStyle = p.marcador === "—" ? "#666" : "goldenrod";
@@ -310,7 +347,13 @@ function dibujarImagenJornada() {
     ctx.font = "15px 'Segoe UI', Tahoma, sans-serif";
     ctx.fillStyle = "#fff";
     ctx.textAlign = "left";
-    ctx.fillText(recortarTexto(ctx, p.visitante, 220), ANCHO / 2 + 46, centroY);
+    const nombreVisitante = recortarTexto(ctx, p.visitante, 190);
+    ctx.fillText(nombreVisitante, ANCHO / 2 + 46, centroY);
+    const escudoVisitante = escudos[p.idEscudoVisitante];
+    if (escudoVisitante) {
+      const anchoVisitante = ctx.measureText(nombreVisitante).width;
+      ctx.drawImage(escudoVisitante, ANCHO / 2 + 46 + anchoVisitante + 8, yEscudo, TAM_ESCUDO, TAM_ESCUDO);
+    }
   });
 
   ctx.fillStyle = "#555";
@@ -330,11 +373,22 @@ function recortarTexto(ctx, texto, anchoMax) {
   return recortado + "…";
 }
 
-function descargarImagen() {
-  const canvas = dibujarImagenJornada();
+async function descargarImagen() {
+  avisar("Generando la imagen…", "");
+  let canvas = await dibujarImagenJornada(true);
+  let urlDatos;
+  try {
+    urlDatos = canvas.toDataURL("image/png");
+  } catch (e) {
+    // El CDN de los escudos no permite exportar el canvas (CORS) — se repite
+    // sin escudos, para que la función no se quede rota por completo.
+    canvas = await dibujarImagenJornada(false);
+    urlDatos = canvas.toDataURL("image/png");
+  }
+
   const nombre = (document.getElementById("nombre").value.trim() || "pronosticos").replace(/\s+/g, "");
   const a = document.createElement("a");
-  a.href = canvas.toDataURL("image/png");
+  a.href = urlDatos;
   a.download = `${CLAVES[indice]}_${nombre}.png`;
   document.body.appendChild(a);
   a.click();
@@ -342,16 +396,27 @@ function descargarImagen() {
   avisar(`Descargada ${a.download}.`, "ok");
 }
 
-function copiarImagen() {
-  const canvas = dibujarImagenJornada();
-  canvas.toBlob(async (blob) => {
-    try {
-      await navigator.clipboard.write([new ClipboardItem({ "image/png": blob })]);
-      avisar("Imagen copiada al portapapeles — ya puedes pegarla donde quieras.", "ok");
-    } catch (e) {
-      avisar("Tu navegador no permite copiar la imagen directamente — usa \"Descargar imagen\" en su lugar.", "error");
-    }
-  }, "image/png");
+function _canvasABlob(canvas) {
+  return new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
+}
+
+async function copiarImagen() {
+  avisar("Generando la imagen…", "");
+  let canvas = await dibujarImagenJornada(true);
+  let blob = await _canvasABlob(canvas);
+  // Un canvas "manchado" por CORS da un blob vacío (null) al exportar, en
+  // vez de lanzar una excepción — se comprueba así y se repite sin escudos.
+  if (!blob) {
+    canvas = await dibujarImagenJornada(false);
+    blob = await _canvasABlob(canvas);
+  }
+
+  try {
+    await navigator.clipboard.write([new ClipboardItem({ "image/png": blob })]);
+    avisar("Imagen copiada al portapapeles — ya puedes pegarla donde quieras.", "ok");
+  } catch (e) {
+    avisar("Tu navegador no permite copiar la imagen directamente — usa \"Descargar imagen\" en su lugar.", "error");
+  }
 }
 
 

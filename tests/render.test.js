@@ -64,12 +64,13 @@ async function render(fichero, busqueda = "") {
       // portapapeles — con un contexto falso que registra las llamadas basta
       // para comprobar que la lógica de dibujo no revienta y usa los datos
       // correctos, sin necesitar el paquete nativo "canvas".
-      win.__llamadasCanvas = { fillText: [], fillRect: [] };
+      win.__llamadasCanvas = { fillText: [], fillRect: [], drawImage: [] };
       win.HTMLCanvasElement.prototype.getContext = function (tipo) {
         if (tipo !== "2d") return null;
         return {
           fillRect: (...a) => win.__llamadasCanvas.fillRect.push(a),
           fillText: (...a) => win.__llamadasCanvas.fillText.push(a),
+          drawImage: (...a) => win.__llamadasCanvas.drawImage.push(a),
           measureText: (t) => ({ width: t.length * 8 }),
           createLinearGradient: () => ({ addColorStop: () => {} }),
           set fillStyle(v) {}, set font(v) {}, set textAlign(v) {},
@@ -78,6 +79,14 @@ async function render(fichero, busqueda = "") {
       win.HTMLCanvasElement.prototype.toDataURL = () => "data:image/png;base64,FALSO";
       win.HTMLCanvasElement.prototype.toBlob = function (cb) { cb(new win.Blob(["x"], { type: "image/png" })); };
       win.ClipboardItem = win.ClipboardItem || class { constructor(o) { this.o = o; } };
+      // jsdom trae su propio Image que NUNCA dispara onload/onerror de
+      // verdad (no carga nada por red) — hay que sustituirlo sin "||",
+      // o la promesa que espera la carga de escudos se queda colgada para
+      // siempre. Este stub falso dispara onload al instante.
+      win.Image = class {
+        set src(v) { this._src = v; setTimeout(() => this.onload && this.onload(), 0); }
+        get src() { return this._src; }
+      };
       win.navigator.clipboard = win.navigator.clipboard || { write: async () => {} };
       win.addEventListener("unhandledrejection", (e) => errores.push(String(e.reason)));
     },
@@ -369,7 +378,7 @@ async function probarEscenarioReset() {
       "muestra la fecha de cada partido en el formulario de pronósticos");
   }
 
-  console.log("\n═══ pronosticar.html · precarga de pronósticos ya enviados (marcador ofuscado) ═══");
+  console.log("\n═══ pronosticar.html · precarga de pronósticos ya enviados ═══");
   {
     const jugadorPrueba = clas.clasificacion[0];
     const rutaGuardado = path.join(RAIZ, `participantes/${jugadorPrueba.slug}/pronosticos/${claveActual}.json`);
@@ -384,24 +393,41 @@ async function probarEscenarioReset() {
       await new Promise((r) => setTimeout(r, 250));
 
       const guardado = leer(`participantes/${jugadorPrueba.slug}/pronosticos/${claveActual}.json`);
-      check(!texto(doc, "body").includes(guardado.predicciones[0]?.marcador || "\0"),
-        "el token ofuscado no aparece nunca como texto plano en la página");
-
       const primeraPred = guardado.predicciones.find((p) =>
         doc.querySelector(`input[data-id="${p.id}"][data-lado="l"]`));
       if (primeraPred) {
-        const { gl, gv } = dom.window.desofuscarMarcador(primeraPred.marcador, primeraPred.fecha, claveActual);
         const lInput = doc.querySelector(`input[data-id="${primeraPred.id}"][data-lado="l"]`);
         const vInput = doc.querySelector(`input[data-id="${primeraPred.id}"][data-lado="v"]`);
-        check(lInput && String(lInput.value) === String(gl) && vInput && String(vInput.value) === String(gv),
-          `escribir el nombre de ${jugadorPrueba.nombre} recupera y descodifica sus pronósticos ya enviados (${gl}-${gv})`);
+        check(lInput && String(lInput.value) === String(primeraPred.goles_local)
+            && vInput && String(vInput.value) === String(primeraPred.goles_visitante),
+          `escribir el nombre de ${jugadorPrueba.nombre} recupera sus pronósticos ya enviados `
+          + `(${primeraPred.goles_local}-${primeraPred.goles_visitante})`);
       }
     }
   }
 
   console.log("\n═══ pronosticar.html · imagen de la jornada (PNG / portapapeles) ═══");
   {
-    const { doc, dom, errores } = await render("pronosticar.html");
+    // El calendario de prueba (simulador) no trae ids de escudo reales — se
+    // añaden unos falsos solo para esta comprobación, y se restauran al
+    // terminar, para poder verificar que si HAY escudo se dibuja de verdad.
+    const rutaCal = path.join(RAIZ, "config/calendario.json");
+    const backupCal = fs.readFileSync(rutaCal, "utf8");
+    const calConEscudos = JSON.parse(backupCal);
+    for (const clave in calConEscudos) {
+      calConEscudos[clave].forEach((p, i) => {
+        p.id_escudo_local = 1000 + i;
+        p.id_escudo_visitante = 2000 + i;
+      });
+    }
+    fs.writeFileSync(rutaCal, JSON.stringify(calConEscudos, null, 4));
+
+    let doc, dom, errores;
+    try {
+      ({ doc, dom, errores } = await render("pronosticar.html"));
+    } finally {
+      fs.writeFileSync(rutaCal, backupCal);
+    }
     check(errores.length === 0, `sin errores de JS ${errores[0] || ""}`);
 
     doc.getElementById("nombre").value = "Prueba";
@@ -411,7 +437,7 @@ async function probarEscenarioReset() {
       doc.querySelector(`input[data-id="${primerInput.dataset.id}"][data-lado="v"]`).value = "1";
     }
 
-    const canvas = dom.window.dibujarImagenJornada();
+    const canvas = await dom.window.dibujarImagenJornada();
     check(canvas.width === 640, "la imagen tiene un ancho fijo de 640px");
     check(dom.window.__llamadasCanvas.fillText.some(([t]) => t.includes("Prueba")),
       "la imagen incluye el nombre del jugador");
@@ -420,16 +446,18 @@ async function probarEscenarioReset() {
       "la imagen incluye la jornada");
     check(dom.window.__llamadasCanvas.fillText.some(([t]) => t === "3 - 1"),
       "el marcador relleno (3 - 1) aparece en la imagen");
+    check(dom.window.__llamadasCanvas.drawImage.length === calendario[claveActual].length * 2,
+      `se dibujan 2 escudos por partido (vio ${dom.window.__llamadasCanvas.drawImage.length} `
+      + `de ${calendario[claveActual].length * 2} esperados)`);
 
     let ficheroDescargado = null;
     dom.window.HTMLAnchorElement.prototype.click = function () { ficheroDescargado = this.download; };
-    dom.window.descargarImagen();
+    await dom.window.descargarImagen();
     check(/^J\d{2}_Prueba\.png$/.test(ficheroDescargado || ""),
       `"Descargar imagen" genera un nombre de fichero .png correcto (vio "${ficheroDescargado}")`);
 
     let avisoTrasCopiar = "";
-    dom.window.copiarImagen();
-    await new Promise((r) => setTimeout(r, 150));
+    await dom.window.copiarImagen();
     avisoTrasCopiar = texto(doc, "#aviso");
     check(avisoTrasCopiar.includes("portapapeles"),
       `"Copiar imagen" avisa de que se copió al portapapeles (vio "${avisoTrasCopiar}")`);

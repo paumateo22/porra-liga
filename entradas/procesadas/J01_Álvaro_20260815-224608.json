@@ -1,16 +1,30 @@
 {
-    "participante": "aitor",
-    "nombre": "Aitor",
+    "participante": "Álvaro",
     "jornada": 1,
-    "generado": "2026-08-15T17:21:50",
-    "ingerido": "2026-08-15T22:46:08",
+    "generado": "2026-08-15T17:08:39",
     "predicciones": [
+        {
+            "id": 16421047,
+            "local": "Alavés",
+            "visitante": "Getafe",
+            "fecha": "2026-08-15T19:30:00",
+            "goles_local": 1,
+            "goles_visitante": 1
+        },
+        {
+            "id": 16421052,
+            "local": "Sevilla",
+            "visitante": "Rayo",
+            "fecha": "2026-08-15T21:30:00",
+            "goles_local": 1,
+            "goles_visitante": 1
+        },
         {
             "id": 16421061,
             "local": "Real Racing Club",
             "visitante": "Villarreal",
             "fecha": "2026-08-16T17:00:00",
-            "goles_local": 0,
+            "goles_local": 1,
             "goles_visitante": 3
         },
         {
@@ -18,7 +32,7 @@
             "local": "Espanyol",
             "visitante": "Levante UD",
             "fecha": "2026-08-16T19:00:00",
-            "goles_local": 0,
+            "goles_local": 1,
             "goles_visitante": 0
         },
         {
@@ -26,8 +40,8 @@
             "local": "Deportivo de A Coruña",
             "visitante": "Elche",
             "fecha": "2026-08-17T21:00:00",
-            "goles_local": 2,
-            "goles_visitante": 0
+            "goles_local": 1,
+            "goles_visitante": 1
         },
         {
             "id": 16421055,
@@ -42,15 +56,15 @@
             "local": "Valencia",
             "visitante": "Betis",
             "fecha": "2026-08-25T21:00:00",
-            "goles_local": 0,
-            "goles_visitante": 2
+            "goles_local": 1,
+            "goles_visitante": 1
         },
         {
             "id": 16421051,
             "local": "Real Madrid",
             "visitante": "Real Sociedad",
             "fecha": "2026-08-26T21:00:00",
-            "goles_local": 3,
+            "goles_local": 2,
             "goles_visitante": 1
         },
         {
@@ -58,15 +72,15 @@
             "local": "Celta",
             "visitante": "Osasuna",
             "fecha": "2026-08-27T20:30:00",
-            "goles_local": 1,
-            "goles_visitante": 2
+            "goles_local": 2,
+            "goles_visitante": 1
         },
         {
             "id": 16421059,
             "local": "FC Barcelona",
             "visitante": "Athletic",
             "fecha": "2026-08-27T21:00:00",
-            "goles_local": 2,
+            "goles_local": 3,
             "goles_visitante": 1
         }
     ]

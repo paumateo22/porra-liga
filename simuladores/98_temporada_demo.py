@@ -36,7 +36,6 @@ from utils import (  # noqa: E402
     cargar_settings,
     clave_jornada,
     guardar_json,
-    ofuscar_marcador,
     signo,
     slug,
 )
@@ -212,7 +211,7 @@ def generar_participantes(calendario, realidad, hasta_jornada):
                 gl, gv = resultado
                 predicciones.append({
                     "id": p["id"], "local": p["local"], "visitante": p["visitante"],
-                    "fecha": p["fecha"], "marcador": ofuscar_marcador(gl, gv, p["fecha"], clave),
+                    "fecha": p["fecha"], "goles_local": gl, "goles_visitante": gv,
                 })
 
             if not predicciones:

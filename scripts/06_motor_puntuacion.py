@@ -30,7 +30,6 @@ from utils import (
     cargar_settings,
     carpeta_participante,
     clave_partido,
-    desofuscar_marcador,
     guardar_json,
     listar_participantes,
     signo,
@@ -42,9 +41,9 @@ ESTADO_FINALIZADO = "finished"
 def cargar_pronosticos(slug_jugador):
     """Devuelve {'J01': {id_partido: (gl, gv)}} de un jugador.
 
-    El marcador se guarda ofuscado en el fichero (campo "marcador"); aquí es
-    donde se descodifica, del lado del servidor, para poder puntuar. Los
-    pronósticos ilegibles (fichero manipulado a mano) se ignoran sin más.
+    El marcador se guarda en claro en el fichero (campos "goles_local" y
+    "goles_visitante"). Los pronósticos ilegibles (fichero manipulado a
+    mano, o de un formato viejo que ya no se usa) se ignoran sin más.
     """
     carpeta = carpeta_participante(slug_jugador) / "pronosticos"
     salida = {}
@@ -55,11 +54,12 @@ def cargar_pronosticos(slug_jugador):
         clave = fichero.stem
         marcadores = {}
         for p in datos.get("predicciones", []):
-            if p.get("marcador") is None:
+            gl, gv = p.get("goles_local"), p.get("goles_visitante")
+            if gl is None or gv is None:
                 continue
             try:
-                marcadores[p["id"]] = desofuscar_marcador(p["marcador"], p["fecha"], clave)
-            except Exception:  # noqa: BLE001
+                marcadores[p["id"]] = (int(gl), int(gv))
+            except (TypeError, ValueError):
                 continue
         salida[clave] = marcadores
     return salida
