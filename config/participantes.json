@@ -1,3 +1,34 @@
 {
-    "participantes": []
+    "participantes": [
+        {
+            "slug": "adrián",
+            "nombre": "Adrián",
+            "alta": "2026-08-15T22:02:19"
+        },
+        {
+            "slug": "aitor",
+            "nombre": "Aitor",
+            "alta": "2026-08-15T22:02:19"
+        },
+        {
+            "slug": "carlos",
+            "nombre": "Carlos",
+            "alta": "2026-08-15T22:02:19"
+        },
+        {
+            "slug": "iván",
+            "nombre": "Iván",
+            "alta": "2026-08-15T22:02:19"
+        },
+        {
+            "slug": "javi",
+            "nombre": "Javi",
+            "alta": "2026-08-15T22:02:19"
+        },
+        {
+            "slug": "álvaro",
+            "nombre": "Álvaro",
+            "alta": "2026-08-15T22:02:19"
+        }
+    ]
 }

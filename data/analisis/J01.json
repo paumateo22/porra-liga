@@ -1,0 +1,226 @@
+{
+    "clave": "J01",
+    "jornada": 1,
+    "cerrada": false,
+    "resultado_jornada": null,
+    "partidos": [
+        {
+            "id": 16421047,
+            "local": "Alavés",
+            "visitante": "Getafe",
+            "id_escudo_local": 2885,
+            "id_escudo_visitante": 2859,
+            "fecha": "2026-08-15T19:30:00"
+        },
+        {
+            "id": 16421052,
+            "local": "Sevilla",
+            "visitante": "Rayo",
+            "id_escudo_local": 2833,
+            "id_escudo_visitante": 2818,
+            "fecha": "2026-08-15T21:30:00"
+        },
+        {
+            "id": 16421061,
+            "local": "Real Racing Club",
+            "visitante": "Villarreal",
+            "id_escudo_local": 2835,
+            "id_escudo_visitante": 2819,
+            "fecha": "2026-08-16T17:00:00"
+        },
+        {
+            "id": 16421053,
+            "local": "Espanyol",
+            "visitante": "Levante UD",
+            "id_escudo_local": 2814,
+            "id_escudo_visitante": 2849,
+            "fecha": "2026-08-16T19:00:00"
+        },
+        {
+            "id": 16421050,
+            "local": "Deportivo de A Coruña",
+            "visitante": "Elche",
+            "id_escudo_local": 2832,
+            "id_escudo_visitante": 2846,
+            "fecha": "2026-08-17T21:00:00"
+        },
+        {
+            "id": 16421055,
+            "local": "Atlético",
+            "visitante": "Málaga CF",
+            "id_escudo_local": 2836,
+            "id_escudo_visitante": 2830,
+            "fecha": "2026-08-19T21:00:00"
+        },
+        {
+            "id": 16421049,
+            "local": "Valencia",
+            "visitante": "Betis",
+            "id_escudo_local": 2828,
+            "id_escudo_visitante": 2816,
+            "fecha": "2026-08-25T21:00:00"
+        },
+        {
+            "id": 16421051,
+            "local": "Real Madrid",
+            "visitante": "Real Sociedad",
+            "id_escudo_local": 2829,
+            "id_escudo_visitante": 2824,
+            "fecha": "2026-08-26T21:00:00"
+        },
+        {
+            "id": 16815992,
+            "local": "Celta",
+            "visitante": "Osasuna",
+            "id_escudo_local": 2821,
+            "id_escudo_visitante": 2820,
+            "fecha": "2026-08-27T20:30:00"
+        },
+        {
+            "id": 16421059,
+            "local": "FC Barcelona",
+            "visitante": "Athletic",
+            "id_escudo_local": 2817,
+            "id_escudo_visitante": 2825,
+            "fecha": "2026-08-27T21:00:00"
+        }
+    ],
+    "resultados": {
+        "16421047": {
+            "goles_local": 3,
+            "goles_visitante": 0,
+            "estado": "finished"
+        },
+        "16421052": {
+            "goles_local": 0,
+            "goles_visitante": 1,
+            "estado": "inprogress"
+        },
+        "16421061": {
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        "16421053": {
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        "16421050": {
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        "16421055": {
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        "16421049": {
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        "16421051": {
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        "16815992": {
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        "16421059": {
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        }
+    },
+    "jugadores": [
+        {
+            "slug": "adrián",
+            "nombre": "Adrián",
+            "insignias": [],
+            "aciertos_1x2": 0,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "elegible": true,
+            "ganador": false,
+            "perdedor": false,
+            "puntos": 0,
+            "pronosticados": 8,
+            "predicciones": {}
+        },
+        {
+            "slug": "aitor",
+            "nombre": "Aitor",
+            "insignias": [],
+            "aciertos_1x2": 0,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "elegible": true,
+            "ganador": false,
+            "perdedor": false,
+            "puntos": 0,
+            "pronosticados": 8,
+            "predicciones": {}
+        },
+        {
+            "slug": "carlos",
+            "nombre": "Carlos",
+            "insignias": [],
+            "aciertos_1x2": 0,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "elegible": true,
+            "ganador": false,
+            "perdedor": false,
+            "puntos": 0,
+            "pronosticados": 8,
+            "predicciones": {}
+        },
+        {
+            "slug": "iván",
+            "nombre": "Iván",
+            "insignias": [],
+            "aciertos_1x2": 0,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "elegible": true,
+            "ganador": false,
+            "perdedor": false,
+            "puntos": 0,
+            "pronosticados": 8,
+            "predicciones": {}
+        },
+        {
+            "slug": "javi",
+            "nombre": "Javi",
+            "insignias": [],
+            "aciertos_1x2": 0,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "elegible": true,
+            "ganador": false,
+            "perdedor": false,
+            "puntos": 0,
+            "pronosticados": 8,
+            "predicciones": {}
+        },
+        {
+            "slug": "álvaro",
+            "nombre": "Álvaro",
+            "insignias": [],
+            "aciertos_1x2": 0,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "elegible": true,
+            "ganador": false,
+            "perdedor": false,
+            "puntos": 0,
+            "pronosticados": 8,
+            "predicciones": {}
+        }
+    ]
+}

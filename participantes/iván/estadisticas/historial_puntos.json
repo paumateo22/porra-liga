@@ -1,0 +1,27 @@
+{
+    "participante": "iván",
+    "nombre": "Iván",
+    "insignias": [],
+    "puntos_totales": 0,
+    "puntos_partidos": 0,
+    "bonus_rendimiento": 0,
+    "puntos_ganador_perdedor": 0,
+    "aciertos_1x2": 0,
+    "aciertos_exactos": 0,
+    "partidos_pronosticados": 8,
+    "jornadas_jugadas": 1,
+    "jornadas_ganadas": 0,
+    "jornadas_perdidas": 0,
+    "punto_partida": 0,
+    "por_jornada": {
+        "J01": {
+            "puntos": 0,
+            "aciertos_1x2": 0,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "ganador": false,
+            "perdedor": false,
+            "detalle": {}
+        }
+    }
+}
