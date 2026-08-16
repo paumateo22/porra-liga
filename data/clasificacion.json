@@ -1,6 +1,6 @@
 {
     "competicion": "LaLiga 2026-27",
-    "generado": "2026-08-16T19:43:42",
+    "generado": "2026-08-16T20:47:20",
     "jornadas_calculadas": [
         "J01"
     ],
@@ -71,38 +71,6 @@
         },
         {
             "puesto": 3,
-            "slug": "pau",
-            "nombre": "Pau",
-            "insignias": [
-                {
-                    "emoji": "🏆",
-                    "descripcion": "Liga 2023/24"
-                }
-            ],
-            "puntos_totales": 3,
-            "puntos_partidos": 3,
-            "bonus_rendimiento": 0,
-            "puntos_ganador_perdedor": 0,
-            "aciertos_1x2": 2,
-            "aciertos_exactos": 1,
-            "partidos_pronosticados": 10,
-            "jornadas_jugadas": 1,
-            "jornadas_ganadas": 0,
-            "jornadas_perdidas": 0,
-            "punto_partida": 0,
-            "por_jornada": {
-                "J01": {
-                    "puntos": 3,
-                    "aciertos_1x2": 2,
-                    "aciertos_exactos": 1,
-                    "bonus": 0,
-                    "ganador": false,
-                    "perdedor": false
-                }
-            }
-        },
-        {
-            "puesto": 4,
             "slug": "javi",
             "nombre": "Javi",
             "insignias": [],
@@ -129,34 +97,39 @@
             }
         },
         {
-            "puesto": 5,
-            "slug": "álvaro",
-            "nombre": "Álvaro",
-            "insignias": [],
-            "puntos_totales": 1,
+            "puesto": 4,
+            "slug": "pau",
+            "nombre": "Pau",
+            "insignias": [
+                {
+                    "emoji": "🏆",
+                    "descripcion": "Liga 2023/24"
+                }
+            ],
+            "puntos_totales": 2,
             "puntos_partidos": 2,
             "bonus_rendimiento": 0,
-            "puntos_ganador_perdedor": -1,
-            "aciertos_1x2": 1,
-            "aciertos_exactos": 1,
+            "puntos_ganador_perdedor": 0,
+            "aciertos_1x2": 2,
+            "aciertos_exactos": 0,
             "partidos_pronosticados": 10,
             "jornadas_jugadas": 1,
             "jornadas_ganadas": 0,
-            "jornadas_perdidas": 1,
+            "jornadas_perdidas": 0,
             "punto_partida": 0,
             "por_jornada": {
                 "J01": {
-                    "puntos": 1,
-                    "aciertos_1x2": 1,
-                    "aciertos_exactos": 1,
+                    "puntos": 2,
+                    "aciertos_1x2": 2,
+                    "aciertos_exactos": 0,
                     "bonus": 0,
                     "ganador": false,
-                    "perdedor": true
+                    "perdedor": false
                 }
             }
         },
         {
-            "puesto": 6,
+            "puesto": 5,
             "slug": "adrián",
             "nombre": "Adrián",
             "insignias": [],
@@ -183,9 +156,36 @@
             }
         },
         {
-            "puesto": 7,
+            "puesto": 6,
             "slug": "aitor",
             "nombre": "Aitor",
+            "insignias": [],
+            "puntos_totales": 0,
+            "puntos_partidos": 1,
+            "bonus_rendimiento": 0,
+            "puntos_ganador_perdedor": -1,
+            "aciertos_1x2": 1,
+            "aciertos_exactos": 0,
+            "partidos_pronosticados": 10,
+            "jornadas_jugadas": 1,
+            "jornadas_ganadas": 0,
+            "jornadas_perdidas": 1,
+            "punto_partida": 0,
+            "por_jornada": {
+                "J01": {
+                    "puntos": 0,
+                    "aciertos_1x2": 1,
+                    "aciertos_exactos": 0,
+                    "bonus": 0,
+                    "ganador": false,
+                    "perdedor": true
+                }
+            }
+        },
+        {
+            "puesto": 7,
+            "slug": "álvaro",
+            "nombre": "Álvaro",
             "insignias": [],
             "puntos_totales": 0,
             "puntos_partidos": 1,
