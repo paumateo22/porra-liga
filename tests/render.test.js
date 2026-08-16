@@ -138,14 +138,12 @@ async function probarEscenarioReset() {
     check(texto(docAn, "#banner-resultado").includes("Todavía no hay ningún partido evaluado"),
       "analisis.html indica que no hay ningún partido evaluado en vez de mostrar contenido viejo");
 
-    // La primera jornada del calendario (J01, al no haber clasificación con
-    // la que elegir "la última calculada") — cuántos participantes tienen
-    // de verdad un fichero de pronósticos guardado para ella.
-    const participantesConPronostico = leer("config/participantes.json").participantes
-      .filter((p) => fs.existsSync(path.join(RAIZ, `participantes/${p.slug}/pronosticos/J01.json`)))
-      .length;
-    check(cuenta(docAn, "#tabla-cruzada tbody tr") === participantesConPronostico,
-      `analisis.html enseña los pronósticos ya guardados (${participantesConPronostico}) aunque nada esté evaluado todavía, en vez de una tabla vacía`);
+    // Sin data/clasificacion.json (que es de donde sale ahora la lista de
+    // participantes, no de config/participantes.json — ver el bloque de
+    // abajo, "sin depender de config/participantes.json"), no hay ningún
+    // listado de a quién mostrar todavía.
+    check(cuenta(docAn, "#tabla-cruzada tbody tr") === 0,
+      "sin clasificación calculada todavía, la tabla de pronósticos se queda vacía (no hay de dónde sacar quién es cada uno)");
     check(cuenta(docAn, "#grafico-barras svg") === 0,
       "analisis.html no dibuja la gráfica de barras cuando la jornada no tiene datos");
   } finally {
@@ -519,6 +517,26 @@ async function probarEscenarioReset() {
     check(docJornada.querySelector(".celda-jornada-nav.activa")?.textContent.trim()
       === String(parseInt(claveNoDefault.slice(1))),
       `?jornada=${claveNoDefault} en la URL abre esa jornada, no la última calculada`);
+  }
+
+  console.log("\n═══ analisis.html · sin depender de config/participantes.json ═══");
+  {
+    // Reproduce el 404 real: config/participantes.json puede no estar
+    // publicado en el sitio (es un fichero interno del motor). La tabla de
+    // pronósticos tiene que seguir funcionando igual, usando solo
+    // data/clasificacion.json, que sí es público y ya se usa en todas partes.
+    const rutaParticipantes = path.join(RAIZ, "config/participantes.json");
+    const backupParticipantes = fs.readFileSync(rutaParticipantes, "utf8");
+    fs.unlinkSync(rutaParticipantes);
+
+    try {
+      const { doc, errores } = await render("analisis.html", `?jornada=${claveAnalisis}`);
+      check(errores.length === 0, `sin errores de JS aunque config/participantes.json no exista ${errores[0] || ""}`);
+      check(cuenta(doc, "#tabla-cruzada tbody tr") === nJugadores,
+        `la tabla de pronósticos sigue mostrando a los ${nJugadores} jugadores sin config/participantes.json`);
+    } finally {
+      fs.writeFileSync(rutaParticipantes, backupParticipantes);
+    }
   }
 
   console.log("\n═══ participantes.html ═══");

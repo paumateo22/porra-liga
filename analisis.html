@@ -61,7 +61,6 @@ let CLAVES = [], indice = 0, DATOS = null, barra = null, CALENDARIO = {}, REALID
 async function iniciar() {
   CALENDARIO = await cargar("config/calendario.json", {});
   REALIDAD = await cargar("data/resultados/realidad_oficial.json", {});
-  PARTICIPANTES = (await cargar("config/participantes.json", { participantes: [] })).participantes;
   CLAVES = ordenJornadas(Object.keys(CALENDARIO));
 
   if (!CLAVES.length) {
@@ -69,6 +68,13 @@ async function iniciar() {
       `<div class="vacio">Todavía no hay calendario. Ejecuta el script 00.</div>`;
     return;
   }
+
+  // La lista de participantes sale de data/clasificacion.json (ya incluye a
+  // TODOS los registrados, aunque tengan 0 puntos) — no de
+  // config/participantes.json, que es un fichero interno del motor y no
+  // tiene por qué estar publicado en el sitio.
+  const clas = await cargar("data/clasificacion.json", null);
+  PARTICIPANTES = clas ? clas.clasificacion.map((c) => ({ slug: c.slug, nombre: c.nombre })) : [];
 
   // Por defecto: la última jornada con análisis ya calculado. Si ninguna se
   // ha calculado todavía (temporada recién reseteada), se abre en la primera
@@ -80,7 +86,6 @@ async function iniciar() {
   if (jornadaPedida && CLAVES.includes(jornadaPedida)) {
     claveInicial = jornadaPedida;
   } else {
-    const clas = await cargar("data/clasificacion.json", null);
     const calculadas = clas ? ordenJornadas(clas.jornadas_calculadas.slice()) : [];
     claveInicial = calculadas.length ? calculadas[calculadas.length - 1] : CLAVES[0];
   }
