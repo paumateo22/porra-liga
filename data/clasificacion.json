@@ -1,6 +1,6 @@
 {
     "competicion": "LaLiga 2026-27",
-    "generado": "2026-08-16T21:04:03",
+    "generado": "2026-08-16T23:01:25",
     "jornadas_calculadas": [
         "J01"
     ],
@@ -41,12 +41,7 @@
             "puesto": 2,
             "slug": "iván",
             "nombre": "Iván",
-            "insignias": [
-                {
-                    "emoji": "⭐",
-                    "descripcion": "Mundial 2026"
-                }
-            ],
+            "insignias": [],
             "puntos_totales": 3,
             "puntos_partidos": 3,
             "bonus_rendimiento": 0,
@@ -100,12 +95,7 @@
             "puesto": 4,
             "slug": "pau",
             "nombre": "Pau",
-            "insignias": [
-                {
-                    "emoji": "🏆",
-                    "descripcion": "Liga 2023/24"
-                }
-            ],
+            "insignias": [],
             "puntos_totales": 2,
             "puntos_partidos": 2,
             "bonus_rendimiento": 0,

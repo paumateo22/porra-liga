@@ -28,6 +28,6 @@
 #
 # Ejemplos (descomenta y edita con tus jugadores reales):
 #
-Pau; Pau 🏆(Liga 2023/24)
-Iván; Iván ⭐(Mundial 2026)
+# Pau; Pau 🏆(Liga 2025/26)
+# Iván; Iván ⭐(Mundial 2026)
 # Miguel Dykan; Miguel Dykan 🏆(Liga 2025/26) ⭐(Mundial 2026)

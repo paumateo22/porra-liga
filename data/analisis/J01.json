@@ -203,12 +203,7 @@
         {
             "slug": "iván",
             "nombre": "Iván",
-            "insignias": [
-                {
-                    "emoji": "⭐",
-                    "descripcion": "Mundial 2026"
-                }
-            ],
+            "insignias": [],
             "aciertos_1x2": 2,
             "aciertos_exactos": 1,
             "bonus": 0,
@@ -286,12 +281,7 @@
         {
             "slug": "pau",
             "nombre": "Pau",
-            "insignias": [
-                {
-                    "emoji": "🏆",
-                    "descripcion": "Liga 2023/24"
-                }
-            ],
+            "insignias": [],
             "aciertos_1x2": 2,
             "aciertos_exactos": 0,
             "bonus": 0,
