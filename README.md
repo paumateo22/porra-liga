@@ -434,6 +434,36 @@ que esa persona no mande al menos un pronóstico real (y quede registrada en
 exactamente el mismo nombre que pusiste antes del `;`— aparecerá con su
 insignia puesta desde ese primer pronóstico.
 
+### "No hay participantes registrados" con la temporada ya en marcha
+
+Si el motor dice esto **después** de que ya hubiera una clasificación real
+con gente en ella, no es que se hayan borrado los participantes — es casi
+seguro una **condición de carrera**: dos ejecuciones del workflow (por
+ejemplo `ingesta.yml` y `actualizador.yml`, disparados casi a la vez) se
+han pisado los ficheros en el mismo runner, y el motor ha llegado a leer un
+`config/participantes.json` a medio escribir.
+
+Desde esta versión, los tres workflows (`ingesta.yml`, `actualizador.yml` y
+`cron_sofascore.yml`) comparten el mismo grupo de concurrencia — GitHub
+Actions los pone en cola en vez de dejarlos correr a la vez en el mismo
+runner, así que esto no debería volver a pasar. Y si por lo que sea vuelve a
+pasar, el motor ahora **falla fuerte** (código de salida distinto de cero)
+en ese caso concreto en vez de terminar en silencio con éxito sin haber
+actualizado nada — así el workflow sale en rojo en vez de colarse una
+actualización que no actualiza nada de verdad. (Si de verdad es la primera
+vez que se ejecuta, sin ninguna clasificación previa, sigue siendo un aviso
+normal sin fallar nada — eso no ha cambiado.)
+
+### Las insignias de `nombres.txt` y las tildes
+
+El nombre de antes del `;` en `config/nombres.txt` tiene que llevar las
+**mismas tildes** que esa persona usa de verdad al pronosticar. `"Ivan"` y
+`"Iván"` no son el mismo nombre para esto — generan un identificador interno
+distinto, así que si tu jugador firma como `"Iván"` y pones `"Ivan"` (sin
+tilde) en `nombres.txt`, la insignia nunca va a coincidir con él, por mucho
+que ya haya mandado pronósticos y aparezca en la clasificación. Mayúsculas y
+espacios sobrantes sí dan igual, solo las tildes importan.
+
 ### Partidos duplicados o jornadas cortas (calendario mal contado)
 
 Si una jornada sale con más o menos partidos de la cuenta (por ejemplo, 11 en

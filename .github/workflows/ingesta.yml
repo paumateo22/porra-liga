@@ -11,6 +11,13 @@ permissions:
   contents: write
   actions: write
 
+# Mismo grupo que actualizador.yml a propósito: ambos tocan los mismos
+# ficheros (config/participantes.json, data/clasificacion.json...) en el
+# mismo runner, así que no pueden correr a la vez sin arriesgarse a pisarse.
+concurrency:
+  group: actualizador-porra
+  cancel-in-progress: false
+
 jobs:
   ingerir:
     runs-on: self-hosted

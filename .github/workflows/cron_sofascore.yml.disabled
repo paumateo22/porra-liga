@@ -14,6 +14,14 @@ permissions:
   contents: write
   actions: write
 
+# Mismo grupo que actualizador.yml/ingesta.yml a propósito: los tres tocan
+# los mismos ficheros en el mismo runner, así que nunca deben correr a la
+# vez — o el motor puede llegar a leer un config/participantes.json a medio
+# escribir por otra ejecución y verlo vacío.
+concurrency:
+  group: actualizador-porra
+  cancel-in-progress: false
+
 jobs:
   actualizar-resultados:
     runs-on: self-hosted
@@ -73,4 +81,11 @@ jobs:
         if: steps.commit_step.outputs.has_changes == 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh workflow run actualizador.yml
+        run: |
+          $cabeceras = @{
+            Authorization = "Bearer $env:GITHUB_TOKEN"
+            Accept        = "application/vnd.github+json"
+          }
+          Invoke-RestMethod `
+            -Uri "https://api.github.com/repos/$env:GITHUB_REPOSITORY/actions/workflows/actualizador.yml/dispatches" `
+            -Method Post -Headers $cabeceras -Body (@{ ref = "main" } | ConvertTo-Json)

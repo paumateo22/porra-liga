@@ -7,6 +7,17 @@ on:
 permissions:
   contents: write
 
+# Sin esto, dos disparos casi a la vez (por ejemplo, un push a entradas/ que
+# llama a este workflow justo cuando ya había otra ejecución en marcha en el
+# mismo runner) pueden pisarse los ficheros a mitad de escritura — ahí es
+# donde el motor puede leer un config/participantes.json a medio escribir y
+# verlo vacío. "cancel-in-progress: false" hace que la nueva ejecución
+# ESPERE a que termine la anterior, en vez de correr en paralelo o cancelarla
+# a mitad (cancelarla a mitad podría dejar un commit a medias).
+concurrency:
+  group: actualizador-porra
+  cancel-in-progress: false
+
 jobs:
   motor:
     runs-on: self-hosted

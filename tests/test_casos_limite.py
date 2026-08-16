@@ -333,6 +333,24 @@ def main():
     check(pau_h2["puntos_partidos"] == 3,
         "vuelve a 3 (adelantado + G) — el partido en directo ya no acierta al cerrar con otro marcador")
 
+    print("\n═══ I: participantes.json vacío con clasificación ya calculada -> falla fuerte ═══")
+    # Simula el síntoma de una condición de carrera entre dos ejecuciones del
+    # workflow pisándose los ficheros: config/participantes.json aparece
+    # vacío aunque YA había una clasificación real calculada antes. El motor
+    # tiene que fallar con código de salida distinto de cero (para que el
+    # workflow salga en rojo), no terminar en silencio con éxito.
+    backup_participantes = PARTICIPANTES_FILE.read_text(encoding="utf-8")
+    try:
+        guardar_json(PARTICIPANTES_FILE, {"participantes": []})
+        r = subprocess.run([sys.executable, str(RAIZ / "scripts" / "06_motor_puntuacion.py")],
+                            capture_output=True, text=True)
+        check(r.returncode != 0,
+            f"el motor sale con código de error (vio {r.returncode}) en vez de terminar en silencio con éxito")
+        check("❌" in r.stdout and "participantes.json" in r.stdout,
+            "el motor explica en la consola por qué ha fallado")
+    finally:
+        PARTICIPANTES_FILE.write_text(backup_participantes, encoding="utf-8")
+
     print("\n" + "─" * 62)
     if fallos:
         print(f"❌ {len(fallos)} comprobación(es) fallida(s):")

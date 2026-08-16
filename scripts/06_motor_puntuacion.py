@@ -237,6 +237,25 @@ def main():
     participantes = listar_participantes()
 
     if not participantes:
+        clasificacion_previa = cargar_json(CLASIFICACION_FILE, {})
+        if clasificacion_previa and clasificacion_previa.get("clasificacion"):
+            # Ya existía una clasificación de verdad, con participantes,
+            # calculada en una ejecución anterior. Que AHORA
+            # config/participantes.json esté vacío no es "la temporada acaba
+            # de empezar" — es una señal de que algo ha ido mal. La sospecha
+            # número uno es una condición de carrera: dos ejecuciones del
+            # workflow (por ejemplo ingesta.yml y actualizador.yml) pisándose
+            # los ficheros en el mismo runner. Por eso aquí se falla FUERTE
+            # (código de salida distinto de cero) en vez de terminar en
+            # silencio con éxito: así el workflow sale en rojo y se nota al
+            # momento, en vez de colarse una actualización que no actualiza
+            # nada de verdad.
+            print("❌ config/participantes.json está vacío, pero ya había una clasificación previa con "
+                  f"{len(clasificacion_previa['clasificacion'])} participante(s).")
+            print("   Esto no debería pasar con la temporada en marcha — lo más probable es que dos")
+            print("   ejecuciones del workflow se hayan solapado en el mismo runner. Revisa el historial")
+            print("   de GitHub Actions por si hay ejecuciones simultáneas, y vuelve a lanzar este script.")
+            return 1
         print("⚠️  No hay participantes registrados todavía (config/participantes.json).")
         return 0
 

@@ -1,13 +1,18 @@
 {
     "participante": "pau",
     "nombre": "Pau",
-    "insignias": [],
-    "puntos_totales": 1,
-    "puntos_partidos": 1,
+    "insignias": [
+        {
+            "emoji": "🏆",
+            "descripcion": "Liga 2023/24"
+        }
+    ],
+    "puntos_totales": 3,
+    "puntos_partidos": 3,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 1,
-    "aciertos_exactos": 0,
+    "aciertos_1x2": 2,
+    "aciertos_exactos": 1,
     "partidos_pronosticados": 10,
     "jornadas_jugadas": 1,
     "jornadas_ganadas": 0,
@@ -15,9 +20,9 @@
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
-            "puntos": 1,
-            "aciertos_1x2": 1,
-            "aciertos_exactos": 0,
+            "puntos": 3,
+            "aciertos_1x2": 2,
+            "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
             "perdedor": false,
@@ -37,6 +42,22 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
+                },
+                "Real Racing Club_vs_Villarreal": {
+                    "id": 16421061,
+                    "pronostico": "1-2",
+                    "real": "2-2",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Espanyol_vs_Levante UD": {
+                    "id": 16421053,
+                    "pronostico": "1-0",
+                    "real": "1-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         }

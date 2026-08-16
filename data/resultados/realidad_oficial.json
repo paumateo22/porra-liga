@@ -3025,17 +3025,6 @@
             "estado": "notstarted"
         },
         {
-            "id": 16462680,
-            "local": "Athletic",
-            "visitante": "Valencia",
-            "id_escudo_local": 2825,
-            "id_escudo_visitante": 2828,
-            "fecha": "2027-03-14T20:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
             "id": 16462681,
             "local": "Betis",
             "visitante": "Levante UD",
@@ -3410,6 +3399,17 @@
             "visitante": "Real Sociedad",
             "id_escudo_local": 2818,
             "id_escudo_visitante": 2824,
+            "fecha": "2027-04-11T21:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
+            "id": 16462478,
+            "local": "Real Racing Club",
+            "visitante": "FC Barcelona",
+            "id_escudo_local": 2835,
+            "id_escudo_visitante": 2817,
             "fecha": "2027-04-11T21:00:00",
             "goles_local": null,
             "goles_visitante": null,

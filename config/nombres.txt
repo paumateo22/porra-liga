@@ -20,8 +20,14 @@
 # no lo da de alta ni lo hace aparecer en la clasificación — su línea se
 # ignora hasta que mande su primer pronóstico con ese mismo nombre.
 #
+# El nombre de antes del ";" tiene que llevar las MISMAS tildes que esa
+# persona usa de verdad en pronosticar.html. "Ivan" y "Iván" NO son el mismo
+# nombre para esto — si tu jugador firma como "Iván", pon "Iván" (con
+# tilde), o la insignia nunca va a coincidir con él por mucho que exista.
+# Mayúsculas y espacios sobrantes sí dan igual.
+#
 # Ejemplos (descomenta y edita con tus jugadores reales):
 #
 Pau; Pau 🏆(Liga 2023/24)
-Ivan; Ivan ⭐(Mundial 2026)
+Iván; Iván ⭐(Mundial 2026)
 # Miguel Dykan; Miguel Dykan 🏆(Liga 2025/26) ⭐(Mundial 2026)
