@@ -2353,17 +2353,6 @@
     ],
     "J22": [
         {
-            "id": 16462510,
-            "local": "Atlético",
-            "visitante": "Espanyol",
-            "id_escudo_local": 2836,
-            "id_escudo_visitante": 2814,
-            "fecha": "2027-01-31T20:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
             "id": 16462513,
             "local": "Betis",
             "visitante": "Elche",
@@ -3107,6 +3096,17 @@
             "visitante": "Celta",
             "id_escudo_local": 2820,
             "id_escudo_visitante": 2821,
+            "fecha": "2027-03-14T20:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
+            "id": 16462688,
+            "local": "Real Madrid",
+            "visitante": "Espanyol",
+            "id_escudo_local": 2829,
+            "id_escudo_visitante": 2814,
             "fecha": "2027-03-14T20:00:00",
             "goles_local": null,
             "goles_visitante": null,
