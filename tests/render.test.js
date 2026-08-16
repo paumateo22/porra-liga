@@ -135,10 +135,17 @@ async function probarEscenarioReset() {
     check(errAn.length === 0, `analisis.html sin errores de JS ${errAn[0] || ""}`);
     check(cuenta(docAn, "#barra-jornadas .celda-jornada-nav") === totalJornadasCalendario,
       `analisis.html muestra la barra con las ${totalJornadasCalendario} jornadas del calendario aunque no haya nada calculado`);
-    check(texto(docAn, "#banner-resultado").includes("Todavía no hay análisis"),
-      "analisis.html indica que no hay análisis en vez de mostrar contenido viejo");
-    check(cuenta(docAn, "#tabla-cruzada tr") === 0,
-      "analisis.html no pinta ninguna fila de tabla cuando la jornada no tiene datos");
+    check(texto(docAn, "#banner-resultado").includes("Todavía no hay ningún partido evaluado"),
+      "analisis.html indica que no hay ningún partido evaluado en vez de mostrar contenido viejo");
+
+    // La primera jornada del calendario (J01, al no haber clasificación con
+    // la que elegir "la última calculada") — cuántos participantes tienen
+    // de verdad un fichero de pronósticos guardado para ella.
+    const participantesConPronostico = leer("config/participantes.json").participantes
+      .filter((p) => fs.existsSync(path.join(RAIZ, `participantes/${p.slug}/pronosticos/J01.json`)))
+      .length;
+    check(cuenta(docAn, "#tabla-cruzada tbody tr") === participantesConPronostico,
+      `analisis.html enseña los pronósticos ya guardados (${participantesConPronostico}) aunque nada esté evaluado todavía, en vez de una tabla vacía`);
     check(cuenta(docAn, "#grafico-barras svg") === 0,
       "analisis.html no dibuja la gráfica de barras cuando la jornada no tiene datos");
   } finally {

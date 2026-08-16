@@ -56,11 +56,13 @@ montarCabecera({
   pagina: "analisis",
 });
 
-let CLAVES = [], indice = 0, DATOS = null, barra = null;
+let CLAVES = [], indice = 0, DATOS = null, barra = null, CALENDARIO = {}, REALIDAD = {}, PARTICIPANTES = [];
 
 async function iniciar() {
-  const calendario = await cargar("config/calendario.json", {});
-  CLAVES = ordenJornadas(Object.keys(calendario));
+  CALENDARIO = await cargar("config/calendario.json", {});
+  REALIDAD = await cargar("data/resultados/realidad_oficial.json", {});
+  PARTICIPANTES = (await cargar("config/participantes.json", { participantes: [] })).participantes;
+  CLAVES = ordenJornadas(Object.keys(CALENDARIO));
 
   if (!CLAVES.length) {
     document.getElementById("banner-resultado").innerHTML =
@@ -97,17 +99,19 @@ async function pintar() {
   barra.marcarActiva(clave);
 
   DATOS = await cargar(`data/analisis/${clave}.json`, null);
-  if (!DATOS) {
+  if (DATOS) {
+    pintarBanner();
+    pintarBarras();
+  } else {
     document.getElementById("banner-resultado").innerHTML =
-      `<div class="vacio">Todavía no hay análisis para la jornada ${parseInt(clave.slice(1))}: no se ha jugado ningún partido.</div>`;
-    document.getElementById("tabla-cruzada").innerHTML = "";
+      `<div class="vacio">Todavía no hay ningún partido evaluado en la jornada ${parseInt(clave.slice(1))} — en cuanto empiece o termine alguno, aquí saldrá quién va ganando o perdiendo.</div>`;
     document.getElementById("grafico-barras").innerHTML = "";
-    return;
   }
 
-  pintarBanner();
-  pintarTabla();
-  pintarBarras();
+  // La tabla de pronósticos se pinta siempre, haya o no algo evaluado —
+  // para eso lee también el fichero crudo de cada participante, no solo
+  // lo que ya ha puntuado el motor.
+  await pintarTabla(clave);
 }
 
 function pintarBanner() {
@@ -158,14 +162,56 @@ function pintarBanner() {
     </div>`;
 }
 
-function pintarTabla() {
-  const partidos = DATOS.partidos;
+async function pintarTabla(clave) {
+  const partidos = CALENDARIO[clave] || [];
+  if (!partidos.length) { document.getElementById("tabla-cruzada").innerHTML = ""; return; }
+
+  const resultados = DATOS?.resultados
+    || Object.fromEntries((REALIDAD[clave] || []).map((r) => [r.id, r]));
+
+  const evaluadosPorSlug = Object.fromEntries((DATOS?.jugadores || []).map((j) => [j.slug, j]));
+
+  // El fichero crudo de cada participante para esta jornada — ya no hace
+  // falta descodificar nada, el marcador se guarda en claro. Sirve para
+  // enseñar el pronóstico de los partidos que el motor todavía no ha
+  // evaluado (o de alguien que ni siquiera aparece en DATOS.jugadores
+  // porque ninguno de sus partidos está evaluado todavía).
+  const crudos = await Promise.all(PARTICIPANTES.map(async (p) => {
+    const datos = await cargar(`participantes/${p.slug}/pronosticos/${clave}.json`, null);
+    return [p.slug, datos];
+  }));
+  const crudosPorSlug = Object.fromEntries(crudos);
+
+  const jugadores = PARTICIPANTES
+    .map((p) => {
+      const ev = evaluadosPorSlug[p.slug];
+      const crudo = crudosPorSlug[p.slug];
+      const prediccionesCrudas = Object.fromEntries(
+        (crudo?.predicciones || [])
+          .filter((pr) => pr.goles_local != null && pr.goles_visitante != null)
+          .map((pr) => [pr.id, { gl: pr.goles_local, gv: pr.goles_visitante }])
+      );
+      return {
+        slug: p.slug,
+        nombre: ev?.nombre || p.nombre,
+        insignias: ev?.insignias || [],
+        puntos: ev?.puntos ?? 0,
+        ganador: ev?.ganador || false,
+        perdedor: ev?.perdedor || false,
+        predicciones: ev?.predicciones || {},
+        prediccionesCrudas,
+      };
+    })
+    // Solo se descarta a quien no tiene NI pronóstico evaluado NI crudo para
+    // esta jornada — no pintar una fila vacía de alguien que nunca mandó nada.
+    .filter((j) => Object.keys(j.predicciones).length || Object.keys(j.prediccionesCrudas).length)
+    .sort((a, b) => b.puntos - a.puntos);
 
   const cabecera = `
     <thead><tr>
       <th class="col-jugador">Jugador</th>
       ${partidos.map((p) => {
-        const r = DATOS.resultados[p.id] || {};
+        const r = resultados[p.id] || {};
         const enDirecto = esPartidoEnDirecto(r);
         const marcador = r.estado === "finished" ? `${r.goles_local}-${r.goles_visitante}`
           : enDirecto ? `${r.goles_local ?? 0}-${r.goles_visitante ?? 0}` : "-";
@@ -182,19 +228,25 @@ function pintarTabla() {
 
   const cuerpo = `
     <tbody>
-      ${DATOS.jugadores.map((j) => `
+      ${jugadores.map((j) => `
         <tr>
           <td class="col-jugador">
             <a href="perfil.html?j=${j.slug}" class="mult-link">${nombreConInsignias(j)}</a>
           </td>
           ${partidos.map((p) => {
             const pred = j.predicciones[p.id];
-            if (!pred) return `<td class="celda-pronostico pred-miss">—</td>`;
-            const clase = pred.acierto_exacto ? "pred-exact" : pred.acierto_1x2 ? "pred-1x2" : "pred-miss";
-            return `<td class="celda-pronostico">
-              <span class="${clase}">${pred.pronostico}</span>
-              <span class="pts ${clase}">${pred.puntos > 0 ? "+" + pred.puntos : "0"} pts</span>
-            </td>`;
+            if (pred) {
+              const clase = pred.acierto_exacto ? "pred-exact" : pred.acierto_1x2 ? "pred-1x2" : "pred-miss";
+              return `<td class="celda-pronostico">
+                <span class="${clase}">${pred.pronostico}</span>
+                <span class="pts ${clase}">${pred.puntos > 0 ? "+" + pred.puntos : "0"} pts</span>
+              </td>`;
+            }
+            const crudo = j.prediccionesCrudas[p.id];
+            if (crudo) {
+              return `<td class="celda-pronostico"><span class="pred-pendiente">${crudo.gl}-${crudo.gv}</span></td>`;
+            }
+            return `<td class="celda-pronostico pred-miss">—</td>`;
           }).join("")}
           <td class="col-total ${j.ganador ? "ganador-jornada" : j.perdedor ? "perdedor-jornada" : "pts-totales"}">${j.puntos}</td>
         </tr>`).join("")}

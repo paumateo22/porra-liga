@@ -102,14 +102,20 @@ async function iniciar() {
     queda fuera del reparto. Evita que quien pronostica dos partidos se lleve el premio,
     y que quien apenas juega cargue con el castigo.</p>`));
 
-  bloques.push(seccion("Cuándo se cierra una jornada", `
-    <p>El ganador y el perdedor <strong>solo se asignan cuando todos los partidos de
-    la jornada han terminado</strong>. Mientras la jornada está en curso los puntos de
-    aciertos sí se actualizan en vivo, pero el reparto de
-    ${p.ganador_jornada >= 0 ? "+" : ""}${p.ganador_jornada} / ${p.perdedor_jornada} espera.</p>
-    <p>Esto importa con los <strong>partidos aplazados</strong>: una jornada con un
-    partido pendiente en marzo no reparte ganador hasta marzo, aunque el resto se haya
-    jugado en septiembre.</p>`));
+  bloques.push(seccion("El ganador y el perdedor se reparten en vivo", `
+    <p>No hace falta esperar a que termine la jornada: en cuanto haya un
+    resultado provisional claro, el
+    ${p.ganador_jornada >= 0 ? "+" : ""}${p.ganador_jornada} / ${p.perdedor_jornada}
+    ya se está repartiendo — incluso con partidos todavía en directo, usando
+    su marcador del momento. Puede <strong>cambiar de dueño</strong> según
+    avanzan los partidos: quien iba ganando puede dejar de hacerlo si a otro
+    le sale mejor un partido que se juega después.</p>
+    <p>En el análisis de cada jornada se indica si ese resultado ya es
+    <strong>seguro</strong> (nadie más puede alcanzarlo aunque acierte todo
+    lo que le queda) o si <strong>todavía puede cambiar</strong>.</p>
+    <p class="nota">Esto también aplica a los <strong>partidos aplazados</strong>:
+    una jornada con un partido pendiente en marzo ya reparte ganador con lo
+    jugado hasta entonces, y se reajusta solo cuando por fin se juegue.</p>`));
 
   bloques.push(seccion("Cierre de pronósticos", `
     <p><strong>El cierre es por partido, no por jornada.</strong> Cada partido se

@@ -55,20 +55,25 @@ queda fuera del reparto de +1 / −1. Esto evita que alguien que solo pronostica
 dos partidos se lleve el premio de la jornada, y también que quien apenas juega
 arrastre el castigo de perdedor.
 
-### Cuándo se cierra una jornada
+### Ganador y perdedor de jornada: en vivo, no solo al cerrar
 
-El ganador y el perdedor **solo se asignan de verdad (los puntos +1 / −1) cuando
-los 10 partidos de la jornada han terminado**. Mientras la jornada está en
-curso los puntos de aciertos sí se van actualizando en vivo, pero el +1 / −1
-no se reparte para que no baile.
+El ganador y el perdedor (+1 / −1) se reparten **ya, en cuanto haya un
+resultado provisional claro** — no hace falta que la jornada esté cerrada
+del todo. Según van cambiando los aciertos de cada uno (partidos que
+terminan, o incluso partidos en directo con su marcador actual), el +1 / −1
+puede **cambiar de dueño**: quien iba ganando puede dejar de hacerlo si a
+otro le sale mejor un partido que se juega después.
 
-Aun así, en `analisis.html` se muestra siempre quién **iría** ganando o
-perdiendo ahora mismo, con un aviso: **"⏳ Aún puede cambiar"** si a alguien
-le quedan partidos con los que remontar, o **"✔ Ya es matemáticamente
-seguro"** si ya es imposible que nadie más alcance al líder ni esquive al
-farolillo rojo (aunque acertaran absolutamente todo lo que les queda por
-pronosticar). Esto es solo para que se vea en la web — los puntos de verdad
-siguen esperando a que la jornada cierre del todo.
+Esto no necesita ninguna corrección especial: el motor recalcula la
+temporada entera desde cero cada vez que se ejecuta, así que si el marcador
+de un partido en directo cambia antes de terminar, el siguiente cálculo ya
+sale bien solo con el dato actualizado.
+
+En `analisis.html` se indica, además, si ese resultado ya es **seguro**:
+**"⏳ Aún puede cambiar"** si a alguien le quedan partidos con los que
+remontar, o **"✔ Ya es matemáticamente seguro"** si ya es imposible que
+nadie más alcance al líder ni esquive al farolillo rojo (aunque acertaran
+absolutamente todo lo que les queda por pronosticar).
 
 ### Desempate en la clasificación general
 
@@ -100,6 +105,17 @@ mano no sirve de nada: la ingesta manda.
 Cada predicción guarda la **hora del partido** junto al marcador, que es lo que
 permite decidir qué está abierto y qué está cerrado.
 
+### Partidos en directo puntúan con su marcador actual
+
+Un partido "en directo" (estado `inprogress` en SofaScore, cualquier
+variante que no sea "sin empezar" ni "terminado") puntúa igual que uno ya
+acabado, usando su marcador **en ese momento** — no hace falta esperar al
+pitido final. Si el resultado cambia antes de terminar, el siguiente cálculo
+lo recoge solo, sin ninguna corrección manual.
+
+Esto afecta a **todo** el sitio por igual: clasificación general, la
+carrera, las flechas de movimiento... no es solo una vista previa aparte.
+
 ### Partidos adelantados y aplazados
 
 Una jornada de LaLiga no siempre se juega entera el mismo fin de semana. El
@@ -110,9 +126,9 @@ sistema lo contempla:
 - Un partido **aplazado** (se juega meses después) no impide que el resto de la
   jornada puntúe. El bonus de rendimiento se recalcula sobre lo jugado hasta el
   momento y se ajusta solo cuando llega el partido pendiente.
-- El **ganador y el perdedor de jornada** esperan siempre a que se hayan jugado
-  los 10 partidos. Una jornada con un aplazado en marzo no reparte +1 / −1 hasta
-  marzo.
+- El ganador/perdedor de jornada se reparte de todos modos mientras la
+  jornada sigue abierta por el aplazado (ver más arriba) — no espera a que
+  se juegue.
 
 ### Todo es configurable
 

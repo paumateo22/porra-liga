@@ -74,16 +74,44 @@ def calcular_bonus(aciertos, config_bonus):
 
 
 def evaluar_jornada(clave, partidos_reales, total_partidos, pronosticos_todos, settings):
-    """Calcula el desglose de una jornada para todos los jugadores."""
+    """Calcula el desglose de una jornada para todos los jugadores.
+
+    Se puntúa con cualquier partido que YA tenga un marcador que valorar —
+    terminado del todo, o en juego ahora mismo con su marcador en vivo — no
+    solo los ya acabados. Así la clasificación general, la carrera, las
+    flechas de movimiento... todo se mueve en tiempo real mientras se juega,
+    sin esperar a que termine nada. El ganador/perdedor de jornada (+1/-1)
+    también se asigna siempre que haya uno claro, aunque la jornada siga
+    abierta — irá cambiando de dueño según avancen los partidos.
+
+    Si el marcador de un partido en juego cambia antes de terminar, la
+    siguiente vez que se ejecute este script todo se recalcula solo con el
+    dato actualizado — no hace falta ninguna corrección especial, el motor
+    parte de cero cada vez que se ejecuta.
+
+    "cerrada" (que decide si la jornada queda ya DEFINITIVA e inamovible, a
+    efectos de insignias y demás) sigue exigiendo que TODOS los partidos
+    hayan terminado de verdad — eso no ha cambiado, solo qué partidos
+    puntúan mientras tanto.
+    """
     pts = settings["puntuaciones"]
     hab = settings["habilitadores"]
 
-    finalizados = [p for p in partidos_reales if p["estado"] == ESTADO_FINALIZADO]
-    cerrada = len(finalizados) == total_partidos and total_partidos > 0
-    if not finalizados:
+    finalizados_de_verdad = [p for p in partidos_reales if p["estado"] == ESTADO_FINALIZADO]
+    cerrada = len(finalizados_de_verdad) == total_partidos and total_partidos > 0
+
+    # Evaluable: terminado, o en juego ahora mismo con marcador disponible.
+    # Uno que todavía no ha empezado no cuenta para nada — no hay con qué
+    # comparar el pronóstico todavía.
+    evaluables = [
+        p for p in partidos_reales
+        if p.get("estado") and p["estado"] != "notstarted"
+        and p.get("goles_local") is not None and p.get("goles_visitante") is not None
+    ]
+    if not evaluables:
         return None
 
-    reales = {p["id"]: p for p in finalizados}
+    reales = {p["id"]: p for p in evaluables}
     umbral = pts.get("porcentaje_minimo_participacion", 0.55)
 
     filas = {}
@@ -97,7 +125,7 @@ def evaluar_jornada(clave, partidos_reales, total_partidos, pronosticos_todos, s
         for pid, (gl, gv) in mis.items():
             real = reales.get(pid)
             if not real:
-                continue  # partido aún no jugado
+                continue  # partido aún sin marcador con el que comparar
             acierto_1x2 = signo(gl, gv) == signo(real["goles_local"], real["goles_visitante"])
             acierto_exacto = (
                 int(gl) == int(real["goles_local"]) and int(gv) == int(real["goles_visitante"])
@@ -139,18 +167,16 @@ def evaluar_jornada(clave, partidos_reales, total_partidos, pronosticos_todos, s
             "detalle": detalle,
         }
 
-    # Ganador / perdedor de la jornada: se calcula un resultado PROVISIONAL
-    # siempre que haya al menos un partido jugado, no solo cuando la jornada
-    # está completa. Además de quién va ganando/perdiendo ahora mismo, se
-    # calcula si eso ya es matemáticamente imposible que cambie: a cada
-    # jugador le puede quedar, como mucho, tantos aciertos 1X2 extra como
-    # partidos pendientes tenga pronosticados (en el mejor de los casos, los
-    # acierta todos). Si con ese máximo nadie más podría alcanzar al que va
-    # primero (o esquivar al que va último), el resultado ya es seguro.
-    #
-    # Los PUNTOS de verdad (+1/-1 en la clasificación) solo se reparten
-    # cuando la jornada está cerrada de verdad — esto es solo para mostrarlo
-    # en la web con el aviso correspondiente, no cambia cómo puntúa nadie.
+    # Ganador / perdedor de la jornada: un resultado PROVISIONAL siempre que
+    # haya al menos un partido evaluable, no solo cuando la jornada está
+    # completa — y ahora también se REPARTE de verdad mientras esté abierta,
+    # no solo se muestra en un aviso. Además de quién va ganando/perdiendo
+    # ahora mismo, se calcula si eso ya es matemáticamente imposible que
+    # cambie: a cada jugador le puede quedar, como mucho, tantos aciertos
+    # 1X2 extra como partidos pendientes tenga pronosticados (en el mejor de
+    # los casos, los acierta todos). Si con ese máximo nadie más podría
+    # alcanzar al que va primero (o esquivar al que va último), el resultado
+    # ya es seguro — pero el reparto de puntos no espera a esa certeza.
     resultado_jornada = None
     if hab.get("ganador_perdedor_jornada", 1):
         elegibles = {s: f for s, f in filas.items() if f["elegible_jornada"]}
@@ -184,15 +210,14 @@ def evaluar_jornada(clave, partidos_reales, total_partidos, pronosticos_todos, s
                     "perdedor_seguro": perdedor_seguro,
                 }
 
-                if cerrada:
-                    for s in ganadores_prov:
-                        filas[s]["es_ganador_jornada"] = True
-                        filas[s]["puntos_ganador_perdedor"] += pts["ganador_jornada"]
-                        filas[s]["puntos_totales"] += pts["ganador_jornada"]
-                    for s in perdedores_prov:
-                        filas[s]["es_perdedor_jornada"] = True
-                        filas[s]["puntos_ganador_perdedor"] += pts["perdedor_jornada"]
-                        filas[s]["puntos_totales"] += pts["perdedor_jornada"]
+                for s in ganadores_prov:
+                    filas[s]["es_ganador_jornada"] = True
+                    filas[s]["puntos_ganador_perdedor"] += pts["ganador_jornada"]
+                    filas[s]["puntos_totales"] += pts["ganador_jornada"]
+                for s in perdedores_prov:
+                    filas[s]["es_perdedor_jornada"] = True
+                    filas[s]["puntos_ganador_perdedor"] += pts["perdedor_jornada"]
+                    filas[s]["puntos_totales"] += pts["perdedor_jornada"]
 
     return {"cerrada": cerrada, "filas": filas, "resultado_jornada": resultado_jornada}
 

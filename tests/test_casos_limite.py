@@ -110,6 +110,15 @@ def jugar(realidad, clave, ids, marcadores):
     guardar_json(REALIDAD_FILE, realidad)
 
 
+def en_directo(realidad, clave, id_partido, marcador):
+    """Deja un partido EN JUEGO (no terminado) con un marcador provisional."""
+    for p in realidad[clave]:
+        if p["id"] == id_partido:
+            p["goles_local"], p["goles_visitante"] = marcador
+            p["estado"] = "inprogress"
+    guardar_json(REALIDAD_FILE, realidad)
+
+
 def escribir_entrada(nombre, jornada, predicciones, generado=None):
     guardar_json(ENTRADAS_DIR / f"J{jornada:02d}_{nombre}.json", {
         "participante": nombre,
@@ -167,11 +176,11 @@ def main():
     check(pau10["partidos_evaluados"] == 1, "solo se evalúa el partido adelantado")
     check(pau10["aciertos_exactos"] == 1 and pau10["aciertos_1x2"] == 1,
           "el acierto exacto del adelantado cuenta")
-    check(pau10["puntos_totales"] == 2, "un exacto vale 2 puntos (1X2 + exacto)")
+    check(pau10["puntos_totales"] == 3, "un exacto (2) + ganador provisional de la jornada abierta (+1) = 3")
     check(pau10["bonus_rendimiento"] == 0, "1 acierto no dispara bonus")
-    check(all(not v["es_ganador_jornada"] and not v["es_perdedor_jornada"]
-              for v in rep["J10"]["jugadores"].values()),
-          "no se reparte ganador/perdedor con la jornada abierta")
+    check(rep["J10"]["jugadores"]["pau"]["es_ganador_jornada"]
+          and rep["J10"]["jugadores"]["aitor"]["es_perdedor_jornada"],
+          "el ganador/perdedor de jornada se reparte ya en vivo, aunque la jornada siga abierta")
 
     print("\n═══ B: la J02 se juega salvo el APLAZADO ═══")
     ids_j02 = {p["id"] for p in j02} - {aplazado["id"]}
@@ -185,9 +194,9 @@ def main():
     check(pau02["partidos_evaluados"] == 9, "se evalúan los 9 jugados, no el aplazado")
     check(pau02["aciertos_1x2"] == 9, "los 9 aciertos 1X2 cuentan ya")
     check(pau02["bonus_rendimiento"] == 3, "9 aciertos dan bonus +3 aunque falte 1 partido")
-    check(pau02["puntos_totales"] == 21, "9 exactos (18) + bonus 3 = 21, sin +1 de jornada")
-    check(all(not v["es_ganador_jornada"] for v in j02rep["jugadores"].values()),
-          "sin ganador de jornada mientras el aplazado no se juegue")
+    check(pau02["puntos_totales"] == 22, "9 exactos (18) + bonus 3 + ganador provisional 1 = 22")
+    check(j02rep["jugadores"]["pau"]["es_ganador_jornada"],
+          "el ganador de jornada SÍ se reparte ya, aunque falte el aplazado por jugarse")
 
     print("\n═══ C: REENVÍO de la J02 con partidos ya jugados ═══")
     antes = guardadas("pau", "J02")
@@ -234,9 +243,9 @@ def main():
     pau = next(c for c in clas["clasificacion"] if c["slug"] == "pau")
     check(set(clas["jornadas_calculadas"]) == {"J02", "J10"},
           "ambas jornadas aparecen en la clasificación")
-    check(pau["por_jornada"]["J10"]["puntos"] == 2,
-          "la J10 mantiene los 2 puntos del adelantado")
-    check(pau["puntos_totales"] == 28, "total = 26 (J02) + 2 (J10)")
+    check(pau["por_jornada"]["J10"]["puntos"] == 3,
+          "la J10 mantiene los 3 puntos del adelantado (2 de acierto exacto + 1 de ganador provisional)")
+    check(pau["puntos_totales"] == 29, "total = 26 (J02) + 3 (J10)")
 
     print("\n═══ F: alguien se incorpora a mitad de temporada (punto de partida) ═══")
     # "elena" no existía hasta ahora: manda su primera jornada en la J10, la
@@ -266,7 +275,7 @@ def main():
         "los aciertos de Elena arrancan de cero, sin heredar nada del punto de partida")
     check(elena["jornadas_ganadas"] == 0 and elena["jornadas_perdidas"] == 0,
         "el punto de partida no cuenta como jornada ganada ni perdida")
-    check(pau2["puntos_totales"] == 28,
+    check(pau2["puntos_totales"] == 29,
         "el punto de partida de un jugador nuevo no altera los totales de los demás")
 
     print("\n═══ G: pronóstico legítimo que llega tarde al buzón (generado a tiempo) ═══")
@@ -292,6 +301,37 @@ def main():
     guardado_manolo = guardadas("manolo", "J10") if ruta_manolo.exists() else {}
     check(otro_j10["id"] not in guardado_manolo,
         "un pronóstico genuinamente tarde ('generado' POSTERIOR al partido) se sigue rechazando")
+
+    print("\n═══ H: un partido EN DIRECTO puntúa con su marcador provisional ═══")
+    # Un tercer partido de la J10 (distinto del adelantado y del jugado en el
+    # escenario G) se pone "en directo" con un marcador que aún puede cambiar.
+    en_vivo = j10[2]
+    en_directo(realidad, "J10", en_vivo["id"], (1, 0))
+    correr("06_motor_puntuacion.py")
+    rep_h = cargar_json(REPORTES_DIR / "reporte_06_jornadas.json")
+    pau_h = rep_h["J10"]["jugadores"]["pau"]
+
+    # A estas alturas Pau ya tenía en J10: el adelantado (2-1 exacto, 2 pts)
+    # y el partido del escenario G (1X2 acertado, 1 pt). Pronosticó 2-1 en
+    # toda la jornada: con el marcador EN VIVO de este tercero (1-0) acierta
+    # también el 1X2 (local gana), aunque no el exacto — +1 punto más.
+    check(pau_h["aciertos_1x2"] == 3, "el acierto 1X2 del partido en directo ya cuenta (adelantado + G + este)")
+    check(pau_h["puntos_partidos"] == 4, "2 (adelantado, exacto) + 1 (de G) + 1 (en directo, solo 1X2) = 4")
+    check(rep_h["J10"]["cerrada"] is False,
+        "un partido en directo no cuenta como terminado — la jornada sigue sin cerrarse")
+
+    # Termina de verdad con un resultado DISTINTO al que tenía en directo
+    # (empate 1-1 en vez de 1-0): el acierto 1X2 de Pau para ESE partido
+    # deja de contar, sin que haga falta ninguna corrección manual — el
+    # motor siempre recalcula desde cero.
+    jugar(realidad, "J10", {en_vivo["id"]}, {en_vivo["id"]: (1, 1)})
+    correr("06_motor_puntuacion.py")
+    rep_h2 = cargar_json(REPORTES_DIR / "reporte_06_jornadas.json")
+    pau_h2 = rep_h2["J10"]["jugadores"]["pau"]
+    check(pau_h2["aciertos_1x2"] == 2,
+        "al terminar con un resultado distinto al que tenía en directo (1-1 en vez de 1-0), el acierto se retira solo")
+    check(pau_h2["puntos_partidos"] == 3,
+        "vuelve a 3 (adelantado + G) — el partido en directo ya no acierta al cerrar con otro marcador")
 
     print("\n" + "─" * 62)
     if fallos:
