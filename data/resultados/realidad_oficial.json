@@ -40,9 +40,9 @@
             "id_escudo_local": 2814,
             "id_escudo_visitante": 2849,
             "fecha": "2026-08-16T19:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
+            "goles_local": 1,
+            "goles_visitante": 0,
+            "estado": "inprogress"
         },
         {
             "id": 16421050,
@@ -4011,6 +4011,17 @@
     ],
     "J37": [
         {
+            "id": 16422390,
+            "local": "Alavés",
+            "visitante": "Real Madrid",
+            "id_escudo_local": 2885,
+            "id_escudo_visitante": 2829,
+            "fecha": "2027-05-23T21:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
             "id": 16462619,
             "local": "Atlético",
             "visitante": "Athletic",
@@ -4038,6 +4049,17 @@
             "visitante": "Espanyol",
             "id_escudo_local": 2832,
             "id_escudo_visitante": 2814,
+            "fecha": "2027-05-23T21:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
+            "id": 16462629,
+            "local": "FC Barcelona",
+            "visitante": "Málaga CF",
+            "id_escudo_local": 2817,
+            "id_escudo_visitante": 2830,
             "fecha": "2027-05-23T21:00:00",
             "goles_local": null,
             "goles_visitante": null,
