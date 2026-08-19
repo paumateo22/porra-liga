@@ -2,12 +2,12 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 1,
-    "puntos_partidos": 2,
+    "puntos_totales": 2,
+    "puntos_partidos": 3,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": -1,
     "aciertos_1x2": 2,
-    "aciertos_exactos": 0,
+    "aciertos_exactos": 1,
     "partidos_pronosticados": 10,
     "jornadas_jugadas": 1,
     "jornadas_ganadas": 0,
@@ -15,9 +15,9 @@
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
-            "puntos": 1,
+            "puntos": 2,
             "aciertos_1x2": 2,
-            "aciertos_exactos": 0,
+            "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
             "perdedor": true,
@@ -65,10 +65,10 @@
                 "Atlético_vs_Málaga CF": {
                     "id": 16421055,
                     "pronostico": "2-0",
-                    "real": "1-0",
+                    "real": "2-0",
                     "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         }

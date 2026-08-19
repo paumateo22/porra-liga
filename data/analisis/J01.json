@@ -135,7 +135,7 @@
             "estado": "finished"
         },
         "16421055": {
-            "goles_local": 1,
+            "goles_local": 2,
             "goles_visitante": 0,
             "estado": "inprogress"
         },
@@ -166,12 +166,12 @@
             "nombre": "Iván",
             "insignias": [],
             "aciertos_1x2": 4,
-            "aciertos_exactos": 2,
+            "aciertos_exactos": 3,
             "bonus": 0,
             "elegible": true,
             "ganador": true,
             "perdedor": false,
-            "puntos": 7,
+            "puntos": 8,
             "pronosticados": 10,
             "predicciones": {
                 "16421047": {
@@ -207,8 +207,8 @@
                 "16421055": {
                     "pronostico": "2-0",
                     "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         },
@@ -217,12 +217,12 @@
             "nombre": "Carlos",
             "insignias": [],
             "aciertos_1x2": 4,
-            "aciertos_exactos": 0,
+            "aciertos_exactos": 1,
             "bonus": 0,
             "elegible": true,
             "ganador": true,
             "perdedor": false,
-            "puntos": 5,
+            "puntos": 6,
             "pronosticados": 10,
             "predicciones": {
                 "16421047": {
@@ -258,8 +258,8 @@
                 "16421055": {
                     "pronostico": "2-0",
                     "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         },
@@ -421,12 +421,12 @@
             "nombre": "Adrián",
             "insignias": [],
             "aciertos_1x2": 2,
-            "aciertos_exactos": 0,
+            "aciertos_exactos": 1,
             "bonus": 0,
             "elegible": true,
             "ganador": false,
             "perdedor": true,
-            "puntos": 1,
+            "puntos": 2,
             "pronosticados": 10,
             "predicciones": {
                 "16421047": {
@@ -462,8 +462,8 @@
                 "16421055": {
                     "pronostico": "2-0",
                     "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         },

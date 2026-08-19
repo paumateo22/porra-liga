@@ -2,12 +2,12 @@
     "participante": "carlos",
     "nombre": "Carlos",
     "insignias": [],
-    "puntos_totales": 5,
-    "puntos_partidos": 4,
+    "puntos_totales": 6,
+    "puntos_partidos": 5,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 1,
     "aciertos_1x2": 4,
-    "aciertos_exactos": 0,
+    "aciertos_exactos": 1,
     "partidos_pronosticados": 10,
     "jornadas_jugadas": 1,
     "jornadas_ganadas": 1,
@@ -15,9 +15,9 @@
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
-            "puntos": 5,
+            "puntos": 6,
             "aciertos_1x2": 4,
-            "aciertos_exactos": 0,
+            "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": true,
             "perdedor": false,
@@ -65,10 +65,10 @@
                 "Atlético_vs_Málaga CF": {
                     "id": 16421055,
                     "pronostico": "2-0",
-                    "real": "1-0",
+                    "real": "2-0",
                     "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         }
