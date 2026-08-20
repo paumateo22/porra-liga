@@ -1,0 +1,89 @@
+{
+    "participante": "iván",
+    "nombre": "Iván",
+    "jornada": 2,
+    "generado": "2026-08-20T16:41:00",
+    "ingerido": "2026-08-20T18:44:08",
+    "predicciones": [
+        {
+            "id": 16416292,
+            "local": "Rayo",
+            "visitante": "Alavés",
+            "fecha": "2026-08-20T21:00:00",
+            "goles_local": 1,
+            "goles_visitante": 1
+        },
+        {
+            "id": 16416293,
+            "local": "Betis",
+            "visitante": "Real Sociedad",
+            "fecha": "2026-08-21T21:00:00",
+            "goles_local": 2,
+            "goles_visitante": 1
+        },
+        {
+            "id": 16416301,
+            "local": "Athletic",
+            "visitante": "Sevilla",
+            "fecha": "2026-08-22T17:00:00",
+            "goles_local": 2,
+            "goles_visitante": 1
+        },
+        {
+            "id": 16416298,
+            "local": "Valencia",
+            "visitante": "Celta",
+            "fecha": "2026-08-22T19:30:00",
+            "goles_local": 2,
+            "goles_visitante": 2
+        },
+        {
+            "id": 16416306,
+            "local": "Espanyol",
+            "visitante": "Real Madrid",
+            "fecha": "2026-08-22T21:30:00",
+            "goles_local": 1,
+            "goles_visitante": 3
+        },
+        {
+            "id": 16416302,
+            "local": "Atlético",
+            "visitante": "Villarreal",
+            "fecha": "2026-08-23T17:00:00",
+            "goles_local": 2,
+            "goles_visitante": 1
+        },
+        {
+            "id": 16416300,
+            "local": "Getafe",
+            "visitante": "Real Racing Club",
+            "fecha": "2026-08-23T19:30:00",
+            "goles_local": 1,
+            "goles_visitante": 1
+        },
+        {
+            "id": 16416311,
+            "local": "Elche",
+            "visitante": "FC Barcelona",
+            "fecha": "2026-08-23T21:30:00",
+            "goles_local": 0,
+            "goles_visitante": 3
+        },
+        {
+            "id": 16416296,
+            "local": "Osasuna",
+            "visitante": "Levante UD",
+            "fecha": "2026-08-24T19:30:00",
+            "goles_local": 1,
+            "goles_visitante": 0
+        },
+        {
+            "id": 16416307,
+            "local": "Málaga CF",
+            "visitante": "Deportivo de A Coruña",
+            "fecha": "2026-08-24T21:30:00",
+            "goles_local": 1,
+            "goles_visitante": 1
+        }
+    ]
+}
