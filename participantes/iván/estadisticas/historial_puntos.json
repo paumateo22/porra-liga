@@ -7,16 +7,16 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 7,
-    "puntos_partidos": 7,
+    "puntos_totales": 11,
+    "puntos_partidos": 9,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 4,
-    "aciertos_exactos": 3,
+    "puntos_ganador_perdedor": 2,
+    "aciertos_1x2": 5,
+    "aciertos_exactos": 4,
     "partidos_pronosticados": 20,
     "jornadas_jugadas": 2,
-    "jornadas_ganadas": 1,
-    "jornadas_perdidas": 1,
+    "jornadas_ganadas": 2,
+    "jornadas_perdidas": 0,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -78,20 +78,20 @@
             }
         },
         "J02": {
-            "puntos": -1,
-            "aciertos_1x2": 0,
-            "aciertos_exactos": 0,
+            "puntos": 3,
+            "aciertos_1x2": 1,
+            "aciertos_exactos": 1,
             "bonus": 0,
-            "ganador": false,
-            "perdedor": true,
+            "ganador": true,
+            "perdedor": false,
             "detalle": {
                 "Rayo_vs_Alavés": {
                     "id": 16416292,
                     "pronostico": "1-1",
-                    "real": "1-0",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
+                    "real": "1-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         }
