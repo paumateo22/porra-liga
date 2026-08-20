@@ -1,7 +1,12 @@
 {
     "participante": "iván",
     "nombre": "Iván",
-    "insignias": [],
+    "insignias": [
+        {
+            "emoji": "⭐",
+            "descripcion": "Mundial 2026"
+        }
+    ],
     "puntos_totales": 8,
     "puntos_partidos": 7,
     "bonus_rendimiento": 0,

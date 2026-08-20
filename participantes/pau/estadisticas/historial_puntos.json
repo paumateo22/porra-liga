@@ -1,7 +1,12 @@
 {
     "participante": "pau",
     "nombre": "Pau",
-    "insignias": [],
+    "insignias": [
+        {
+            "emoji": "🏆",
+            "descripcion": "Liga 2023/24"
+        }
+    ],
     "puntos_totales": 3,
     "puntos_partidos": 3,
     "bonus_rendimiento": 0,
