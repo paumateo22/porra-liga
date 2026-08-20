@@ -5,13 +5,32 @@
     "puntos_totales": 0,
     "puntos_partidos": 0,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 0,
+    "puntos_ganador_perdedor": -1,
     "aciertos_1x2": 0,
     "aciertos_exactos": 0,
-    "partidos_pronosticados": 0,
-    "jornadas_jugadas": 0,
+    "partidos_pronosticados": 10,
+    "jornadas_jugadas": 1,
     "jornadas_ganadas": 0,
-    "jornadas_perdidas": 0,
-    "punto_partida": 0,
-    "por_jornada": {}
+    "jornadas_perdidas": 1,
+    "punto_partida": 1,
+    "por_jornada": {
+        "J02": {
+            "puntos": -1,
+            "aciertos_1x2": 0,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "ganador": false,
+            "perdedor": true,
+            "detalle": {
+                "Rayo_vs_Alavés": {
+                    "id": 16416292,
+                    "pronostico": "1-2",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                }
+            }
+        }
+    }
 }
