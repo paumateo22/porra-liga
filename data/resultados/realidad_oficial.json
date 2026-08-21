@@ -130,7 +130,7 @@
             "id_escudo_local": 2816,
             "id_escudo_visitante": 2824,
             "fecha": "2026-08-21T21:00:00",
-            "goles_local": 0,
+            "goles_local": 1,
             "goles_visitante": 0,
             "estado": "inprogress"
         },
@@ -1400,17 +1400,6 @@
             "estado": "notstarted"
         },
         {
-            "id": 16421117,
-            "local": "Osasuna",
-            "visitante": "Málaga CF",
-            "id_escudo_local": 2820,
-            "id_escudo_visitante": 2830,
-            "fecha": "2026-11-22T20:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
             "id": 16421119,
             "local": "Rayo",
             "visitante": "Valencia",
@@ -1708,6 +1697,17 @@
             "visitante": "Athletic",
             "id_escudo_local": 2832,
             "id_escudo_visitante": 2825,
+            "fecha": "2026-12-13T20:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
+            "id": 16462526,
+            "local": "Elche",
+            "visitante": "Sevilla",
+            "id_escudo_local": 2846,
+            "id_escudo_visitante": 2833,
             "fecha": "2026-12-13T20:00:00",
             "goles_local": null,
             "goles_visitante": null,
@@ -3421,17 +3421,6 @@
             "visitante": "FC Barcelona",
             "id_escudo_local": 2835,
             "id_escudo_visitante": 2817,
-            "fecha": "2027-04-11T21:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
-            "id": 16462484,
-            "local": "Sevilla",
-            "visitante": "Deportivo de A Coruña",
-            "id_escudo_local": 2833,
-            "id_escudo_visitante": 2832,
             "fecha": "2027-04-11T21:00:00",
             "goles_local": null,
             "goles_visitante": null,
