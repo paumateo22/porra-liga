@@ -2,16 +2,16 @@
     "participante": "javi",
     "nombre": "Javi",
     "insignias": [],
-    "puntos_totales": 3,
+    "puntos_totales": 2,
     "puntos_partidos": 3,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 0,
+    "puntos_ganador_perdedor": -1,
     "aciertos_1x2": 3,
     "aciertos_exactos": 0,
-    "partidos_pronosticados": 10,
-    "jornadas_jugadas": 1,
+    "partidos_pronosticados": 19,
+    "jornadas_jugadas": 2,
     "jornadas_ganadas": 0,
-    "jornadas_perdidas": 0,
+    "jornadas_perdidas": 1,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -71,6 +71,15 @@
                     "puntos": 1
                 }
             }
+        },
+        "J02": {
+            "puntos": -1,
+            "aciertos_1x2": 0,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "ganador": false,
+            "perdedor": true,
+            "detalle": {}
         }
     }
 }

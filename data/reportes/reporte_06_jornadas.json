@@ -150,6 +150,19 @@
                 "puntos_ganador_perdedor": 1,
                 "puntos_totales": 3
             },
+            "javi": {
+                "partidos_pronosticados": 9,
+                "partidos_evaluados": 0,
+                "aciertos_1x2": 0,
+                "aciertos_exactos": 0,
+                "puntos_partidos": 0,
+                "bonus_rendimiento": 0,
+                "elegible_jornada": true,
+                "es_ganador_jornada": false,
+                "es_perdedor_jornada": true,
+                "puntos_ganador_perdedor": -1,
+                "puntos_totales": -1
+            },
             "manu": {
                 "partidos_pronosticados": 10,
                 "partidos_evaluados": 1,

@@ -31,6 +31,10 @@
                 "nombre": "Carlos"
             },
             {
+                "slug": "javi",
+                "nombre": "Javi"
+            },
+            {
                 "slug": "manu",
                 "nombre": "Manu"
             }
@@ -308,6 +312,20 @@
                     "puntos": 0
                 }
             }
+        },
+        {
+            "slug": "javi",
+            "nombre": "Javi",
+            "insignias": [],
+            "aciertos_1x2": 0,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "elegible": true,
+            "ganador": false,
+            "perdedor": true,
+            "puntos": -1,
+            "pronosticados": 9,
+            "predicciones": {}
         },
         {
             "slug": "manu",
