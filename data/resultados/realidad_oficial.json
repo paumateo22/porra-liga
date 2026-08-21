@@ -130,9 +130,9 @@
             "id_escudo_local": 2816,
             "id_escudo_visitante": 2824,
             "fecha": "2026-08-21T21:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
+            "goles_local": 0,
+            "goles_visitante": 0,
+            "estado": "inprogress"
         },
         {
             "id": 16416301,
@@ -1703,11 +1703,11 @@
             "estado": "notstarted"
         },
         {
-            "id": 16462526,
-            "local": "Elche",
-            "visitante": "Sevilla",
-            "id_escudo_local": 2846,
-            "id_escudo_visitante": 2833,
+            "id": 16462523,
+            "local": "Deportivo de A Coruña",
+            "visitante": "Athletic",
+            "id_escudo_local": 2832,
+            "id_escudo_visitante": 2825,
             "fecha": "2026-12-13T20:00:00",
             "goles_local": null,
             "goles_visitante": null,

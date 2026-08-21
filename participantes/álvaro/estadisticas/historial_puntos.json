@@ -2,11 +2,11 @@
     "participante": "álvaro",
     "nombre": "Álvaro",
     "insignias": [],
-    "puntos_totales": 7,
-    "puntos_partidos": 6,
+    "puntos_totales": 8,
+    "puntos_partidos": 7,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 4,
+    "aciertos_1x2": 5,
     "aciertos_exactos": 2,
     "partidos_pronosticados": 20,
     "jornadas_jugadas": 2,
@@ -73,8 +73,8 @@
             }
         },
         "J02": {
-            "puntos": 3,
-            "aciertos_1x2": 1,
+            "puntos": 4,
+            "aciertos_1x2": 2,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": true,
@@ -87,6 +87,14 @@
                     "acierto_1x2": true,
                     "acierto_exacto": true,
                     "puntos": 2
+                },
+                "Betis_vs_Real Sociedad": {
+                    "id": 16416293,
+                    "pronostico": "1-1",
+                    "real": "0-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         }

@@ -79,7 +79,16 @@
             "bonus": 0,
             "ganador": false,
             "perdedor": true,
-            "detalle": {}
+            "detalle": {
+                "Betis_vs_Real Sociedad": {
+                    "id": 16416293,
+                    "pronostico": "2-0",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                }
+            }
         }
     }
 }
