@@ -143,7 +143,7 @@
             "fecha": "2026-08-22T17:00:00",
             "goles_local": 1,
             "goles_visitante": 3,
-            "estado": "inprogress"
+            "estado": "finished"
         },
         {
             "id": 16416298,
@@ -4049,17 +4049,6 @@
             "visitante": "Real Sociedad",
             "id_escudo_local": 2821,
             "id_escudo_visitante": 2824,
-            "fecha": "2027-05-23T21:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
-            "id": 16462625,
-            "local": "Deportivo de A Coruña",
-            "visitante": "Espanyol",
-            "id_escudo_local": 2832,
-            "id_escudo_visitante": 2814,
             "fecha": "2027-05-23T21:00:00",
             "goles_local": null,
             "goles_visitante": null,
