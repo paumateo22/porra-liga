@@ -7,11 +7,11 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 6,
-    "puntos_partidos": 6,
+    "puntos_totales": 7,
+    "puntos_partidos": 7,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 5,
+    "aciertos_1x2": 6,
     "aciertos_exactos": 1,
     "partidos_pronosticados": 20,
     "jornadas_jugadas": 2,
@@ -78,8 +78,8 @@
             }
         },
         "J02": {
-            "puntos": 3,
-            "aciertos_1x2": 2,
+            "puntos": 4,
+            "aciertos_1x2": 3,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
@@ -120,10 +120,10 @@
                 "Espanyol_vs_Real Madrid": {
                     "id": 16416306,
                     "pronostico": "1-2",
-                    "real": "0-0",
-                    "acierto_1x2": false,
+                    "real": "0-1",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }
