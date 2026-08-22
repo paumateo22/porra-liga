@@ -2,16 +2,16 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 1,
-    "puntos_partidos": 3,
+    "puntos_totales": 3,
+    "puntos_partidos": 4,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": -2,
-    "aciertos_1x2": 3,
+    "puntos_ganador_perdedor": -1,
+    "aciertos_1x2": 4,
     "aciertos_exactos": 0,
     "partidos_pronosticados": 20,
     "jornadas_jugadas": 2,
     "jornadas_ganadas": 0,
-    "jornadas_perdidas": 2,
+    "jornadas_perdidas": 1,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -73,12 +73,12 @@
             }
         },
         "J02": {
-            "puntos": 0,
-            "aciertos_1x2": 1,
+            "puntos": 2,
+            "aciertos_1x2": 2,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
-            "perdedor": true,
+            "perdedor": false,
             "detalle": {
                 "Rayo_vs_Alavés": {
                     "id": 16416292,
@@ -103,6 +103,14 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
+                },
+                "Valencia_vs_Celta": {
+                    "id": 16416298,
+                    "pronostico": "1-1",
+                    "real": "0-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         }

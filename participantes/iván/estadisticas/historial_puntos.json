@@ -7,11 +7,11 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 12,
-    "puntos_partidos": 10,
+    "puntos_totales": 13,
+    "puntos_partidos": 11,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 2,
-    "aciertos_1x2": 6,
+    "aciertos_1x2": 7,
     "aciertos_exactos": 4,
     "partidos_pronosticados": 20,
     "jornadas_jugadas": 2,
@@ -78,8 +78,8 @@
             }
         },
         "J02": {
-            "puntos": 4,
-            "aciertos_1x2": 2,
+            "puntos": 5,
+            "aciertos_1x2": 3,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": true,
@@ -108,6 +108,14 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
+                },
+                "Valencia_vs_Celta": {
+                    "id": 16416298,
+                    "pronostico": "2-2",
+                    "real": "0-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         }
