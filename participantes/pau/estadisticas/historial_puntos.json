@@ -116,6 +116,14 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
+                },
+                "Espanyol_vs_Real Madrid": {
+                    "id": 16416306,
+                    "pronostico": "1-2",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         }

@@ -154,7 +154,7 @@
             "fecha": "2026-08-22T19:30:00",
             "goles_local": 0,
             "goles_visitante": 0,
-            "estado": "inprogress"
+            "estado": "finished"
         },
         {
             "id": 16416306,
@@ -163,9 +163,9 @@
             "id_escudo_local": 2814,
             "id_escudo_visitante": 2829,
             "fecha": "2026-08-22T21:30:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
+            "goles_local": 0,
+            "goles_visitante": 0,
+            "estado": "inprogress"
         },
         {
             "id": 16416302,
@@ -1008,17 +1008,6 @@
         }
     ],
     "J10": [
-        {
-            "id": 16421077,
-            "local": "Alavés",
-            "visitante": "Málaga CF",
-            "id_escudo_local": 2885,
-            "id_escudo_visitante": 2830,
-            "fecha": "2026-10-25T20:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
         {
             "id": 16421081,
             "local": "Athletic",
@@ -2397,6 +2386,17 @@
             "estado": "notstarted"
         },
         {
+            "id": 16462528,
+            "local": "Osasuna",
+            "visitante": "Deportivo de A Coruña",
+            "id_escudo_local": 2820,
+            "id_escudo_visitante": 2832,
+            "fecha": "2027-01-31T20:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
             "id": 16462531,
             "local": "Rayo",
             "visitante": "Real Madrid",
@@ -3350,28 +3350,6 @@
             "estado": "notstarted"
         },
         {
-            "id": 16462474,
-            "local": "Celta",
-            "visitante": "Elche",
-            "id_escudo_local": 2821,
-            "id_escudo_visitante": 2846,
-            "fecha": "2027-04-11T21:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
-            "id": 16462475,
-            "local": "Espanyol",
-            "visitante": "Málaga CF",
-            "id_escudo_local": 2814,
-            "id_escudo_visitante": 2830,
-            "fecha": "2027-04-11T21:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
             "id": 16462476,
             "local": "Osasuna",
             "visitante": "Real Madrid",
@@ -4027,6 +4005,17 @@
             "visitante": "Real Sociedad",
             "id_escudo_local": 2821,
             "id_escudo_visitante": 2824,
+            "fecha": "2027-05-23T21:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
+            "id": 16462625,
+            "local": "Deportivo de A Coruña",
+            "visitante": "Espanyol",
+            "id_escudo_local": 2832,
+            "id_escudo_visitante": 2814,
             "fecha": "2027-05-23T21:00:00",
             "goles_local": null,
             "goles_visitante": null,
