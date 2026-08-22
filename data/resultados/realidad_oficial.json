@@ -163,7 +163,7 @@
             "id_escudo_local": 2814,
             "id_escudo_visitante": 2829,
             "fecha": "2026-08-22T21:30:00",
-            "goles_local": 0,
+            "goles_local": 1,
             "goles_visitante": 1,
             "estado": "inprogress"
         },
@@ -1523,17 +1523,6 @@
             "estado": "notstarted"
         },
         {
-            "id": 16421129,
-            "local": "Real Madrid",
-            "visitante": "Alavés",
-            "id_escudo_local": 2829,
-            "id_escudo_visitante": 2885,
-            "fecha": "2026-11-29T20:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
             "id": 16462479,
             "local": "Real Sociedad",
             "visitante": "Sevilla",
@@ -1708,6 +1697,28 @@
             "visitante": "Sevilla",
             "id_escudo_local": 2846,
             "id_escudo_visitante": 2833,
+            "fecha": "2026-12-13T20:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
+            "id": 16462529,
+            "local": "Espanyol",
+            "visitante": "Celta",
+            "id_escudo_local": 2814,
+            "id_escudo_visitante": 2821,
+            "fecha": "2026-12-13T20:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
+            "id": 16462532,
+            "local": "Levante UD",
+            "visitante": "Alavés",
+            "id_escudo_local": 2849,
+            "id_escudo_visitante": 2885,
             "fecha": "2026-12-13T20:00:00",
             "goles_local": null,
             "goles_visitante": null,

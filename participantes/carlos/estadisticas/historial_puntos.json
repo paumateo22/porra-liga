@@ -2,11 +2,11 @@
     "participante": "carlos",
     "nombre": "Carlos",
     "insignias": [],
-    "puntos_totales": 9,
-    "puntos_partidos": 8,
+    "puntos_totales": 8,
+    "puntos_partidos": 7,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 7,
+    "aciertos_1x2": 6,
     "aciertos_exactos": 1,
     "partidos_pronosticados": 20,
     "jornadas_jugadas": 2,
@@ -73,8 +73,8 @@
             }
         },
         "J02": {
-            "puntos": 3,
-            "aciertos_1x2": 3,
+            "puntos": 2,
+            "aciertos_1x2": 2,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -115,10 +115,10 @@
                 "Espanyol_vs_Real Madrid": {
                     "id": 16416306,
                     "pronostico": "0-2",
-                    "real": "0-1",
-                    "acierto_1x2": true,
+                    "real": "1-1",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 }
             }
         }
