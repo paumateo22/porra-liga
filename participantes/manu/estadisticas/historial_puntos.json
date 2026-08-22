@@ -2,25 +2,25 @@
     "participante": "manu",
     "nombre": "Manu",
     "insignias": [],
-    "puntos_totales": 4,
-    "puntos_partidos": 2,
+    "puntos_totales": 1,
+    "puntos_partidos": 1,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 2,
+    "puntos_ganador_perdedor": -1,
+    "aciertos_1x2": 1,
     "aciertos_exactos": 0,
     "partidos_pronosticados": 10,
     "jornadas_jugadas": 1,
-    "jornadas_ganadas": 1,
-    "jornadas_perdidas": 0,
+    "jornadas_ganadas": 0,
+    "jornadas_perdidas": 1,
     "punto_partida": 1,
     "por_jornada": {
         "J02": {
-            "puntos": 3,
-            "aciertos_1x2": 2,
+            "puntos": 0,
+            "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "bonus": 0,
-            "ganador": true,
-            "perdedor": false,
+            "ganador": false,
+            "perdedor": true,
             "detalle": {
                 "Rayo_vs_Alavés": {
                     "id": 16416292,
@@ -41,10 +41,10 @@
                 "Athletic_vs_Sevilla": {
                     "id": 16416301,
                     "pronostico": "1-1",
-                    "real": "0-0",
-                    "acierto_1x2": true,
+                    "real": "0-1",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 }
             }
         }
