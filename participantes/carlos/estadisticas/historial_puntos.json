@@ -2,11 +2,11 @@
     "participante": "carlos",
     "nombre": "Carlos",
     "insignias": [],
-    "puntos_totales": 10,
-    "puntos_partidos": 9,
+    "puntos_totales": 9,
+    "puntos_partidos": 8,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 8,
+    "aciertos_1x2": 7,
     "aciertos_exactos": 1,
     "partidos_pronosticados": 20,
     "jornadas_jugadas": 2,
@@ -73,8 +73,8 @@
             }
         },
         "J02": {
-            "puntos": 4,
-            "aciertos_1x2": 4,
+            "puntos": 3,
+            "aciertos_1x2": 3,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -123,10 +123,10 @@
                 "Atlético_vs_Villarreal": {
                     "id": 16416302,
                     "pronostico": "2-1",
-                    "real": "1-0",
-                    "acierto_1x2": true,
+                    "real": "1-1",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 }
             }
         }
