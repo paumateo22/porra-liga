@@ -176,7 +176,7 @@
             "fecha": "2026-08-23T17:00:00",
             "goles_local": 2,
             "goles_visitante": 2,
-            "estado": "inprogress"
+            "estado": "finished"
         },
         {
             "id": 16416300,
@@ -185,9 +185,9 @@
             "id_escudo_local": 2859,
             "id_escudo_visitante": 2835,
             "fecha": "2026-08-23T19:30:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
+            "goles_local": 1,
+            "goles_visitante": 0,
+            "estado": "finished"
         },
         {
             "id": 16416311,
@@ -196,9 +196,9 @@
             "id_escudo_local": 2846,
             "id_escudo_visitante": 2817,
             "fecha": "2026-08-23T21:30:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
+            "goles_local": 0,
+            "goles_visitante": 5,
+            "estado": "finished"
         },
         {
             "id": 16416296,
@@ -1165,17 +1165,6 @@
             "estado": "notstarted"
         },
         {
-            "id": 16421091,
-            "local": "FC Barcelona",
-            "visitante": "Alavés",
-            "id_escudo_local": 2817,
-            "id_escudo_visitante": 2885,
-            "fecha": "2026-11-01T20:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
             "id": 16421093,
             "local": "Getafe",
             "visitante": "Sevilla",
@@ -1528,6 +1517,17 @@
             "visitante": "Athletic",
             "id_escudo_local": 2830,
             "id_escudo_visitante": 2825,
+            "fecha": "2026-11-29T20:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
+            "id": 16421129,
+            "local": "Real Madrid",
+            "visitante": "Alavés",
+            "id_escudo_local": 2829,
+            "id_escudo_visitante": 2885,
             "fecha": "2026-11-29T20:00:00",
             "goles_local": null,
             "goles_visitante": null,
@@ -2520,11 +2520,33 @@
             "estado": "notstarted"
         },
         {
+            "id": 16462558,
+            "local": "FC Barcelona",
+            "visitante": "Atlético",
+            "id_escudo_local": 2817,
+            "id_escudo_visitante": 2836,
+            "fecha": "2027-02-07T20:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
             "id": 16462561,
             "local": "Getafe",
             "visitante": "Villarreal",
             "id_escudo_local": 2859,
             "id_escudo_visitante": 2819,
+            "fecha": "2027-02-07T20:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
+            "id": 16462564,
+            "local": "Real Sociedad",
+            "visitante": "Real Madrid",
+            "id_escudo_local": 2824,
+            "id_escudo_visitante": 2829,
             "fecha": "2027-02-07T20:00:00",
             "goles_local": null,
             "goles_visitante": null,
@@ -2779,17 +2801,6 @@
             "estado": "notstarted"
         },
         {
-            "id": 16462633,
-            "local": "Betis",
-            "visitante": "Villarreal",
-            "id_escudo_local": 2816,
-            "id_escudo_visitante": 2819,
-            "fecha": "2027-02-28T20:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
             "id": 16462636,
             "local": "Celta",
             "visitante": "Espanyol",
@@ -2817,17 +2828,6 @@
             "visitante": "Deportivo de A Coruña",
             "id_escudo_local": 2849,
             "id_escudo_visitante": 2832,
-            "fecha": "2027-02-28T20:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
-            "id": 16462645,
-            "local": "Málaga CF",
-            "visitante": "Atlético",
-            "id_escudo_local": 2830,
-            "id_escudo_visitante": 2836,
             "fecha": "2027-02-28T20:00:00",
             "goles_local": null,
             "goles_visitante": null,

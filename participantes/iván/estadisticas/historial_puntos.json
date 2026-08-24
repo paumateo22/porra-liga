@@ -7,11 +7,11 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 14,
-    "puntos_partidos": 12,
+    "puntos_totales": 15,
+    "puntos_partidos": 13,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 2,
-    "aciertos_1x2": 8,
+    "aciertos_1x2": 9,
     "aciertos_exactos": 4,
     "partidos_pronosticados": 20,
     "jornadas_jugadas": 2,
@@ -78,8 +78,8 @@
             }
         },
         "J02": {
-            "puntos": 6,
-            "aciertos_1x2": 4,
+            "puntos": 7,
+            "aciertos_1x2": 5,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": true,
@@ -132,6 +132,22 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
+                },
+                "Getafe_vs_Real Racing Club": {
+                    "id": 16416300,
+                    "pronostico": "1-1",
+                    "real": "1-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Elche_vs_FC Barcelona": {
+                    "id": 16416311,
+                    "pronostico": "0-3",
+                    "real": "0-5",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         }
