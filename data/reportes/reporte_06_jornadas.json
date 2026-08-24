@@ -100,7 +100,7 @@
         "jugadores": {
             "adrián": {
                 "partidos_pronosticados": 10,
-                "partidos_evaluados": 8,
+                "partidos_evaluados": 9,
                 "aciertos_1x2": 5,
                 "aciertos_exactos": 1,
                 "puntos_partidos": 6,
@@ -113,7 +113,7 @@
             },
             "aitor": {
                 "partidos_pronosticados": 10,
-                "partidos_evaluados": 8,
+                "partidos_evaluados": 9,
                 "aciertos_1x2": 5,
                 "aciertos_exactos": 0,
                 "puntos_partidos": 5,
@@ -126,7 +126,7 @@
             },
             "carlos": {
                 "partidos_pronosticados": 10,
-                "partidos_evaluados": 8,
+                "partidos_evaluados": 9,
                 "aciertos_1x2": 3,
                 "aciertos_exactos": 0,
                 "puntos_partidos": 3,
@@ -139,7 +139,7 @@
             },
             "iván": {
                 "partidos_pronosticados": 10,
-                "partidos_evaluados": 8,
+                "partidos_evaluados": 9,
                 "aciertos_1x2": 5,
                 "aciertos_exactos": 1,
                 "puntos_partidos": 6,
@@ -152,7 +152,7 @@
             },
             "javi": {
                 "partidos_pronosticados": 9,
-                "partidos_evaluados": 7,
+                "partidos_evaluados": 8,
                 "aciertos_1x2": 3,
                 "aciertos_exactos": 0,
                 "puntos_partidos": 3,
@@ -165,7 +165,7 @@
             },
             "manu": {
                 "partidos_pronosticados": 10,
-                "partidos_evaluados": 8,
+                "partidos_evaluados": 9,
                 "aciertos_1x2": 3,
                 "aciertos_exactos": 0,
                 "puntos_partidos": 3,
@@ -178,7 +178,7 @@
             },
             "pau": {
                 "partidos_pronosticados": 10,
-                "partidos_evaluados": 8,
+                "partidos_evaluados": 9,
                 "aciertos_1x2": 4,
                 "aciertos_exactos": 2,
                 "puntos_partidos": 6,
@@ -191,7 +191,7 @@
             },
             "álvaro": {
                 "partidos_pronosticados": 10,
-                "partidos_evaluados": 8,
+                "partidos_evaluados": 9,
                 "aciertos_1x2": 3,
                 "aciertos_exactos": 1,
                 "puntos_partidos": 4,
