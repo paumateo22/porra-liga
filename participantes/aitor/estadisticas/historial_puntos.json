@@ -2,15 +2,15 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 8,
-    "puntos_partidos": 8,
+    "puntos_totales": 6,
+    "puntos_partidos": 7,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 8,
+    "puntos_ganador_perdedor": -1,
+    "aciertos_1x2": 7,
     "aciertos_exactos": 0,
     "partidos_pronosticados": 20,
     "jornadas_jugadas": 2,
-    "jornadas_ganadas": 1,
+    "jornadas_ganadas": 0,
     "jornadas_perdidas": 1,
     "punto_partida": 0,
     "por_jornada": {
@@ -73,11 +73,11 @@
             }
         },
         "J02": {
-            "puntos": 7,
-            "aciertos_1x2": 6,
+            "puntos": 5,
+            "aciertos_1x2": 5,
             "aciertos_exactos": 0,
             "bonus": 0,
-            "ganador": true,
+            "ganador": false,
             "perdedor": false,
             "detalle": {
                 "Rayo_vs_Alavés": {
@@ -155,10 +155,10 @@
                 "Málaga CF_vs_Deportivo de A Coruña": {
                     "id": 16416307,
                     "pronostico": "0-2",
-                    "real": "0-1",
-                    "acierto_1x2": true,
+                    "real": "1-1",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 }
             }
         }

@@ -2,16 +2,16 @@
     "participante": "carlos",
     "nombre": "Carlos",
     "insignias": [],
-    "puntos_totales": 10,
-    "puntos_partidos": 9,
+    "puntos_totales": 8,
+    "puntos_partidos": 8,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 8,
+    "puntos_ganador_perdedor": 0,
+    "aciertos_1x2": 7,
     "aciertos_exactos": 1,
     "partidos_pronosticados": 20,
     "jornadas_jugadas": 2,
     "jornadas_ganadas": 1,
-    "jornadas_perdidas": 0,
+    "jornadas_perdidas": 1,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -73,12 +73,12 @@
             }
         },
         "J02": {
-            "puntos": 4,
-            "aciertos_1x2": 4,
+            "puntos": 2,
+            "aciertos_1x2": 3,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
-            "perdedor": false,
+            "perdedor": true,
             "detalle": {
                 "Rayo_vs_Alavés": {
                     "id": 16416292,
@@ -155,10 +155,10 @@
                 "Málaga CF_vs_Deportivo de A Coruña": {
                     "id": 16416307,
                     "pronostico": "1-3",
-                    "real": "0-1",
-                    "acierto_1x2": true,
+                    "real": "1-1",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 }
             }
         }

@@ -7,11 +7,11 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 10,
-    "puntos_partidos": 10,
+    "puntos_totales": 9,
+    "puntos_partidos": 9,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 8,
+    "aciertos_1x2": 7,
     "aciertos_exactos": 2,
     "partidos_pronosticados": 20,
     "jornadas_jugadas": 2,
@@ -78,8 +78,8 @@
             }
         },
         "J02": {
-            "puntos": 7,
-            "aciertos_1x2": 5,
+            "puntos": 6,
+            "aciertos_1x2": 4,
             "aciertos_exactos": 2,
             "bonus": 0,
             "ganador": false,
@@ -160,10 +160,10 @@
                 "Málaga CF_vs_Deportivo de A Coruña": {
                     "id": 16416307,
                     "pronostico": "1-2",
-                    "real": "0-1",
-                    "acierto_1x2": true,
+                    "real": "1-1",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 }
             }
         }
