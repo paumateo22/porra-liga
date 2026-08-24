@@ -209,7 +209,7 @@
             "fecha": "2026-08-24T19:30:00",
             "goles_local": 0,
             "goles_visitante": 0,
-            "estado": "inprogress"
+            "estado": "finished"
         },
         {
             "id": 16416307,
@@ -218,9 +218,9 @@
             "id_escudo_local": 2830,
             "id_escudo_visitante": 2832,
             "fecha": "2026-08-24T21:30:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
+            "goles_local": 0,
+            "goles_visitante": 1,
+            "estado": "inprogress"
         }
     ],
     "J03": [

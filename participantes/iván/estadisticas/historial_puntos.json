@@ -7,15 +7,15 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 15,
+    "puntos_totales": 14,
     "puntos_partidos": 13,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 2,
+    "puntos_ganador_perdedor": 1,
     "aciertos_1x2": 9,
     "aciertos_exactos": 4,
     "partidos_pronosticados": 20,
     "jornadas_jugadas": 2,
-    "jornadas_ganadas": 2,
+    "jornadas_ganadas": 1,
     "jornadas_perdidas": 0,
     "punto_partida": 0,
     "por_jornada": {
@@ -78,11 +78,11 @@
             }
         },
         "J02": {
-            "puntos": 7,
+            "puntos": 6,
             "aciertos_1x2": 5,
             "aciertos_exactos": 1,
             "bonus": 0,
-            "ganador": true,
+            "ganador": false,
             "perdedor": false,
             "detalle": {
                 "Rayo_vs_Alavés": {
@@ -153,6 +153,14 @@
                     "id": 16416296,
                     "pronostico": "1-0",
                     "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Málaga CF_vs_Deportivo de A Coruña": {
+                    "id": 16416307,
+                    "pronostico": "1-1",
+                    "real": "0-1",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
