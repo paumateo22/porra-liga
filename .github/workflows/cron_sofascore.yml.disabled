@@ -52,8 +52,8 @@ jobs:
       - name: Instalar librerias
         if: steps.date_check.outputs.is_active == 'true'
         run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          python -m pip install --upgrade pip --break-system-packages
+          pip install -r requirements.txt --break-system-packages
 
       - name: Ejecutar Extractor SofaScore
         if: steps.date_check.outputs.is_active == 'true'
