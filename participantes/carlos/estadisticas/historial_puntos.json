@@ -2,11 +2,11 @@
     "participante": "carlos",
     "nombre": "Carlos",
     "insignias": [],
-    "puntos_totales": 8,
-    "puntos_partidos": 8,
+    "puntos_totales": 9,
+    "puntos_partidos": 9,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 7,
+    "aciertos_1x2": 8,
     "aciertos_exactos": 1,
     "partidos_pronosticados": 20,
     "jornadas_jugadas": 2,
@@ -15,8 +15,8 @@
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
-            "puntos": 6,
-            "aciertos_1x2": 4,
+            "puntos": 7,
+            "aciertos_1x2": 5,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": true,
@@ -69,6 +69,14 @@
                     "acierto_1x2": true,
                     "acierto_exacto": true,
                     "puntos": 2
+                },
+                "Valencia_vs_Betis": {
+                    "id": 16421049,
+                    "pronostico": "1-1",
+                    "real": "0-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         },
