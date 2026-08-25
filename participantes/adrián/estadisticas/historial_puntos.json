@@ -2,25 +2,25 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 10,
-    "puntos_partidos": 10,
+    "puntos_totales": 8,
+    "puntos_partidos": 9,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 8,
+    "puntos_ganador_perdedor": -1,
+    "aciertos_1x2": 7,
     "aciertos_exactos": 2,
     "partidos_pronosticados": 20,
     "jornadas_jugadas": 2,
     "jornadas_ganadas": 0,
-    "jornadas_perdidas": 0,
+    "jornadas_perdidas": 1,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
-            "puntos": 4,
-            "aciertos_1x2": 3,
+            "puntos": 2,
+            "aciertos_1x2": 2,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
-            "perdedor": false,
+            "perdedor": true,
             "detalle": {
                 "Alavés_vs_Getafe": {
                     "id": 16421047,
@@ -73,10 +73,10 @@
                 "Valencia_vs_Betis": {
                     "id": 16421049,
                     "pronostico": "2-2",
-                    "real": "0-0",
-                    "acierto_1x2": true,
+                    "real": "0-1",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 }
             }
         },

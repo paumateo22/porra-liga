@@ -7,11 +7,11 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 18,
-    "puntos_partidos": 16,
+    "puntos_totales": 17,
+    "puntos_partidos": 15,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 2,
-    "aciertos_1x2": 11,
+    "aciertos_1x2": 10,
     "aciertos_exactos": 5,
     "partidos_pronosticados": 20,
     "jornadas_jugadas": 2,
@@ -20,8 +20,8 @@
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
-            "puntos": 9,
-            "aciertos_1x2": 5,
+            "puntos": 8,
+            "aciertos_1x2": 4,
             "aciertos_exactos": 3,
             "bonus": 0,
             "ganador": true,
@@ -78,10 +78,10 @@
                 "Valencia_vs_Betis": {
                     "id": 16421049,
                     "pronostico": "2-2",
-                    "real": "0-0",
-                    "acierto_1x2": true,
+                    "real": "0-1",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 }
             }
         },
