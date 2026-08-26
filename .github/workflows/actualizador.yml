@@ -41,15 +41,15 @@ jobs:
           python scripts/06_motor_puntuacion.py
 
       - name: Guardar cambios y subir a GitHub (Auto-Commit)
+        shell: bash
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add .
 
-          $changes = git status --porcelain
-          if (-not [string]::IsNullOrWhiteSpace($changes)) {
+          if [ -n "$(git status --porcelain)" ]; then
             git commit -m "Auto-Update: pronosticos ingeridos y puntuacion recalculada"
             git push
-          } else {
-            Write-Host "No hay cambios reales para guardar. Saltando commit."
-          }
+          else
+            echo "No hay cambios reales para guardar. Saltando commit."
+          fi
