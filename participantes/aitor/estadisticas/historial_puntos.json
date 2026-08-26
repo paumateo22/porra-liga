@@ -2,11 +2,11 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 8,
-    "puntos_partidos": 8,
+    "puntos_totales": 9,
+    "puntos_partidos": 9,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 8,
+    "aciertos_1x2": 9,
     "aciertos_exactos": 0,
     "partidos_pronosticados": 20,
     "jornadas_jugadas": 2,
@@ -15,8 +15,8 @@
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
-            "puntos": 3,
-            "aciertos_1x2": 3,
+            "puntos": 4,
+            "aciertos_1x2": 4,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -74,6 +74,14 @@
                     "id": 16421049,
                     "pronostico": "0-2",
                     "real": "0-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "Real Madrid_vs_Real Sociedad": {
+                    "id": 16421051,
+                    "pronostico": "3-1",
+                    "real": "4-1",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1

@@ -2,11 +2,11 @@
     "participante": "álvaro",
     "nombre": "Álvaro",
     "insignias": [],
-    "puntos_totales": 9,
-    "puntos_partidos": 9,
+    "puntos_totales": 10,
+    "puntos_partidos": 10,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 7,
+    "aciertos_1x2": 8,
     "aciertos_exactos": 2,
     "partidos_pronosticados": 20,
     "jornadas_jugadas": 2,
@@ -15,8 +15,8 @@
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
-            "puntos": 4,
-            "aciertos_1x2": 3,
+            "puntos": 5,
+            "aciertos_1x2": 4,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
@@ -77,6 +77,14 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
+                },
+                "Real Madrid_vs_Real Sociedad": {
+                    "id": 16421051,
+                    "pronostico": "2-1",
+                    "real": "4-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         },

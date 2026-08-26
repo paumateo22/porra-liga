@@ -7,11 +7,11 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 11,
-    "puntos_partidos": 10,
+    "puntos_totales": 12,
+    "puntos_partidos": 11,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 8,
+    "aciertos_1x2": 9,
     "aciertos_exactos": 2,
     "partidos_pronosticados": 20,
     "jornadas_jugadas": 2,
@@ -20,8 +20,8 @@
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
-            "puntos": 5,
-            "aciertos_1x2": 4,
+            "puntos": 6,
+            "aciertos_1x2": 5,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": true,
@@ -79,6 +79,14 @@
                     "id": 16421049,
                     "pronostico": "1-2",
                     "real": "0-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "Real Madrid_vs_Real Sociedad": {
+                    "id": 16421051,
+                    "pronostico": "2-1",
+                    "real": "4-1",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
