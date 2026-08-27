@@ -71,14 +71,14 @@
                 "partidos_pronosticados": 10,
                 "partidos_evaluados": 10,
                 "aciertos_1x2": 6,
-                "aciertos_exactos": 0,
-                "puntos_partidos": 6,
+                "aciertos_exactos": 1,
+                "puntos_partidos": 7,
                 "bonus_rendimiento": 0,
                 "elegible_jornada": true,
                 "es_ganador_jornada": true,
                 "es_perdedor_jornada": false,
                 "puntos_ganador_perdedor": 1,
-                "puntos_totales": 7
+                "puntos_totales": 8
             },
             "álvaro": {
                 "partidos_pronosticados": 10,
