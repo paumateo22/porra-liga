@@ -2,24 +2,24 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 10,
-    "puntos_partidos": 10,
+    "puntos_totales": 13,
+    "puntos_partidos": 12,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 10,
-    "aciertos_exactos": 0,
+    "puntos_ganador_perdedor": 1,
+    "aciertos_1x2": 11,
+    "aciertos_exactos": 1,
     "partidos_pronosticados": 20,
     "jornadas_jugadas": 2,
-    "jornadas_ganadas": 0,
+    "jornadas_ganadas": 1,
     "jornadas_perdidas": 0,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
-            "puntos": 5,
-            "aciertos_1x2": 5,
-            "aciertos_exactos": 0,
+            "puntos": 8,
+            "aciertos_1x2": 6,
+            "aciertos_exactos": 1,
             "bonus": 0,
-            "ganador": false,
+            "ganador": true,
             "perdedor": false,
             "detalle": {
                 "Alavés_vs_Getafe": {
@@ -89,10 +89,10 @@
                 "Celta_vs_Osasuna": {
                     "id": 16815992,
                     "pronostico": "1-2",
-                    "real": "1-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
+                    "real": "1-2",
+                    "acierto_1x2": true,
+                    "acierto_exacto": true,
+                    "puntos": 2
                 },
                 "FC Barcelona_vs_Athletic": {
                     "id": 16421059,

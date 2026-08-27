@@ -7,12 +7,12 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 15,
-    "puntos_partidos": 14,
+    "puntos_totales": 13,
+    "puntos_partidos": 12,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 11,
-    "aciertos_exactos": 3,
+    "aciertos_1x2": 10,
+    "aciertos_exactos": 2,
     "partidos_pronosticados": 20,
     "jornadas_jugadas": 2,
     "jornadas_ganadas": 1,
@@ -20,9 +20,9 @@
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
-            "puntos": 9,
-            "aciertos_1x2": 7,
-            "aciertos_exactos": 1,
+            "puntos": 7,
+            "aciertos_1x2": 6,
+            "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": true,
             "perdedor": false,
@@ -94,10 +94,10 @@
                 "Celta_vs_Osasuna": {
                     "id": 16815992,
                     "pronostico": "1-1",
-                    "real": "1-1",
-                    "acierto_1x2": true,
-                    "acierto_exacto": true,
-                    "puntos": 2
+                    "real": "1-2",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 },
                 "FC Barcelona_vs_Athletic": {
                     "id": 16421059,
