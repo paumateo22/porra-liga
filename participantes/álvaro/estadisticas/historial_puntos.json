@@ -2,11 +2,11 @@
     "participante": "álvaro",
     "nombre": "Álvaro",
     "insignias": [],
-    "puntos_totales": 10,
-    "puntos_partidos": 10,
+    "puntos_totales": 11,
+    "puntos_partidos": 11,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 8,
+    "aciertos_1x2": 9,
     "aciertos_exactos": 2,
     "partidos_pronosticados": 20,
     "jornadas_jugadas": 2,
@@ -15,8 +15,8 @@
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
-            "puntos": 5,
-            "aciertos_1x2": 4,
+            "puntos": 6,
+            "aciertos_1x2": 5,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
@@ -82,6 +82,14 @@
                     "id": 16421051,
                     "pronostico": "2-1",
                     "real": "4-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "Celta_vs_Osasuna": {
+                    "id": 16815992,
+                    "pronostico": "2-1",
+                    "real": "1-0",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1

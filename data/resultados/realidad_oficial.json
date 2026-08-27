@@ -95,9 +95,9 @@
             "id_escudo_local": 2821,
             "id_escudo_visitante": 2820,
             "fecha": "2026-08-27T20:30:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
+            "goles_local": 1,
+            "goles_visitante": 0,
+            "estado": "inprogress"
         },
         {
             "id": 16421059,
@@ -561,6 +561,17 @@
     ],
     "J06": [
         {
+            "id": 16416340,
+            "local": "Real Sociedad",
+            "visitante": "Celta",
+            "id_escudo_local": 2824,
+            "id_escudo_visitante": 2821,
+            "fecha": "2026-09-03T21:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
             "id": 16416334,
             "local": "Alavés",
             "visitante": "Valencia",
@@ -654,17 +665,6 @@
             "visitante": "Espanyol",
             "id_escudo_local": 2818,
             "id_escudo_visitante": 2814,
-            "fecha": "2026-09-16T21:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
-            "id": 16416340,
-            "local": "Real Sociedad",
-            "visitante": "Celta",
-            "id_escudo_local": 2824,
-            "id_escudo_visitante": 2821,
             "fecha": "2026-09-16T21:00:00",
             "goles_local": null,
             "goles_visitante": null,

@@ -7,11 +7,11 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 18,
-    "puntos_partidos": 16,
+    "puntos_totales": 19,
+    "puntos_partidos": 17,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 2,
-    "aciertos_1x2": 11,
+    "aciertos_1x2": 12,
     "aciertos_exactos": 5,
     "partidos_pronosticados": 20,
     "jornadas_jugadas": 2,
@@ -20,8 +20,8 @@
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
-            "puntos": 9,
-            "aciertos_1x2": 5,
+            "puntos": 10,
+            "aciertos_1x2": 6,
             "aciertos_exactos": 3,
             "bonus": 0,
             "ganador": true,
@@ -87,6 +87,14 @@
                     "id": 16421051,
                     "pronostico": "3-1",
                     "real": "4-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "Celta_vs_Osasuna": {
+                    "id": 16815992,
+                    "pronostico": "2-1",
+                    "real": "1-0",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
