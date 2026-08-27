@@ -1,6 +1,6 @@
 {
     "J01": {
-        "cerrada": false,
+        "cerrada": true,
         "jugadores": {
             "adrián": {
                 "partidos_pronosticados": 10,

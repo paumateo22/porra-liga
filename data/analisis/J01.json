@@ -1,7 +1,7 @@
 {
     "clave": "J01",
     "jornada": 1,
-    "cerrada": false,
+    "cerrada": true,
     "resultado_jornada": {
         "ganadores": [
             {
@@ -31,7 +31,7 @@
                 "nombre": "Adrián"
             }
         ],
-        "ganador_seguro": false,
+        "ganador_seguro": true,
         "perdedor_seguro": true
     },
     "partidos": [
@@ -165,7 +165,7 @@
         "16421059": {
             "goles_local": 2,
             "goles_visitante": 0,
-            "estado": "inprogress"
+            "estado": "finished"
         }
     },
     "jugadores": [
