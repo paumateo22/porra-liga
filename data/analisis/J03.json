@@ -127,8 +127,8 @@
     "resultados": {
         "16416304": {
             "goles_local": 3,
-            "goles_visitante": 0,
-            "estado": "inprogress"
+            "goles_visitante": 2,
+            "estado": "finished"
         },
         "16416290": {
             "goles_local": null,
