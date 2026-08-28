@@ -7,15 +7,15 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 14,
-    "puntos_partidos": 13,
+    "puntos_totales": 16,
+    "puntos_partidos": 14,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 10,
+    "puntos_ganador_perdedor": 2,
+    "aciertos_1x2": 11,
     "aciertos_exactos": 3,
-    "partidos_pronosticados": 20,
-    "jornadas_jugadas": 2,
-    "jornadas_ganadas": 1,
+    "partidos_pronosticados": 30,
+    "jornadas_jugadas": 3,
+    "jornadas_ganadas": 2,
     "jornadas_perdidas": 0,
     "punto_partida": 0,
     "por_jornada": {
@@ -196,6 +196,24 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
+                }
+            }
+        },
+        "J03": {
+            "puntos": 2,
+            "aciertos_1x2": 1,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "ganador": true,
+            "perdedor": false,
+            "detalle": {
+                "Real Racing Club_vs_Elche": {
+                    "id": 16416304,
+                    "pronostico": "1-1",
+                    "real": "0-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         }

@@ -2,16 +2,16 @@
     "participante": "manu",
     "nombre": "Manu",
     "insignias": [],
-    "puntos_totales": 6,
+    "puntos_totales": 5,
     "puntos_partidos": 3,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": -1,
+    "puntos_ganador_perdedor": -2,
     "aciertos_1x2": 3,
     "aciertos_exactos": 0,
-    "partidos_pronosticados": 10,
-    "jornadas_jugadas": 1,
+    "partidos_pronosticados": 20,
+    "jornadas_jugadas": 2,
     "jornadas_ganadas": 0,
-    "jornadas_perdidas": 1,
+    "jornadas_perdidas": 2,
     "punto_partida": 4,
     "por_jornada": {
         "J02": {
@@ -98,6 +98,24 @@
                     "id": 16416307,
                     "pronostico": "2-0",
                     "real": "1-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                }
+            }
+        },
+        "J03": {
+            "puntos": -1,
+            "aciertos_1x2": 0,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "ganador": false,
+            "perdedor": true,
+            "detalle": {
+                "Real Racing Club_vs_Elche": {
+                    "id": 16416304,
+                    "pronostico": "2-1",
+                    "real": "0-0",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0

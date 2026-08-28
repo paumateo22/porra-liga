@@ -2,16 +2,16 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 13,
+    "puntos_totales": 12,
     "puntos_partidos": 12,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 1,
+    "puntos_ganador_perdedor": 0,
     "aciertos_1x2": 11,
     "aciertos_exactos": 1,
-    "partidos_pronosticados": 20,
-    "jornadas_jugadas": 2,
+    "partidos_pronosticados": 30,
+    "jornadas_jugadas": 3,
     "jornadas_ganadas": 1,
-    "jornadas_perdidas": 0,
+    "jornadas_perdidas": 1,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -188,6 +188,24 @@
                     "id": 16416307,
                     "pronostico": "0-2",
                     "real": "1-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                }
+            }
+        },
+        "J03": {
+            "puntos": -1,
+            "aciertos_1x2": 0,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "ganador": false,
+            "perdedor": true,
+            "detalle": {
+                "Real Racing Club_vs_Elche": {
+                    "id": 16416304,
+                    "pronostico": "2-1",
+                    "real": "0-0",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
