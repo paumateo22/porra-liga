@@ -2,12 +2,12 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 15,
-    "puntos_partidos": 13,
+    "puntos_totales": 17,
+    "puntos_partidos": 15,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 2,
-    "aciertos_1x2": 12,
-    "aciertos_exactos": 1,
+    "aciertos_1x2": 13,
+    "aciertos_exactos": 2,
     "partidos_pronosticados": 30,
     "jornadas_jugadas": 3,
     "jornadas_ganadas": 2,
@@ -195,9 +195,9 @@
             }
         },
         "J03": {
-            "puntos": 2,
-            "aciertos_1x2": 1,
-            "aciertos_exactos": 0,
+            "puntos": 4,
+            "aciertos_1x2": 2,
+            "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": true,
             "perdedor": false,
@@ -213,10 +213,10 @@
                 "Alavés_vs_Villarreal": {
                     "id": 16416290,
                     "pronostico": "1-0",
-                    "real": "0-0",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
+                    "real": "1-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         }
