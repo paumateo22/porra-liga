@@ -429,3 +429,38 @@ function _iniciarCuentasAtras() {
   actualizar();
   _intervaloCuentasAtras = setInterval(actualizar, 1000);
 }
+
+
+/* ───────────────────── Generación de imágenes (canvas) ─────────────────────
+   Usadas por analisis.html e index.html para exportar/copiar capturas. No se
+   usa ninguna librería: solo Canvas 2D nativo. */
+
+/* Los escudos vienen del CDN de SofaScore. Si su servidor no permite el uso
+   en canvas entre dominios (CORS), el navegador "mancha" el lienzo y
+   exportarlo (descargar/copiar) lanza un error de seguridad — por eso se
+   intenta cargar con crossOrigin, y quien llame a esto debe estar listo
+   para repetir el dibujo sin escudos si la exportación falla igualmente. */
+async function cargarImagenEscudo(idEscudo) {
+  if (!idEscudo) return null;
+  return new Promise((resolve) => {
+    const img = new Image();
+    img.crossOrigin = "anonymous";
+    img.onload = () => resolve(img);
+    img.onerror = () => resolve(null);
+    img.src = `https://img.sofascore.com/api/v1/team/${idEscudo}/image`;
+  });
+}
+
+function recortarTexto(ctx, texto, anchoMax) {
+  if (ctx.measureText(texto).width <= anchoMax) return texto;
+  let recortado = texto;
+  while (recortado.length > 1 && ctx.measureText(recortado + "…").width > anchoMax) {
+    recortado = recortado.slice(0, -1);
+  }
+  return recortado + "…";
+}
+
+/* canvas.toBlob() envuelto en una promesa, para poder usar await. */
+function canvasABlob(canvas) {
+  return new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
+}

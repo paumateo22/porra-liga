@@ -7,6 +7,14 @@
 <link rel="stylesheet" href="theme.css">
 <style>
   .banner-resultado { display: flex; gap: 16px; flex-wrap: wrap; margin: 20px 0; }
+  .fila-acciones-imagen { text-align: center; margin: -8px 0 20px; display: flex; gap: 8px; justify-content: center; align-items: center; flex-wrap: wrap; }
+  .btn-imagen-analisis {
+    font-size: 0.8em; padding: 7px 16px; text-decoration: none; text-transform: none;
+    background: #252525; color: var(--gold); border: 1px solid var(--gold); border-radius: 20px;
+    transition: 0.2s; display: inline-block;
+  }
+  .btn-imagen-analisis:hover { background: var(--gold); color: #000; }
+  #aviso-imagen { font-size: 0.85em; color: #9ca3af; }
   .tarjeta-banner { flex: 1; min-width: 220px; border-radius: 10px; padding: 18px 20px; text-align: center; }
   .tarjeta-banner.campeon { background: linear-gradient(180deg, #4a3a0a, #2a2205); border: 2px solid var(--gold); }
   .tarjeta-banner.perdedores { background: #1c1c1c; border: 2px solid #444; }
@@ -41,6 +49,12 @@
   <div id="barra-jornadas"></div>
 
   <div id="banner-resultado"></div>
+
+  <div class="fila-acciones-imagen" id="fila-acciones-imagen" hidden>
+    <a href="javascript:void(0)" class="btn-imagen-analisis" id="btn-descargar-imagen-analisis">🖼️ Descargar imagen</a>
+    <a href="javascript:void(0)" class="btn-imagen-analisis" id="btn-copiar-imagen-analisis">📋 Copiar imagen</a>
+    <span class="aviso" id="aviso-imagen"></span>
+  </div>
 
   <div class="table-wrapper">
     <table class="tabla-analisis" id="tabla-cruzada"></table>
@@ -95,6 +109,8 @@ async function iniciar() {
     indice = CLAVES.indexOf(clave);
     pintar();
   });
+  document.getElementById("btn-descargar-imagen-analisis").onclick = descargarImagenAnalisis;
+  document.getElementById("btn-copiar-imagen-analisis").onclick = copiarImagenAnalisis;
 
   pintar();
 }
@@ -104,6 +120,7 @@ async function pintar() {
   barra.marcarActiva(clave);
 
   DATOS = await cargar(`data/analisis/${clave}.json`, null);
+  document.getElementById("fila-acciones-imagen").hidden = !DATOS;
   if (DATOS) {
     pintarBanner();
     pintarBarras();
@@ -167,9 +184,9 @@ function pintarBanner() {
     </div>`;
 }
 
-async function pintarTabla(clave) {
+async function datosTablaCompleta(clave) {
   const partidos = CALENDARIO[clave] || [];
-  if (!partidos.length) { document.getElementById("tabla-cruzada").innerHTML = ""; return; }
+  if (!partidos.length) return { partidos: [], resultados: {}, jugadores: [] };
 
   const resultados = DATOS?.resultados
     || Object.fromEntries((REALIDAD[clave] || []).map((r) => [r.id, r]));
@@ -211,6 +228,13 @@ async function pintarTabla(clave) {
     // esta jornada — no pintar una fila vacía de alguien que nunca mandó nada.
     .filter((j) => Object.keys(j.predicciones).length || Object.keys(j.prediccionesCrudas).length)
     .sort((a, b) => b.puntos - a.puntos);
+
+  return { partidos, resultados, jugadores };
+}
+
+async function pintarTabla(clave) {
+  const { partidos, resultados, jugadores } = await datosTablaCompleta(clave);
+  if (!partidos.length) { document.getElementById("tabla-cruzada").innerHTML = ""; return; }
 
   const cabecera = `
     <thead><tr>
@@ -303,6 +327,223 @@ function pintarBarras() {
       ${lineasGuia}
       ${barras}
     </svg>`;
+}
+
+/* Dibuja en un <canvas> el estado actual de la jornada: quién va ganando y
+   perdiendo (si lo hay) + la tabla completa de pronósticos de todos. La
+   jornada sale siempre en el título — a diferencia de una simple captura de
+   pantalla, aquí nunca hay dudas de qué jornada es. */
+async function dibujarImagenAnalisis(conEscudos = true) {
+  const clave = CLAVES[indice];
+  const resultado = DATOS?.resultado_jornada;
+  const { partidos, resultados, jugadores } = await datosTablaCompleta(clave);
+
+  const escudos = {};
+  if (conEscudos) {
+    await Promise.all(partidos.flatMap((p) => [
+      cargarImagenEscudo(p.id_escudo_local).then((img) => { escudos[p.id_escudo_local] = img; }),
+      cargarImagenEscudo(p.id_escudo_visitante).then((img) => { escudos[p.id_escudo_visitante] = img; }),
+    ]));
+  }
+
+  const ANCHO_JUGADOR = 140, ANCHO_PARTIDO = 96, ANCHO_TOTAL = 72;
+  const ANCHO = ANCHO_JUGADOR + partidos.length * ANCHO_PARTIDO + ANCHO_TOTAL;
+  const ALTO_TITULO = 52;
+  const ALTO_BANNER = resultado ? 118 : 0;
+  const ALTO_CABECERA = 60;
+  const ALTO_FILA = 52;
+  const ALTO_PIE = 26;
+  const alto = ALTO_TITULO + ALTO_BANNER + ALTO_CABECERA + jugadores.length * ALTO_FILA + ALTO_PIE;
+
+  const canvas = document.createElement("canvas");
+  canvas.width = ANCHO;
+  canvas.height = alto;
+  const ctx = canvas.getContext("2d");
+
+  ctx.fillStyle = "#121212";
+  ctx.fillRect(0, 0, ANCHO, alto);
+
+  ctx.textAlign = "center";
+  ctx.fillStyle = "goldenrod";
+  ctx.font = "bold 24px 'Segoe UI', Tahoma, sans-serif";
+  ctx.fillText(`Jornada ${parseInt(clave.slice(1))} · LaLiga 2026-27`, ANCHO / 2, 34);
+
+  let y = ALTO_TITULO;
+
+  if (resultado) {
+    const anchoCaja = (ANCHO - 24) / 2;
+    const xIzq = 8, xDer = 16 + anchoCaja;
+    const yCaja = y;
+    const altoCaja = ALTO_BANNER - 10;
+    const aciertosDe = (slug) => DATOS.jugadores.find((j) => j.slug === slug)?.aciertos_1x2 ?? 0;
+    const nombresDe = (lista) => lista.map((g) => g.nombre).join(" y ");
+
+    const degradadoGanador = ctx.createLinearGradient(0, yCaja, 0, yCaja + altoCaja);
+    degradadoGanador.addColorStop(0, "#4a3a0a");
+    degradadoGanador.addColorStop(1, "#2a2205");
+    ctx.fillStyle = degradadoGanador;
+    ctx.fillRect(xIzq, yCaja, anchoCaja, altoCaja);
+    ctx.strokeStyle = "goldenrod";
+    ctx.lineWidth = 2;
+    ctx.strokeRect(xIzq, yCaja, anchoCaja, altoCaja);
+
+    ctx.fillStyle = "#1c1c1c";
+    ctx.fillRect(xDer, yCaja, anchoCaja, altoCaja);
+    ctx.strokeStyle = "#444";
+    ctx.strokeRect(xDer, yCaja, anchoCaja, altoCaja);
+
+    ctx.textAlign = "center";
+    ctx.font = "bold 12px 'Segoe UI', Tahoma, sans-serif";
+    ctx.fillStyle = "#f0d98a";
+    ctx.fillText((DATOS.cerrada ? "🏆 CAMPEÓN" : "🏆 VA GANANDO") + " DE LA JORNADA", xIzq + anchoCaja / 2, yCaja + 22);
+    ctx.fillStyle = "#b0b0b0";
+    ctx.fillText((DATOS.cerrada ? "💀 PERDEDOR" : "💀 VA PERDIENDO") + " DE LA JORNADA", xDer + anchoCaja / 2, yCaja + 22);
+
+    ctx.font = "bold 20px 'Segoe UI', Tahoma, sans-serif";
+    ctx.fillStyle = "goldenrod";
+    ctx.fillText(recortarTexto(ctx, nombresDe(resultado.ganadores), anchoCaja - 24), xIzq + anchoCaja / 2, yCaja + 50);
+    ctx.fillStyle = "#fff";
+    ctx.fillText(recortarTexto(ctx, nombresDe(resultado.perdedores), anchoCaja - 24), xDer + anchoCaja / 2, yCaja + 50);
+
+    ctx.font = "13px 'Segoe UI', Tahoma, sans-serif";
+    ctx.fillStyle = "#d1d5db";
+    ctx.fillText(`${aciertosDe(resultado.ganadores[0].slug)} aciertos 1X2`, xIzq + anchoCaja / 2, yCaja + 72);
+    ctx.fillText(`${aciertosDe(resultado.perdedores[0].slug)} aciertos 1X2`, xDer + anchoCaja / 2, yCaja + 72);
+
+    if (!DATOS.cerrada) {
+      ctx.font = "12px 'Segoe UI', Tahoma, sans-serif";
+      ctx.fillStyle = resultado.ganador_seguro ? "#4ade80" : "#60a5fa";
+      ctx.fillText(resultado.ganador_seguro ? "✔ Ya es matemáticamente seguro" : "⏳ Aún puede cambiar",
+        xIzq + anchoCaja / 2, yCaja + 94);
+      ctx.fillStyle = resultado.perdedor_seguro ? "#4ade80" : "#60a5fa";
+      ctx.fillText(resultado.perdedor_seguro ? "✔ Ya es matemáticamente seguro" : "⏳ Aún puede cambiar",
+        xDer + anchoCaja / 2, yCaja + 94);
+    }
+
+    y += ALTO_BANNER;
+  }
+
+  const yCabecera = y;
+  ctx.fillStyle = "#1a1a1a";
+  ctx.fillRect(0, yCabecera, ANCHO, ALTO_CABECERA);
+  ctx.textAlign = "left";
+  ctx.font = "bold 12px 'Segoe UI', Tahoma, sans-serif";
+  ctx.fillStyle = "goldenrod";
+  ctx.fillText("JUGADOR", 12, yCabecera + 34);
+  ctx.textAlign = "center";
+  ctx.fillText("TOTAL", ANCHO_JUGADOR + partidos.length * ANCHO_PARTIDO + ANCHO_TOTAL / 2, yCabecera + 34);
+
+  const TAM_ESCUDO_CAB = 18;
+  partidos.forEach((p, i) => {
+    const xCentro = ANCHO_JUGADOR + i * ANCHO_PARTIDO + ANCHO_PARTIDO / 2;
+    const r = resultados[p.id] || {};
+    const enDirecto = esPartidoEnDirecto(r);
+    const marcador = r.estado === "finished" ? `${r.goles_local}-${r.goles_visitante}`
+      : enDirecto ? `${r.goles_local ?? 0}-${r.goles_visitante ?? 0}` : "-";
+
+    ctx.font = "bold 13px 'Segoe UI', Tahoma, sans-serif";
+    ctx.fillStyle = enDirecto ? "#4ade80" : "#fff";
+    ctx.textAlign = "center";
+    const anchoMarcador = ctx.measureText(marcador).width;
+    ctx.fillText(marcador, xCentro, yCabecera + 24);
+    const escudoL = escudos[p.id_escudo_local], escudoV = escudos[p.id_escudo_visitante];
+    if (escudoL) ctx.drawImage(escudoL, xCentro - anchoMarcador / 2 - 6 - TAM_ESCUDO_CAB, yCabecera + 24 - TAM_ESCUDO_CAB + 4, TAM_ESCUDO_CAB, TAM_ESCUDO_CAB);
+    if (escudoV) ctx.drawImage(escudoV, xCentro + anchoMarcador / 2 + 6, yCabecera + 24 - TAM_ESCUDO_CAB + 4, TAM_ESCUDO_CAB, TAM_ESCUDO_CAB);
+
+    ctx.font = "10px 'Segoe UI', Tahoma, sans-serif";
+    ctx.fillStyle = "#9ca3af";
+    ctx.fillText(recortarTexto(ctx, `${p.local} - ${p.visitante}`, ANCHO_PARTIDO - 10), xCentro, yCabecera + 42);
+  });
+
+  y += ALTO_CABECERA;
+
+  jugadores.forEach((j, fi) => {
+    const yFila = y + fi * ALTO_FILA;
+    ctx.fillStyle = fi % 2 === 0 ? "#1c1c1c" : "#232323";
+    ctx.fillRect(0, yFila, ANCHO, ALTO_FILA);
+
+    ctx.font = "13px 'Segoe UI', Tahoma, sans-serif";
+    ctx.fillStyle = "#fff";
+    ctx.textAlign = "left";
+    ctx.fillText(recortarTexto(ctx, j.nombre, ANCHO_JUGADOR - 24), 12, yFila + ALTO_FILA / 2 + 5);
+
+    partidos.forEach((p, pi) => {
+      const xCentro = ANCHO_JUGADOR + pi * ANCHO_PARTIDO + ANCHO_PARTIDO / 2;
+      const pred = j.predicciones[p.id];
+      let texto1 = "—", texto2 = "", color = "#9ca3af";
+      if (pred) {
+        texto1 = pred.pronostico;
+        texto2 = pred.puntos > 0 ? `+${pred.puntos} pts` : "0 pts";
+        color = pred.acierto_exacto ? "#4ade80" : pred.acierto_1x2 ? "#60a5fa" : "#9ca3af";
+      } else {
+        const crudo = j.prediccionesCrudas[p.id];
+        if (crudo) { texto1 = `${crudo.gl}-${crudo.gv}`; color = "#d1d5db"; }
+      }
+      ctx.textAlign = "center";
+      ctx.font = "bold 13px 'Segoe UI', Tahoma, sans-serif";
+      ctx.fillStyle = color;
+      ctx.fillText(texto1, xCentro, yFila + ALTO_FILA / 2);
+      if (texto2) {
+        ctx.font = "10px 'Segoe UI', Tahoma, sans-serif";
+        ctx.fillText(texto2, xCentro, yFila + ALTO_FILA / 2 + 15);
+      }
+    });
+
+    const xTotal = ANCHO_JUGADOR + partidos.length * ANCHO_PARTIDO + ANCHO_TOTAL / 2;
+    ctx.font = "bold 16px 'Segoe UI', Tahoma, sans-serif";
+    ctx.fillStyle = j.ganador ? "#4ade80" : j.perdedor ? "#ff4c4c" : "goldenrod";
+    ctx.textAlign = "center";
+    ctx.fillText(String(j.puntos), xTotal, yFila + ALTO_FILA / 2 + 5);
+  });
+
+  ctx.fillStyle = "#555";
+  ctx.font = "11px 'Segoe UI', Tahoma, sans-serif";
+  ctx.textAlign = "center";
+  ctx.fillText("Porra LaLiga", ANCHO / 2, alto - 8);
+
+  return canvas;
+}
+
+async function descargarImagenAnalisis() {
+  const aviso = document.getElementById("aviso-imagen");
+  aviso.textContent = "Generando la imagen…";
+  let canvas = await dibujarImagenAnalisis(true);
+  let urlDatos;
+  try {
+    urlDatos = canvas.toDataURL("image/png");
+  } catch (e) {
+    // El CDN de los escudos no permite exportar el canvas (CORS) — se repite
+    // sin escudos, para que la función no se quede rota por completo.
+    canvas = await dibujarImagenAnalisis(false);
+    urlDatos = canvas.toDataURL("image/png");
+  }
+
+  const clave = CLAVES[indice];
+  const a = document.createElement("a");
+  a.href = urlDatos;
+  a.download = `${clave}_analisis.png`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  aviso.textContent = `Descargada ${a.download}.`;
+}
+
+async function copiarImagenAnalisis() {
+  const aviso = document.getElementById("aviso-imagen");
+  aviso.textContent = "Generando la imagen…";
+  let canvas = await dibujarImagenAnalisis(true);
+  let blob = await canvasABlob(canvas);
+  if (!blob) {
+    canvas = await dibujarImagenAnalisis(false);
+    blob = await canvasABlob(canvas);
+  }
+
+  try {
+    await navigator.clipboard.write([new ClipboardItem({ "image/png": blob })]);
+    aviso.textContent = "Imagen copiada al portapapeles — ya puedes pegarla donde quieras.";
+  } catch (e) {
+    aviso.textContent = "Tu navegador no permite copiar la imagen directamente — usa \"Descargar imagen\" en su lugar.";
+  }
 }
 
 iniciar();

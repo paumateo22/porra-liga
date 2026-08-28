@@ -25,6 +25,15 @@
   .movimiento.baja { color: #ff6b6b; }
   .movimiento.nulo { color: #666; }
 
+  .fila-acciones-imagen { text-align: center; margin: 10px 0 4px; display: flex; gap: 8px; justify-content: center; align-items: center; flex-wrap: wrap; }
+  .btn-imagen-analisis {
+    font-size: 0.8em; padding: 7px 16px; text-decoration: none; text-transform: none;
+    background: #252525; color: var(--gold); border: 1px solid var(--gold); border-radius: 20px;
+    transition: 0.2s; display: inline-block; cursor: pointer;
+  }
+  .btn-imagen-analisis:hover { background: var(--gold); color: #000; }
+  #aviso-imagen-clasificacion { font-size: 0.85em; color: #9ca3af; }
+
   table.tabla-ancha { table-layout: fixed; width: 100%; }
   table.tabla-ancha th.nombre-fila, table.tabla-ancha td.nombre-fila { width: 60px; }
   table.tabla-ancha th.col-total, table.tabla-ancha td.col-total { width: 42px; }
@@ -54,6 +63,11 @@
       </table>
     </div>
     <p class="nota" id="pie-clasificacion"></p>
+    <div class="fila-acciones-imagen" id="fila-acciones-imagen-clasificacion" hidden>
+      <a href="javascript:void(0)" class="btn-imagen-analisis" id="btn-descargar-imagen-clasificacion">🖼️ Descargar imagen</a>
+      <a href="javascript:void(0)" class="btn-imagen-analisis" id="btn-copiar-imagen-clasificacion">📋 Copiar imagen</a>
+      <span class="aviso" id="aviso-imagen-clasificacion"></span>
+    </div>
   </details>
 
   <details open>
@@ -92,6 +106,8 @@ montarCabecera({
   pagina: "clasificacion",
 });
 
+let DATOS_CLASIF = null;
+
 async function iniciar() {
   const datos = await cargar("data/clasificacion.json", null);
   const cuerpo = document.getElementById("cuerpo-resumen");
@@ -104,6 +120,11 @@ async function iniciar() {
     document.getElementById("cabecera-heatmap").innerHTML = "";
     return;
   }
+
+  DATOS_CLASIF = datos;
+  document.getElementById("fila-acciones-imagen-clasificacion").hidden = false;
+  document.getElementById("btn-descargar-imagen-clasificacion").onclick = descargarImagenClasificacion;
+  document.getElementById("btn-copiar-imagen-clasificacion").onclick = copiarImagenClasificacion;
 
   const movimientos = await calcularMovimientos(datos);
   pintarResumen(datos, movimientos);
@@ -269,6 +290,141 @@ function pintarHeatmap(datos) {
       }).join("")}
     </tr>
   `).join("");
+}
+
+/* Dibuja en un <canvas> la tabla de clasificación general completa, con
+   flechas de movimiento incluidas — la misma tabla que "Clasificación
+   general", pensada para compartir tal cual. */
+async function dibujarImagenClasificacion() {
+  const tabla = DATOS_CLASIF.clasificacion;
+  const movimientos = await calcularMovimientos(DATOS_CLASIF);
+
+  const ANCHO_POS = 40, ANCHO_JUGADOR = 230, ANCHO_ACIERTOS = 110,
+        ANCHO_BONUS = 70, ANCHO_JG = 60, ANCHO_JP = 60, ANCHO_TOTAL = 90;
+  const ANCHO = ANCHO_POS + ANCHO_JUGADOR + ANCHO_ACIERTOS + ANCHO_BONUS + ANCHO_JG + ANCHO_JP + ANCHO_TOTAL;
+  const ALTO_TITULO = 50, ALTO_CABECERA = 38, ALTO_FILA = 38, ALTO_PIE = 34;
+  const alto = ALTO_TITULO + ALTO_CABECERA + tabla.length * ALTO_FILA + ALTO_PIE;
+
+  const canvas = document.createElement("canvas");
+  canvas.width = ANCHO;
+  canvas.height = alto;
+  const ctx = canvas.getContext("2d");
+
+  ctx.fillStyle = "#121212";
+  ctx.fillRect(0, 0, ANCHO, alto);
+
+  ctx.textAlign = "center";
+  ctx.fillStyle = "goldenrod";
+  ctx.font = "bold 22px 'Segoe UI', Tahoma, sans-serif";
+  ctx.fillText("Clasificación general · LaLiga 2026-27", ANCHO / 2, 32);
+
+  // Cabecera
+  let x = 0;
+  const columnas = [
+    { ancho: ANCHO_POS, texto: "#", align: "center" },
+    { ancho: ANCHO_JUGADOR, texto: "JUGADOR", align: "left" },
+    { ancho: ANCHO_ACIERTOS, texto: "ACIERTOS", align: "center" },
+    { ancho: ANCHO_BONUS, texto: "BONUS", align: "center" },
+    { ancho: ANCHO_JG, texto: "JG", align: "center" },
+    { ancho: ANCHO_JP, texto: "JP", align: "center" },
+    { ancho: ANCHO_TOTAL, texto: "TOTAL", align: "center" },
+  ];
+  const yCabecera = ALTO_TITULO;
+  ctx.fillStyle = "#1a1a1a";
+  ctx.fillRect(0, yCabecera, ANCHO, ALTO_CABECERA);
+  ctx.font = "bold 11px 'Segoe UI', Tahoma, sans-serif";
+  ctx.fillStyle = "goldenrod";
+  columnas.forEach((c) => {
+    ctx.textAlign = c.align;
+    ctx.fillText(c.texto, c.align === "left" ? x + 10 : x + c.ancho / 2, yCabecera + 24);
+    x += c.ancho;
+  });
+
+  // Filas
+  tabla.forEach((c, i) => {
+    const y = ALTO_TITULO + ALTO_CABECERA + i * ALTO_FILA;
+    ctx.fillStyle = c.puesto === 1 ? "rgba(245,184,65,0.12)" : (i % 2 === 0 ? "#1c1c1c" : "#232323");
+    ctx.fillRect(0, y, ANCHO, ALTO_FILA);
+    const centroY = y + ALTO_FILA / 2 + 5;
+
+    x = 0;
+    ctx.textAlign = "center";
+    ctx.font = "bold 13px 'Segoe UI', Tahoma, sans-serif";
+    ctx.fillStyle = c.puesto === 1 ? "goldenrod" : "#fff";
+    ctx.fillText(String(c.puesto), x + ANCHO_POS / 2, centroY);
+    x += ANCHO_POS;
+
+    ctx.textAlign = "left";
+    ctx.font = "13px 'Segoe UI', Tahoma, sans-serif";
+    ctx.fillStyle = "#fff";
+    const nombre = recortarTexto(ctx, nombrePlano(c), ANCHO_JUGADOR - 60);
+    ctx.fillText(nombre, x + 10, centroY);
+    const anchoNombre = ctx.measureText(nombre).width;
+    const dif = movimientos[c.slug];
+    ctx.font = "bold 11px 'Segoe UI', Tahoma, sans-serif";
+    if (dif === undefined) { ctx.fillStyle = "#666"; ctx.fillText("—", x + 16 + anchoNombre, centroY); }
+    else if (dif > 0) { ctx.fillStyle = "#4ade80"; ctx.fillText(`▲ +${dif}`, x + 16 + anchoNombre, centroY); }
+    else if (dif < 0) { ctx.fillStyle = "#ff6b6b"; ctx.fillText(`▼ ${dif}`, x + 16 + anchoNombre, centroY); }
+    else { ctx.fillStyle = "#666"; ctx.fillText("—", x + 16 + anchoNombre, centroY); }
+    x += ANCHO_JUGADOR;
+
+    ctx.textAlign = "center";
+    ctx.font = "13px 'Segoe UI', Tahoma, sans-serif";
+    ctx.fillStyle = "#c4b5fd";
+    ctx.fillText(`${c.aciertos_exactos} / ${c.aciertos_1x2}`, x + ANCHO_ACIERTOS / 2, centroY);
+    x += ANCHO_ACIERTOS;
+
+    ctx.fillText(String(c.bonus_rendimiento || 0), x + ANCHO_BONUS / 2, centroY);
+    x += ANCHO_BONUS;
+
+    ctx.fillStyle = "#4ade80";
+    ctx.fillText(String(c.jornadas_ganadas), x + ANCHO_JG / 2, centroY);
+    x += ANCHO_JG;
+
+    ctx.fillStyle = "#ff6b6b";
+    ctx.fillText(String(c.jornadas_perdidas), x + ANCHO_JP / 2, centroY);
+    x += ANCHO_JP;
+
+    ctx.font = "bold 15px 'Segoe UI', Tahoma, sans-serif";
+    ctx.fillStyle = "goldenrod";
+    ctx.fillText(String(c.puntos_totales), x + ANCHO_TOTAL / 2, centroY);
+  });
+
+  ctx.textAlign = "center";
+  ctx.font = "10px 'Segoe UI', Tahoma, sans-serif";
+  ctx.fillStyle = "#9ca3af";
+  const yPie = ALTO_TITULO + ALTO_CABECERA + tabla.length * ALTO_FILA + 18;
+  ctx.fillText(`Desempate: ${DATOS_CLASIF.desempates.join(" → ")}`, ANCHO / 2, yPie);
+  ctx.fillStyle = "#555";
+  ctx.fillText(`Actualizado el ${formatearFecha(DATOS_CLASIF.generado)} · Porra LaLiga`, ANCHO / 2, yPie + 14);
+
+  return canvas;
+}
+
+async function descargarImagenClasificacion() {
+  const aviso = document.getElementById("aviso-imagen-clasificacion");
+  aviso.textContent = "Generando la imagen…";
+  const canvas = await dibujarImagenClasificacion();
+  const a = document.createElement("a");
+  a.href = canvas.toDataURL("image/png");
+  a.download = "clasificacion.png";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  aviso.textContent = `Descargada ${a.download}.`;
+}
+
+async function copiarImagenClasificacion() {
+  const aviso = document.getElementById("aviso-imagen-clasificacion");
+  aviso.textContent = "Generando la imagen…";
+  const canvas = await dibujarImagenClasificacion();
+  const blob = await canvasABlob(canvas);
+  try {
+    await navigator.clipboard.write([new ClipboardItem({ "image/png": blob })]);
+    aviso.textContent = "Imagen copiada al portapapeles — ya puedes pegarla donde quieras.";
+  } catch (e) {
+    aviso.textContent = "Tu navegador no permite copiar la imagen directamente — usa \"Descargar imagen\" en su lugar.";
+  }
 }
 
 iniciar();
