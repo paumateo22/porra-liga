@@ -275,7 +275,7 @@
             "id_escudo_local": 2833,
             "id_escudo_visitante": 2836,
             "fecha": "2026-08-29T21:30:00",
-            "goles_local": 0,
+            "goles_local": 1,
             "goles_visitante": 3,
             "estado": "inprogress"
         },
@@ -1960,17 +1960,6 @@
             "estado": "notstarted"
         },
         {
-            "id": 16462594,
-            "local": "Rayo",
-            "visitante": "Atlético",
-            "id_escudo_local": 2818,
-            "id_escudo_visitante": 2836,
-            "fecha": "2027-01-03T20:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
             "id": 16462597,
             "local": "Real Madrid",
             "visitante": "Getafe",
@@ -1998,17 +1987,6 @@
             "visitante": "Osasuna",
             "id_escudo_local": 2824,
             "id_escudo_visitante": 2820,
-            "fecha": "2027-01-03T20:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
-            "id": 16462603,
-            "local": "Villarreal",
-            "visitante": "Sevilla",
-            "id_escudo_local": 2819,
-            "id_escudo_visitante": 2833,
             "fecha": "2027-01-03T20:00:00",
             "goles_local": null,
             "goles_visitante": null,
@@ -2924,17 +2902,6 @@
             "estado": "notstarted"
         },
         {
-            "id": 16462663,
-            "local": "Atlético",
-            "visitante": "Celta",
-            "id_escudo_local": 2836,
-            "id_escudo_visitante": 2821,
-            "fecha": "2027-03-07T20:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
             "id": 16462666,
             "local": "Deportivo de A Coruña",
             "visitante": "Getafe",
@@ -2984,17 +2951,6 @@
             "visitante": "Osasuna",
             "id_escudo_local": 2818,
             "id_escudo_visitante": 2820,
-            "fecha": "2027-03-07T20:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
-            "id": 16462675,
-            "local": "Sevilla",
-            "visitante": "Real Sociedad",
-            "id_escudo_local": 2833,
-            "id_escudo_visitante": 2824,
             "fecha": "2027-03-07T20:00:00",
             "goles_local": null,
             "goles_visitante": null,

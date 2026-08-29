@@ -7,12 +7,12 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 21,
-    "puntos_partidos": 19,
+    "puntos_totales": 22,
+    "puntos_partidos": 20,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 2,
     "aciertos_1x2": 14,
-    "aciertos_exactos": 5,
+    "aciertos_exactos": 6,
     "partidos_pronosticados": 30,
     "jornadas_jugadas": 3,
     "jornadas_ganadas": 2,
@@ -200,9 +200,9 @@
             }
         },
         "J03": {
-            "puntos": 2,
+            "puntos": 3,
             "aciertos_1x2": 2,
-            "aciertos_exactos": 0,
+            "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
             "perdedor": false,
@@ -242,10 +242,10 @@
                 "Sevilla_vs_Atlético": {
                     "id": 16416316,
                     "pronostico": "1-3",
-                    "real": "0-3",
+                    "real": "1-3",
                     "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         }
