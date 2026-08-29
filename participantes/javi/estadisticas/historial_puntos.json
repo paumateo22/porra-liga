@@ -2,16 +2,16 @@
     "participante": "javi",
     "nombre": "Javi",
     "insignias": [],
-    "puntos_totales": 10,
-    "puntos_partidos": 10,
+    "puntos_totales": 8,
+    "puntos_partidos": 9,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 10,
+    "puntos_ganador_perdedor": -1,
+    "aciertos_1x2": 9,
     "aciertos_exactos": 0,
     "partidos_pronosticados": 29,
     "jornadas_jugadas": 3,
     "jornadas_ganadas": 1,
-    "jornadas_perdidas": 1,
+    "jornadas_perdidas": 2,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -187,12 +187,12 @@
             }
         },
         "J03": {
-            "puntos": 1,
-            "aciertos_1x2": 1,
+            "puntos": -1,
+            "aciertos_1x2": 0,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
-            "perdedor": false,
+            "perdedor": true,
             "detalle": {
                 "Real Racing Club_vs_Elche": {
                     "id": 16416304,
@@ -221,10 +221,10 @@
                 "Real Sociedad_vs_Espanyol": {
                     "id": 16416310,
                     "pronostico": "1-1",
-                    "real": "0-0",
-                    "acierto_1x2": true,
+                    "real": "1-0",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 }
             }
         }
