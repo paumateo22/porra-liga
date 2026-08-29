@@ -2,11 +2,11 @@
     "participante": "javi",
     "nombre": "Javi",
     "insignias": [],
-    "puntos_totales": 8,
-    "puntos_partidos": 9,
+    "puntos_totales": 9,
+    "puntos_partidos": 10,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": -1,
-    "aciertos_1x2": 9,
+    "aciertos_1x2": 10,
     "aciertos_exactos": 0,
     "partidos_pronosticados": 29,
     "jornadas_jugadas": 3,
@@ -187,8 +187,8 @@
             }
         },
         "J03": {
-            "puntos": -1,
-            "aciertos_1x2": 0,
+            "puntos": 0,
+            "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -229,10 +229,10 @@
                 "Sevilla_vs_Atlético": {
                     "id": 16416316,
                     "pronostico": "1-2",
-                    "real": "0-0",
-                    "acierto_1x2": false,
+                    "real": "0-3",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }

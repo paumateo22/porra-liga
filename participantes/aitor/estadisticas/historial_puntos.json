@@ -2,11 +2,11 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 20,
-    "puntos_partidos": 18,
+    "puntos_totales": 19,
+    "puntos_partidos": 17,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 2,
-    "aciertos_1x2": 15,
+    "aciertos_1x2": 14,
     "aciertos_exactos": 3,
     "partidos_pronosticados": 30,
     "jornadas_jugadas": 3,
@@ -195,8 +195,8 @@
             }
         },
         "J03": {
-            "puntos": 7,
-            "aciertos_1x2": 4,
+            "puntos": 6,
+            "aciertos_1x2": 3,
             "aciertos_exactos": 2,
             "bonus": 0,
             "ganador": true,
@@ -237,10 +237,10 @@
                 "Sevilla_vs_Atlético": {
                     "id": 16416316,
                     "pronostico": "2-2",
-                    "real": "0-0",
-                    "acierto_1x2": true,
+                    "real": "0-3",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 }
             }
         }
