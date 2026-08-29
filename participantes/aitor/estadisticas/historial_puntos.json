@@ -2,12 +2,12 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 18,
-    "puntos_partidos": 16,
+    "puntos_totales": 19,
+    "puntos_partidos": 17,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 2,
     "aciertos_1x2": 14,
-    "aciertos_exactos": 2,
+    "aciertos_exactos": 3,
     "partidos_pronosticados": 30,
     "jornadas_jugadas": 3,
     "jornadas_ganadas": 2,
@@ -195,9 +195,9 @@
             }
         },
         "J03": {
-            "puntos": 5,
+            "puntos": 6,
             "aciertos_1x2": 3,
-            "aciertos_exactos": 1,
+            "aciertos_exactos": 2,
             "bonus": 0,
             "ganador": true,
             "perdedor": false,
@@ -229,10 +229,10 @@
                 "Real Sociedad_vs_Espanyol": {
                     "id": 16416310,
                     "pronostico": "2-1",
-                    "real": "1-0",
+                    "real": "2-1",
                     "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         }
