@@ -297,9 +297,9 @@
             "id_escudo_local": 2832,
             "id_escudo_visitante": 2828,
             "fecha": "2026-08-30T19:30:00",
-            "goles_local": 0,
-            "goles_visitante": 0,
-            "estado": "inprogress"
+            "goles_local": 3,
+            "goles_visitante": 1,
+            "estado": "finished"
         },
         {
             "id": 16416308,
@@ -308,9 +308,9 @@
             "id_escudo_local": 2821,
             "id_escudo_visitante": 2825,
             "fecha": "2026-08-30T21:30:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
+            "goles_local": 0,
+            "goles_visitante": 0,
+            "estado": "inprogress"
         },
         {
             "id": 16416314,
@@ -454,7 +454,7 @@
             "visitante": "Elche",
             "id_escudo_local": 2825,
             "id_escudo_visitante": 2846,
-            "fecha": "2026-09-13T21:00:00",
+            "fecha": "2026-09-12T18:30:00",
             "goles_local": null,
             "goles_visitante": null,
             "estado": "notstarted"
@@ -465,7 +465,7 @@
             "visitante": "Málaga CF",
             "id_escudo_local": 2821,
             "id_escudo_visitante": 2830,
-            "fecha": "2026-09-13T21:00:00",
+            "fecha": "2026-09-13T14:00:00",
             "goles_local": null,
             "goles_visitante": null,
             "estado": "notstarted"
@@ -1993,17 +1993,6 @@
             "estado": "notstarted"
         },
         {
-            "id": 16462600,
-            "local": "Real Sociedad",
-            "visitante": "Osasuna",
-            "id_escudo_local": 2824,
-            "id_escudo_visitante": 2820,
-            "fecha": "2027-01-03T20:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
             "id": 16462603,
             "local": "Villarreal",
             "visitante": "Sevilla",
@@ -2279,6 +2268,17 @@
             "visitante": "Rayo",
             "id_escudo_local": 2846,
             "id_escudo_visitante": 2818,
+            "fecha": "2027-01-24T20:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
+            "id": 16462489,
+            "local": "Espanyol",
+            "visitante": "Villarreal",
+            "id_escudo_local": 2814,
+            "id_escudo_visitante": 2819,
             "fecha": "2027-01-24T20:00:00",
             "goles_local": null,
             "goles_visitante": null,
@@ -2968,17 +2968,6 @@
             "estado": "notstarted"
         },
         {
-            "id": 16462674,
-            "local": "Rayo",
-            "visitante": "Osasuna",
-            "id_escudo_local": 2818,
-            "id_escudo_visitante": 2820,
-            "fecha": "2027-03-07T20:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
             "id": 16462675,
             "local": "Sevilla",
             "visitante": "Real Sociedad",
@@ -3590,6 +3579,17 @@
             "visitante": "FC Barcelona",
             "id_escudo_local": 2821,
             "id_escudo_visitante": 2817,
+            "fecha": "2027-04-21T21:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
+            "id": 16462530,
+            "local": "Espanyol",
+            "visitante": "Real Sociedad",
+            "id_escudo_local": 2814,
+            "id_escudo_visitante": 2824,
             "fecha": "2027-04-21T21:00:00",
             "goles_local": null,
             "goles_visitante": null,

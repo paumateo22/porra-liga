@@ -7,11 +7,11 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 15,
-    "puntos_partidos": 15,
+    "puntos_totales": 16,
+    "puntos_partidos": 16,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 12,
+    "aciertos_1x2": 13,
     "aciertos_exactos": 3,
     "partidos_pronosticados": 30,
     "jornadas_jugadas": 3,
@@ -200,8 +200,8 @@
             }
         },
         "J03": {
-            "puntos": 1,
-            "aciertos_1x2": 2,
+            "puntos": 2,
+            "aciertos_1x2": 3,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -258,6 +258,14 @@
                 "Deportivo de A Coruña_vs_Valencia": {
                     "id": 16416291,
                     "pronostico": "2-1",
+                    "real": "3-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "Celta_vs_Athletic": {
+                    "id": 16416308,
+                    "pronostico": "2-0",
                     "real": "0-0",
                     "acierto_1x2": false,
                     "acierto_exacto": false,

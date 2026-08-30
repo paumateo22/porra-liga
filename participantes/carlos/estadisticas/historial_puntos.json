@@ -2,15 +2,15 @@
     "participante": "carlos",
     "nombre": "Carlos",
     "insignias": [],
-    "puntos_totales": 15,
+    "puntos_totales": 14,
     "puntos_partidos": 14,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 1,
+    "puntos_ganador_perdedor": 0,
     "aciertos_1x2": 13,
     "aciertos_exactos": 1,
     "partidos_pronosticados": 30,
     "jornadas_jugadas": 3,
-    "jornadas_ganadas": 2,
+    "jornadas_ganadas": 1,
     "jornadas_perdidas": 1,
     "punto_partida": 0,
     "por_jornada": {
@@ -195,11 +195,11 @@
             }
         },
         "J03": {
-            "puntos": 5,
+            "puntos": 4,
             "aciertos_1x2": 4,
             "aciertos_exactos": 0,
             "bonus": 0,
-            "ganador": true,
+            "ganador": false,
             "perdedor": false,
             "detalle": {
                 "Real Racing Club_vs_Elche": {
@@ -253,6 +253,14 @@
                 "Deportivo de A Coruña_vs_Valencia": {
                     "id": 16416291,
                     "pronostico": "1-1",
+                    "real": "3-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Celta_vs_Athletic": {
+                    "id": 16416308,
+                    "pronostico": "2-2",
                     "real": "0-0",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
