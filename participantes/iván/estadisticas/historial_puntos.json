@@ -7,15 +7,15 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 24,
+    "puntos_totales": 25,
     "puntos_partidos": 22,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 2,
-    "aciertos_1x2": 15,
-    "aciertos_exactos": 7,
+    "puntos_ganador_perdedor": 3,
+    "aciertos_1x2": 16,
+    "aciertos_exactos": 6,
     "partidos_pronosticados": 30,
     "jornadas_jugadas": 3,
-    "jornadas_ganadas": 2,
+    "jornadas_ganadas": 3,
     "jornadas_perdidas": 0,
     "punto_partida": 0,
     "por_jornada": {
@@ -200,11 +200,11 @@
             }
         },
         "J03": {
-            "puntos": 5,
-            "aciertos_1x2": 3,
-            "aciertos_exactos": 2,
+            "puntos": 6,
+            "aciertos_1x2": 4,
+            "aciertos_exactos": 1,
             "bonus": 0,
-            "ganador": false,
+            "ganador": true,
             "perdedor": false,
             "detalle": {
                 "Real Racing Club_vs_Elche": {
@@ -250,10 +250,18 @@
                 "Real Madrid_vs_Málaga CF": {
                     "id": 16416312,
                     "pronostico": "3-0",
-                    "real": "3-0",
+                    "real": "4-0",
                     "acierto_1x2": true,
-                    "acierto_exacto": true,
-                    "puntos": 2
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "Deportivo de A Coruña_vs_Valencia": {
+                    "id": 16416291,
+                    "pronostico": "1-1",
+                    "real": "0-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         }

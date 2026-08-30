@@ -155,10 +155,18 @@
                 "Real Madrid_vs_Málaga CF": {
                     "id": 16416312,
                     "pronostico": "3-1",
-                    "real": "3-0",
+                    "real": "4-0",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
+                },
+                "Deportivo de A Coruña_vs_Valencia": {
+                    "id": 16416291,
+                    "pronostico": "2-1",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         }

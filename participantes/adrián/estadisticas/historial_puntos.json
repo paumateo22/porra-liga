@@ -2,15 +2,15 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 13,
-    "puntos_partidos": 14,
+    "puntos_totales": 15,
+    "puntos_partidos": 15,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": -1,
-    "aciertos_1x2": 12,
+    "puntos_ganador_perdedor": 0,
+    "aciertos_1x2": 13,
     "aciertos_exactos": 2,
     "partidos_pronosticados": 30,
     "jornadas_jugadas": 3,
-    "jornadas_ganadas": 0,
+    "jornadas_ganadas": 1,
     "jornadas_perdidas": 1,
     "punto_partida": 0,
     "por_jornada": {
@@ -195,11 +195,11 @@
             }
         },
         "J03": {
-            "puntos": 3,
-            "aciertos_1x2": 3,
+            "puntos": 5,
+            "aciertos_1x2": 4,
             "aciertos_exactos": 0,
             "bonus": 0,
-            "ganador": false,
+            "ganador": true,
             "perdedor": false,
             "detalle": {
                 "Real Racing Club_vs_Elche": {
@@ -245,7 +245,15 @@
                 "Real Madrid_vs_Málaga CF": {
                     "id": 16416312,
                     "pronostico": "2-0",
-                    "real": "3-0",
+                    "real": "4-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "Deportivo de A Coruña_vs_Valencia": {
+                    "id": 16416291,
+                    "pronostico": "1-1",
+                    "real": "0-0",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
