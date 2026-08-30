@@ -7,16 +7,16 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 16,
+    "puntos_totales": 17,
     "puntos_partidos": 16,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 0,
+    "puntos_ganador_perdedor": 1,
     "aciertos_1x2": 13,
     "aciertos_exactos": 3,
     "partidos_pronosticados": 30,
     "jornadas_jugadas": 3,
     "jornadas_ganadas": 1,
-    "jornadas_perdidas": 1,
+    "jornadas_perdidas": 0,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -200,12 +200,12 @@
             }
         },
         "J03": {
-            "puntos": 2,
+            "puntos": 3,
             "aciertos_1x2": 3,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
-            "perdedor": true,
+            "perdedor": false,
             "detalle": {
                 "Real Racing Club_vs_Elche": {
                     "id": 16416304,
@@ -266,7 +266,7 @@
                 "Celta_vs_Athletic": {
                     "id": 16416308,
                     "pronostico": "2-0",
-                    "real": "0-0",
+                    "real": "0-2",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0

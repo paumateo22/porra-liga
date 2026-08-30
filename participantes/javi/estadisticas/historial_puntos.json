@@ -2,11 +2,11 @@
     "participante": "javi",
     "nombre": "Javi",
     "insignias": [],
-    "puntos_totales": 11,
-    "puntos_partidos": 12,
+    "puntos_totales": 10,
+    "puntos_partidos": 11,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": -1,
-    "aciertos_1x2": 12,
+    "aciertos_1x2": 11,
     "aciertos_exactos": 0,
     "partidos_pronosticados": 29,
     "jornadas_jugadas": 3,
@@ -187,8 +187,8 @@
             }
         },
         "J03": {
-            "puntos": 2,
-            "aciertos_1x2": 3,
+            "puntos": 1,
+            "aciertos_1x2": 2,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -253,10 +253,10 @@
                 "Celta_vs_Athletic": {
                     "id": 16416308,
                     "pronostico": "1-1",
-                    "real": "0-0",
-                    "acierto_1x2": true,
+                    "real": "0-2",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 }
             }
         }
