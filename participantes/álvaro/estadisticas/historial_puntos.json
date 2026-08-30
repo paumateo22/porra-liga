@@ -2,11 +2,11 @@
     "participante": "álvaro",
     "nombre": "Álvaro",
     "insignias": [],
-    "puntos_totales": 11,
-    "puntos_partidos": 12,
+    "puntos_totales": 12,
+    "puntos_partidos": 13,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": -1,
-    "aciertos_1x2": 10,
+    "aciertos_1x2": 11,
     "aciertos_exactos": 2,
     "partidos_pronosticados": 30,
     "jornadas_jugadas": 3,
@@ -195,8 +195,8 @@
             }
         },
         "J03": {
-            "puntos": 0,
-            "aciertos_1x2": 1,
+            "puntos": 1,
+            "aciertos_1x2": 2,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -245,10 +245,10 @@
                 "Real Madrid_vs_Málaga CF": {
                     "id": 16416312,
                     "pronostico": "3-1",
-                    "real": "0-0",
-                    "acierto_1x2": false,
+                    "real": "3-0",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }

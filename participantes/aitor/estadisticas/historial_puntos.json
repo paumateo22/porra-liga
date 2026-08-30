@@ -2,11 +2,11 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 19,
-    "puntos_partidos": 17,
+    "puntos_totales": 20,
+    "puntos_partidos": 18,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 2,
-    "aciertos_1x2": 14,
+    "aciertos_1x2": 15,
     "aciertos_exactos": 3,
     "partidos_pronosticados": 30,
     "jornadas_jugadas": 3,
@@ -195,8 +195,8 @@
             }
         },
         "J03": {
-            "puntos": 6,
-            "aciertos_1x2": 3,
+            "puntos": 7,
+            "aciertos_1x2": 4,
             "aciertos_exactos": 2,
             "bonus": 0,
             "ganador": true,
@@ -245,10 +245,10 @@
                 "Real Madrid_vs_Málaga CF": {
                     "id": 16416312,
                     "pronostico": "3-1",
-                    "real": "0-0",
-                    "acierto_1x2": false,
+                    "real": "3-0",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }
