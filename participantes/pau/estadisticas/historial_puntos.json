@@ -7,11 +7,11 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 17,
-    "puntos_partidos": 16,
+    "puntos_totales": 18,
+    "puntos_partidos": 17,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 13,
+    "aciertos_1x2": 14,
     "aciertos_exactos": 3,
     "partidos_pronosticados": 30,
     "jornadas_jugadas": 3,
@@ -200,8 +200,8 @@
             }
         },
         "J03": {
-            "puntos": 3,
-            "aciertos_1x2": 3,
+            "puntos": 4,
+            "aciertos_1x2": 4,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -282,10 +282,10 @@
                 "FC Barcelona_vs_Rayo": {
                     "id": 16416295,
                     "pronostico": "3-0",
-                    "real": "0-1",
-                    "acierto_1x2": false,
+                    "real": "2-1",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }

@@ -2,11 +2,11 @@
     "participante": "manu",
     "nombre": "Manu",
     "insignias": [],
-    "puntos_totales": 12,
-    "puntos_partidos": 9,
+    "puntos_totales": 13,
+    "puntos_partidos": 10,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": -1,
-    "aciertos_1x2": 8,
+    "aciertos_1x2": 9,
     "aciertos_exactos": 1,
     "partidos_pronosticados": 20,
     "jornadas_jugadas": 2,
@@ -105,8 +105,8 @@
             }
         },
         "J03": {
-            "puntos": 6,
-            "aciertos_1x2": 5,
+            "puntos": 7,
+            "aciertos_1x2": 6,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
@@ -187,10 +187,10 @@
                 "FC Barcelona_vs_Rayo": {
                     "id": 16416295,
                     "pronostico": "3-1",
-                    "real": "0-1",
-                    "acierto_1x2": false,
+                    "real": "2-1",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }
