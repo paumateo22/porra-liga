@@ -7,12 +7,12 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 19,
-    "puntos_partidos": 18,
+    "puntos_totales": 17,
+    "puntos_partidos": 16,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 14,
-    "aciertos_exactos": 4,
+    "aciertos_1x2": 13,
+    "aciertos_exactos": 3,
     "partidos_pronosticados": 30,
     "jornadas_jugadas": 3,
     "jornadas_ganadas": 1,
@@ -200,9 +200,9 @@
             }
         },
         "J03": {
-            "puntos": 5,
-            "aciertos_1x2": 4,
-            "aciertos_exactos": 1,
+            "puntos": 3,
+            "aciertos_1x2": 3,
+            "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
             "perdedor": false,
@@ -274,10 +274,10 @@
                 "Osasuna_vs_Getafe": {
                     "id": 16416314,
                     "pronostico": "0-0",
-                    "real": "0-0",
-                    "acierto_1x2": true,
-                    "acierto_exacto": true,
-                    "puntos": 2
+                    "real": "1-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         }
