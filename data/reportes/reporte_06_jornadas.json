@@ -276,14 +276,14 @@
                 "partidos_pronosticados": 10,
                 "partidos_evaluados": 10,
                 "aciertos_1x2": 6,
-                "aciertos_exactos": 2,
-                "puntos_partidos": 8,
+                "aciertos_exactos": 1,
+                "puntos_partidos": 7,
                 "bonus_rendimiento": 0,
                 "elegible_jornada": true,
                 "es_ganador_jornada": false,
                 "es_perdedor_jornada": false,
                 "puntos_ganador_perdedor": 0,
-                "puntos_totales": 8
+                "puntos_totales": 7
             },
             "pau": {
                 "partidos_pronosticados": 10,
