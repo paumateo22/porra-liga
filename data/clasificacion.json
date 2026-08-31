@@ -1,6 +1,6 @@
 {
     "competicion": "LaLiga 2026-27",
-    "generado": "2026-08-31T21:55:02",
+    "generado": "2026-08-31T22:53:07",
     "jornadas_calculadas": [
         "J01",
         "J02",
@@ -239,6 +239,41 @@
         },
         {
             "puesto": 6,
+            "slug": "manu",
+            "nombre": "Manu",
+            "insignias": [],
+            "puntos_totales": 14,
+            "puntos_partidos": 11,
+            "bonus_rendimiento": 0,
+            "puntos_ganador_perdedor": -1,
+            "aciertos_1x2": 9,
+            "aciertos_exactos": 2,
+            "partidos_pronosticados": 20,
+            "jornadas_jugadas": 2,
+            "jornadas_ganadas": 0,
+            "jornadas_perdidas": 1,
+            "punto_partida": 4,
+            "por_jornada": {
+                "J02": {
+                    "puntos": 2,
+                    "aciertos_1x2": 3,
+                    "aciertos_exactos": 0,
+                    "bonus": 0,
+                    "ganador": false,
+                    "perdedor": true
+                },
+                "J03": {
+                    "puntos": 8,
+                    "aciertos_1x2": 6,
+                    "aciertos_exactos": 2,
+                    "bonus": 0,
+                    "ganador": false,
+                    "perdedor": false
+                }
+            }
+        },
+        {
+            "puesto": 7,
             "slug": "álvaro",
             "nombre": "Álvaro",
             "insignias": [],
@@ -277,41 +312,6 @@
                     "bonus": 0,
                     "ganador": false,
                     "perdedor": true
-                }
-            }
-        },
-        {
-            "puesto": 7,
-            "slug": "manu",
-            "nombre": "Manu",
-            "insignias": [],
-            "puntos_totales": 13,
-            "puntos_partidos": 10,
-            "bonus_rendimiento": 0,
-            "puntos_ganador_perdedor": -1,
-            "aciertos_1x2": 9,
-            "aciertos_exactos": 1,
-            "partidos_pronosticados": 20,
-            "jornadas_jugadas": 2,
-            "jornadas_ganadas": 0,
-            "jornadas_perdidas": 1,
-            "punto_partida": 4,
-            "por_jornada": {
-                "J02": {
-                    "puntos": 2,
-                    "aciertos_1x2": 3,
-                    "aciertos_exactos": 0,
-                    "bonus": 0,
-                    "ganador": false,
-                    "perdedor": true
-                },
-                "J03": {
-                    "puntos": 7,
-                    "aciertos_1x2": 6,
-                    "aciertos_exactos": 1,
-                    "bonus": 0,
-                    "ganador": false,
-                    "perdedor": false
                 }
             }
         },
