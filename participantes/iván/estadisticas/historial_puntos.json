@@ -7,15 +7,15 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 24,
-    "puntos_partidos": 22,
+    "puntos_totales": 26,
+    "puntos_partidos": 23,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 2,
-    "aciertos_1x2": 16,
+    "puntos_ganador_perdedor": 3,
+    "aciertos_1x2": 17,
     "aciertos_exactos": 6,
     "partidos_pronosticados": 30,
     "jornadas_jugadas": 3,
-    "jornadas_ganadas": 2,
+    "jornadas_ganadas": 3,
     "jornadas_perdidas": 0,
     "punto_partida": 0,
     "por_jornada": {
@@ -200,11 +200,11 @@
             }
         },
         "J03": {
-            "puntos": 5,
-            "aciertos_1x2": 4,
+            "puntos": 7,
+            "aciertos_1x2": 5,
             "aciertos_exactos": 1,
             "bonus": 0,
-            "ganador": false,
+            "ganador": true,
             "perdedor": false,
             "detalle": {
                 "Real Racing Club_vs_Elche": {
@@ -267,6 +267,14 @@
                     "id": 16416308,
                     "pronostico": "1-2",
                     "real": "0-2",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "Osasuna_vs_Getafe": {
+                    "id": 16416314,
+                    "pronostico": "1-1",
+                    "real": "0-0",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
