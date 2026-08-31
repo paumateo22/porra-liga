@@ -1,7 +1,7 @@
 {
     "clave": "J03",
     "jornada": 3,
-    "cerrada": false,
+    "cerrada": true,
     "resultado_jornada": {
         "ganadores": [
             {
@@ -20,7 +20,7 @@
             }
         ],
         "ganador_seguro": true,
-        "perdedor_seguro": false
+        "perdedor_seguro": true
     },
     "partidos": [
         {
@@ -153,7 +153,7 @@
         "16416295": {
             "goles_local": 5,
             "goles_visitante": 2,
-            "estado": "inprogress"
+            "estado": "finished"
         }
     },
     "jugadores": [
