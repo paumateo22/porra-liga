@@ -1,0 +1,87 @@
+{
+    "participante": "Aitor",
+    "jornada": 6,
+    "generado": "2026-09-01T09:20:18",
+    "predicciones": [
+        {
+            "id": 16416340,
+            "local": "Real Sociedad",
+            "visitante": "Celta",
+            "fecha": "2026-09-03T21:00:00",
+            "goles_local": 2,
+            "goles_visitante": 1
+        },
+        {
+            "id": 16416334,
+            "local": "Alavés",
+            "visitante": "Valencia",
+            "fecha": "2026-09-16T21:00:00",
+            "goles_local": null,
+            "goles_visitante": null
+        },
+        {
+            "id": 16416335,
+            "local": "Atlético",
+            "visitante": "Osasuna",
+            "fecha": "2026-09-16T21:00:00",
+            "goles_local": null,
+            "goles_visitante": null
+        },
+        {
+            "id": 16416343,
+            "local": "Deportivo de A Coruña",
+            "visitante": "Sevilla",
+            "fecha": "2026-09-16T21:00:00",
+            "goles_local": null,
+            "goles_visitante": null
+        },
+        {
+            "id": 16416342,
+            "local": "Elche",
+            "visitante": "Real Madrid",
+            "fecha": "2026-09-16T21:00:00",
+            "goles_local": null,
+            "goles_visitante": null
+        },
+        {
+            "id": 16416346,
+            "local": "FC Barcelona",
+            "visitante": "Real Racing Club",
+            "fecha": "2026-09-16T21:00:00",
+            "goles_local": null,
+            "goles_visitante": null
+        },
+        {
+            "id": 16416341,
+            "local": "Levante UD",
+            "visitante": "Athletic",
+            "fecha": "2026-09-16T21:00:00",
+            "goles_local": null,
+            "goles_visitante": null
+        },
+        {
+            "id": 16416338,
+            "local": "Málaga CF",
+            "visitante": "Villarreal",
+            "fecha": "2026-09-16T21:00:00",
+            "goles_local": null,
+            "goles_visitante": null
+        },
+        {
+            "id": 16416345,
+            "local": "Rayo",
+            "visitante": "Espanyol",
+            "fecha": "2026-09-16T21:00:00",
+            "goles_local": null,
+            "goles_visitante": null
+        },
+        {
+            "id": 16416336,
+            "local": "Betis",
+            "visitante": "Getafe",
+            "fecha": "2026-09-17T19:00:00",
+            "goles_local": null,
+            "goles_visitante": null
+        }
+    ]
+}
