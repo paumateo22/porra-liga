@@ -13,8 +13,8 @@
     "puntos_ganador_perdedor": 2,
     "aciertos_1x2": 17,
     "aciertos_exactos": 6,
-    "partidos_pronosticados": 30,
-    "jornadas_jugadas": 3,
+    "partidos_pronosticados": 31,
+    "jornadas_jugadas": 4,
     "jornadas_ganadas": 2,
     "jornadas_perdidas": 0,
     "punto_partida": 0,
@@ -286,6 +286,24 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
+                }
+            }
+        },
+        "J06": {
+            "puntos": 0,
+            "aciertos_1x2": 0,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "ganador": false,
+            "perdedor": false,
+            "detalle": {
+                "Real Sociedad_vs_Celta": {
+                    "id": 16416340,
+                    "pronostico": "2-1",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         }
