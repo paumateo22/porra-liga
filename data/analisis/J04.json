@@ -1,0 +1,334 @@
+{
+    "clave": "J04",
+    "jornada": 4,
+    "cerrada": false,
+    "resultado_jornada": {
+        "ganadores": [
+            {
+                "slug": "álvaro",
+                "nombre": "Álvaro"
+            }
+        ],
+        "perdedores": [
+            {
+                "slug": "adrián",
+                "nombre": "Adrián"
+            },
+            {
+                "slug": "aitor",
+                "nombre": "Aitor"
+            },
+            {
+                "slug": "carlos",
+                "nombre": "Carlos"
+            },
+            {
+                "slug": "iván",
+                "nombre": "Iván"
+            },
+            {
+                "slug": "javi",
+                "nombre": "Javi"
+            },
+            {
+                "slug": "pau",
+                "nombre": "Pau"
+            }
+        ],
+        "ganador_seguro": false,
+        "perdedor_seguro": false
+    },
+    "partidos": [
+        {
+            "id": 16416315,
+            "local": "Betis",
+            "visitante": "Real Madrid",
+            "id_escudo_local": 2816,
+            "id_escudo_visitante": 2829,
+            "fecha": "2026-09-04T21:00:00"
+        },
+        {
+            "id": 16416317,
+            "local": "Athletic",
+            "visitante": "Atlético",
+            "id_escudo_local": 2825,
+            "id_escudo_visitante": 2836,
+            "fecha": "2026-09-05T16:15:00"
+        },
+        {
+            "id": 16416321,
+            "local": "Rayo",
+            "visitante": "Real Racing Club",
+            "id_escudo_local": 2818,
+            "id_escudo_visitante": 2835,
+            "fecha": "2026-09-05T18:30:00"
+        },
+        {
+            "id": 16416324,
+            "local": "Villarreal",
+            "visitante": "Deportivo de A Coruña",
+            "id_escudo_local": 2819,
+            "id_escudo_visitante": 2832,
+            "fecha": "2026-09-05T21:00:00"
+        },
+        {
+            "id": 16416325,
+            "local": "Valencia",
+            "visitante": "FC Barcelona",
+            "id_escudo_local": 2828,
+            "id_escudo_visitante": 2817,
+            "fecha": "2026-09-06T16:15:00"
+        },
+        {
+            "id": 16416318,
+            "local": "Alavés",
+            "visitante": "Osasuna",
+            "id_escudo_local": 2885,
+            "id_escudo_visitante": 2820,
+            "fecha": "2026-09-06T18:30:00"
+        },
+        {
+            "id": 16416320,
+            "local": "Málaga CF",
+            "visitante": "Levante UD",
+            "id_escudo_local": 2830,
+            "id_escudo_visitante": 2849,
+            "fecha": "2026-09-06T18:30:00"
+        },
+        {
+            "id": 16416323,
+            "local": "Espanyol",
+            "visitante": "Sevilla",
+            "id_escudo_local": 2814,
+            "id_escudo_visitante": 2833,
+            "fecha": "2026-09-06T21:00:00"
+        },
+        {
+            "id": 16416348,
+            "local": "Getafe",
+            "visitante": "Celta",
+            "id_escudo_local": 2859,
+            "id_escudo_visitante": 2821,
+            "fecha": "2026-09-07T19:00:00"
+        },
+        {
+            "id": 16416319,
+            "local": "Elche",
+            "visitante": "Real Sociedad",
+            "id_escudo_local": 2846,
+            "id_escudo_visitante": 2824,
+            "fecha": "2026-09-07T21:30:00"
+        }
+    ],
+    "resultados": {
+        "16416315": {
+            "goles_local": 0,
+            "goles_visitante": 0,
+            "estado": "inprogress"
+        },
+        "16416317": {
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        "16416321": {
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        "16416324": {
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        "16416325": {
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        "16416318": {
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        "16416320": {
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        "16416323": {
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        "16416348": {
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        "16416319": {
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        }
+    },
+    "jugadores": [
+        {
+            "slug": "álvaro",
+            "nombre": "Álvaro",
+            "insignias": [],
+            "aciertos_1x2": 1,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "elegible": true,
+            "ganador": true,
+            "perdedor": false,
+            "puntos": 2,
+            "pronosticados": 10,
+            "predicciones": {
+                "16416315": {
+                    "pronostico": "1-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                }
+            }
+        },
+        {
+            "slug": "adrián",
+            "nombre": "Adrián",
+            "insignias": [],
+            "aciertos_1x2": 0,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "elegible": true,
+            "ganador": false,
+            "perdedor": true,
+            "puntos": -1,
+            "pronosticados": 10,
+            "predicciones": {
+                "16416315": {
+                    "pronostico": "1-3",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                }
+            }
+        },
+        {
+            "slug": "aitor",
+            "nombre": "Aitor",
+            "insignias": [],
+            "aciertos_1x2": 0,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "elegible": true,
+            "ganador": false,
+            "perdedor": true,
+            "puntos": -1,
+            "pronosticados": 10,
+            "predicciones": {
+                "16416315": {
+                    "pronostico": "1-3",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                }
+            }
+        },
+        {
+            "slug": "carlos",
+            "nombre": "Carlos",
+            "insignias": [],
+            "aciertos_1x2": 0,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "elegible": true,
+            "ganador": false,
+            "perdedor": true,
+            "puntos": -1,
+            "pronosticados": 10,
+            "predicciones": {
+                "16416315": {
+                    "pronostico": "1-3",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                }
+            }
+        },
+        {
+            "slug": "iván",
+            "nombre": "Iván",
+            "insignias": [
+                {
+                    "emoji": "⭐",
+                    "descripcion": "Mundial 2026"
+                }
+            ],
+            "aciertos_1x2": 0,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "elegible": true,
+            "ganador": false,
+            "perdedor": true,
+            "puntos": -1,
+            "pronosticados": 10,
+            "predicciones": {
+                "16416315": {
+                    "pronostico": "1-3",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                }
+            }
+        },
+        {
+            "slug": "javi",
+            "nombre": "Javi",
+            "insignias": [],
+            "aciertos_1x2": 0,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "elegible": true,
+            "ganador": false,
+            "perdedor": true,
+            "puntos": -1,
+            "pronosticados": 10,
+            "predicciones": {
+                "16416315": {
+                    "pronostico": "1-3",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                }
+            }
+        },
+        {
+            "slug": "pau",
+            "nombre": "Pau",
+            "insignias": [
+                {
+                    "emoji": "🏆",
+                    "descripcion": "Liga 2023/24"
+                }
+            ],
+            "aciertos_1x2": 0,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "elegible": true,
+            "ganador": false,
+            "perdedor": true,
+            "puntos": -1,
+            "pronosticados": 10,
+            "predicciones": {
+                "16416315": {
+                    "pronostico": "1-3",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                }
+            }
+        }
+    ]
+}
