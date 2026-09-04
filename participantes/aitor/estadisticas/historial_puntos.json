@@ -2,16 +2,16 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 23,
+    "puntos_totales": 24,
     "puntos_partidos": 22,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 1,
+    "puntos_ganador_perdedor": 2,
     "aciertos_1x2": 18,
     "aciertos_exactos": 4,
     "partidos_pronosticados": 41,
     "jornadas_jugadas": 5,
     "jornadas_ganadas": 2,
-    "jornadas_perdidas": 1,
+    "jornadas_perdidas": 0,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -285,17 +285,17 @@
             }
         },
         "J04": {
-            "puntos": -1,
+            "puntos": 0,
             "aciertos_1x2": 0,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
-            "perdedor": true,
+            "perdedor": false,
             "detalle": {
                 "Betis_vs_Real Madrid": {
                     "id": 16416315,
                     "pronostico": "1-3",
-                    "real": "1-1",
+                    "real": "1-0",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
