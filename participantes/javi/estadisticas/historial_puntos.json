@@ -2,16 +2,16 @@
     "participante": "javi",
     "nombre": "Javi",
     "insignias": [],
-    "puntos_totales": 10,
+    "puntos_totales": 11,
     "puntos_partidos": 12,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": -2,
+    "puntos_ganador_perdedor": -1,
     "aciertos_1x2": 12,
     "aciertos_exactos": 0,
     "partidos_pronosticados": 40,
     "jornadas_jugadas": 5,
     "jornadas_ganadas": 1,
-    "jornadas_perdidas": 3,
+    "jornadas_perdidas": 2,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -277,17 +277,17 @@
             }
         },
         "J04": {
-            "puntos": -1,
+            "puntos": 0,
             "aciertos_1x2": 0,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
-            "perdedor": true,
+            "perdedor": false,
             "detalle": {
                 "Betis_vs_Real Madrid": {
                     "id": 16416315,
                     "pronostico": "1-3",
-                    "real": "0-0",
+                    "real": "1-0",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
