@@ -2,7 +2,42 @@
     "clave": "J04",
     "jornada": 4,
     "cerrada": false,
-    "resultado_jornada": null,
+    "resultado_jornada": {
+        "ganadores": [
+            {
+                "slug": "adrián",
+                "nombre": "Adrián"
+            },
+            {
+                "slug": "aitor",
+                "nombre": "Aitor"
+            }
+        ],
+        "perdedores": [
+            {
+                "slug": "carlos",
+                "nombre": "Carlos"
+            },
+            {
+                "slug": "iván",
+                "nombre": "Iván"
+            },
+            {
+                "slug": "javi",
+                "nombre": "Javi"
+            },
+            {
+                "slug": "pau",
+                "nombre": "Pau"
+            },
+            {
+                "slug": "álvaro",
+                "nombre": "Álvaro"
+            }
+        ],
+        "ganador_seguro": false,
+        "perdedor_seguro": false
+    },
     "partidos": [
         {
             "id": 16416315,
@@ -92,14 +127,14 @@
             "estado": "finished"
         },
         "16416317": {
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
+            "goles_local": 3,
+            "goles_visitante": 0,
+            "estado": "finished"
         },
         "16416321": {
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
+            "goles_local": 3,
+            "goles_visitante": 2,
+            "estado": "inprogress"
         },
         "16416324": {
             "goles_local": null,
@@ -142,13 +177,13 @@
             "slug": "adrián",
             "nombre": "Adrián",
             "insignias": [],
-            "aciertos_1x2": 0,
+            "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "bonus": 0,
             "elegible": true,
-            "ganador": false,
+            "ganador": true,
             "perdedor": false,
-            "puntos": 0,
+            "puntos": 2,
             "pronosticados": 10,
             "predicciones": {
                 "16416315": {
@@ -156,6 +191,18 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
+                },
+                "16416317": {
+                    "pronostico": "2-2",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "16416321": {
+                    "pronostico": "2-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         },
@@ -163,13 +210,13 @@
             "slug": "aitor",
             "nombre": "Aitor",
             "insignias": [],
-            "aciertos_1x2": 0,
+            "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "bonus": 0,
             "elegible": true,
-            "ganador": false,
+            "ganador": true,
             "perdedor": false,
-            "puntos": 0,
+            "puntos": 2,
             "pronosticados": 10,
             "predicciones": {
                 "16416315": {
@@ -177,6 +224,18 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
+                },
+                "16416317": {
+                    "pronostico": "1-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "16416321": {
+                    "pronostico": "2-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         },
@@ -189,11 +248,23 @@
             "bonus": 0,
             "elegible": true,
             "ganador": false,
-            "perdedor": false,
-            "puntos": 0,
+            "perdedor": true,
+            "puntos": -1,
             "pronosticados": 10,
             "predicciones": {
                 "16416315": {
+                    "pronostico": "1-3",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "16416317": {
+                    "pronostico": "2-2",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "16416321": {
                     "pronostico": "1-3",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
@@ -215,12 +286,24 @@
             "bonus": 0,
             "elegible": true,
             "ganador": false,
-            "perdedor": false,
-            "puntos": 0,
+            "perdedor": true,
+            "puntos": -1,
             "pronosticados": 10,
             "predicciones": {
                 "16416315": {
                     "pronostico": "1-3",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "16416317": {
+                    "pronostico": "0-2",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "16416321": {
+                    "pronostico": "1-1",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
@@ -236,12 +319,24 @@
             "bonus": 0,
             "elegible": true,
             "ganador": false,
-            "perdedor": false,
-            "puntos": 0,
+            "perdedor": true,
+            "puntos": -1,
             "pronosticados": 10,
             "predicciones": {
                 "16416315": {
                     "pronostico": "1-3",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "16416317": {
+                    "pronostico": "0-2",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "16416321": {
+                    "pronostico": "0-2",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
@@ -262,12 +357,24 @@
             "bonus": 0,
             "elegible": true,
             "ganador": false,
-            "perdedor": false,
-            "puntos": 0,
+            "perdedor": true,
+            "puntos": -1,
             "pronosticados": 10,
             "predicciones": {
                 "16416315": {
                     "pronostico": "1-3",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "16416317": {
+                    "pronostico": "0-2",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "16416321": {
+                    "pronostico": "2-2",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
@@ -283,12 +390,24 @@
             "bonus": 0,
             "elegible": true,
             "ganador": false,
-            "perdedor": false,
-            "puntos": 0,
+            "perdedor": true,
+            "puntos": -1,
             "pronosticados": 10,
             "predicciones": {
                 "16416315": {
                     "pronostico": "1-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "16416317": {
+                    "pronostico": "1-2",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "16416321": {
+                    "pronostico": "1-2",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
