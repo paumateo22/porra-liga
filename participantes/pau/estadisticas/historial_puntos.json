@@ -7,16 +7,16 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 17,
-    "puntos_partidos": 17,
+    "puntos_totales": 19,
+    "puntos_partidos": 18,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 14,
+    "puntos_ganador_perdedor": 1,
+    "aciertos_1x2": 15,
     "aciertos_exactos": 3,
     "partidos_pronosticados": 41,
     "jornadas_jugadas": 5,
     "jornadas_ganadas": 1,
-    "jornadas_perdidas": 1,
+    "jornadas_perdidas": 0,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -290,12 +290,12 @@
             }
         },
         "J04": {
-            "puntos": -1,
-            "aciertos_1x2": 0,
+            "puntos": 1,
+            "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
-            "perdedor": true,
+            "perdedor": false,
             "detalle": {
                 "Betis_vs_Real Madrid": {
                     "id": 16416315,
@@ -320,6 +320,14 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
+                },
+                "Villarreal_vs_Deportivo de A Coruña": {
+                    "id": 16416324,
+                    "pronostico": "2-2",
+                    "real": "0-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         },
