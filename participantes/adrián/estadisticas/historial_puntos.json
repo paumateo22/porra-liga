@@ -2,12 +2,12 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 19,
-    "puntos_partidos": 19,
+    "puntos_totales": 17,
+    "puntos_partidos": 17,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 16,
-    "aciertos_exactos": 3,
+    "aciertos_1x2": 15,
+    "aciertos_exactos": 2,
     "partidos_pronosticados": 41,
     "jornadas_jugadas": 5,
     "jornadas_ganadas": 1,
@@ -285,9 +285,9 @@
             }
         },
         "J04": {
-            "puntos": 4,
-            "aciertos_1x2": 2,
-            "aciertos_exactos": 1,
+            "puntos": 2,
+            "aciertos_1x2": 1,
+            "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": true,
             "perdedor": false,
@@ -319,10 +319,10 @@
                 "Villarreal_vs_Deportivo de A Coruña": {
                     "id": 16416324,
                     "pronostico": "2-2",
-                    "real": "2-2",
-                    "acierto_1x2": true,
-                    "acierto_exacto": true,
-                    "puntos": 2
+                    "real": "2-3",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         },
