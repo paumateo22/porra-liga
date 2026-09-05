@@ -2742,17 +2742,6 @@
             "goles_local": null,
             "goles_visitante": null,
             "estado": "notstarted"
-        },
-        {
-            "id": 16462626,
-            "local": "Villarreal",
-            "visitante": "Valencia",
-            "id_escudo_local": 2819,
-            "id_escudo_visitante": 2828,
-            "fecha": "2027-02-21T20:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
         }
     ],
     "J26": [
