@@ -1,9 +1,13 @@
-# Este workflow ya NO se dispara por "schedule" de GitHub — el scheduler de
-# GitHub Actions no garantiza la hora exacta ("best effort", puede
-# retrasarse 15-45 min o más), así que el disparo en hora en punto lo hace
-# ahora un cron del propio sistema en la Raspberry (ver crontab -e), que
-# llama a este workflow por workflow_dispatch. Todo lo demás (el bucle de
-# 5 minutos mientras haya partido en juego) sigue exactamente igual.
+# Este workflow lo dispara un vigía externo que corre en tu propia
+# Raspberry (ver ~/vigia-partidos/), que comprueba cada 5 minutos — sin
+# tocar GitHub para nada en esa comprobación — si de verdad ha cambiado
+# algo (calendario confirmado, partido que ha empezado o terminado, gol).
+# Solo cuando detecta un cambio real, dispara este workflow, que es quien
+# hace el commit de verdad y desencadena el recálculo completo.
+#
+# Por eso este workflow ya NO necesita bucear él solo cada 5 minutos ni
+# dispararse por "schedule" — esa responsabilidad ya la lleva el vigía, y
+# el scheduler de GitHub tampoco garantizaba la hora exacta de todos modos.
 name: Scraper Horario SofaScore
 
 on:
@@ -13,10 +17,6 @@ permissions:
   contents: write
   actions: write
 
-# Mismo grupo que actualizador.yml/ingesta.yml a propósito: los tres tocan
-# los mismos ficheros en el mismo runner, así que nunca deben correr a la
-# vez — o el motor puede llegar a leer un config/participantes.json a medio
-# escribir por otra ejecución y verlo vacío.
 concurrency:
   group: actualizador-porra
   cancel-in-progress: false
@@ -24,10 +24,7 @@ concurrency:
 jobs:
   actualizar-resultados:
     runs-on: self-hosted
-    # Si hay un partido en juego, este job se queda despierto comprobando
-    # cada 5 minutos hasta que termine (ver el último paso) — 240 minutos
-    # cubre con margen cualquier partido, incluida una posible prórroga.
-    timeout-minutes: 240
+    timeout-minutes: 15
     env:
       PYTHONUTF8: 1
       PYTHONIOENCODING: utf-8
@@ -59,45 +56,36 @@ jobs:
           python -m pip install --upgrade pip --break-system-packages
           pip install -r requirements.txt --break-system-packages
 
-      - name: Actualizar resultados (cada hora, o cada 5 min mientras haya partido en juego)
+      - name: Ejecutar Extractor SofaScore
         if: steps.date_check.outputs.is_active == 'true'
+        run: python scripts/05_extractor_sofascore.py
+
+      - name: Guardar cambios (Auto-Commit)
+        if: steps.date_check.outputs.is_active == 'true'
+        id: commit_step
+        shell: bash
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/resultados/realidad_oficial.json
+
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No hay cambios nuevos en los resultados."
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "Auto-Update: resultados actualizados desde SofaScore"
+            git push
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Lanzar Actualizador Global
+        if: steps.commit_step.outputs.has_changes == 'true'
         shell: bash
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-
-          while true; do
-            python scripts/05_extractor_sofascore.py
-
-            git add data/resultados/realidad_oficial.json
-            if [ -n "$(git status --porcelain)" ]; then
-              git commit -m "Auto-Update: resultados actualizados desde SofaScore"
-              git push
-              CAMBIOS="true"
-            else
-              echo "Sin cambios en los resultados esta vez."
-              CAMBIOS="false"
-            fi
-
-            if [ "$CAMBIOS" = "true" ]; then
-              curl -s -X POST \
-                -H "Authorization: Bearer $GITHUB_TOKEN" \
-                -H "Accept: application/vnd.github+json" \
-                "https://api.github.com/repos/$GITHUB_REPOSITORY/actions/workflows/actualizador.yml/dispatches" \
-                -d '{"ref":"main"}' > /dev/null
-              echo "Actualizador global disparado."
-            fi
-
-            EN_JUEGO=$(python scripts/hay_partido_en_juego.py)
-            echo "¿Hay partido en juego ahora mismo? $EN_JUEGO"
-
-            if [ "$EN_JUEGO" != "true" ]; then
-              echo "Nada en juego — hasta la próxima hora."
-              break
-            fi
-
-            echo "Partido en juego: esperando 5 minutos antes de comprobar de nuevo..."
-            sleep 300
-          done
+          curl -s -X POST \
+            -H "Authorization: Bearer $GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/$GITHUB_REPOSITORY/actions/workflows/actualizador.yml/dispatches" \
+            -d '{"ref":"main"}' > /dev/null
