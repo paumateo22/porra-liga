@@ -2,16 +2,16 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 26,
-    "puntos_partidos": 23,
+    "puntos_totales": 23,
+    "puntos_partidos": 22,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 3,
-    "aciertos_1x2": 19,
+    "puntos_ganador_perdedor": 1,
+    "aciertos_1x2": 18,
     "aciertos_exactos": 4,
     "partidos_pronosticados": 41,
     "jornadas_jugadas": 5,
-    "jornadas_ganadas": 3,
-    "jornadas_perdidas": 0,
+    "jornadas_ganadas": 2,
+    "jornadas_perdidas": 1,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -285,12 +285,12 @@
             }
         },
         "J04": {
-            "puntos": 2,
-            "aciertos_1x2": 1,
+            "puntos": -1,
+            "aciertos_1x2": 0,
             "aciertos_exactos": 0,
             "bonus": 0,
-            "ganador": true,
-            "perdedor": false,
+            "ganador": false,
+            "perdedor": true,
             "detalle": {
                 "Betis_vs_Real Madrid": {
                     "id": 16416315,
@@ -311,10 +311,10 @@
                 "Rayo_vs_Real Racing Club": {
                     "id": 16416321,
                     "pronostico": "2-1",
-                    "real": "3-2",
-                    "acierto_1x2": true,
+                    "real": "3-3",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 }
             }
         },
