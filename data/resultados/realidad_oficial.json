@@ -398,7 +398,7 @@
             "id_escudo_local": 2885,
             "id_escudo_visitante": 2820,
             "fecha": "2026-09-06T18:30:00",
-            "goles_local": 4,
+            "goles_local": 5,
             "goles_visitante": 2,
             "estado": "inprogress"
         },
@@ -411,7 +411,7 @@
             "fecha": "2026-09-06T18:30:00",
             "goles_local": 0,
             "goles_visitante": 0,
-            "estado": "inprogress"
+            "estado": "finished"
         },
         {
             "id": 16416323,
