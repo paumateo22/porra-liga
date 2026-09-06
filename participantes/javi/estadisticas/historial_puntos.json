@@ -2,15 +2,15 @@
     "participante": "javi",
     "nombre": "Javi",
     "insignias": [],
-    "puntos_totales": 17,
-    "puntos_partidos": 17,
+    "puntos_totales": 14,
+    "puntos_partidos": 15,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 15,
-    "aciertos_exactos": 2,
+    "puntos_ganador_perdedor": -1,
+    "aciertos_1x2": 14,
+    "aciertos_exactos": 1,
     "partidos_pronosticados": 40,
     "jornadas_jugadas": 5,
-    "jornadas_ganadas": 2,
+    "jornadas_ganadas": 1,
     "jornadas_perdidas": 2,
     "punto_partida": 0,
     "por_jornada": {
@@ -277,11 +277,11 @@
             }
         },
         "J04": {
-            "puntos": 6,
-            "aciertos_1x2": 3,
-            "aciertos_exactos": 2,
+            "puntos": 3,
+            "aciertos_1x2": 2,
+            "aciertos_exactos": 1,
             "bonus": 0,
-            "ganador": true,
+            "ganador": false,
             "perdedor": false,
             "detalle": {
                 "Betis_vs_Real Madrid": {
@@ -343,10 +343,10 @@
                 "Espanyol_vs_Sevilla": {
                     "id": 16416323,
                     "pronostico": "0-1",
-                    "real": "0-1",
-                    "acierto_1x2": true,
-                    "acierto_exacto": true,
-                    "puntos": 2
+                    "real": "1-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         },
