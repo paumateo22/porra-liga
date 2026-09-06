@@ -2,16 +2,16 @@
     "participante": "javi",
     "nombre": "Javi",
     "insignias": [],
-    "puntos_totales": 12,
-    "puntos_partidos": 14,
+    "puntos_totales": 14,
+    "puntos_partidos": 15,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": -2,
-    "aciertos_1x2": 13,
+    "puntos_ganador_perdedor": -1,
+    "aciertos_1x2": 14,
     "aciertos_exactos": 1,
     "partidos_pronosticados": 40,
     "jornadas_jugadas": 5,
     "jornadas_ganadas": 1,
-    "jornadas_perdidas": 3,
+    "jornadas_perdidas": 2,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -277,12 +277,12 @@
             }
         },
         "J04": {
-            "puntos": 1,
-            "aciertos_1x2": 1,
+            "puntos": 3,
+            "aciertos_1x2": 2,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
-            "perdedor": true,
+            "perdedor": false,
             "detalle": {
                 "Betis_vs_Real Madrid": {
                     "id": 16416315,
@@ -327,10 +327,10 @@
                 "Alavés_vs_Osasuna": {
                     "id": 16416318,
                     "pronostico": "2-1",
-                    "real": "0-0",
-                    "acierto_1x2": false,
+                    "real": "1-0",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 },
                 "Málaga CF_vs_Levante UD": {
                     "id": 16416320,

@@ -2,15 +2,15 @@
     "participante": "carlos",
     "nombre": "Carlos",
     "insignias": [],
-    "puntos_totales": 19,
-    "puntos_partidos": 18,
+    "puntos_totales": 17,
+    "puntos_partidos": 17,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 17,
+    "puntos_ganador_perdedor": 0,
+    "aciertos_1x2": 16,
     "aciertos_exactos": 1,
     "partidos_pronosticados": 41,
     "jornadas_jugadas": 5,
-    "jornadas_ganadas": 2,
+    "jornadas_ganadas": 1,
     "jornadas_perdidas": 1,
     "punto_partida": 0,
     "por_jornada": {
@@ -285,11 +285,11 @@
             }
         },
         "J04": {
-            "puntos": 4,
-            "aciertos_1x2": 3,
+            "puntos": 2,
+            "aciertos_1x2": 2,
             "aciertos_exactos": 0,
             "bonus": 0,
-            "ganador": true,
+            "ganador": false,
             "perdedor": false,
             "detalle": {
                 "Betis_vs_Real Madrid": {
@@ -335,10 +335,10 @@
                 "Alavés_vs_Osasuna": {
                     "id": 16416318,
                     "pronostico": "1-1",
-                    "real": "0-0",
-                    "acierto_1x2": true,
+                    "real": "1-0",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 },
                 "Málaga CF_vs_Levante UD": {
                     "id": 16416320,
