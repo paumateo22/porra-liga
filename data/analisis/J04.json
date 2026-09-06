@@ -143,7 +143,7 @@
         },
         "16416325": {
             "goles_local": 0,
-            "goles_visitante": 4,
+            "goles_visitante": 5,
             "estado": "inprogress"
         },
         "16416318": {
@@ -264,14 +264,9 @@
             }
         },
         {
-            "slug": "iván",
-            "nombre": "Iván",
-            "insignias": [
-                {
-                    "emoji": "⭐",
-                    "descripcion": "Mundial 2026"
-                }
-            ],
+            "slug": "javi",
+            "nombre": "Javi",
+            "insignias": [],
             "aciertos_1x2": 1,
             "aciertos_exactos": 1,
             "bonus": 0,
@@ -294,7 +289,7 @@
                     "puntos": 0
                 },
                 "16416321": {
-                    "pronostico": "1-1",
+                    "pronostico": "0-2",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
@@ -306,7 +301,7 @@
                     "puntos": 0
                 },
                 "16416325": {
-                    "pronostico": "0-4",
+                    "pronostico": "0-5",
                     "acierto_1x2": true,
                     "acierto_exacto": true,
                     "puntos": 2
@@ -359,9 +354,14 @@
             }
         },
         {
-            "slug": "javi",
-            "nombre": "Javi",
-            "insignias": [],
+            "slug": "iván",
+            "nombre": "Iván",
+            "insignias": [
+                {
+                    "emoji": "⭐",
+                    "descripcion": "Mundial 2026"
+                }
+            ],
             "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "bonus": 0,
@@ -384,7 +384,7 @@
                     "puntos": 0
                 },
                 "16416321": {
-                    "pronostico": "0-2",
+                    "pronostico": "1-1",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
@@ -396,7 +396,7 @@
                     "puntos": 0
                 },
                 "16416325": {
-                    "pronostico": "0-5",
+                    "pronostico": "0-4",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
