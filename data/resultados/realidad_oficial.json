@@ -2050,17 +2050,6 @@
             "estado": "notstarted"
         },
         {
-            "id": 16462621,
-            "local": "Espanyol",
-            "visitante": "Betis",
-            "id_escudo_local": 2814,
-            "id_escudo_visitante": 2816,
-            "fecha": "2027-01-10T20:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
             "id": 16462624,
             "local": "Osasuna",
             "visitante": "FC Barcelona",
@@ -2331,6 +2320,17 @@
     ],
     "J22": [
         {
+            "id": 16462510,
+            "local": "Atlético",
+            "visitante": "Espanyol",
+            "id_escudo_local": 2836,
+            "id_escudo_visitante": 2814,
+            "fecha": "2027-01-31T20:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
             "id": 16462513,
             "local": "Betis",
             "visitante": "Elche",
@@ -2402,6 +2402,17 @@
             "visitante": "Real Madrid",
             "id_escudo_local": 2818,
             "id_escudo_visitante": 2829,
+            "fecha": "2027-01-31T20:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
+            "id": 16462534,
+            "local": "Sevilla",
+            "visitante": "Athletic",
+            "id_escudo_local": 2833,
+            "id_escudo_visitante": 2825,
             "fecha": "2027-01-31T20:00:00",
             "goles_local": null,
             "goles_visitante": null,
@@ -3306,28 +3317,6 @@
     ],
     "J31": [
         {
-            "id": 16462472,
-            "local": "Alavés",
-            "visitante": "Betis",
-            "id_escudo_local": 2885,
-            "id_escudo_visitante": 2816,
-            "fecha": "2027-04-11T21:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
-            "id": 16462473,
-            "local": "Atlético",
-            "visitante": "Levante UD",
-            "id_escudo_local": 2836,
-            "id_escudo_visitante": 2849,
-            "fecha": "2027-04-11T21:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
             "id": 16462474,
             "local": "Celta",
             "visitante": "Elche",
@@ -3399,17 +3388,6 @@
             "visitante": "Getafe",
             "id_escudo_local": 2828,
             "id_escudo_visitante": 2859,
-            "fecha": "2027-04-11T21:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
-            "id": 16462490,
-            "local": "Villarreal",
-            "visitante": "Athletic",
-            "id_escudo_local": 2819,
-            "id_escudo_visitante": 2825,
             "fecha": "2027-04-11T21:00:00",
             "goles_local": null,
             "goles_visitante": null,
@@ -3642,6 +3620,17 @@
     ],
     "J34": [
         {
+            "id": 16462554,
+            "local": "Atlético",
+            "visitante": "Alavés",
+            "id_escudo_local": 2836,
+            "id_escudo_visitante": 2885,
+            "fecha": "2027-05-02T21:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
             "id": 16462557,
             "local": "Betis",
             "visitante": "Valencia",
@@ -3724,6 +3713,17 @@
             "visitante": "Villarreal",
             "id_escudo_local": 2818,
             "id_escudo_visitante": 2819,
+            "fecha": "2027-05-02T21:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
+            "id": 16416355,
+            "local": "Real Sociedad",
+            "visitante": "Athletic",
+            "id_escudo_local": 2824,
+            "id_escudo_visitante": 2825,
             "fecha": "2027-05-02T21:00:00",
             "goles_local": null,
             "goles_visitante": null,
