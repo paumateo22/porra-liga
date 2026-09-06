@@ -135,7 +135,7 @@
             "estado": "finished"
         },
         "16416318": {
-            "goles_local": 1,
+            "goles_local": 2,
             "goles_visitante": 0,
             "estado": "inprogress"
         },
@@ -166,12 +166,12 @@
             "nombre": "Aitor",
             "insignias": [],
             "aciertos_1x2": 3,
-            "aciertos_exactos": 0,
+            "aciertos_exactos": 1,
             "bonus": 0,
             "elegible": true,
             "ganador": true,
             "perdedor": false,
-            "puntos": 4,
+            "puntos": 5,
             "pronosticados": 10,
             "predicciones": {
                 "16416315": {
@@ -207,8 +207,8 @@
                 "16416318": {
                     "pronostico": "2-0",
                     "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
+                    "acierto_exacto": true,
+                    "puntos": 2
                 },
                 "16416320": {
                     "pronostico": "0-2",
