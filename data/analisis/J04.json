@@ -135,14 +135,14 @@
             "estado": "finished"
         },
         "16416318": {
-            "goles_local": 4,
+            "goles_local": 5,
             "goles_visitante": 2,
             "estado": "inprogress"
         },
         "16416320": {
             "goles_local": 0,
             "goles_visitante": 0,
-            "estado": "inprogress"
+            "estado": "finished"
         },
         "16416323": {
             "goles_local": null,
