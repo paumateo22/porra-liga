@@ -1231,6 +1231,14 @@
     ],
     "J16": [
         {
+            "id": 16462517,
+            "local": "Atlético",
+            "visitante": "Valencia",
+            "id_escudo_local": 2836,
+            "id_escudo_visitante": 2828,
+            "fecha": "2026-12-13T20:00:00"
+        },
+        {
             "id": 16462520,
             "local": "Betis",
             "visitante": "Real Racing Club",
@@ -1292,6 +1300,14 @@
             "visitante": "Getafe",
             "id_escudo_local": 2824,
             "id_escudo_visitante": 2859,
+            "fecha": "2026-12-13T20:00:00"
+        },
+        {
+            "id": 16462544,
+            "local": "Villarreal",
+            "visitante": "Rayo",
+            "id_escudo_local": 2819,
+            "id_escudo_visitante": 2818,
             "fecha": "2026-12-13T20:00:00"
         }
     ],
@@ -2429,6 +2445,22 @@
     ],
     "J31": [
         {
+            "id": 16462472,
+            "local": "Alavés",
+            "visitante": "Betis",
+            "id_escudo_local": 2885,
+            "id_escudo_visitante": 2816,
+            "fecha": "2027-04-11T21:00:00"
+        },
+        {
+            "id": 16462473,
+            "local": "Atlético",
+            "visitante": "Levante UD",
+            "id_escudo_local": 2836,
+            "id_escudo_visitante": 2849,
+            "fecha": "2027-04-11T21:00:00"
+        },
+        {
             "id": 16462474,
             "local": "Celta",
             "visitante": "Elche",
@@ -2482,6 +2514,14 @@
             "visitante": "Getafe",
             "id_escudo_local": 2828,
             "id_escudo_visitante": 2859,
+            "fecha": "2027-04-11T21:00:00"
+        },
+        {
+            "id": 16462490,
+            "local": "Villarreal",
+            "visitante": "Athletic",
+            "id_escudo_local": 2819,
+            "id_escudo_visitante": 2825,
             "fecha": "2027-04-11T21:00:00"
         }
     ],
@@ -2910,14 +2950,6 @@
             "visitante": "Athletic",
             "id_escudo_local": 2836,
             "id_escudo_visitante": 2825,
-            "fecha": "2027-05-23T21:00:00"
-        },
-        {
-            "id": 16462622,
-            "local": "Celta",
-            "visitante": "Real Sociedad",
-            "id_escudo_local": 2821,
-            "id_escudo_visitante": 2824,
             "fecha": "2027-05-23T21:00:00"
         },
         {
