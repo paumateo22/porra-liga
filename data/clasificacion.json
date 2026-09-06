@@ -1,6 +1,6 @@
 {
     "competicion": "LaLiga 2026-27",
-    "generado": "2026-09-06T16:31:05",
+    "generado": "2026-09-06T16:43:04",
     "jornadas_calculadas": [
         "J01",
         "J02",
@@ -324,12 +324,12 @@
             "slug": "álvaro",
             "nombre": "Álvaro",
             "insignias": [],
-            "puntos_totales": 13,
-            "puntos_partidos": 15,
+            "puntos_totales": 14,
+            "puntos_partidos": 16,
             "bonus_rendimiento": 0,
             "puntos_ganador_perdedor": -2,
             "aciertos_1x2": 13,
-            "aciertos_exactos": 2,
+            "aciertos_exactos": 3,
             "partidos_pronosticados": 41,
             "jornadas_jugadas": 5,
             "jornadas_ganadas": 0,
@@ -361,9 +361,9 @@
                     "perdedor": true
                 },
                 "J04": {
-                    "puntos": 0,
+                    "puntos": 1,
                     "aciertos_1x2": 1,
-                    "aciertos_exactos": 0,
+                    "aciertos_exactos": 1,
                     "bonus": 0,
                     "ganador": false,
                     "perdedor": true
