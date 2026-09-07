@@ -1,7 +1,7 @@
 {
     "clave": "J04",
     "jornada": 4,
-    "cerrada": false,
+    "cerrada": true,
     "resultado_jornada": {
         "ganadores": [
             {
@@ -27,8 +27,8 @@
                 "nombre": "Iván"
             }
         ],
-        "ganador_seguro": false,
-        "perdedor_seguro": false
+        "ganador_seguro": true,
+        "perdedor_seguro": true
     },
     "partidos": [
         {
@@ -161,7 +161,7 @@
         "16416319": {
             "goles_local": 2,
             "goles_visitante": 3,
-            "estado": "inprogress"
+            "estado": "finished"
         }
     },
     "jugadores": [
