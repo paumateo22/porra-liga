@@ -1263,14 +1263,6 @@
             "fecha": "2026-12-13T20:00:00"
         },
         {
-            "id": 16462532,
-            "local": "Levante UD",
-            "visitante": "Alavés",
-            "id_escudo_local": 2849,
-            "id_escudo_visitante": 2885,
-            "fecha": "2026-12-13T20:00:00"
-        },
-        {
             "id": 16462535,
             "local": "Málaga CF",
             "visitante": "FC Barcelona",
@@ -2707,14 +2699,6 @@
             "fecha": "2027-05-02T21:00:00"
         },
         {
-            "id": 16462563,
-            "local": "Deportivo de A Coruña",
-            "visitante": "Real Racing Club",
-            "id_escudo_local": 2832,
-            "id_escudo_visitante": 2835,
-            "fecha": "2027-05-02T21:00:00"
-        },
-        {
             "id": 16462566,
             "local": "Elche",
             "visitante": "Espanyol",
@@ -2950,6 +2934,14 @@
             "visitante": "Real Sociedad",
             "id_escudo_local": 2821,
             "id_escudo_visitante": 2824,
+            "fecha": "2027-05-23T21:00:00"
+        },
+        {
+            "id": 16462625,
+            "local": "Deportivo de A Coruña",
+            "visitante": "Espanyol",
+            "id_escudo_local": 2832,
+            "id_escudo_visitante": 2814,
             "fecha": "2027-05-23T21:00:00"
         },
         {
