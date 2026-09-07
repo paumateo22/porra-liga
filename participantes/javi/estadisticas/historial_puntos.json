@@ -2,12 +2,12 @@
     "participante": "javi",
     "nombre": "Javi",
     "insignias": [],
-    "puntos_totales": 16,
-    "puntos_partidos": 17,
+    "puntos_totales": 15,
+    "puntos_partidos": 16,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": -1,
     "aciertos_1x2": 15,
-    "aciertos_exactos": 2,
+    "aciertos_exactos": 1,
     "partidos_pronosticados": 40,
     "jornadas_jugadas": 5,
     "jornadas_ganadas": 1,
@@ -277,9 +277,9 @@
             }
         },
         "J04": {
-            "puntos": 5,
+            "puntos": 4,
             "aciertos_1x2": 3,
-            "aciertos_exactos": 2,
+            "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
             "perdedor": false,
@@ -359,10 +359,10 @@
                 "Elche_vs_Real Sociedad": {
                     "id": 16416319,
                     "pronostico": "0-2",
-                    "real": "0-2",
+                    "real": "1-2",
                     "acierto_1x2": true,
-                    "acierto_exacto": true,
-                    "puntos": 2
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         },
