@@ -2408,17 +2408,6 @@
             "estado": "notstarted"
         },
         {
-            "id": 16462528,
-            "local": "Osasuna",
-            "visitante": "Deportivo de A Coruña",
-            "id_escudo_local": 2820,
-            "id_escudo_visitante": 2832,
-            "fecha": "2027-01-31T20:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
             "id": 16462531,
             "local": "Rayo",
             "visitante": "Real Madrid",
