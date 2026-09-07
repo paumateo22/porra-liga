@@ -2,16 +2,16 @@
     "participante": "javi",
     "nombre": "Javi",
     "insignias": [],
-    "puntos_totales": 13,
-    "puntos_partidos": 15,
+    "puntos_totales": 15,
+    "puntos_partidos": 16,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": -2,
-    "aciertos_1x2": 14,
+    "puntos_ganador_perdedor": -1,
+    "aciertos_1x2": 15,
     "aciertos_exactos": 1,
     "partidos_pronosticados": 40,
     "jornadas_jugadas": 5,
     "jornadas_ganadas": 1,
-    "jornadas_perdidas": 3,
+    "jornadas_perdidas": 2,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -277,12 +277,12 @@
             }
         },
         "J04": {
-            "puntos": 2,
-            "aciertos_1x2": 2,
+            "puntos": 4,
+            "aciertos_1x2": 3,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
-            "perdedor": true,
+            "perdedor": false,
             "detalle": {
                 "Betis_vs_Real Madrid": {
                     "id": 16416315,
@@ -359,10 +359,10 @@
                 "Elche_vs_Real Sociedad": {
                     "id": 16416319,
                     "pronostico": "0-2",
-                    "real": "0-0",
-                    "acierto_1x2": false,
+                    "real": "0-1",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         },
