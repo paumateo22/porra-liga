@@ -2,11 +2,11 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 29,
-    "puntos_partidos": 26,
+    "puntos_totales": 28,
+    "puntos_partidos": 25,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 3,
-    "aciertos_1x2": 22,
+    "aciertos_1x2": 21,
     "aciertos_exactos": 4,
     "partidos_pronosticados": 41,
     "jornadas_jugadas": 5,
@@ -285,8 +285,8 @@
             }
         },
         "J04": {
-            "puntos": 5,
-            "aciertos_1x2": 4,
+            "puntos": 4,
+            "aciertos_1x2": 3,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": true,
@@ -367,10 +367,10 @@
                 "Elche_vs_Real Sociedad": {
                     "id": 16416319,
                     "pronostico": "0-3",
-                    "real": "1-2",
-                    "acierto_1x2": true,
+                    "real": "2-2",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 }
             }
         },
