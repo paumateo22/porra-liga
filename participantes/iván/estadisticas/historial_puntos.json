@@ -7,12 +7,12 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 27,
-    "puntos_partidos": 26,
+    "puntos_totales": 25,
+    "puntos_partidos": 24,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 19,
-    "aciertos_exactos": 7,
+    "aciertos_1x2": 18,
+    "aciertos_exactos": 6,
     "partidos_pronosticados": 41,
     "jornadas_jugadas": 5,
     "jornadas_ganadas": 2,
@@ -290,9 +290,9 @@
             }
         },
         "J04": {
-            "puntos": 2,
-            "aciertos_1x2": 2,
-            "aciertos_exactos": 1,
+            "puntos": 0,
+            "aciertos_1x2": 1,
+            "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
             "perdedor": true,
@@ -364,10 +364,10 @@
                 "Getafe_vs_Celta": {
                     "id": 16416348,
                     "pronostico": "0-0",
-                    "real": "0-0",
-                    "acierto_1x2": true,
-                    "acierto_exacto": true,
-                    "puntos": 2
+                    "real": "1-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         },
