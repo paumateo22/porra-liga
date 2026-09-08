@@ -3075,6 +3075,14 @@
             "fecha": "2027-05-30T21:00:00"
         },
         {
+            "id": 16462670,
+            "local": "Real Madrid",
+            "visitante": "Deportivo de A Coruña",
+            "id_escudo_local": 2829,
+            "id_escudo_visitante": 2832,
+            "fecha": "2027-05-30T21:00:00"
+        },
+        {
             "id": 16462672,
             "local": "Real Sociedad",
             "visitante": "Villarreal",
