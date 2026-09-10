@@ -785,6 +785,17 @@
     ],
     "J08": [
         {
+            "id": 16421067,
+            "local": "Real Sociedad",
+            "visitante": "Deportivo de A Coruña",
+            "id_escudo_local": 2824,
+            "id_escudo_visitante": 2832,
+            "fecha": "2026-10-11T16:15:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
             "id": 16421056,
             "local": "Alavés",
             "visitante": "Atlético",
@@ -823,17 +834,6 @@
             "visitante": "Getafe",
             "id_escudo_local": 2817,
             "id_escudo_visitante": 2859,
-            "fecha": "2026-10-11T21:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
-            "id": 16421063,
-            "local": "Levante UD",
-            "visitante": "Sevilla",
-            "id_escudo_local": 2849,
-            "id_escudo_visitante": 2833,
             "fecha": "2026-10-11T21:00:00",
             "goles_local": null,
             "goles_visitante": null,
@@ -884,12 +884,12 @@
             "estado": "notstarted"
         },
         {
-            "id": 16421067,
-            "local": "Real Sociedad",
-            "visitante": "Deportivo de A Coruña",
-            "id_escudo_local": 2824,
-            "id_escudo_visitante": 2832,
-            "fecha": "2026-10-11T21:00:00",
+            "id": 16421063,
+            "local": "Levante UD",
+            "visitante": "Sevilla",
+            "id_escudo_local": 2849,
+            "id_escudo_visitante": 2833,
+            "fecha": "2026-10-12T21:00:00",
             "goles_local": null,
             "goles_visitante": null,
             "estado": "notstarted"
