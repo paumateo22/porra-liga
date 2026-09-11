@@ -1,0 +1,17 @@
+{
+    "participante": "alvaro",
+    "nombre": "Alvaro",
+    "jornada": 5,
+    "generado": "2026-09-11T18:57:43",
+    "ingerido": "2026-09-11T21:00:10",
+    "predicciones": [
+        {
+            "id": 16416330,
+            "local": "Sevilla",
+            "visitante": "Valencia",
+            "fecha": "2026-09-11T21:00:00",
+            "goles_local": 2,
+            "goles_visitante": 1
+        }
+    ]
+}
