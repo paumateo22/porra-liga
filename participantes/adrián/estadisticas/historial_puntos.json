@@ -8,8 +8,8 @@
     "puntos_ganador_perdedor": 0,
     "aciertos_1x2": 18,
     "aciertos_exactos": 3,
-    "partidos_pronosticados": 41,
-    "jornadas_jugadas": 5,
+    "partidos_pronosticados": 51,
+    "jornadas_jugadas": 6,
     "jornadas_ganadas": 1,
     "jornadas_perdidas": 1,
     "punto_partida": 0,
@@ -371,6 +371,24 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
+                }
+            }
+        },
+        "J05": {
+            "puntos": 0,
+            "aciertos_1x2": 0,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "ganador": false,
+            "perdedor": false,
+            "detalle": {
+                "Sevilla_vs_Valencia": {
+                    "id": 16416330,
+                    "pronostico": "2-1",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         },
