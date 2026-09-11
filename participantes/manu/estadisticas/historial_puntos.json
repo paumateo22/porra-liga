@@ -2,11 +2,11 @@
     "participante": "manu",
     "nombre": "Manu",
     "insignias": [],
-    "puntos_totales": 13,
-    "puntos_partidos": 10,
+    "puntos_totales": 14,
+    "puntos_partidos": 11,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": -1,
-    "aciertos_1x2": 9,
+    "aciertos_1x2": 10,
     "aciertos_exactos": 1,
     "partidos_pronosticados": 31,
     "jornadas_jugadas": 4,
@@ -195,8 +195,8 @@
             }
         },
         "J05": {
-            "puntos": 0,
-            "aciertos_1x2": 0,
+            "puntos": 1,
+            "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -205,10 +205,10 @@
                 "Sevilla_vs_Valencia": {
                     "id": 16416330,
                     "pronostico": "3-1",
-                    "real": "0-0",
-                    "acierto_1x2": false,
+                    "real": "1-0",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         },

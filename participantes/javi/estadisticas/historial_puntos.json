@@ -2,11 +2,11 @@
     "participante": "javi",
     "nombre": "Javi",
     "insignias": [],
-    "puntos_totales": 15,
-    "puntos_partidos": 16,
+    "puntos_totales": 16,
+    "puntos_partidos": 17,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": -1,
-    "aciertos_1x2": 15,
+    "aciertos_1x2": 16,
     "aciertos_exactos": 1,
     "partidos_pronosticados": 50,
     "jornadas_jugadas": 6,
@@ -367,8 +367,8 @@
             }
         },
         "J05": {
-            "puntos": 0,
-            "aciertos_1x2": 0,
+            "puntos": 1,
+            "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -377,10 +377,10 @@
                 "Sevilla_vs_Valencia": {
                     "id": 16416330,
                     "pronostico": "2-0",
-                    "real": "0-0",
-                    "acierto_1x2": false,
+                    "real": "1-0",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         },

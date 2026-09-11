@@ -7,11 +7,11 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 24,
-    "puntos_partidos": 22,
+    "puntos_totales": 25,
+    "puntos_partidos": 23,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 2,
-    "aciertos_1x2": 18,
+    "aciertos_1x2": 19,
     "aciertos_exactos": 4,
     "partidos_pronosticados": 51,
     "jornadas_jugadas": 6,
@@ -380,8 +380,8 @@
             }
         },
         "J05": {
-            "puntos": 0,
-            "aciertos_1x2": 0,
+            "puntos": 1,
+            "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -390,10 +390,10 @@
                 "Sevilla_vs_Valencia": {
                     "id": 16416330,
                     "pronostico": "2-0",
-                    "real": "0-0",
-                    "acierto_1x2": false,
+                    "real": "1-0",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         },
