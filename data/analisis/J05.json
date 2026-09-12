@@ -302,11 +302,11 @@
             "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "bonus": 0,
-            "elegible": false,
+            "elegible": true,
             "ganador": false,
             "perdedor": false,
             "puntos": 1,
-            "pronosticados": 1,
+            "pronosticados": 10,
             "predicciones": {
                 "16416330": {
                     "pronostico": "2-1",
