@@ -2,16 +2,16 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 32,
-    "puntos_partidos": 28,
+    "puntos_totales": 29,
+    "puntos_partidos": 27,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 4,
-    "aciertos_1x2": 24,
+    "puntos_ganador_perdedor": 2,
+    "aciertos_1x2": 23,
     "aciertos_exactos": 4,
     "partidos_pronosticados": 51,
     "jornadas_jugadas": 6,
-    "jornadas_ganadas": 4,
-    "jornadas_perdidas": 0,
+    "jornadas_ganadas": 3,
+    "jornadas_perdidas": 1,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -375,12 +375,12 @@
             }
         },
         "J05": {
-            "puntos": 3,
-            "aciertos_1x2": 2,
+            "puntos": 0,
+            "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "bonus": 0,
-            "ganador": true,
-            "perdedor": false,
+            "ganador": false,
+            "perdedor": true,
             "detalle": {
                 "Sevilla_vs_Valencia": {
                     "id": 16416330,
@@ -393,10 +393,10 @@
                 "Real Racing Club_vs_Alavés": {
                     "id": 16416328,
                     "pronostico": "1-2",
-                    "real": "0-1",
-                    "acierto_1x2": true,
+                    "real": "1-1",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 }
             }
         },
