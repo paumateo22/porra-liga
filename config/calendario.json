@@ -1083,6 +1083,14 @@
             "fecha": "2026-11-29T20:00:00"
         },
         {
+            "id": 16421123,
+            "local": "Deportivo de A Coruña",
+            "visitante": "FC Barcelona",
+            "id_escudo_local": 2832,
+            "id_escudo_visitante": 2817,
+            "fecha": "2026-11-29T20:00:00"
+        },
+        {
             "id": 16421126,
             "local": "Elche",
             "visitante": "Atlético",
@@ -2733,27 +2741,11 @@
             "fecha": "2027-05-09T21:00:00"
         },
         {
-            "id": 16416360,
-            "local": "Betis",
-            "visitante": "Espanyol",
-            "id_escudo_local": 2816,
-            "id_escudo_visitante": 2814,
-            "fecha": "2027-05-09T21:00:00"
-        },
-        {
             "id": 16416363,
             "local": "Getafe",
             "visitante": "Elche",
             "id_escudo_local": 2859,
             "id_escudo_visitante": 2846,
-            "fecha": "2027-05-09T21:00:00"
-        },
-        {
-            "id": 16462571,
-            "local": "Osasuna",
-            "visitante": "Real Sociedad",
-            "id_escudo_local": 2820,
-            "id_escudo_visitante": 2824,
             "fecha": "2027-05-09T21:00:00"
         },
         {
@@ -2786,14 +2778,6 @@
             "visitante": "Atlético",
             "id_escudo_local": 2828,
             "id_escudo_visitante": 2836,
-            "fecha": "2027-05-09T21:00:00"
-        },
-        {
-            "id": 16462586,
-            "local": "Villarreal",
-            "visitante": "Celta",
-            "id_escudo_local": 2819,
-            "id_escudo_visitante": 2821,
             "fecha": "2027-05-09T21:00:00"
         }
     ],
@@ -2992,6 +2976,14 @@
             "visitante": "Alavés",
             "id_escudo_local": 2814,
             "id_escudo_visitante": 2885,
+            "fecha": "2027-05-30T21:00:00"
+        },
+        {
+            "id": 16462659,
+            "local": "Getafe",
+            "visitante": "FC Barcelona",
+            "id_escudo_local": 2859,
+            "id_escudo_visitante": 2817,
             "fecha": "2027-05-30T21:00:00"
         },
         {
