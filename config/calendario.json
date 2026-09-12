@@ -1313,22 +1313,6 @@
             "fecha": "2026-12-20T20:00:00"
         },
         {
-            "id": 16462550,
-            "local": "Athletic",
-            "visitante": "Betis",
-            "id_escudo_local": 2825,
-            "id_escudo_visitante": 2816,
-            "fecha": "2026-12-20T20:00:00"
-        },
-        {
-            "id": 16462553,
-            "local": "Celta",
-            "visitante": "Atlético",
-            "id_escudo_local": 2821,
-            "id_escudo_visitante": 2836,
-            "fecha": "2026-12-20T20:00:00"
-        },
-        {
             "id": 16462556,
             "local": "Deportivo de A Coruña",
             "visitante": "Real Madrid",
@@ -1350,14 +1334,6 @@
             "visitante": "Levante UD",
             "id_escudo_local": 2859,
             "id_escudo_visitante": 2849,
-            "fecha": "2026-12-20T20:00:00"
-        },
-        {
-            "id": 16462565,
-            "local": "Osasuna",
-            "visitante": "Villarreal",
-            "id_escudo_local": 2820,
-            "id_escudo_visitante": 2819,
             "fecha": "2026-12-20T20:00:00"
         },
         {
