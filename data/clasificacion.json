@@ -1,6 +1,6 @@
 {
     "competicion": "LaLiga 2026-27",
-    "generado": "2026-09-12T21:40:39",
+    "generado": "2026-09-12T22:56:23",
     "jornadas_calculadas": [
         "J01",
         "J02",
@@ -365,12 +365,12 @@
             "slug": "javi",
             "nombre": "Javi",
             "insignias": [],
-            "puntos_totales": 20,
-            "puntos_partidos": 21,
+            "puntos_totales": 19,
+            "puntos_partidos": 20,
             "bonus_rendimiento": 0,
             "puntos_ganador_perdedor": -1,
             "aciertos_1x2": 18,
-            "aciertos_exactos": 3,
+            "aciertos_exactos": 2,
             "partidos_pronosticados": 50,
             "jornadas_jugadas": 6,
             "jornadas_ganadas": 1,
@@ -410,9 +410,9 @@
                     "perdedor": false
                 },
                 "J05": {
-                    "puntos": 5,
+                    "puntos": 4,
                     "aciertos_1x2": 3,
-                    "aciertos_exactos": 2,
+                    "aciertos_exactos": 1,
                     "bonus": 0,
                     "ganador": false,
                     "perdedor": false
