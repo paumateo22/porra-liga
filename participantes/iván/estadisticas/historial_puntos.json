@@ -7,12 +7,12 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 28,
-    "puntos_partidos": 28,
+    "puntos_totales": 27,
+    "puntos_partidos": 27,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
     "aciertos_1x2": 21,
-    "aciertos_exactos": 7,
+    "aciertos_exactos": 6,
     "partidos_pronosticados": 51,
     "jornadas_jugadas": 6,
     "jornadas_ganadas": 2,
@@ -380,9 +380,9 @@
             }
         },
         "J05": {
-            "puntos": 2,
+            "puntos": 1,
             "aciertos_1x2": 2,
-            "aciertos_exactos": 1,
+            "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
             "perdedor": true,
@@ -422,10 +422,10 @@
                 "Real Madrid_vs_Rayo": {
                     "id": 16416331,
                     "pronostico": "2-0",
-                    "real": "2-0",
+                    "real": "3-0",
                     "acierto_1x2": true,
-                    "acierto_exacto": true,
-                    "puntos": 2
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         },
