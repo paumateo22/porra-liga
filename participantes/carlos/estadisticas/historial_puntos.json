@@ -2,11 +2,11 @@
     "participante": "carlos",
     "nombre": "Carlos",
     "insignias": [],
-    "puntos_totales": 20,
-    "puntos_partidos": 20,
+    "puntos_totales": 21,
+    "puntos_partidos": 21,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 19,
+    "aciertos_1x2": 20,
     "aciertos_exactos": 1,
     "partidos_pronosticados": 51,
     "jornadas_jugadas": 6,
@@ -375,8 +375,8 @@
             }
         },
         "J05": {
-            "puntos": 4,
-            "aciertos_1x2": 3,
+            "puntos": 5,
+            "aciertos_1x2": 4,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": true,
@@ -410,6 +410,14 @@
                     "id": 16416322,
                     "pronostico": "2-2",
                     "real": "1-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "Real Madrid_vs_Rayo": {
+                    "id": 16416331,
+                    "pronostico": "3-1",
+                    "real": "2-0",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1

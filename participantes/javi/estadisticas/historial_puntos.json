@@ -2,11 +2,11 @@
     "participante": "javi",
     "nombre": "Javi",
     "insignias": [],
-    "puntos_totales": 18,
-    "puntos_partidos": 19,
+    "puntos_totales": 19,
+    "puntos_partidos": 20,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": -1,
-    "aciertos_1x2": 17,
+    "aciertos_1x2": 18,
     "aciertos_exactos": 2,
     "partidos_pronosticados": 50,
     "jornadas_jugadas": 6,
@@ -367,8 +367,8 @@
             }
         },
         "J05": {
-            "puntos": 3,
-            "aciertos_1x2": 2,
+            "puntos": 4,
+            "aciertos_1x2": 3,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
@@ -405,6 +405,14 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
+                },
+                "Real Madrid_vs_Rayo": {
+                    "id": 16416331,
+                    "pronostico": "3-0",
+                    "real": "2-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         },
