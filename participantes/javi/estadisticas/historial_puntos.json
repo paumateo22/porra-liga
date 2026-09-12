@@ -2,12 +2,12 @@
     "participante": "javi",
     "nombre": "Javi",
     "insignias": [],
-    "puntos_totales": 18,
-    "puntos_partidos": 18,
+    "puntos_totales": 19,
+    "puntos_partidos": 19,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
     "aciertos_1x2": 17,
-    "aciertos_exactos": 1,
+    "aciertos_exactos": 2,
     "partidos_pronosticados": 50,
     "jornadas_jugadas": 6,
     "jornadas_ganadas": 2,
@@ -367,9 +367,9 @@
             }
         },
         "J05": {
-            "puntos": 3,
+            "puntos": 4,
             "aciertos_1x2": 2,
-            "aciertos_exactos": 0,
+            "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": true,
             "perdedor": false,
@@ -393,10 +393,10 @@
                 "Osasuna_vs_Espanyol": {
                     "id": 16416327,
                     "pronostico": "0-2",
-                    "real": "0-1",
+                    "real": "0-2",
                     "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         },
