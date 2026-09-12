@@ -2,16 +2,16 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 22,
+    "puntos_totales": 21,
     "puntos_partidos": 22,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 0,
+    "puntos_ganador_perdedor": -1,
     "aciertos_1x2": 19,
     "aciertos_exactos": 3,
     "partidos_pronosticados": 51,
     "jornadas_jugadas": 6,
     "jornadas_ganadas": 1,
-    "jornadas_perdidas": 1,
+    "jornadas_perdidas": 2,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -375,12 +375,12 @@
             }
         },
         "J05": {
-            "puntos": 1,
+            "puntos": 0,
             "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
-            "perdedor": false,
+            "perdedor": true,
             "detalle": {
                 "Sevilla_vs_Valencia": {
                     "id": 16416330,
@@ -389,6 +389,14 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
+                },
+                "Real Racing Club_vs_Alavés": {
+                    "id": 16416328,
+                    "pronostico": "0-1",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         },
