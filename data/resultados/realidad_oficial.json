@@ -2443,6 +2443,28 @@
             "estado": "notstarted"
         },
         {
+            "id": 16462543,
+            "local": "Athletic",
+            "visitante": "Osasuna",
+            "id_escudo_local": 2825,
+            "id_escudo_visitante": 2820,
+            "fecha": "2027-02-07T20:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
+            "id": 16462546,
+            "local": "Betis",
+            "visitante": "Sevilla",
+            "id_escudo_local": 2816,
+            "id_escudo_visitante": 2833,
+            "fecha": "2027-02-07T20:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
             "id": 16462549,
             "local": "Deportivo de A Coruña",
             "visitante": "Málaga CF",
@@ -2481,6 +2503,28 @@
             "visitante": "Atlético",
             "id_escudo_local": 2817,
             "id_escudo_visitante": 2836,
+            "fecha": "2027-02-07T20:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
+            "id": 16462561,
+            "local": "Getafe",
+            "visitante": "Villarreal",
+            "id_escudo_local": 2859,
+            "id_escudo_visitante": 2819,
+            "fecha": "2027-02-07T20:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
+            "id": 16462564,
+            "local": "Real Sociedad",
+            "visitante": "Real Madrid",
+            "id_escudo_local": 2824,
+            "id_escudo_visitante": 2829,
             "fecha": "2027-02-07T20:00:00",
             "goles_local": null,
             "goles_visitante": null,
@@ -3098,6 +3142,17 @@
             "visitante": "Osasuna",
             "id_escudo_local": 2849,
             "id_escudo_visitante": 2820,
+            "fecha": "2027-03-21T20:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
+            "id": 16462694,
+            "local": "Rayo",
+            "visitante": "FC Barcelona",
+            "id_escudo_local": 2818,
+            "id_escudo_visitante": 2817,
             "fecha": "2027-03-21T20:00:00",
             "goles_local": null,
             "goles_visitante": null,
