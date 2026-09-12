@@ -2,16 +2,16 @@
     "participante": "carlos",
     "nombre": "Carlos",
     "insignias": [],
-    "puntos_totales": 16,
-    "puntos_partidos": 18,
+    "puntos_totales": 19,
+    "puntos_partidos": 19,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": -2,
-    "aciertos_1x2": 17,
+    "puntos_ganador_perdedor": 0,
+    "aciertos_1x2": 18,
     "aciertos_exactos": 1,
     "partidos_pronosticados": 51,
     "jornadas_jugadas": 6,
-    "jornadas_ganadas": 1,
-    "jornadas_perdidas": 3,
+    "jornadas_ganadas": 2,
+    "jornadas_perdidas": 2,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -375,12 +375,12 @@
             }
         },
         "J05": {
-            "puntos": 0,
-            "aciertos_1x2": 1,
+            "puntos": 3,
+            "aciertos_1x2": 2,
             "aciertos_exactos": 0,
             "bonus": 0,
-            "ganador": false,
-            "perdedor": true,
+            "ganador": true,
+            "perdedor": false,
             "detalle": {
                 "Sevilla_vs_Valencia": {
                     "id": 16416330,
@@ -393,10 +393,10 @@
                 "Real Racing Club_vs_Alavés": {
                     "id": 16416328,
                     "pronostico": "3-2",
-                    "real": "1-1",
-                    "acierto_1x2": false,
+                    "real": "2-1",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         },
