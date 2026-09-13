@@ -2,15 +2,15 @@
     "participante": "carlos",
     "nombre": "Carlos",
     "insignias": [],
-    "puntos_totales": 22,
+    "puntos_totales": 21,
     "puntos_partidos": 22,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 0,
+    "puntos_ganador_perdedor": -1,
     "aciertos_1x2": 21,
     "aciertos_exactos": 1,
     "partidos_pronosticados": 51,
     "jornadas_jugadas": 6,
-    "jornadas_ganadas": 2,
+    "jornadas_ganadas": 1,
     "jornadas_perdidas": 2,
     "punto_partida": 0,
     "por_jornada": {
@@ -375,11 +375,11 @@
             }
         },
         "J05": {
-            "puntos": 6,
+            "puntos": 5,
             "aciertos_1x2": 5,
             "aciertos_exactos": 0,
             "bonus": 0,
-            "ganador": true,
+            "ganador": false,
             "perdedor": false,
             "detalle": {
                 "Sevilla_vs_Valencia": {
@@ -442,6 +442,14 @@
                     "id": 16416326,
                     "pronostico": "1-0",
                     "real": "1-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Real Sociedad_vs_Atlético": {
+                    "id": 16416332,
+                    "pronostico": "1-2",
+                    "real": "0-0",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0

@@ -2,11 +2,11 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 28,
-    "puntos_partidos": 27,
+    "puntos_totales": 29,
+    "puntos_partidos": 28,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 23,
+    "aciertos_1x2": 24,
     "aciertos_exactos": 4,
     "partidos_pronosticados": 51,
     "jornadas_jugadas": 6,
@@ -375,8 +375,8 @@
             }
         },
         "J05": {
-            "puntos": 7,
-            "aciertos_1x2": 5,
+            "puntos": 8,
+            "aciertos_1x2": 6,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": true,
@@ -442,6 +442,14 @@
                     "id": 16416326,
                     "pronostico": "2-2",
                     "real": "1-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "Real Sociedad_vs_Atlético": {
+                    "id": 16416332,
+                    "pronostico": "1-1",
+                    "real": "0-0",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
