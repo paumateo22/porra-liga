@@ -7,11 +7,11 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 27,
-    "puntos_partidos": 27,
+    "puntos_totales": 28,
+    "puntos_partidos": 28,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 21,
+    "aciertos_1x2": 22,
     "aciertos_exactos": 6,
     "partidos_pronosticados": 51,
     "jornadas_jugadas": 6,
@@ -380,8 +380,8 @@
             }
         },
         "J05": {
-            "puntos": 1,
-            "aciertos_1x2": 2,
+            "puntos": 2,
+            "aciertos_1x2": 3,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -438,10 +438,10 @@
                 "Levante UD_vs_FC Barcelona": {
                     "id": 16416329,
                     "pronostico": "1-4",
-                    "real": "0-0",
-                    "acierto_1x2": false,
+                    "real": "0-3",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         },

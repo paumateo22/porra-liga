@@ -2,11 +2,11 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 30,
-    "puntos_partidos": 28,
+    "puntos_totales": 31,
+    "puntos_partidos": 29,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 2,
-    "aciertos_1x2": 24,
+    "aciertos_1x2": 25,
     "aciertos_exactos": 4,
     "partidos_pronosticados": 51,
     "jornadas_jugadas": 6,
@@ -375,8 +375,8 @@
             }
         },
         "J05": {
-            "puntos": 1,
-            "aciertos_1x2": 2,
+            "puntos": 2,
+            "aciertos_1x2": 3,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -433,10 +433,10 @@
                 "Levante UD_vs_FC Barcelona": {
                     "id": 16416329,
                     "pronostico": "0-4",
-                    "real": "0-0",
-                    "acierto_1x2": false,
+                    "real": "0-3",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         },

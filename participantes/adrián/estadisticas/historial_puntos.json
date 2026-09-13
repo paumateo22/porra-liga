@@ -2,11 +2,11 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 25,
-    "puntos_partidos": 25,
+    "puntos_totales": 26,
+    "puntos_partidos": 26,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 21,
+    "aciertos_1x2": 22,
     "aciertos_exactos": 4,
     "partidos_pronosticados": 51,
     "jornadas_jugadas": 6,
@@ -375,8 +375,8 @@
             }
         },
         "J05": {
-            "puntos": 4,
-            "aciertos_1x2": 3,
+            "puntos": 5,
+            "aciertos_1x2": 4,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
@@ -433,10 +433,10 @@
                 "Levante UD_vs_FC Barcelona": {
                     "id": 16416329,
                     "pronostico": "1-4",
-                    "real": "0-0",
-                    "acierto_1x2": false,
+                    "real": "0-3",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         },

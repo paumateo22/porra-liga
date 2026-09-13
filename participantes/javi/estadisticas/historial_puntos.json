@@ -2,11 +2,11 @@
     "participante": "javi",
     "nombre": "Javi",
     "insignias": [],
-    "puntos_totales": 19,
-    "puntos_partidos": 20,
+    "puntos_totales": 20,
+    "puntos_partidos": 21,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": -1,
-    "aciertos_1x2": 18,
+    "aciertos_1x2": 19,
     "aciertos_exactos": 2,
     "partidos_pronosticados": 50,
     "jornadas_jugadas": 6,
@@ -367,8 +367,8 @@
             }
         },
         "J05": {
-            "puntos": 4,
-            "aciertos_1x2": 3,
+            "puntos": 5,
+            "aciertos_1x2": 4,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
@@ -425,10 +425,10 @@
                 "Levante UD_vs_FC Barcelona": {
                     "id": 16416329,
                     "pronostico": "1-5",
-                    "real": "0-0",
-                    "acierto_1x2": false,
+                    "real": "0-3",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         },
