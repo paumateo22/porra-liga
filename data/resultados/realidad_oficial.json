@@ -1468,6 +1468,17 @@
             "estado": "notstarted"
         },
         {
+            "id": 16421121,
+            "local": "Celta",
+            "visitante": "Villarreal",
+            "id_escudo_local": 2821,
+            "id_escudo_visitante": 2819,
+            "fecha": "2026-11-29T20:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
             "id": 16421123,
             "local": "Deportivo de A Coruña",
             "visitante": "FC Barcelona",
@@ -3743,17 +3754,6 @@
             "estado": "notstarted"
         },
         {
-            "id": 16416363,
-            "local": "Getafe",
-            "visitante": "Elche",
-            "id_escudo_local": 2859,
-            "id_escudo_visitante": 2846,
-            "fecha": "2027-05-09T21:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
             "id": 16462571,
             "local": "Osasuna",
             "visitante": "Real Sociedad",
@@ -3765,33 +3765,11 @@
             "estado": "notstarted"
         },
         {
-            "id": 16462577,
-            "local": "Rayo",
-            "visitante": "Deportivo de A Coruña",
-            "id_escudo_local": 2818,
-            "id_escudo_visitante": 2832,
-            "fecha": "2027-05-09T21:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
             "id": 16462580,
             "local": "Real Madrid",
             "visitante": "FC Barcelona",
             "id_escudo_local": 2829,
             "id_escudo_visitante": 2817,
-            "fecha": "2027-05-09T21:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
-            "id": 16462574,
-            "local": "Real Racing Club",
-            "visitante": "Sevilla",
-            "id_escudo_local": 2835,
-            "id_escudo_visitante": 2833,
             "fecha": "2027-05-09T21:00:00",
             "goles_local": null,
             "goles_visitante": null,
@@ -4117,6 +4095,17 @@
             "visitante": "Sevilla",
             "id_escudo_local": 2830,
             "id_escudo_visitante": 2833,
+            "fecha": "2027-05-30T21:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
+            "id": 16462667,
+            "local": "Osasuna",
+            "visitante": "Valencia",
+            "id_escudo_local": 2820,
+            "id_escudo_visitante": 2828,
             "fecha": "2027-05-30T21:00:00",
             "goles_local": null,
             "goles_visitante": null,
