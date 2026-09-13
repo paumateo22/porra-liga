@@ -2,12 +2,12 @@
     "participante": "manu",
     "nombre": "Manu",
     "insignias": [],
-    "puntos_totales": 18,
-    "puntos_partidos": 15,
+    "puntos_totales": 17,
+    "puntos_partidos": 14,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": -1,
     "aciertos_1x2": 13,
-    "aciertos_exactos": 2,
+    "aciertos_exactos": 1,
     "partidos_pronosticados": 31,
     "jornadas_jugadas": 4,
     "jornadas_ganadas": 0,
@@ -195,9 +195,9 @@
             }
         },
         "J05": {
-            "puntos": 5,
+            "puntos": 4,
             "aciertos_1x2": 4,
-            "aciertos_exactos": 1,
+            "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
             "perdedor": false,
@@ -253,10 +253,10 @@
                 "Levante UD_vs_FC Barcelona": {
                     "id": 16416329,
                     "pronostico": "0-3",
-                    "real": "0-3",
+                    "real": "2-3",
                     "acierto_1x2": true,
-                    "acierto_exacto": true,
-                    "puntos": 2
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         },

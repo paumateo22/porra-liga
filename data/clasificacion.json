@@ -1,6 +1,6 @@
 {
     "competicion": "LaLiga 2026-27",
-    "generado": "2026-09-13T17:31:07",
+    "generado": "2026-09-13T18:13:08",
     "jornadas_calculadas": [
         "J01",
         "J02",
@@ -298,12 +298,12 @@
             "slug": "carlos",
             "nombre": "Carlos",
             "insignias": [],
-            "puntos_totales": 23,
-            "puntos_partidos": 23,
+            "puntos_totales": 22,
+            "puntos_partidos": 22,
             "bonus_rendimiento": 0,
             "puntos_ganador_perdedor": 0,
             "aciertos_1x2": 21,
-            "aciertos_exactos": 2,
+            "aciertos_exactos": 1,
             "partidos_pronosticados": 51,
             "jornadas_jugadas": 6,
             "jornadas_ganadas": 2,
@@ -343,9 +343,9 @@
                     "perdedor": true
                 },
                 "J05": {
-                    "puntos": 7,
+                    "puntos": 6,
                     "aciertos_1x2": 5,
-                    "aciertos_exactos": 1,
+                    "aciertos_exactos": 0,
                     "bonus": 0,
                     "ganador": true,
                     "perdedor": false
@@ -499,12 +499,12 @@
             "slug": "manu",
             "nombre": "Manu",
             "insignias": [],
-            "puntos_totales": 18,
-            "puntos_partidos": 15,
+            "puntos_totales": 17,
+            "puntos_partidos": 14,
             "bonus_rendimiento": 0,
             "puntos_ganador_perdedor": -1,
             "aciertos_1x2": 13,
-            "aciertos_exactos": 2,
+            "aciertos_exactos": 1,
             "partidos_pronosticados": 31,
             "jornadas_jugadas": 4,
             "jornadas_ganadas": 0,
@@ -528,9 +528,9 @@
                     "perdedor": false
                 },
                 "J05": {
-                    "puntos": 5,
+                    "puntos": 4,
                     "aciertos_1x2": 4,
-                    "aciertos_exactos": 1,
+                    "aciertos_exactos": 0,
                     "bonus": 0,
                     "ganador": false,
                     "perdedor": false
