@@ -7,12 +7,12 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 26,
-    "puntos_partidos": 25,
+    "puntos_totales": 27,
+    "puntos_partidos": 26,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 1,
     "aciertos_1x2": 21,
-    "aciertos_exactos": 4,
+    "aciertos_exactos": 5,
     "partidos_pronosticados": 51,
     "jornadas_jugadas": 6,
     "jornadas_ganadas": 2,
@@ -380,9 +380,9 @@
             }
         },
         "J05": {
-            "puntos": 2,
+            "puntos": 3,
             "aciertos_1x2": 3,
-            "aciertos_exactos": 0,
+            "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
             "perdedor": true,
@@ -438,10 +438,10 @@
                 "Levante UD_vs_FC Barcelona": {
                     "id": 16416329,
                     "pronostico": "2-4",
-                    "real": "2-3",
+                    "real": "2-4",
                     "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         },
