@@ -1797,14 +1797,6 @@
     ],
     "J23": [
         {
-            "id": 16462540,
-            "local": "Alavés",
-            "visitante": "Celta",
-            "id_escudo_local": 2885,
-            "id_escudo_visitante": 2821,
-            "fecha": "2027-02-07T20:00:00"
-        },
-        {
             "id": 16462543,
             "local": "Athletic",
             "visitante": "Osasuna",
@@ -1829,22 +1821,6 @@
             "fecha": "2027-02-07T20:00:00"
         },
         {
-            "id": 16462552,
-            "local": "Elche",
-            "visitante": "Levante UD",
-            "id_escudo_local": 2846,
-            "id_escudo_visitante": 2849,
-            "fecha": "2027-02-07T20:00:00"
-        },
-        {
-            "id": 16462555,
-            "local": "Espanyol",
-            "visitante": "Rayo",
-            "id_escudo_local": 2814,
-            "id_escudo_visitante": 2818,
-            "fecha": "2027-02-07T20:00:00"
-        },
-        {
             "id": 16462558,
             "local": "FC Barcelona",
             "visitante": "Atlético",
@@ -1866,14 +1842,6 @@
             "visitante": "Real Madrid",
             "id_escudo_local": 2824,
             "id_escudo_visitante": 2829,
-            "fecha": "2027-02-07T20:00:00"
-        },
-        {
-            "id": 16462567,
-            "local": "Valencia",
-            "visitante": "Real Racing Club",
-            "id_escudo_local": 2828,
-            "id_escudo_visitante": 2835,
             "fecha": "2027-02-07T20:00:00"
         }
     ],
