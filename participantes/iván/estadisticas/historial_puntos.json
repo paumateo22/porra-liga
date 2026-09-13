@@ -7,11 +7,11 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 31,
-    "puntos_partidos": 30,
+    "puntos_totales": 32,
+    "puntos_partidos": 31,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 23,
+    "aciertos_1x2": 24,
     "aciertos_exactos": 7,
     "partidos_pronosticados": 51,
     "jornadas_jugadas": 6,
@@ -380,8 +380,8 @@
             }
         },
         "J05": {
-            "puntos": 5,
-            "aciertos_1x2": 4,
+            "puntos": 6,
+            "aciertos_1x2": 5,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
@@ -454,10 +454,10 @@
                 "Real Sociedad_vs_Atlético": {
                     "id": 16416332,
                     "pronostico": "1-2",
-                    "real": "0-0",
-                    "acierto_1x2": false,
+                    "real": "0-1",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         },

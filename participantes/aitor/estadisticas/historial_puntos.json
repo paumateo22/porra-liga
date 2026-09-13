@@ -2,16 +2,16 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 33,
-    "puntos_partidos": 30,
+    "puntos_totales": 31,
+    "puntos_partidos": 29,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 3,
-    "aciertos_1x2": 26,
+    "puntos_ganador_perdedor": 2,
+    "aciertos_1x2": 25,
     "aciertos_exactos": 4,
     "partidos_pronosticados": 51,
     "jornadas_jugadas": 6,
     "jornadas_ganadas": 3,
-    "jornadas_perdidas": 0,
+    "jornadas_perdidas": 1,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -375,12 +375,12 @@
             }
         },
         "J05": {
-            "puntos": 4,
-            "aciertos_1x2": 4,
+            "puntos": 2,
+            "aciertos_1x2": 3,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
-            "perdedor": false,
+            "perdedor": true,
             "detalle": {
                 "Sevilla_vs_Valencia": {
                     "id": 16416330,
@@ -449,10 +449,10 @@
                 "Real Sociedad_vs_Atlético": {
                     "id": 16416332,
                     "pronostico": "2-2",
-                    "real": "0-0",
-                    "acierto_1x2": true,
+                    "real": "0-1",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 }
             }
         },

@@ -7,16 +7,16 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 27,
-    "puntos_partidos": 26,
+    "puntos_totales": 29,
+    "puntos_partidos": 27,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 21,
+    "puntos_ganador_perdedor": 2,
+    "aciertos_1x2": 22,
     "aciertos_exactos": 5,
     "partidos_pronosticados": 51,
     "jornadas_jugadas": 6,
     "jornadas_ganadas": 2,
-    "jornadas_perdidas": 1,
+    "jornadas_perdidas": 0,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -380,12 +380,12 @@
             }
         },
         "J05": {
-            "puntos": 3,
-            "aciertos_1x2": 3,
+            "puntos": 5,
+            "aciertos_1x2": 4,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
-            "perdedor": true,
+            "perdedor": false,
             "detalle": {
                 "Sevilla_vs_Valencia": {
                     "id": 16416330,
@@ -454,10 +454,10 @@
                 "Real Sociedad_vs_Atlético": {
                     "id": 16416332,
                     "pronostico": "1-2",
-                    "real": "0-0",
-                    "acierto_1x2": false,
+                    "real": "0-1",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         },
