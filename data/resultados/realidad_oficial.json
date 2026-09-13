@@ -1837,44 +1837,11 @@
             "estado": "notstarted"
         },
         {
-            "id": 16462562,
-            "local": "Getafe",
-            "visitante": "Levante UD",
-            "id_escudo_local": 2859,
-            "id_escudo_visitante": 2849,
-            "fecha": "2026-12-20T20:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
             "id": 16462565,
             "local": "Osasuna",
             "visitante": "Villarreal",
             "id_escudo_local": 2820,
             "id_escudo_visitante": 2819,
-            "fecha": "2026-12-20T20:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
-            "id": 16462568,
-            "local": "Rayo",
-            "visitante": "Málaga CF",
-            "id_escudo_local": 2818,
-            "id_escudo_visitante": 2830,
-            "fecha": "2026-12-20T20:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
-            "id": 16462570,
-            "local": "Sevilla",
-            "visitante": "Real Racing Club",
-            "id_escudo_local": 2833,
-            "id_escudo_visitante": 2835,
             "fecha": "2026-12-20T20:00:00",
             "goles_local": null,
             "goles_visitante": null,
