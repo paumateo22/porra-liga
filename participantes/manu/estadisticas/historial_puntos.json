@@ -273,6 +273,14 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
+                },
+                "Villarreal_vs_Betis": {
+                    "id": 16416333,
+                    "pronostico": "2-3",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         },
