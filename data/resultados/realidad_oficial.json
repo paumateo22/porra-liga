@@ -1512,6 +1512,17 @@
             "estado": "notstarted"
         },
         {
+            "id": 16421127,
+            "local": "Levante UD",
+            "visitante": "Real Racing Club",
+            "id_escudo_local": 2849,
+            "id_escudo_visitante": 2835,
+            "fecha": "2026-11-29T20:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
             "id": 16421128,
             "local": "Málaga CF",
             "visitante": "Athletic",
@@ -4128,6 +4139,17 @@
             "visitante": "Atlético",
             "id_escudo_local": 2816,
             "id_escudo_visitante": 2836,
+            "fecha": "2027-05-30T21:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
+            "id": 16462653,
+            "local": "Elche",
+            "visitante": "Real Racing Club",
+            "id_escudo_local": 2846,
+            "id_escudo_visitante": 2835,
             "fecha": "2027-05-30T21:00:00",
             "goles_local": null,
             "goles_visitante": null,
