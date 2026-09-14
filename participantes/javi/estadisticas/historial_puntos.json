@@ -2,16 +2,16 @@
     "participante": "javi",
     "nombre": "Javi",
     "insignias": [],
-    "puntos_totales": 20,
+    "puntos_totales": 19,
     "puntos_partidos": 21,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": -1,
+    "puntos_ganador_perdedor": -2,
     "aciertos_1x2": 19,
     "aciertos_exactos": 2,
     "partidos_pronosticados": 50,
     "jornadas_jugadas": 6,
     "jornadas_ganadas": 1,
-    "jornadas_perdidas": 2,
+    "jornadas_perdidas": 3,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -367,12 +367,12 @@
             }
         },
         "J05": {
-            "puntos": 5,
+            "puntos": 4,
             "aciertos_1x2": 4,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
-            "perdedor": false,
+            "perdedor": true,
             "detalle": {
                 "Sevilla_vs_Valencia": {
                     "id": 16416330,
@@ -449,7 +449,7 @@
                 "Villarreal_vs_Betis": {
                     "id": 16416333,
                     "pronostico": "2-0",
-                    "real": "1-1",
+                    "real": "1-2",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0

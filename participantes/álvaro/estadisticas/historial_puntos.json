@@ -2,12 +2,12 @@
     "participante": "álvaro",
     "nombre": "Álvaro",
     "insignias": [],
-    "puntos_totales": 26,
-    "puntos_partidos": 27,
+    "puntos_totales": 24,
+    "puntos_partidos": 25,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": -1,
-    "aciertos_1x2": 21,
-    "aciertos_exactos": 6,
+    "aciertos_1x2": 20,
+    "aciertos_exactos": 5,
     "partidos_pronosticados": 51,
     "jornadas_jugadas": 6,
     "jornadas_ganadas": 0,
@@ -375,9 +375,9 @@
             }
         },
         "J05": {
-            "puntos": 8,
-            "aciertos_1x2": 6,
-            "aciertos_exactos": 2,
+            "puntos": 6,
+            "aciertos_1x2": 5,
+            "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
             "perdedor": false,
@@ -457,10 +457,10 @@
                 "Villarreal_vs_Betis": {
                     "id": 16416333,
                     "pronostico": "1-1",
-                    "real": "1-1",
-                    "acierto_1x2": true,
-                    "acierto_exacto": true,
-                    "puntos": 2
+                    "real": "1-2",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         },
