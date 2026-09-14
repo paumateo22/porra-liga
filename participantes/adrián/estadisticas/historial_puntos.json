@@ -2,15 +2,15 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 27,
-    "puntos_partidos": 27,
+    "puntos_totales": 29,
+    "puntos_partidos": 28,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 23,
+    "puntos_ganador_perdedor": 1,
+    "aciertos_1x2": 24,
     "aciertos_exactos": 4,
     "partidos_pronosticados": 51,
     "jornadas_jugadas": 6,
-    "jornadas_ganadas": 1,
+    "jornadas_ganadas": 2,
     "jornadas_perdidas": 1,
     "punto_partida": 0,
     "por_jornada": {
@@ -375,11 +375,11 @@
             }
         },
         "J05": {
-            "puntos": 6,
-            "aciertos_1x2": 5,
+            "puntos": 8,
+            "aciertos_1x2": 6,
             "aciertos_exactos": 1,
             "bonus": 0,
-            "ganador": false,
+            "ganador": true,
             "perdedor": false,
             "detalle": {
                 "Sevilla_vs_Valencia": {
@@ -457,10 +457,10 @@
                 "Villarreal_vs_Betis": {
                     "id": 16416333,
                     "pronostico": "2-1",
-                    "real": "0-0",
-                    "acierto_1x2": false,
+                    "real": "1-0",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         },
