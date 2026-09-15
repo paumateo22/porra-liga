@@ -2,8 +2,8 @@
     "participante": "manu",
     "nombre": "Manu",
     "jornada": 6,
-    "generado": "2026-09-02T10:28:33",
-    "ingerido": "2026-09-03T12:39:52",
+    "generado": "2026-09-15T15:07:55",
+    "ingerido": "2026-09-15T17:34:36",
     "predicciones": [
         {
             "id": 16416340,
@@ -12,6 +12,78 @@
             "fecha": "2026-09-03T21:00:00",
             "goles_local": 1,
             "goles_visitante": 0
+        },
+        {
+            "id": 16416345,
+            "local": "Rayo",
+            "visitante": "Espanyol",
+            "fecha": "2026-09-15T19:00:00",
+            "goles_local": 2,
+            "goles_visitante": 3
+        },
+        {
+            "id": 16416334,
+            "local": "Alavés",
+            "visitante": "Valencia",
+            "fecha": "2026-09-15T20:00:00",
+            "goles_local": 3,
+            "goles_visitante": 1
+        },
+        {
+            "id": 16416342,
+            "local": "Elche",
+            "visitante": "Real Madrid",
+            "fecha": "2026-09-15T21:30:00",
+            "goles_local": 0,
+            "goles_visitante": 3
+        },
+        {
+            "id": 16416335,
+            "local": "Atlético",
+            "visitante": "Osasuna",
+            "fecha": "2026-09-16T19:00:00",
+            "goles_local": 3,
+            "goles_visitante": 1
+        },
+        {
+            "id": 16416343,
+            "local": "Deportivo de A Coruña",
+            "visitante": "Sevilla",
+            "fecha": "2026-09-16T19:00:00",
+            "goles_local": 2,
+            "goles_visitante": 1
+        },
+        {
+            "id": 16416346,
+            "local": "FC Barcelona",
+            "visitante": "Real Racing Club",
+            "fecha": "2026-09-16T21:30:00",
+            "goles_local": 4,
+            "goles_visitante": 1
+        },
+        {
+            "id": 16416341,
+            "local": "Levante UD",
+            "visitante": "Athletic",
+            "fecha": "2026-09-16T21:30:00",
+            "goles_local": 2,
+            "goles_visitante": 1
+        },
+        {
+            "id": 16416336,
+            "local": "Betis",
+            "visitante": "Getafe",
+            "fecha": "2026-09-17T19:00:00",
+            "goles_local": 2,
+            "goles_visitante": 1
+        },
+        {
+            "id": 16416338,
+            "local": "Málaga CF",
+            "visitante": "Villarreal",
+            "fecha": "2026-09-17T21:30:00",
+            "goles_local": 2,
+            "goles_visitante": 3
         }
     ]
 }
