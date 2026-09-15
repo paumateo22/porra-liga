@@ -5,8 +5,8 @@ contra el calendario oficial y los archiva en:
 
     participantes/<slug>/pronosticos/J02.json
 
-El fichero original se mueve a entradas/procesadas/. Los rechazados se quedan
-en entradas/ para que puedas corregirlos.
+El fichero original se mueve a entradas/procesadas/. Los rechazados se mueven
+a entradas/rechazados/ (no se quedan sueltos en entradas/).
 """
 import re
 import shutil
@@ -30,6 +30,7 @@ from utils import (
 )
 
 PATRON_NOMBRE = re.compile(r"^J(\d{1,2})_(.+)$", re.IGNORECASE)
+RECHAZADOS_DIR = ENTRADAS_DIR / "rechazados"
 
 
 def registrar_participante(nombre):
@@ -140,11 +141,30 @@ def cargar_bloqueados(clave, calendario, realidad):
     return bloqueados
 
 
+def _a_tiempo(generado, fecha_partido):
+    """True si 'generado' es una fecha ISO válida anterior o igual al inicio
+    del partido. Parsea ambas como datetime en vez de comparar strings, para
+    no depender de que compartan formato exacto (milisegundos, 'Z', offset...)."""
+    if not generado or not fecha_partido:
+        return False
+    try:
+        return datetime.fromisoformat(generado) <= datetime.fromisoformat(fecha_partido)
+    except ValueError:
+        return False
+
+
+def _mover_a_rechazados(ruta):
+    RECHAZADOS_DIR.mkdir(parents=True, exist_ok=True)
+    sello = datetime.now().strftime("%Y%m%d-%H%M%S")
+    shutil.move(str(ruta), str(RECHAZADOS_DIR / f"{ruta.stem}_{sello}.json"))
+
+
 def procesar_fichero(ruta, calendario, realidad, sin_cierre=False):
     try:
         contenido = cargar_json(ruta)
     except Exception as e:  # noqa: BLE001
         print(f"❌ {ruta.name}: no es un JSON válido ({e})")
+        _mover_a_rechazados(ruta)
         return False
 
     ok, jornada, participante, limpias, errores = validar(contenido, ruta, calendario)
@@ -152,6 +172,7 @@ def procesar_fichero(ruta, calendario, realidad, sin_cierre=False):
         print(f"❌ {ruta.name}: rechazado")
         for e in errores:
             print(f"      · {e}")
+        _mover_a_rechazados(ruta)
         return False
 
     clave = clave_jornada(jornada)
@@ -178,7 +199,7 @@ def procesar_fichero(ruta, calendario, realidad, sin_cierre=False):
             if pid in guardadas:
                 conservadas += 1
                 continue  # el partido ya se jugó: no se toca
-            if generado and pred.get("fecha") and generado <= pred["fecha"]:
+            if _a_tiempo(generado, pred.get("fecha")):
                 # Bloqueado AHORA, pero el fichero prueba que se generó
                 # antes de que el partido empezara: llegó a tiempo, solo el
                 # buzón tardó en procesarlo. Se acepta como si no estuviera
@@ -199,6 +220,7 @@ def procesar_fichero(ruta, calendario, realidad, sin_cierre=False):
     finales = sorted(guardadas.values(), key=lambda p: (p["fecha"] or "", p["local"]))
     if not finales:
         print(f"❌ {ruta.name}: no queda ninguna predicción válida tras aplicar el cierre.")
+        _mover_a_rechazados(ruta)
         return False
 
     guardar_json(destino, {
