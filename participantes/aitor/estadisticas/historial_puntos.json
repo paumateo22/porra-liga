@@ -2,11 +2,11 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 35,
-    "puntos_partidos": 32,
+    "puntos_totales": 36,
+    "puntos_partidos": 33,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 3,
-    "aciertos_1x2": 27,
+    "aciertos_1x2": 28,
     "aciertos_exactos": 5,
     "partidos_pronosticados": 60,
     "jornadas_jugadas": 6,
@@ -465,8 +465,8 @@
             }
         },
         "J06": {
-            "puntos": 2,
-            "aciertos_1x2": 1,
+            "puntos": 3,
+            "aciertos_1x2": 2,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": true,
@@ -483,7 +483,23 @@
                 "Rayo_vs_Espanyol": {
                     "id": 16416345,
                     "pronostico": "2-0",
-                    "real": "1-0",
+                    "real": "2-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "Alavés_vs_Valencia": {
+                    "id": 16416334,
+                    "pronostico": "2-1",
+                    "real": "0-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Elche_vs_Real Madrid": {
+                    "id": 16416342,
+                    "pronostico": "0-4",
+                    "real": "0-2",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1

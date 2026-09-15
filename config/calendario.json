@@ -1157,6 +1157,14 @@
             "fecha": "2026-12-06T20:00:00"
         },
         {
+            "id": 16462488,
+            "local": "Athletic",
+            "visitante": "Real Madrid",
+            "id_escudo_local": 2825,
+            "id_escudo_visitante": 2829,
+            "fecha": "2026-12-06T20:00:00"
+        },
+        {
             "id": 16462491,
             "local": "Atlético",
             "visitante": "Betis",
@@ -1400,14 +1408,6 @@
             "visitante": "Deportivo de A Coruña",
             "id_escudo_local": 2821,
             "id_escudo_visitante": 2832,
-            "fecha": "2027-01-03T20:00:00"
-        },
-        {
-            "id": 16462582,
-            "local": "Espanyol",
-            "visitante": "FC Barcelona",
-            "id_escudo_local": 2814,
-            "id_escudo_visitante": 2817,
             "fecha": "2027-01-03T20:00:00"
         },
         {
@@ -1911,6 +1911,14 @@
             "fecha": "2027-02-14T20:00:00"
         },
         {
+            "id": 16462584,
+            "local": "Real Madrid",
+            "visitante": "Athletic",
+            "id_escudo_local": 2829,
+            "id_escudo_visitante": 2825,
+            "fecha": "2027-02-14T20:00:00"
+        },
+        {
             "id": 16462581,
             "local": "Real Racing Club",
             "visitante": "Getafe",
@@ -2154,14 +2162,6 @@
             "visitante": "Real Racing Club",
             "id_escudo_local": 2814,
             "id_escudo_visitante": 2835,
-            "fecha": "2027-03-07T20:00:00"
-        },
-        {
-            "id": 16462673,
-            "local": "FC Barcelona",
-            "visitante": "Betis",
-            "id_escudo_local": 2817,
-            "id_escudo_visitante": 2816,
             "fecha": "2027-03-07T20:00:00"
         },
         {
@@ -2424,6 +2424,14 @@
             "visitante": "Osasuna",
             "id_escudo_local": 2830,
             "id_escudo_visitante": 2820,
+            "fecha": "2027-04-04T21:00:00"
+        },
+        {
+            "id": 16462707,
+            "local": "Real Madrid",
+            "visitante": "Atlético",
+            "id_escudo_local": 2829,
+            "id_escudo_visitante": 2836,
             "fecha": "2027-04-04T21:00:00"
         },
         {
@@ -2900,14 +2908,6 @@
             "visitante": "Betis",
             "id_escudo_local": 2820,
             "id_escudo_visitante": 2816,
-            "fecha": "2027-05-16T21:00:00"
-        },
-        {
-            "id": 16462610,
-            "local": "Real Madrid",
-            "visitante": "Real Racing Club",
-            "id_escudo_local": 2829,
-            "id_escudo_visitante": 2835,
             "fecha": "2027-05-16T21:00:00"
         },
         {

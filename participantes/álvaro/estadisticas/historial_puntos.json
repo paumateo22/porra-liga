@@ -483,7 +483,23 @@
                 "Rayo_vs_Espanyol": {
                     "id": 16416345,
                     "pronostico": "1-1",
-                    "real": "1-0",
+                    "real": "2-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Alavés_vs_Valencia": {
+                    "id": 16416334,
+                    "pronostico": "1-1",
+                    "real": "0-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Elche_vs_Real Madrid": {
+                    "id": 16416342,
+                    "pronostico": "3-0",
+                    "real": "0-2",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
