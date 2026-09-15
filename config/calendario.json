@@ -1157,14 +1157,6 @@
             "fecha": "2026-12-06T20:00:00"
         },
         {
-            "id": 16462488,
-            "local": "Athletic",
-            "visitante": "Real Madrid",
-            "id_escudo_local": 2825,
-            "id_escudo_visitante": 2829,
-            "fecha": "2026-12-06T20:00:00"
-        },
-        {
             "id": 16462491,
             "local": "Atlético",
             "visitante": "Betis",
@@ -2440,14 +2432,6 @@
             "visitante": "Osasuna",
             "id_escudo_local": 2830,
             "id_escudo_visitante": 2820,
-            "fecha": "2027-04-04T21:00:00"
-        },
-        {
-            "id": 16462707,
-            "local": "Real Madrid",
-            "visitante": "Atlético",
-            "id_escudo_local": 2829,
-            "id_escudo_visitante": 2836,
             "fecha": "2027-04-04T21:00:00"
         },
         {
