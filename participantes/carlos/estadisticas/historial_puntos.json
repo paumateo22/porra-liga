@@ -2,16 +2,16 @@
     "participante": "carlos",
     "nombre": "Carlos",
     "insignias": [],
-    "puntos_totales": 22,
-    "puntos_partidos": 23,
+    "puntos_totales": 25,
+    "puntos_partidos": 24,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": -1,
-    "aciertos_1x2": 22,
+    "puntos_ganador_perdedor": 1,
+    "aciertos_1x2": 23,
     "aciertos_exactos": 1,
     "partidos_pronosticados": 60,
     "jornadas_jugadas": 6,
-    "jornadas_ganadas": 2,
-    "jornadas_perdidas": 3,
+    "jornadas_ganadas": 3,
+    "jornadas_perdidas": 2,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -465,12 +465,12 @@
             }
         },
         "J06": {
-            "puntos": -1,
-            "aciertos_1x2": 0,
+            "puntos": 2,
+            "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "bonus": 0,
-            "ganador": false,
-            "perdedor": true,
+            "ganador": true,
+            "perdedor": false,
             "detalle": {
                 "Real Sociedad_vs_Celta": {
                     "id": 16416340,
@@ -499,10 +499,10 @@
                 "Elche_vs_Real Madrid": {
                     "id": 16416342,
                     "pronostico": "1-1",
-                    "real": "1-2",
-                    "acierto_1x2": false,
+                    "real": "2-2",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }
