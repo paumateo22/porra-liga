@@ -2,16 +2,16 @@
     "participante": "manu",
     "nombre": "Manu",
     "insignias": [],
-    "puntos_totales": 19,
-    "puntos_partidos": 16,
+    "puntos_totales": 21,
+    "puntos_partidos": 17,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": -1,
-    "aciertos_1x2": 15,
+    "puntos_ganador_perdedor": 0,
+    "aciertos_1x2": 16,
     "aciertos_exactos": 1,
     "partidos_pronosticados": 40,
     "jornadas_jugadas": 4,
     "jornadas_ganadas": 1,
-    "jornadas_perdidas": 2,
+    "jornadas_perdidas": 1,
     "punto_partida": 4,
     "por_jornada": {
         "J02": {
@@ -285,12 +285,12 @@
             }
         },
         "J06": {
-            "puntos": -1,
-            "aciertos_1x2": 0,
+            "puntos": 1,
+            "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
-            "perdedor": true,
+            "perdedor": false,
             "detalle": {
                 "Real Sociedad_vs_Celta": {
                     "id": 16416340,
@@ -319,10 +319,10 @@
                 "Elche_vs_Real Madrid": {
                     "id": 16416342,
                     "pronostico": "0-3",
-                    "real": "2-2",
-                    "acierto_1x2": false,
+                    "real": "2-3",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }
