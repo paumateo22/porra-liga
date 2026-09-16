@@ -611,7 +611,7 @@
             "id_escudo_local": 2836,
             "id_escudo_visitante": 2820,
             "fecha": "2026-09-16T19:00:00",
-            "goles_local": 0,
+            "goles_local": 1,
             "goles_visitante": 0,
             "estado": "inprogress"
         },
@@ -1591,6 +1591,17 @@
             "estado": "notstarted"
         },
         {
+            "id": 16462491,
+            "local": "Atlético",
+            "visitante": "Betis",
+            "id_escudo_local": 2836,
+            "id_escudo_visitante": 2816,
+            "fecha": "2026-12-06T20:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
             "id": 16462494,
             "local": "FC Barcelona",
             "visitante": "Celta",
@@ -1651,6 +1662,17 @@
             "visitante": "Málaga CF",
             "id_escudo_local": 2833,
             "id_escudo_visitante": 2830,
+            "fecha": "2026-12-06T20:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
+            "id": 16462514,
+            "local": "Villarreal",
+            "visitante": "Real Sociedad",
+            "id_escudo_local": 2819,
+            "id_escudo_visitante": 2824,
             "fecha": "2026-12-06T20:00:00",
             "goles_local": null,
             "goles_visitante": null,
