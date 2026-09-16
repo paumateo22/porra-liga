@@ -136,12 +136,12 @@
         "16416335": {
             "goles_local": 4,
             "goles_visitante": 0,
-            "estado": "inprogress"
+            "estado": "finished"
         },
         "16416343": {
             "goles_local": 0,
             "goles_visitante": 1,
-            "estado": "inprogress"
+            "estado": "finished"
         },
         "16416346": {
             "goles_local": null,
