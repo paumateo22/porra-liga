@@ -2,12 +2,12 @@
     "participante": "manu",
     "nombre": "Manu",
     "insignias": [],
-    "puntos_totales": 23,
-    "puntos_partidos": 19,
+    "puntos_totales": 24,
+    "puntos_partidos": 20,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
     "aciertos_1x2": 18,
-    "aciertos_exactos": 1,
+    "aciertos_exactos": 2,
     "partidos_pronosticados": 40,
     "jornadas_jugadas": 4,
     "jornadas_ganadas": 1,
@@ -285,9 +285,9 @@
             }
         },
         "J06": {
-            "puntos": 3,
+            "puntos": 4,
             "aciertos_1x2": 3,
-            "aciertos_exactos": 0,
+            "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
             "perdedor": false,
@@ -343,10 +343,10 @@
                 "FC Barcelona_vs_Real Racing Club": {
                     "id": 16416346,
                     "pronostico": "4-1",
-                    "real": "3-1",
+                    "real": "4-1",
                     "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         }
