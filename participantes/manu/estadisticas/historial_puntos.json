@@ -2,16 +2,16 @@
     "participante": "manu",
     "nombre": "Manu",
     "insignias": [],
-    "puntos_totales": 21,
+    "puntos_totales": 20,
     "puntos_partidos": 17,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 0,
+    "puntos_ganador_perdedor": -1,
     "aciertos_1x2": 16,
     "aciertos_exactos": 1,
     "partidos_pronosticados": 40,
     "jornadas_jugadas": 4,
     "jornadas_ganadas": 1,
-    "jornadas_perdidas": 1,
+    "jornadas_perdidas": 2,
     "punto_partida": 4,
     "por_jornada": {
         "J02": {
@@ -285,12 +285,12 @@
             }
         },
         "J06": {
-            "puntos": 1,
+            "puntos": 0,
             "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
-            "perdedor": false,
+            "perdedor": true,
             "detalle": {
                 "Real Sociedad_vs_Celta": {
                     "id": 16416340,
@@ -323,6 +323,22 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
+                },
+                "Atlético_vs_Osasuna": {
+                    "id": 16416335,
+                    "pronostico": "3-1",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Deportivo de A Coruña_vs_Sevilla": {
+                    "id": 16416343,
+                    "pronostico": "2-1",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         }

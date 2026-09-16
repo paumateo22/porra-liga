@@ -2,15 +2,15 @@
     "participante": "javi",
     "nombre": "Javi",
     "insignias": [],
-    "puntos_totales": 20,
-    "puntos_partidos": 22,
+    "puntos_totales": 22,
+    "puntos_partidos": 23,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": -2,
-    "aciertos_1x2": 20,
+    "puntos_ganador_perdedor": -1,
+    "aciertos_1x2": 21,
     "aciertos_exactos": 2,
     "partidos_pronosticados": 59,
     "jornadas_jugadas": 6,
-    "jornadas_ganadas": 1,
+    "jornadas_ganadas": 2,
     "jornadas_perdidas": 3,
     "punto_partida": 0,
     "por_jornada": {
@@ -457,11 +457,11 @@
             }
         },
         "J06": {
-            "puntos": 1,
-            "aciertos_1x2": 1,
+            "puntos": 3,
+            "aciertos_1x2": 2,
             "aciertos_exactos": 0,
             "bonus": 0,
-            "ganador": false,
+            "ganador": true,
             "perdedor": false,
             "detalle": {
                 "Real Sociedad_vs_Celta": {
@@ -492,6 +492,22 @@
                     "id": 16416342,
                     "pronostico": "0-2",
                     "real": "2-3",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "Atlético_vs_Osasuna": {
+                    "id": 16416335,
+                    "pronostico": "1-2",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Deportivo de A Coruña_vs_Sevilla": {
+                    "id": 16416343,
+                    "pronostico": "1-1",
+                    "real": "0-0",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1

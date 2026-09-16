@@ -2,11 +2,11 @@
     "participante": "carlos",
     "nombre": "Carlos",
     "insignias": [],
-    "puntos_totales": 22,
-    "puntos_partidos": 23,
+    "puntos_totales": 23,
+    "puntos_partidos": 24,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": -1,
-    "aciertos_1x2": 22,
+    "aciertos_1x2": 23,
     "aciertos_exactos": 1,
     "partidos_pronosticados": 60,
     "jornadas_jugadas": 6,
@@ -465,8 +465,8 @@
             }
         },
         "J06": {
-            "puntos": -1,
-            "aciertos_1x2": 0,
+            "puntos": 0,
+            "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -503,6 +503,22 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
+                },
+                "Atlético_vs_Osasuna": {
+                    "id": 16416335,
+                    "pronostico": "2-0",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Deportivo de A Coruña_vs_Sevilla": {
+                    "id": 16416343,
+                    "pronostico": "1-1",
+                    "real": "0-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         }
