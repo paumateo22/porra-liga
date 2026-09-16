@@ -611,9 +611,9 @@
             "id_escudo_local": 2836,
             "id_escudo_visitante": 2820,
             "fecha": "2026-09-16T19:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
+            "goles_local": 0,
+            "goles_visitante": 0,
+            "estado": "inprogress"
         },
         {
             "id": 16416343,
@@ -622,9 +622,9 @@
             "id_escudo_local": 2832,
             "id_escudo_visitante": 2833,
             "fecha": "2026-09-16T19:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
+            "goles_local": 0,
+            "goles_visitante": 0,
+            "estado": "inprogress"
         },
         {
             "id": 16416346,
