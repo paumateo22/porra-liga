@@ -2,12 +2,12 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 37,
-    "puntos_partidos": 34,
+    "puntos_totales": 38,
+    "puntos_partidos": 35,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 3,
     "aciertos_1x2": 29,
-    "aciertos_exactos": 5,
+    "aciertos_exactos": 6,
     "partidos_pronosticados": 60,
     "jornadas_jugadas": 6,
     "jornadas_ganadas": 4,
@@ -465,9 +465,9 @@
             }
         },
         "J06": {
-            "puntos": 4,
+            "puntos": 5,
             "aciertos_1x2": 3,
-            "aciertos_exactos": 0,
+            "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": true,
             "perdedor": false,
@@ -507,10 +507,10 @@
                 "Atlético_vs_Osasuna": {
                     "id": 16416335,
                     "pronostico": "2-0",
-                    "real": "1-0",
+                    "real": "2-0",
                     "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
+                    "acierto_exacto": true,
+                    "puntos": 2
                 },
                 "Deportivo de A Coruña_vs_Sevilla": {
                     "id": 16416343,
