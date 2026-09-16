@@ -2,11 +2,11 @@
     "participante": "javi",
     "nombre": "Javi",
     "insignias": [],
-    "puntos_totales": 20,
-    "puntos_partidos": 23,
+    "puntos_totales": 19,
+    "puntos_partidos": 22,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": -3,
-    "aciertos_1x2": 21,
+    "aciertos_1x2": 20,
     "aciertos_exactos": 2,
     "partidos_pronosticados": 59,
     "jornadas_jugadas": 6,
@@ -457,8 +457,8 @@
             }
         },
         "J06": {
-            "puntos": 1,
-            "aciertos_1x2": 2,
+            "puntos": 0,
+            "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -507,10 +507,10 @@
                 "Deportivo de A Coruña_vs_Sevilla": {
                     "id": 16416343,
                     "pronostico": "1-1",
-                    "real": "0-0",
-                    "acierto_1x2": true,
+                    "real": "0-1",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 }
             }
         }
