@@ -657,52 +657,36 @@
     ],
     "J09": [
         {
-            "id": 16421068,
-            "local": "Betis",
-            "visitante": "FC Barcelona",
-            "id_escudo_local": 2816,
-            "id_escudo_visitante": 2817,
-            "fecha": "2026-10-18T21:00:00"
-        },
-        {
-            "id": 16421069,
-            "local": "Celta",
-            "visitante": "Alavés",
-            "id_escudo_local": 2821,
-            "id_escudo_visitante": 2885,
-            "fecha": "2026-10-18T21:00:00"
-        },
-        {
-            "id": 16421070,
-            "local": "Deportivo de A Coruña",
-            "visitante": "Levante UD",
-            "id_escudo_local": 2832,
-            "id_escudo_visitante": 2849,
-            "fecha": "2026-10-18T21:00:00"
-        },
-        {
             "id": 16421071,
             "local": "Espanyol",
             "visitante": "Atlético",
             "id_escudo_local": 2814,
             "id_escudo_visitante": 2836,
-            "fecha": "2026-10-18T21:00:00"
+            "fecha": "2026-10-17T14:00:00"
         },
         {
-            "id": 16421072,
-            "local": "Getafe",
-            "visitante": "Rayo",
-            "id_escudo_local": 2859,
-            "id_escudo_visitante": 2818,
-            "fecha": "2026-10-18T21:00:00"
+            "id": 16421076,
+            "local": "Villarreal",
+            "visitante": "Elche",
+            "id_escudo_local": 2819,
+            "id_escudo_visitante": 2846,
+            "fecha": "2026-10-17T16:15:00"
         },
         {
-            "id": 16421073,
-            "local": "Málaga CF",
-            "visitante": "Real Sociedad",
-            "id_escudo_local": 2830,
-            "id_escudo_visitante": 2824,
-            "fecha": "2026-10-18T21:00:00"
+            "id": 16421068,
+            "local": "Betis",
+            "visitante": "FC Barcelona",
+            "id_escudo_local": 2816,
+            "id_escudo_visitante": 2817,
+            "fecha": "2026-10-17T18:30:00"
+        },
+        {
+            "id": 16421074,
+            "local": "Valencia",
+            "visitante": "Athletic",
+            "id_escudo_local": 2828,
+            "id_escudo_visitante": 2825,
+            "fecha": "2026-10-17T21:00:00"
         },
         {
             "id": 16421078,
@@ -710,6 +694,30 @@
             "visitante": "Real Racing Club",
             "id_escudo_local": 2820,
             "id_escudo_visitante": 2835,
+            "fecha": "2026-10-18T14:00:00"
+        },
+        {
+            "id": 16421069,
+            "local": "Celta",
+            "visitante": "Alavés",
+            "id_escudo_local": 2821,
+            "id_escudo_visitante": 2885,
+            "fecha": "2026-10-18T16:15:00"
+        },
+        {
+            "id": 16421073,
+            "local": "Málaga CF",
+            "visitante": "Real Sociedad",
+            "id_escudo_local": 2830,
+            "id_escudo_visitante": 2824,
+            "fecha": "2026-10-18T18:30:00"
+        },
+        {
+            "id": 16421070,
+            "local": "Deportivo de A Coruña",
+            "visitante": "Levante UD",
+            "id_escudo_local": 2832,
+            "id_escudo_visitante": 2849,
             "fecha": "2026-10-18T21:00:00"
         },
         {
@@ -721,20 +729,12 @@
             "fecha": "2026-10-18T21:00:00"
         },
         {
-            "id": 16421074,
-            "local": "Valencia",
-            "visitante": "Athletic",
-            "id_escudo_local": 2828,
-            "id_escudo_visitante": 2825,
-            "fecha": "2026-10-18T21:00:00"
-        },
-        {
-            "id": 16421076,
-            "local": "Villarreal",
-            "visitante": "Elche",
-            "id_escudo_local": 2819,
-            "id_escudo_visitante": 2846,
-            "fecha": "2026-10-18T21:00:00"
+            "id": 16421072,
+            "local": "Getafe",
+            "visitante": "Rayo",
+            "id_escudo_local": 2859,
+            "id_escudo_visitante": 2818,
+            "fecha": "2026-10-19T21:00:00"
         }
     ],
     "J10": [
