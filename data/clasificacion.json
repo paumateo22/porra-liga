@@ -1,6 +1,6 @@
 {
     "competicion": "LaLiga 2026-27",
-    "generado": "2026-09-16T22:07:06",
+    "generado": "2026-09-16T22:13:04",
     "jornadas_calculadas": [
         "J01",
         "J02",
@@ -298,12 +298,12 @@
             "slug": "álvaro",
             "nombre": "Álvaro",
             "insignias": [],
-            "puntos_totales": 25,
-            "puntos_partidos": 27,
+            "puntos_totales": 26,
+            "puntos_partidos": 28,
             "bonus_rendimiento": 0,
             "puntos_ganador_perdedor": -2,
             "aciertos_1x2": 22,
-            "aciertos_exactos": 5,
+            "aciertos_exactos": 6,
             "partidos_pronosticados": 60,
             "jornadas_jugadas": 6,
             "jornadas_ganadas": 0,
@@ -351,9 +351,9 @@
                     "perdedor": false
                 },
                 "J06": {
-                    "puntos": 1,
+                    "puntos": 2,
                     "aciertos_1x2": 2,
-                    "aciertos_exactos": 0,
+                    "aciertos_exactos": 1,
                     "bonus": 0,
                     "ganador": false,
                     "perdedor": true
@@ -483,12 +483,12 @@
             "slug": "javi",
             "nombre": "Javi",
             "insignias": [],
-            "puntos_totales": 20,
-            "puntos_partidos": 23,
+            "puntos_totales": 21,
+            "puntos_partidos": 24,
             "bonus_rendimiento": 0,
             "puntos_ganador_perdedor": -3,
             "aciertos_1x2": 21,
-            "aciertos_exactos": 2,
+            "aciertos_exactos": 3,
             "partidos_pronosticados": 59,
             "jornadas_jugadas": 6,
             "jornadas_ganadas": 1,
@@ -536,9 +536,9 @@
                     "perdedor": true
                 },
                 "J06": {
-                    "puntos": 1,
+                    "puntos": 2,
                     "aciertos_1x2": 2,
-                    "aciertos_exactos": 0,
+                    "aciertos_exactos": 1,
                     "bonus": 0,
                     "ganador": false,
                     "perdedor": true
