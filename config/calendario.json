@@ -1379,14 +1379,6 @@
     ],
     "J18": [
         {
-            "id": 16462576,
-            "local": "Betis",
-            "visitante": "Alavés",
-            "id_escudo_local": 2816,
-            "id_escudo_visitante": 2885,
-            "fecha": "2027-01-03T20:00:00"
-        },
-        {
             "id": 16462579,
             "local": "Celta",
             "visitante": "Deportivo de A Coruña",
@@ -1440,14 +1432,6 @@
             "visitante": "Athletic",
             "id_escudo_local": 2835,
             "id_escudo_visitante": 2825,
-            "fecha": "2027-01-03T20:00:00"
-        },
-        {
-            "id": 16462600,
-            "local": "Real Sociedad",
-            "visitante": "Osasuna",
-            "id_escudo_local": 2824,
-            "id_escudo_visitante": 2820,
             "fecha": "2027-01-03T20:00:00"
         },
         {
