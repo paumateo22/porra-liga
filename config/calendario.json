@@ -1165,6 +1165,14 @@
             "fecha": "2026-12-06T20:00:00"
         },
         {
+            "id": 16462491,
+            "local": "Atlético",
+            "visitante": "Betis",
+            "id_escudo_local": 2836,
+            "id_escudo_visitante": 2816,
+            "fecha": "2026-12-06T20:00:00"
+        },
+        {
             "id": 16462494,
             "local": "FC Barcelona",
             "visitante": "Celta",
@@ -1210,6 +1218,14 @@
             "visitante": "Málaga CF",
             "id_escudo_local": 2833,
             "id_escudo_visitante": 2830,
+            "fecha": "2026-12-06T20:00:00"
+        },
+        {
+            "id": 16462514,
+            "local": "Villarreal",
+            "visitante": "Real Sociedad",
+            "id_escudo_local": 2819,
+            "id_escudo_visitante": 2824,
             "fecha": "2026-12-06T20:00:00"
         }
     ],

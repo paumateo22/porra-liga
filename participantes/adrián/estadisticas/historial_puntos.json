@@ -2,11 +2,11 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 27,
-    "puntos_partidos": 28,
+    "puntos_totales": 28,
+    "puntos_partidos": 29,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": -1,
-    "aciertos_1x2": 24,
+    "aciertos_1x2": 25,
     "aciertos_exactos": 4,
     "partidos_pronosticados": 58,
     "jornadas_jugadas": 6,
@@ -465,8 +465,8 @@
             }
         },
         "J06": {
-            "puntos": 0,
-            "aciertos_1x2": 1,
+            "puntos": 1,
+            "aciertos_1x2": 2,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -491,10 +491,10 @@
                 "Atlético_vs_Osasuna": {
                     "id": 16416335,
                     "pronostico": "3-2",
-                    "real": "0-0",
-                    "acierto_1x2": false,
+                    "real": "1-0",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 },
                 "Deportivo de A Coruña_vs_Sevilla": {
                     "id": 16416343,
