@@ -2,12 +2,12 @@
     "participante": "carlos",
     "nombre": "Carlos",
     "insignias": [],
-    "puntos_totales": 25,
-    "puntos_partidos": 26,
+    "puntos_totales": 24,
+    "puntos_partidos": 25,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": -1,
     "aciertos_1x2": 24,
-    "aciertos_exactos": 2,
+    "aciertos_exactos": 1,
     "partidos_pronosticados": 60,
     "jornadas_jugadas": 6,
     "jornadas_ganadas": 2,
@@ -465,9 +465,9 @@
             }
         },
         "J06": {
-            "puntos": 2,
+            "puntos": 1,
             "aciertos_1x2": 2,
-            "aciertos_exactos": 1,
+            "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
             "perdedor": true,
@@ -523,10 +523,10 @@
                 "FC Barcelona_vs_Real Racing Club": {
                     "id": 16416346,
                     "pronostico": "4-1",
-                    "real": "4-1",
+                    "real": "4-2",
                     "acierto_1x2": true,
-                    "acierto_exacto": true,
-                    "puntos": 2
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         }
