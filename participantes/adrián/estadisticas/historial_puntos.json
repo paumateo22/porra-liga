@@ -503,6 +503,14 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
+                },
+                "FC Barcelona_vs_Real Racing Club": {
+                    "id": 16416346,
+                    "pronostico": "5-1",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         }
