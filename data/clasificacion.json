@@ -1,6 +1,6 @@
 {
     "competicion": "LaLiga 2026-27",
-    "generado": "2026-09-16T13:37:04",
+    "generado": "2026-09-16T17:46:44",
     "jornadas_calculadas": [
         "J01",
         "J02",
@@ -237,7 +237,7 @@
             "puntos_ganador_perdedor": 0,
             "aciertos_1x2": 24,
             "aciertos_exactos": 4,
-            "partidos_pronosticados": 57,
+            "partidos_pronosticados": 58,
             "jornadas_jugadas": 6,
             "jornadas_ganadas": 1,
             "jornadas_perdidas": 1,

@@ -2,8 +2,8 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "jornada": 6,
-    "generado": "2026-09-15T18:05:24",
-    "ingerido": "2026-09-15T22:30:21",
+    "generado": "2026-09-16T15:34:45",
+    "ingerido": "2026-09-16T17:46:44",
     "predicciones": [
         {
             "id": 16416340,
@@ -60,6 +60,14 @@
             "fecha": "2026-09-17T19:00:00",
             "goles_local": 3,
             "goles_visitante": 1
+        },
+        {
+            "id": 16416338,
+            "local": "Málaga CF",
+            "visitante": "Villarreal",
+            "fecha": "2026-09-17T21:30:00",
+            "goles_local": 2,
+            "goles_visitante": 2
         }
     ]
 }
