@@ -1,6 +1,6 @@
 {
     "competicion": "LaLiga 2026-27",
-    "generado": "2026-09-17T22:19:10",
+    "generado": "2026-09-17T23:16:11",
     "jornadas_calculadas": [
         "J01",
         "J02",
@@ -20,12 +20,12 @@
             "slug": "aitor",
             "nombre": "Aitor",
             "insignias": [],
-            "puntos_totales": 42,
-            "puntos_partidos": 39,
+            "puntos_totales": 41,
+            "puntos_partidos": 38,
             "bonus_rendimiento": 0,
             "puntos_ganador_perdedor": 3,
             "aciertos_1x2": 32,
-            "aciertos_exactos": 7,
+            "aciertos_exactos": 6,
             "partidos_pronosticados": 60,
             "jornadas_jugadas": 6,
             "jornadas_ganadas": 4,
@@ -73,9 +73,9 @@
                     "perdedor": true
                 },
                 "J06": {
-                    "puntos": 9,
+                    "puntos": 8,
                     "aciertos_1x2": 6,
-                    "aciertos_exactos": 2,
+                    "aciertos_exactos": 1,
                     "bonus": 0,
                     "ganador": true,
                     "perdedor": false
@@ -92,12 +92,12 @@
                     "descripcion": "Mundial 2026"
                 }
             ],
-            "puntos_totales": 40,
-            "puntos_partidos": 38,
+            "puntos_totales": 39,
+            "puntos_partidos": 37,
             "bonus_rendimiento": 0,
             "puntos_ganador_perdedor": 2,
             "aciertos_1x2": 30,
-            "aciertos_exactos": 8,
+            "aciertos_exactos": 7,
             "partidos_pronosticados": 60,
             "jornadas_jugadas": 6,
             "jornadas_ganadas": 3,
@@ -145,9 +145,9 @@
                     "perdedor": false
                 },
                 "J06": {
-                    "puntos": 8,
+                    "puntos": 7,
                     "aciertos_1x2": 6,
-                    "aciertos_exactos": 1,
+                    "aciertos_exactos": 0,
                     "bonus": 0,
                     "ganador": true,
                     "perdedor": false
@@ -164,12 +164,12 @@
                     "descripcion": "Liga 2023/24"
                 }
             ],
-            "puntos_totales": 34,
-            "puntos_partidos": 33,
+            "puntos_totales": 33,
+            "puntos_partidos": 32,
             "bonus_rendimiento": 0,
             "puntos_ganador_perdedor": 1,
             "aciertos_1x2": 27,
-            "aciertos_exactos": 6,
+            "aciertos_exactos": 5,
             "partidos_pronosticados": 60,
             "jornadas_jugadas": 6,
             "jornadas_ganadas": 2,
@@ -217,9 +217,9 @@
                     "perdedor": true
                 },
                 "J06": {
-                    "puntos": 6,
+                    "puntos": 5,
                     "aciertos_1x2": 5,
-                    "aciertos_exactos": 1,
+                    "aciertos_exactos": 0,
                     "bonus": 0,
                     "ganador": false,
                     "perdedor": false
