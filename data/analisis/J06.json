@@ -84,14 +84,6 @@
             "fecha": "2026-09-16T21:30:00"
         },
         {
-            "id": 16416341,
-            "local": "Levante UD",
-            "visitante": "Athletic",
-            "id_escudo_local": 2849,
-            "id_escudo_visitante": 2825,
-            "fecha": "2026-09-16T21:30:00"
-        },
-        {
             "id": 16416336,
             "local": "Betis",
             "visitante": "Getafe",
@@ -106,6 +98,14 @@
             "id_escudo_local": 2830,
             "id_escudo_visitante": 2819,
             "fecha": "2026-09-17T21:30:00"
+        },
+        {
+            "id": 17122851,
+            "local": "Levante UD",
+            "visitante": "Athletic",
+            "id_escudo_local": 2849,
+            "id_escudo_visitante": 2825,
+            "fecha": "2026-10-21T20:00:00"
         }
     ],
     "resultados": {
@@ -155,6 +155,11 @@
             "estado": "inprogress"
         },
         "16416338": {
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        "17122851": {
             "goles_local": null,
             "goles_visitante": null,
             "estado": "notstarted"
