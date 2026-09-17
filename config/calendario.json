@@ -1149,6 +1149,14 @@
     ],
     "J15": [
         {
+            "id": 16462485,
+            "local": "Alavés",
+            "visitante": "Espanyol",
+            "id_escudo_local": 2885,
+            "id_escudo_visitante": 2814,
+            "fecha": "2026-12-06T20:00:00"
+        },
+        {
             "id": 16462488,
             "local": "Athletic",
             "visitante": "Real Madrid",
@@ -1186,6 +1194,14 @@
             "visitante": "Elche",
             "id_escudo_local": 2820,
             "id_escudo_visitante": 2846,
+            "fecha": "2026-12-06T20:00:00"
+        },
+        {
+            "id": 16462508,
+            "local": "Rayo",
+            "visitante": "Levante UD",
+            "id_escudo_local": 2818,
+            "id_escudo_visitante": 2849,
             "fecha": "2026-12-06T20:00:00"
         },
         {
