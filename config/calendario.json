@@ -1919,6 +1919,14 @@
             "fecha": "2027-02-14T20:00:00"
         },
         {
+            "id": 16462581,
+            "local": "Real Racing Club",
+            "visitante": "Getafe",
+            "id_escudo_local": 2835,
+            "id_escudo_visitante": 2859,
+            "fecha": "2027-02-14T20:00:00"
+        },
+        {
             "id": 16462587,
             "local": "Real Sociedad",
             "visitante": "Betis",
@@ -1932,6 +1940,14 @@
             "visitante": "Espanyol",
             "id_escudo_local": 2833,
             "id_escudo_visitante": 2814,
+            "fecha": "2027-02-14T20:00:00"
+        },
+        {
+            "id": 16462593,
+            "local": "Valencia",
+            "visitante": "Alavés",
+            "id_escudo_local": 2828,
+            "id_escudo_visitante": 2885,
             "fecha": "2027-02-14T20:00:00"
         },
         {
@@ -2138,14 +2154,6 @@
             "visitante": "Málaga CF",
             "id_escudo_local": 2846,
             "id_escudo_visitante": 2830,
-            "fecha": "2027-03-07T20:00:00"
-        },
-        {
-            "id": 16462671,
-            "local": "Espanyol",
-            "visitante": "Real Racing Club",
-            "id_escudo_local": 2814,
-            "id_escudo_visitante": 2835,
             "fecha": "2027-03-07T20:00:00"
         },
         {
@@ -2392,6 +2400,22 @@
             "visitante": "Sevilla",
             "id_escudo_local": 2817,
             "id_escudo_visitante": 2833,
+            "fecha": "2027-04-04T21:00:00"
+        },
+        {
+            "id": 16462704,
+            "local": "Getafe",
+            "visitante": "Espanyol",
+            "id_escudo_local": 2859,
+            "id_escudo_visitante": 2814,
+            "fecha": "2027-04-04T21:00:00"
+        },
+        {
+            "id": 16462705,
+            "local": "Levante UD",
+            "visitante": "Rayo",
+            "id_escudo_local": 2849,
+            "id_escudo_visitante": 2818,
             "fecha": "2027-04-04T21:00:00"
         },
         {
@@ -2868,14 +2892,6 @@
             "visitante": "Getafe",
             "id_escudo_local": 2849,
             "id_escudo_visitante": 2859,
-            "fecha": "2027-05-16T21:00:00"
-        },
-        {
-            "id": 16462604,
-            "local": "Málaga CF",
-            "visitante": "Celta",
-            "id_escudo_local": 2830,
-            "id_escudo_visitante": 2821,
             "fecha": "2027-05-16T21:00:00"
         },
         {
