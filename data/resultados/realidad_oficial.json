@@ -666,9 +666,9 @@
             "id_escudo_local": 2830,
             "id_escudo_visitante": 2819,
             "fecha": "2026-09-17T21:30:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
+            "goles_local": 0,
+            "goles_visitante": 0,
+            "estado": "inprogress"
         },
         {
             "id": 17122851,
@@ -1271,6 +1271,17 @@
             "visitante": "Betis",
             "id_escudo_local": 2846,
             "id_escudo_visitante": 2816,
+            "fecha": "2026-11-08T20:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
+            "id": 16421108,
+            "local": "Espanyol",
+            "visitante": "Deportivo de A Coruña",
+            "id_escudo_local": 2814,
+            "id_escudo_visitante": 2832,
             "fecha": "2026-11-08T20:00:00",
             "goles_local": null,
             "goles_visitante": null,
