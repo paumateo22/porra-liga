@@ -669,6 +669,17 @@
             "goles_local": null,
             "goles_visitante": null,
             "estado": "notstarted"
+        },
+        {
+            "id": 17122851,
+            "local": "Levante UD",
+            "visitante": "Athletic",
+            "id_escudo_local": 2849,
+            "id_escudo_visitante": 2825,
+            "fecha": "2026-10-21T20:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
         }
     ],
     "J07": [
@@ -1260,17 +1271,6 @@
             "visitante": "Betis",
             "id_escudo_local": 2846,
             "id_escudo_visitante": 2816,
-            "fecha": "2026-11-08T20:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
-            "id": 16421108,
-            "local": "Espanyol",
-            "visitante": "Deportivo de A Coruña",
-            "id_escudo_local": 2814,
-            "id_escudo_visitante": 2832,
             "fecha": "2026-11-08T20:00:00",
             "goles_local": null,
             "goles_visitante": null,
