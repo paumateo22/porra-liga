@@ -1894,17 +1894,6 @@
             "estado": "notstarted"
         },
         {
-            "id": 16462579,
-            "local": "Celta",
-            "visitante": "Deportivo de A Coruña",
-            "id_escudo_local": 2821,
-            "id_escudo_visitante": 2832,
-            "fecha": "2027-01-03T20:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
             "id": 16462582,
             "local": "Espanyol",
             "visitante": "FC Barcelona",
