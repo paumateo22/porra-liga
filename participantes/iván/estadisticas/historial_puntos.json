@@ -7,12 +7,12 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 38,
-    "puntos_partidos": 36,
+    "puntos_totales": 40,
+    "puntos_partidos": 38,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 2,
-    "aciertos_1x2": 29,
-    "aciertos_exactos": 7,
+    "aciertos_1x2": 30,
+    "aciertos_exactos": 8,
     "partidos_pronosticados": 60,
     "jornadas_jugadas": 6,
     "jornadas_ganadas": 3,
@@ -470,9 +470,9 @@
             }
         },
         "J06": {
-            "puntos": 6,
-            "aciertos_1x2": 5,
-            "aciertos_exactos": 0,
+            "puntos": 8,
+            "aciertos_1x2": 6,
+            "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": true,
             "perdedor": false,
@@ -544,10 +544,10 @@
                 "Málaga CF_vs_Villarreal": {
                     "id": 16416338,
                     "pronostico": "1-2",
-                    "real": "1-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
+                    "real": "1-2",
+                    "acierto_1x2": true,
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         }

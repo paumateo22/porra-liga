@@ -2,12 +2,12 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 40,
-    "puntos_partidos": 37,
+    "puntos_totales": 42,
+    "puntos_partidos": 39,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 3,
-    "aciertos_1x2": 31,
-    "aciertos_exactos": 6,
+    "aciertos_1x2": 32,
+    "aciertos_exactos": 7,
     "partidos_pronosticados": 60,
     "jornadas_jugadas": 6,
     "jornadas_ganadas": 4,
@@ -465,9 +465,9 @@
             }
         },
         "J06": {
-            "puntos": 7,
-            "aciertos_1x2": 5,
-            "aciertos_exactos": 1,
+            "puntos": 9,
+            "aciertos_1x2": 6,
+            "aciertos_exactos": 2,
             "bonus": 0,
             "ganador": true,
             "perdedor": false,
@@ -539,10 +539,10 @@
                 "Málaga CF_vs_Villarreal": {
                     "id": 16416338,
                     "pronostico": "1-2",
-                    "real": "1-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
+                    "real": "1-2",
+                    "acierto_1x2": true,
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         }

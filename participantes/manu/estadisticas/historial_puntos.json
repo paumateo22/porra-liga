@@ -2,11 +2,11 @@
     "participante": "manu",
     "nombre": "Manu",
     "insignias": [],
-    "puntos_totales": 24,
-    "puntos_partidos": 20,
+    "puntos_totales": 25,
+    "puntos_partidos": 21,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 19,
+    "aciertos_1x2": 20,
     "aciertos_exactos": 1,
     "partidos_pronosticados": 40,
     "jornadas_jugadas": 4,
@@ -285,8 +285,8 @@
             }
         },
         "J06": {
-            "puntos": 4,
-            "aciertos_1x2": 4,
+            "puntos": 5,
+            "aciertos_1x2": 5,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -359,10 +359,10 @@
                 "Málaga CF_vs_Villarreal": {
                     "id": 16416338,
                     "pronostico": "2-3",
-                    "real": "1-1",
-                    "acierto_1x2": false,
+                    "real": "1-2",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }

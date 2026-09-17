@@ -2,11 +2,11 @@
     "participante": "álvaro",
     "nombre": "Álvaro",
     "insignias": [],
-    "puntos_totales": 28,
-    "puntos_partidos": 29,
+    "puntos_totales": 29,
+    "puntos_partidos": 30,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": -1,
-    "aciertos_1x2": 23,
+    "aciertos_1x2": 24,
     "aciertos_exactos": 6,
     "partidos_pronosticados": 60,
     "jornadas_jugadas": 6,
@@ -465,8 +465,8 @@
             }
         },
         "J06": {
-            "puntos": 4,
-            "aciertos_1x2": 3,
+            "puntos": 5,
+            "aciertos_1x2": 4,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
@@ -539,10 +539,10 @@
                 "Málaga CF_vs_Villarreal": {
                     "id": 16416338,
                     "pronostico": "0-1",
-                    "real": "1-1",
-                    "acierto_1x2": false,
+                    "real": "1-2",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }
