@@ -2968,6 +2968,17 @@
             "estado": "notstarted"
         },
         {
+            "id": 16462671,
+            "local": "Espanyol",
+            "visitante": "Real Racing Club",
+            "id_escudo_local": 2814,
+            "id_escudo_visitante": 2835,
+            "fecha": "2027-03-07T20:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
             "id": 16462673,
             "local": "FC Barcelona",
             "visitante": "Betis",
