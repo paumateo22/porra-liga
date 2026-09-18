@@ -7,12 +7,12 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 41,
-    "puntos_partidos": 38,
+    "puntos_totales": 42,
+    "puntos_partidos": 39,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 3,
     "aciertos_1x2": 31,
-    "aciertos_exactos": 7,
+    "aciertos_exactos": 8,
     "partidos_pronosticados": 70,
     "jornadas_jugadas": 7,
     "jornadas_ganadas": 4,
@@ -544,9 +544,9 @@
             }
         },
         "J07": {
-            "puntos": 2,
+            "puntos": 3,
             "aciertos_1x2": 1,
-            "aciertos_exactos": 0,
+            "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": true,
             "perdedor": false,
@@ -554,10 +554,10 @@
                 "Espanyol_vs_Elche": {
                     "id": 16416299,
                     "pronostico": "1-2",
-                    "real": "0-2",
+                    "real": "1-2",
                     "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         }
