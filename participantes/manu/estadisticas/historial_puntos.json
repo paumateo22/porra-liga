@@ -2,16 +2,16 @@
     "participante": "manu",
     "nombre": "Manu",
     "insignias": [],
-    "puntos_totales": 25,
+    "puntos_totales": 24,
     "puntos_partidos": 21,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 0,
+    "puntos_ganador_perdedor": -1,
     "aciertos_1x2": 20,
     "aciertos_exactos": 1,
-    "partidos_pronosticados": 40,
-    "jornadas_jugadas": 4,
+    "partidos_pronosticados": 50,
+    "jornadas_jugadas": 5,
     "jornadas_ganadas": 1,
-    "jornadas_perdidas": 1,
+    "jornadas_perdidas": 2,
     "punto_partida": 4,
     "por_jornada": {
         "J02": {
@@ -363,6 +363,24 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
+                }
+            }
+        },
+        "J07": {
+            "puntos": -1,
+            "aciertos_1x2": 0,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "ganador": false,
+            "perdedor": true,
+            "detalle": {
+                "Espanyol_vs_Elche": {
+                    "id": 16416299,
+                    "pronostico": "3-1",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         }

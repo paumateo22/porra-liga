@@ -2,15 +2,15 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 31,
-    "puntos_partidos": 31,
+    "puntos_totales": 33,
+    "puntos_partidos": 32,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 27,
+    "puntos_ganador_perdedor": 1,
+    "aciertos_1x2": 28,
     "aciertos_exactos": 4,
-    "partidos_pronosticados": 58,
-    "jornadas_jugadas": 6,
-    "jornadas_ganadas": 1,
+    "partidos_pronosticados": 68,
+    "jornadas_jugadas": 7,
+    "jornadas_ganadas": 2,
     "jornadas_perdidas": 1,
     "punto_partida": 0,
     "por_jornada": {
@@ -22,14 +22,6 @@
             "ganador": false,
             "perdedor": true,
             "detalle": {
-                "Alavés_vs_Getafe": {
-                    "id": 16421047,
-                    "pronostico": "1-1",
-                    "real": "3-0",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "Sevilla_vs_Rayo": {
                     "id": 16421052,
                     "pronostico": "3-2",
@@ -527,6 +519,24 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
+                }
+            }
+        },
+        "J07": {
+            "puntos": 2,
+            "aciertos_1x2": 1,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "ganador": true,
+            "perdedor": false,
+            "detalle": {
+                "Espanyol_vs_Elche": {
+                    "id": 16416299,
+                    "pronostico": "1-1",
+                    "real": "0-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         }

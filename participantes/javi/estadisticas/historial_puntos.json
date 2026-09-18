@@ -2,16 +2,16 @@
     "participante": "javi",
     "nombre": "Javi",
     "insignias": [],
-    "puntos_totales": 21,
+    "puntos_totales": 20,
     "puntos_partidos": 24,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": -3,
+    "puntos_ganador_perdedor": -4,
     "aciertos_1x2": 22,
     "aciertos_exactos": 2,
-    "partidos_pronosticados": 59,
-    "jornadas_jugadas": 6,
+    "partidos_pronosticados": 69,
+    "jornadas_jugadas": 7,
     "jornadas_ganadas": 1,
-    "jornadas_perdidas": 4,
+    "jornadas_perdidas": 5,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -22,14 +22,6 @@
             "ganador": true,
             "perdedor": false,
             "detalle": {
-                "Alavés_vs_Getafe": {
-                    "id": 16421047,
-                    "pronostico": "1-3",
-                    "real": "3-0",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "Sevilla_vs_Rayo": {
                     "id": 16421052,
                     "pronostico": "2-0",
@@ -532,6 +524,24 @@
                     "id": 16416338,
                     "pronostico": "1-0",
                     "real": "1-3",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                }
+            }
+        },
+        "J07": {
+            "puntos": -1,
+            "aciertos_1x2": 0,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "ganador": false,
+            "perdedor": true,
+            "detalle": {
+                "Espanyol_vs_Elche": {
+                    "id": 16416299,
+                    "pronostico": "2-0",
+                    "real": "0-0",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0

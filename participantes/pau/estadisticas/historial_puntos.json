@@ -7,16 +7,16 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 33,
+    "puntos_totales": 32,
     "puntos_partidos": 32,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 1,
+    "puntos_ganador_perdedor": 0,
     "aciertos_1x2": 27,
     "aciertos_exactos": 5,
-    "partidos_pronosticados": 60,
-    "jornadas_jugadas": 6,
+    "partidos_pronosticados": 70,
+    "jornadas_jugadas": 7,
     "jornadas_ganadas": 2,
-    "jornadas_perdidas": 1,
+    "jornadas_perdidas": 2,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -27,14 +27,6 @@
             "ganador": true,
             "perdedor": false,
             "detalle": {
-                "Alavés_vs_Getafe": {
-                    "id": 16421047,
-                    "pronostico": "0-0",
-                    "real": "3-0",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "Sevilla_vs_Rayo": {
                     "id": 16421052,
                     "pronostico": "2-0",
@@ -548,6 +540,24 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
+                }
+            }
+        },
+        "J07": {
+            "puntos": -1,
+            "aciertos_1x2": 0,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "ganador": false,
+            "perdedor": true,
+            "detalle": {
+                "Espanyol_vs_Elche": {
+                    "id": 16416299,
+                    "pronostico": "2-0",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         }
