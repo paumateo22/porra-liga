@@ -2,16 +2,16 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 33,
-    "puntos_partidos": 32,
+    "puntos_totales": 30,
+    "puntos_partidos": 31,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 28,
+    "puntos_ganador_perdedor": -1,
+    "aciertos_1x2": 27,
     "aciertos_exactos": 4,
     "partidos_pronosticados": 68,
     "jornadas_jugadas": 7,
-    "jornadas_ganadas": 2,
-    "jornadas_perdidas": 1,
+    "jornadas_ganadas": 1,
+    "jornadas_perdidas": 2,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -523,20 +523,20 @@
             }
         },
         "J07": {
-            "puntos": 2,
-            "aciertos_1x2": 1,
+            "puntos": -1,
+            "aciertos_1x2": 0,
             "aciertos_exactos": 0,
             "bonus": 0,
-            "ganador": true,
-            "perdedor": false,
+            "ganador": false,
+            "perdedor": true,
             "detalle": {
                 "Espanyol_vs_Elche": {
                     "id": 16416299,
                     "pronostico": "1-1",
-                    "real": "0-0",
-                    "acierto_1x2": true,
+                    "real": "0-1",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 }
             }
         }
