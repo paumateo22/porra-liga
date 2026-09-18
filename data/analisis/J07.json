@@ -123,7 +123,7 @@
     "resultados": {
         "16416299": {
             "goles_local": 0,
-            "goles_visitante": 1,
+            "goles_visitante": 2,
             "estado": "inprogress"
         },
         "16416305": {
@@ -174,6 +174,27 @@
     },
     "jugadores": [
         {
+            "slug": "álvaro",
+            "nombre": "Álvaro",
+            "insignias": [],
+            "aciertos_1x2": 1,
+            "aciertos_exactos": 1,
+            "bonus": 0,
+            "elegible": true,
+            "ganador": true,
+            "perdedor": false,
+            "puntos": 3,
+            "pronosticados": 10,
+            "predicciones": {
+                "16416299": {
+                    "pronostico": "0-2",
+                    "acierto_1x2": true,
+                    "acierto_exacto": true,
+                    "puntos": 2
+                }
+            }
+        },
+        {
             "slug": "iván",
             "nombre": "Iván",
             "insignias": [
@@ -193,27 +214,6 @@
             "predicciones": {
                 "16416299": {
                     "pronostico": "1-2",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                }
-            }
-        },
-        {
-            "slug": "álvaro",
-            "nombre": "Álvaro",
-            "insignias": [],
-            "aciertos_1x2": 1,
-            "aciertos_exactos": 0,
-            "bonus": 0,
-            "elegible": true,
-            "ganador": true,
-            "perdedor": false,
-            "puntos": 2,
-            "pronosticados": 10,
-            "predicciones": {
-                "16416299": {
-                    "pronostico": "0-2",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
