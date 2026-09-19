@@ -1461,14 +1461,6 @@
             "fecha": "2027-01-10T20:00:00"
         },
         {
-            "id": 16462612,
-            "local": "Atlético",
-            "visitante": "Real Racing Club",
-            "id_escudo_local": 2836,
-            "id_escudo_visitante": 2835,
-            "fecha": "2027-01-10T20:00:00"
-        },
-        {
             "id": 16462615,
             "local": "Deportivo de A Coruña",
             "visitante": "Rayo",
@@ -1490,22 +1482,6 @@
             "visitante": "Betis",
             "id_escudo_local": 2814,
             "id_escudo_visitante": 2816,
-            "fecha": "2027-01-10T20:00:00"
-        },
-        {
-            "id": 16462624,
-            "local": "Osasuna",
-            "visitante": "FC Barcelona",
-            "id_escudo_local": 2820,
-            "id_escudo_visitante": 2817,
-            "fecha": "2027-01-10T20:00:00"
-        },
-        {
-            "id": 16462627,
-            "local": "Real Madrid",
-            "visitante": "Levante UD",
-            "id_escudo_local": 2829,
-            "id_escudo_visitante": 2849,
             "fecha": "2027-01-10T20:00:00"
         },
         {
