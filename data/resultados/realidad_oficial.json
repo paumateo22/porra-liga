@@ -1,17 +1,6 @@
 {
     "J01": [
         {
-            "id": 16421052,
-            "local": "Sevilla",
-            "visitante": "Rayo",
-            "id_escudo_local": 2833,
-            "id_escudo_visitante": 2818,
-            "fecha": "2026-08-15T21:30:00",
-            "goles_local": 2,
-            "goles_visitante": 1,
-            "estado": "finished"
-        },
-        {
             "id": 16421061,
             "local": "Real Racing Club",
             "visitante": "Villarreal",
@@ -690,9 +679,9 @@
             "id_escudo_local": 2820,
             "id_escudo_visitante": 2818,
             "fecha": "2026-09-19T14:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
+            "goles_local": 0,
+            "goles_visitante": 0,
+            "estado": "inprogress"
         },
         {
             "id": 16416337,
