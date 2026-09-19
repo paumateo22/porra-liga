@@ -2,11 +2,11 @@
     "participante": "carlos",
     "nombre": "Carlos",
     "insignias": [],
-    "puntos_totales": 26,
-    "puntos_partidos": 27,
+    "puntos_totales": 25,
+    "puntos_partidos": 26,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": -1,
-    "aciertos_1x2": 26,
+    "aciertos_1x2": 25,
     "aciertos_exactos": 1,
     "partidos_pronosticados": 70,
     "jornadas_jugadas": 7,
@@ -523,8 +523,8 @@
             }
         },
         "J07": {
-            "puntos": 4,
-            "aciertos_1x2": 3,
+            "puntos": 3,
+            "aciertos_1x2": 2,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": true,
@@ -557,10 +557,10 @@
                 "Celta_vs_Real Racing Club": {
                     "id": 16416344,
                     "pronostico": "2-2",
-                    "real": "0-0",
-                    "acierto_1x2": true,
+                    "real": "1-0",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 }
             }
         }
