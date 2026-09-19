@@ -2,16 +2,16 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 29,
-    "puntos_partidos": 30,
+    "puntos_totales": 31,
+    "puntos_partidos": 31,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": -1,
-    "aciertos_1x2": 26,
+    "puntos_ganador_perdedor": 0,
+    "aciertos_1x2": 27,
     "aciertos_exactos": 4,
     "partidos_pronosticados": 68,
     "jornadas_jugadas": 7,
     "jornadas_ganadas": 1,
-    "jornadas_perdidas": 2,
+    "jornadas_perdidas": 1,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -515,12 +515,12 @@
             }
         },
         "J07": {
-            "puntos": -1,
-            "aciertos_1x2": 0,
+            "puntos": 1,
+            "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
-            "perdedor": true,
+            "perdedor": false,
             "detalle": {
                 "Espanyol_vs_Elche": {
                     "id": 16416299,
@@ -533,10 +533,10 @@
                 "Osasuna_vs_Rayo": {
                     "id": 16416305,
                     "pronostico": "2-1",
-                    "real": "0-0",
-                    "acierto_1x2": false,
+                    "real": "1-0",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }
