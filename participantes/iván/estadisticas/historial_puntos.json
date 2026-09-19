@@ -7,15 +7,15 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 38,
-    "puntos_partidos": 36,
+    "puntos_totales": 41,
+    "puntos_partidos": 38,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 2,
-    "aciertos_1x2": 30,
-    "aciertos_exactos": 6,
+    "puntos_ganador_perdedor": 3,
+    "aciertos_1x2": 31,
+    "aciertos_exactos": 7,
     "partidos_pronosticados": 70,
     "jornadas_jugadas": 7,
-    "jornadas_ganadas": 3,
+    "jornadas_ganadas": 4,
     "jornadas_perdidas": 1,
     "punto_partida": 0,
     "por_jornada": {
@@ -536,11 +536,11 @@
             }
         },
         "J07": {
-            "puntos": 1,
-            "aciertos_1x2": 1,
-            "aciertos_exactos": 0,
+            "puntos": 4,
+            "aciertos_1x2": 2,
+            "aciertos_exactos": 1,
             "bonus": 0,
-            "ganador": false,
+            "ganador": true,
             "perdedor": false,
             "detalle": {
                 "Espanyol_vs_Elche": {
@@ -554,10 +554,10 @@
                 "Osasuna_vs_Rayo": {
                     "id": 16416305,
                     "pronostico": "1-1",
-                    "real": "1-0",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
+                    "real": "1-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         }
