@@ -1197,14 +1197,6 @@
             "fecha": "2026-12-06T20:00:00"
         },
         {
-            "id": 16462504,
-            "local": "Real Racing Club",
-            "visitante": "Deportivo de A Coruña",
-            "id_escudo_local": 2835,
-            "id_escudo_visitante": 2832,
-            "fecha": "2026-12-06T20:00:00"
-        },
-        {
             "id": 16462511,
             "local": "Sevilla",
             "visitante": "Málaga CF",
@@ -2424,14 +2416,6 @@
             "visitante": "Rayo",
             "id_escudo_local": 2849,
             "id_escudo_visitante": 2818,
-            "fecha": "2027-04-04T21:00:00"
-        },
-        {
-            "id": 16462706,
-            "local": "Málaga CF",
-            "visitante": "Osasuna",
-            "id_escudo_local": 2830,
-            "id_escudo_visitante": 2820,
             "fecha": "2027-04-04T21:00:00"
         },
         {
