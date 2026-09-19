@@ -7,34 +7,26 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 31,
-    "puntos_partidos": 31,
+    "puntos_totales": 29,
+    "puntos_partidos": 30,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 26,
+    "puntos_ganador_perdedor": -1,
+    "aciertos_1x2": 25,
     "aciertos_exactos": 5,
     "partidos_pronosticados": 70,
     "jornadas_jugadas": 7,
-    "jornadas_ganadas": 2,
+    "jornadas_ganadas": 1,
     "jornadas_perdidas": 2,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
-            "puntos": 7,
-            "aciertos_1x2": 5,
+            "puntos": 5,
+            "aciertos_1x2": 4,
             "aciertos_exactos": 1,
             "bonus": 0,
-            "ganador": true,
+            "ganador": false,
             "perdedor": false,
             "detalle": {
-                "Espanyol_vs_Levante UD": {
-                    "id": 16421053,
-                    "pronostico": "1-0",
-                    "real": "3-0",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                },
                 "Deportivo de A Coruña_vs_Elche": {
                     "id": 16421050,
                     "pronostico": "1-0",
@@ -554,6 +546,14 @@
                 "Athletic_vs_Alavés": {
                     "id": 16416337,
                     "pronostico": "2-1",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Celta_vs_Real Racing Club": {
+                    "id": 16416344,
+                    "pronostico": "3-2",
                     "real": "0-0",
                     "acierto_1x2": false,
                     "acierto_exacto": false,

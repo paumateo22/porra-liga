@@ -2,11 +2,11 @@
     "participante": "manu",
     "nombre": "Manu",
     "insignias": [],
-    "puntos_totales": 26,
-    "puntos_partidos": 23,
+    "puntos_totales": 27,
+    "puntos_partidos": 24,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 21,
+    "aciertos_1x2": 22,
     "aciertos_exactos": 2,
     "partidos_pronosticados": 50,
     "jornadas_jugadas": 5,
@@ -367,8 +367,8 @@
             }
         },
         "J07": {
-            "puntos": 2,
-            "aciertos_1x2": 1,
+            "puntos": 3,
+            "aciertos_1x2": 2,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
@@ -397,6 +397,14 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
+                },
+                "Celta_vs_Real Racing Club": {
+                    "id": 16416344,
+                    "pronostico": "1-1",
+                    "real": "0-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         }

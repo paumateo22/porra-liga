@@ -22,14 +22,6 @@
             "ganador": true,
             "perdedor": false,
             "detalle": {
-                "Espanyol_vs_Levante UD": {
-                    "id": 16421053,
-                    "pronostico": "0-0",
-                    "real": "3-0",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "Deportivo de A Coruña_vs_Elche": {
                     "id": 16421050,
                     "pronostico": "2-0",
@@ -549,6 +541,14 @@
                 "Athletic_vs_Alavés": {
                     "id": 16416337,
                     "pronostico": "2-1",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Celta_vs_Real Racing Club": {
+                    "id": 16416344,
+                    "pronostico": "1-2",
                     "real": "0-0",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
