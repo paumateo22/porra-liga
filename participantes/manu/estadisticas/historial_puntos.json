@@ -2,7 +2,7 @@
     "participante": "manu",
     "nombre": "Manu",
     "insignias": [],
-    "puntos_totales": 26,
+    "puntos_totales": 25,
     "puntos_partidos": 23,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
@@ -12,7 +12,7 @@
     "jornadas_jugadas": 5,
     "jornadas_ganadas": 1,
     "jornadas_perdidas": 1,
-    "punto_partida": 3,
+    "punto_partida": 2,
     "por_jornada": {
         "J02": {
             "puntos": 2,
@@ -402,6 +402,14 @@
                     "id": 16416344,
                     "pronostico": "1-1",
                     "real": "5-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Sevilla_vs_FC Barcelona": {
+                    "id": 16416349,
+                    "pronostico": "1-4",
+                    "real": "0-0",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0

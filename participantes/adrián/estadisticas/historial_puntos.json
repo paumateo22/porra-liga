@@ -30,14 +30,6 @@
                     "acierto_exacto": false,
                     "puntos": 0
                 },
-                "Deportivo de A Coruña_vs_Elche": {
-                    "id": 16421050,
-                    "pronostico": "1-0",
-                    "real": "1-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "Atlético_vs_Málaga CF": {
                     "id": 16421055,
                     "pronostico": "2-0",
@@ -545,6 +537,14 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
+                },
+                "Sevilla_vs_FC Barcelona": {
+                    "id": 16416349,
+                    "pronostico": "3-4",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         }
