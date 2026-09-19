@@ -5,6 +5,12 @@
 # Solo cuando detecta un cambio real, dispara este workflow, que es quien
 # hace el commit de verdad y desencadena el recálculo completo.
 #
+# De paso, cada vez que corre, regenera el calendario y comprueba si algún
+# partido ha cambiado de ID (el síntoma real de un aplazamiento — a veces
+# SofaScore no solo cambia la fecha, le da un ID nuevo al partido) — si es
+# así, migra solo los pronósticos ya guardados al ID nuevo, sin que haga
+# falta avisar a nadie (ver scripts/migrar_partidos_aplazados.py).
+#
 # Por eso este workflow ya NO necesita bucear él solo cada 5 minutos ni
 # dispararse por "schedule" — esa responsabilidad ya la lleva el vigía, y
 # el scheduler de GitHub tampoco garantizaba la hora exacta de todos modos.
@@ -56,6 +62,18 @@ jobs:
           python -m pip install --upgrade pip --break-system-packages
           pip install -r requirements.txt --break-system-packages
 
+      - name: Guardar copia del calendario antes de regenerarlo
+        if: steps.date_check.outputs.is_active == 'true'
+        run: cp config/calendario.json /tmp/calendario_antes.json || true
+
+      - name: Regenerar calendario (fechas confirmadas de SofaScore)
+        if: steps.date_check.outputs.is_active == 'true'
+        run: python scripts/00_generador_calendario.py
+
+      - name: Detectar y migrar partidos aplazados (ID cambiado)
+        if: steps.date_check.outputs.is_active == 'true'
+        run: python scripts/migrar_partidos_aplazados.py --auto /tmp/calendario_antes.json config/calendario.json
+
       - name: Ejecutar Extractor SofaScore
         if: steps.date_check.outputs.is_active == 'true'
         run: python scripts/05_extractor_sofascore.py
@@ -67,7 +85,7 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add data/resultados/realidad_oficial.json
+          git add .
 
           if [ -z "$(git status --porcelain)" ]; then
             echo "No hay cambios nuevos en los resultados."
