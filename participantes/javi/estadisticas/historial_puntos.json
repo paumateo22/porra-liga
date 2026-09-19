@@ -2,11 +2,11 @@
     "participante": "javi",
     "nombre": "Javi",
     "insignias": [],
-    "puntos_totales": 17,
-    "puntos_partidos": 22,
+    "puntos_totales": 18,
+    "puntos_partidos": 23,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": -5,
-    "aciertos_1x2": 20,
+    "aciertos_1x2": 21,
     "aciertos_exactos": 2,
     "partidos_pronosticados": 69,
     "jornadas_jugadas": 7,
@@ -507,8 +507,8 @@
             }
         },
         "J07": {
-            "puntos": -1,
-            "aciertos_1x2": 0,
+            "puntos": 0,
+            "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -549,10 +549,10 @@
                 "Sevilla_vs_FC Barcelona": {
                     "id": 16416349,
                     "pronostico": "2-5",
-                    "real": "1-1",
-                    "acierto_1x2": false,
+                    "real": "1-2",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }

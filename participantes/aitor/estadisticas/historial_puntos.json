@@ -2,11 +2,11 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 39,
-    "puntos_partidos": 37,
+    "puntos_totales": 40,
+    "puntos_partidos": 38,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 2,
-    "aciertos_1x2": 31,
+    "aciertos_1x2": 32,
     "aciertos_exactos": 6,
     "partidos_pronosticados": 70,
     "jornadas_jugadas": 7,
@@ -515,8 +515,8 @@
             }
         },
         "J07": {
-            "puntos": -1,
-            "aciertos_1x2": 0,
+            "puntos": 0,
+            "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -557,10 +557,10 @@
                 "Sevilla_vs_FC Barcelona": {
                     "id": 16416349,
                     "pronostico": "1-5",
-                    "real": "1-1",
-                    "acierto_1x2": false,
+                    "real": "1-2",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }

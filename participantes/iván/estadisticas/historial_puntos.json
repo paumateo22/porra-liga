@@ -7,11 +7,11 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 36,
-    "puntos_partidos": 35,
+    "puntos_totales": 37,
+    "puntos_partidos": 36,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 29,
+    "aciertos_1x2": 30,
     "aciertos_exactos": 6,
     "partidos_pronosticados": 70,
     "jornadas_jugadas": 7,
@@ -520,8 +520,8 @@
             }
         },
         "J07": {
-            "puntos": 4,
-            "aciertos_1x2": 2,
+            "puntos": 5,
+            "aciertos_1x2": 3,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": true,
@@ -562,10 +562,10 @@
                 "Sevilla_vs_FC Barcelona": {
                     "id": 16416349,
                     "pronostico": "1-4",
-                    "real": "1-1",
-                    "acierto_1x2": false,
+                    "real": "1-2",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }
