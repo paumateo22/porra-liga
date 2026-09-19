@@ -13,16 +13,20 @@
             {
                 "slug": "adrián",
                 "nombre": "Adrián"
-            },
-            {
-                "slug": "carlos",
-                "nombre": "Carlos"
             }
         ],
         "ganador_seguro": true,
         "perdedor_seguro": true
     },
     "partidos": [
+        {
+            "id": 16421047,
+            "local": "Alavés",
+            "visitante": "Getafe",
+            "id_escudo_local": 2885,
+            "id_escudo_visitante": 2859,
+            "fecha": "2026-08-15T19:30:00"
+        },
         {
             "id": 16421050,
             "local": "Deportivo de A Coruña",
@@ -73,6 +77,11 @@
         }
     ],
     "resultados": {
+        "16421047": {
+            "goles_local": 3,
+            "goles_visitante": 0,
+            "estado": "finished"
+        },
         "16421050": {
             "goles_local": 1,
             "goles_visitante": 1,
@@ -118,6 +127,12 @@
             "puntos": 7,
             "pronosticados": 10,
             "predicciones": {
+                "16421047": {
+                    "pronostico": "1-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
                 "16421050": {
                     "pronostico": "2-0",
                     "acierto_1x2": false,
@@ -174,6 +189,12 @@
             "puntos": 6,
             "pronosticados": 10,
             "predicciones": {
+                "16421047": {
+                    "pronostico": "1-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
                 "16421050": {
                     "pronostico": "1-1",
                     "acierto_1x2": true,
@@ -213,6 +234,63 @@
             }
         },
         {
+            "slug": "carlos",
+            "nombre": "Carlos",
+            "insignias": [],
+            "aciertos_1x2": 4,
+            "aciertos_exactos": 1,
+            "bonus": 0,
+            "elegible": true,
+            "ganador": false,
+            "perdedor": false,
+            "puntos": 5,
+            "pronosticados": 10,
+            "predicciones": {
+                "16421047": {
+                    "pronostico": "2-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "16421050": {
+                    "pronostico": "0-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "16421055": {
+                    "pronostico": "2-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": true,
+                    "puntos": 2
+                },
+                "16421049": {
+                    "pronostico": "1-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "16421051": {
+                    "pronostico": "3-2",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "16815992": {
+                    "pronostico": "1-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "16421059": {
+                    "pronostico": "3-2",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                }
+            }
+        },
+        {
             "slug": "pau",
             "nombre": "Pau",
             "insignias": [
@@ -230,6 +308,12 @@
             "puntos": 5,
             "pronosticados": 10,
             "predicciones": {
+                "16421047": {
+                    "pronostico": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
                 "16421050": {
                     "pronostico": "1-0",
                     "acierto_1x2": false,
@@ -281,6 +365,12 @@
             "puntos": 5,
             "pronosticados": 10,
             "predicciones": {
+                "16421047": {
+                    "pronostico": "1-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
                 "16421050": {
                     "pronostico": "1-1",
                     "acierto_1x2": true,
@@ -332,6 +422,12 @@
             "puntos": 4,
             "pronosticados": 10,
             "predicciones": {
+                "16421047": {
+                    "pronostico": "1-3",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
                 "16421050": {
                     "pronostico": "1-2",
                     "acierto_1x2": false,
@@ -383,6 +479,12 @@
             "puntos": 3,
             "pronosticados": 10,
             "predicciones": {
+                "16421047": {
+                    "pronostico": "1-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
                 "16421050": {
                     "pronostico": "1-0",
                     "acierto_1x2": false,
@@ -415,57 +517,6 @@
                 },
                 "16421059": {
                     "pronostico": "3-1",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                }
-            }
-        },
-        {
-            "slug": "carlos",
-            "nombre": "Carlos",
-            "insignias": [],
-            "aciertos_1x2": 3,
-            "aciertos_exactos": 1,
-            "bonus": 0,
-            "elegible": true,
-            "ganador": false,
-            "perdedor": true,
-            "puntos": 3,
-            "pronosticados": 10,
-            "predicciones": {
-                "16421050": {
-                    "pronostico": "0-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
-                "16421055": {
-                    "pronostico": "2-0",
-                    "acierto_1x2": true,
-                    "acierto_exacto": true,
-                    "puntos": 2
-                },
-                "16421049": {
-                    "pronostico": "1-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
-                "16421051": {
-                    "pronostico": "3-2",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                },
-                "16815992": {
-                    "pronostico": "1-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
-                "16421059": {
-                    "pronostico": "3-2",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1

@@ -22,6 +22,14 @@
             "ganador": true,
             "perdedor": false,
             "detalle": {
+                "Alavés_vs_Getafe": {
+                    "id": 16421047,
+                    "pronostico": "1-1",
+                    "real": "3-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
                 "Deportivo de A Coruña_vs_Elche": {
                     "id": 16421050,
                     "pronostico": "2-0",
