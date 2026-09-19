@@ -5,6 +5,10 @@
     "resultado_jornada": {
         "ganadores": [
             {
+                "slug": "carlos",
+                "nombre": "Carlos"
+            },
+            {
                 "slug": "iván",
                 "nombre": "Iván"
             },
@@ -173,6 +177,27 @@
         }
     },
     "jugadores": [
+        {
+            "slug": "carlos",
+            "nombre": "Carlos",
+            "insignias": [],
+            "aciertos_1x2": 1,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "elegible": true,
+            "ganador": true,
+            "perdedor": false,
+            "puntos": 2,
+            "pronosticados": 10,
+            "predicciones": {
+                "16416299": {
+                    "pronostico": "1-2",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                }
+            }
+        },
         {
             "slug": "iván",
             "nombre": "Iván",
