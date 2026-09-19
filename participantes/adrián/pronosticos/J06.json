@@ -46,14 +46,6 @@
             "goles_visitante": 1
         },
         {
-            "id": 16416341,
-            "local": "Levante UD",
-            "visitante": "Athletic",
-            "fecha": "2026-09-16T21:30:00",
-            "goles_local": 2,
-            "goles_visitante": 2
-        },
-        {
             "id": 16416336,
             "local": "Betis",
             "visitante": "Getafe",
@@ -66,6 +58,14 @@
             "local": "Málaga CF",
             "visitante": "Villarreal",
             "fecha": "2026-09-17T21:30:00",
+            "goles_local": 2,
+            "goles_visitante": 2
+        },
+        {
+            "id": 17122851,
+            "local": "Levante UD",
+            "visitante": "Athletic",
+            "fecha": "2026-10-21T20:00:00",
             "goles_local": 2,
             "goles_visitante": 2
         }
