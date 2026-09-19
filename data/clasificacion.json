@@ -1,6 +1,6 @@
 {
     "competicion": "LaLiga 2026-27",
-    "generado": "2026-09-19T15:58:10",
+    "generado": "2026-09-19T16:19:11",
     "jornadas_calculadas": [
         "J01",
         "J02",
@@ -473,17 +473,17 @@
             "aciertos_exactos": 1,
             "partidos_pronosticados": 70,
             "jornadas_jugadas": 7,
-            "jornadas_ganadas": 1,
-            "jornadas_perdidas": 3,
+            "jornadas_ganadas": 2,
+            "jornadas_perdidas": 4,
             "punto_partida": 0,
             "por_jornada": {
                 "J01": {
-                    "puntos": 5,
-                    "aciertos_1x2": 4,
+                    "puntos": 3,
+                    "aciertos_1x2": 3,
                     "aciertos_exactos": 1,
                     "bonus": 0,
                     "ganador": false,
-                    "perdedor": false
+                    "perdedor": true
                 },
                 "J02": {
                     "puntos": 2,
@@ -526,11 +526,11 @@
                     "perdedor": true
                 },
                 "J07": {
-                    "puntos": 1,
-                    "aciertos_1x2": 1,
+                    "puntos": 3,
+                    "aciertos_1x2": 2,
                     "aciertos_exactos": 0,
                     "bonus": 0,
-                    "ganador": false,
+                    "ganador": true,
                     "perdedor": false
                 }
             }

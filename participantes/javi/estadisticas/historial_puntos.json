@@ -22,14 +22,6 @@
             "ganador": true,
             "perdedor": false,
             "detalle": {
-                "Real Racing Club_vs_Villarreal": {
-                    "id": 16421061,
-                    "pronostico": "1-2",
-                    "real": "2-2",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "Espanyol_vs_Levante UD": {
                     "id": 16421053,
                     "pronostico": "2-0",
@@ -542,6 +534,14 @@
                     "id": 16416305,
                     "pronostico": "2-0",
                     "real": "1-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Athletic_vs_Alavés": {
+                    "id": 16416337,
+                    "pronostico": "2-1",
+                    "real": "0-0",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
