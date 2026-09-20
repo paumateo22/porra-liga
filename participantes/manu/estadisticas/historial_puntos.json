@@ -2,11 +2,11 @@
     "participante": "manu",
     "nombre": "Manu",
     "insignias": [],
-    "puntos_totales": 26,
-    "puntos_partidos": 24,
+    "puntos_totales": 27,
+    "puntos_partidos": 25,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 22,
+    "aciertos_1x2": 23,
     "aciertos_exactos": 2,
     "partidos_pronosticados": 50,
     "jornadas_jugadas": 5,
@@ -367,8 +367,8 @@
             }
         },
         "J07": {
-            "puntos": 3,
-            "aciertos_1x2": 2,
+            "puntos": 4,
+            "aciertos_1x2": 3,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
@@ -417,10 +417,10 @@
                 "Getafe_vs_Málaga CF": {
                     "id": 16416303,
                     "pronostico": "2-1",
-                    "real": "0-0",
-                    "acierto_1x2": false,
+                    "real": "1-0",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }

@@ -2,16 +2,16 @@
     "participante": "javi",
     "nombre": "Javi",
     "insignias": [],
-    "puntos_totales": 20,
-    "puntos_partidos": 24,
+    "puntos_totales": 22,
+    "puntos_partidos": 25,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": -4,
-    "aciertos_1x2": 22,
+    "puntos_ganador_perdedor": -3,
+    "aciertos_1x2": 23,
     "aciertos_exactos": 2,
     "partidos_pronosticados": 69,
     "jornadas_jugadas": 7,
     "jornadas_ganadas": 1,
-    "jornadas_perdidas": 5,
+    "jornadas_perdidas": 4,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -531,12 +531,12 @@
             }
         },
         "J07": {
-            "puntos": 0,
-            "aciertos_1x2": 1,
+            "puntos": 2,
+            "aciertos_1x2": 2,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
-            "perdedor": true,
+            "perdedor": false,
             "detalle": {
                 "Espanyol_vs_Elche": {
                     "id": 16416299,
@@ -581,10 +581,10 @@
                 "Getafe_vs_Málaga CF": {
                     "id": 16416303,
                     "pronostico": "2-1",
-                    "real": "0-0",
-                    "acierto_1x2": false,
+                    "real": "1-0",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }
