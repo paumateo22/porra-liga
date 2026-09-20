@@ -2,11 +2,11 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 32,
-    "puntos_partidos": 32,
+    "puntos_totales": 31,
+    "puntos_partidos": 31,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 29,
+    "aciertos_1x2": 28,
     "aciertos_exactos": 3,
     "partidos_pronosticados": 68,
     "jornadas_jugadas": 7,
@@ -523,8 +523,8 @@
             }
         },
         "J07": {
-            "puntos": 3,
-            "aciertos_1x2": 3,
+            "puntos": 2,
+            "aciertos_1x2": 2,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -573,10 +573,10 @@
                 "Getafe_vs_Málaga CF": {
                     "id": 16416303,
                     "pronostico": "1-1",
-                    "real": "0-0",
-                    "acierto_1x2": true,
+                    "real": "0-1",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 }
             }
         }
