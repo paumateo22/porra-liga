@@ -2,12 +2,12 @@
     "participante": "javi",
     "nombre": "Javi",
     "insignias": [],
-    "puntos_totales": 23,
-    "puntos_partidos": 26,
+    "puntos_totales": 24,
+    "puntos_partidos": 27,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": -3,
     "aciertos_1x2": 24,
-    "aciertos_exactos": 2,
+    "aciertos_exactos": 3,
     "partidos_pronosticados": 69,
     "jornadas_jugadas": 7,
     "jornadas_ganadas": 1,
@@ -515,9 +515,9 @@
             }
         },
         "J07": {
-            "puntos": 4,
+            "puntos": 5,
             "aciertos_1x2": 4,
-            "aciertos_exactos": 0,
+            "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
             "perdedor": false,
@@ -589,10 +589,10 @@
                 "Villarreal_vs_Levante UD": {
                     "id": 16416294,
                     "pronostico": "3-1",
-                    "real": "2-1",
+                    "real": "3-1",
                     "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         }
