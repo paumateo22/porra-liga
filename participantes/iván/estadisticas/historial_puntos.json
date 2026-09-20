@@ -7,25 +7,25 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 37,
-    "puntos_partidos": 36,
+    "puntos_totales": 44,
+    "puntos_partidos": 41,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 30,
-    "aciertos_exactos": 6,
+    "puntos_ganador_perdedor": 3,
+    "aciertos_1x2": 33,
+    "aciertos_exactos": 8,
     "partidos_pronosticados": 70,
     "jornadas_jugadas": 7,
-    "jornadas_ganadas": 3,
-    "jornadas_perdidas": 2,
+    "jornadas_ganadas": 4,
+    "jornadas_perdidas": 1,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
-            "puntos": 3,
-            "aciertos_1x2": 3,
-            "aciertos_exactos": 1,
+            "puntos": 10,
+            "aciertos_1x2": 6,
+            "aciertos_exactos": 3,
             "bonus": 0,
-            "ganador": false,
-            "perdedor": true,
+            "ganador": true,
+            "perdedor": false,
             "detalle": {
                 "Alavés_vs_Getafe": {
                     "id": 16421047,
@@ -34,6 +34,38 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
+                },
+                "Sevilla_vs_Rayo": {
+                    "id": 16421052,
+                    "pronostico": "2-1",
+                    "real": "2-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": true,
+                    "puntos": 2
+                },
+                "Real Racing Club_vs_Villarreal": {
+                    "id": 16421061,
+                    "pronostico": "1-2",
+                    "real": "2-2",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Espanyol_vs_Levante UD": {
+                    "id": 16421053,
+                    "pronostico": "2-1",
+                    "real": "3-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "Deportivo de A Coruña_vs_Elche": {
+                    "id": 16421050,
+                    "pronostico": "1-1",
+                    "real": "1-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": true,
+                    "puntos": 2
                 },
                 "Atlético_vs_Málaga CF": {
                     "id": 16421055,

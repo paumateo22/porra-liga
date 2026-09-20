@@ -2,7 +2,7 @@
     "participante": "manu",
     "nombre": "Manu",
     "insignias": [],
-    "puntos_totales": 26,
+    "puntos_totales": 28,
     "puntos_partidos": 24,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
@@ -12,7 +12,7 @@
     "jornadas_jugadas": 5,
     "jornadas_ganadas": 1,
     "jornadas_perdidas": 1,
-    "punto_partida": 2,
+    "punto_partida": 4,
     "por_jornada": {
         "J02": {
             "puntos": 2,
