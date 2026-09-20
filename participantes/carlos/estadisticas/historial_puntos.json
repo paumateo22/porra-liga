@@ -2,11 +2,11 @@
     "participante": "carlos",
     "nombre": "Carlos",
     "insignias": [],
-    "puntos_totales": 27,
-    "puntos_partidos": 27,
+    "puntos_totales": 28,
+    "puntos_partidos": 28,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 27,
+    "aciertos_1x2": 28,
     "aciertos_exactos": 0,
     "partidos_pronosticados": 70,
     "jornadas_jugadas": 7,
@@ -507,8 +507,8 @@
             }
         },
         "J07": {
-            "puntos": 6,
-            "aciertos_1x2": 5,
+            "puntos": 7,
+            "aciertos_1x2": 6,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": true,
@@ -589,10 +589,10 @@
                 "Valencia_vs_Real Sociedad": {
                     "id": 16416297,
                     "pronostico": "1-1",
-                    "real": "1-2",
-                    "acierto_1x2": false,
+                    "real": "2-2",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }
