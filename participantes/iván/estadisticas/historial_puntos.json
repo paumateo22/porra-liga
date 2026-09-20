@@ -7,11 +7,11 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 43,
-    "puntos_partidos": 40,
+    "puntos_totales": 42,
+    "puntos_partidos": 39,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 3,
-    "aciertos_1x2": 33,
+    "aciertos_1x2": 32,
     "aciertos_exactos": 7,
     "partidos_pronosticados": 70,
     "jornadas_jugadas": 7,
@@ -536,8 +536,8 @@
             }
         },
         "J07": {
-            "puntos": 8,
-            "aciertos_1x2": 5,
+            "puntos": 7,
+            "aciertos_1x2": 4,
             "aciertos_exactos": 2,
             "bonus": 0,
             "ganador": true,
@@ -594,10 +594,10 @@
                 "Atlético_vs_Real Madrid": {
                     "id": 16416339,
                     "pronostico": "2-2",
-                    "real": "0-0",
-                    "acierto_1x2": true,
+                    "real": "1-0",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 }
             }
         }

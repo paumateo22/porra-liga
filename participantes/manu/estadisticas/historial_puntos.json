@@ -2,15 +2,15 @@
     "participante": "manu",
     "nombre": "Manu",
     "insignias": [],
-    "puntos_totales": 27,
-    "puntos_partidos": 25,
+    "puntos_totales": 29,
+    "puntos_partidos": 26,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 23,
+    "puntos_ganador_perdedor": 1,
+    "aciertos_1x2": 24,
     "aciertos_exactos": 2,
     "partidos_pronosticados": 50,
     "jornadas_jugadas": 5,
-    "jornadas_ganadas": 1,
+    "jornadas_ganadas": 2,
     "jornadas_perdidas": 1,
     "punto_partida": 2,
     "por_jornada": {
@@ -359,11 +359,11 @@
             }
         },
         "J07": {
-            "puntos": 4,
-            "aciertos_1x2": 3,
+            "puntos": 6,
+            "aciertos_1x2": 4,
             "aciertos_exactos": 1,
             "bonus": 0,
-            "ganador": false,
+            "ganador": true,
             "perdedor": false,
             "detalle": {
                 "Espanyol_vs_Elche": {
@@ -417,10 +417,10 @@
                 "Atlético_vs_Real Madrid": {
                     "id": 16416339,
                     "pronostico": "2-1",
-                    "real": "0-0",
-                    "acierto_1x2": false,
+                    "real": "1-0",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }
