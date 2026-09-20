@@ -2,11 +2,11 @@
     "participante": "carlos",
     "nombre": "Carlos",
     "insignias": [],
-    "puntos_totales": 27,
-    "puntos_partidos": 27,
+    "puntos_totales": 28,
+    "puntos_partidos": 28,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 27,
+    "aciertos_1x2": 28,
     "aciertos_exactos": 0,
     "partidos_pronosticados": 70,
     "jornadas_jugadas": 7,
@@ -515,8 +515,8 @@
             }
         },
         "J07": {
-            "puntos": 5,
-            "aciertos_1x2": 4,
+            "puntos": 6,
+            "aciertos_1x2": 5,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": true,
@@ -581,10 +581,10 @@
                 "Deportivo de A Coruña_vs_Betis": {
                     "id": 16416313,
                     "pronostico": "2-3",
-                    "real": "0-0",
-                    "acierto_1x2": false,
+                    "real": "0-1",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 },
                 "Villarreal_vs_Levante UD": {
                     "id": 16416294,

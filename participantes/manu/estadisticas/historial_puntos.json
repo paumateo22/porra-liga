@@ -2,15 +2,15 @@
     "participante": "manu",
     "nombre": "Manu",
     "insignias": [],
-    "puntos_totales": 29,
+    "puntos_totales": 28,
     "puntos_partidos": 26,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 1,
+    "puntos_ganador_perdedor": 0,
     "aciertos_1x2": 23,
     "aciertos_exactos": 3,
     "partidos_pronosticados": 50,
     "jornadas_jugadas": 5,
-    "jornadas_ganadas": 2,
+    "jornadas_ganadas": 1,
     "jornadas_perdidas": 1,
     "punto_partida": 2,
     "por_jornada": {
@@ -343,11 +343,11 @@
             }
         },
         "J07": {
-            "puntos": 7,
+            "puntos": 6,
             "aciertos_1x2": 4,
             "aciertos_exactos": 2,
             "bonus": 0,
-            "ganador": true,
+            "ganador": false,
             "perdedor": false,
             "detalle": {
                 "Espanyol_vs_Elche": {
@@ -409,7 +409,7 @@
                 "Deportivo de A Coruña_vs_Betis": {
                     "id": 16416313,
                     "pronostico": "2-1",
-                    "real": "0-0",
+                    "real": "0-1",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
