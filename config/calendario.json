@@ -75,22 +75,6 @@
     ],
     "J02": [
         {
-            "id": 16416293,
-            "local": "Betis",
-            "visitante": "Real Sociedad",
-            "id_escudo_local": 2816,
-            "id_escudo_visitante": 2824,
-            "fecha": "2026-08-21T21:00:00"
-        },
-        {
-            "id": 16416301,
-            "local": "Athletic",
-            "visitante": "Sevilla",
-            "id_escudo_local": 2825,
-            "id_escudo_visitante": 2833,
-            "fecha": "2026-08-22T17:00:00"
-        },
-        {
             "id": 16416298,
             "local": "Valencia",
             "visitante": "Celta",
