@@ -2,12 +2,12 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 30,
-    "puntos_partidos": 30,
+    "puntos_totales": 32,
+    "puntos_partidos": 32,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 27,
-    "aciertos_exactos": 3,
+    "aciertos_1x2": 28,
+    "aciertos_exactos": 4,
     "partidos_pronosticados": 68,
     "jornadas_jugadas": 7,
     "jornadas_ganadas": 2,
@@ -499,9 +499,9 @@
             }
         },
         "J07": {
-            "puntos": 1,
-            "aciertos_1x2": 2,
-            "aciertos_exactos": 0,
+            "puntos": 3,
+            "aciertos_1x2": 3,
+            "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
             "perdedor": true,
@@ -573,10 +573,10 @@
                 "Villarreal_vs_Levante UD": {
                     "id": 16416294,
                     "pronostico": "2-1",
-                    "real": "1-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
+                    "real": "2-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         }
