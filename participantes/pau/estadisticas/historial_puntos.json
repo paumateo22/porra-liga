@@ -7,15 +7,15 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 34,
-    "puntos_partidos": 34,
+    "puntos_totales": 37,
+    "puntos_partidos": 36,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 28,
-    "aciertos_exactos": 6,
+    "puntos_ganador_perdedor": 1,
+    "aciertos_1x2": 29,
+    "aciertos_exactos": 7,
     "partidos_pronosticados": 70,
     "jornadas_jugadas": 7,
-    "jornadas_ganadas": 2,
+    "jornadas_ganadas": 3,
     "jornadas_perdidas": 2,
     "punto_partida": 0,
     "por_jornada": {
@@ -520,11 +520,11 @@
             }
         },
         "J07": {
-            "puntos": 6,
-            "aciertos_1x2": 4,
-            "aciertos_exactos": 2,
+            "puntos": 9,
+            "aciertos_1x2": 5,
+            "aciertos_exactos": 3,
             "bonus": 0,
-            "ganador": false,
+            "ganador": true,
             "perdedor": false,
             "detalle": {
                 "Espanyol_vs_Elche": {
@@ -586,10 +586,10 @@
                 "Deportivo de A Coruña_vs_Betis": {
                     "id": 16416313,
                     "pronostico": "1-1",
-                    "real": "0-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
+                    "real": "1-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": true,
+                    "puntos": 2
                 },
                 "Villarreal_vs_Levante UD": {
                     "id": 16416294,

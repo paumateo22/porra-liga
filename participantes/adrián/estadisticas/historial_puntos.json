@@ -2,16 +2,16 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 31,
-    "puntos_partidos": 31,
+    "puntos_totales": 34,
+    "puntos_partidos": 33,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 28,
-    "aciertos_exactos": 3,
+    "puntos_ganador_perdedor": 1,
+    "aciertos_1x2": 29,
+    "aciertos_exactos": 4,
     "partidos_pronosticados": 68,
     "jornadas_jugadas": 7,
     "jornadas_ganadas": 2,
-    "jornadas_perdidas": 2,
+    "jornadas_perdidas": 1,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -499,12 +499,12 @@
             }
         },
         "J07": {
-            "puntos": 2,
-            "aciertos_1x2": 3,
-            "aciertos_exactos": 0,
+            "puntos": 5,
+            "aciertos_1x2": 4,
+            "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
-            "perdedor": true,
+            "perdedor": false,
             "detalle": {
                 "Espanyol_vs_Elche": {
                     "id": 16416299,
@@ -565,10 +565,10 @@
                 "Deportivo de A Coruña_vs_Betis": {
                     "id": 16416313,
                     "pronostico": "1-1",
-                    "real": "0-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
+                    "real": "1-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": true,
+                    "puntos": 2
                 },
                 "Villarreal_vs_Levante UD": {
                     "id": 16416294,

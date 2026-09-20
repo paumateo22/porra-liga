@@ -7,11 +7,11 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 44,
-    "puntos_partidos": 41,
+    "puntos_totales": 43,
+    "puntos_partidos": 40,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 3,
-    "aciertos_1x2": 33,
+    "aciertos_1x2": 32,
     "aciertos_exactos": 8,
     "partidos_pronosticados": 70,
     "jornadas_jugadas": 7,
@@ -520,8 +520,8 @@
             }
         },
         "J07": {
-            "puntos": 10,
-            "aciertos_1x2": 6,
+            "puntos": 9,
+            "aciertos_1x2": 5,
             "aciertos_exactos": 3,
             "bonus": 0,
             "ganador": true,
@@ -586,10 +586,10 @@
                 "Deportivo de A Coruña_vs_Betis": {
                     "id": 16416313,
                     "pronostico": "1-2",
-                    "real": "0-1",
-                    "acierto_1x2": true,
+                    "real": "1-1",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 },
                 "Villarreal_vs_Levante UD": {
                     "id": 16416294,
