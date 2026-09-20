@@ -7,11 +7,11 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 35,
-    "puntos_partidos": 34,
+    "puntos_totales": 34,
+    "puntos_partidos": 33,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 29,
+    "aciertos_1x2": 28,
     "aciertos_exactos": 5,
     "partidos_pronosticados": 70,
     "jornadas_jugadas": 7,
@@ -20,8 +20,8 @@
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
-            "puntos": 8,
-            "aciertos_1x2": 6,
+            "puntos": 7,
+            "aciertos_1x2": 5,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": true,
@@ -66,14 +66,6 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
-                },
-                "Atlético_vs_Málaga CF": {
-                    "id": 16421055,
-                    "pronostico": "3-0",
-                    "real": "2-0",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
                 },
                 "Valencia_vs_Betis": {
                     "id": 16421049,
@@ -598,6 +590,14 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
+                },
+                "Getafe_vs_Málaga CF": {
+                    "id": 16416303,
+                    "pronostico": "1-0",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         }

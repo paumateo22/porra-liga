@@ -2,22 +2,22 @@
     "participante": "carlos",
     "nombre": "Carlos",
     "insignias": [],
-    "puntos_totales": 29,
-    "puntos_partidos": 29,
+    "puntos_totales": 26,
+    "puntos_partidos": 27,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 28,
-    "aciertos_exactos": 1,
+    "puntos_ganador_perdedor": -1,
+    "aciertos_1x2": 27,
+    "aciertos_exactos": 0,
     "partidos_pronosticados": 70,
     "jornadas_jugadas": 7,
-    "jornadas_ganadas": 3,
+    "jornadas_ganadas": 2,
     "jornadas_perdidas": 3,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
-            "puntos": 8,
-            "aciertos_1x2": 6,
-            "aciertos_exactos": 1,
+            "puntos": 6,
+            "aciertos_1x2": 5,
+            "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": true,
             "perdedor": false,
@@ -61,14 +61,6 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
-                },
-                "Atlético_vs_Málaga CF": {
-                    "id": 16421055,
-                    "pronostico": "2-0",
-                    "real": "2-0",
-                    "acierto_1x2": true,
-                    "acierto_exacto": true,
-                    "puntos": 2
                 },
                 "Valencia_vs_Betis": {
                     "id": 16421049,
@@ -547,11 +539,11 @@
             }
         },
         "J07": {
-            "puntos": 4,
+            "puntos": 3,
             "aciertos_1x2": 3,
             "aciertos_exactos": 0,
             "bonus": 0,
-            "ganador": true,
+            "ganador": false,
             "perdedor": false,
             "detalle": {
                 "Espanyol_vs_Elche": {
@@ -593,6 +585,14 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
+                },
+                "Getafe_vs_Málaga CF": {
+                    "id": 16416303,
+                    "pronostico": "2-0",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         }
