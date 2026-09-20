@@ -102,17 +102,6 @@
     ],
     "J02": [
         {
-            "id": 16416298,
-            "local": "Valencia",
-            "visitante": "Celta",
-            "id_escudo_local": 2828,
-            "id_escudo_visitante": 2821,
-            "fecha": "2026-08-22T19:30:00",
-            "goles_local": 0,
-            "goles_visitante": 0,
-            "estado": "finished"
-        },
-        {
             "id": 16416306,
             "local": "Espanyol",
             "visitante": "Real Madrid",
@@ -745,12 +734,23 @@
             "id_escudo_local": 2828,
             "id_escudo_visitante": 2824,
             "fecha": "2026-09-20T21:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
+            "goles_local": 0,
+            "goles_visitante": 0,
+            "estado": "inprogress"
         }
     ],
     "J08": [
+        {
+            "id": 16421060,
+            "local": "FC Barcelona",
+            "visitante": "Getafe",
+            "id_escudo_local": 2817,
+            "id_escudo_visitante": 2859,
+            "fecha": "2026-10-10T18:30:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
         {
             "id": 16421066,
             "local": "Real Madrid",
@@ -801,17 +801,6 @@
             "visitante": "Celta",
             "id_escudo_local": 2846,
             "id_escudo_visitante": 2821,
-            "fecha": "2026-10-11T21:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
-            "id": 16421060,
-            "local": "FC Barcelona",
-            "visitante": "Getafe",
-            "id_escudo_local": 2817,
-            "id_escudo_visitante": 2859,
             "fecha": "2026-10-11T21:00:00",
             "goles_local": null,
             "goles_visitante": null,
