@@ -7,11 +7,11 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 43,
-    "puntos_partidos": 40,
+    "puntos_totales": 42,
+    "puntos_partidos": 39,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 3,
-    "aciertos_1x2": 32,
+    "aciertos_1x2": 31,
     "aciertos_exactos": 8,
     "partidos_pronosticados": 70,
     "jornadas_jugadas": 7,
@@ -512,8 +512,8 @@
             }
         },
         "J07": {
-            "puntos": 10,
-            "aciertos_1x2": 6,
+            "puntos": 9,
+            "aciertos_1x2": 5,
             "aciertos_exactos": 3,
             "bonus": 0,
             "ganador": true,
@@ -594,10 +594,10 @@
                 "Valencia_vs_Real Sociedad": {
                     "id": 16416297,
                     "pronostico": "1-1",
-                    "real": "0-0",
-                    "acierto_1x2": true,
+                    "real": "0-1",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 }
             }
         }
