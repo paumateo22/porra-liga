@@ -1,7 +1,7 @@
 {
     "clave": "J07",
     "jornada": 7,
-    "cerrada": false,
+    "cerrada": true,
     "resultado_jornada": {
         "ganadores": [
             {
@@ -31,7 +31,7 @@
                 "nombre": "Aitor"
             }
         ],
-        "ganador_seguro": false,
+        "ganador_seguro": true,
         "perdedor_seguro": true
     },
     "partidos": [
@@ -165,7 +165,7 @@
         "16416297": {
             "goles_local": 2,
             "goles_visitante": 3,
-            "estado": "inprogress"
+            "estado": "finished"
         }
     },
     "jugadores": [
