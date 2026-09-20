@@ -2,11 +2,11 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 41,
-    "puntos_partidos": 38,
+    "puntos_totales": 40,
+    "puntos_partidos": 37,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 3,
-    "aciertos_1x2": 32,
+    "aciertos_1x2": 31,
     "aciertos_exactos": 6,
     "partidos_pronosticados": 70,
     "jornadas_jugadas": 7,
@@ -97,21 +97,13 @@
             }
         },
         "J02": {
-            "puntos": 5,
-            "aciertos_1x2": 4,
+            "puntos": 4,
+            "aciertos_1x2": 3,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": true,
             "perdedor": false,
             "detalle": {
-                "Valencia_vs_Celta": {
-                    "id": 16416298,
-                    "pronostico": "1-1",
-                    "real": "0-0",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                },
                 "Espanyol_vs_Real Madrid": {
                     "id": 16416306,
                     "pronostico": "0-2",
@@ -593,6 +585,14 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
+                },
+                "Valencia_vs_Real Sociedad": {
+                    "id": 16416297,
+                    "pronostico": "0-3",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         }

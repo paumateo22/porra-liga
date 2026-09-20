@@ -15,8 +15,8 @@
     "aciertos_exactos": 7,
     "partidos_pronosticados": 70,
     "jornadas_jugadas": 7,
-    "jornadas_ganadas": 3,
-    "jornadas_perdidas": 2,
+    "jornadas_ganadas": 2,
+    "jornadas_perdidas": 1,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -102,21 +102,13 @@
             }
         },
         "J02": {
-            "puntos": 2,
+            "puntos": 3,
             "aciertos_1x2": 2,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
-            "perdedor": true,
+            "perdedor": false,
             "detalle": {
-                "Valencia_vs_Celta": {
-                    "id": 16416298,
-                    "pronostico": "1-2",
-                    "real": "0-0",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "Espanyol_vs_Real Madrid": {
                     "id": 16416306,
                     "pronostico": "1-2",
@@ -520,11 +512,11 @@
             }
         },
         "J07": {
-            "puntos": 9,
+            "puntos": 8,
             "aciertos_1x2": 5,
             "aciertos_exactos": 3,
             "bonus": 0,
-            "ganador": true,
+            "ganador": false,
             "perdedor": false,
             "detalle": {
                 "Espanyol_vs_Elche": {
@@ -598,6 +590,14 @@
                     "acierto_1x2": true,
                     "acierto_exacto": true,
                     "puntos": 2
+                },
+                "Valencia_vs_Real Sociedad": {
+                    "id": 16416297,
+                    "pronostico": "2-1",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         }

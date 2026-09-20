@@ -2,16 +2,16 @@
     "participante": "javi",
     "nombre": "Javi",
     "insignias": [],
-    "puntos_totales": 23,
+    "puntos_totales": 24,
     "puntos_partidos": 26,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": -3,
+    "puntos_ganador_perdedor": -2,
     "aciertos_1x2": 23,
     "aciertos_exactos": 3,
     "partidos_pronosticados": 69,
     "jornadas_jugadas": 7,
     "jornadas_ganadas": 1,
-    "jornadas_perdidas": 4,
+    "jornadas_perdidas": 3,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -97,21 +97,13 @@
             }
         },
         "J02": {
-            "puntos": 1,
+            "puntos": 2,
             "aciertos_1x2": 2,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
-            "perdedor": true,
+            "perdedor": false,
             "detalle": {
-                "Valencia_vs_Celta": {
-                    "id": 16416298,
-                    "pronostico": "1-2",
-                    "real": "0-0",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "Espanyol_vs_Real Madrid": {
                     "id": 16416306,
                     "pronostico": "0-2",
@@ -593,6 +585,14 @@
                     "acierto_1x2": true,
                     "acierto_exacto": true,
                     "puntos": 2
+                },
+                "Valencia_vs_Real Sociedad": {
+                    "id": 16416297,
+                    "pronostico": "0-2",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         }

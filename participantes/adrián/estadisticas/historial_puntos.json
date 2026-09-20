@@ -2,11 +2,11 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 34,
-    "puntos_partidos": 33,
+    "puntos_totales": 33,
+    "puntos_partidos": 32,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 29,
+    "aciertos_1x2": 28,
     "aciertos_exactos": 4,
     "partidos_pronosticados": 68,
     "jornadas_jugadas": 7,
@@ -97,21 +97,13 @@
             }
         },
         "J02": {
-            "puntos": 6,
-            "aciertos_1x2": 4,
+            "puntos": 5,
+            "aciertos_1x2": 3,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": true,
             "perdedor": false,
             "detalle": {
-                "Valencia_vs_Celta": {
-                    "id": 16416298,
-                    "pronostico": "2-2",
-                    "real": "0-0",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                },
                 "Espanyol_vs_Real Madrid": {
                     "id": 16416306,
                     "pronostico": "1-3",
@@ -577,6 +569,14 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
+                },
+                "Valencia_vs_Real Sociedad": {
+                    "id": 16416297,
+                    "pronostico": "1-3",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         }
