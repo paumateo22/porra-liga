@@ -141,7 +141,7 @@
         },
         "16416339": {
             "goles_local": 2,
-            "goles_visitante": 0,
+            "goles_visitante": 1,
             "estado": "inprogress"
         },
         "16416313": {
@@ -228,12 +228,12 @@
             "nombre": "Manu",
             "insignias": [],
             "aciertos_1x2": 4,
-            "aciertos_exactos": 1,
+            "aciertos_exactos": 2,
             "bonus": 0,
             "elegible": true,
             "ganador": true,
             "perdedor": false,
-            "puntos": 6,
+            "puntos": 7,
             "pronosticados": 10,
             "predicciones": {
                 "16416299": {
@@ -275,8 +275,8 @@
                 "16416339": {
                     "pronostico": "2-1",
                     "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         },
