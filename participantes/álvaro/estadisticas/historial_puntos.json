@@ -2,12 +2,12 @@
     "participante": "álvaro",
     "nombre": "Álvaro",
     "insignias": [],
-    "puntos_totales": 34,
-    "puntos_partidos": 34,
+    "puntos_totales": 36,
+    "puntos_partidos": 36,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 26,
-    "aciertos_exactos": 8,
+    "aciertos_1x2": 27,
+    "aciertos_exactos": 9,
     "partidos_pronosticados": 70,
     "jornadas_jugadas": 7,
     "jornadas_ganadas": 1,
@@ -507,9 +507,9 @@
             }
         },
         "J07": {
-            "puntos": 7,
-            "aciertos_1x2": 4,
-            "aciertos_exactos": 3,
+            "puntos": 9,
+            "aciertos_1x2": 5,
+            "aciertos_exactos": 4,
             "bonus": 0,
             "ganador": false,
             "perdedor": false,
@@ -589,10 +589,10 @@
                 "Valencia_vs_Real Sociedad": {
                     "id": 16416297,
                     "pronostico": "1-1",
-                    "real": "0-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
+                    "real": "1-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         }
