@@ -2,16 +2,16 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 40,
-    "puntos_partidos": 38,
+    "puntos_totales": 42,
+    "puntos_partidos": 39,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 2,
-    "aciertos_1x2": 32,
+    "puntos_ganador_perdedor": 3,
+    "aciertos_1x2": 33,
     "aciertos_exactos": 6,
     "partidos_pronosticados": 70,
     "jornadas_jugadas": 7,
     "jornadas_ganadas": 4,
-    "jornadas_perdidas": 2,
+    "jornadas_perdidas": 1,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -539,12 +539,12 @@
             }
         },
         "J07": {
-            "puntos": 0,
-            "aciertos_1x2": 1,
+            "puntos": 2,
+            "aciertos_1x2": 2,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
-            "perdedor": true,
+            "perdedor": false,
             "detalle": {
                 "Espanyol_vs_Elche": {
                     "id": 16416299,
@@ -589,10 +589,10 @@
                 "Getafe_vs_Málaga CF": {
                     "id": 16416303,
                     "pronostico": "1-1",
-                    "real": "0-1",
-                    "acierto_1x2": false,
+                    "real": "0-0",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }
