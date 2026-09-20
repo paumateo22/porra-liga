@@ -7,12 +7,12 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 44,
-    "puntos_partidos": 41,
+    "puntos_totales": 43,
+    "puntos_partidos": 40,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 3,
     "aciertos_1x2": 33,
-    "aciertos_exactos": 8,
+    "aciertos_exactos": 7,
     "partidos_pronosticados": 70,
     "jornadas_jugadas": 7,
     "jornadas_ganadas": 4,
@@ -102,21 +102,13 @@
             }
         },
         "J02": {
-            "puntos": 9,
-            "aciertos_1x2": 6,
-            "aciertos_exactos": 2,
+            "puntos": 7,
+            "aciertos_1x2": 5,
+            "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": true,
             "perdedor": false,
             "detalle": {
-                "Rayo_vs_Alavés": {
-                    "id": 16416292,
-                    "pronostico": "1-1",
-                    "real": "1-1",
-                    "acierto_1x2": true,
-                    "acierto_exacto": true,
-                    "puntos": 2
-                },
                 "Betis_vs_Real Sociedad": {
                     "id": 16416293,
                     "pronostico": "2-1",
@@ -544,8 +536,8 @@
             }
         },
         "J07": {
-            "puntos": 7,
-            "aciertos_1x2": 4,
+            "puntos": 8,
+            "aciertos_1x2": 5,
             "aciertos_exactos": 2,
             "bonus": 0,
             "ganador": true,
@@ -598,6 +590,14 @@
                     "acierto_1x2": true,
                     "acierto_exacto": true,
                     "puntos": 2
+                },
+                "Atlético_vs_Real Madrid": {
+                    "id": 16416339,
+                    "pronostico": "2-2",
+                    "real": "0-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         }

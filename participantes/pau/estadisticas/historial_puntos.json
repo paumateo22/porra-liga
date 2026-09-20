@@ -7,16 +7,16 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 36,
-    "puntos_partidos": 35,
+    "puntos_totales": 34,
+    "puntos_partidos": 34,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 1,
+    "puntos_ganador_perdedor": 0,
     "aciertos_1x2": 29,
-    "aciertos_exactos": 6,
+    "aciertos_exactos": 5,
     "partidos_pronosticados": 70,
     "jornadas_jugadas": 7,
     "jornadas_ganadas": 2,
-    "jornadas_perdidas": 1,
+    "jornadas_perdidas": 2,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -102,21 +102,13 @@
             }
         },
         "J02": {
-            "puntos": 6,
-            "aciertos_1x2": 4,
-            "aciertos_exactos": 2,
+            "puntos": 3,
+            "aciertos_1x2": 3,
+            "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
-            "perdedor": false,
+            "perdedor": true,
             "detalle": {
-                "Rayo_vs_Alavés": {
-                    "id": 16416292,
-                    "pronostico": "1-1",
-                    "real": "1-1",
-                    "acierto_1x2": true,
-                    "acierto_exacto": true,
-                    "puntos": 2
-                },
                 "Betis_vs_Real Sociedad": {
                     "id": 16416293,
                     "pronostico": "2-1",
@@ -544,8 +536,8 @@
             }
         },
         "J07": {
-            "puntos": 4,
-            "aciertos_1x2": 3,
+            "puntos": 5,
+            "aciertos_1x2": 4,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
@@ -598,6 +590,14 @@
                     "acierto_1x2": true,
                     "acierto_exacto": true,
                     "puntos": 2
+                },
+                "Atlético_vs_Real Madrid": {
+                    "id": 16416339,
+                    "pronostico": "2-2",
+                    "real": "0-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         }
