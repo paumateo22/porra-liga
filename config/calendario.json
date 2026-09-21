@@ -41,6 +41,14 @@
             "fecha": "2026-08-17T21:00:00"
         },
         {
+            "id": 16421055,
+            "local": "Atlético",
+            "visitante": "Málaga CF",
+            "id_escudo_local": 2836,
+            "id_escudo_visitante": 2830,
+            "fecha": "2026-08-19T21:00:00"
+        },
+        {
             "id": 16421049,
             "local": "Valencia",
             "visitante": "Betis",
@@ -74,6 +82,38 @@
         }
     ],
     "J02": [
+        {
+            "id": 16416292,
+            "local": "Rayo",
+            "visitante": "Alavés",
+            "id_escudo_local": 2818,
+            "id_escudo_visitante": 2885,
+            "fecha": "2026-08-20T21:00:00"
+        },
+        {
+            "id": 16416293,
+            "local": "Betis",
+            "visitante": "Real Sociedad",
+            "id_escudo_local": 2816,
+            "id_escudo_visitante": 2824,
+            "fecha": "2026-08-21T21:00:00"
+        },
+        {
+            "id": 16416301,
+            "local": "Athletic",
+            "visitante": "Sevilla",
+            "id_escudo_local": 2825,
+            "id_escudo_visitante": 2833,
+            "fecha": "2026-08-22T17:00:00"
+        },
+        {
+            "id": 16416298,
+            "local": "Valencia",
+            "visitante": "Celta",
+            "id_escudo_local": 2828,
+            "id_escudo_visitante": 2821,
+            "fecha": "2026-08-22T19:30:00"
+        },
         {
             "id": 16416306,
             "local": "Espanyol",
