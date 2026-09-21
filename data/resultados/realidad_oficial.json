@@ -796,6 +796,17 @@
     ],
     "J08": [
         {
+            "id": 16421056,
+            "local": "Alavés",
+            "visitante": "Atlético",
+            "id_escudo_local": 2885,
+            "id_escudo_visitante": 2836,
+            "fecha": "2026-10-10T16:15:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
             "id": 16421060,
             "local": "FC Barcelona",
             "visitante": "Getafe",
@@ -824,17 +835,6 @@
             "id_escudo_local": 2824,
             "id_escudo_visitante": 2832,
             "fecha": "2026-10-11T16:15:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
-            "id": 16421056,
-            "local": "Alavés",
-            "visitante": "Atlético",
-            "id_escudo_local": 2885,
-            "id_escudo_visitante": 2836,
-            "fecha": "2026-10-11T21:00:00",
             "goles_local": null,
             "goles_visitante": null,
             "estado": "notstarted"
