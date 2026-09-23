@@ -575,6 +575,14 @@
     ],
     "J08": [
         {
+            "id": 16421065,
+            "local": "Rayo",
+            "visitante": "Athletic",
+            "id_escudo_local": 2818,
+            "id_escudo_visitante": 2825,
+            "fecha": "2026-10-10T14:00:00"
+        },
+        {
             "id": 16421056,
             "local": "Alavés",
             "visitante": "Atlético",
@@ -612,7 +620,7 @@
             "visitante": "Osasuna",
             "id_escudo_local": 2816,
             "id_escudo_visitante": 2820,
-            "fecha": "2026-10-11T21:00:00"
+            "fecha": "2026-10-11T18:30:00"
         },
         {
             "id": 16421058,
@@ -628,14 +636,6 @@
             "visitante": "Espanyol",
             "id_escudo_local": 2830,
             "id_escudo_visitante": 2814,
-            "fecha": "2026-10-11T21:00:00"
-        },
-        {
-            "id": 16421065,
-            "local": "Rayo",
-            "visitante": "Athletic",
-            "id_escudo_local": 2818,
-            "id_escudo_visitante": 2825,
             "fecha": "2026-10-11T21:00:00"
         },
         {
