@@ -796,6 +796,17 @@
     ],
     "J08": [
         {
+            "id": 16421062,
+            "local": "Málaga CF",
+            "visitante": "Espanyol",
+            "id_escudo_local": 2830,
+            "id_escudo_visitante": 2814,
+            "fecha": "2026-10-09T21:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
             "id": 16421065,
             "local": "Rayo",
             "visitante": "Athletic",
@@ -867,17 +878,6 @@
             "visitante": "Celta",
             "id_escudo_local": 2846,
             "id_escudo_visitante": 2821,
-            "fecha": "2026-10-11T21:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
-            "id": 16421062,
-            "local": "Málaga CF",
-            "visitante": "Espanyol",
-            "id_escudo_local": 2830,
-            "id_escudo_visitante": 2814,
             "fecha": "2026-10-11T21:00:00",
             "goles_local": null,
             "goles_visitante": null,
