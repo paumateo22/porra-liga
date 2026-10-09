@@ -2,16 +2,16 @@
     "participante": "carlos",
     "nombre": "Carlos",
     "insignias": [],
-    "puntos_totales": 31,
-    "puntos_partidos": 31,
+    "puntos_totales": 29,
+    "puntos_partidos": 30,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 30,
+    "puntos_ganador_perdedor": -1,
+    "aciertos_1x2": 29,
     "aciertos_exactos": 1,
-    "partidos_pronosticados": 70,
-    "jornadas_jugadas": 7,
+    "partidos_pronosticados": 80,
+    "jornadas_jugadas": 8,
     "jornadas_ganadas": 3,
-    "jornadas_perdidas": 3,
+    "jornadas_perdidas": 4,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -105,8 +105,8 @@
             }
         },
         "J02": {
-            "puntos": 2,
-            "aciertos_1x2": 3,
+            "puntos": 1,
+            "aciertos_1x2": 2,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -140,14 +140,6 @@
                     "id": 16416298,
                     "pronostico": "2-2",
                     "real": "0-0",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                },
-                "Espanyol_vs_Real Madrid": {
-                    "id": 16416306,
-                    "pronostico": "0-2",
-                    "real": "1-2",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
@@ -630,6 +622,24 @@
                     "id": 16416297,
                     "pronostico": "1-1",
                     "real": "2-3",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                }
+            }
+        },
+        "J08": {
+            "puntos": -1,
+            "aciertos_1x2": 0,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "ganador": false,
+            "perdedor": true,
+            "detalle": {
+                "Málaga CF_vs_Espanyol": {
+                    "id": 16421062,
+                    "pronostico": "2-2",
+                    "real": "0-1",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0

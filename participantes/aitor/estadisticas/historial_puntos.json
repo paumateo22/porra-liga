@@ -2,15 +2,15 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 43,
-    "puntos_partidos": 41,
+    "puntos_totales": 45,
+    "puntos_partidos": 42,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 2,
+    "puntos_ganador_perdedor": 3,
     "aciertos_1x2": 35,
-    "aciertos_exactos": 6,
-    "partidos_pronosticados": 70,
-    "jornadas_jugadas": 7,
-    "jornadas_ganadas": 4,
+    "aciertos_exactos": 7,
+    "partidos_pronosticados": 80,
+    "jornadas_jugadas": 8,
+    "jornadas_ganadas": 5,
     "jornadas_perdidas": 2,
     "punto_partida": 0,
     "por_jornada": {
@@ -105,8 +105,8 @@
             }
         },
         "J02": {
-            "puntos": 5,
-            "aciertos_1x2": 5,
+            "puntos": 4,
+            "aciertos_1x2": 4,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -140,14 +140,6 @@
                     "id": 16416298,
                     "pronostico": "1-1",
                     "real": "0-0",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                },
-                "Espanyol_vs_Real Madrid": {
-                    "id": 16416306,
-                    "pronostico": "0-2",
-                    "real": "1-2",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
@@ -633,6 +625,24 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
+                }
+            }
+        },
+        "J08": {
+            "puntos": 3,
+            "aciertos_1x2": 1,
+            "aciertos_exactos": 1,
+            "bonus": 0,
+            "ganador": true,
+            "perdedor": false,
+            "detalle": {
+                "Málaga CF_vs_Espanyol": {
+                    "id": 16421062,
+                    "pronostico": "0-1",
+                    "real": "0-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         }
