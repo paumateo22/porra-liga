@@ -2,11 +2,11 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 36,
-    "puntos_partidos": 36,
+    "puntos_totales": 37,
+    "puntos_partidos": 37,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 31,
+    "aciertos_1x2": 32,
     "aciertos_exactos": 5,
     "partidos_pronosticados": 78,
     "jornadas_jugadas": 8,
@@ -105,8 +105,8 @@
             }
         },
         "J02": {
-            "puntos": 5,
-            "aciertos_1x2": 4,
+            "puntos": 6,
+            "aciertos_1x2": 5,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
@@ -140,6 +140,14 @@
                     "id": 16416298,
                     "pronostico": "2-2",
                     "real": "0-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "Espanyol_vs_Real Madrid": {
+                    "id": 16416306,
+                    "pronostico": "1-3",
+                    "real": "1-2",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1

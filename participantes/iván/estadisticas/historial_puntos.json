@@ -7,11 +7,11 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 50,
-    "puntos_partidos": 46,
+    "puntos_totales": 51,
+    "puntos_partidos": 47,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 4,
-    "aciertos_1x2": 35,
+    "aciertos_1x2": 36,
     "aciertos_exactos": 11,
     "partidos_pronosticados": 80,
     "jornadas_jugadas": 8,
@@ -110,8 +110,8 @@
             }
         },
         "J02": {
-            "puntos": 8,
-            "aciertos_1x2": 5,
+            "puntos": 9,
+            "aciertos_1x2": 6,
             "aciertos_exactos": 2,
             "bonus": 0,
             "ganador": true,
@@ -145,6 +145,14 @@
                     "id": 16416298,
                     "pronostico": "2-2",
                     "real": "0-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "Espanyol_vs_Real Madrid": {
+                    "id": 16416306,
+                    "pronostico": "1-3",
+                    "real": "1-2",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1

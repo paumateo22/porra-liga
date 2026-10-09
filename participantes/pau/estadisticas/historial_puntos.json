@@ -7,12 +7,12 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 39,
-    "puntos_partidos": 38,
+    "puntos_totales": 41,
+    "puntos_partidos": 40,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 31,
-    "aciertos_exactos": 7,
+    "aciertos_1x2": 32,
+    "aciertos_exactos": 8,
     "partidos_pronosticados": 80,
     "jornadas_jugadas": 8,
     "jornadas_ganadas": 3,
@@ -110,9 +110,9 @@
             }
         },
         "J02": {
-            "puntos": 4,
-            "aciertos_1x2": 3,
-            "aciertos_exactos": 1,
+            "puntos": 6,
+            "aciertos_1x2": 4,
+            "aciertos_exactos": 2,
             "bonus": 0,
             "ganador": false,
             "perdedor": false,
@@ -148,6 +148,14 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
+                },
+                "Espanyol_vs_Real Madrid": {
+                    "id": 16416306,
+                    "pronostico": "1-2",
+                    "real": "1-2",
+                    "acierto_1x2": true,
+                    "acierto_exacto": true,
+                    "puntos": 2
                 },
                 "Atlético_vs_Villarreal": {
                     "id": 16416302,

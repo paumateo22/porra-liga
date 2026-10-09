@@ -2,11 +2,11 @@
     "participante": "álvaro",
     "nombre": "Álvaro",
     "insignias": [],
-    "puntos_totales": 35,
-    "puntos_partidos": 36,
+    "puntos_totales": 36,
+    "puntos_partidos": 37,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": -1,
-    "aciertos_1x2": 27,
+    "aciertos_1x2": 28,
     "aciertos_exactos": 9,
     "partidos_pronosticados": 70,
     "jornadas_jugadas": 7,
@@ -105,8 +105,8 @@
             }
         },
         "J02": {
-            "puntos": 4,
-            "aciertos_1x2": 3,
+            "puntos": 5,
+            "aciertos_1x2": 4,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
@@ -143,6 +143,14 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
+                },
+                "Espanyol_vs_Real Madrid": {
+                    "id": 16416306,
+                    "pronostico": "1-3",
+                    "real": "1-2",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
                 },
                 "Atlético_vs_Villarreal": {
                     "id": 16416302,
