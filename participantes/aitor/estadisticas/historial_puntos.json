@@ -2,16 +2,16 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 45,
-    "puntos_partidos": 42,
+    "puntos_totales": 41,
+    "puntos_partidos": 40,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 3,
-    "aciertos_1x2": 35,
-    "aciertos_exactos": 7,
+    "puntos_ganador_perdedor": 1,
+    "aciertos_1x2": 34,
+    "aciertos_exactos": 6,
     "partidos_pronosticados": 80,
     "jornadas_jugadas": 8,
-    "jornadas_ganadas": 5,
-    "jornadas_perdidas": 2,
+    "jornadas_ganadas": 4,
+    "jornadas_perdidas": 3,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -629,20 +629,20 @@
             }
         },
         "J08": {
-            "puntos": 3,
-            "aciertos_1x2": 1,
-            "aciertos_exactos": 1,
+            "puntos": -1,
+            "aciertos_1x2": 0,
+            "aciertos_exactos": 0,
             "bonus": 0,
-            "ganador": true,
-            "perdedor": false,
+            "ganador": false,
+            "perdedor": true,
             "detalle": {
                 "Málaga CF_vs_Espanyol": {
                     "id": 16421062,
                     "pronostico": "0-1",
-                    "real": "0-1",
-                    "acierto_1x2": true,
-                    "acierto_exacto": true,
-                    "puntos": 2
+                    "real": "1-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         }

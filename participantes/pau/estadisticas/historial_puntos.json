@@ -7,16 +7,16 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 42,
-    "puntos_partidos": 39,
+    "puntos_totales": 39,
+    "puntos_partidos": 38,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 3,
-    "aciertos_1x2": 32,
+    "puntos_ganador_perdedor": 1,
+    "aciertos_1x2": 31,
     "aciertos_exactos": 7,
     "partidos_pronosticados": 80,
     "jornadas_jugadas": 8,
-    "jornadas_ganadas": 4,
-    "jornadas_perdidas": 1,
+    "jornadas_ganadas": 3,
+    "jornadas_perdidas": 2,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -634,20 +634,20 @@
             }
         },
         "J08": {
-            "puntos": 2,
-            "aciertos_1x2": 1,
+            "puntos": -1,
+            "aciertos_1x2": 0,
             "aciertos_exactos": 0,
             "bonus": 0,
-            "ganador": true,
-            "perdedor": false,
+            "ganador": false,
+            "perdedor": true,
             "detalle": {
                 "Málaga CF_vs_Espanyol": {
                     "id": 16421062,
                     "pronostico": "1-2",
-                    "real": "0-1",
-                    "acierto_1x2": true,
+                    "real": "1-1",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 }
             }
         }

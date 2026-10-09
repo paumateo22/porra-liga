@@ -2,16 +2,16 @@
     "participante": "carlos",
     "nombre": "Carlos",
     "insignias": [],
-    "puntos_totales": 29,
-    "puntos_partidos": 30,
+    "puntos_totales": 32,
+    "puntos_partidos": 31,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": -1,
-    "aciertos_1x2": 29,
+    "puntos_ganador_perdedor": 1,
+    "aciertos_1x2": 30,
     "aciertos_exactos": 1,
     "partidos_pronosticados": 80,
     "jornadas_jugadas": 8,
-    "jornadas_ganadas": 3,
-    "jornadas_perdidas": 4,
+    "jornadas_ganadas": 4,
+    "jornadas_perdidas": 3,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -629,20 +629,20 @@
             }
         },
         "J08": {
-            "puntos": -1,
-            "aciertos_1x2": 0,
+            "puntos": 2,
+            "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "bonus": 0,
-            "ganador": false,
-            "perdedor": true,
+            "ganador": true,
+            "perdedor": false,
             "detalle": {
                 "Málaga CF_vs_Espanyol": {
                     "id": 16421062,
                     "pronostico": "2-2",
-                    "real": "0-1",
-                    "acierto_1x2": false,
+                    "real": "1-1",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }
