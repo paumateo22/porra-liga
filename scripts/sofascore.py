@@ -66,9 +66,13 @@ def get(sesion, ruta, intentos=3):
         try:
             r = sesion.get(url, headers=HEADERS, timeout=20)
             if r.status_code == 404:
+                print(f"   ⚠️  {ruta}: 404")
                 return None
             if r.status_code == 200:
                 return r.json()
+            # Antes esto se tragaba cualquier otro código (403 de Cloudflare,
+            # 429, 5xx...) sin decir nada. Ahora queda en el log.
+            print(f"   ⚠️  {ruta}: HTTP {r.status_code}; reintento {n + 1}/{intentos}")
         except Exception as e:  # noqa: BLE001
             print(f"   ⚠️  Fallo en {ruta} ({e}); reintento {n + 1}/{intentos}")
         time.sleep(1.5 * (n + 1))
