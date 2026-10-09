@@ -12,12 +12,16 @@ from utils import cargar_settings
 
 BASE = "https://www.sofascore.com/api/v1"
 
+# OJO: no fijar aquí un User-Agent. curl_cffi ya manda el que corresponde al
+# perfil que imita; si lo pisamos con otro distinto, Cloudflare ve que la huella
+# TLS y el User-Agent no cuadran y responde 403.
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-                  "(KHTML, like Gecko) Chrome/125.0 Safari/537.36",
     "Referer": "https://www.sofascore.com/",
     "Accept": "*/*",
 }
+
+# Perfiles a probar por orden si uno recibe 403.
+PERFILES = ("chrome", "safari17_0", "firefox133")
 
 # Normalización de nombres de equipo tal y como los queremos mostrar.
 # SofaScore usa nombres cortos en inglés/español mezclados.
@@ -56,8 +60,10 @@ def nombre_equipo(bruto):
     return MAPA_EQUIPOS.get(bruto, bruto)
 
 
-def crear_sesion():
-    return requests.Session(impersonate="chrome")
+def crear_sesion(perfil=PERFILES[0]):
+    sesion = requests.Session(impersonate=perfil)
+    sesion.perfil = perfil
+    return sesion
 
 
 def get(sesion, ruta, intentos=3):
@@ -72,7 +78,12 @@ def get(sesion, ruta, intentos=3):
                 return r.json()
             # Antes esto se tragaba cualquier otro código (403 de Cloudflare,
             # 429, 5xx...) sin decir nada. Ahora queda en el log.
-            print(f"   ⚠️  {ruta}: HTTP {r.status_code}; reintento {n + 1}/{intentos}")
+            print(f"   ⚠️  {ruta}: HTTP {r.status_code} (perfil {getattr(sesion, 'perfil', '?')}); reintento {n + 1}/{intentos}")
+            if r.status_code == 403:
+                # Cambiar de perfil por si el actual está marcado.
+                actual = getattr(sesion, "perfil", PERFILES[0])
+                i = (PERFILES.index(actual) + 1) % len(PERFILES) if actual in PERFILES else 0
+                sesion = crear_sesion(PERFILES[i])
         except Exception as e:  # noqa: BLE001
             print(f"   ⚠️  Fallo en {ruta} ({e}); reintento {n + 1}/{intentos}")
         time.sleep(1.5 * (n + 1))
