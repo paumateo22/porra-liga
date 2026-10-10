@@ -2,11 +2,11 @@
     "participante": "javi",
     "nombre": "Javi",
     "insignias": [],
-    "puntos_totales": 26,
-    "puntos_partidos": 29,
+    "puntos_totales": 25,
+    "puntos_partidos": 28,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": -3,
-    "aciertos_1x2": 26,
+    "aciertos_1x2": 25,
     "aciertos_exactos": 3,
     "partidos_pronosticados": 69,
     "jornadas_jugadas": 7,
@@ -105,8 +105,8 @@
             }
         },
         "J02": {
-            "puntos": 2,
-            "aciertos_1x2": 3,
+            "puntos": 1,
+            "aciertos_1x2": 2,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -140,14 +140,6 @@
                     "id": 16416306,
                     "pronostico": "0-2",
                     "real": "1-2",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                },
-                "Elche_vs_FC Barcelona": {
-                    "id": 16416311,
-                    "pronostico": "0-4",
-                    "real": "0-5",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1

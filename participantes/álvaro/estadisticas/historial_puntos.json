@@ -2,16 +2,16 @@
     "participante": "álvaro",
     "nombre": "Álvaro",
     "insignias": [],
-    "puntos_totales": 37,
+    "puntos_totales": 38,
     "puntos_partidos": 39,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": -2,
+    "puntos_ganador_perdedor": -1,
     "aciertos_1x2": 29,
     "aciertos_exactos": 10,
     "partidos_pronosticados": 79,
     "jornadas_jugadas": 8,
     "jornadas_ganadas": 0,
-    "jornadas_perdidas": 2,
+    "jornadas_perdidas": 1,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -105,12 +105,12 @@
             }
         },
         "J02": {
-            "puntos": 3,
+            "puntos": 4,
             "aciertos_1x2": 3,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
-            "perdedor": true,
+            "perdedor": false,
             "detalle": {
                 "Rayo_vs_Alavés": {
                     "id": 16416292,
@@ -151,14 +151,6 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
-                },
-                "Elche_vs_FC Barcelona": {
-                    "id": 16416311,
-                    "pronostico": "1-0",
-                    "real": "0-5",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
                 },
                 "Osasuna_vs_Levante UD": {
                     "id": 16416296,

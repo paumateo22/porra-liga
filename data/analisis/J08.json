@@ -121,8 +121,8 @@
             "estado": "finished"
         },
         "16421060": {
-            "goles_local": null,
-            "goles_visitante": null,
+            "goles_local": 0,
+            "goles_visitante": 0,
             "estado": "notstarted"
         },
         "16421066": {

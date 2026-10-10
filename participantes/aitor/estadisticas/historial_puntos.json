@@ -2,11 +2,11 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 42,
-    "puntos_partidos": 41,
+    "puntos_totales": 41,
+    "puntos_partidos": 40,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 35,
+    "aciertos_1x2": 34,
     "aciertos_exactos": 6,
     "partidos_pronosticados": 80,
     "jornadas_jugadas": 8,
@@ -105,8 +105,8 @@
             }
         },
         "J02": {
-            "puntos": 4,
-            "aciertos_1x2": 4,
+            "puntos": 3,
+            "aciertos_1x2": 3,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -148,14 +148,6 @@
                     "id": 16416306,
                     "pronostico": "0-2",
                     "real": "1-2",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                },
-                "Elche_vs_FC Barcelona": {
-                    "id": 16416311,
-                    "pronostico": "0-3",
-                    "real": "0-5",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
