@@ -152,14 +152,6 @@
                     "acierto_exacto": false,
                     "puntos": 1
                 },
-                "Osasuna_vs_Levante UD": {
-                    "id": 16416296,
-                    "pronostico": "2-0",
-                    "real": "0-0",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "Málaga CF_vs_Deportivo de A Coruña": {
                     "id": 16416307,
                     "pronostico": "0-0",
@@ -643,6 +635,14 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
+                },
+                "Real Madrid_vs_Villarreal": {
+                    "id": 16421066,
+                    "pronostico": "2-1",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         }
