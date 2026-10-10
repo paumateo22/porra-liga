@@ -123,6 +123,38 @@
             "fecha": "2026-08-22T21:30:00"
         },
         {
+            "id": 16416302,
+            "local": "Atlético",
+            "visitante": "Villarreal",
+            "id_escudo_local": 2836,
+            "id_escudo_visitante": 2819,
+            "fecha": "2026-08-23T17:00:00"
+        },
+        {
+            "id": 16416300,
+            "local": "Getafe",
+            "visitante": "Real Racing Club",
+            "id_escudo_local": 2859,
+            "id_escudo_visitante": 2835,
+            "fecha": "2026-08-23T19:30:00"
+        },
+        {
+            "id": 16416311,
+            "local": "Elche",
+            "visitante": "FC Barcelona",
+            "id_escudo_local": 2846,
+            "id_escudo_visitante": 2817,
+            "fecha": "2026-08-23T21:30:00"
+        },
+        {
+            "id": 16416296,
+            "local": "Osasuna",
+            "visitante": "Levante UD",
+            "id_escudo_local": 2820,
+            "id_escudo_visitante": 2849,
+            "fecha": "2026-08-24T19:30:00"
+        },
+        {
             "id": 16416307,
             "local": "Málaga CF",
             "visitante": "Deportivo de A Coruña",
