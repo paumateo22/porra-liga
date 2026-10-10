@@ -3148,17 +3148,6 @@
             "estado": "notstarted"
         },
         {
-            "id": 16462694,
-            "local": "Rayo",
-            "visitante": "FC Barcelona",
-            "id_escudo_local": 2818,
-            "id_escudo_visitante": 2817,
-            "fecha": "2027-03-21T20:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
             "id": 16462693,
             "local": "Real Racing Club",
             "visitante": "Betis",
@@ -3361,6 +3350,17 @@
             "estado": "notstarted"
         },
         {
+            "id": 16462475,
+            "local": "Espanyol",
+            "visitante": "Málaga CF",
+            "id_escudo_local": 2814,
+            "id_escudo_visitante": 2830,
+            "fecha": "2027-04-11T21:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
             "id": 16462476,
             "local": "Osasuna",
             "visitante": "Real Madrid",
@@ -3489,6 +3489,17 @@
             "visitante": "Espanyol",
             "id_escudo_local": 2817,
             "id_escudo_visitante": 2814,
+            "fecha": "2027-04-18T21:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
+            "id": 16462512,
+            "local": "Getafe",
+            "visitante": "Real Madrid",
+            "id_escudo_local": 2859,
+            "id_escudo_visitante": 2829,
             "fecha": "2027-04-18T21:00:00",
             "goles_local": null,
             "goles_visitante": null,
