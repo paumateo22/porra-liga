@@ -7,12 +7,12 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 45,
-    "puntos_partidos": 43,
+    "puntos_totales": 46,
+    "puntos_partidos": 44,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 2,
     "aciertos_1x2": 34,
-    "aciertos_exactos": 9,
+    "aciertos_exactos": 10,
     "partidos_pronosticados": 80,
     "jornadas_jugadas": 8,
     "jornadas_ganadas": 3,
@@ -618,9 +618,9 @@
             }
         },
         "J08": {
-            "puntos": 4,
+            "puntos": 5,
             "aciertos_1x2": 3,
-            "aciertos_exactos": 1,
+            "aciertos_exactos": 2,
             "bonus": 0,
             "ganador": false,
             "perdedor": false,
@@ -652,10 +652,10 @@
                 "FC Barcelona_vs_Getafe": {
                     "id": 16421060,
                     "pronostico": "3-0",
-                    "real": "2-0",
+                    "real": "3-0",
                     "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         }

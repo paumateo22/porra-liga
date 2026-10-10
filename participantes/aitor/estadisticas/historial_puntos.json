@@ -2,12 +2,12 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 43,
-    "puntos_partidos": 42,
+    "puntos_totales": 42,
+    "puntos_partidos": 41,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 1,
     "aciertos_1x2": 35,
-    "aciertos_exactos": 7,
+    "aciertos_exactos": 6,
     "partidos_pronosticados": 80,
     "jornadas_jugadas": 8,
     "jornadas_ganadas": 4,
@@ -613,9 +613,9 @@
             }
         },
         "J08": {
-            "puntos": 2,
+            "puntos": 1,
             "aciertos_1x2": 2,
-            "aciertos_exactos": 1,
+            "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
             "perdedor": true,
@@ -647,10 +647,10 @@
                 "FC Barcelona_vs_Getafe": {
                     "id": 16421060,
                     "pronostico": "2-0",
-                    "real": "2-0",
+                    "real": "3-0",
                     "acierto_1x2": true,
-                    "acierto_exacto": true,
-                    "puntos": 2
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         }
