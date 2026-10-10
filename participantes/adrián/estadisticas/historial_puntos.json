@@ -3,15 +3,15 @@
     "nombre": "Adrián",
     "insignias": [],
     "puntos_totales": 37,
-    "puntos_partidos": 37,
+    "puntos_partidos": 36,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 0,
+    "puntos_ganador_perdedor": 1,
     "aciertos_1x2": 32,
-    "aciertos_exactos": 5,
+    "aciertos_exactos": 4,
     "partidos_pronosticados": 78,
     "jornadas_jugadas": 8,
     "jornadas_ganadas": 2,
-    "jornadas_perdidas": 2,
+    "jornadas_perdidas": 1,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -105,9 +105,9 @@
             }
         },
         "J02": {
-            "puntos": 6,
-            "aciertos_1x2": 5,
-            "aciertos_exactos": 1,
+            "puntos": 4,
+            "aciertos_1x2": 4,
+            "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
             "perdedor": false,
@@ -151,14 +151,6 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
-                },
-                "Atlético_vs_Villarreal": {
-                    "id": 16416302,
-                    "pronostico": "2-2",
-                    "real": "2-2",
-                    "acierto_1x2": true,
-                    "acierto_exacto": true,
-                    "puntos": 2
                 },
                 "Getafe_vs_Real Racing Club": {
                     "id": 16416300,
@@ -621,12 +613,12 @@
             }
         },
         "J08": {
-            "puntos": -1,
-            "aciertos_1x2": 0,
+            "puntos": 1,
+            "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
-            "perdedor": true,
+            "perdedor": false,
             "detalle": {
                 "Málaga CF_vs_Espanyol": {
                     "id": 16421062,
@@ -635,6 +627,14 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
+                },
+                "Rayo_vs_Athletic": {
+                    "id": 16421065,
+                    "pronostico": "2-2",
+                    "real": "0-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         }
