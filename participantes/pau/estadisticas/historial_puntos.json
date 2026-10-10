@@ -7,12 +7,12 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 43,
-    "puntos_partidos": 41,
+    "puntos_totales": 45,
+    "puntos_partidos": 43,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 2,
-    "aciertos_1x2": 33,
-    "aciertos_exactos": 8,
+    "aciertos_1x2": 34,
+    "aciertos_exactos": 9,
     "partidos_pronosticados": 80,
     "jornadas_jugadas": 8,
     "jornadas_ganadas": 3,
@@ -626,9 +626,9 @@
             }
         },
         "J08": {
-            "puntos": 1,
-            "aciertos_1x2": 1,
-            "aciertos_exactos": 0,
+            "puntos": 3,
+            "aciertos_1x2": 2,
+            "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
             "perdedor": false,
@@ -652,10 +652,10 @@
                 "Alavés_vs_Atlético": {
                     "id": 16421056,
                     "pronostico": "1-2",
-                    "real": "1-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
+                    "real": "1-2",
+                    "acierto_1x2": true,
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         }

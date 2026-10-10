@@ -7,12 +7,12 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 50,
-    "puntos_partidos": 47,
+    "puntos_totales": 52,
+    "puntos_partidos": 49,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 3,
-    "aciertos_1x2": 36,
-    "aciertos_exactos": 11,
+    "aciertos_1x2": 37,
+    "aciertos_exactos": 12,
     "partidos_pronosticados": 80,
     "jornadas_jugadas": 8,
     "jornadas_ganadas": 4,
@@ -626,9 +626,9 @@
             }
         },
         "J08": {
-            "puntos": 2,
-            "aciertos_1x2": 1,
-            "aciertos_exactos": 1,
+            "puntos": 4,
+            "aciertos_1x2": 2,
+            "aciertos_exactos": 2,
             "bonus": 0,
             "ganador": false,
             "perdedor": false,
@@ -652,10 +652,10 @@
                 "Alavés_vs_Atlético": {
                     "id": 16421056,
                     "pronostico": "1-2",
-                    "real": "1-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
+                    "real": "1-2",
+                    "acierto_1x2": true,
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         }

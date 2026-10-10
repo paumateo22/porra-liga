@@ -2,11 +2,11 @@
     "participante": "manu",
     "nombre": "Manu",
     "insignias": [],
-    "puntos_totales": 32,
-    "puntos_partidos": 28,
+    "puntos_totales": 33,
+    "puntos_partidos": 29,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 25,
+    "aciertos_1x2": 26,
     "aciertos_exactos": 3,
     "partidos_pronosticados": 60,
     "jornadas_jugadas": 6,
@@ -441,8 +441,8 @@
             }
         },
         "J08": {
-            "puntos": -1,
-            "aciertos_1x2": 0,
+            "puntos": 0,
+            "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -467,10 +467,10 @@
                 "Alavés_vs_Atlético": {
                     "id": 16421056,
                     "pronostico": "2-3",
-                    "real": "1-1",
-                    "acierto_1x2": false,
+                    "real": "1-2",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }
