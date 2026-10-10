@@ -7,11 +7,11 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 51,
-    "puntos_partidos": 48,
+    "puntos_totales": 52,
+    "puntos_partidos": 49,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 3,
-    "aciertos_1x2": 36,
+    "aciertos_1x2": 37,
     "aciertos_exactos": 12,
     "partidos_pronosticados": 80,
     "jornadas_jugadas": 8,
@@ -618,8 +618,8 @@
             }
         },
         "J08": {
-            "puntos": 4,
-            "aciertos_1x2": 2,
+            "puntos": 5,
+            "aciertos_1x2": 3,
             "aciertos_exactos": 2,
             "bonus": 0,
             "ganador": false,
@@ -648,6 +648,14 @@
                     "acierto_1x2": true,
                     "acierto_exacto": true,
                     "puntos": 2
+                },
+                "FC Barcelona_vs_Getafe": {
+                    "id": 16421060,
+                    "pronostico": "3-0",
+                    "real": "1-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         }

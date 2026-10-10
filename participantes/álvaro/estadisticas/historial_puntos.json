@@ -2,11 +2,11 @@
     "participante": "álvaro",
     "nombre": "Álvaro",
     "insignias": [],
-    "puntos_totales": 38,
-    "puntos_partidos": 39,
+    "puntos_totales": 39,
+    "puntos_partidos": 40,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": -1,
-    "aciertos_1x2": 29,
+    "aciertos_1x2": 30,
     "aciertos_exactos": 10,
     "partidos_pronosticados": 79,
     "jornadas_jugadas": 8,
@@ -613,8 +613,8 @@
             }
         },
         "J08": {
-            "puntos": 3,
-            "aciertos_1x2": 2,
+            "puntos": 4,
+            "aciertos_1x2": 3,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
@@ -635,6 +635,14 @@
                     "acierto_1x2": true,
                     "acierto_exacto": true,
                     "puntos": 2
+                },
+                "FC Barcelona_vs_Getafe": {
+                    "id": 16421060,
+                    "pronostico": "3-1",
+                    "real": "1-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         }
