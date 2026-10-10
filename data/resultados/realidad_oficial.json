@@ -804,7 +804,7 @@
             "fecha": "2026-10-10T14:00:00",
             "goles_local": 0,
             "goles_visitante": 0,
-            "estado": "inprogress"
+            "estado": "suspended"
         },
         {
             "id": 16421056,
@@ -1837,17 +1837,6 @@
             "estado": "notstarted"
         },
         {
-            "id": 16462559,
-            "local": "FC Barcelona",
-            "visitante": "Real Sociedad",
-            "id_escudo_local": 2817,
-            "id_escudo_visitante": 2824,
-            "fecha": "2026-12-20T20:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
             "id": 16462562,
             "local": "Getafe",
             "visitante": "Levante UD",
@@ -2044,6 +2033,17 @@
             "visitante": "Real Racing Club",
             "id_escudo_local": 2836,
             "id_escudo_visitante": 2835,
+            "fecha": "2027-01-10T20:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
+            "id": 16462615,
+            "local": "Deportivo de A Coruña",
+            "visitante": "Rayo",
+            "id_escudo_local": 2832,
+            "id_escudo_visitante": 2818,
             "fecha": "2027-01-10T20:00:00",
             "goles_local": null,
             "goles_visitante": null,
