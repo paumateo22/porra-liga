@@ -4145,17 +4145,6 @@
             "estado": "notstarted"
         },
         {
-            "id": 16462659,
-            "local": "Getafe",
-            "visitante": "FC Barcelona",
-            "id_escudo_local": 2859,
-            "id_escudo_visitante": 2817,
-            "fecha": "2027-05-30T21:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
             "id": 16462662,
             "local": "Levante UD",
             "visitante": "Celta",
