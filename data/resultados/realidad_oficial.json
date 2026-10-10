@@ -168,17 +168,6 @@
             "estado": "finished"
         },
         {
-            "id": 16416311,
-            "local": "Elche",
-            "visitante": "FC Barcelona",
-            "id_escudo_local": 2846,
-            "id_escudo_visitante": 2817,
-            "fecha": "2026-08-23T21:30:00",
-            "goles_local": 0,
-            "goles_visitante": 5,
-            "estado": "finished"
-        },
-        {
             "id": 16416296,
             "local": "Osasuna",
             "visitante": "Levante UD",
@@ -813,8 +802,8 @@
             "id_escudo_local": 2817,
             "id_escudo_visitante": 2859,
             "fecha": "2026-10-10T18:30:00",
-            "goles_local": null,
-            "goles_visitante": null,
+            "goles_local": 0,
+            "goles_visitante": 0,
             "estado": "notstarted"
         },
         {
