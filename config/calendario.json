@@ -1501,14 +1501,6 @@
             "fecha": "2027-01-10T20:00:00"
         },
         {
-            "id": 16462615,
-            "local": "Deportivo de A Coruña",
-            "visitante": "Rayo",
-            "id_escudo_local": 2832,
-            "id_escudo_visitante": 2818,
-            "fecha": "2027-01-10T20:00:00"
-        },
-        {
             "id": 16462618,
             "local": "Elche",
             "visitante": "Getafe",
@@ -1760,6 +1752,14 @@
             "visitante": "Real Sociedad",
             "id_escudo_local": 2849,
             "id_escudo_visitante": 2824,
+            "fecha": "2027-01-31T20:00:00"
+        },
+        {
+            "id": 16462525,
+            "local": "Málaga CF",
+            "visitante": "Alavés",
+            "id_escudo_local": 2830,
+            "id_escudo_visitante": 2885,
             "fecha": "2027-01-31T20:00:00"
         },
         {
