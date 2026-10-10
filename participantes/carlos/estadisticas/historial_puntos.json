@@ -2,11 +2,11 @@
     "participante": "carlos",
     "nombre": "Carlos",
     "insignias": [],
-    "puntos_totales": 35,
-    "puntos_partidos": 34,
+    "puntos_totales": 34,
+    "puntos_partidos": 33,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 33,
+    "aciertos_1x2": 32,
     "aciertos_exactos": 1,
     "partidos_pronosticados": 80,
     "jornadas_jugadas": 8,
@@ -621,8 +621,8 @@
             }
         },
         "J08": {
-            "puntos": 4,
-            "aciertos_1x2": 3,
+            "puntos": 3,
+            "aciertos_1x2": 2,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": true,
@@ -647,10 +647,10 @@
                 "Alavés_vs_Atlético": {
                     "id": 16421056,
                     "pronostico": "0-2",
-                    "real": "0-1",
-                    "acierto_1x2": true,
+                    "real": "1-1",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 }
             }
         }

@@ -2,11 +2,11 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 42,
-    "puntos_partidos": 41,
+    "puntos_totales": 41,
+    "puntos_partidos": 40,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 35,
+    "aciertos_1x2": 34,
     "aciertos_exactos": 6,
     "partidos_pronosticados": 80,
     "jornadas_jugadas": 8,
@@ -621,8 +621,8 @@
             }
         },
         "J08": {
-            "puntos": 0,
-            "aciertos_1x2": 1,
+            "puntos": -1,
+            "aciertos_1x2": 0,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -647,10 +647,10 @@
                 "Alavés_vs_Atlético": {
                     "id": 16421056,
                     "pronostico": "1-3",
-                    "real": "0-1",
-                    "acierto_1x2": true,
+                    "real": "1-1",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 }
             }
         }
