@@ -2,11 +2,11 @@
     "participante": "javi",
     "nombre": "Javi",
     "insignias": [],
-    "puntos_totales": 25,
-    "puntos_partidos": 28,
+    "puntos_totales": 26,
+    "puntos_partidos": 29,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": -3,
-    "aciertos_1x2": 25,
+    "aciertos_1x2": 26,
     "aciertos_exactos": 3,
     "partidos_pronosticados": 69,
     "jornadas_jugadas": 7,
@@ -105,8 +105,8 @@
             }
         },
         "J02": {
-            "puntos": 1,
-            "aciertos_1x2": 2,
+            "puntos": 2,
+            "aciertos_1x2": 3,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -143,6 +143,38 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
+                },
+                "Atlético_vs_Villarreal": {
+                    "id": 16416302,
+                    "pronostico": "3-2",
+                    "real": "2-2",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Getafe_vs_Real Racing Club": {
+                    "id": 16416300,
+                    "pronostico": "1-2",
+                    "real": "1-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Elche_vs_FC Barcelona": {
+                    "id": 16416311,
+                    "pronostico": "0-4",
+                    "real": "0-5",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "Osasuna_vs_Levante UD": {
+                    "id": 16416296,
+                    "pronostico": "2-0",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 },
                 "Málaga CF_vs_Deportivo de A Coruña": {
                     "id": 16416307,
