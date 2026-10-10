@@ -802,9 +802,9 @@
             "id_escudo_local": 2817,
             "id_escudo_visitante": 2859,
             "fecha": "2026-10-10T18:30:00",
-            "goles_local": 0,
+            "goles_local": 1,
             "goles_visitante": 0,
-            "estado": "notstarted"
+            "estado": "inprogress"
         },
         {
             "id": 16421066,
