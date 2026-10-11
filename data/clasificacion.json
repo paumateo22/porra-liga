@@ -1,6 +1,6 @@
 {
     "competicion": "LaLiga 2026-27",
-    "generado": "2026-10-11T17:40:13",
+    "generado": "2026-10-11T17:46:10",
     "jornadas_calculadas": [
         "J01",
         "J02",
@@ -198,12 +198,12 @@
             "slug": "aitor",
             "nombre": "Aitor",
             "insignias": [],
-            "puntos_totales": 45,
-            "puntos_partidos": 44,
+            "puntos_totales": 46,
+            "puntos_partidos": 45,
             "bonus_rendimiento": 0,
             "puntos_ganador_perdedor": 1,
             "aciertos_1x2": 38,
-            "aciertos_exactos": 6,
+            "aciertos_exactos": 7,
             "partidos_pronosticados": 80,
             "jornadas_jugadas": 8,
             "jornadas_ganadas": 4,
@@ -267,9 +267,9 @@
                     "perdedor": true
                 },
                 "J08": {
-                    "puntos": 3,
+                    "puntos": 4,
                     "aciertos_1x2": 4,
-                    "aciertos_exactos": 0,
+                    "aciertos_exactos": 1,
                     "bonus": 0,
                     "ganador": false,
                     "perdedor": true
