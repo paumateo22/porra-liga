@@ -96,7 +96,10 @@ function pintar() {
   const reales = Object.fromEntries((REALIDAD[clave] || []).map((p) => [p.id, p]));
 
   document.getElementById("partidos").innerHTML = CALENDARIO[clave].map((p) => {
-    const empezado = reales[p.id] && reales[p.id].estado !== "notstarted";
+    // Bloqueado si ya empezó de verdad. Uno suspendido/aplazado solo se bloquea
+    // cuando su fecha (la nueva, si SofaScore la ha cambiado) ya ha pasado.
+    const empezado = partidoEmpezado(reales[p.id])
+      || (partidoNoJugado(reales[p.id]) && new Date(p.fecha) <= Date.now());
     return `
       <div class="partido">
         <span class="fecha-partido">${formatearFechaHora(p.fecha)}</span>
@@ -162,6 +165,9 @@ function marcarBloqueados() {
     const enDirecto = esPartidoEnDirecto(reales[id]);
     let texto;
     if (enDirecto) texto = "⚽ en directo ahora mismo";
+    else if (partidoNoJugado(reales[id])) texto = PREVIOS[id]
+      ? "⏸ suspendido · pendiente de nueva fecha · se conserva tu pronóstico"
+      : "⏸ suspendido · pendiente de nueva fecha";
     else if (PREVIOS[id]) texto = "🔒 ya jugado · se conserva tu pronóstico";
     else texto = "🔒 ya jugado · sin pronóstico";
     fila.insertAdjacentHTML("beforeend",
