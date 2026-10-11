@@ -3,15 +3,15 @@
     "nombre": "Manu",
     "insignias": [],
     "puntos_totales": 38,
-    "puntos_partidos": 33,
+    "puntos_partidos": 34,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 30,
+    "puntos_ganador_perdedor": 0,
+    "aciertos_1x2": 31,
     "aciertos_exactos": 3,
     "partidos_pronosticados": 60,
     "jornadas_jugadas": 6,
     "jornadas_ganadas": 2,
-    "jornadas_perdidas": 1,
+    "jornadas_perdidas": 2,
     "punto_partida": 4,
     "por_jornada": {
         "J02": {
@@ -90,6 +90,14 @@
                     "id": 16416296,
                     "pronostico": "2-0",
                     "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Málaga CF_vs_Deportivo de A Coruña": {
+                    "id": 16416307,
+                    "pronostico": "2-0",
+                    "real": "1-1",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
@@ -450,11 +458,11 @@
         },
         "J08": {
             "puntos": 5,
-            "aciertos_1x2": 5,
+            "aciertos_1x2": 6,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
-            "perdedor": false,
+            "perdedor": true,
             "detalle": {
                 "Málaga CF_vs_Espanyol": {
                     "id": 16421062,
@@ -511,6 +519,22 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
+                },
+                "Betis_vs_Osasuna": {
+                    "id": 16421054,
+                    "pronostico": "3-1",
+                    "real": "5-2",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "Real Racing Club_vs_Valencia": {
+                    "id": 16421064,
+                    "pronostico": "2-1",
+                    "real": "2-2",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         }

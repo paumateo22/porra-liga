@@ -2,15 +2,15 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 42,
-    "puntos_partidos": 41,
+    "puntos_totales": 43,
+    "puntos_partidos": 43,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 36,
+    "puntos_ganador_perdedor": 0,
+    "aciertos_1x2": 38,
     "aciertos_exactos": 5,
     "partidos_pronosticados": 78,
     "jornadas_jugadas": 8,
-    "jornadas_ganadas": 3,
+    "jornadas_ganadas": 2,
     "jornadas_perdidas": 2,
     "punto_partida": 0,
     "por_jornada": {
@@ -70,6 +70,14 @@
                     "acierto_exacto": true,
                     "puntos": 2
                 },
+                "Valencia_vs_Betis": {
+                    "id": 16421049,
+                    "pronostico": "2-2",
+                    "real": "0-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
                 "Real Madrid_vs_Real Sociedad": {
                     "id": 16421051,
                     "pronostico": "3-2",
@@ -97,11 +105,11 @@
             }
         },
         "J02": {
-            "puntos": 7,
+            "puntos": 6,
             "aciertos_1x2": 5,
             "aciertos_exactos": 1,
             "bonus": 0,
-            "ganador": true,
+            "ganador": false,
             "perdedor": false,
             "detalle": {
                 "Rayo_vs_Alavés": {
@@ -172,6 +180,14 @@
                     "id": 16416296,
                     "pronostico": "2-1",
                     "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Málaga CF_vs_Deportivo de A Coruña": {
+                    "id": 16416307,
+                    "pronostico": "2-0",
+                    "real": "1-1",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
@@ -605,8 +621,8 @@
             }
         },
         "J08": {
-            "puntos": 3,
-            "aciertos_1x2": 4,
+            "puntos": 5,
+            "aciertos_1x2": 6,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -664,6 +680,22 @@
                     "id": 16421067,
                     "pronostico": "2-1",
                     "real": "3-2",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "Betis_vs_Osasuna": {
+                    "id": 16421054,
+                    "pronostico": "2-0",
+                    "real": "5-2",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "Real Racing Club_vs_Valencia": {
+                    "id": 16421064,
+                    "pronostico": "1-1",
+                    "real": "2-2",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1

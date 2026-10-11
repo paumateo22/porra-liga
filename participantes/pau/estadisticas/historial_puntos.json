@@ -7,24 +7,24 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 47,
-    "puntos_partidos": 46,
+    "puntos_totales": 52,
+    "puntos_partidos": 49,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 36,
+    "puntos_ganador_perdedor": 3,
+    "aciertos_1x2": 39,
     "aciertos_exactos": 10,
     "partidos_pronosticados": 80,
     "jornadas_jugadas": 8,
-    "jornadas_ganadas": 2,
+    "jornadas_ganadas": 4,
     "jornadas_perdidas": 1,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
-            "puntos": 6,
-            "aciertos_1x2": 5,
+            "puntos": 8,
+            "aciertos_1x2": 6,
             "aciertos_exactos": 1,
             "bonus": 0,
-            "ganador": false,
+            "ganador": true,
             "perdedor": false,
             "detalle": {
                 "Alavés_vs_Getafe": {
@@ -71,6 +71,14 @@
                     "id": 16421055,
                     "pronostico": "3-0",
                     "real": "2-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "Valencia_vs_Betis": {
+                    "id": 16421049,
+                    "pronostico": "1-2",
+                    "real": "0-1",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
@@ -177,6 +185,14 @@
                     "id": 16416296,
                     "pronostico": "2-0",
                     "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Málaga CF_vs_Deportivo de A Coruña": {
+                    "id": 16416307,
+                    "pronostico": "1-2",
+                    "real": "1-1",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
@@ -626,11 +642,11 @@
             }
         },
         "J08": {
-            "puntos": 7,
-            "aciertos_1x2": 5,
+            "puntos": 10,
+            "aciertos_1x2": 7,
             "aciertos_exactos": 2,
             "bonus": 0,
-            "ganador": false,
+            "ganador": true,
             "perdedor": false,
             "detalle": {
                 "Málaga CF_vs_Espanyol": {
@@ -685,6 +701,22 @@
                     "id": 16421067,
                     "pronostico": "2-0",
                     "real": "3-2",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "Betis_vs_Osasuna": {
+                    "id": 16421054,
+                    "pronostico": "3-1",
+                    "real": "5-2",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "Real Racing Club_vs_Valencia": {
+                    "id": 16421064,
+                    "pronostico": "1-1",
+                    "real": "2-2",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
