@@ -3170,17 +3170,6 @@
             "estado": "notstarted"
         },
         {
-            "id": 16462695,
-            "local": "Real Sociedad",
-            "visitante": "Alavés",
-            "id_escudo_local": 2824,
-            "id_escudo_visitante": 2885,
-            "fecha": "2027-03-21T20:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
             "id": 16462696,
             "local": "Sevilla",
             "visitante": "Elche",
@@ -3451,6 +3440,28 @@
             "estado": "notstarted"
         },
         {
+            "id": 16462496,
+            "local": "Atlético",
+            "visitante": "Sevilla",
+            "id_escudo_local": 2836,
+            "id_escudo_visitante": 2833,
+            "fecha": "2027-04-18T21:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
+            "id": 16462500,
+            "local": "Betis",
+            "visitante": "Athletic",
+            "id_escudo_local": 2816,
+            "id_escudo_visitante": 2825,
+            "fecha": "2027-04-18T21:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
             "id": 16462503,
             "local": "Deportivo de A Coruña",
             "visitante": "Celta",
@@ -3489,6 +3500,17 @@
             "visitante": "Real Madrid",
             "id_escudo_local": 2859,
             "id_escudo_visitante": 2829,
+            "fecha": "2027-04-18T21:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
+            "id": 16462515,
+            "local": "Levante UD",
+            "visitante": "Villarreal",
+            "id_escudo_local": 2849,
+            "id_escudo_visitante": 2819,
             "fecha": "2027-04-18T21:00:00",
             "goles_local": null,
             "goles_visitante": null,
