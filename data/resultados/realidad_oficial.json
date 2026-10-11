@@ -2856,17 +2856,6 @@
             "estado": "notstarted"
         },
         {
-            "id": 16462648,
-            "local": "Osasuna",
-            "visitante": "Sevilla",
-            "id_escudo_local": 2820,
-            "id_escudo_visitante": 2833,
-            "fecha": "2027-02-28T20:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
             "id": 16462654,
             "local": "Real Madrid",
             "visitante": "Valencia",
@@ -3170,6 +3159,17 @@
             "estado": "notstarted"
         },
         {
+            "id": 16462694,
+            "local": "Rayo",
+            "visitante": "FC Barcelona",
+            "id_escudo_local": 2818,
+            "id_escudo_visitante": 2817,
+            "fecha": "2027-03-21T20:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
             "id": 16462693,
             "local": "Real Racing Club",
             "visitante": "Betis",
@@ -3462,28 +3462,6 @@
             "estado": "notstarted"
         },
         {
-            "id": 16462496,
-            "local": "Atlético",
-            "visitante": "Sevilla",
-            "id_escudo_local": 2836,
-            "id_escudo_visitante": 2833,
-            "fecha": "2027-04-18T21:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
-            "id": 16462500,
-            "local": "Betis",
-            "visitante": "Athletic",
-            "id_escudo_local": 2816,
-            "id_escudo_visitante": 2825,
-            "fecha": "2027-04-18T21:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
             "id": 16462503,
             "local": "Deportivo de A Coruña",
             "visitante": "Celta",
@@ -3522,17 +3500,6 @@
             "visitante": "Real Madrid",
             "id_escudo_local": 2859,
             "id_escudo_visitante": 2829,
-            "fecha": "2027-04-18T21:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
-            "id": 16462515,
-            "local": "Levante UD",
-            "visitante": "Villarreal",
-            "id_escudo_local": 2849,
-            "id_escudo_visitante": 2819,
             "fecha": "2027-04-18T21:00:00",
             "goles_local": null,
             "goles_visitante": null,
