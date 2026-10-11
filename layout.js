@@ -145,6 +145,11 @@ function marcadorPartido(real) {
   if (estado === "finished") {
     return `<span class="marcador">${real.goles_local}-${real.goles_visitante}</span>`;
   }
+  if (partidoNoJugado(real)) {
+    // Suspendido / aplazado / cancelado: el marcador parcial no vale, se
+    // muestra un guion hasta que se juegue de verdad.
+    return `<span class="marcador" title="Suspendido o aplazado">-</span>`;
+  }
   if (estado && estado !== "notstarted") {
     const gl = real.goles_local ?? 0, gv = real.goles_visitante ?? 0;
     return `<span class="marcador en-directo">${gl}-${gv} <span class="balon-directo" title="En directo">⚽</span></span>`;
@@ -152,10 +157,24 @@ function marcadorPartido(real) {
   return `<span class="marcador">-</span>`;
 }
 
+/* Estados de SofaScore de un partido que se ha suspendido, aplazado o
+   cancelado: NO está en directo, su marcador parcial NO cuenta, y mientras
+   no se juegue de verdad es como si no hubiera empezado. */
+const ESTADOS_SIN_JUGAR = ["canceled", "cancelled", "postponed", "interrupted", "suspended", "abandoned", "delayed"];
+
+function partidoNoJugado(real) {
+  return ESTADOS_SIN_JUGAR.includes(real?.estado);
+}
+
+/* true si el partido ya ha arrancado de verdad (en juego o terminado). */
+function partidoEmpezado(real) {
+  const estado = real?.estado;
+  return !!estado && estado !== "notstarted" && !partidoNoJugado(real);
+}
+
 /* true si el partido está siendo jugado ahora mismo. */
 function esPartidoEnDirecto(real) {
-  const estado = real?.estado;
-  return !!estado && estado !== "notstarted" && estado !== "finished";
+  return partidoEmpezado(real) && real.estado !== "finished";
 }
 
 /* Como this.scrollIntoView no existe en todos los entornos (algunos navegadores
@@ -330,7 +349,12 @@ async function montarWidgetsCabecera() {
   }
 
   const porFecha = (a, b) => new Date(a.fecha) - new Date(b.fecha);
-  const sinEmpezar = todos.filter((p) => (p.estado || "notstarted") === "notstarted").sort(porFecha);
+  // Sin empezar: los normales, más los suspendidos/aplazados que ya tengan una
+  // nueva fecha futura (si su fecha sigue siendo la vieja, no cuentan).
+  const ahoraMs = Date.now();
+  const sinEmpezar = todos
+    .filter((p) => !partidoEmpezado(p) && (!partidoNoJugado(p) || new Date(p.fecha) > ahoraMs))
+    .sort(porFecha);
   const proximo = sinEmpezar[0] || null;
   const enDirecto = todos.find((p) => esPartidoEnDirecto(p)) || null;
   const ultimoTerminado = todos
@@ -344,10 +368,10 @@ async function montarWidgetsCabecera() {
   // cuando la actual ya está en marcha de verdad.
   const claveActual = jornadaActual(realidad, claves);
   const idxActual = claves.indexOf(claveActual);
-  const actualYaEmpezada = (realidad[claveActual] || []).some((r) => (r.estado || "notstarted") !== "notstarted");
+  const actualYaEmpezada = (realidad[claveActual] || []).some((r) => partidoEmpezado(r));
   const claveProximaJornada = actualYaEmpezada
     ? claves.slice(idxActual + 1).find((c) =>
-        (realidad[c] || []).every((r) => (r.estado || "notstarted") === "notstarted")
+        (realidad[c] || []).every((r) => !partidoEmpezado(r))
       ) || null
     : claveActual;
   const primerPartidoProximaJornada = claveProximaJornada
@@ -372,7 +396,7 @@ function _widgetPartido(titulo, p, conCuentaAtras) {
       <div class="nota">No hay ningún partido que mostrar.</div></div>`;
   }
   const jornadaNum = parseInt(p.jornada.slice(1));
-  const pendiente = (p.estado || "notstarted") === "notstarted";
+  const pendiente = !partidoEmpezado(p) && (!partidoNoJugado(p) || new Date(p.fecha) > Date.now());
   return `
     <div class="widget-cabecera">
       <div class="widget-titulo">${titulo}</div>
