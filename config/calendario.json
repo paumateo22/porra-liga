@@ -2995,14 +2995,6 @@
     ],
     "J38": [
         {
-            "id": 16462647,
-            "local": "Athletic",
-            "visitante": "Rayo",
-            "id_escudo_local": 2825,
-            "id_escudo_visitante": 2818,
-            "fecha": "2027-05-30T21:00:00"
-        },
-        {
             "id": 16462650,
             "local": "Betis",
             "visitante": "Atlético",
@@ -3048,14 +3040,6 @@
             "visitante": "Sevilla",
             "id_escudo_local": 2830,
             "id_escudo_visitante": 2833,
-            "fecha": "2027-05-30T21:00:00"
-        },
-        {
-            "id": 16462667,
-            "local": "Osasuna",
-            "visitante": "Valencia",
-            "id_escudo_local": 2820,
-            "id_escudo_visitante": 2828,
             "fecha": "2027-05-30T21:00:00"
         },
         {
