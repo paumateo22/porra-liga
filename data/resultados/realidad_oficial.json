@@ -1859,17 +1859,6 @@
             "estado": "notstarted"
         },
         {
-            "id": 16462565,
-            "local": "Osasuna",
-            "visitante": "Villarreal",
-            "id_escudo_local": 2820,
-            "id_escudo_visitante": 2819,
-            "fecha": "2026-12-20T20:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
             "id": 16462568,
             "local": "Rayo",
             "visitante": "Málaga CF",
@@ -2129,6 +2118,17 @@
     ],
     "J20": [
         {
+            "id": 16462637,
+            "local": "Atlético",
+            "visitante": "Real Sociedad",
+            "id_escudo_local": 2836,
+            "id_escudo_visitante": 2824,
+            "fecha": "2027-01-17T20:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
             "id": 16462640,
             "local": "Betis",
             "visitante": "Deportivo de A Coruña",
@@ -2145,6 +2145,28 @@
             "visitante": "Valencia",
             "id_escudo_local": 2821,
             "id_escudo_visitante": 2828,
+            "fecha": "2027-01-17T20:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
+            "id": 16462646,
+            "local": "FC Barcelona",
+            "visitante": "Elche",
+            "id_escudo_local": 2817,
+            "id_escudo_visitante": 2846,
+            "fecha": "2027-01-17T20:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
+            "id": 16462649,
+            "local": "Getafe",
+            "visitante": "Athletic",
+            "id_escudo_local": 2859,
+            "id_escudo_visitante": 2825,
             "fecha": "2027-01-17T20:00:00",
             "goles_local": null,
             "goles_visitante": null,
