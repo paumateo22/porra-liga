@@ -36,6 +36,9 @@ from utils import (
 )
 
 ESTADO_FINALIZADO = "finished"
+# Suspendido/aplazado/cancelado: su marcador parcial no puntúa.
+ESTADOS_SIN_JUGAR = {"canceled", "cancelled", "postponed", "interrupted",
+                     "suspended", "abandoned", "delayed"}
 
 
 def cargar_pronosticos(slug_jugador):
@@ -106,6 +109,7 @@ def evaluar_jornada(clave, partidos_reales, total_partidos, pronosticos_todos, s
     evaluables = [
         p for p in partidos_reales
         if p.get("estado") and p["estado"] != "notstarted"
+        and p["estado"] not in ESTADOS_SIN_JUGAR
         and p.get("goles_local") is not None and p.get("goles_visitante") is not None
     ]
     if not evaluables:

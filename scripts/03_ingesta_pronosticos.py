@@ -123,6 +123,12 @@ def validar(contenido, ruta, calendario):
     return not errores, jornada, participante, limpias, errores
 
 
+# Partido suspendido/aplazado/cancelado: no cuenta como "empezado". Se bloquea
+# solo por fecha, así que al recibir una nueva fecha vuelve a admitir cambios.
+ESTADOS_SIN_JUGAR = {"canceled", "cancelled", "postponed", "interrupted",
+                     "suspended", "abandoned", "delayed"}
+
+
 def cargar_bloqueados(clave, calendario, realidad):
     """Ids de partidos que ya no admiten cambios: empezados o con hora pasada."""
     ahora = datetime.now()
@@ -130,7 +136,7 @@ def cargar_bloqueados(clave, calendario, realidad):
     bloqueados = set()
     for p in calendario.get(clave, []):
         estado = estados.get(p["id"])
-        if estado and estado != "notstarted":
+        if estado and estado != "notstarted" and estado not in ESTADOS_SIN_JUGAR:
             bloqueados.add(p["id"])
             continue
         try:
