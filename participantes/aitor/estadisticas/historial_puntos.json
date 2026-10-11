@@ -2,24 +2,24 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 46,
-    "puntos_partidos": 44,
+    "puntos_totales": 44,
+    "puntos_partidos": 43,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 2,
-    "aciertos_1x2": 38,
+    "puntos_ganador_perdedor": 1,
+    "aciertos_1x2": 37,
     "aciertos_exactos": 6,
     "partidos_pronosticados": 80,
     "jornadas_jugadas": 8,
-    "jornadas_ganadas": 5,
+    "jornadas_ganadas": 4,
     "jornadas_perdidas": 3,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
-            "puntos": 8,
-            "aciertos_1x2": 6,
+            "puntos": 6,
+            "aciertos_1x2": 5,
             "aciertos_exactos": 1,
             "bonus": 0,
-            "ganador": true,
+            "ganador": false,
             "perdedor": false,
             "detalle": {
                 "Alavés_vs_Getafe": {
@@ -66,14 +66,6 @@
                     "id": 16421055,
                     "pronostico": "2-1",
                     "real": "2-0",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                },
-                "Valencia_vs_Betis": {
-                    "id": 16421049,
-                    "pronostico": "0-2",
-                    "real": "0-1",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
@@ -679,6 +671,14 @@
                 "Elche_vs_Celta": {
                     "id": 16421058,
                     "pronostico": "0-1",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Real Sociedad_vs_Deportivo de A Coruña": {
+                    "id": 16421067,
+                    "pronostico": "3-2",
                     "real": "0-0",
                     "acierto_1x2": false,
                     "acierto_exacto": false,

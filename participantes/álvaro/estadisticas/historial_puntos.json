@@ -2,15 +2,15 @@
     "participante": "álvaro",
     "nombre": "Álvaro",
     "insignias": [],
-    "puntos_totales": 39,
-    "puntos_partidos": 41,
+    "puntos_totales": 41,
+    "puntos_partidos": 42,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": -2,
-    "aciertos_1x2": 31,
+    "puntos_ganador_perdedor": -1,
+    "aciertos_1x2": 32,
     "aciertos_exactos": 10,
     "partidos_pronosticados": 79,
     "jornadas_jugadas": 8,
-    "jornadas_ganadas": 0,
+    "jornadas_ganadas": 1,
     "jornadas_perdidas": 2,
     "punto_partida": 0,
     "por_jornada": {
@@ -69,14 +69,6 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
-                },
-                "Valencia_vs_Betis": {
-                    "id": 16421049,
-                    "pronostico": "1-1",
-                    "real": "0-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
                 },
                 "Real Madrid_vs_Real Sociedad": {
                     "id": 16421051,
@@ -629,11 +621,11 @@
             }
         },
         "J08": {
-            "puntos": 5,
-            "aciertos_1x2": 4,
+            "puntos": 7,
+            "aciertos_1x2": 5,
             "aciertos_exactos": 1,
             "bonus": 0,
-            "ganador": false,
+            "ganador": true,
             "perdedor": false,
             "detalle": {
                 "Rayo_vs_Athletic": {
@@ -675,6 +667,14 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
+                },
+                "Real Sociedad_vs_Deportivo de A Coruña": {
+                    "id": 16421067,
+                    "pronostico": "1-1",
+                    "real": "0-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         }

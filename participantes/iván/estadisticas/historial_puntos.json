@@ -75,14 +75,6 @@
                     "acierto_exacto": true,
                     "puntos": 2
                 },
-                "Valencia_vs_Betis": {
-                    "id": 16421049,
-                    "pronostico": "2-2",
-                    "real": "0-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "Real Madrid_vs_Real Sociedad": {
                     "id": 16421051,
                     "pronostico": "3-1",
@@ -683,6 +675,14 @@
                 },
                 "Elche_vs_Celta": {
                     "id": 16421058,
+                    "pronostico": "2-1",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Real Sociedad_vs_Deportivo de A Coruña": {
+                    "id": 16421067,
                     "pronostico": "2-1",
                     "real": "0-0",
                     "acierto_1x2": false,
