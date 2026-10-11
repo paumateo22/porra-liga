@@ -2,15 +2,15 @@
     "participante": "carlos",
     "nombre": "Carlos",
     "insignias": [],
-    "puntos_totales": 41,
-    "puntos_partidos": 40,
+    "puntos_totales": 39,
+    "puntos_partidos": 39,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 37,
+    "puntos_ganador_perdedor": 0,
+    "aciertos_1x2": 36,
     "aciertos_exactos": 3,
     "partidos_pronosticados": 80,
     "jornadas_jugadas": 8,
-    "jornadas_ganadas": 4,
+    "jornadas_ganadas": 3,
     "jornadas_perdidas": 3,
     "punto_partida": 0,
     "por_jornada": {
@@ -637,25 +637,17 @@
             }
         },
         "J08": {
-            "puntos": 10,
-            "aciertos_1x2": 7,
+            "puntos": 8,
+            "aciertos_1x2": 6,
             "aciertos_exactos": 2,
             "bonus": 0,
-            "ganador": true,
+            "ganador": false,
             "perdedor": false,
             "detalle": {
                 "Málaga CF_vs_Espanyol": {
                     "id": 16421062,
                     "pronostico": "2-2",
                     "real": "1-1",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                },
-                "Rayo_vs_Athletic": {
-                    "id": 16421065,
-                    "pronostico": "2-2",
-                    "real": "0-0",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1

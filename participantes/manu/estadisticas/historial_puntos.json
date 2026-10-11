@@ -2,16 +2,16 @@
     "participante": "manu",
     "nombre": "Manu",
     "insignias": [],
-    "puntos_totales": 38,
+    "puntos_totales": 39,
     "puntos_partidos": 34,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 0,
+    "puntos_ganador_perdedor": 1,
     "aciertos_1x2": 31,
     "aciertos_exactos": 3,
     "partidos_pronosticados": 60,
     "jornadas_jugadas": 6,
     "jornadas_ganadas": 2,
-    "jornadas_perdidas": 2,
+    "jornadas_perdidas": 1,
     "punto_partida": 4,
     "por_jornada": {
         "J02": {
@@ -457,25 +457,17 @@
             }
         },
         "J08": {
-            "puntos": 5,
+            "puntos": 6,
             "aciertos_1x2": 6,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
-            "perdedor": true,
+            "perdedor": false,
             "detalle": {
                 "Málaga CF_vs_Espanyol": {
                     "id": 16421062,
                     "pronostico": "1-2",
                     "real": "1-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
-                "Rayo_vs_Athletic": {
-                    "id": 16421065,
-                    "pronostico": "2-1",
-                    "real": "0-0",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0

@@ -2,11 +2,11 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 43,
-    "puntos_partidos": 43,
+    "puntos_totales": 42,
+    "puntos_partidos": 42,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 38,
+    "aciertos_1x2": 37,
     "aciertos_exactos": 5,
     "partidos_pronosticados": 78,
     "jornadas_jugadas": 8,
@@ -621,8 +621,8 @@
             }
         },
         "J08": {
-            "puntos": 5,
-            "aciertos_1x2": 6,
+            "puntos": 4,
+            "aciertos_1x2": 5,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -635,14 +635,6 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
-                },
-                "Rayo_vs_Athletic": {
-                    "id": 16421065,
-                    "pronostico": "2-2",
-                    "real": "0-0",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
                 },
                 "Alavés_vs_Atlético": {
                     "id": 16421056,
