@@ -7,12 +7,12 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 50,
-    "puntos_partidos": 47,
+    "puntos_totales": 52,
+    "puntos_partidos": 49,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 3,
-    "aciertos_1x2": 38,
-    "aciertos_exactos": 9,
+    "aciertos_1x2": 39,
+    "aciertos_exactos": 10,
     "partidos_pronosticados": 80,
     "jornadas_jugadas": 8,
     "jornadas_ganadas": 4,
@@ -20,9 +20,9 @@
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
-            "puntos": 6,
-            "aciertos_1x2": 5,
-            "aciertos_exactos": 0,
+            "puntos": 8,
+            "aciertos_1x2": 6,
+            "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": true,
             "perdedor": false,
@@ -98,6 +98,14 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
+                },
+                "FC Barcelona_vs_Athletic": {
+                    "id": 16421059,
+                    "pronostico": "2-0",
+                    "real": "2-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         },

@@ -7,11 +7,11 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 58,
-    "puntos_partidos": 54,
+    "puntos_totales": 59,
+    "puntos_partidos": 55,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 4,
-    "aciertos_1x2": 41,
+    "aciertos_1x2": 42,
     "aciertos_exactos": 13,
     "partidos_pronosticados": 80,
     "jornadas_jugadas": 8,
@@ -20,8 +20,8 @@
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
-            "puntos": 9,
-            "aciertos_1x2": 5,
+            "puntos": 10,
+            "aciertos_1x2": 6,
             "aciertos_exactos": 3,
             "bonus": 0,
             "ganador": true,
@@ -98,6 +98,14 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
+                },
+                "FC Barcelona_vs_Athletic": {
+                    "id": 16421059,
+                    "pronostico": "3-1",
+                    "real": "2-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         },
