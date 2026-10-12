@@ -7,15 +7,15 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 50,
-    "puntos_partidos": 47,
+    "puntos_totales": 48,
+    "puntos_partidos": 46,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 3,
-    "aciertos_1x2": 38,
+    "puntos_ganador_perdedor": 2,
+    "aciertos_1x2": 37,
     "aciertos_exactos": 9,
     "partidos_pronosticados": 80,
     "jornadas_jugadas": 8,
-    "jornadas_ganadas": 4,
+    "jornadas_ganadas": 3,
     "jornadas_perdidas": 1,
     "punto_partida": 0,
     "por_jornada": {
@@ -634,11 +634,11 @@
             }
         },
         "J08": {
-            "puntos": 10,
-            "aciertos_1x2": 7,
+            "puntos": 8,
+            "aciertos_1x2": 6,
             "aciertos_exactos": 2,
             "bonus": 0,
-            "ganador": true,
+            "ganador": false,
             "perdedor": false,
             "detalle": {
                 "Málaga CF_vs_Espanyol": {
@@ -708,10 +708,10 @@
                 "Levante UD_vs_Sevilla": {
                     "id": 16421063,
                     "pronostico": "1-1",
-                    "real": "0-0",
-                    "acierto_1x2": true,
+                    "real": "0-1",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 }
             }
         }

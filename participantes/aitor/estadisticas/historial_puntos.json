@@ -2,12 +2,12 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 49,
-    "puntos_partidos": 47,
+    "puntos_totales": 51,
+    "puntos_partidos": 49,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 2,
-    "aciertos_1x2": 40,
-    "aciertos_exactos": 7,
+    "aciertos_1x2": 41,
+    "aciertos_exactos": 8,
     "partidos_pronosticados": 80,
     "jornadas_jugadas": 8,
     "jornadas_ganadas": 4,
@@ -629,9 +629,9 @@
             }
         },
         "J08": {
-            "puntos": 7,
-            "aciertos_1x2": 6,
-            "aciertos_exactos": 1,
+            "puntos": 9,
+            "aciertos_1x2": 7,
+            "aciertos_exactos": 2,
             "bonus": 0,
             "ganador": false,
             "perdedor": false,
@@ -703,10 +703,10 @@
                 "Levante UD_vs_Sevilla": {
                     "id": 16421063,
                     "pronostico": "0-1",
-                    "real": "0-0",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
+                    "real": "0-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         }
