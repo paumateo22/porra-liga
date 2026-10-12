@@ -7,12 +7,12 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 61,
-    "puntos_partidos": 55,
+    "puntos_totales": 62,
+    "puntos_partidos": 56,
     "bonus_rendimiento": 2,
     "puntos_ganador_perdedor": 4,
     "aciertos_1x2": 42,
-    "aciertos_exactos": 13,
+    "aciertos_exactos": 14,
     "partidos_pronosticados": 80,
     "jornadas_jugadas": 8,
     "jornadas_ganadas": 5,
@@ -634,9 +634,9 @@
             }
         },
         "J08": {
-            "puntos": 14,
+            "puntos": 15,
             "aciertos_1x2": 8,
-            "aciertos_exactos": 3,
+            "aciertos_exactos": 4,
             "bonus": 2,
             "ganador": true,
             "perdedor": false,
@@ -708,10 +708,10 @@
                 "Levante UD_vs_Sevilla": {
                     "id": 16421063,
                     "pronostico": "1-2",
-                    "real": "0-1",
+                    "real": "1-2",
                     "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         }
