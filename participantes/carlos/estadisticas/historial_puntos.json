@@ -2,12 +2,12 @@
     "participante": "carlos",
     "nombre": "Carlos",
     "insignias": [],
-    "puntos_totales": 40,
-    "puntos_partidos": 40,
+    "puntos_totales": 39,
+    "puntos_partidos": 39,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
     "aciertos_1x2": 36,
-    "aciertos_exactos": 4,
+    "aciertos_exactos": 3,
     "partidos_pronosticados": 80,
     "jornadas_jugadas": 8,
     "jornadas_ganadas": 3,
@@ -629,9 +629,9 @@
             }
         },
         "J08": {
-            "puntos": 10,
+            "puntos": 9,
             "aciertos_1x2": 7,
-            "aciertos_exactos": 3,
+            "aciertos_exactos": 2,
             "bonus": 0,
             "ganador": false,
             "perdedor": false,
@@ -703,10 +703,10 @@
                 "Levante UD_vs_Sevilla": {
                     "id": 16421063,
                     "pronostico": "1-2",
-                    "real": "1-2",
+                    "real": "2-3",
                     "acierto_1x2": true,
-                    "acierto_exacto": true,
-                    "puntos": 2
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         }

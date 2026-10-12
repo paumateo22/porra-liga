@@ -2,12 +2,12 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 44,
-    "puntos_partidos": 43,
+    "puntos_totales": 43,
+    "puntos_partidos": 42,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 1,
     "aciertos_1x2": 37,
-    "aciertos_exactos": 6,
+    "aciertos_exactos": 5,
     "partidos_pronosticados": 78,
     "jornadas_jugadas": 8,
     "jornadas_ganadas": 2,
@@ -613,9 +613,9 @@
             }
         },
         "J08": {
-            "puntos": 7,
+            "puntos": 6,
             "aciertos_1x2": 6,
-            "aciertos_exactos": 1,
+            "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
             "perdedor": false,
@@ -687,10 +687,10 @@
                 "Levante UD_vs_Sevilla": {
                     "id": 16421063,
                     "pronostico": "1-2",
-                    "real": "1-2",
+                    "real": "2-3",
                     "acierto_1x2": true,
-                    "acierto_exacto": true,
-                    "puntos": 2
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         }
