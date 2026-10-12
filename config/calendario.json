@@ -2527,6 +2527,14 @@
     ],
     "J32": [
         {
+            "id": 16462493,
+            "local": "Alavés",
+            "visitante": "Rayo",
+            "id_escudo_local": 2885,
+            "id_escudo_visitante": 2818,
+            "fecha": "2027-04-18T21:00:00"
+        },
+        {
             "id": 16462496,
             "local": "Atlético",
             "visitante": "Sevilla",
@@ -2580,6 +2588,14 @@
             "visitante": "Villarreal",
             "id_escudo_local": 2849,
             "id_escudo_visitante": 2819,
+            "fecha": "2027-04-18T21:00:00"
+        },
+        {
+            "id": 16462518,
+            "local": "Málaga CF",
+            "visitante": "Valencia",
+            "id_escudo_local": 2830,
+            "id_escudo_visitante": 2828,
             "fecha": "2027-04-18T21:00:00"
         },
         {
