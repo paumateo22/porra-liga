@@ -1,0 +1,87 @@
+{
+    "participante": "Iván",
+    "jornada": 9,
+    "generado": "2026-10-16T16:38:35",
+    "predicciones": [
+        {
+            "id": 16421070,
+            "local": "Deportivo de A Coruña",
+            "visitante": "Levante UD",
+            "fecha": "2026-10-16T21:00:00",
+            "goles_local": 2,
+            "goles_visitante": 1
+        },
+        {
+            "id": 16421071,
+            "local": "Espanyol",
+            "visitante": "Atlético",
+            "fecha": "2026-10-17T14:00:00",
+            "goles_local": 1,
+            "goles_visitante": 3
+        },
+        {
+            "id": 16421076,
+            "local": "Villarreal",
+            "visitante": "Elche",
+            "fecha": "2026-10-17T16:15:00",
+            "goles_local": 2,
+            "goles_visitante": 0
+        },
+        {
+            "id": 16421068,
+            "local": "Betis",
+            "visitante": "FC Barcelona",
+            "fecha": "2026-10-17T18:30:00",
+            "goles_local": 2,
+            "goles_visitante": 4
+        },
+        {
+            "id": 16421074,
+            "local": "Valencia",
+            "visitante": "Athletic",
+            "fecha": "2026-10-17T21:00:00",
+            "goles_local": 1,
+            "goles_visitante": 1
+        },
+        {
+            "id": 16421078,
+            "local": "Osasuna",
+            "visitante": "Real Racing Club",
+            "fecha": "2026-10-18T14:00:00",
+            "goles_local": 2,
+            "goles_visitante": 1
+        },
+        {
+            "id": 16421069,
+            "local": "Celta",
+            "visitante": "Alavés",
+            "fecha": "2026-10-18T16:15:00",
+            "goles_local": 1,
+            "goles_visitante": 1
+        },
+        {
+            "id": 16421073,
+            "local": "Málaga CF",
+            "visitante": "Real Sociedad",
+            "fecha": "2026-10-18T18:30:00",
+            "goles_local": 1,
+            "goles_visitante": 2
+        },
+        {
+            "id": 16421075,
+            "local": "Real Madrid",
+            "visitante": "Sevilla",
+            "fecha": "2026-10-18T21:00:00",
+            "goles_local": 2,
+            "goles_visitante": 1
+        },
+        {
+            "id": 16421072,
+            "local": "Getafe",
+            "visitante": "Rayo",
+            "fecha": "2026-10-19T21:00:00",
+            "goles_local": 0,
+            "goles_visitante": 0
+        }
+    ]
+}
