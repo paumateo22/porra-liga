@@ -2,15 +2,15 @@
     "participante": "álvaro",
     "nombre": "Álvaro",
     "insignias": [],
-    "puntos_totales": 43,
-    "puntos_partidos": 44,
+    "puntos_totales": 45,
+    "puntos_partidos": 45,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": -1,
-    "aciertos_1x2": 34,
+    "puntos_ganador_perdedor": 0,
+    "aciertos_1x2": 35,
     "aciertos_exactos": 10,
-    "partidos_pronosticados": 79,
-    "jornadas_jugadas": 8,
-    "jornadas_ganadas": 0,
+    "partidos_pronosticados": 89,
+    "jornadas_jugadas": 9,
+    "jornadas_ganadas": 1,
     "jornadas_perdidas": 1,
     "punto_partida": 0,
     "por_jornada": {
@@ -202,14 +202,6 @@
             "ganador": false,
             "perdedor": true,
             "detalle": {
-                "Real Racing Club_vs_Elche": {
-                    "id": 16416304,
-                    "pronostico": "1-1",
-                    "real": "3-2",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "Alavés_vs_Villarreal": {
                     "id": 16416290,
                     "pronostico": "1-2",
@@ -704,6 +696,24 @@
                     "id": 16421063,
                     "pronostico": "1-1",
                     "real": "3-3",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                }
+            }
+        },
+        "J09": {
+            "puntos": 2,
+            "aciertos_1x2": 1,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "ganador": true,
+            "perdedor": false,
+            "detalle": {
+                "Deportivo de A Coruña_vs_Levante UD": {
+                    "id": 16421070,
+                    "pronostico": "1-1",
+                    "real": "0-0",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1

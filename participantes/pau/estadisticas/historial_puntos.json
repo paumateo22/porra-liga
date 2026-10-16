@@ -7,16 +7,16 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 52,
+    "puntos_totales": 51,
     "puntos_partidos": 49,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 3,
+    "puntos_ganador_perdedor": 2,
     "aciertos_1x2": 39,
     "aciertos_exactos": 10,
-    "partidos_pronosticados": 80,
-    "jornadas_jugadas": 8,
+    "partidos_pronosticados": 90,
+    "jornadas_jugadas": 9,
     "jornadas_ganadas": 4,
-    "jornadas_perdidas": 1,
+    "jornadas_perdidas": 2,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -207,14 +207,6 @@
             "ganador": false,
             "perdedor": false,
             "detalle": {
-                "Real Racing Club_vs_Elche": {
-                    "id": 16416304,
-                    "pronostico": "1-1",
-                    "real": "3-2",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "Alavés_vs_Villarreal": {
                     "id": 16416290,
                     "pronostico": "1-2",
@@ -720,6 +712,24 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
+                }
+            }
+        },
+        "J09": {
+            "puntos": -1,
+            "aciertos_1x2": 0,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "ganador": false,
+            "perdedor": true,
+            "detalle": {
+                "Deportivo de A Coruña_vs_Levante UD": {
+                    "id": 16421070,
+                    "pronostico": "2-1",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         }
