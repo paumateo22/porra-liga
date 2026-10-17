@@ -2,11 +2,11 @@
     "participante": "álvaro",
     "nombre": "Álvaro",
     "insignias": [],
-    "puntos_totales": 49,
-    "puntos_partidos": 49,
+    "puntos_totales": 48,
+    "puntos_partidos": 48,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 38,
+    "aciertos_1x2": 37,
     "aciertos_exactos": 11,
     "partidos_pronosticados": 89,
     "jornadas_jugadas": 9,
@@ -687,8 +687,8 @@
             }
         },
         "J09": {
-            "puntos": 6,
-            "aciertos_1x2": 4,
+            "puntos": 5,
+            "aciertos_1x2": 3,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": true,
@@ -721,10 +721,10 @@
                 "Betis_vs_FC Barcelona": {
                     "id": 16421068,
                     "pronostico": "1-3",
-                    "real": "0-1",
-                    "acierto_1x2": true,
+                    "real": "1-1",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 }
             }
         }
