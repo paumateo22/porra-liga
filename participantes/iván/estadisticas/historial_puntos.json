@@ -7,11 +7,11 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 59,
-    "puntos_partidos": 56,
+    "puntos_totales": 58,
+    "puntos_partidos": 55,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 3,
-    "aciertos_1x2": 43,
+    "aciertos_1x2": 42,
     "aciertos_exactos": 13,
     "partidos_pronosticados": 90,
     "jornadas_jugadas": 9,
@@ -200,8 +200,8 @@
             }
         },
         "J03": {
-            "puntos": 6,
-            "aciertos_1x2": 5,
+            "puntos": 5,
+            "aciertos_1x2": 4,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
@@ -214,14 +214,6 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
-                },
-                "Real Sociedad_vs_Espanyol": {
-                    "id": 16416310,
-                    "pronostico": "3-2",
-                    "real": "2-1",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
                 },
                 "Sevilla_vs_Atlético": {
                     "id": 16416316,
@@ -734,6 +726,14 @@
                 "Villarreal_vs_Elche": {
                     "id": 16421076,
                     "pronostico": "2-0",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Betis_vs_FC Barcelona": {
+                    "id": 16421068,
+                    "pronostico": "2-4",
                     "real": "0-0",
                     "acierto_1x2": false,
                     "acierto_exacto": false,

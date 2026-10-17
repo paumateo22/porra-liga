@@ -2,12 +2,12 @@
     "participante": "manu",
     "nombre": "Manu",
     "insignias": [],
-    "puntos_totales": 40,
-    "puntos_partidos": 35,
+    "puntos_totales": 38,
+    "puntos_partidos": 33,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 32,
-    "aciertos_exactos": 3,
+    "aciertos_1x2": 31,
+    "aciertos_exactos": 2,
     "partidos_pronosticados": 70,
     "jornadas_jugadas": 7,
     "jornadas_ganadas": 3,
@@ -105,9 +105,9 @@
             }
         },
         "J03": {
-            "puntos": 8,
-            "aciertos_1x2": 6,
-            "aciertos_exactos": 1,
+            "puntos": 6,
+            "aciertos_1x2": 5,
+            "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": true,
             "perdedor": false,
@@ -119,14 +119,6 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
-                },
-                "Real Sociedad_vs_Espanyol": {
-                    "id": 16416310,
-                    "pronostico": "2-1",
-                    "real": "2-1",
-                    "acierto_1x2": true,
-                    "acierto_exacto": true,
-                    "puntos": 2
                 },
                 "Sevilla_vs_Atlético": {
                     "id": 16416316,
@@ -549,6 +541,14 @@
                 "Villarreal_vs_Elche": {
                     "id": 16421076,
                     "pronostico": "3-2",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Betis_vs_FC Barcelona": {
+                    "id": 16421068,
+                    "pronostico": "2-4",
                     "real": "0-0",
                     "acierto_1x2": false,
                     "acierto_exacto": false,

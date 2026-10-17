@@ -2,12 +2,12 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 48,
-    "puntos_partidos": 47,
+    "puntos_totales": 46,
+    "puntos_partidos": 45,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 41,
-    "aciertos_exactos": 6,
+    "aciertos_1x2": 40,
+    "aciertos_exactos": 5,
     "partidos_pronosticados": 90,
     "jornadas_jugadas": 9,
     "jornadas_ganadas": 4,
@@ -195,9 +195,9 @@
             }
         },
         "J03": {
-            "puntos": 9,
-            "aciertos_1x2": 6,
-            "aciertos_exactos": 2,
+            "puntos": 7,
+            "aciertos_1x2": 5,
+            "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": true,
             "perdedor": false,
@@ -209,14 +209,6 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
-                },
-                "Real Sociedad_vs_Espanyol": {
-                    "id": 16416310,
-                    "pronostico": "2-1",
-                    "real": "2-1",
-                    "acierto_1x2": true,
-                    "acierto_exacto": true,
-                    "puntos": 2
                 },
                 "Sevilla_vs_Atlético": {
                     "id": 16416316,
@@ -729,6 +721,14 @@
                 "Villarreal_vs_Elche": {
                     "id": 16421076,
                     "pronostico": "2-0",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Betis_vs_FC Barcelona": {
+                    "id": 16421068,
+                    "pronostico": "1-4",
                     "real": "0-0",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
