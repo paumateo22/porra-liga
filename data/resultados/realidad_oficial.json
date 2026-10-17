@@ -236,17 +236,6 @@
             "estado": "finished"
         },
         {
-            "id": 16416316,
-            "local": "Sevilla",
-            "visitante": "Atlético",
-            "id_escudo_local": 2833,
-            "id_escudo_visitante": 2836,
-            "fecha": "2026-08-29T21:30:00",
-            "goles_local": 1,
-            "goles_visitante": 3,
-            "estado": "finished"
-        },
-        {
             "id": 16416312,
             "local": "Real Madrid",
             "visitante": "Málaga CF",
@@ -927,7 +916,7 @@
             "fecha": "2026-10-17T21:00:00",
             "goles_local": 0,
             "goles_visitante": 0,
-            "estado": "notstarted"
+            "estado": "inprogress"
         },
         {
             "id": 16421078,
