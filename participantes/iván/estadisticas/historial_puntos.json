@@ -207,6 +207,14 @@
             "ganador": false,
             "perdedor": false,
             "detalle": {
+                "Real Racing Club_vs_Elche": {
+                    "id": 16416304,
+                    "pronostico": "1-2",
+                    "real": "3-2",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
                 "Alavés_vs_Villarreal": {
                     "id": 16416290,
                     "pronostico": "1-3",
