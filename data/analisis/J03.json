@@ -36,14 +36,6 @@
             "fecha": "2026-08-28T19:00:00"
         },
         {
-            "id": 16416309,
-            "local": "Levante UD",
-            "visitante": "Betis",
-            "id_escudo_local": 2849,
-            "id_escudo_visitante": 2816,
-            "fecha": "2026-08-29T17:00:00"
-        },
-        {
             "id": 16416310,
             "local": "Real Sociedad",
             "visitante": "Espanyol",
@@ -106,11 +98,6 @@
             "goles_visitante": 2,
             "estado": "finished"
         },
-        "16416309": {
-            "goles_local": 5,
-            "goles_visitante": 2,
-            "estado": "finished"
-        },
         "16416310": {
             "goles_local": 2,
             "goles_visitante": 1,
@@ -166,12 +153,6 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
-                },
-                "16416309": {
-                    "pronostico": "0-2",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
                 },
                 "16416310": {
                     "pronostico": "2-1",
@@ -235,12 +216,6 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
-                },
-                "16416309": {
-                    "pronostico": "0-2",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
                 },
                 "16416310": {
                     "pronostico": "2-1",
@@ -310,12 +285,6 @@
                     "acierto_exacto": false,
                     "puntos": 0
                 },
-                "16416309": {
-                    "pronostico": "0-2",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "16416310": {
                     "pronostico": "3-2",
                     "acierto_1x2": true,
@@ -379,12 +348,6 @@
                     "acierto_exacto": false,
                     "puntos": 0
                 },
-                "16416309": {
-                    "pronostico": "2-3",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "16416310": {
                     "pronostico": "2-0",
                     "acierto_1x2": true,
@@ -444,12 +407,6 @@
             "predicciones": {
                 "16416304": {
                     "pronostico": "2-3",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
-                "16416309": {
-                    "pronostico": "1-3",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
@@ -522,12 +479,6 @@
                     "acierto_exacto": false,
                     "puntos": 0
                 },
-                "16416309": {
-                    "pronostico": "0-2",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "16416310": {
                     "pronostico": "1-0",
                     "acierto_1x2": true,
@@ -591,12 +542,6 @@
                     "acierto_exacto": false,
                     "puntos": 0
                 },
-                "16416309": {
-                    "pronostico": "1-3",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "16416310": {
                     "pronostico": "1-1",
                     "acierto_1x2": false,
@@ -656,12 +601,6 @@
             "predicciones": {
                 "16416304": {
                     "pronostico": "1-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
-                "16416309": {
-                    "pronostico": "0-2",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
