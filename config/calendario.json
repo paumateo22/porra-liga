@@ -2083,6 +2083,14 @@
             "fecha": "2027-02-28T20:00:00"
         },
         {
+            "id": 16462642,
+            "local": "Levante UD",
+            "visitante": "Deportivo de A Coruña",
+            "id_escudo_local": 2849,
+            "id_escudo_visitante": 2832,
+            "fecha": "2027-02-28T20:00:00"
+        },
+        {
             "id": 16462645,
             "local": "Málaga CF",
             "visitante": "Atlético",
@@ -2780,6 +2788,14 @@
         }
     ],
     "J35": [
+        {
+            "id": 16416357,
+            "local": "Alavés",
+            "visitante": "Levante UD",
+            "id_escudo_local": 2885,
+            "id_escudo_visitante": 2849,
+            "fecha": "2027-05-09T21:00:00"
+        },
         {
             "id": 16416361,
             "local": "Athletic",
