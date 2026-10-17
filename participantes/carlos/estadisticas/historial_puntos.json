@@ -2,11 +2,11 @@
     "participante": "carlos",
     "nombre": "Carlos",
     "insignias": [],
-    "puntos_totales": 38,
-    "puntos_partidos": 39,
+    "puntos_totales": 39,
+    "puntos_partidos": 40,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": -1,
-    "aciertos_1x2": 36,
+    "aciertos_1x2": 37,
     "aciertos_exactos": 3,
     "partidos_pronosticados": 90,
     "jornadas_jugadas": 9,
@@ -711,8 +711,8 @@
             }
         },
         "J09": {
-            "puntos": -1,
-            "aciertos_1x2": 0,
+            "puntos": 0,
+            "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -729,10 +729,10 @@
                 "Espanyol_vs_Atlético": {
                     "id": 16421071,
                     "pronostico": "0-2",
-                    "real": "0-0",
-                    "acierto_1x2": false,
+                    "real": "0-1",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }

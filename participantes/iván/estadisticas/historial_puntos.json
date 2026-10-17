@@ -7,11 +7,11 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 58,
-    "puntos_partidos": 55,
+    "puntos_totales": 59,
+    "puntos_partidos": 56,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 3,
-    "aciertos_1x2": 42,
+    "aciertos_1x2": 43,
     "aciertos_exactos": 13,
     "partidos_pronosticados": 90,
     "jornadas_jugadas": 9,
@@ -716,8 +716,8 @@
             }
         },
         "J09": {
-            "puntos": -1,
-            "aciertos_1x2": 0,
+            "puntos": 0,
+            "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -734,10 +734,10 @@
                 "Espanyol_vs_Atlético": {
                     "id": 16421071,
                     "pronostico": "1-3",
-                    "real": "0-0",
-                    "acierto_1x2": false,
+                    "real": "0-1",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }
