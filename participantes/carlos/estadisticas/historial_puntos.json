@@ -2,12 +2,12 @@
     "participante": "carlos",
     "nombre": "Carlos",
     "insignias": [],
-    "puntos_totales": 42,
-    "puntos_partidos": 42,
+    "puntos_totales": 41,
+    "puntos_partidos": 41,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
     "aciertos_1x2": 38,
-    "aciertos_exactos": 4,
+    "aciertos_exactos": 3,
     "partidos_pronosticados": 90,
     "jornadas_jugadas": 9,
     "jornadas_ganadas": 3,
@@ -695,9 +695,9 @@
             }
         },
         "J09": {
-            "puntos": 4,
+            "puntos": 3,
             "aciertos_1x2": 3,
-            "aciertos_exactos": 1,
+            "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
             "perdedor": false,
@@ -729,10 +729,10 @@
                 "Betis_vs_FC Barcelona": {
                     "id": 16421068,
                     "pronostico": "2-4",
-                    "real": "2-4",
+                    "real": "2-5",
                     "acierto_1x2": true,
-                    "acierto_exacto": true,
-                    "puntos": 2
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         }
