@@ -195,8 +195,8 @@
             }
         },
         "J03": {
-            "puntos": 2,
-            "aciertos_1x2": 3,
+            "puntos": 1,
+            "aciertos_1x2": 2,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -209,14 +209,6 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
-                },
-                "Sevilla_vs_Atlético": {
-                    "id": 16416316,
-                    "pronostico": "1-2",
-                    "real": "1-3",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
                 },
                 "Real Madrid_vs_Málaga CF": {
                     "id": 16416312,
@@ -687,8 +679,8 @@
             }
         },
         "J09": {
-            "puntos": 6,
-            "aciertos_1x2": 4,
+            "puntos": 7,
+            "aciertos_1x2": 5,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": true,
@@ -722,6 +714,14 @@
                     "id": 16421068,
                     "pronostico": "1-3",
                     "real": "2-5",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "Valencia_vs_Athletic": {
+                    "id": 16421074,
+                    "pronostico": "1-1",
+                    "real": "0-0",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1

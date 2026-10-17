@@ -2,11 +2,11 @@
     "participante": "javi",
     "nombre": "Javi",
     "insignias": [],
-    "puntos_totales": 26,
-    "puntos_partidos": 29,
+    "puntos_totales": 25,
+    "puntos_partidos": 28,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": -3,
-    "aciertos_1x2": 26,
+    "aciertos_1x2": 25,
     "aciertos_exactos": 3,
     "partidos_pronosticados": 69,
     "jornadas_jugadas": 7,
@@ -187,8 +187,8 @@
             }
         },
         "J03": {
-            "puntos": 2,
-            "aciertos_1x2": 3,
+            "puntos": 1,
+            "aciertos_1x2": 2,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -201,14 +201,6 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
-                },
-                "Sevilla_vs_Atlético": {
-                    "id": 16416316,
-                    "pronostico": "1-2",
-                    "real": "1-3",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
                 },
                 "Real Madrid_vs_Málaga CF": {
                     "id": 16416312,
