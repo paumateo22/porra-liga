@@ -165,6 +165,14 @@
     ],
     "J03": [
         {
+            "id": 16416304,
+            "local": "Real Racing Club",
+            "visitante": "Elche",
+            "id_escudo_local": 2835,
+            "id_escudo_visitante": 2846,
+            "fecha": "2026-08-28T19:00:00"
+        },
+        {
             "id": 16416290,
             "local": "Alavés",
             "visitante": "Villarreal",
