@@ -2,11 +2,11 @@
     "participante": "álvaro",
     "nombre": "Álvaro",
     "insignias": [],
-    "puntos_totales": 50,
-    "puntos_partidos": 50,
+    "puntos_totales": 49,
+    "puntos_partidos": 49,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 39,
+    "aciertos_1x2": 38,
     "aciertos_exactos": 11,
     "partidos_pronosticados": 89,
     "jornadas_jugadas": 9,
@@ -695,8 +695,8 @@
             }
         },
         "J09": {
-            "puntos": 8,
-            "aciertos_1x2": 6,
+            "puntos": 7,
+            "aciertos_1x2": 5,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": true,
@@ -753,10 +753,10 @@
                 "Celta_vs_Alavés": {
                     "id": 16421069,
                     "pronostico": "1-1",
-                    "real": "0-0",
-                    "acierto_1x2": true,
+                    "real": "1-0",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 }
             }
         }

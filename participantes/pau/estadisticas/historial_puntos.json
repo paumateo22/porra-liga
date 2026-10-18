@@ -7,11 +7,11 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 54,
-    "puntos_partidos": 52,
+    "puntos_totales": 53,
+    "puntos_partidos": 51,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 2,
-    "aciertos_1x2": 42,
+    "aciertos_1x2": 41,
     "aciertos_exactos": 10,
     "partidos_pronosticados": 90,
     "jornadas_jugadas": 9,
@@ -708,8 +708,8 @@
             }
         },
         "J09": {
-            "puntos": 5,
-            "aciertos_1x2": 5,
+            "puntos": 4,
+            "aciertos_1x2": 4,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -766,10 +766,10 @@
                 "Celta_vs_Alavés": {
                     "id": 16421069,
                     "pronostico": "2-2",
-                    "real": "0-0",
-                    "acierto_1x2": true,
+                    "real": "1-0",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 }
             }
         }
