@@ -2,15 +2,15 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 48,
-    "puntos_partidos": 47,
+    "puntos_totales": 46,
+    "puntos_partidos": 46,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 41,
+    "puntos_ganador_perdedor": 0,
+    "aciertos_1x2": 40,
     "aciertos_exactos": 6,
     "partidos_pronosticados": 88,
     "jornadas_jugadas": 9,
-    "jornadas_ganadas": 3,
+    "jornadas_ganadas": 2,
     "jornadas_perdidas": 2,
     "punto_partida": 0,
     "por_jornada": {
@@ -671,11 +671,11 @@
             }
         },
         "J09": {
-            "puntos": 8,
-            "aciertos_1x2": 6,
+            "puntos": 6,
+            "aciertos_1x2": 5,
             "aciertos_exactos": 1,
             "bonus": 0,
-            "ganador": true,
+            "ganador": false,
             "perdedor": false,
             "detalle": {
                 "Deportivo de A Coruña_vs_Levante UD": {
@@ -745,10 +745,10 @@
                 "Real Madrid_vs_Sevilla": {
                     "id": 16421075,
                     "pronostico": "2-2",
-                    "real": "0-0",
-                    "acierto_1x2": true,
+                    "real": "1-0",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 }
             }
         }

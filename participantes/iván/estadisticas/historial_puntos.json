@@ -7,11 +7,11 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 62,
-    "puntos_partidos": 58,
+    "puntos_totales": 63,
+    "puntos_partidos": 59,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 4,
-    "aciertos_1x2": 45,
+    "aciertos_1x2": 46,
     "aciertos_exactos": 13,
     "partidos_pronosticados": 90,
     "jornadas_jugadas": 9,
@@ -692,8 +692,8 @@
             }
         },
         "J09": {
-            "puntos": 5,
-            "aciertos_1x2": 5,
+            "puntos": 6,
+            "aciertos_1x2": 6,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -766,10 +766,10 @@
                 "Real Madrid_vs_Sevilla": {
                     "id": 16421075,
                     "pronostico": "2-1",
-                    "real": "0-0",
-                    "acierto_1x2": false,
+                    "real": "1-0",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }
