@@ -136,7 +136,7 @@
             "estado": "finished"
         },
         "16421069": {
-            "goles_local": 1,
+            "goles_local": 2,
             "goles_visitante": 0,
             "estado": "inprogress"
         },
@@ -162,12 +162,12 @@
             "nombre": "Adrián",
             "insignias": [],
             "aciertos_1x2": 5,
-            "aciertos_exactos": 2,
+            "aciertos_exactos": 1,
             "bonus": 0,
             "elegible": true,
             "ganador": true,
             "perdedor": false,
-            "puntos": 8,
+            "puntos": 7,
             "pronosticados": 10,
             "predicciones": {
                 "16421070": {
@@ -209,8 +209,8 @@
                 "16421069": {
                     "pronostico": "1-0",
                     "acierto_1x2": true,
-                    "acierto_exacto": true,
-                    "puntos": 2
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         },
