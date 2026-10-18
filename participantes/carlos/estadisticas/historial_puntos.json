@@ -242,14 +242,6 @@
                     "acierto_exacto": false,
                     "puntos": 1
                 },
-                "Deportivo de A Coruña_vs_Valencia": {
-                    "id": 16416291,
-                    "pronostico": "1-1",
-                    "real": "3-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "Celta_vs_Athletic": {
                     "id": 16416308,
                     "pronostico": "2-2",
@@ -762,6 +754,14 @@
                     "id": 16421078,
                     "pronostico": "1-1",
                     "real": "2-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Celta_vs_Alavés": {
+                    "id": 16421069,
+                    "pronostico": "3-1",
+                    "real": "0-0",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0

@@ -2,11 +2,11 @@
     "participante": "manu",
     "nombre": "Manu",
     "insignias": [],
-    "puntos_totales": 41,
-    "puntos_partidos": 36,
+    "puntos_totales": 40,
+    "puntos_partidos": 35,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 33,
+    "aciertos_1x2": 32,
     "aciertos_exactos": 3,
     "partidos_pronosticados": 70,
     "jornadas_jugadas": 7,
@@ -105,8 +105,8 @@
             }
         },
         "J03": {
-            "puntos": 6,
-            "aciertos_1x2": 5,
+            "puntos": 5,
+            "aciertos_1x2": 4,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
@@ -151,14 +151,6 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
-                },
-                "Deportivo de A Coruña_vs_Valencia": {
-                    "id": 16416291,
-                    "pronostico": "2-1",
-                    "real": "3-1",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
                 },
                 "Celta_vs_Athletic": {
                     "id": 16416308,
@@ -582,6 +574,14 @@
                     "id": 16421078,
                     "pronostico": "1-1",
                     "real": "2-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Celta_vs_Alavés": {
+                    "id": 16421069,
+                    "pronostico": "1-2",
+                    "real": "0-0",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0

@@ -2,11 +2,11 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 50,
-    "puntos_partidos": 49,
+    "puntos_totales": 49,
+    "puntos_partidos": 48,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 42,
+    "aciertos_1x2": 41,
     "aciertos_exactos": 7,
     "partidos_pronosticados": 90,
     "jornadas_jugadas": 9,
@@ -195,8 +195,8 @@
             }
         },
         "J03": {
-            "puntos": 10,
-            "aciertos_1x2": 6,
+            "puntos": 9,
+            "aciertos_1x2": 5,
             "aciertos_exactos": 3,
             "bonus": 0,
             "ganador": true,
@@ -241,14 +241,6 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
-                },
-                "Deportivo de A Coruña_vs_Valencia": {
-                    "id": 16416291,
-                    "pronostico": "2-1",
-                    "real": "3-1",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
                 },
                 "Celta_vs_Athletic": {
                     "id": 16416308,
@@ -762,6 +754,14 @@
                     "id": 16421078,
                     "pronostico": "2-2",
                     "real": "2-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Celta_vs_Alavés": {
+                    "id": 16421069,
+                    "pronostico": "0-1",
+                    "real": "0-0",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
