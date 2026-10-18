@@ -2,12 +2,12 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 45,
-    "puntos_partidos": 45,
+    "puntos_totales": 46,
+    "puntos_partidos": 46,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
     "aciertos_1x2": 40,
-    "aciertos_exactos": 5,
+    "aciertos_exactos": 6,
     "partidos_pronosticados": 88,
     "jornadas_jugadas": 9,
     "jornadas_ganadas": 2,
@@ -695,9 +695,9 @@
             }
         },
         "J09": {
-            "puntos": 4,
+            "puntos": 5,
             "aciertos_1x2": 4,
-            "aciertos_exactos": 0,
+            "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
             "perdedor": false,
@@ -745,10 +745,10 @@
                 "Osasuna_vs_Real Racing Club": {
                     "id": 16421078,
                     "pronostico": "2-0",
-                    "real": "1-0",
+                    "real": "2-0",
                     "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         }

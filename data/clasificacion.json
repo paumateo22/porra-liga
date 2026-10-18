@@ -1,6 +1,6 @@
 {
     "competicion": "LaLiga 2026-27",
-    "generado": "2026-10-18T14:04:08",
+    "generado": "2026-10-18T15:49:12",
     "jornadas_calculadas": [
         "J01",
         "J02",
@@ -397,12 +397,12 @@
             "slug": "adrián",
             "nombre": "Adrián",
             "insignias": [],
-            "puntos_totales": 45,
-            "puntos_partidos": 45,
+            "puntos_totales": 46,
+            "puntos_partidos": 46,
             "bonus_rendimiento": 0,
             "puntos_ganador_perdedor": 0,
             "aciertos_1x2": 40,
-            "aciertos_exactos": 5,
+            "aciertos_exactos": 6,
             "partidos_pronosticados": 88,
             "jornadas_jugadas": 9,
             "jornadas_ganadas": 2,
@@ -474,9 +474,9 @@
                     "perdedor": true
                 },
                 "J09": {
-                    "puntos": 4,
+                    "puntos": 5,
                     "aciertos_1x2": 4,
-                    "aciertos_exactos": 0,
+                    "aciertos_exactos": 1,
                     "bonus": 0,
                     "ganador": false,
                     "perdedor": false

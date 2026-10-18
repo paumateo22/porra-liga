@@ -839,14 +839,14 @@
                 "partidos_pronosticados": 10,
                 "partidos_evaluados": 6,
                 "aciertos_1x2": 4,
-                "aciertos_exactos": 0,
-                "puntos_partidos": 4,
+                "aciertos_exactos": 1,
+                "puntos_partidos": 5,
                 "bonus_rendimiento": 0,
                 "elegible_jornada": true,
                 "es_ganador_jornada": false,
                 "es_perdedor_jornada": false,
                 "puntos_ganador_perdedor": 0,
-                "puntos_totales": 4
+                "puntos_totales": 5
             },
             "aitor": {
                 "partidos_pronosticados": 10,
