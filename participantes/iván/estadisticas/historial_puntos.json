@@ -7,12 +7,12 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 63,
-    "puntos_partidos": 59,
+    "puntos_totales": 62,
+    "puntos_partidos": 58,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 4,
     "aciertos_1x2": 45,
-    "aciertos_exactos": 14,
+    "aciertos_exactos": 13,
     "partidos_pronosticados": 90,
     "jornadas_jugadas": 9,
     "jornadas_ganadas": 5,
@@ -700,9 +700,9 @@
             }
         },
         "J09": {
-            "puntos": 6,
+            "puntos": 5,
             "aciertos_1x2": 5,
-            "aciertos_exactos": 1,
+            "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
             "perdedor": false,
@@ -766,10 +766,10 @@
                 "Málaga CF_vs_Real Sociedad": {
                     "id": 16421073,
                     "pronostico": "1-2",
-                    "real": "1-2",
+                    "real": "1-3",
                     "acierto_1x2": true,
-                    "acierto_exacto": true,
-                    "puntos": 2
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         }

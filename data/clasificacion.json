@@ -1,6 +1,6 @@
 {
     "competicion": "LaLiga 2026-27",
-    "generado": "2026-10-18T19:43:48",
+    "generado": "2026-10-18T19:49:08",
     "jornadas_calculadas": [
         "J01",
         "J02",
@@ -28,12 +28,12 @@
                     "descripcion": "Mundial 2026"
                 }
             ],
-            "puntos_totales": 63,
-            "puntos_partidos": 59,
+            "puntos_totales": 62,
+            "puntos_partidos": 58,
             "bonus_rendimiento": 0,
             "puntos_ganador_perdedor": 4,
             "aciertos_1x2": 45,
-            "aciertos_exactos": 14,
+            "aciertos_exactos": 13,
             "partidos_pronosticados": 90,
             "jornadas_jugadas": 9,
             "jornadas_ganadas": 5,
@@ -105,9 +105,9 @@
                     "perdedor": false
                 },
                 "J09": {
-                    "puntos": 6,
+                    "puntos": 5,
                     "aciertos_1x2": 5,
-                    "aciertos_exactos": 1,
+                    "aciertos_exactos": 0,
                     "bonus": 0,
                     "ganador": false,
                     "perdedor": false
@@ -488,12 +488,12 @@
             "slug": "carlos",
             "nombre": "Carlos",
             "insignias": [],
-            "puntos_totales": 44,
-            "puntos_partidos": 44,
+            "puntos_totales": 43,
+            "puntos_partidos": 43,
             "bonus_rendimiento": 0,
             "puntos_ganador_perdedor": 0,
             "aciertos_1x2": 40,
-            "aciertos_exactos": 4,
+            "aciertos_exactos": 3,
             "partidos_pronosticados": 90,
             "jornadas_jugadas": 9,
             "jornadas_ganadas": 3,
@@ -565,9 +565,9 @@
                     "perdedor": false
                 },
                 "J09": {
-                    "puntos": 6,
+                    "puntos": 5,
                     "aciertos_1x2": 5,
-                    "aciertos_exactos": 1,
+                    "aciertos_exactos": 0,
                     "bonus": 0,
                     "ganador": false,
                     "perdedor": false
@@ -579,12 +579,12 @@
             "slug": "manu",
             "nombre": "Manu",
             "insignias": [],
-            "puntos_totales": 41,
-            "puntos_partidos": 36,
+            "puntos_totales": 42,
+            "puntos_partidos": 37,
             "bonus_rendimiento": 0,
             "puntos_ganador_perdedor": 1,
             "aciertos_1x2": 33,
-            "aciertos_exactos": 3,
+            "aciertos_exactos": 4,
             "partidos_pronosticados": 70,
             "jornadas_jugadas": 7,
             "jornadas_ganadas": 2,
@@ -640,9 +640,9 @@
                     "perdedor": false
                 },
                 "J09": {
-                    "puntos": 4,
+                    "puntos": 5,
                     "aciertos_1x2": 4,
-                    "aciertos_exactos": 0,
+                    "aciertos_exactos": 1,
                     "bonus": 0,
                     "ganador": false,
                     "perdedor": false
