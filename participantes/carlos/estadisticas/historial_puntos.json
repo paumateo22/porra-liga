@@ -2,12 +2,12 @@
     "participante": "carlos",
     "nombre": "Carlos",
     "insignias": [],
-    "puntos_totales": 43,
-    "puntos_partidos": 43,
+    "puntos_totales": 44,
+    "puntos_partidos": 44,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
     "aciertos_1x2": 40,
-    "aciertos_exactos": 3,
+    "aciertos_exactos": 4,
     "partidos_pronosticados": 90,
     "jornadas_jugadas": 9,
     "jornadas_ganadas": 3,
@@ -687,9 +687,9 @@
             }
         },
         "J09": {
-            "puntos": 6,
+            "puntos": 7,
             "aciertos_1x2": 6,
-            "aciertos_exactos": 0,
+            "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
             "perdedor": false,
@@ -761,10 +761,10 @@
                 "Real Madrid_vs_Sevilla": {
                     "id": 16421075,
                     "pronostico": "3-1",
-                    "real": "3-0",
+                    "real": "3-1",
                     "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         }
