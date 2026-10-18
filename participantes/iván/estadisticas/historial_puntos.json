@@ -200,8 +200,8 @@
             }
         },
         "J03": {
-            "puntos": 5,
-            "aciertos_1x2": 4,
+            "puntos": 4,
+            "aciertos_1x2": 3,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
@@ -246,14 +246,6 @@
                     "acierto_1x2": true,
                     "acierto_exacto": true,
                     "puntos": 2
-                },
-                "Celta_vs_Athletic": {
-                    "id": 16416308,
-                    "pronostico": "1-2",
-                    "real": "0-2",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
                 },
                 "Osasuna_vs_Getafe": {
                     "id": 16416314,
@@ -708,8 +700,8 @@
             }
         },
         "J09": {
-            "puntos": 4,
-            "aciertos_1x2": 4,
+            "puntos": 5,
+            "aciertos_1x2": 5,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -770,6 +762,14 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
+                },
+                "Málaga CF_vs_Real Sociedad": {
+                    "id": 16421073,
+                    "pronostico": "1-2",
+                    "real": "0-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         }

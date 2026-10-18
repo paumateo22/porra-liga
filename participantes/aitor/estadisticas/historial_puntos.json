@@ -2,11 +2,11 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 49,
-    "puntos_partidos": 48,
+    "puntos_totales": 50,
+    "puntos_partidos": 49,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 41,
+    "aciertos_1x2": 42,
     "aciertos_exactos": 7,
     "partidos_pronosticados": 90,
     "jornadas_jugadas": 9,
@@ -238,14 +238,6 @@
                     "id": 16416316,
                     "pronostico": "2-2",
                     "real": "1-3",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
-                "Celta_vs_Athletic": {
-                    "id": 16416308,
-                    "pronostico": "0-0",
-                    "real": "0-2",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
@@ -703,8 +695,8 @@
             }
         },
         "J09": {
-            "puntos": 1,
-            "aciertos_1x2": 2,
+            "puntos": 2,
+            "aciertos_1x2": 3,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -765,6 +757,14 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
+                },
+                "Málaga CF_vs_Real Sociedad": {
+                    "id": 16421073,
+                    "pronostico": "0-2",
+                    "real": "0-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         }

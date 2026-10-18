@@ -2,11 +2,11 @@
     "participante": "carlos",
     "nombre": "Carlos",
     "insignias": [],
-    "puntos_totales": 42,
-    "puntos_partidos": 42,
+    "puntos_totales": 43,
+    "puntos_partidos": 43,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 39,
+    "aciertos_1x2": 40,
     "aciertos_exactos": 3,
     "partidos_pronosticados": 90,
     "jornadas_jugadas": 9,
@@ -241,14 +241,6 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
-                },
-                "Celta_vs_Athletic": {
-                    "id": 16416308,
-                    "pronostico": "2-2",
-                    "real": "0-2",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
                 },
                 "Osasuna_vs_Getafe": {
                     "id": 16416314,
@@ -703,8 +695,8 @@
             }
         },
         "J09": {
-            "puntos": 4,
-            "aciertos_1x2": 4,
+            "puntos": 5,
+            "aciertos_1x2": 5,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -762,6 +754,14 @@
                     "id": 16421069,
                     "pronostico": "3-1",
                     "real": "2-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "Málaga CF_vs_Real Sociedad": {
+                    "id": 16421073,
+                    "pronostico": "1-2",
+                    "real": "0-1",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
