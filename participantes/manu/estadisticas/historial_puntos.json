@@ -2,11 +2,11 @@
     "participante": "manu",
     "nombre": "Manu",
     "insignias": [],
-    "puntos_totales": 41,
-    "puntos_partidos": 36,
+    "puntos_totales": 40,
+    "puntos_partidos": 35,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 33,
+    "aciertos_1x2": 32,
     "aciertos_exactos": 3,
     "partidos_pronosticados": 70,
     "jornadas_jugadas": 7,
@@ -105,8 +105,8 @@
             }
         },
         "J03": {
-            "puntos": 5,
-            "aciertos_1x2": 4,
+            "puntos": 4,
+            "aciertos_1x2": 3,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
@@ -151,14 +151,6 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
-                },
-                "Osasuna_vs_Getafe": {
-                    "id": 16416314,
-                    "pronostico": "2-1",
-                    "real": "1-0",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
                 },
                 "FC Barcelona_vs_Rayo": {
                     "id": 16416295,
