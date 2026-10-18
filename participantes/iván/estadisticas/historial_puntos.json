@@ -200,8 +200,8 @@
             }
         },
         "J03": {
-            "puntos": 6,
-            "aciertos_1x2": 5,
+            "puntos": 5,
+            "aciertos_1x2": 4,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
@@ -246,14 +246,6 @@
                     "acierto_1x2": true,
                     "acierto_exacto": true,
                     "puntos": 2
-                },
-                "Real Madrid_vs_Málaga CF": {
-                    "id": 16416312,
-                    "pronostico": "3-0",
-                    "real": "4-0",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
                 },
                 "Deportivo de A Coruña_vs_Valencia": {
                     "id": 16416291,
@@ -724,8 +716,8 @@
             }
         },
         "J09": {
-            "puntos": 3,
-            "aciertos_1x2": 3,
+            "puntos": 4,
+            "aciertos_1x2": 4,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -767,6 +759,14 @@
                     "id": 16421074,
                     "pronostico": "1-1",
                     "real": "0-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "Osasuna_vs_Real Racing Club": {
+                    "id": 16421078,
+                    "pronostico": "2-1",
+                    "real": "1-0",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
