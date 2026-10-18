@@ -1,6 +1,6 @@
 {
     "competicion": "LaLiga 2026-27",
-    "generado": "2026-10-18T19:49:08",
+    "generado": "2026-10-18T19:55:07",
     "jornadas_calculadas": [
         "J01",
         "J02",
@@ -579,12 +579,12 @@
             "slug": "manu",
             "nombre": "Manu",
             "insignias": [],
-            "puntos_totales": 42,
-            "puntos_partidos": 37,
+            "puntos_totales": 41,
+            "puntos_partidos": 36,
             "bonus_rendimiento": 0,
             "puntos_ganador_perdedor": 1,
             "aciertos_1x2": 33,
-            "aciertos_exactos": 4,
+            "aciertos_exactos": 3,
             "partidos_pronosticados": 70,
             "jornadas_jugadas": 7,
             "jornadas_ganadas": 2,
@@ -640,9 +640,9 @@
                     "perdedor": false
                 },
                 "J09": {
-                    "puntos": 5,
+                    "puntos": 4,
                     "aciertos_1x2": 4,
-                    "aciertos_exactos": 1,
+                    "aciertos_exactos": 0,
                     "bonus": 0,
                     "ganador": false,
                     "perdedor": false
