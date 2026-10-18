@@ -1,6 +1,6 @@
 {
     "competicion": "LaLiga 2026-27",
-    "generado": "2026-10-18T18:58:22",
+    "generado": "2026-10-18T19:43:48",
     "jornadas_calculadas": [
         "J01",
         "J02",
@@ -28,12 +28,12 @@
                     "descripcion": "Mundial 2026"
                 }
             ],
-            "puntos_totales": 62,
-            "puntos_partidos": 58,
+            "puntos_totales": 63,
+            "puntos_partidos": 59,
             "bonus_rendimiento": 0,
             "puntos_ganador_perdedor": 4,
             "aciertos_1x2": 45,
-            "aciertos_exactos": 13,
+            "aciertos_exactos": 14,
             "partidos_pronosticados": 90,
             "jornadas_jugadas": 9,
             "jornadas_ganadas": 5,
@@ -105,9 +105,9 @@
                     "perdedor": false
                 },
                 "J09": {
-                    "puntos": 5,
+                    "puntos": 6,
                     "aciertos_1x2": 5,
-                    "aciertos_exactos": 0,
+                    "aciertos_exactos": 1,
                     "bonus": 0,
                     "ganador": false,
                     "perdedor": false
@@ -215,12 +215,12 @@
             "slug": "aitor",
             "nombre": "Aitor",
             "insignias": [],
-            "puntos_totales": 51,
-            "puntos_partidos": 50,
+            "puntos_totales": 50,
+            "puntos_partidos": 49,
             "bonus_rendimiento": 0,
             "puntos_ganador_perdedor": 1,
             "aciertos_1x2": 42,
-            "aciertos_exactos": 8,
+            "aciertos_exactos": 7,
             "partidos_pronosticados": 90,
             "jornadas_jugadas": 9,
             "jornadas_ganadas": 4,
@@ -292,9 +292,9 @@
                     "perdedor": false
                 },
                 "J09": {
-                    "puntos": 3,
+                    "puntos": 2,
                     "aciertos_1x2": 3,
-                    "aciertos_exactos": 1,
+                    "aciertos_exactos": 0,
                     "bonus": 0,
                     "ganador": false,
                     "perdedor": true
@@ -488,12 +488,12 @@
             "slug": "carlos",
             "nombre": "Carlos",
             "insignias": [],
-            "puntos_totales": 43,
-            "puntos_partidos": 43,
+            "puntos_totales": 44,
+            "puntos_partidos": 44,
             "bonus_rendimiento": 0,
             "puntos_ganador_perdedor": 0,
             "aciertos_1x2": 40,
-            "aciertos_exactos": 3,
+            "aciertos_exactos": 4,
             "partidos_pronosticados": 90,
             "jornadas_jugadas": 9,
             "jornadas_ganadas": 3,
@@ -565,9 +565,9 @@
                     "perdedor": false
                 },
                 "J09": {
-                    "puntos": 5,
+                    "puntos": 6,
                     "aciertos_1x2": 5,
-                    "aciertos_exactos": 0,
+                    "aciertos_exactos": 1,
                     "bonus": 0,
                     "ganador": false,
                     "perdedor": false
