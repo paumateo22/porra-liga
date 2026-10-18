@@ -2,12 +2,12 @@
     "participante": "álvaro",
     "nombre": "Álvaro",
     "insignias": [],
-    "puntos_totales": 52,
-    "puntos_partidos": 52,
+    "puntos_totales": 51,
+    "puntos_partidos": 51,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
     "aciertos_1x2": 40,
-    "aciertos_exactos": 12,
+    "aciertos_exactos": 11,
     "partidos_pronosticados": 89,
     "jornadas_jugadas": 9,
     "jornadas_ganadas": 1,
@@ -679,9 +679,9 @@
             }
         },
         "J09": {
-            "puntos": 10,
+            "puntos": 9,
             "aciertos_1x2": 7,
-            "aciertos_exactos": 2,
+            "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": true,
             "perdedor": false,
@@ -753,10 +753,10 @@
                 "Real Madrid_vs_Sevilla": {
                     "id": 16421075,
                     "pronostico": "1-0",
-                    "real": "1-0",
+                    "real": "2-0",
                     "acierto_1x2": true,
-                    "acierto_exacto": true,
-                    "puntos": 2
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         }
