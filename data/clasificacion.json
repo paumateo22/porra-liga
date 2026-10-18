@@ -1,6 +1,6 @@
 {
     "competicion": "LaLiga 2026-27",
-    "generado": "2026-10-18T18:34:07",
+    "generado": "2026-10-18T18:58:22",
     "jornadas_calculadas": [
         "J01",
         "J02",
@@ -124,12 +124,12 @@
                     "descripcion": "Liga 2023/24"
                 }
             ],
-            "puntos_totales": 55,
-            "puntos_partidos": 53,
+            "puntos_totales": 54,
+            "puntos_partidos": 52,
             "bonus_rendimiento": 0,
             "puntos_ganador_perdedor": 2,
             "aciertos_1x2": 42,
-            "aciertos_exactos": 11,
+            "aciertos_exactos": 10,
             "partidos_pronosticados": 90,
             "jornadas_jugadas": 9,
             "jornadas_ganadas": 4,
@@ -201,9 +201,9 @@
                     "perdedor": false
                 },
                 "J09": {
-                    "puntos": 6,
+                    "puntos": 5,
                     "aciertos_1x2": 5,
-                    "aciertos_exactos": 1,
+                    "aciertos_exactos": 0,
                     "bonus": 0,
                     "ganador": false,
                     "perdedor": false
@@ -215,12 +215,12 @@
             "slug": "aitor",
             "nombre": "Aitor",
             "insignias": [],
-            "puntos_totales": 50,
-            "puntos_partidos": 49,
+            "puntos_totales": 51,
+            "puntos_partidos": 50,
             "bonus_rendimiento": 0,
             "puntos_ganador_perdedor": 1,
             "aciertos_1x2": 42,
-            "aciertos_exactos": 7,
+            "aciertos_exactos": 8,
             "partidos_pronosticados": 90,
             "jornadas_jugadas": 9,
             "jornadas_ganadas": 4,
@@ -292,9 +292,9 @@
                     "perdedor": false
                 },
                 "J09": {
-                    "puntos": 2,
+                    "puntos": 3,
                     "aciertos_1x2": 3,
-                    "aciertos_exactos": 0,
+                    "aciertos_exactos": 1,
                     "bonus": 0,
                     "ganador": false,
                     "perdedor": true
