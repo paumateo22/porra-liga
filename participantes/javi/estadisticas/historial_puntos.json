@@ -2,11 +2,11 @@
     "participante": "javi",
     "nombre": "Javi",
     "insignias": [],
-    "puntos_totales": 25,
-    "puntos_partidos": 28,
+    "puntos_totales": 26,
+    "puntos_partidos": 29,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": -3,
-    "aciertos_1x2": 25,
+    "aciertos_1x2": 26,
     "aciertos_exactos": 3,
     "partidos_pronosticados": 69,
     "jornadas_jugadas": 7,
@@ -187,8 +187,8 @@
             }
         },
         "J03": {
-            "puntos": 1,
-            "aciertos_1x2": 2,
+            "puntos": 2,
+            "aciertos_1x2": 3,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -233,6 +233,38 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
+                },
+                "Real Madrid_vs_Málaga CF": {
+                    "id": 16416312,
+                    "pronostico": "2-0",
+                    "real": "4-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "Deportivo de A Coruña_vs_Valencia": {
+                    "id": 16416291,
+                    "pronostico": "0-2",
+                    "real": "3-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Celta_vs_Athletic": {
+                    "id": 16416308,
+                    "pronostico": "1-1",
+                    "real": "0-2",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Osasuna_vs_Getafe": {
+                    "id": 16416314,
+                    "pronostico": "0-1",
+                    "real": "1-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 },
                 "FC Barcelona_vs_Rayo": {
                     "id": 16416295,
