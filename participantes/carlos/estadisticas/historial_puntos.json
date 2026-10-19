@@ -195,8 +195,8 @@
             }
         },
         "J03": {
-            "puntos": 5,
-            "aciertos_1x2": 5,
+            "puntos": 4,
+            "aciertos_1x2": 4,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -270,14 +270,6 @@
                     "id": 16416314,
                     "pronostico": "2-1",
                     "real": "1-0",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                },
-                "FC Barcelona_vs_Rayo": {
-                    "id": 16416295,
-                    "pronostico": "2-0",
-                    "real": "5-2",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
@@ -719,8 +711,8 @@
             }
         },
         "J09": {
-            "puntos": 6,
-            "aciertos_1x2": 6,
+            "puntos": 7,
+            "aciertos_1x2": 7,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -794,6 +786,14 @@
                     "id": 16421075,
                     "pronostico": "3-1",
                     "real": "4-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "Getafe_vs_Rayo": {
+                    "id": 16421072,
+                    "pronostico": "1-1",
+                    "real": "0-0",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1

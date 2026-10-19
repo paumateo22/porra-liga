@@ -2,11 +2,11 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 53,
-    "puntos_partidos": 52,
+    "puntos_totales": 52,
+    "puntos_partidos": 51,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 45,
+    "aciertos_1x2": 44,
     "aciertos_exactos": 7,
     "partidos_pronosticados": 90,
     "jornadas_jugadas": 9,
@@ -195,8 +195,8 @@
             }
         },
         "J03": {
-            "puntos": 11,
-            "aciertos_1x2": 7,
+            "puntos": 10,
+            "aciertos_1x2": 6,
             "aciertos_exactos": 3,
             "bonus": 0,
             "ganador": true,
@@ -273,14 +273,6 @@
                     "acierto_1x2": true,
                     "acierto_exacto": true,
                     "puntos": 2
-                },
-                "FC Barcelona_vs_Rayo": {
-                    "id": 16416295,
-                    "pronostico": "2-0",
-                    "real": "5-2",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
                 }
             }
         },
@@ -797,6 +789,14 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
+                },
+                "Getafe_vs_Rayo": {
+                    "id": 16421072,
+                    "pronostico": "1-2",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         }

@@ -2,9 +2,9 @@
     "participante": "álvaro",
     "nombre": "Álvaro",
     "insignias": [],
-    "puntos_totales": 52,
+    "puntos_totales": 54,
     "puntos_partidos": 52,
-    "bonus_rendimiento": 0,
+    "bonus_rendimiento": 2,
     "puntos_ganador_perdedor": 0,
     "aciertos_1x2": 41,
     "aciertos_exactos": 11,
@@ -195,8 +195,8 @@
             }
         },
         "J03": {
-            "puntos": 2,
-            "aciertos_1x2": 3,
+            "puntos": 1,
+            "aciertos_1x2": 2,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -273,14 +273,6 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
-                },
-                "FC Barcelona_vs_Rayo": {
-                    "id": 16416295,
-                    "pronostico": "2-0",
-                    "real": "5-2",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
                 }
             }
         },
@@ -711,10 +703,10 @@
             }
         },
         "J09": {
-            "puntos": 9,
-            "aciertos_1x2": 7,
+            "puntos": 12,
+            "aciertos_1x2": 8,
             "aciertos_exactos": 1,
-            "bonus": 0,
+            "bonus": 2,
             "ganador": true,
             "perdedor": false,
             "detalle": {
@@ -786,6 +778,14 @@
                     "id": 16421075,
                     "pronostico": "1-0",
                     "real": "4-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "Getafe_vs_Rayo": {
+                    "id": 16421072,
+                    "pronostico": "1-1",
+                    "real": "0-0",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
