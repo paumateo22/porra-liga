@@ -2,12 +2,12 @@
     "participante": "álvaro",
     "nombre": "Álvaro",
     "insignias": [],
-    "puntos_totales": 51,
-    "puntos_partidos": 51,
-    "bonus_rendimiento": 0,
+    "puntos_totales": 55,
+    "puntos_partidos": 53,
+    "bonus_rendimiento": 2,
     "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 40,
-    "aciertos_exactos": 11,
+    "aciertos_1x2": 41,
+    "aciertos_exactos": 12,
     "partidos_pronosticados": 89,
     "jornadas_jugadas": 9,
     "jornadas_ganadas": 1,
@@ -703,10 +703,10 @@
             }
         },
         "J09": {
-            "puntos": 9,
-            "aciertos_1x2": 7,
-            "aciertos_exactos": 1,
-            "bonus": 0,
+            "puntos": 13,
+            "aciertos_1x2": 8,
+            "aciertos_exactos": 2,
+            "bonus": 2,
             "ganador": true,
             "perdedor": false,
             "detalle": {
@@ -785,10 +785,10 @@
                 "Getafe_vs_Rayo": {
                     "id": 16421072,
                     "pronostico": "1-1",
-                    "real": "0-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
+                    "real": "1-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         }

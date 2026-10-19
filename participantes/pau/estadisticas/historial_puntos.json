@@ -7,11 +7,11 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 57,
-    "puntos_partidos": 54,
+    "puntos_totales": 58,
+    "puntos_partidos": 55,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 3,
-    "aciertos_1x2": 44,
+    "aciertos_1x2": 45,
     "aciertos_exactos": 10,
     "partidos_pronosticados": 90,
     "jornadas_jugadas": 9,
@@ -716,8 +716,8 @@
             }
         },
         "J09": {
-            "puntos": 6,
-            "aciertos_1x2": 6,
+            "puntos": 7,
+            "aciertos_1x2": 7,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -798,10 +798,10 @@
                 "Getafe_vs_Rayo": {
                     "id": 16421072,
                     "pronostico": "0-0",
-                    "real": "0-1",
-                    "acierto_1x2": false,
+                    "real": "1-1",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }

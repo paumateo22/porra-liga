@@ -2,12 +2,12 @@
     "participante": "carlos",
     "nombre": "Carlos",
     "insignias": [],
-    "puntos_totales": 44,
-    "puntos_partidos": 44,
+    "puntos_totales": 46,
+    "puntos_partidos": 46,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 41,
-    "aciertos_exactos": 3,
+    "aciertos_1x2": 42,
+    "aciertos_exactos": 4,
     "partidos_pronosticados": 90,
     "jornadas_jugadas": 9,
     "jornadas_ganadas": 3,
@@ -711,9 +711,9 @@
             }
         },
         "J09": {
-            "puntos": 6,
-            "aciertos_1x2": 6,
-            "aciertos_exactos": 0,
+            "puntos": 8,
+            "aciertos_1x2": 7,
+            "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
             "perdedor": false,
@@ -793,10 +793,10 @@
                 "Getafe_vs_Rayo": {
                     "id": 16421072,
                     "pronostico": "1-1",
-                    "real": "0-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
+                    "real": "1-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         }

@@ -2,12 +2,12 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 49,
-    "puntos_partidos": 49,
+    "puntos_totales": 47,
+    "puntos_partidos": 47,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 42,
-    "aciertos_exactos": 7,
+    "aciertos_1x2": 41,
+    "aciertos_exactos": 6,
     "partidos_pronosticados": 88,
     "jornadas_jugadas": 9,
     "jornadas_ganadas": 2,
@@ -695,9 +695,9 @@
             }
         },
         "J09": {
-            "puntos": 8,
-            "aciertos_1x2": 6,
-            "aciertos_exactos": 2,
+            "puntos": 6,
+            "aciertos_1x2": 5,
+            "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
             "perdedor": false,
@@ -777,10 +777,10 @@
                 "Getafe_vs_Rayo": {
                     "id": 16421072,
                     "pronostico": "0-1",
-                    "real": "0-1",
-                    "acierto_1x2": true,
-                    "acierto_exacto": true,
-                    "puntos": 2
+                    "real": "1-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         }

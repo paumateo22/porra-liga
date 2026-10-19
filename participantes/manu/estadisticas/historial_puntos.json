@@ -2,11 +2,11 @@
     "participante": "manu",
     "nombre": "Manu",
     "insignias": [],
-    "puntos_totales": 44,
-    "puntos_partidos": 39,
+    "puntos_totales": 43,
+    "puntos_partidos": 38,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 36,
+    "aciertos_1x2": 35,
     "aciertos_exactos": 3,
     "partidos_pronosticados": 70,
     "jornadas_jugadas": 7,
@@ -531,8 +531,8 @@
             }
         },
         "J09": {
-            "puntos": 6,
-            "aciertos_1x2": 6,
+            "puntos": 5,
+            "aciertos_1x2": 5,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -613,10 +613,10 @@
                 "Getafe_vs_Rayo": {
                     "id": 16421072,
                     "pronostico": "1-2",
-                    "real": "0-1",
-                    "acierto_1x2": true,
+                    "real": "1-1",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 }
             }
         }

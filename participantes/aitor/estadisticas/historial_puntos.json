@@ -2,11 +2,11 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 53,
-    "puntos_partidos": 52,
+    "puntos_totales": 52,
+    "puntos_partidos": 51,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 45,
+    "aciertos_1x2": 44,
     "aciertos_exactos": 7,
     "partidos_pronosticados": 90,
     "jornadas_jugadas": 9,
@@ -711,8 +711,8 @@
             }
         },
         "J09": {
-            "puntos": 4,
-            "aciertos_1x2": 5,
+            "puntos": 3,
+            "aciertos_1x2": 4,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -793,10 +793,10 @@
                 "Getafe_vs_Rayo": {
                     "id": 16421072,
                     "pronostico": "1-2",
-                    "real": "0-1",
-                    "acierto_1x2": true,
+                    "real": "1-1",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 }
             }
         }
