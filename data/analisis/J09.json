@@ -1,7 +1,7 @@
 {
     "clave": "J09",
     "jornada": 9,
-    "cerrada": false,
+    "cerrada": true,
     "resultado_jornada": {
         "ganadores": [
             {
@@ -149,7 +149,7 @@
         "16421072": {
             "goles_local": 1,
             "goles_visitante": 1,
-            "estado": "inprogress"
+            "estado": "finished"
         }
     },
     "jugadores": [
