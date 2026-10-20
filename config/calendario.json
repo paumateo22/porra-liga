@@ -2165,6 +2165,14 @@
             "fecha": "2027-03-07T20:00:00"
         },
         {
+            "id": 16462671,
+            "local": "Espanyol",
+            "visitante": "Real Racing Club",
+            "id_escudo_local": 2814,
+            "id_escudo_visitante": 2835,
+            "fecha": "2027-03-07T20:00:00"
+        },
+        {
             "id": 16462673,
             "local": "FC Barcelona",
             "visitante": "Betis",
@@ -2646,6 +2654,14 @@
             "visitante": "Betis",
             "id_escudo_local": 2859,
             "id_escudo_visitante": 2816,
+            "fecha": "2027-04-21T21:00:00"
+        },
+        {
+            "id": 16462536,
+            "local": "Osasuna",
+            "visitante": "Alavés",
+            "id_escudo_local": 2820,
+            "id_escudo_visitante": 2885,
             "fecha": "2027-04-21T21:00:00"
         },
         {
