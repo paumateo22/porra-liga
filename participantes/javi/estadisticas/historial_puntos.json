@@ -2,11 +2,11 @@
     "participante": "javi",
     "nombre": "Javi",
     "insignias": [],
-    "puntos_totales": 25,
-    "puntos_partidos": 28,
+    "puntos_totales": 26,
+    "puntos_partidos": 29,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": -3,
-    "aciertos_1x2": 25,
+    "aciertos_1x2": 26,
     "aciertos_exactos": 3,
     "partidos_pronosticados": 69,
     "jornadas_jugadas": 7,
@@ -187,8 +187,8 @@
             }
         },
         "J03": {
-            "puntos": 1,
-            "aciertos_1x2": 2,
+            "puntos": 2,
+            "aciertos_1x2": 3,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -265,6 +265,14 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
+                },
+                "FC Barcelona_vs_Rayo": {
+                    "id": 16416295,
+                    "pronostico": "4-0",
+                    "real": "5-2",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         },

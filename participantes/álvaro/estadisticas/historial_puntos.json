@@ -2,11 +2,11 @@
     "participante": "álvaro",
     "nombre": "Álvaro",
     "insignias": [],
-    "puntos_totales": 55,
-    "puntos_partidos": 53,
+    "puntos_totales": 56,
+    "puntos_partidos": 54,
     "bonus_rendimiento": 2,
     "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 41,
+    "aciertos_1x2": 42,
     "aciertos_exactos": 12,
     "partidos_pronosticados": 89,
     "jornadas_jugadas": 9,
@@ -195,8 +195,8 @@
             }
         },
         "J03": {
-            "puntos": 1,
-            "aciertos_1x2": 2,
+            "puntos": 2,
+            "aciertos_1x2": 3,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -273,6 +273,14 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
+                },
+                "FC Barcelona_vs_Rayo": {
+                    "id": 16416295,
+                    "pronostico": "2-0",
+                    "real": "5-2",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         },

@@ -7,11 +7,11 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 65,
-    "puntos_partidos": 61,
+    "puntos_totales": 66,
+    "puntos_partidos": 62,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 4,
-    "aciertos_1x2": 48,
+    "aciertos_1x2": 49,
     "aciertos_exactos": 13,
     "partidos_pronosticados": 90,
     "jornadas_jugadas": 9,
@@ -200,8 +200,8 @@
             }
         },
         "J03": {
-            "puntos": 5,
-            "aciertos_1x2": 4,
+            "puntos": 6,
+            "aciertos_1x2": 5,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
@@ -278,6 +278,14 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
+                },
+                "FC Barcelona_vs_Rayo": {
+                    "id": 16416295,
+                    "pronostico": "3-0",
+                    "real": "5-2",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         },
