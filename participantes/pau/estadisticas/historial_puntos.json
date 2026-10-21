@@ -7,15 +7,15 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 61,
-    "puntos_partidos": 57,
+    "puntos_totales": 59,
+    "puntos_partidos": 56,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 4,
-    "aciertos_1x2": 47,
+    "puntos_ganador_perdedor": 3,
+    "aciertos_1x2": 46,
     "aciertos_exactos": 10,
     "partidos_pronosticados": 90,
     "jornadas_jugadas": 9,
-    "jornadas_ganadas": 5,
+    "jornadas_ganadas": 4,
     "jornadas_perdidas": 1,
     "punto_partida": 0,
     "por_jornada": {
@@ -470,11 +470,11 @@
             }
         },
         "J06": {
-            "puntos": 7,
-            "aciertos_1x2": 6,
+            "puntos": 5,
+            "aciertos_1x2": 5,
             "aciertos_exactos": 0,
             "bonus": 0,
-            "ganador": true,
+            "ganador": false,
             "perdedor": false,
             "detalle": {
                 "Rayo_vs_Espanyol": {
@@ -544,10 +544,10 @@
                 "Levante UD_vs_Athletic": {
                     "id": 17122851,
                     "pronostico": "1-1",
-                    "real": "0-0",
-                    "acierto_1x2": true,
+                    "real": "2-0",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 }
             }
         },

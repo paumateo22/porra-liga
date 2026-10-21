@@ -2,11 +2,11 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 49,
-    "puntos_partidos": 49,
+    "puntos_totales": 48,
+    "puntos_partidos": 48,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 43,
+    "aciertos_1x2": 42,
     "aciertos_exactos": 6,
     "partidos_pronosticados": 88,
     "jornadas_jugadas": 9,
@@ -465,8 +465,8 @@
             }
         },
         "J06": {
-            "puntos": 5,
-            "aciertos_1x2": 5,
+            "puntos": 4,
+            "aciertos_1x2": 4,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -523,10 +523,10 @@
                 "Levante UD_vs_Athletic": {
                     "id": 17122851,
                     "pronostico": "2-2",
-                    "real": "0-0",
-                    "acierto_1x2": true,
+                    "real": "2-0",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 }
             }
         },
