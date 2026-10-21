@@ -292,14 +292,6 @@
             "ganador": false,
             "perdedor": false,
             "detalle": {
-                "Real Sociedad_vs_Celta": {
-                    "id": 16416340,
-                    "pronostico": "1-0",
-                    "real": "0-0",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "Rayo_vs_Espanyol": {
                     "id": 16416345,
                     "pronostico": "2-3",
@@ -363,6 +355,14 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
+                },
+                "Levante UD_vs_Athletic": {
+                    "id": 17122851,
+                    "pronostico": "2-1",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         },

@@ -1,6 +1,6 @@
 {
     "competicion": "LaLiga 2026-27",
-    "generado": "2026-10-21T18:01:10",
+    "generado": "2026-10-21T20:09:43",
     "jornadas_calculadas": [
         "J01",
         "J02",
@@ -124,15 +124,15 @@
                     "descripcion": "Liga 2023/24"
                 }
             ],
-            "puntos_totales": 59,
-            "puntos_partidos": 56,
+            "puntos_totales": 61,
+            "puntos_partidos": 57,
             "bonus_rendimiento": 0,
-            "puntos_ganador_perdedor": 3,
-            "aciertos_1x2": 46,
+            "puntos_ganador_perdedor": 4,
+            "aciertos_1x2": 47,
             "aciertos_exactos": 10,
             "partidos_pronosticados": 90,
             "jornadas_jugadas": 9,
-            "jornadas_ganadas": 4,
+            "jornadas_ganadas": 5,
             "jornadas_perdidas": 1,
             "punto_partida": 0,
             "por_jornada": {
@@ -177,11 +177,11 @@
                     "perdedor": true
                 },
                 "J06": {
-                    "puntos": 5,
-                    "aciertos_1x2": 5,
+                    "puntos": 7,
+                    "aciertos_1x2": 6,
                     "aciertos_exactos": 0,
                     "bonus": 0,
-                    "ganador": false,
+                    "ganador": true,
                     "perdedor": false
                 },
                 "J07": {
@@ -397,11 +397,11 @@
             "slug": "adrián",
             "nombre": "Adrián",
             "insignias": [],
-            "puntos_totales": 48,
-            "puntos_partidos": 48,
+            "puntos_totales": 49,
+            "puntos_partidos": 49,
             "bonus_rendimiento": 0,
             "puntos_ganador_perdedor": 0,
-            "aciertos_1x2": 42,
+            "aciertos_1x2": 43,
             "aciertos_exactos": 6,
             "partidos_pronosticados": 88,
             "jornadas_jugadas": 9,
@@ -450,8 +450,8 @@
                     "perdedor": false
                 },
                 "J06": {
-                    "puntos": 4,
-                    "aciertos_1x2": 4,
+                    "puntos": 5,
+                    "aciertos_1x2": 5,
                     "aciertos_exactos": 0,
                     "bonus": 0,
                     "ganador": false,
