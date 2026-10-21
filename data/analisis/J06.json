@@ -152,7 +152,7 @@
         },
         "17122851": {
             "goles_local": 2,
-            "goles_visitante": 0,
+            "goles_visitante": 1,
             "estado": "inprogress"
         }
     },
@@ -227,6 +227,75 @@
             }
         },
         {
+            "slug": "manu",
+            "nombre": "Manu",
+            "insignias": [],
+            "aciertos_1x2": 6,
+            "aciertos_exactos": 1,
+            "bonus": 0,
+            "elegible": true,
+            "ganador": true,
+            "perdedor": false,
+            "puntos": 8,
+            "pronosticados": 10,
+            "predicciones": {
+                "16416345": {
+                    "pronostico": "2-3",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "16416334": {
+                    "pronostico": "3-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "16416342": {
+                    "pronostico": "0-3",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "16416335": {
+                    "pronostico": "3-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "16416343": {
+                    "pronostico": "2-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "16416346": {
+                    "pronostico": "4-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "16416336": {
+                    "pronostico": "2-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "16416338": {
+                    "pronostico": "2-3",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "17122851": {
+                    "pronostico": "2-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": true,
+                    "puntos": 2
+                }
+            }
+        },
+        {
             "slug": "iván",
             "nombre": "Iván",
             "insignias": [
@@ -297,75 +366,6 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
-                }
-            }
-        },
-        {
-            "slug": "manu",
-            "nombre": "Manu",
-            "insignias": [],
-            "aciertos_1x2": 6,
-            "aciertos_exactos": 0,
-            "bonus": 0,
-            "elegible": true,
-            "ganador": true,
-            "perdedor": false,
-            "puntos": 7,
-            "pronosticados": 10,
-            "predicciones": {
-                "16416345": {
-                    "pronostico": "2-3",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
-                "16416334": {
-                    "pronostico": "3-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
-                "16416342": {
-                    "pronostico": "0-3",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                },
-                "16416335": {
-                    "pronostico": "3-1",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                },
-                "16416343": {
-                    "pronostico": "2-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
-                "16416346": {
-                    "pronostico": "4-1",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                },
-                "16416336": {
-                    "pronostico": "2-1",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                },
-                "16416338": {
-                    "pronostico": "2-3",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                },
-                "17122851": {
-                    "pronostico": "2-1",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
                 }
             }
         },
