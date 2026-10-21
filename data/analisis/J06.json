@@ -1,7 +1,7 @@
 {
     "clave": "J06",
     "jornada": 6,
-    "cerrada": false,
+    "cerrada": true,
     "resultado_jornada": {
         "ganadores": [
             {
@@ -27,8 +27,8 @@
                 "nombre": "Javi"
             }
         ],
-        "ganador_seguro": false,
-        "perdedor_seguro": false
+        "ganador_seguro": true,
+        "perdedor_seguro": true
     },
     "partidos": [
         {
@@ -153,7 +153,7 @@
         "17122851": {
             "goles_local": 3,
             "goles_visitante": 1,
-            "estado": "inprogress"
+            "estado": "finished"
         }
     },
     "jugadores": [

@@ -519,7 +519,7 @@
         }
     },
     "J06": {
-        "cerrada": false,
+        "cerrada": true,
         "jugadores": {
             "adrián": {
                 "partidos_pronosticados": 8,
