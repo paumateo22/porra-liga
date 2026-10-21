@@ -2,12 +2,12 @@
     "participante": "manu",
     "nombre": "Manu",
     "insignias": [],
-    "puntos_totales": 47,
-    "puntos_partidos": 41,
+    "puntos_totales": 46,
+    "puntos_partidos": 40,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 2,
     "aciertos_1x2": 37,
-    "aciertos_exactos": 4,
+    "aciertos_exactos": 3,
     "partidos_pronosticados": 70,
     "jornadas_jugadas": 7,
     "jornadas_ganadas": 3,
@@ -285,9 +285,9 @@
             }
         },
         "J06": {
-            "puntos": 8,
+            "puntos": 7,
             "aciertos_1x2": 6,
-            "aciertos_exactos": 1,
+            "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": true,
             "perdedor": false,
@@ -359,10 +359,10 @@
                 "Levante UD_vs_Athletic": {
                     "id": 17122851,
                     "pronostico": "2-1",
-                    "real": "2-1",
+                    "real": "3-1",
                     "acierto_1x2": true,
-                    "acierto_exacto": true,
-                    "puntos": 2
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         },
