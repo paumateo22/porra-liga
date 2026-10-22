@@ -472,6 +472,14 @@
             "ganador": false,
             "perdedor": false,
             "detalle": {
+                "Real Sociedad_vs_Celta": {
+                    "id": 16416340,
+                    "pronostico": "3-2",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
                 "Elche_vs_Real Madrid": {
                     "id": 16416342,
                     "pronostico": "1-3",

@@ -292,6 +292,14 @@
             "ganador": true,
             "perdedor": false,
             "detalle": {
+                "Real Sociedad_vs_Celta": {
+                    "id": 16416340,
+                    "pronostico": "1-0",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
                 "Rayo_vs_Espanyol": {
                     "id": 16416345,
                     "pronostico": "2-3",
