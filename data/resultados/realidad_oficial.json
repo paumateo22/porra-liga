@@ -3943,6 +3943,17 @@
             "estado": "notstarted"
         },
         {
+            "id": 16462592,
+            "local": "Deportivo de A Coruña",
+            "visitante": "Alavés",
+            "id_escudo_local": 2832,
+            "id_escudo_visitante": 2885,
+            "fecha": "2027-05-16T21:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
             "id": 16462595,
             "local": "Elche",
             "visitante": "Athletic",
