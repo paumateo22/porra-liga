@@ -7,16 +7,16 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 66,
+    "puntos_totales": 65,
     "puntos_partidos": 62,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 4,
+    "puntos_ganador_perdedor": 3,
     "aciertos_1x2": 49,
     "aciertos_exactos": 13,
     "partidos_pronosticados": 100,
     "jornadas_jugadas": 10,
     "jornadas_ganadas": 5,
-    "jornadas_perdidas": 1,
+    "jornadas_perdidas": 2,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -814,12 +814,12 @@
             }
         },
         "J10": {
-            "puntos": 0,
+            "puntos": -1,
             "aciertos_1x2": 0,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
-            "perdedor": false,
+            "perdedor": true,
             "detalle": {
                 "Alavés_vs_Málaga CF": {
                     "id": 16421077,

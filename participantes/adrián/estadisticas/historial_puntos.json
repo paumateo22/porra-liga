@@ -2,15 +2,15 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 48,
-    "puntos_partidos": 48,
+    "puntos_totales": 51,
+    "puntos_partidos": 50,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 42,
-    "aciertos_exactos": 6,
-    "partidos_pronosticados": 88,
-    "jornadas_jugadas": 9,
-    "jornadas_ganadas": 2,
+    "puntos_ganador_perdedor": 1,
+    "aciertos_1x2": 43,
+    "aciertos_exactos": 7,
+    "partidos_pronosticados": 98,
+    "jornadas_jugadas": 10,
+    "jornadas_ganadas": 3,
     "jornadas_perdidas": 2,
     "punto_partida": 0,
     "por_jornada": {
@@ -789,6 +789,24 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
+                }
+            }
+        },
+        "J10": {
+            "puntos": 3,
+            "aciertos_1x2": 1,
+            "aciertos_exactos": 1,
+            "bonus": 0,
+            "ganador": true,
+            "perdedor": false,
+            "detalle": {
+                "Alavés_vs_Málaga CF": {
+                    "id": 16421077,
+                    "pronostico": "1-1",
+                    "real": "1-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         }
