@@ -1,6 +1,6 @@
 {
     "competicion": "LaLiga 2026-27",
-    "generado": "2026-10-23T20:32:49",
+    "generado": "2026-10-23T21:04:14",
     "jornadas_calculadas": [
         "J01",
         "J02",
@@ -10,7 +10,8 @@
         "J06",
         "J07",
         "J08",
-        "J09"
+        "J09",
+        "J10"
     ],
     "desempates": [
         "jornadas_ganadas",
@@ -34,8 +35,8 @@
             "puntos_ganador_perdedor": 4,
             "aciertos_1x2": 49,
             "aciertos_exactos": 13,
-            "partidos_pronosticados": 90,
-            "jornadas_jugadas": 9,
+            "partidos_pronosticados": 100,
+            "jornadas_jugadas": 10,
             "jornadas_ganadas": 5,
             "jornadas_perdidas": 1,
             "punto_partida": 0,
@@ -111,6 +112,14 @@
                     "bonus": 0,
                     "ganador": false,
                     "perdedor": false
+                },
+                "J10": {
+                    "puntos": 0,
+                    "aciertos_1x2": 0,
+                    "aciertos_exactos": 0,
+                    "bonus": 0,
+                    "ganador": false,
+                    "perdedor": false
                 }
             }
         },
@@ -130,8 +139,8 @@
             "puntos_ganador_perdedor": 3,
             "aciertos_1x2": 46,
             "aciertos_exactos": 10,
-            "partidos_pronosticados": 90,
-            "jornadas_jugadas": 9,
+            "partidos_pronosticados": 100,
+            "jornadas_jugadas": 10,
             "jornadas_ganadas": 4,
             "jornadas_perdidas": 1,
             "punto_partida": 0,
@@ -203,6 +212,14 @@
                 "J09": {
                     "puntos": 7,
                     "aciertos_1x2": 7,
+                    "aciertos_exactos": 0,
+                    "bonus": 0,
+                    "ganador": false,
+                    "perdedor": false
+                },
+                "J10": {
+                    "puntos": 0,
+                    "aciertos_1x2": 0,
                     "aciertos_exactos": 0,
                     "bonus": 0,
                     "ganador": false,
@@ -312,8 +329,8 @@
             "puntos_ganador_perdedor": 1,
             "aciertos_1x2": 45,
             "aciertos_exactos": 7,
-            "partidos_pronosticados": 90,
-            "jornadas_jugadas": 9,
+            "partidos_pronosticados": 100,
+            "jornadas_jugadas": 10,
             "jornadas_ganadas": 4,
             "jornadas_perdidas": 3,
             "punto_partida": 0,
@@ -389,6 +406,14 @@
                     "bonus": 0,
                     "ganador": false,
                     "perdedor": true
+                },
+                "J10": {
+                    "puntos": 0,
+                    "aciertos_1x2": 0,
+                    "aciertos_exactos": 0,
+                    "bonus": 0,
+                    "ganador": false,
+                    "perdedor": false
                 }
             }
         },
@@ -494,8 +519,8 @@
             "puntos_ganador_perdedor": 0,
             "aciertos_1x2": 43,
             "aciertos_exactos": 4,
-            "partidos_pronosticados": 90,
-            "jornadas_jugadas": 9,
+            "partidos_pronosticados": 100,
+            "jornadas_jugadas": 10,
             "jornadas_ganadas": 3,
             "jornadas_perdidas": 3,
             "punto_partida": 0,
@@ -568,6 +593,14 @@
                     "puntos": 8,
                     "aciertos_1x2": 7,
                     "aciertos_exactos": 1,
+                    "bonus": 0,
+                    "ganador": false,
+                    "perdedor": false
+                },
+                "J10": {
+                    "puntos": 0,
+                    "aciertos_1x2": 0,
+                    "aciertos_exactos": 0,
                     "bonus": 0,
                     "ganador": false,
                     "perdedor": false

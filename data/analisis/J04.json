@@ -32,14 +32,6 @@
     },
     "partidos": [
         {
-            "id": 16416315,
-            "local": "Betis",
-            "visitante": "Real Madrid",
-            "id_escudo_local": 2816,
-            "id_escudo_visitante": 2829,
-            "fecha": "2026-09-04T21:00:00"
-        },
-        {
             "id": 16416317,
             "local": "Athletic",
             "visitante": "Atlético",
@@ -113,11 +105,6 @@
         }
     ],
     "resultados": {
-        "16416315": {
-            "goles_local": 1,
-            "goles_visitante": 0,
-            "estado": "finished"
-        },
         "16416317": {
             "goles_local": 3,
             "goles_visitante": 0,
@@ -178,12 +165,6 @@
             "puntos": 6,
             "pronosticados": 10,
             "predicciones": {
-                "16416315": {
-                    "pronostico": "1-3",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "16416317": {
                     "pronostico": "2-2",
                     "acierto_1x2": false,
@@ -258,12 +239,6 @@
             "puntos": 6,
             "pronosticados": 10,
             "predicciones": {
-                "16416315": {
-                    "pronostico": "1-3",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "16416317": {
                     "pronostico": "0-2",
                     "acierto_1x2": false,
@@ -333,12 +308,6 @@
             "puntos": 5,
             "pronosticados": 10,
             "predicciones": {
-                "16416315": {
-                    "pronostico": "1-3",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "16416317": {
                     "pronostico": "1-1",
                     "acierto_1x2": false,
@@ -408,12 +377,6 @@
             "puntos": 5,
             "pronosticados": 10,
             "predicciones": {
-                "16416315": {
-                    "pronostico": "1-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "16416317": {
                     "pronostico": "1-2",
                     "acierto_1x2": false,
@@ -483,12 +446,6 @@
             "puntos": 4,
             "pronosticados": 10,
             "predicciones": {
-                "16416315": {
-                    "pronostico": "1-3",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "16416317": {
                     "pronostico": "0-2",
                     "acierto_1x2": false,
@@ -558,12 +515,6 @@
             "puntos": 1,
             "pronosticados": 10,
             "predicciones": {
-                "16416315": {
-                    "pronostico": "1-3",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "16416317": {
                     "pronostico": "2-2",
                     "acierto_1x2": false,
@@ -638,12 +589,6 @@
             "puntos": 1,
             "pronosticados": 10,
             "predicciones": {
-                "16416315": {
-                    "pronostico": "1-3",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "16416317": {
                     "pronostico": "0-2",
                     "acierto_1x2": false,
