@@ -7,11 +7,11 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 59,
-    "puntos_partidos": 57,
+    "puntos_totales": 60,
+    "puntos_partidos": 58,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 2,
-    "aciertos_1x2": 46,
+    "aciertos_1x2": 47,
     "aciertos_exactos": 11,
     "partidos_pronosticados": 100,
     "jornadas_jugadas": 10,
@@ -790,8 +790,8 @@
             }
         },
         "J10": {
-            "puntos": 1,
-            "aciertos_1x2": 1,
+            "puntos": 2,
+            "aciertos_1x2": 2,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
@@ -832,10 +832,10 @@
                 "Atlético_vs_Deportivo de A Coruña": {
                     "id": 16421082,
                     "pronostico": "2-1",
-                    "real": "0-0",
-                    "acierto_1x2": false,
+                    "real": "1-0",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }
