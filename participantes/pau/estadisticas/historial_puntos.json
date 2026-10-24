@@ -305,14 +305,6 @@
                     "acierto_exacto": false,
                     "puntos": 0
                 },
-                "Villarreal_vs_Deportivo de A Coruña": {
-                    "id": 16416324,
-                    "pronostico": "2-2",
-                    "real": "2-3",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "Valencia_vs_FC Barcelona": {
                     "id": 16416325,
                     "pronostico": "1-6",
@@ -833,6 +825,14 @@
                     "id": 16421083,
                     "pronostico": "1-1",
                     "real": "2-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Valencia_vs_Villarreal": {
+                    "id": 16421089,
+                    "pronostico": "1-2",
+                    "real": "0-0",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
