@@ -2,11 +2,11 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 51,
-    "puntos_partidos": 52,
+    "puntos_totales": 50,
+    "puntos_partidos": 51,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": -1,
-    "aciertos_1x2": 45,
+    "aciertos_1x2": 44,
     "aciertos_exactos": 7,
     "partidos_pronosticados": 100,
     "jornadas_jugadas": 10,
@@ -285,8 +285,8 @@
             }
         },
         "J04": {
-            "puntos": 3,
-            "aciertos_1x2": 3,
+            "puntos": 2,
+            "aciertos_1x2": 2,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -299,14 +299,6 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
-                },
-                "Valencia_vs_FC Barcelona": {
-                    "id": 16416325,
-                    "pronostico": "0-6",
-                    "real": "0-5",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
                 },
                 "Alavés_vs_Osasuna": {
                     "id": 16416318,
@@ -831,6 +823,14 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
+                },
+                "Atlético_vs_Deportivo de A Coruña": {
+                    "id": 16421082,
+                    "pronostico": "3-1",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         }
