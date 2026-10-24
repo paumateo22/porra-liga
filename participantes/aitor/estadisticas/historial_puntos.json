@@ -2,11 +2,11 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 51,
-    "puntos_partidos": 52,
+    "puntos_totales": 50,
+    "puntos_partidos": 51,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": -1,
-    "aciertos_1x2": 45,
+    "aciertos_1x2": 44,
     "aciertos_exactos": 7,
     "partidos_pronosticados": 100,
     "jornadas_jugadas": 10,
@@ -801,8 +801,8 @@
             }
         },
         "J10": {
-            "puntos": 0,
-            "aciertos_1x2": 1,
+            "puntos": -1,
+            "aciertos_1x2": 0,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -827,10 +827,10 @@
                 "Real Racing Club_vs_Espanyol": {
                     "id": 16421083,
                     "pronostico": "1-1",
-                    "real": "0-0",
-                    "acierto_1x2": true,
+                    "real": "0-1",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 }
             }
         }
