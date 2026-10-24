@@ -5,8 +5,16 @@
     "resultado_jornada": {
         "ganadores": [
             {
+                "slug": "adrián",
+                "nombre": "Adrián"
+            },
+            {
                 "slug": "carlos",
                 "nombre": "Carlos"
+            },
+            {
+                "slug": "iván",
+                "nombre": "Iván"
             }
         ],
         "perdedores": [
@@ -121,7 +129,7 @@
             "estado": "finished"
         },
         "16421089": {
-            "goles_local": 0,
+            "goles_local": 1,
             "goles_visitante": 0,
             "estado": "inprogress"
         },
@@ -158,45 +166,6 @@
     },
     "jugadores": [
         {
-            "slug": "carlos",
-            "nombre": "Carlos",
-            "insignias": [],
-            "aciertos_1x2": 2,
-            "aciertos_exactos": 1,
-            "bonus": 0,
-            "elegible": true,
-            "ganador": true,
-            "perdedor": false,
-            "puntos": 4,
-            "pronosticados": 10,
-            "predicciones": {
-                "16421077": {
-                    "pronostico": "3-2",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
-                "16421084": {
-                    "pronostico": "0-3",
-                    "acierto_1x2": true,
-                    "acierto_exacto": true,
-                    "puntos": 2
-                },
-                "16421083": {
-                    "pronostico": "2-2",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
-                "16421089": {
-                    "pronostico": "2-2",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                }
-            }
-        },
-        {
             "slug": "adrián",
             "nombre": "Adrián",
             "insignias": [],
@@ -204,9 +173,9 @@
             "aciertos_exactos": 1,
             "bonus": 0,
             "elegible": true,
-            "ganador": false,
+            "ganador": true,
             "perdedor": false,
-            "puntos": 2,
+            "puntos": 3,
             "pronosticados": 10,
             "predicciones": {
                 "16421077": {
@@ -236,6 +205,45 @@
             }
         },
         {
+            "slug": "carlos",
+            "nombre": "Carlos",
+            "insignias": [],
+            "aciertos_1x2": 1,
+            "aciertos_exactos": 1,
+            "bonus": 0,
+            "elegible": true,
+            "ganador": true,
+            "perdedor": false,
+            "puntos": 3,
+            "pronosticados": 10,
+            "predicciones": {
+                "16421077": {
+                    "pronostico": "3-2",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "16421084": {
+                    "pronostico": "0-3",
+                    "acierto_1x2": true,
+                    "acierto_exacto": true,
+                    "puntos": 2
+                },
+                "16421083": {
+                    "pronostico": "2-2",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "16421089": {
+                    "pronostico": "2-2",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                }
+            }
+        },
+        {
             "slug": "iván",
             "nombre": "Iván",
             "insignias": [
@@ -248,9 +256,9 @@
             "aciertos_exactos": 0,
             "bonus": 0,
             "elegible": true,
-            "ganador": false,
+            "ganador": true,
             "perdedor": false,
-            "puntos": 1,
+            "puntos": 2,
             "pronosticados": 10,
             "predicciones": {
                 "16421077": {

@@ -7,15 +7,15 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 67,
+    "puntos_totales": 68,
     "puntos_partidos": 63,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 4,
+    "puntos_ganador_perdedor": 5,
     "aciertos_1x2": 50,
     "aciertos_exactos": 13,
     "partidos_pronosticados": 100,
     "jornadas_jugadas": 10,
-    "jornadas_ganadas": 5,
+    "jornadas_ganadas": 6,
     "jornadas_perdidas": 1,
     "punto_partida": 0,
     "por_jornada": {
@@ -798,11 +798,11 @@
             }
         },
         "J10": {
-            "puntos": 1,
+            "puntos": 2,
             "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "bonus": 0,
-            "ganador": false,
+            "ganador": true,
             "perdedor": false,
             "detalle": {
                 "Alavés_vs_Málaga CF": {
@@ -832,7 +832,7 @@
                 "Valencia_vs_Villarreal": {
                     "id": 16421089,
                     "pronostico": "1-2",
-                    "real": "0-0",
+                    "real": "1-0",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
