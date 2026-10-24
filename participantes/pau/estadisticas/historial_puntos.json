@@ -305,14 +305,6 @@
                     "acierto_exacto": false,
                     "puntos": 0
                 },
-                "Athletic_vs_Atlético": {
-                    "id": 16416317,
-                    "pronostico": "0-2",
-                    "real": "3-0",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "Rayo_vs_Real Racing Club": {
                     "id": 16416321,
                     "pronostico": "2-2",
@@ -833,6 +825,14 @@
                     "id": 16421077,
                     "pronostico": "1-0",
                     "real": "1-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Rayo_vs_Elche": {
+                    "id": 16421084,
+                    "pronostico": "2-1",
+                    "real": "0-0",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0

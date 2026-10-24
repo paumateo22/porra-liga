@@ -119,9 +119,9 @@
             "estado": "finished"
         },
         "16421084": {
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
+            "goles_local": 0,
+            "goles_visitante": 0,
+            "estado": "inprogress"
         },
         "16421083": {
             "goles_local": null,
@@ -183,6 +183,12 @@
                     "acierto_1x2": true,
                     "acierto_exacto": true,
                     "puntos": 2
+                },
+                "16421084": {
+                    "pronostico": "2-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         },
@@ -200,6 +206,12 @@
             "pronosticados": 10,
             "predicciones": {
                 "16421077": {
+                    "pronostico": "2-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "16421084": {
                     "pronostico": "2-0",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
@@ -222,6 +234,12 @@
             "predicciones": {
                 "16421077": {
                     "pronostico": "3-2",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "16421084": {
+                    "pronostico": "0-3",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
@@ -251,6 +269,12 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
+                },
+                "16421084": {
+                    "pronostico": "1-2",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         },
@@ -274,6 +298,12 @@
             "predicciones": {
                 "16421077": {
                     "pronostico": "1-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "16421084": {
+                    "pronostico": "2-1",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
