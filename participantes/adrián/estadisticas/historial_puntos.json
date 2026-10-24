@@ -2,15 +2,15 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 51,
-    "puntos_partidos": 50,
+    "puntos_totales": 49,
+    "puntos_partidos": 49,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 43,
+    "puntos_ganador_perdedor": 0,
+    "aciertos_1x2": 42,
     "aciertos_exactos": 7,
     "partidos_pronosticados": 98,
     "jornadas_jugadas": 10,
-    "jornadas_ganadas": 3,
+    "jornadas_ganadas": 2,
     "jornadas_perdidas": 2,
     "punto_partida": 0,
     "por_jornada": {
@@ -285,11 +285,11 @@
             }
         },
         "J04": {
-            "puntos": 6,
-            "aciertos_1x2": 4,
+            "puntos": 4,
+            "aciertos_1x2": 3,
             "aciertos_exactos": 1,
             "bonus": 0,
-            "ganador": true,
+            "ganador": false,
             "perdedor": false,
             "detalle": {
                 "Betis_vs_Real Madrid": {
@@ -299,14 +299,6 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
-                },
-                "Rayo_vs_Real Racing Club": {
-                    "id": 16416321,
-                    "pronostico": "2-1",
-                    "real": "3-2",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
                 },
                 "Villarreal_vs_Deportivo de A Coruña": {
                     "id": 16416324,
