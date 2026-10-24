@@ -120,7 +120,7 @@
         },
         "16421084": {
             "goles_local": 0,
-            "goles_visitante": 2,
+            "goles_visitante": 3,
             "estado": "inprogress"
         },
         "16421083": {
@@ -197,12 +197,12 @@
             "nombre": "Carlos",
             "insignias": [],
             "aciertos_1x2": 1,
-            "aciertos_exactos": 0,
+            "aciertos_exactos": 1,
             "bonus": 0,
             "elegible": true,
             "ganador": true,
             "perdedor": false,
-            "puntos": 2,
+            "puntos": 3,
             "pronosticados": 10,
             "predicciones": {
                 "16421077": {
@@ -214,8 +214,8 @@
                 "16421084": {
                     "pronostico": "0-3",
                     "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         },

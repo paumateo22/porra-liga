@@ -1,6 +1,6 @@
 {
     "competicion": "LaLiga 2026-27",
-    "generado": "2026-10-24T14:40:13",
+    "generado": "2026-10-24T15:37:11",
     "jornadas_calculadas": [
         "J01",
         "J02",
@@ -521,12 +521,12 @@
             "slug": "carlos",
             "nombre": "Carlos",
             "insignias": [],
-            "puntos_totales": 49,
-            "puntos_partidos": 48,
+            "puntos_totales": 50,
+            "puntos_partidos": 49,
             "bonus_rendimiento": 0,
             "puntos_ganador_perdedor": 1,
             "aciertos_1x2": 44,
-            "aciertos_exactos": 4,
+            "aciertos_exactos": 5,
             "partidos_pronosticados": 100,
             "jornadas_jugadas": 10,
             "jornadas_ganadas": 4,
@@ -606,9 +606,9 @@
                     "perdedor": false
                 },
                 "J10": {
-                    "puntos": 2,
+                    "puntos": 3,
                     "aciertos_1x2": 1,
-                    "aciertos_exactos": 0,
+                    "aciertos_exactos": 1,
                     "bonus": 0,
                     "ganador": true,
                     "perdedor": false
