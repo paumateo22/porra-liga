@@ -2,11 +2,11 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 49,
-    "puntos_partidos": 49,
+    "puntos_totales": 50,
+    "puntos_partidos": 50,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 42,
+    "aciertos_1x2": 43,
     "aciertos_exactos": 7,
     "partidos_pronosticados": 98,
     "jornadas_jugadas": 10,
@@ -785,8 +785,8 @@
             }
         },
         "J10": {
-            "puntos": 3,
-            "aciertos_1x2": 1,
+            "puntos": 4,
+            "aciertos_1x2": 2,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": true,
@@ -811,10 +811,10 @@
                 "Real Racing Club_vs_Espanyol": {
                     "id": 16421083,
                     "pronostico": "2-2",
-                    "real": "0-1",
-                    "acierto_1x2": false,
+                    "real": "1-1",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }
