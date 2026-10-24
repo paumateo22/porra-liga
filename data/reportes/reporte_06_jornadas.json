@@ -318,7 +318,7 @@
         "jugadores": {
             "adrián": {
                 "partidos_pronosticados": 10,
-                "partidos_evaluados": 9,
+                "partidos_evaluados": 10,
                 "aciertos_1x2": 4,
                 "aciertos_exactos": 1,
                 "puntos_partidos": 5,
@@ -331,7 +331,7 @@
             },
             "aitor": {
                 "partidos_pronosticados": 10,
-                "partidos_evaluados": 9,
+                "partidos_evaluados": 10,
                 "aciertos_1x2": 4,
                 "aciertos_exactos": 0,
                 "puntos_partidos": 4,
@@ -344,7 +344,7 @@
             },
             "carlos": {
                 "partidos_pronosticados": 10,
-                "partidos_evaluados": 9,
+                "partidos_evaluados": 10,
                 "aciertos_1x2": 2,
                 "aciertos_exactos": 0,
                 "puntos_partidos": 2,
@@ -357,7 +357,7 @@
             },
             "iván": {
                 "partidos_pronosticados": 10,
-                "partidos_evaluados": 9,
+                "partidos_evaluados": 10,
                 "aciertos_1x2": 2,
                 "aciertos_exactos": 0,
                 "puntos_partidos": 2,
@@ -370,7 +370,7 @@
             },
             "javi": {
                 "partidos_pronosticados": 10,
-                "partidos_evaluados": 9,
+                "partidos_evaluados": 10,
                 "aciertos_1x2": 3,
                 "aciertos_exactos": 1,
                 "puntos_partidos": 4,
@@ -383,7 +383,7 @@
             },
             "pau": {
                 "partidos_pronosticados": 10,
-                "partidos_evaluados": 9,
+                "partidos_evaluados": 10,
                 "aciertos_1x2": 4,
                 "aciertos_exactos": 1,
                 "puntos_partidos": 5,
@@ -396,7 +396,7 @@
             },
             "álvaro": {
                 "partidos_pronosticados": 10,
-                "partidos_evaluados": 9,
+                "partidos_evaluados": 10,
                 "aciertos_1x2": 3,
                 "aciertos_exactos": 2,
                 "puntos_partidos": 5,
