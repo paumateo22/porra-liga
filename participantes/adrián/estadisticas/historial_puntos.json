@@ -2,15 +2,15 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 49,
+    "puntos_totales": 48,
     "puntos_partidos": 49,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 0,
+    "puntos_ganador_perdedor": -1,
     "aciertos_1x2": 42,
     "aciertos_exactos": 7,
     "partidos_pronosticados": 98,
     "jornadas_jugadas": 10,
-    "jornadas_ganadas": 2,
+    "jornadas_ganadas": 1,
     "jornadas_perdidas": 2,
     "punto_partida": 0,
     "por_jornada": {
@@ -777,11 +777,11 @@
             }
         },
         "J10": {
-            "puntos": 3,
+            "puntos": 2,
             "aciertos_1x2": 1,
             "aciertos_exactos": 1,
             "bonus": 0,
-            "ganador": true,
+            "ganador": false,
             "perdedor": false,
             "detalle": {
                 "Alavés_vs_Málaga CF": {
@@ -811,7 +811,7 @@
                 "Valencia_vs_Villarreal": {
                     "id": 16421089,
                     "pronostico": "1-3",
-                    "real": "1-0",
+                    "real": "1-1",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
