@@ -126,7 +126,7 @@
         "16421083": {
             "goles_local": 0,
             "goles_visitante": 0,
-            "estado": "notstarted"
+            "estado": "inprogress"
         },
         "16421089": {
             "goles_local": null,
@@ -169,13 +169,13 @@
             "slug": "adrián",
             "nombre": "Adrián",
             "insignias": [],
-            "aciertos_1x2": 1,
+            "aciertos_1x2": 2,
             "aciertos_exactos": 1,
             "bonus": 0,
             "elegible": true,
             "ganador": true,
             "perdedor": false,
-            "puntos": 3,
+            "puntos": 4,
             "pronosticados": 10,
             "predicciones": {
                 "16421077": {
@@ -189,6 +189,12 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
+                },
+                "16421083": {
+                    "pronostico": "2-2",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         },
@@ -196,13 +202,13 @@
             "slug": "carlos",
             "nombre": "Carlos",
             "insignias": [],
-            "aciertos_1x2": 1,
+            "aciertos_1x2": 2,
             "aciertos_exactos": 1,
             "bonus": 0,
             "elegible": true,
             "ganador": true,
             "perdedor": false,
-            "puntos": 3,
+            "puntos": 4,
             "pronosticados": 10,
             "predicciones": {
                 "16421077": {
@@ -216,6 +222,12 @@
                     "acierto_1x2": true,
                     "acierto_exacto": true,
                     "puntos": 2
+                },
+                "16421083": {
+                    "pronostico": "2-2",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         },
@@ -228,13 +240,13 @@
                     "descripcion": "Mundial 2026"
                 }
             ],
-            "aciertos_1x2": 1,
+            "aciertos_1x2": 2,
             "aciertos_exactos": 0,
             "bonus": 0,
             "elegible": true,
             "ganador": true,
             "perdedor": false,
-            "puntos": 2,
+            "puntos": 3,
             "pronosticados": 10,
             "predicciones": {
                 "16421077": {
@@ -248,6 +260,12 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
+                },
+                "16421083": {
+                    "pronostico": "1-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         },
@@ -255,13 +273,13 @@
             "slug": "aitor",
             "nombre": "Aitor",
             "insignias": [],
-            "aciertos_1x2": 0,
+            "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "bonus": 0,
             "elegible": true,
             "ganador": false,
             "perdedor": true,
-            "puntos": -1,
+            "puntos": 0,
             "pronosticados": 10,
             "predicciones": {
                 "16421077": {
@@ -275,6 +293,12 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
+                },
+                "16421083": {
+                    "pronostico": "1-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         },
@@ -287,13 +311,13 @@
                     "descripcion": "Liga 2023/24"
                 }
             ],
-            "aciertos_1x2": 0,
+            "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "bonus": 0,
             "elegible": true,
             "ganador": false,
             "perdedor": true,
-            "puntos": -1,
+            "puntos": 0,
             "pronosticados": 10,
             "predicciones": {
                 "16421077": {
@@ -307,6 +331,12 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
+                },
+                "16421083": {
+                    "pronostico": "1-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         }

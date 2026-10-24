@@ -7,11 +7,11 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 68,
-    "puntos_partidos": 63,
+    "puntos_totales": 69,
+    "puntos_partidos": 64,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 5,
-    "aciertos_1x2": 50,
+    "aciertos_1x2": 51,
     "aciertos_exactos": 13,
     "partidos_pronosticados": 100,
     "jornadas_jugadas": 10,
@@ -806,8 +806,8 @@
             }
         },
         "J10": {
-            "puntos": 2,
-            "aciertos_1x2": 1,
+            "puntos": 3,
+            "aciertos_1x2": 2,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": true,
@@ -825,6 +825,14 @@
                     "id": 16421084,
                     "pronostico": "1-2",
                     "real": "0-3",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "Real Racing Club_vs_Espanyol": {
+                    "id": 16421083,
+                    "pronostico": "1-1",
+                    "real": "0-0",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
