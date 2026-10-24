@@ -2,16 +2,16 @@
     "participante": "carlos",
     "nombre": "Carlos",
     "insignias": [],
-    "puntos_totales": 51,
-    "puntos_partidos": 50,
+    "puntos_totales": 48,
+    "puntos_partidos": 49,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 45,
+    "puntos_ganador_perdedor": -1,
+    "aciertos_1x2": 44,
     "aciertos_exactos": 5,
     "partidos_pronosticados": 100,
     "jornadas_jugadas": 10,
-    "jornadas_ganadas": 4,
-    "jornadas_perdidas": 3,
+    "jornadas_ganadas": 3,
+    "jornadas_perdidas": 4,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -793,12 +793,12 @@
             }
         },
         "J10": {
-            "puntos": 4,
-            "aciertos_1x2": 2,
+            "puntos": 1,
+            "aciertos_1x2": 1,
             "aciertos_exactos": 1,
             "bonus": 0,
-            "ganador": true,
-            "perdedor": false,
+            "ganador": false,
+            "perdedor": true,
             "detalle": {
                 "Alavés_vs_Málaga CF": {
                     "id": 16421077,
@@ -827,10 +827,10 @@
                 "Valencia_vs_Villarreal": {
                     "id": 16421089,
                     "pronostico": "2-2",
-                    "real": "1-1",
-                    "acierto_1x2": true,
+                    "real": "1-2",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 }
             }
         }
