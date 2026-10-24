@@ -7,16 +7,16 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 65,
-    "puntos_partidos": 62,
+    "puntos_totales": 68,
+    "puntos_partidos": 63,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 3,
-    "aciertos_1x2": 49,
+    "puntos_ganador_perdedor": 5,
+    "aciertos_1x2": 50,
     "aciertos_exactos": 13,
     "partidos_pronosticados": 100,
     "jornadas_jugadas": 10,
-    "jornadas_ganadas": 5,
-    "jornadas_perdidas": 2,
+    "jornadas_ganadas": 6,
+    "jornadas_perdidas": 1,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -814,12 +814,12 @@
             }
         },
         "J10": {
-            "puntos": -1,
-            "aciertos_1x2": 0,
+            "puntos": 2,
+            "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "bonus": 0,
-            "ganador": false,
-            "perdedor": true,
+            "ganador": true,
+            "perdedor": false,
             "detalle": {
                 "Alavés_vs_Málaga CF": {
                     "id": 16421077,
@@ -832,10 +832,10 @@
                 "Rayo_vs_Elche": {
                     "id": 16421084,
                     "pronostico": "1-2",
-                    "real": "0-0",
-                    "acierto_1x2": false,
+                    "real": "0-1",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }
