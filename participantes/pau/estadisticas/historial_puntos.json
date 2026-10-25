@@ -7,11 +7,11 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 60,
-    "puntos_partidos": 58,
+    "puntos_totales": 61,
+    "puntos_partidos": 59,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 2,
-    "aciertos_1x2": 47,
+    "aciertos_1x2": 48,
     "aciertos_exactos": 11,
     "partidos_pronosticados": 100,
     "jornadas_jugadas": 10,
@@ -290,8 +290,8 @@
             }
         },
         "J04": {
-            "puntos": 5,
-            "aciertos_1x2": 3,
+            "puntos": 6,
+            "aciertos_1x2": 4,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": true,
@@ -304,6 +304,38 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
+                },
+                "Athletic_vs_Atlético": {
+                    "id": 16416317,
+                    "pronostico": "0-2",
+                    "real": "3-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Rayo_vs_Real Racing Club": {
+                    "id": 16416321,
+                    "pronostico": "2-2",
+                    "real": "3-2",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Villarreal_vs_Deportivo de A Coruña": {
+                    "id": 16416324,
+                    "pronostico": "2-2",
+                    "real": "2-3",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Valencia_vs_FC Barcelona": {
+                    "id": 16416325,
+                    "pronostico": "1-6",
+                    "real": "0-5",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
                 },
                 "Alavés_vs_Osasuna": {
                     "id": 16416318,
