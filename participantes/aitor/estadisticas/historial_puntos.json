@@ -2,12 +2,12 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 56,
-    "puntos_partidos": 56,
+    "puntos_totales": 55,
+    "puntos_partidos": 55,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
     "aciertos_1x2": 48,
-    "aciertos_exactos": 8,
+    "aciertos_exactos": 7,
     "partidos_pronosticados": 100,
     "jornadas_jugadas": 10,
     "jornadas_ganadas": 4,
@@ -809,9 +809,9 @@
             }
         },
         "J10": {
-            "puntos": 3,
+            "puntos": 2,
             "aciertos_1x2": 3,
-            "aciertos_exactos": 1,
+            "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
             "perdedor": true,
@@ -859,10 +859,10 @@
                 "Athletic_vs_Getafe": {
                     "id": 16421081,
                     "pronostico": "1-0",
-                    "real": "1-0",
+                    "real": "2-0",
                     "acierto_1x2": true,
-                    "acierto_exacto": true,
-                    "puntos": 2
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         }
