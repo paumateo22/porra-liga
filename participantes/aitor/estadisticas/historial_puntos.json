@@ -2,15 +2,15 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 53,
+    "puntos_totales": 54,
     "puntos_partidos": 54,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": -1,
+    "puntos_ganador_perdedor": 0,
     "aciertos_1x2": 47,
     "aciertos_exactos": 7,
     "partidos_pronosticados": 100,
     "jornadas_jugadas": 10,
-    "jornadas_ganadas": 3,
+    "jornadas_ganadas": 4,
     "jornadas_perdidas": 4,
     "punto_partida": 0,
     "por_jornada": {
@@ -285,11 +285,11 @@
             }
         },
         "J04": {
-            "puntos": 3,
+            "puntos": 4,
             "aciertos_1x2": 3,
             "aciertos_exactos": 0,
             "bonus": 0,
-            "ganador": false,
+            "ganador": true,
             "perdedor": false,
             "detalle": {
                 "Betis_vs_Real Madrid": {
@@ -331,14 +331,6 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
-                },
-                "Espanyol_vs_Sevilla": {
-                    "id": 16416323,
-                    "pronostico": "1-0",
-                    "real": "1-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
                 },
                 "Getafe_vs_Celta": {
                     "id": 16416348,
@@ -859,6 +851,14 @@
                 "Celta_vs_Betis": {
                     "id": 16421079,
                     "pronostico": "1-3",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Real Sociedad_vs_Levante UD": {
+                    "id": 16421086,
+                    "pronostico": "4-1",
                     "real": "0-0",
                     "acierto_1x2": false,
                     "acierto_exacto": false,

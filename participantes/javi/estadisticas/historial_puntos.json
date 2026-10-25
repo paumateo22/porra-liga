@@ -324,14 +324,6 @@
                     "acierto_exacto": true,
                     "puntos": 2
                 },
-                "Espanyol_vs_Sevilla": {
-                    "id": 16416323,
-                    "pronostico": "0-1",
-                    "real": "1-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "Getafe_vs_Celta": {
                     "id": 16416348,
                     "pronostico": "1-2",

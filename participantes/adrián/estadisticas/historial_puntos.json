@@ -2,12 +2,12 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 55,
-    "puntos_partidos": 54,
+    "puntos_totales": 53,
+    "puntos_partidos": 52,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 47,
-    "aciertos_exactos": 7,
+    "aciertos_1x2": 46,
+    "aciertos_exactos": 6,
     "partidos_pronosticados": 98,
     "jornadas_jugadas": 10,
     "jornadas_ganadas": 3,
@@ -285,9 +285,9 @@
             }
         },
         "J04": {
-            "puntos": 6,
-            "aciertos_1x2": 4,
-            "aciertos_exactos": 1,
+            "puntos": 4,
+            "aciertos_1x2": 3,
+            "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": true,
             "perdedor": false,
@@ -331,14 +331,6 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
-                },
-                "Espanyol_vs_Sevilla": {
-                    "id": 16416323,
-                    "pronostico": "1-1",
-                    "real": "1-1",
-                    "acierto_1x2": true,
-                    "acierto_exacto": true,
-                    "puntos": 2
                 },
                 "Getafe_vs_Celta": {
                     "id": 16416348,
@@ -847,6 +839,14 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
+                },
+                "Real Sociedad_vs_Levante UD": {
+                    "id": 16421086,
+                    "pronostico": "2-0",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         }

@@ -2,16 +2,16 @@
     "participante": "carlos",
     "nombre": "Carlos",
     "insignias": [],
-    "puntos_totales": 49,
-    "puntos_partidos": 50,
+    "puntos_totales": 51,
+    "puntos_partidos": 51,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": -1,
-    "aciertos_1x2": 45,
+    "puntos_ganador_perdedor": 0,
+    "aciertos_1x2": 46,
     "aciertos_exactos": 5,
     "partidos_pronosticados": 100,
     "jornadas_jugadas": 10,
     "jornadas_ganadas": 3,
-    "jornadas_perdidas": 4,
+    "jornadas_perdidas": 3,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -331,14 +331,6 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
-                },
-                "Espanyol_vs_Sevilla": {
-                    "id": 16416323,
-                    "pronostico": "1-0",
-                    "real": "1-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
                 },
                 "Getafe_vs_Celta": {
                     "id": 16416348,
@@ -801,12 +793,12 @@
             }
         },
         "J10": {
-            "puntos": 3,
-            "aciertos_1x2": 3,
+            "puntos": 5,
+            "aciertos_1x2": 4,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
-            "perdedor": true,
+            "perdedor": false,
             "detalle": {
                 "Alavés_vs_Málaga CF": {
                     "id": 16421077,
@@ -863,6 +855,14 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
+                },
+                "Real Sociedad_vs_Levante UD": {
+                    "id": 16421086,
+                    "pronostico": "1-1",
+                    "real": "0-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         }
