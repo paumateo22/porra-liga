@@ -2,16 +2,16 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 54,
-    "puntos_partidos": 54,
+    "puntos_totales": 56,
+    "puntos_partidos": 55,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 47,
+    "puntos_ganador_perdedor": 1,
+    "aciertos_1x2": 48,
     "aciertos_exactos": 7,
     "partidos_pronosticados": 100,
     "jornadas_jugadas": 10,
     "jornadas_ganadas": 4,
-    "jornadas_perdidas": 4,
+    "jornadas_perdidas": 3,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -793,12 +793,12 @@
             }
         },
         "J10": {
-            "puntos": 2,
-            "aciertos_1x2": 3,
+            "puntos": 4,
+            "aciertos_1x2": 4,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
-            "perdedor": true,
+            "perdedor": false,
             "detalle": {
                 "Alavés_vs_Málaga CF": {
                     "id": 16421077,
@@ -859,10 +859,10 @@
                 "Real Sociedad_vs_Levante UD": {
                     "id": 16421086,
                     "pronostico": "4-1",
-                    "real": "1-1",
-                    "acierto_1x2": false,
+                    "real": "2-1",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }

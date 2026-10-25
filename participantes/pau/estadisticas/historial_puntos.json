@@ -7,16 +7,16 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 62,
-    "puntos_partidos": 59,
+    "puntos_totales": 60,
+    "puntos_partidos": 58,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 3,
-    "aciertos_1x2": 49,
+    "puntos_ganador_perdedor": 2,
+    "aciertos_1x2": 48,
     "aciertos_exactos": 10,
     "partidos_pronosticados": 100,
     "jornadas_jugadas": 10,
     "jornadas_ganadas": 4,
-    "jornadas_perdidas": 1,
+    "jornadas_perdidas": 2,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -798,12 +798,12 @@
             }
         },
         "J10": {
-            "puntos": 5,
-            "aciertos_1x2": 4,
+            "puntos": 3,
+            "aciertos_1x2": 3,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
-            "perdedor": false,
+            "perdedor": true,
             "detalle": {
                 "Alavés_vs_Málaga CF": {
                     "id": 16421077,
@@ -864,10 +864,10 @@
                 "Real Sociedad_vs_Levante UD": {
                     "id": 16421086,
                     "pronostico": "2-2",
-                    "real": "1-1",
-                    "acierto_1x2": true,
+                    "real": "2-1",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 }
             }
         }
