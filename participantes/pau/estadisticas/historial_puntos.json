@@ -7,15 +7,15 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 60,
-    "puntos_partidos": 58,
+    "puntos_totales": 58,
+    "puntos_partidos": 57,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 2,
-    "aciertos_1x2": 48,
+    "puntos_ganador_perdedor": 1,
+    "aciertos_1x2": 47,
     "aciertos_exactos": 10,
     "partidos_pronosticados": 100,
     "jornadas_jugadas": 10,
-    "jornadas_ganadas": 4,
+    "jornadas_ganadas": 3,
     "jornadas_perdidas": 2,
     "punto_partida": 0,
     "por_jornada": {
@@ -290,11 +290,11 @@
             }
         },
         "J04": {
-            "puntos": 4,
-            "aciertos_1x2": 3,
+            "puntos": 2,
+            "aciertos_1x2": 2,
             "aciertos_exactos": 0,
             "bonus": 0,
-            "ganador": true,
+            "ganador": false,
             "perdedor": false,
             "detalle": {
                 "Betis_vs_Real Madrid": {
@@ -333,14 +333,6 @@
                     "id": 16416325,
                     "pronostico": "1-6",
                     "real": "0-5",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                },
-                "Getafe_vs_Celta": {
-                    "id": 16416348,
-                    "pronostico": "0-0",
-                    "real": "1-1",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
@@ -865,6 +857,14 @@
                     "id": 16421086,
                     "pronostico": "2-2",
                     "real": "2-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "FC Barcelona_vs_Real Madrid": {
+                    "id": 16421080,
+                    "pronostico": "5-2",
+                    "real": "0-0",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0

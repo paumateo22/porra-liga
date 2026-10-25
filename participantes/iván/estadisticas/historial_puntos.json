@@ -7,16 +7,16 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 74,
-    "puntos_partidos": 69,
+    "puntos_totales": 72,
+    "puntos_partidos": 68,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 5,
-    "aciertos_1x2": 54,
+    "puntos_ganador_perdedor": 4,
+    "aciertos_1x2": 53,
     "aciertos_exactos": 15,
     "partidos_pronosticados": 100,
     "jornadas_jugadas": 10,
     "jornadas_ganadas": 5,
-    "jornadas_perdidas": 0,
+    "jornadas_perdidas": 1,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -290,12 +290,12 @@
             }
         },
         "J04": {
-            "puntos": 2,
-            "aciertos_1x2": 2,
+            "puntos": 0,
+            "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
-            "perdedor": false,
+            "perdedor": true,
             "detalle": {
                 "Betis_vs_Real Madrid": {
                     "id": 16416315,
@@ -333,14 +333,6 @@
                     "id": 16416325,
                     "pronostico": "0-4",
                     "real": "0-5",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                },
-                "Getafe_vs_Celta": {
-                    "id": 16416348,
-                    "pronostico": "0-0",
-                    "real": "1-1",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
@@ -868,6 +860,14 @@
                     "acierto_1x2": true,
                     "acierto_exacto": true,
                     "puntos": 2
+                },
+                "FC Barcelona_vs_Real Madrid": {
+                    "id": 16421080,
+                    "pronostico": "4-2",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         }

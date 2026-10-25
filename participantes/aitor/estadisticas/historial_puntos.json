@@ -332,14 +332,6 @@
                     "acierto_exacto": false,
                     "puntos": 1
                 },
-                "Getafe_vs_Celta": {
-                    "id": 16416348,
-                    "pronostico": "1-2",
-                    "real": "1-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "Elche_vs_Real Sociedad": {
                     "id": 16416319,
                     "pronostico": "0-3",
@@ -863,6 +855,14 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
+                },
+                "FC Barcelona_vs_Real Madrid": {
+                    "id": 16421080,
+                    "pronostico": "4-2",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         }
