@@ -403,17 +403,6 @@
             "estado": "finished"
         },
         {
-            "id": 16416320,
-            "local": "Málaga CF",
-            "visitante": "Levante UD",
-            "id_escudo_local": 2830,
-            "id_escudo_visitante": 2849,
-            "fecha": "2026-09-06T18:30:00",
-            "goles_local": 0,
-            "goles_visitante": 0,
-            "estado": "finished"
-        },
-        {
             "id": 16416323,
             "local": "Espanyol",
             "visitante": "Sevilla",
@@ -1081,9 +1070,9 @@
             "id_escudo_local": 2825,
             "id_escudo_visitante": 2859,
             "fecha": "2026-10-25T14:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
+            "goles_local": 0,
+            "goles_visitante": 0,
+            "estado": "inprogress"
         },
         {
             "id": 16421079,
