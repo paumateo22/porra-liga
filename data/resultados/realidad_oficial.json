@@ -3047,11 +3047,44 @@
             "estado": "notstarted"
         },
         {
+            "id": 16462680,
+            "local": "Athletic",
+            "visitante": "Valencia",
+            "id_escudo_local": 2825,
+            "id_escudo_visitante": 2828,
+            "fecha": "2027-03-14T20:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
+            "id": 16462681,
+            "local": "Betis",
+            "visitante": "Levante UD",
+            "id_escudo_local": 2816,
+            "id_escudo_visitante": 2849,
+            "fecha": "2027-03-14T20:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
             "id": 16462682,
             "local": "Elche",
             "visitante": "Villarreal",
             "id_escudo_local": 2846,
             "id_escudo_visitante": 2819,
+            "fecha": "2027-03-14T20:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
+            "id": 16462683,
+            "local": "FC Barcelona",
+            "visitante": "Deportivo de A Coruña",
+            "id_escudo_local": 2817,
+            "id_escudo_visitante": 2832,
             "fecha": "2027-03-14T20:00:00",
             "goles_local": null,
             "goles_visitante": null,
@@ -3096,6 +3129,17 @@
             "visitante": "Espanyol",
             "id_escudo_local": 2829,
             "id_escudo_visitante": 2814,
+            "fecha": "2027-03-14T20:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
+            "id": 16462687,
+            "local": "Real Racing Club",
+            "visitante": "Atlético",
+            "id_escudo_local": 2835,
+            "id_escudo_visitante": 2836,
             "fecha": "2027-03-14T20:00:00",
             "goles_local": null,
             "goles_visitante": null,
@@ -3664,6 +3708,28 @@
     ],
     "J34": [
         {
+            "id": 16462554,
+            "local": "Atlético",
+            "visitante": "Alavés",
+            "id_escudo_local": 2836,
+            "id_escudo_visitante": 2885,
+            "fecha": "2027-05-02T21:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
+            "id": 16462557,
+            "local": "Betis",
+            "visitante": "Valencia",
+            "id_escudo_local": 2816,
+            "id_escudo_visitante": 2828,
+            "fecha": "2027-05-02T21:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
             "id": 16462560,
             "local": "Celta",
             "visitante": "Sevilla",
@@ -3697,6 +3763,17 @@
             "estado": "notstarted"
         },
         {
+            "id": 16416356,
+            "local": "FC Barcelona",
+            "visitante": "Osasuna",
+            "id_escudo_local": 2817,
+            "id_escudo_visitante": 2820,
+            "fecha": "2027-05-02T21:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
             "id": 16416358,
             "local": "Levante UD",
             "visitante": "Real Madrid",
@@ -3724,6 +3801,17 @@
             "visitante": "Villarreal",
             "id_escudo_local": 2818,
             "id_escudo_visitante": 2819,
+            "fecha": "2027-05-02T21:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
+            "id": 16416355,
+            "local": "Real Sociedad",
+            "visitante": "Athletic",
+            "id_escudo_local": 2824,
+            "id_escudo_visitante": 2825,
             "fecha": "2027-05-02T21:00:00",
             "goles_local": null,
             "goles_visitante": null,
