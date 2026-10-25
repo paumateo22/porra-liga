@@ -7,12 +7,12 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 63,
-    "puntos_partidos": 61,
+    "puntos_totales": 62,
+    "puntos_partidos": 60,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 2,
     "aciertos_1x2": 49,
-    "aciertos_exactos": 12,
+    "aciertos_exactos": 11,
     "partidos_pronosticados": 100,
     "jornadas_jugadas": 10,
     "jornadas_ganadas": 4,
@@ -814,9 +814,9 @@
             }
         },
         "J10": {
-            "puntos": 4,
+            "puntos": 3,
             "aciertos_1x2": 3,
-            "aciertos_exactos": 2,
+            "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
             "perdedor": true,
@@ -864,10 +864,10 @@
                 "Athletic_vs_Getafe": {
                     "id": 16421081,
                     "pronostico": "2-0",
-                    "real": "2-0",
+                    "real": "3-0",
                     "acierto_1x2": true,
-                    "acierto_exacto": true,
-                    "puntos": 2
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         }

@@ -2,12 +2,12 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 55,
-    "puntos_partidos": 54,
+    "puntos_totales": 54,
+    "puntos_partidos": 53,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 1,
     "aciertos_1x2": 46,
-    "aciertos_exactos": 8,
+    "aciertos_exactos": 7,
     "partidos_pronosticados": 98,
     "jornadas_jugadas": 10,
     "jornadas_ganadas": 3,
@@ -793,9 +793,9 @@
             }
         },
         "J10": {
-            "puntos": 7,
+            "puntos": 6,
             "aciertos_1x2": 4,
-            "aciertos_exactos": 2,
+            "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": true,
             "perdedor": false,
@@ -843,10 +843,10 @@
                 "Athletic_vs_Getafe": {
                     "id": 16421081,
                     "pronostico": "2-0",
-                    "real": "2-0",
+                    "real": "3-0",
                     "acierto_1x2": true,
-                    "acierto_exacto": true,
-                    "puntos": 2
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         }

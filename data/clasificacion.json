@@ -1,6 +1,6 @@
 {
     "competicion": "LaLiga 2026-27",
-    "generado": "2026-10-25T14:41:16",
+    "generado": "2026-10-25T15:34:09",
     "jornadas_calculadas": [
         "J01",
         "J02",
@@ -29,12 +29,12 @@
                     "descripcion": "Mundial 2026"
                 }
             ],
-            "puntos_totales": 73,
-            "puntos_partidos": 67,
+            "puntos_totales": 74,
+            "puntos_partidos": 68,
             "bonus_rendimiento": 0,
             "puntos_ganador_perdedor": 6,
             "aciertos_1x2": 53,
-            "aciertos_exactos": 14,
+            "aciertos_exactos": 15,
             "partidos_pronosticados": 100,
             "jornadas_jugadas": 10,
             "jornadas_ganadas": 6,
@@ -114,9 +114,9 @@
                     "perdedor": false
                 },
                 "J10": {
-                    "puntos": 6,
+                    "puntos": 7,
                     "aciertos_1x2": 4,
-                    "aciertos_exactos": 1,
+                    "aciertos_exactos": 2,
                     "bonus": 0,
                     "ganador": true,
                     "perdedor": false
@@ -133,12 +133,12 @@
                     "descripcion": "Liga 2023/24"
                 }
             ],
-            "puntos_totales": 63,
-            "puntos_partidos": 61,
+            "puntos_totales": 62,
+            "puntos_partidos": 60,
             "bonus_rendimiento": 0,
             "puntos_ganador_perdedor": 2,
             "aciertos_1x2": 49,
-            "aciertos_exactos": 12,
+            "aciertos_exactos": 11,
             "partidos_pronosticados": 100,
             "jornadas_jugadas": 10,
             "jornadas_ganadas": 4,
@@ -218,9 +218,9 @@
                     "perdedor": false
                 },
                 "J10": {
-                    "puntos": 4,
+                    "puntos": 3,
                     "aciertos_1x2": 3,
-                    "aciertos_exactos": 2,
+                    "aciertos_exactos": 1,
                     "bonus": 0,
                     "ganador": false,
                     "perdedor": true
@@ -422,12 +422,12 @@
             "slug": "adrián",
             "nombre": "Adrián",
             "insignias": [],
-            "puntos_totales": 55,
-            "puntos_partidos": 54,
+            "puntos_totales": 54,
+            "puntos_partidos": 53,
             "bonus_rendimiento": 0,
             "puntos_ganador_perdedor": 1,
             "aciertos_1x2": 46,
-            "aciertos_exactos": 8,
+            "aciertos_exactos": 7,
             "partidos_pronosticados": 98,
             "jornadas_jugadas": 10,
             "jornadas_ganadas": 3,
@@ -507,9 +507,9 @@
                     "perdedor": false
                 },
                 "J10": {
-                    "puntos": 7,
+                    "puntos": 6,
                     "aciertos_1x2": 4,
-                    "aciertos_exactos": 2,
+                    "aciertos_exactos": 1,
                     "bonus": 0,
                     "ganador": true,
                     "perdedor": false
