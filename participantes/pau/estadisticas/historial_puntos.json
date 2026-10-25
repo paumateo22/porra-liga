@@ -345,14 +345,6 @@
                     "acierto_exacto": false,
                     "puntos": 0
                 },
-                "Málaga CF_vs_Levante UD": {
-                    "id": 16416320,
-                    "pronostico": "2-1",
-                    "real": "0-0",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "Espanyol_vs_Sevilla": {
                     "id": 16416323,
                     "pronostico": "1-1",
@@ -868,6 +860,14 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
+                },
+                "Athletic_vs_Getafe": {
+                    "id": 16421081,
+                    "pronostico": "2-0",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         }

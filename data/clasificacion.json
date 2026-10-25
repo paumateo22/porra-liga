@@ -1,6 +1,6 @@
 {
     "competicion": "LaLiga 2026-27",
-    "generado": "2026-10-25T12:52:11",
+    "generado": "2026-10-25T14:04:11",
     "jornadas_calculadas": [
         "J01",
         "J02",
@@ -29,16 +29,16 @@
                     "descripcion": "Mundial 2026"
                 }
             ],
-            "puntos_totales": 71,
+            "puntos_totales": 72,
             "puntos_partidos": 66,
             "bonus_rendimiento": 0,
-            "puntos_ganador_perdedor": 5,
+            "puntos_ganador_perdedor": 6,
             "aciertos_1x2": 52,
             "aciertos_exactos": 14,
             "partidos_pronosticados": 100,
             "jornadas_jugadas": 10,
             "jornadas_ganadas": 6,
-            "jornadas_perdidas": 1,
+            "jornadas_perdidas": 0,
             "punto_partida": 0,
             "por_jornada": {
                 "J01": {
@@ -66,12 +66,12 @@
                     "perdedor": false
                 },
                 "J04": {
-                    "puntos": 1,
+                    "puntos": 2,
                     "aciertos_1x2": 2,
                     "aciertos_exactos": 0,
                     "bonus": 0,
                     "ganador": false,
-                    "perdedor": true
+                    "perdedor": false
                 },
                 "J05": {
                     "puntos": 6,
@@ -521,11 +521,11 @@
             "slug": "carlos",
             "nombre": "Carlos",
             "insignias": [],
-            "puntos_totales": 49,
-            "puntos_partidos": 50,
+            "puntos_totales": 48,
+            "puntos_partidos": 49,
             "bonus_rendimiento": 0,
             "puntos_ganador_perdedor": -1,
-            "aciertos_1x2": 45,
+            "aciertos_1x2": 44,
             "aciertos_exactos": 5,
             "partidos_pronosticados": 100,
             "jornadas_jugadas": 10,
@@ -558,8 +558,8 @@
                     "perdedor": false
                 },
                 "J04": {
-                    "puntos": 1,
-                    "aciertos_1x2": 2,
+                    "puntos": 0,
+                    "aciertos_1x2": 1,
                     "aciertos_exactos": 0,
                     "bonus": 0,
                     "ganador": false,
