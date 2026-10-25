@@ -7,15 +7,15 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 73,
+    "puntos_totales": 72,
     "puntos_partidos": 67,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 6,
+    "puntos_ganador_perdedor": 5,
     "aciertos_1x2": 53,
     "aciertos_exactos": 14,
     "partidos_pronosticados": 100,
     "jornadas_jugadas": 10,
-    "jornadas_ganadas": 6,
+    "jornadas_ganadas": 5,
     "jornadas_perdidas": 0,
     "punto_partida": 0,
     "por_jornada": {
@@ -336,14 +336,6 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
-                },
-                "Alavés_vs_Osasuna": {
-                    "id": 16416318,
-                    "pronostico": "1-1",
-                    "real": "5-2",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
                 },
                 "Espanyol_vs_Sevilla": {
                     "id": 16416323,
@@ -814,11 +806,11 @@
             }
         },
         "J10": {
-            "puntos": 6,
+            "puntos": 5,
             "aciertos_1x2": 4,
             "aciertos_exactos": 1,
             "bonus": 0,
-            "ganador": true,
+            "ganador": false,
             "perdedor": false,
             "detalle": {
                 "Alavés_vs_Málaga CF": {
@@ -868,6 +860,14 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
+                },
+                "Celta_vs_Betis": {
+                    "id": 16421079,
+                    "pronostico": "1-2",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         }

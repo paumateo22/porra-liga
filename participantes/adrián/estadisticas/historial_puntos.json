@@ -2,11 +2,11 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 54,
-    "puntos_partidos": 53,
+    "puntos_totales": 55,
+    "puntos_partidos": 54,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 46,
+    "aciertos_1x2": 47,
     "aciertos_exactos": 7,
     "partidos_pronosticados": 98,
     "jornadas_jugadas": 10,
@@ -331,14 +331,6 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
-                },
-                "Alavés_vs_Osasuna": {
-                    "id": 16416318,
-                    "pronostico": "1-1",
-                    "real": "5-2",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
                 },
                 "Espanyol_vs_Sevilla": {
                     "id": 16416323,
@@ -793,8 +785,8 @@
             }
         },
         "J10": {
-            "puntos": 6,
-            "aciertos_1x2": 4,
+            "puntos": 7,
+            "aciertos_1x2": 5,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": true,
@@ -844,6 +836,14 @@
                     "id": 16421081,
                     "pronostico": "2-0",
                     "real": "4-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "Celta_vs_Betis": {
+                    "id": 16421079,
+                    "pronostico": "2-2",
+                    "real": "0-0",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
