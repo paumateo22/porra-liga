@@ -2364,11 +2364,44 @@
     ],
     "J22": [
         {
+            "id": 16462510,
+            "local": "Atlético",
+            "visitante": "Espanyol",
+            "id_escudo_local": 2836,
+            "id_escudo_visitante": 2814,
+            "fecha": "2027-01-31T20:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
+            "id": 16462513,
+            "local": "Betis",
+            "visitante": "Elche",
+            "id_escudo_local": 2816,
+            "id_escudo_visitante": 2846,
+            "fecha": "2027-01-31T20:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
             "id": 16462516,
             "local": "Celta",
             "visitante": "Getafe",
             "id_escudo_local": 2821,
             "id_escudo_visitante": 2859,
+            "fecha": "2027-01-31T20:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
+            "id": 16462519,
+            "local": "FC Barcelona",
+            "visitante": "Valencia",
+            "id_escudo_local": 2817,
+            "id_escudo_visitante": 2828,
             "fecha": "2027-01-31T20:00:00",
             "goles_local": null,
             "goles_visitante": null,
@@ -2413,6 +2446,17 @@
             "visitante": "Real Madrid",
             "id_escudo_local": 2818,
             "id_escudo_visitante": 2829,
+            "fecha": "2027-01-31T20:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
+            "id": 16462534,
+            "local": "Sevilla",
+            "visitante": "Athletic",
+            "id_escudo_local": 2833,
+            "id_escudo_visitante": 2825,
             "fecha": "2027-01-31T20:00:00",
             "goles_local": null,
             "goles_visitante": null,
