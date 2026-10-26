@@ -7,11 +7,11 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 73,
-    "puntos_partidos": 69,
+    "puntos_totales": 74,
+    "puntos_partidos": 70,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 4,
-    "aciertos_1x2": 54,
+    "aciertos_1x2": 55,
     "aciertos_exactos": 15,
     "partidos_pronosticados": 100,
     "jornadas_jugadas": 10,
@@ -814,8 +814,8 @@
             }
         },
         "J10": {
-            "puntos": 7,
-            "aciertos_1x2": 5,
+            "puntos": 8,
+            "aciertos_1x2": 6,
             "aciertos_exactos": 2,
             "bonus": 0,
             "ganador": false,
@@ -896,10 +896,10 @@
                 "Sevilla_vs_Osasuna": {
                     "id": 16421085,
                     "pronostico": "2-1",
-                    "real": "0-0",
-                    "acierto_1x2": false,
+                    "real": "1-0",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }

@@ -2,11 +2,11 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 55,
-    "puntos_partidos": 54,
+    "puntos_totales": 56,
+    "puntos_partidos": 55,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 47,
+    "aciertos_1x2": 48,
     "aciertos_exactos": 7,
     "partidos_pronosticados": 98,
     "jornadas_jugadas": 10,
@@ -793,8 +793,8 @@
             }
         },
         "J10": {
-            "puntos": 8,
-            "aciertos_1x2": 6,
+            "puntos": 9,
+            "aciertos_1x2": 7,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": true,
@@ -875,10 +875,10 @@
                 "Sevilla_vs_Osasuna": {
                     "id": 16421085,
                     "pronostico": "2-1",
-                    "real": "0-0",
-                    "acierto_1x2": false,
+                    "real": "1-0",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }
