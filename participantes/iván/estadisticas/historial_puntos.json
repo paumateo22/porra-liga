@@ -7,11 +7,11 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 72,
-    "puntos_partidos": 68,
+    "puntos_totales": 73,
+    "puntos_partidos": 69,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 4,
-    "aciertos_1x2": 53,
+    "aciertos_1x2": 54,
     "aciertos_exactos": 15,
     "partidos_pronosticados": 100,
     "jornadas_jugadas": 10,
@@ -290,8 +290,8 @@
             }
         },
         "J04": {
-            "puntos": 0,
-            "aciertos_1x2": 1,
+            "puntos": 1,
+            "aciertos_1x2": 2,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -333,6 +333,38 @@
                     "id": 16416325,
                     "pronostico": "0-4",
                     "real": "0-5",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "Alavés_vs_Osasuna": {
+                    "id": 16416318,
+                    "pronostico": "1-1",
+                    "real": "5-2",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Málaga CF_vs_Levante UD": {
+                    "id": 16416320,
+                    "pronostico": "2-1",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Espanyol_vs_Sevilla": {
+                    "id": 16416323,
+                    "pronostico": "1-2",
+                    "real": "1-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Getafe_vs_Celta": {
+                    "id": 16416348,
+                    "pronostico": "0-0",
+                    "real": "1-1",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1

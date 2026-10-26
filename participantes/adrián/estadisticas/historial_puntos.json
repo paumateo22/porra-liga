@@ -2,12 +2,12 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 54,
-    "puntos_partidos": 53,
+    "puntos_totales": 56,
+    "puntos_partidos": 55,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 47,
-    "aciertos_exactos": 6,
+    "aciertos_1x2": 48,
+    "aciertos_exactos": 7,
     "partidos_pronosticados": 98,
     "jornadas_jugadas": 10,
     "jornadas_ganadas": 3,
@@ -285,9 +285,9 @@
             }
         },
         "J04": {
-            "puntos": 4,
-            "aciertos_1x2": 3,
-            "aciertos_exactos": 0,
+            "puntos": 6,
+            "aciertos_1x2": 4,
+            "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": true,
             "perdedor": false,
@@ -331,6 +331,38 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
+                },
+                "Alavés_vs_Osasuna": {
+                    "id": 16416318,
+                    "pronostico": "1-1",
+                    "real": "5-2",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Málaga CF_vs_Levante UD": {
+                    "id": 16416320,
+                    "pronostico": "1-0",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Espanyol_vs_Sevilla": {
+                    "id": 16416323,
+                    "pronostico": "1-1",
+                    "real": "1-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": true,
+                    "puntos": 2
+                },
+                "Getafe_vs_Celta": {
+                    "id": 16416348,
+                    "pronostico": "1-0",
+                    "real": "1-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 },
                 "Elche_vs_Real Sociedad": {
                     "id": 16416319,

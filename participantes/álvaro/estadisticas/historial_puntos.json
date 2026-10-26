@@ -2,16 +2,16 @@
     "participante": "álvaro",
     "nombre": "Álvaro",
     "insignias": [],
-    "puntos_totales": 51,
-    "puntos_partidos": 50,
+    "puntos_totales": 56,
+    "puntos_partidos": 54,
     "bonus_rendimiento": 2,
-    "puntos_ganador_perdedor": -1,
-    "aciertos_1x2": 40,
-    "aciertos_exactos": 10,
+    "puntos_ganador_perdedor": 0,
+    "aciertos_1x2": 42,
+    "aciertos_exactos": 12,
     "partidos_pronosticados": 89,
     "jornadas_jugadas": 9,
     "jornadas_ganadas": 1,
-    "jornadas_perdidas": 2,
+    "jornadas_perdidas": 1,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -285,12 +285,12 @@
             }
         },
         "J04": {
-            "puntos": 0,
-            "aciertos_1x2": 1,
-            "aciertos_exactos": 0,
+            "puntos": 5,
+            "aciertos_1x2": 3,
+            "aciertos_exactos": 2,
             "bonus": 0,
             "ganador": false,
-            "perdedor": true,
+            "perdedor": false,
             "detalle": {
                 "Betis_vs_Real Madrid": {
                     "id": 16416315,
@@ -331,6 +331,38 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
+                },
+                "Alavés_vs_Osasuna": {
+                    "id": 16416318,
+                    "pronostico": "1-1",
+                    "real": "5-2",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Málaga CF_vs_Levante UD": {
+                    "id": 16416320,
+                    "pronostico": "1-0",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Espanyol_vs_Sevilla": {
+                    "id": 16416323,
+                    "pronostico": "1-1",
+                    "real": "1-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": true,
+                    "puntos": 2
+                },
+                "Getafe_vs_Celta": {
+                    "id": 16416348,
+                    "pronostico": "1-1",
+                    "real": "1-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": true,
+                    "puntos": 2
                 },
                 "Elche_vs_Real Sociedad": {
                     "id": 16416319,
