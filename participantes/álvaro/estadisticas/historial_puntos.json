@@ -2,15 +2,15 @@
     "participante": "álvaro",
     "nombre": "Álvaro",
     "insignias": [],
-    "puntos_totales": 57,
+    "puntos_totales": 56,
     "puntos_partidos": 54,
     "bonus_rendimiento": 2,
-    "puntos_ganador_perdedor": 1,
+    "puntos_ganador_perdedor": 0,
     "aciertos_1x2": 42,
     "aciertos_exactos": 12,
     "partidos_pronosticados": 89,
     "jornadas_jugadas": 9,
-    "jornadas_ganadas": 2,
+    "jornadas_ganadas": 1,
     "jornadas_perdidas": 1,
     "punto_partida": 0,
     "por_jornada": {
@@ -285,11 +285,11 @@
             }
         },
         "J04": {
-            "puntos": 6,
+            "puntos": 5,
             "aciertos_1x2": 3,
             "aciertos_exactos": 2,
             "bonus": 0,
-            "ganador": true,
+            "ganador": false,
             "perdedor": false,
             "detalle": {
                 "Betis_vs_Real Madrid": {
@@ -363,6 +363,14 @@
                     "acierto_1x2": true,
                     "acierto_exacto": true,
                     "puntos": 2
+                },
+                "Elche_vs_Real Sociedad": {
+                    "id": 16416319,
+                    "pronostico": "1-0",
+                    "real": "2-3",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         },
