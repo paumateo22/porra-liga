@@ -7,16 +7,16 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 72,
+    "puntos_totales": 73,
     "puntos_partidos": 69,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 3,
+    "puntos_ganador_perdedor": 4,
     "aciertos_1x2": 54,
     "aciertos_exactos": 15,
     "partidos_pronosticados": 110,
     "jornadas_jugadas": 11,
     "jornadas_ganadas": 5,
-    "jornadas_perdidas": 2,
+    "jornadas_perdidas": 1,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -904,17 +904,17 @@
             }
         },
         "J11": {
-            "puntos": -1,
+            "puntos": 0,
             "aciertos_1x2": 0,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
-            "perdedor": true,
+            "perdedor": false,
             "detalle": {
                 "Villarreal_vs_Espanyol": {
                     "id": 16421099,
                     "pronostico": "3-1",
-                    "real": "0-0",
+                    "real": "0-1",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0

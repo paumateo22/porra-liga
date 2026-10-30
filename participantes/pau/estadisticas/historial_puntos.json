@@ -7,16 +7,16 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 60,
+    "puntos_totales": 61,
     "puntos_partidos": 59,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 1,
+    "puntos_ganador_perdedor": 2,
     "aciertos_1x2": 48,
     "aciertos_exactos": 11,
     "partidos_pronosticados": 110,
     "jornadas_jugadas": 11,
     "jornadas_ganadas": 4,
-    "jornadas_perdidas": 3,
+    "jornadas_perdidas": 2,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -904,17 +904,17 @@
             }
         },
         "J11": {
-            "puntos": -1,
+            "puntos": 0,
             "aciertos_1x2": 0,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
-            "perdedor": true,
+            "perdedor": false,
             "detalle": {
                 "Villarreal_vs_Espanyol": {
                     "id": 16421099,
                     "pronostico": "2-0",
-                    "real": "0-0",
+                    "real": "0-1",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0

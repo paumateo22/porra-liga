@@ -2,16 +2,16 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 55,
+    "puntos_totales": 56,
     "puntos_partidos": 55,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 0,
+    "puntos_ganador_perdedor": 1,
     "aciertos_1x2": 48,
     "aciertos_exactos": 7,
     "partidos_pronosticados": 108,
     "jornadas_jugadas": 11,
     "jornadas_ganadas": 3,
-    "jornadas_perdidas": 3,
+    "jornadas_perdidas": 2,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -883,17 +883,17 @@
             }
         },
         "J11": {
-            "puntos": -1,
+            "puntos": 0,
             "aciertos_1x2": 0,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
-            "perdedor": true,
+            "perdedor": false,
             "detalle": {
                 "Villarreal_vs_Espanyol": {
                     "id": 16421099,
                     "pronostico": "3-2",
-                    "real": "0-0",
+                    "real": "0-1",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0

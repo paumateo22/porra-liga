@@ -2,38 +2,7 @@
     "clave": "J11",
     "jornada": 11,
     "cerrada": false,
-    "resultado_jornada": {
-        "ganadores": [
-            {
-                "slug": "carlos",
-                "nombre": "Carlos"
-            }
-        ],
-        "perdedores": [
-            {
-                "slug": "adrián",
-                "nombre": "Adrián"
-            },
-            {
-                "slug": "aitor",
-                "nombre": "Aitor"
-            },
-            {
-                "slug": "iván",
-                "nombre": "Iván"
-            },
-            {
-                "slug": "pau",
-                "nombre": "Pau"
-            },
-            {
-                "slug": "álvaro",
-                "nombre": "Álvaro"
-            }
-        ],
-        "ganador_seguro": false,
-        "perdedor_seguro": false
-    },
+    "resultado_jornada": null,
     "partidos": [
         {
             "id": 16421099,
@@ -119,7 +88,7 @@
     "resultados": {
         "16421099": {
             "goles_local": 0,
-            "goles_visitante": 0,
+            "goles_visitante": 1,
             "estado": "inprogress"
         },
         "16421096": {
@@ -170,27 +139,6 @@
     },
     "jugadores": [
         {
-            "slug": "carlos",
-            "nombre": "Carlos",
-            "insignias": [],
-            "aciertos_1x2": 1,
-            "aciertos_exactos": 0,
-            "bonus": 0,
-            "elegible": true,
-            "ganador": true,
-            "perdedor": false,
-            "puntos": 2,
-            "pronosticados": 10,
-            "predicciones": {
-                "16421099": {
-                    "pronostico": "1-1",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                }
-            }
-        },
-        {
             "slug": "adrián",
             "nombre": "Adrián",
             "insignias": [],
@@ -199,8 +147,8 @@
             "bonus": 0,
             "elegible": true,
             "ganador": false,
-            "perdedor": true,
-            "puntos": -1,
+            "perdedor": false,
+            "puntos": 0,
             "pronosticados": 10,
             "predicciones": {
                 "16421099": {
@@ -220,12 +168,33 @@
             "bonus": 0,
             "elegible": true,
             "ganador": false,
-            "perdedor": true,
-            "puntos": -1,
+            "perdedor": false,
+            "puntos": 0,
             "pronosticados": 10,
             "predicciones": {
                 "16421099": {
                     "pronostico": "3-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                }
+            }
+        },
+        {
+            "slug": "carlos",
+            "nombre": "Carlos",
+            "insignias": [],
+            "aciertos_1x2": 0,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "elegible": true,
+            "ganador": false,
+            "perdedor": false,
+            "puntos": 0,
+            "pronosticados": 10,
+            "predicciones": {
+                "16421099": {
+                    "pronostico": "1-1",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
@@ -246,8 +215,8 @@
             "bonus": 0,
             "elegible": true,
             "ganador": false,
-            "perdedor": true,
-            "puntos": -1,
+            "perdedor": false,
+            "puntos": 0,
             "pronosticados": 10,
             "predicciones": {
                 "16421099": {
@@ -272,8 +241,8 @@
             "bonus": 0,
             "elegible": true,
             "ganador": false,
-            "perdedor": true,
-            "puntos": -1,
+            "perdedor": false,
+            "puntos": 0,
             "pronosticados": 10,
             "predicciones": {
                 "16421099": {
@@ -293,8 +262,8 @@
             "bonus": 0,
             "elegible": true,
             "ganador": false,
-            "perdedor": true,
-            "puntos": -1,
+            "perdedor": false,
+            "puntos": 0,
             "pronosticados": 10,
             "predicciones": {
                 "16421099": {
