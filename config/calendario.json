@@ -329,14 +329,6 @@
     ],
     "J05": [
         {
-            "id": 16416330,
-            "local": "Sevilla",
-            "visitante": "Valencia",
-            "id_escudo_local": 2833,
-            "id_escudo_visitante": 2828,
-            "fecha": "2026-09-11T21:00:00"
-        },
-        {
             "id": 16416328,
             "local": "Real Racing Club",
             "visitante": "Alavés",
