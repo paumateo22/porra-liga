@@ -7,16 +7,16 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 62,
-    "puntos_partidos": 60,
+    "puntos_totales": 60,
+    "puntos_partidos": 59,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 2,
-    "aciertos_1x2": 49,
+    "puntos_ganador_perdedor": 1,
+    "aciertos_1x2": 48,
     "aciertos_exactos": 11,
-    "partidos_pronosticados": 100,
-    "jornadas_jugadas": 10,
+    "partidos_pronosticados": 110,
+    "jornadas_jugadas": 11,
     "jornadas_ganadas": 4,
-    "jornadas_perdidas": 2,
+    "jornadas_perdidas": 3,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -380,21 +380,13 @@
             }
         },
         "J05": {
-            "puntos": 4,
-            "aciertos_1x2": 4,
+            "puntos": 3,
+            "aciertos_1x2": 3,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
             "perdedor": true,
             "detalle": {
-                "Sevilla_vs_Valencia": {
-                    "id": 16416330,
-                    "pronostico": "2-0",
-                    "real": "1-0",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                },
                 "Real Racing Club_vs_Alavés": {
                     "id": 16416328,
                     "pronostico": "2-2",
@@ -905,6 +897,24 @@
                     "id": 16421085,
                     "pronostico": "0-0",
                     "real": "2-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                }
+            }
+        },
+        "J11": {
+            "puntos": -1,
+            "aciertos_1x2": 0,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "ganador": false,
+            "perdedor": true,
+            "detalle": {
+                "Villarreal_vs_Espanyol": {
+                    "id": 16421099,
+                    "pronostico": "2-0",
+                    "real": "0-0",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
