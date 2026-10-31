@@ -3539,6 +3539,17 @@
             "estado": "notstarted"
         },
         {
+            "id": 16462512,
+            "local": "Getafe",
+            "visitante": "Real Madrid",
+            "id_escudo_local": 2859,
+            "id_escudo_visitante": 2829,
+            "fecha": "2027-04-18T21:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
             "id": 16462515,
             "local": "Levante UD",
             "visitante": "Villarreal",
