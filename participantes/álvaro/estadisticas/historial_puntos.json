@@ -2,11 +2,11 @@
     "participante": "álvaro",
     "nombre": "Álvaro",
     "insignias": [],
-    "puntos_totales": 55,
-    "puntos_partidos": 54,
+    "puntos_totales": 56,
+    "puntos_partidos": 55,
     "bonus_rendimiento": 2,
     "puntos_ganador_perdedor": -1,
-    "aciertos_1x2": 42,
+    "aciertos_1x2": 43,
     "aciertos_exactos": 12,
     "partidos_pronosticados": 99,
     "jornadas_jugadas": 10,
@@ -389,14 +389,6 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
-                },
-                "Osasuna_vs_Espanyol": {
-                    "id": 16416327,
-                    "pronostico": "1-1",
-                    "real": "0-2",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
                 },
                 "Athletic_vs_Elche": {
                     "id": 16416322,
@@ -801,8 +793,8 @@
             }
         },
         "J11": {
-            "puntos": -1,
-            "aciertos_1x2": 0,
+            "puntos": 0,
+            "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -823,6 +815,14 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
+                },
+                "Rayo_vs_Celta": {
+                    "id": 16421100,
+                    "pronostico": "1-1",
+                    "real": "0-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         }

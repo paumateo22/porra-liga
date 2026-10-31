@@ -7,16 +7,16 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 64,
-    "puntos_partidos": 61,
+    "puntos_totales": 66,
+    "puntos_partidos": 62,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 3,
-    "aciertos_1x2": 50,
+    "puntos_ganador_perdedor": 4,
+    "aciertos_1x2": 51,
     "aciertos_exactos": 11,
     "partidos_pronosticados": 110,
     "jornadas_jugadas": 11,
     "jornadas_ganadas": 5,
-    "jornadas_perdidas": 2,
+    "jornadas_perdidas": 1,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -380,12 +380,12 @@
             }
         },
         "J05": {
-            "puntos": 4,
+            "puntos": 5,
             "aciertos_1x2": 4,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
-            "perdedor": true,
+            "perdedor": false,
             "detalle": {
                 "Sevilla_vs_Valencia": {
                     "id": 16416330,
@@ -394,14 +394,6 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
-                },
-                "Osasuna_vs_Espanyol": {
-                    "id": 16416327,
-                    "pronostico": "2-1",
-                    "real": "0-2",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
                 },
                 "Athletic_vs_Elche": {
                     "id": 16416322,
@@ -904,8 +896,8 @@
             }
         },
         "J11": {
-            "puntos": 2,
-            "aciertos_1x2": 1,
+            "puntos": 3,
+            "aciertos_1x2": 2,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": true,
@@ -923,6 +915,14 @@
                     "id": 16421096,
                     "pronostico": "1-2",
                     "real": "0-2",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "Rayo_vs_Celta": {
+                    "id": 16421100,
+                    "pronostico": "1-1",
+                    "real": "0-0",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1

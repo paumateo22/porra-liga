@@ -414,7 +414,7 @@
         "jugadores": {
             "adrián": {
                 "partidos_pronosticados": 10,
-                "partidos_evaluados": 9,
+                "partidos_evaluados": 8,
                 "aciertos_1x2": 5,
                 "aciertos_exactos": 1,
                 "puntos_partidos": 6,
@@ -427,20 +427,20 @@
             },
             "aitor": {
                 "partidos_pronosticados": 10,
-                "partidos_evaluados": 9,
+                "partidos_evaluados": 8,
                 "aciertos_1x2": 4,
                 "aciertos_exactos": 1,
                 "puntos_partidos": 5,
                 "bonus_rendimiento": 0,
                 "elegible_jornada": true,
                 "es_ganador_jornada": false,
-                "es_perdedor_jornada": true,
-                "puntos_ganador_perdedor": -1,
-                "puntos_totales": 4
+                "es_perdedor_jornada": false,
+                "puntos_ganador_perdedor": 0,
+                "puntos_totales": 5
             },
             "carlos": {
                 "partidos_pronosticados": 10,
-                "partidos_evaluados": 9,
+                "partidos_evaluados": 8,
                 "aciertos_1x2": 5,
                 "aciertos_exactos": 0,
                 "puntos_partidos": 5,
@@ -453,7 +453,7 @@
             },
             "iván": {
                 "partidos_pronosticados": 10,
-                "partidos_evaluados": 9,
+                "partidos_evaluados": 8,
                 "aciertos_1x2": 5,
                 "aciertos_exactos": 1,
                 "puntos_partidos": 6,
@@ -466,20 +466,20 @@
             },
             "javi": {
                 "partidos_pronosticados": 10,
-                "partidos_evaluados": 9,
-                "aciertos_1x2": 4,
-                "aciertos_exactos": 1,
-                "puntos_partidos": 5,
+                "partidos_evaluados": 8,
+                "aciertos_1x2": 3,
+                "aciertos_exactos": 0,
+                "puntos_partidos": 3,
                 "bonus_rendimiento": 0,
                 "elegible_jornada": true,
                 "es_ganador_jornada": false,
                 "es_perdedor_jornada": true,
                 "puntos_ganador_perdedor": -1,
-                "puntos_totales": 4
+                "puntos_totales": 2
             },
             "manu": {
                 "partidos_pronosticados": 10,
-                "partidos_evaluados": 9,
+                "partidos_evaluados": 8,
                 "aciertos_1x2": 6,
                 "aciertos_exactos": 0,
                 "puntos_partidos": 6,
@@ -492,20 +492,20 @@
             },
             "pau": {
                 "partidos_pronosticados": 10,
-                "partidos_evaluados": 9,
+                "partidos_evaluados": 8,
                 "aciertos_1x2": 4,
                 "aciertos_exactos": 1,
                 "puntos_partidos": 5,
                 "bonus_rendimiento": 0,
                 "elegible_jornada": true,
                 "es_ganador_jornada": false,
-                "es_perdedor_jornada": true,
-                "puntos_ganador_perdedor": -1,
-                "puntos_totales": 4
+                "es_perdedor_jornada": false,
+                "puntos_ganador_perdedor": 0,
+                "puntos_totales": 5
             },
             "álvaro": {
                 "partidos_pronosticados": 10,
-                "partidos_evaluados": 9,
+                "partidos_evaluados": 8,
                 "aciertos_1x2": 5,
                 "aciertos_exactos": 1,
                 "puntos_partidos": 6,
@@ -1003,48 +1003,22 @@
         "jugadores": {
             "adrián": {
                 "partidos_pronosticados": 10,
-                "partidos_evaluados": 2,
-                "aciertos_1x2": 1,
+                "partidos_evaluados": 3,
+                "aciertos_1x2": 2,
                 "aciertos_exactos": 1,
-                "puntos_partidos": 2,
+                "puntos_partidos": 3,
                 "bonus_rendimiento": 0,
                 "elegible_jornada": true,
                 "es_ganador_jornada": true,
                 "es_perdedor_jornada": false,
                 "puntos_ganador_perdedor": 1,
-                "puntos_totales": 3
+                "puntos_totales": 4
             },
             "aitor": {
                 "partidos_pronosticados": 10,
-                "partidos_evaluados": 2,
-                "aciertos_1x2": 1,
+                "partidos_evaluados": 3,
+                "aciertos_1x2": 2,
                 "aciertos_exactos": 0,
-                "puntos_partidos": 1,
-                "bonus_rendimiento": 0,
-                "elegible_jornada": true,
-                "es_ganador_jornada": true,
-                "es_perdedor_jornada": false,
-                "puntos_ganador_perdedor": 1,
-                "puntos_totales": 2
-            },
-            "carlos": {
-                "partidos_pronosticados": 10,
-                "partidos_evaluados": 2,
-                "aciertos_1x2": 1,
-                "aciertos_exactos": 0,
-                "puntos_partidos": 1,
-                "bonus_rendimiento": 0,
-                "elegible_jornada": true,
-                "es_ganador_jornada": true,
-                "es_perdedor_jornada": false,
-                "puntos_ganador_perdedor": 1,
-                "puntos_totales": 2
-            },
-            "iván": {
-                "partidos_pronosticados": 10,
-                "partidos_evaluados": 2,
-                "aciertos_1x2": 1,
-                "aciertos_exactos": 1,
                 "puntos_partidos": 2,
                 "bonus_rendimiento": 0,
                 "elegible_jornada": true,
@@ -1053,31 +1027,57 @@
                 "puntos_ganador_perdedor": 1,
                 "puntos_totales": 3
             },
-            "pau": {
+            "carlos": {
                 "partidos_pronosticados": 10,
-                "partidos_evaluados": 2,
-                "aciertos_1x2": 1,
+                "partidos_evaluados": 3,
+                "aciertos_1x2": 2,
                 "aciertos_exactos": 0,
-                "puntos_partidos": 1,
+                "puntos_partidos": 2,
                 "bonus_rendimiento": 0,
                 "elegible_jornada": true,
                 "es_ganador_jornada": true,
                 "es_perdedor_jornada": false,
                 "puntos_ganador_perdedor": 1,
-                "puntos_totales": 2
+                "puntos_totales": 3
             },
-            "álvaro": {
+            "iván": {
                 "partidos_pronosticados": 10,
-                "partidos_evaluados": 2,
-                "aciertos_1x2": 0,
-                "aciertos_exactos": 0,
-                "puntos_partidos": 0,
+                "partidos_evaluados": 3,
+                "aciertos_1x2": 1,
+                "aciertos_exactos": 1,
+                "puntos_partidos": 2,
                 "bonus_rendimiento": 0,
                 "elegible_jornada": true,
                 "es_ganador_jornada": false,
                 "es_perdedor_jornada": true,
                 "puntos_ganador_perdedor": -1,
-                "puntos_totales": -1
+                "puntos_totales": 1
+            },
+            "pau": {
+                "partidos_pronosticados": 10,
+                "partidos_evaluados": 3,
+                "aciertos_1x2": 2,
+                "aciertos_exactos": 0,
+                "puntos_partidos": 2,
+                "bonus_rendimiento": 0,
+                "elegible_jornada": true,
+                "es_ganador_jornada": true,
+                "es_perdedor_jornada": false,
+                "puntos_ganador_perdedor": 1,
+                "puntos_totales": 3
+            },
+            "álvaro": {
+                "partidos_pronosticados": 10,
+                "partidos_evaluados": 3,
+                "aciertos_1x2": 1,
+                "aciertos_exactos": 0,
+                "puntos_partidos": 1,
+                "bonus_rendimiento": 0,
+                "elegible_jornada": true,
+                "es_ganador_jornada": false,
+                "es_perdedor_jornada": true,
+                "puntos_ganador_perdedor": -1,
+                "puntos_totales": 0
             }
         }
     }
