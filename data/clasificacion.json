@@ -1,6 +1,6 @@
 {
     "competicion": "LaLiga 2026-27",
-    "generado": "2026-10-31T21:46:10",
+    "generado": "2026-10-31T21:52:09",
     "jornadas_calculadas": [
         "J01",
         "J02",
@@ -142,12 +142,12 @@
                     "descripcion": "Liga 2023/24"
                 }
             ],
-            "puntos_totales": 67,
-            "puntos_partidos": 63,
+            "puntos_totales": 66,
+            "puntos_partidos": 62,
             "bonus_rendimiento": 0,
             "puntos_ganador_perdedor": 4,
             "aciertos_1x2": 51,
-            "aciertos_exactos": 12,
+            "aciertos_exactos": 11,
             "partidos_pronosticados": 110,
             "jornadas_jugadas": 11,
             "jornadas_ganadas": 5,
@@ -235,9 +235,9 @@
                     "perdedor": true
                 },
                 "J11": {
-                    "puntos": 5,
+                    "puntos": 4,
                     "aciertos_1x2": 3,
-                    "aciertos_exactos": 1,
+                    "aciertos_exactos": 0,
                     "bonus": 0,
                     "ganador": true,
                     "perdedor": false
