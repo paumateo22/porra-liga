@@ -2,11 +2,11 @@
     "participante": "álvaro",
     "nombre": "Álvaro",
     "insignias": [],
-    "puntos_totales": 55,
-    "puntos_partidos": 54,
+    "puntos_totales": 56,
+    "puntos_partidos": 55,
     "bonus_rendimiento": 2,
     "puntos_ganador_perdedor": -1,
-    "aciertos_1x2": 42,
+    "aciertos_1x2": 43,
     "aciertos_exactos": 12,
     "partidos_pronosticados": 99,
     "jornadas_jugadas": 10,
@@ -785,8 +785,8 @@
             }
         },
         "J11": {
-            "puntos": -1,
-            "aciertos_1x2": 0,
+            "puntos": 0,
+            "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -819,10 +819,10 @@
                 "Betis_vs_Málaga CF": {
                     "id": 16421087,
                     "pronostico": "2-1",
-                    "real": "0-0",
-                    "acierto_1x2": false,
+                    "real": "1-0",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }
