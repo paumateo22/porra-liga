@@ -7,11 +7,11 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 61,
-    "puntos_partidos": 59,
+    "puntos_totales": 62,
+    "puntos_partidos": 60,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 2,
-    "aciertos_1x2": 48,
+    "aciertos_1x2": 49,
     "aciertos_exactos": 11,
     "partidos_pronosticados": 110,
     "jornadas_jugadas": 11,
@@ -380,13 +380,21 @@
             }
         },
         "J05": {
-            "puntos": 3,
-            "aciertos_1x2": 3,
+            "puntos": 4,
+            "aciertos_1x2": 4,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
             "perdedor": true,
             "detalle": {
+                "Sevilla_vs_Valencia": {
+                    "id": 16416330,
+                    "pronostico": "2-0",
+                    "real": "1-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
                 "Real Racing Club_vs_Alavés": {
                     "id": 16416328,
                     "pronostico": "2-2",

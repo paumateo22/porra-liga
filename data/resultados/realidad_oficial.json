@@ -4131,5 +4131,106 @@
             "goles_visitante": null,
             "estado": "notstarted"
         }
+    ],
+    "J38": [
+        {
+            "id": 16462647,
+            "local": "Athletic",
+            "visitante": "Rayo",
+            "id_escudo_local": 2825,
+            "id_escudo_visitante": 2818,
+            "fecha": "2027-05-30T21:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
+            "id": 16462650,
+            "local": "Betis",
+            "visitante": "Atlético",
+            "id_escudo_local": 2816,
+            "id_escudo_visitante": 2836,
+            "fecha": "2027-05-30T21:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
+            "id": 16462653,
+            "local": "Elche",
+            "visitante": "Real Racing Club",
+            "id_escudo_local": 2846,
+            "id_escudo_visitante": 2835,
+            "fecha": "2027-05-30T21:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
+            "id": 16462656,
+            "local": "Espanyol",
+            "visitante": "Alavés",
+            "id_escudo_local": 2814,
+            "id_escudo_visitante": 2885,
+            "fecha": "2027-05-30T21:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
+            "id": 16462659,
+            "local": "Getafe",
+            "visitante": "FC Barcelona",
+            "id_escudo_local": 2859,
+            "id_escudo_visitante": 2817,
+            "fecha": "2027-05-30T21:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
+            "id": 16462662,
+            "local": "Levante UD",
+            "visitante": "Celta",
+            "id_escudo_local": 2849,
+            "id_escudo_visitante": 2821,
+            "fecha": "2027-05-30T21:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
+            "id": 16462665,
+            "local": "Málaga CF",
+            "visitante": "Sevilla",
+            "id_escudo_local": 2830,
+            "id_escudo_visitante": 2833,
+            "fecha": "2027-05-30T21:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
+            "id": 16462667,
+            "local": "Osasuna",
+            "visitante": "Valencia",
+            "id_escudo_local": 2820,
+            "id_escudo_visitante": 2828,
+            "fecha": "2027-05-30T21:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
+            "id": 16462672,
+            "local": "Real Sociedad",
+            "visitante": "Villarreal",
+            "id_escudo_local": 2824,
+            "id_escudo_visitante": 2819,
+            "fecha": "2027-05-30T21:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        }
     ]
 }

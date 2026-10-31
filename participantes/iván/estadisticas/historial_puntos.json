@@ -7,11 +7,11 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 73,
-    "puntos_partidos": 69,
+    "puntos_totales": 74,
+    "puntos_partidos": 70,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 4,
-    "aciertos_1x2": 54,
+    "aciertos_1x2": 55,
     "aciertos_exactos": 15,
     "partidos_pronosticados": 110,
     "jornadas_jugadas": 11,
@@ -380,13 +380,21 @@
             }
         },
         "J05": {
-            "puntos": 5,
-            "aciertos_1x2": 4,
+            "puntos": 6,
+            "aciertos_1x2": 5,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
             "perdedor": false,
             "detalle": {
+                "Sevilla_vs_Valencia": {
+                    "id": 16416330,
+                    "pronostico": "2-1",
+                    "real": "1-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
                 "Real Racing Club_vs_Alavés": {
                     "id": 16416328,
                     "pronostico": "1-1",
