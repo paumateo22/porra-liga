@@ -2,16 +2,16 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 56,
-    "puntos_partidos": 56,
+    "puntos_totales": 59,
+    "puntos_partidos": 57,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 49,
+    "puntos_ganador_perdedor": 2,
+    "aciertos_1x2": 50,
     "aciertos_exactos": 7,
     "partidos_pronosticados": 108,
     "jornadas_jugadas": 11,
-    "jornadas_ganadas": 3,
-    "jornadas_perdidas": 3,
+    "jornadas_ganadas": 4,
+    "jornadas_perdidas": 2,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -883,12 +883,12 @@
             }
         },
         "J11": {
-            "puntos": -1,
-            "aciertos_1x2": 0,
+            "puntos": 2,
+            "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "bonus": 0,
-            "ganador": false,
-            "perdedor": true,
+            "ganador": true,
+            "perdedor": false,
             "detalle": {
                 "Villarreal_vs_Espanyol": {
                     "id": 16421099,
@@ -901,10 +901,10 @@
                 "Levante UD_vs_Atlético": {
                     "id": 16421096,
                     "pronostico": "0-2",
-                    "real": "0-0",
-                    "acierto_1x2": false,
+                    "real": "0-1",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }
