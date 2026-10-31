@@ -7,12 +7,12 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 78,
-    "puntos_partidos": 73,
+    "puntos_totales": 79,
+    "puntos_partidos": 74,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 5,
     "aciertos_1x2": 57,
-    "aciertos_exactos": 16,
+    "aciertos_exactos": 17,
     "partidos_pronosticados": 110,
     "jornadas_jugadas": 11,
     "jornadas_ganadas": 6,
@@ -888,9 +888,9 @@
             }
         },
         "J11": {
-            "puntos": 4,
+            "puntos": 5,
             "aciertos_1x2": 2,
-            "aciertos_exactos": 1,
+            "aciertos_exactos": 2,
             "bonus": 0,
             "ganador": true,
             "perdedor": false,
@@ -922,10 +922,10 @@
                 "Betis_vs_Málaga CF": {
                     "id": 16421087,
                     "pronostico": "2-0",
-                    "real": "1-0",
+                    "real": "2-0",
                     "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         }
