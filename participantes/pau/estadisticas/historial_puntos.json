@@ -7,12 +7,12 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 67,
-    "puntos_partidos": 63,
+    "puntos_totales": 66,
+    "puntos_partidos": 62,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 4,
     "aciertos_1x2": 51,
-    "aciertos_exactos": 12,
+    "aciertos_exactos": 11,
     "partidos_pronosticados": 110,
     "jornadas_jugadas": 11,
     "jornadas_ganadas": 5,
@@ -888,9 +888,9 @@
             }
         },
         "J11": {
-            "puntos": 4,
+            "puntos": 3,
             "aciertos_1x2": 2,
-            "aciertos_exactos": 1,
+            "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": true,
             "perdedor": false,
@@ -922,10 +922,10 @@
                 "Betis_vs_Málaga CF": {
                     "id": 16421087,
                     "pronostico": "2-0",
-                    "real": "2-0",
+                    "real": "2-1",
                     "acierto_1x2": true,
-                    "acierto_exacto": true,
-                    "puntos": 2
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         }

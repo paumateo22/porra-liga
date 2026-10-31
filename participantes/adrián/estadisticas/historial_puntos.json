@@ -2,12 +2,12 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 61,
-    "puntos_partidos": 59,
+    "puntos_totales": 62,
+    "puntos_partidos": 60,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 2,
     "aciertos_1x2": 51,
-    "aciertos_exactos": 8,
+    "aciertos_exactos": 9,
     "partidos_pronosticados": 108,
     "jornadas_jugadas": 11,
     "jornadas_ganadas": 4,
@@ -867,9 +867,9 @@
             }
         },
         "J11": {
-            "puntos": 4,
+            "puntos": 5,
             "aciertos_1x2": 2,
-            "aciertos_exactos": 1,
+            "aciertos_exactos": 2,
             "bonus": 0,
             "ganador": true,
             "perdedor": false,
@@ -901,10 +901,10 @@
                 "Betis_vs_Málaga CF": {
                     "id": 16421087,
                     "pronostico": "2-1",
-                    "real": "2-0",
+                    "real": "2-1",
                     "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         }
