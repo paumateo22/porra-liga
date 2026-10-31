@@ -2,11 +2,11 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 62,
-    "puntos_partidos": 59,
+    "puntos_totales": 61,
+    "puntos_partidos": 58,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 3,
-    "aciertos_1x2": 52,
+    "aciertos_1x2": 51,
     "aciertos_exactos": 7,
     "partidos_pronosticados": 110,
     "jornadas_jugadas": 11,
@@ -375,8 +375,8 @@
             }
         },
         "J05": {
-            "puntos": 5,
-            "aciertos_1x2": 4,
+            "puntos": 4,
+            "aciertos_1x2": 3,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
@@ -386,14 +386,6 @@
                     "id": 16416330,
                     "pronostico": "2-1",
                     "real": "1-0",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                },
-                "Real Madrid_vs_Rayo": {
-                    "id": 16416331,
-                    "pronostico": "3-1",
-                    "real": "4-1",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
@@ -921,6 +913,14 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
+                },
+                "FC Barcelona_vs_Alavés": {
+                    "id": 16421091,
+                    "pronostico": "3-1",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         }

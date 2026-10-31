@@ -7,11 +7,11 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 78,
-    "puntos_partidos": 73,
+    "puntos_totales": 77,
+    "puntos_partidos": 72,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 5,
-    "aciertos_1x2": 57,
+    "aciertos_1x2": 56,
     "aciertos_exactos": 16,
     "partidos_pronosticados": 110,
     "jornadas_jugadas": 11,
@@ -380,8 +380,8 @@
             }
         },
         "J05": {
-            "puntos": 6,
-            "aciertos_1x2": 5,
+            "puntos": 5,
+            "aciertos_1x2": 4,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
@@ -391,14 +391,6 @@
                     "id": 16416330,
                     "pronostico": "2-1",
                     "real": "1-0",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                },
-                "Real Madrid_vs_Rayo": {
-                    "id": 16416331,
-                    "pronostico": "2-0",
-                    "real": "4-1",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
@@ -926,6 +918,14 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
+                },
+                "FC Barcelona_vs_Alavés": {
+                    "id": 16421091,
+                    "pronostico": "3-1",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         }
