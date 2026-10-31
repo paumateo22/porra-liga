@@ -2,16 +2,16 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 58,
+    "puntos_totales": 57,
     "puntos_partidos": 57,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 1,
+    "puntos_ganador_perdedor": 0,
     "aciertos_1x2": 50,
     "aciertos_exactos": 7,
     "partidos_pronosticados": 110,
     "jornadas_jugadas": 11,
     "jornadas_ganadas": 4,
-    "jornadas_perdidas": 3,
+    "jornadas_perdidas": 4,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -389,14 +389,6 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
-                },
-                "Real Racing Club_vs_Alavés": {
-                    "id": 16416328,
-                    "pronostico": "1-2",
-                    "real": "2-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
                 },
                 "Osasuna_vs_Espanyol": {
                     "id": 16416327,
@@ -907,17 +899,25 @@
             }
         },
         "J11": {
-            "puntos": 0,
+            "puntos": -1,
             "aciertos_1x2": 0,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
-            "perdedor": false,
+            "perdedor": true,
             "detalle": {
                 "Villarreal_vs_Espanyol": {
                     "id": 16421099,
                     "pronostico": "3-0",
                     "real": "0-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Levante UD_vs_Atlético": {
+                    "id": 16421096,
+                    "pronostico": "1-2",
+                    "real": "0-0",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0

@@ -5,10 +5,6 @@
     "resultado_jornada": {
         "ganadores": [
             {
-                "slug": "carlos",
-                "nombre": "Carlos"
-            },
-            {
                 "slug": "manu",
                 "nombre": "Manu"
             }
@@ -38,14 +34,6 @@
             "id_escudo_local": 2833,
             "id_escudo_visitante": 2828,
             "fecha": "2026-09-11T21:00:00"
-        },
-        {
-            "id": 16416328,
-            "local": "Real Racing Club",
-            "visitante": "Alavés",
-            "id_escudo_local": 2835,
-            "id_escudo_visitante": 2885,
-            "fecha": "2026-09-12T14:00:00"
         },
         {
             "id": 16416327,
@@ -118,11 +106,6 @@
             "goles_visitante": 0,
             "estado": "finished"
         },
-        "16416328": {
-            "goles_local": 2,
-            "goles_visitante": 1,
-            "estado": "finished"
-        },
         "16416327": {
             "goles_local": 0,
             "goles_visitante": 2,
@@ -166,81 +149,6 @@
     },
     "jugadores": [
         {
-            "slug": "carlos",
-            "nombre": "Carlos",
-            "insignias": [],
-            "aciertos_1x2": 6,
-            "aciertos_exactos": 0,
-            "bonus": 0,
-            "elegible": true,
-            "ganador": true,
-            "perdedor": false,
-            "puntos": 7,
-            "pronosticados": 10,
-            "predicciones": {
-                "16416330": {
-                    "pronostico": "2-1",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                },
-                "16416328": {
-                    "pronostico": "3-2",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                },
-                "16416327": {
-                    "pronostico": "1-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
-                "16416322": {
-                    "pronostico": "2-2",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                },
-                "16416331": {
-                    "pronostico": "3-1",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                },
-                "16416347": {
-                    "pronostico": "3-0",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
-                "16416329": {
-                    "pronostico": "0-3",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                },
-                "16416326": {
-                    "pronostico": "1-0",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
-                "16416332": {
-                    "pronostico": "1-2",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                },
-                "16416333": {
-                    "pronostico": "2-2",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                }
-            }
-        },
-        {
             "slug": "manu",
             "nombre": "Manu",
             "insignias": [],
@@ -258,12 +166,6 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
-                },
-                "16416328": {
-                    "pronostico": "1-2",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
                 },
                 "16416327": {
                     "pronostico": "2-1",
@@ -333,12 +235,6 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
-                },
-                "16416328": {
-                    "pronostico": "0-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
                 },
                 "16416327": {
                     "pronostico": "3-2",
@@ -414,12 +310,6 @@
                     "acierto_exacto": false,
                     "puntos": 1
                 },
-                "16416328": {
-                    "pronostico": "1-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "16416327": {
                     "pronostico": "2-1",
                     "acierto_1x2": false,
@@ -489,12 +379,6 @@
                     "acierto_exacto": false,
                     "puntos": 1
                 },
-                "16416328": {
-                    "pronostico": "1-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "16416327": {
                     "pronostico": "1-1",
                     "acierto_1x2": false,
@@ -546,6 +430,75 @@
             }
         },
         {
+            "slug": "carlos",
+            "nombre": "Carlos",
+            "insignias": [],
+            "aciertos_1x2": 5,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "elegible": true,
+            "ganador": false,
+            "perdedor": false,
+            "puntos": 5,
+            "pronosticados": 10,
+            "predicciones": {
+                "16416330": {
+                    "pronostico": "2-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "16416327": {
+                    "pronostico": "1-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "16416322": {
+                    "pronostico": "2-2",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "16416331": {
+                    "pronostico": "3-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "16416347": {
+                    "pronostico": "3-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "16416329": {
+                    "pronostico": "0-3",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "16416326": {
+                    "pronostico": "1-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "16416332": {
+                    "pronostico": "1-2",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "16416333": {
+                    "pronostico": "2-2",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                }
+            }
+        },
+        {
             "slug": "aitor",
             "nombre": "Aitor",
             "insignias": [],
@@ -563,12 +516,6 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
-                },
-                "16416328": {
-                    "pronostico": "1-2",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
                 },
                 "16416327": {
                     "pronostico": "1-0",
@@ -638,12 +585,6 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
-                },
-                "16416328": {
-                    "pronostico": "1-2",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
                 },
                 "16416327": {
                     "pronostico": "0-2",
@@ -718,12 +659,6 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
-                },
-                "16416328": {
-                    "pronostico": "2-2",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
                 },
                 "16416327": {
                     "pronostico": "2-1",
