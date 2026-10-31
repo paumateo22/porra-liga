@@ -460,17 +460,6 @@
             "estado": "finished"
         },
         {
-            "id": 16416327,
-            "local": "Osasuna",
-            "visitante": "Espanyol",
-            "id_escudo_local": 2820,
-            "id_escudo_visitante": 2814,
-            "fecha": "2026-09-12T16:15:00",
-            "goles_local": 0,
-            "goles_visitante": 2,
-            "estado": "finished"
-        },
-        {
             "id": 16416322,
             "local": "Athletic",
             "visitante": "Elche",
@@ -1149,9 +1138,9 @@
             "id_escudo_local": 2818,
             "id_escudo_visitante": 2821,
             "fecha": "2026-10-31T16:15:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
+            "goles_local": 0,
+            "goles_visitante": 0,
+            "estado": "inprogress"
         },
         {
             "id": 16421087,
