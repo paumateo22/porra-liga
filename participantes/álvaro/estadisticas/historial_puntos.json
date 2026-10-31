@@ -2,12 +2,12 @@
     "participante": "álvaro",
     "nombre": "Álvaro",
     "insignias": [],
-    "puntos_totales": 58,
-    "puntos_partidos": 57,
+    "puntos_totales": 57,
+    "puntos_partidos": 56,
     "bonus_rendimiento": 2,
     "puntos_ganador_perdedor": -1,
     "aciertos_1x2": 43,
-    "aciertos_exactos": 14,
+    "aciertos_exactos": 13,
     "partidos_pronosticados": 99,
     "jornadas_jugadas": 10,
     "jornadas_ganadas": 1,
@@ -777,9 +777,9 @@
             }
         },
         "J11": {
-            "puntos": 3,
+            "puntos": 2,
             "aciertos_1x2": 2,
-            "aciertos_exactos": 2,
+            "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
             "perdedor": true,
@@ -819,10 +819,10 @@
                 "FC Barcelona_vs_Alavés": {
                     "id": 16421091,
                     "pronostico": "2-0",
-                    "real": "2-0",
+                    "real": "3-0",
                     "acierto_1x2": true,
-                    "acierto_exacto": true,
-                    "puntos": 2
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         }
