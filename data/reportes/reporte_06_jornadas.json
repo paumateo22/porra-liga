@@ -1070,14 +1070,14 @@
                 "partidos_pronosticados": 10,
                 "partidos_evaluados": 5,
                 "aciertos_1x2": 2,
-                "aciertos_exactos": 1,
-                "puntos_partidos": 3,
+                "aciertos_exactos": 2,
+                "puntos_partidos": 4,
                 "bonus_rendimiento": 0,
                 "elegible_jornada": true,
                 "es_ganador_jornada": false,
                 "es_perdedor_jornada": true,
                 "puntos_ganador_perdedor": -1,
-                "puntos_totales": 2
+                "puntos_totales": 3
             }
         }
     }
