@@ -504,17 +504,6 @@
             "estado": "finished"
         },
         {
-            "id": 16416326,
-            "local": "Getafe",
-            "visitante": "Deportivo de A Coruña",
-            "id_escudo_local": 2859,
-            "id_escudo_visitante": 2832,
-            "fecha": "2026-09-13T18:30:00",
-            "goles_local": 1,
-            "goles_visitante": 1,
-            "estado": "finished"
-        },
-        {
             "id": 16416332,
             "local": "Real Sociedad",
             "visitante": "Atlético",
@@ -1195,7 +1184,7 @@
             "fecha": "2026-11-01T18:30:00",
             "goles_local": 0,
             "goles_visitante": 0,
-            "estado": "notstarted"
+            "estado": "inprogress"
         },
         {
             "id": 16421088,
