@@ -7,16 +7,16 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 80,
-    "puntos_partidos": 75,
+    "puntos_totales": 77,
+    "puntos_partidos": 74,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 5,
-    "aciertos_1x2": 59,
+    "puntos_ganador_perdedor": 3,
+    "aciertos_1x2": 58,
     "aciertos_exactos": 16,
     "partidos_pronosticados": 110,
     "jornadas_jugadas": 11,
-    "jornadas_ganadas": 6,
-    "jornadas_perdidas": 1,
+    "jornadas_ganadas": 5,
+    "jornadas_perdidas": 2,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -904,12 +904,12 @@
             }
         },
         "J11": {
-            "puntos": 6,
-            "aciertos_1x2": 4,
+            "puntos": 3,
+            "aciertos_1x2": 3,
             "aciertos_exactos": 1,
             "bonus": 0,
-            "ganador": true,
-            "perdedor": false,
+            "ganador": false,
+            "perdedor": true,
             "detalle": {
                 "Villarreal_vs_Espanyol": {
                     "id": 16421099,
@@ -954,10 +954,10 @@
                 "Getafe_vs_Sevilla": {
                     "id": 16421093,
                     "pronostico": "0-3",
-                    "real": "0-1",
-                    "acierto_1x2": true,
+                    "real": "1-1",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 }
             }
         }
