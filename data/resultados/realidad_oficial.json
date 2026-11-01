@@ -4123,6 +4123,17 @@
     ],
     "J38": [
         {
+            "id": 16462647,
+            "local": "Athletic",
+            "visitante": "Rayo",
+            "id_escudo_local": 2825,
+            "id_escudo_visitante": 2818,
+            "fecha": "2027-05-30T21:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
             "id": 16462650,
             "local": "Betis",
             "visitante": "Atlético",
