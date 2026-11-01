@@ -7,15 +7,15 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 65,
-    "puntos_partidos": 62,
+    "puntos_totales": 63,
+    "puntos_partidos": 61,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 3,
-    "aciertos_1x2": 52,
+    "puntos_ganador_perdedor": 2,
+    "aciertos_1x2": 51,
     "aciertos_exactos": 10,
     "partidos_pronosticados": 110,
     "jornadas_jugadas": 11,
-    "jornadas_ganadas": 5,
+    "jornadas_ganadas": 4,
     "jornadas_perdidas": 2,
     "punto_partida": 0,
     "por_jornada": {
@@ -880,11 +880,11 @@
             }
         },
         "J11": {
-            "puntos": 6,
-            "aciertos_1x2": 5,
+            "puntos": 4,
+            "aciertos_1x2": 4,
             "aciertos_exactos": 0,
             "bonus": 0,
-            "ganador": true,
+            "ganador": false,
             "perdedor": false,
             "detalle": {
                 "Villarreal_vs_Espanyol": {
@@ -954,10 +954,10 @@
                 "Athletic_vs_Real Sociedad": {
                     "id": 16421088,
                     "pronostico": "2-2",
-                    "real": "0-0",
-                    "acierto_1x2": true,
+                    "real": "1-0",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 }
             }
         }
