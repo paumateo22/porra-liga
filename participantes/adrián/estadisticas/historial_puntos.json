@@ -2,16 +2,16 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 58,
+    "puntos_totales": 60,
     "puntos_partidos": 59,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": -1,
+    "puntos_ganador_perdedor": 1,
     "aciertos_1x2": 51,
     "aciertos_exactos": 8,
     "partidos_pronosticados": 108,
     "jornadas_jugadas": 11,
-    "jornadas_ganadas": 3,
-    "jornadas_perdidas": 4,
+    "jornadas_ganadas": 4,
+    "jornadas_perdidas": 3,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -883,12 +883,12 @@
             }
         },
         "J11": {
-            "puntos": 4,
+            "puntos": 6,
             "aciertos_1x2": 3,
             "aciertos_exactos": 2,
             "bonus": 0,
-            "ganador": false,
-            "perdedor": true,
+            "ganador": true,
+            "perdedor": false,
             "detalle": {
                 "Villarreal_vs_Espanyol": {
                     "id": 16421099,
@@ -933,7 +933,7 @@
                 "Getafe_vs_Sevilla": {
                     "id": 16421093,
                     "pronostico": "0-1",
-                    "real": "1-1",
+                    "real": "2-1",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0

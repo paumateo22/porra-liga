@@ -2,16 +2,16 @@
     "participante": "carlos",
     "nombre": "Carlos",
     "insignias": [],
-    "puntos_totales": 55,
+    "puntos_totales": 57,
     "puntos_partidos": 56,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": -1,
+    "puntos_ganador_perdedor": 1,
     "aciertos_1x2": 50,
     "aciertos_exactos": 6,
     "partidos_pronosticados": 110,
     "jornadas_jugadas": 11,
-    "jornadas_ganadas": 3,
-    "jornadas_perdidas": 4,
+    "jornadas_ganadas": 4,
+    "jornadas_perdidas": 3,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -899,12 +899,12 @@
             }
         },
         "J11": {
-            "puntos": 2,
+            "puntos": 4,
             "aciertos_1x2": 3,
             "aciertos_exactos": 0,
             "bonus": 0,
-            "ganador": false,
-            "perdedor": true,
+            "ganador": true,
+            "perdedor": false,
             "detalle": {
                 "Villarreal_vs_Espanyol": {
                     "id": 16421099,
@@ -949,7 +949,7 @@
                 "Getafe_vs_Sevilla": {
                     "id": 16421093,
                     "pronostico": "1-3",
-                    "real": "1-1",
+                    "real": "2-1",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0

@@ -7,12 +7,12 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 68,
-    "puntos_partidos": 65,
+    "puntos_totales": 66,
+    "puntos_partidos": 63,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 3,
-    "aciertos_1x2": 53,
-    "aciertos_exactos": 12,
+    "aciertos_1x2": 52,
+    "aciertos_exactos": 11,
     "partidos_pronosticados": 110,
     "jornadas_jugadas": 11,
     "jornadas_ganadas": 5,
@@ -904,9 +904,9 @@
             }
         },
         "J11": {
-            "puntos": 6,
-            "aciertos_1x2": 4,
-            "aciertos_exactos": 1,
+            "puntos": 4,
+            "aciertos_1x2": 3,
+            "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": true,
             "perdedor": false,
@@ -954,10 +954,10 @@
                 "Getafe_vs_Sevilla": {
                     "id": 16421093,
                     "pronostico": "1-1",
-                    "real": "1-1",
-                    "acierto_1x2": true,
-                    "acierto_exacto": true,
-                    "puntos": 2
+                    "real": "2-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         }
