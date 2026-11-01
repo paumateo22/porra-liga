@@ -2,11 +2,11 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 60,
-    "puntos_partidos": 59,
+    "puntos_totales": 59,
+    "puntos_partidos": 58,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 51,
+    "aciertos_1x2": 50,
     "aciertos_exactos": 8,
     "partidos_pronosticados": 108,
     "jornadas_jugadas": 11,
@@ -375,8 +375,8 @@
             }
         },
         "J05": {
-            "puntos": 3,
-            "aciertos_1x2": 4,
+            "puntos": 2,
+            "aciertos_1x2": 3,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -418,14 +418,6 @@
                     "id": 16416331,
                     "pronostico": "3-1",
                     "real": "4-1",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                },
-                "Levante UD_vs_FC Barcelona": {
-                    "id": 16416329,
-                    "pronostico": "1-4",
-                    "real": "2-4",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
@@ -934,6 +926,14 @@
                     "id": 16421093,
                     "pronostico": "0-1",
                     "real": "3-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Real Racing Club_vs_Real Madrid": {
+                    "id": 16421098,
+                    "pronostico": "1-4",
+                    "real": "0-0",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
