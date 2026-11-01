@@ -7,15 +7,15 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 76,
-    "puntos_partidos": 72,
+    "puntos_totales": 74,
+    "puntos_partidos": 71,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 4,
-    "aciertos_1x2": 57,
+    "puntos_ganador_perdedor": 3,
+    "aciertos_1x2": 56,
     "aciertos_exactos": 15,
     "partidos_pronosticados": 110,
     "jornadas_jugadas": 11,
-    "jornadas_ganadas": 6,
+    "jornadas_ganadas": 5,
     "jornadas_perdidas": 2,
     "punto_partida": 0,
     "por_jornada": {
@@ -880,11 +880,11 @@
             }
         },
         "J11": {
-            "puntos": 7,
-            "aciertos_1x2": 5,
+            "puntos": 5,
+            "aciertos_1x2": 4,
             "aciertos_exactos": 1,
             "bonus": 0,
-            "ganador": true,
+            "ganador": false,
             "perdedor": false,
             "detalle": {
                 "Villarreal_vs_Espanyol": {
@@ -954,10 +954,10 @@
                 "Athletic_vs_Real Sociedad": {
                     "id": 16421088,
                     "pronostico": "2-2",
-                    "real": "1-1",
-                    "acierto_1x2": true,
+                    "real": "2-1",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 }
             }
         }
