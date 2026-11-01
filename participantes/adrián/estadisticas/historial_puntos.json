@@ -375,8 +375,8 @@
             }
         },
         "J05": {
-            "puntos": 2,
-            "aciertos_1x2": 3,
+            "puntos": 1,
+            "aciertos_1x2": 2,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -418,14 +418,6 @@
                     "id": 16416331,
                     "pronostico": "3-1",
                     "real": "4-1",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                },
-                "Getafe_vs_Deportivo de A Coruña": {
-                    "id": 16416326,
-                    "pronostico": "2-2",
-                    "real": "1-1",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
@@ -875,8 +867,8 @@
             }
         },
         "J11": {
-            "puntos": 7,
-            "aciertos_1x2": 4,
+            "puntos": 8,
+            "aciertos_1x2": 5,
             "aciertos_exactos": 2,
             "bonus": 0,
             "ganador": true,
@@ -934,6 +926,14 @@
                     "id": 16421098,
                     "pronostico": "1-4",
                     "real": "0-3",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "Elche_vs_Valencia": {
+                    "id": 16421092,
+                    "pronostico": "1-1",
+                    "real": "0-0",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
