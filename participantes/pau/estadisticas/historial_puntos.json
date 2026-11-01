@@ -8,15 +8,15 @@
         }
     ],
     "puntos_totales": 66,
-    "puntos_partidos": 62,
+    "puntos_partidos": 63,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 4,
-    "aciertos_1x2": 51,
+    "puntos_ganador_perdedor": 3,
+    "aciertos_1x2": 52,
     "aciertos_exactos": 11,
     "partidos_pronosticados": 110,
     "jornadas_jugadas": 11,
     "jornadas_ganadas": 5,
-    "jornadas_perdidas": 1,
+    "jornadas_perdidas": 2,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -381,16 +381,48 @@
         },
         "J05": {
             "puntos": 4,
-            "aciertos_1x2": 3,
+            "aciertos_1x2": 4,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
-            "perdedor": false,
+            "perdedor": true,
             "detalle": {
                 "Sevilla_vs_Valencia": {
                     "id": 16416330,
                     "pronostico": "2-0",
                     "real": "1-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "Real Racing Club_vs_Alavés": {
+                    "id": 16416328,
+                    "pronostico": "2-2",
+                    "real": "2-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Osasuna_vs_Espanyol": {
+                    "id": 16416327,
+                    "pronostico": "2-1",
+                    "real": "0-2",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Athletic_vs_Elche": {
+                    "id": 16416322,
+                    "pronostico": "3-1",
+                    "real": "1-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Real Madrid_vs_Rayo": {
+                    "id": 16416331,
+                    "pronostico": "2-1",
+                    "real": "4-1",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1

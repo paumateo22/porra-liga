@@ -2,12 +2,12 @@
     "participante": "javi",
     "nombre": "Javi",
     "insignias": [],
-    "puntos_totales": 23,
-    "puntos_partidos": 26,
+    "puntos_totales": 26,
+    "puntos_partidos": 29,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": -3,
-    "aciertos_1x2": 24,
-    "aciertos_exactos": 2,
+    "aciertos_1x2": 26,
+    "aciertos_exactos": 3,
     "partidos_pronosticados": 69,
     "jornadas_jugadas": 7,
     "jornadas_ganadas": 1,
@@ -367,9 +367,9 @@
             }
         },
         "J05": {
-            "puntos": 1,
-            "aciertos_1x2": 2,
-            "aciertos_exactos": 0,
+            "puntos": 4,
+            "aciertos_1x2": 4,
+            "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
             "perdedor": true,
@@ -378,6 +378,38 @@
                     "id": 16416330,
                     "pronostico": "2-0",
                     "real": "1-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "Real Racing Club_vs_Alavés": {
+                    "id": 16416328,
+                    "pronostico": "1-2",
+                    "real": "2-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Osasuna_vs_Espanyol": {
+                    "id": 16416327,
+                    "pronostico": "0-2",
+                    "real": "0-2",
+                    "acierto_1x2": true,
+                    "acierto_exacto": true,
+                    "puntos": 2
+                },
+                "Athletic_vs_Elche": {
+                    "id": 16416322,
+                    "pronostico": "3-0",
+                    "real": "1-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Real Madrid_vs_Rayo": {
+                    "id": 16416331,
+                    "pronostico": "3-0",
+                    "real": "4-1",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
