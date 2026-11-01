@@ -504,17 +504,6 @@
             "estado": "finished"
         },
         {
-            "id": 16416347,
-            "local": "Celta",
-            "visitante": "Málaga CF",
-            "id_escudo_local": 2821,
-            "id_escudo_visitante": 2830,
-            "fecha": "2026-09-13T14:00:00",
-            "goles_local": 1,
-            "goles_visitante": 1,
-            "estado": "finished"
-        },
-        {
             "id": 16416329,
             "local": "Levante UD",
             "visitante": "FC Barcelona",
@@ -1193,8 +1182,8 @@
             "id_escudo_local": 2859,
             "id_escudo_visitante": 2833,
             "fecha": "2026-11-01T14:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
+            "goles_local": 0,
+            "goles_visitante": 0,
             "estado": "notstarted"
         },
         {
