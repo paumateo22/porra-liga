@@ -2,16 +2,16 @@
     "participante": "carlos",
     "nombre": "Carlos",
     "insignias": [],
-    "puntos_totales": 57,
-    "puntos_partidos": 57,
+    "puntos_totales": 55,
+    "puntos_partidos": 56,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 50,
+    "puntos_ganador_perdedor": -1,
+    "aciertos_1x2": 49,
     "aciertos_exactos": 7,
     "partidos_pronosticados": 110,
     "jornadas_jugadas": 11,
     "jornadas_ganadas": 3,
-    "jornadas_perdidas": 3,
+    "jornadas_perdidas": 4,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -375,8 +375,8 @@
             }
         },
         "J05": {
-            "puntos": 6,
-            "aciertos_1x2": 5,
+            "puntos": 5,
+            "aciertos_1x2": 4,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": true,
@@ -418,14 +418,6 @@
                     "id": 16416331,
                     "pronostico": "3-1",
                     "real": "4-1",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                },
-                "Real Sociedad_vs_Atlético": {
-                    "id": 16416332,
-                    "pronostico": "1-2",
-                    "real": "0-3",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
@@ -883,12 +875,12 @@
             }
         },
         "J11": {
-            "puntos": 5,
+            "puntos": 4,
             "aciertos_1x2": 4,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
-            "perdedor": false,
+            "perdedor": true,
             "detalle": {
                 "Villarreal_vs_Espanyol": {
                     "id": 16421099,
@@ -950,6 +942,14 @@
                     "id": 16421092,
                     "pronostico": "2-1",
                     "real": "0-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Athletic_vs_Real Sociedad": {
+                    "id": 16421088,
+                    "pronostico": "1-2",
+                    "real": "0-0",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0

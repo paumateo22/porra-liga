@@ -2,15 +2,15 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 58,
-    "puntos_partidos": 58,
+    "puntos_totales": 60,
+    "puntos_partidos": 59,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 50,
+    "puntos_ganador_perdedor": 1,
+    "aciertos_1x2": 51,
     "aciertos_exactos": 8,
     "partidos_pronosticados": 108,
     "jornadas_jugadas": 11,
-    "jornadas_ganadas": 3,
+    "jornadas_ganadas": 4,
     "jornadas_perdidas": 3,
     "punto_partida": 0,
     "por_jornada": {
@@ -421,14 +421,6 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
-                },
-                "Real Sociedad_vs_Atlético": {
-                    "id": 16416332,
-                    "pronostico": "1-1",
-                    "real": "0-3",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
                 },
                 "Villarreal_vs_Betis": {
                     "id": 16416333,
@@ -867,11 +859,11 @@
             }
         },
         "J11": {
-            "puntos": 6,
-            "aciertos_1x2": 4,
+            "puntos": 8,
+            "aciertos_1x2": 5,
             "aciertos_exactos": 2,
             "bonus": 0,
-            "ganador": false,
+            "ganador": true,
             "perdedor": false,
             "detalle": {
                 "Villarreal_vs_Espanyol": {
@@ -937,6 +929,14 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
+                },
+                "Athletic_vs_Real Sociedad": {
+                    "id": 16421088,
+                    "pronostico": "2-2",
+                    "real": "0-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         }
