@@ -2162,6 +2162,17 @@
             "estado": "notstarted"
         },
         {
+            "id": 16462643,
+            "local": "Celta",
+            "visitante": "Valencia",
+            "id_escudo_local": 2821,
+            "id_escudo_visitante": 2828,
+            "fecha": "2027-01-17T20:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
             "id": 16462646,
             "local": "FC Barcelona",
             "visitante": "Elche",
@@ -2184,6 +2195,17 @@
             "estado": "notstarted"
         },
         {
+            "id": 16462652,
+            "local": "Levante UD",
+            "visitante": "Espanyol",
+            "id_escudo_local": 2849,
+            "id_escudo_visitante": 2814,
+            "fecha": "2027-01-17T20:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
             "id": 16462655,
             "local": "Málaga CF",
             "visitante": "Real Madrid",
@@ -2195,11 +2217,33 @@
             "estado": "notstarted"
         },
         {
+            "id": 16462661,
+            "local": "Rayo",
+            "visitante": "Sevilla",
+            "id_escudo_local": 2818,
+            "id_escudo_visitante": 2833,
+            "fecha": "2027-01-17T20:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
             "id": 16462658,
             "local": "Real Racing Club",
             "visitante": "Osasuna",
             "id_escudo_local": 2835,
             "id_escudo_visitante": 2820,
+            "fecha": "2027-01-17T20:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
+            "id": 16462664,
+            "local": "Villarreal",
+            "visitante": "Alavés",
+            "id_escudo_local": 2819,
+            "id_escudo_visitante": 2885,
             "fecha": "2027-01-17T20:00:00",
             "goles_local": null,
             "goles_visitante": null,
