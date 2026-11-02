@@ -2,12 +2,12 @@
     "participante": "álvaro",
     "nombre": "Álvaro",
     "insignias": [],
-    "puntos_totales": 59,
-    "puntos_partidos": 58,
+    "puntos_totales": 61,
+    "puntos_partidos": 60,
     "bonus_rendimiento": 2,
     "puntos_ganador_perdedor": -1,
-    "aciertos_1x2": 45,
-    "aciertos_exactos": 13,
+    "aciertos_1x2": 46,
+    "aciertos_exactos": 14,
     "partidos_pronosticados": 99,
     "jornadas_jugadas": 10,
     "jornadas_ganadas": 1,
@@ -453,14 +453,6 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
-                },
-                "Villarreal_vs_Betis": {
-                    "id": 16416333,
-                    "pronostico": "1-1",
-                    "real": "1-2",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
                 }
             }
         },
@@ -809,9 +801,9 @@
             }
         },
         "J11": {
-            "puntos": 3,
-            "aciertos_1x2": 3,
-            "aciertos_exactos": 1,
+            "puntos": 5,
+            "aciertos_1x2": 4,
+            "aciertos_exactos": 2,
             "bonus": 0,
             "ganador": false,
             "perdedor": true,
@@ -887,6 +879,14 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
+                },
+                "Deportivo de A Coruña_vs_Osasuna": {
+                    "id": 16421095,
+                    "pronostico": "0-0",
+                    "real": "0-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         }

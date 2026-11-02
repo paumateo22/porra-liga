@@ -7,11 +7,11 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 79,
-    "puntos_partidos": 75,
+    "puntos_totales": 80,
+    "puntos_partidos": 76,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 4,
-    "aciertos_1x2": 59,
+    "aciertos_1x2": 60,
     "aciertos_exactos": 16,
     "partidos_pronosticados": 110,
     "jornadas_jugadas": 11,
@@ -458,14 +458,6 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
-                },
-                "Villarreal_vs_Betis": {
-                    "id": 16416333,
-                    "pronostico": "2-2",
-                    "real": "1-2",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
                 }
             }
         },
@@ -912,8 +904,8 @@
             }
         },
         "J11": {
-            "puntos": 5,
-            "aciertos_1x2": 4,
+            "puntos": 6,
+            "aciertos_1x2": 5,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
@@ -990,6 +982,14 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
+                },
+                "Deportivo de A Coruña_vs_Osasuna": {
+                    "id": 16421095,
+                    "pronostico": "1-1",
+                    "real": "0-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         }

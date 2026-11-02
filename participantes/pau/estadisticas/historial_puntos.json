@@ -380,12 +380,12 @@
             }
         },
         "J05": {
-            "puntos": 4,
+            "puntos": 5,
             "aciertos_1x2": 4,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
-            "perdedor": true,
+            "perdedor": false,
             "detalle": {
                 "Sevilla_vs_Valencia": {
                     "id": 16416330,
@@ -458,14 +458,6 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
-                },
-                "Villarreal_vs_Betis": {
-                    "id": 16416333,
-                    "pronostico": "2-2",
-                    "real": "1-2",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
                 }
             }
         },
@@ -912,12 +904,12 @@
             }
         },
         "J11": {
-            "puntos": 4,
+            "puntos": 3,
             "aciertos_1x2": 4,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
-            "perdedor": false,
+            "perdedor": true,
             "detalle": {
                 "Villarreal_vs_Espanyol": {
                     "id": 16421099,
@@ -987,6 +979,14 @@
                     "id": 16421088,
                     "pronostico": "2-2",
                     "real": "2-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Deportivo de A Coruña_vs_Osasuna": {
+                    "id": 16421095,
+                    "pronostico": "2-1",
+                    "real": "0-0",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
