@@ -7,11 +7,11 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 80,
-    "puntos_partidos": 76,
+    "puntos_totales": 79,
+    "puntos_partidos": 75,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 4,
-    "aciertos_1x2": 60,
+    "aciertos_1x2": 59,
     "aciertos_exactos": 16,
     "partidos_pronosticados": 110,
     "jornadas_jugadas": 11,
@@ -904,8 +904,8 @@
             }
         },
         "J11": {
-            "puntos": 6,
-            "aciertos_1x2": 5,
+            "puntos": 5,
+            "aciertos_1x2": 4,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
@@ -986,10 +986,10 @@
                 "Deportivo de A Coruña_vs_Osasuna": {
                     "id": 16421095,
                     "pronostico": "1-1",
-                    "real": "0-0",
-                    "acierto_1x2": true,
+                    "real": "0-1",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 }
             }
         }
