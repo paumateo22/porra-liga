@@ -2,11 +2,11 @@
     "participante": "carlos",
     "nombre": "Carlos",
     "insignias": [],
-    "puntos_totales": 56,
-    "puntos_partidos": 56,
+    "puntos_totales": 58,
+    "puntos_partidos": 58,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 49,
+    "aciertos_1x2": 51,
     "aciertos_exactos": 7,
     "partidos_pronosticados": 110,
     "jornadas_jugadas": 11,
@@ -375,8 +375,8 @@
             }
         },
         "J05": {
-            "puntos": 5,
-            "aciertos_1x2": 4,
+            "puntos": 7,
+            "aciertos_1x2": 6,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": true,
@@ -418,6 +418,38 @@
                     "id": 16416331,
                     "pronostico": "3-1",
                     "real": "4-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "Celta_vs_Málaga CF": {
+                    "id": 16416347,
+                    "pronostico": "3-0",
+                    "real": "1-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Levante UD_vs_FC Barcelona": {
+                    "id": 16416329,
+                    "pronostico": "0-3",
+                    "real": "2-4",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "Getafe_vs_Deportivo de A Coruña": {
+                    "id": 16416326,
+                    "pronostico": "1-0",
+                    "real": "1-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Real Sociedad_vs_Atlético": {
+                    "id": 16416332,
+                    "pronostico": "1-2",
+                    "real": "0-3",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1

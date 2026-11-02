@@ -2,16 +2,16 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 58,
-    "puntos_partidos": 58,
+    "puntos_totales": 63,
+    "puntos_partidos": 62,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 50,
-    "aciertos_exactos": 8,
+    "puntos_ganador_perdedor": 1,
+    "aciertos_1x2": 53,
+    "aciertos_exactos": 9,
     "partidos_pronosticados": 108,
     "jornadas_jugadas": 11,
     "jornadas_ganadas": 3,
-    "jornadas_perdidas": 3,
+    "jornadas_perdidas": 2,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -375,12 +375,12 @@
             }
         },
         "J05": {
-            "puntos": 1,
-            "aciertos_1x2": 2,
-            "aciertos_exactos": 0,
+            "puntos": 6,
+            "aciertos_1x2": 5,
+            "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
-            "perdedor": true,
+            "perdedor": false,
             "detalle": {
                 "Sevilla_vs_Valencia": {
                     "id": 16416330,
@@ -421,6 +421,38 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
+                },
+                "Celta_vs_Málaga CF": {
+                    "id": 16416347,
+                    "pronostico": "1-1",
+                    "real": "1-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": true,
+                    "puntos": 2
+                },
+                "Levante UD_vs_FC Barcelona": {
+                    "id": 16416329,
+                    "pronostico": "1-4",
+                    "real": "2-4",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "Getafe_vs_Deportivo de A Coruña": {
+                    "id": 16416326,
+                    "pronostico": "2-2",
+                    "real": "1-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "Real Sociedad_vs_Atlético": {
+                    "id": 16416332,
+                    "pronostico": "1-1",
+                    "real": "0-3",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 },
                 "Villarreal_vs_Betis": {
                     "id": 16416333,
