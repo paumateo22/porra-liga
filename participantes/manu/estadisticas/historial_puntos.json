@@ -2,15 +2,15 @@
     "participante": "manu",
     "nombre": "Manu",
     "insignias": [],
-    "puntos_totales": 44,
-    "puntos_partidos": 39,
+    "puntos_totales": 46,
+    "puntos_partidos": 40,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 36,
+    "puntos_ganador_perdedor": 2,
+    "aciertos_1x2": 37,
     "aciertos_exactos": 3,
     "partidos_pronosticados": 70,
     "jornadas_jugadas": 7,
-    "jornadas_ganadas": 2,
+    "jornadas_ganadas": 3,
     "jornadas_perdidas": 1,
     "punto_partida": 4,
     "por_jornada": {
@@ -195,11 +195,11 @@
             }
         },
         "J05": {
-            "puntos": 5,
-            "aciertos_1x2": 5,
+            "puntos": 7,
+            "aciertos_1x2": 6,
             "aciertos_exactos": 0,
             "bonus": 0,
-            "ganador": false,
+            "ganador": true,
             "perdedor": false,
             "detalle": {
                 "Sevilla_vs_Valencia": {
@@ -270,6 +270,14 @@
                     "id": 16416332,
                     "pronostico": "1-2",
                     "real": "0-3",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "Villarreal_vs_Betis": {
+                    "id": 16416333,
+                    "pronostico": "2-3",
+                    "real": "1-2",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
