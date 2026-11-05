@@ -1313,6 +1313,14 @@
     ],
     "J17": [
         {
+            "id": 16462547,
+            "local": "Alavés",
+            "visitante": "Elche",
+            "id_escudo_local": 2885,
+            "id_escudo_visitante": 2846,
+            "fecha": "2026-12-20T20:00:00"
+        },
+        {
             "id": 16462550,
             "local": "Athletic",
             "visitante": "Betis",
@@ -2780,14 +2788,6 @@
         }
     ],
     "J35": [
-        {
-            "id": 16416357,
-            "local": "Alavés",
-            "visitante": "Levante UD",
-            "id_escudo_local": 2885,
-            "id_escudo_visitante": 2849,
-            "fecha": "2027-05-09T21:00:00"
-        },
         {
             "id": 16416361,
             "local": "Athletic",
