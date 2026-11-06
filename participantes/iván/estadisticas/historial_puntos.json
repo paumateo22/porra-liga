@@ -7,16 +7,16 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 79,
+    "puntos_totales": 78,
     "puntos_partidos": 75,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 4,
+    "puntos_ganador_perdedor": 3,
     "aciertos_1x2": 59,
     "aciertos_exactos": 16,
-    "partidos_pronosticados": 110,
-    "jornadas_jugadas": 11,
+    "partidos_pronosticados": 120,
+    "jornadas_jugadas": 12,
     "jornadas_ganadas": 5,
-    "jornadas_perdidas": 1,
+    "jornadas_perdidas": 2,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -458,14 +458,6 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
-                },
-                "Villarreal_vs_Betis": {
-                    "id": 16416333,
-                    "pronostico": "2-2",
-                    "real": "1-2",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
                 }
             }
         },
@@ -995,6 +987,24 @@
                     "id": 16421095,
                     "pronostico": "1-1",
                     "real": "2-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                }
+            }
+        },
+        "J12": {
+            "puntos": -1,
+            "aciertos_1x2": 0,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "ganador": false,
+            "perdedor": true,
+            "detalle": {
+                "Sevilla_vs_Alavés": {
+                    "id": 16421109,
+                    "pronostico": "2-1",
+                    "real": "0-0",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0

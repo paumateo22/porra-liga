@@ -2,12 +2,12 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 67,
-    "puntos_partidos": 65,
+    "puntos_totales": 65,
+    "puntos_partidos": 63,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 2,
-    "aciertos_1x2": 57,
-    "aciertos_exactos": 8,
+    "aciertos_1x2": 56,
+    "aciertos_exactos": 7,
     "partidos_pronosticados": 110,
     "jornadas_jugadas": 11,
     "jornadas_ganadas": 5,
@@ -375,9 +375,9 @@
             }
         },
         "J05": {
-            "puntos": 4,
-            "aciertos_1x2": 4,
-            "aciertos_exactos": 1,
+            "puntos": 2,
+            "aciertos_1x2": 3,
+            "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
             "perdedor": true,
@@ -453,14 +453,6 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
-                },
-                "Villarreal_vs_Betis": {
-                    "id": 16416333,
-                    "pronostico": "1-2",
-                    "real": "1-2",
-                    "acierto_1x2": true,
-                    "acierto_exacto": true,
-                    "puntos": 2
                 }
             }
         },

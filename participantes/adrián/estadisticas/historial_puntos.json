@@ -2,16 +2,16 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 64,
+    "puntos_totales": 63,
     "puntos_partidos": 63,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 1,
+    "puntos_ganador_perdedor": 0,
     "aciertos_1x2": 54,
     "aciertos_exactos": 9,
-    "partidos_pronosticados": 108,
-    "jornadas_jugadas": 11,
+    "partidos_pronosticados": 118,
+    "jornadas_jugadas": 12,
     "jornadas_ganadas": 3,
-    "jornadas_perdidas": 2,
+    "jornadas_perdidas": 3,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -450,14 +450,6 @@
                     "id": 16416332,
                     "pronostico": "1-1",
                     "real": "0-3",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
-                "Villarreal_vs_Betis": {
-                    "id": 16416333,
-                    "pronostico": "2-1",
-                    "real": "1-2",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
@@ -977,6 +969,24 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
+                }
+            }
+        },
+        "J12": {
+            "puntos": -1,
+            "aciertos_1x2": 0,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "ganador": false,
+            "perdedor": true,
+            "detalle": {
+                "Sevilla_vs_Alavés": {
+                    "id": 16421109,
+                    "pronostico": "2-1",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         }
