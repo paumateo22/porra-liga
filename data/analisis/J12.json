@@ -19,6 +19,14 @@
                 "nombre": "Adrián"
             },
             {
+                "slug": "aitor",
+                "nombre": "Aitor"
+            },
+            {
+                "slug": "carlos",
+                "nombre": "Carlos"
+            },
+            {
                 "slug": "iván",
                 "nombre": "Iván"
             }
@@ -228,6 +236,34 @@
                     "puntos": 0
                 }
             }
+        },
+        {
+            "slug": "aitor",
+            "nombre": "Aitor",
+            "insignias": [],
+            "aciertos_1x2": 0,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "elegible": true,
+            "ganador": false,
+            "perdedor": true,
+            "puntos": -1,
+            "pronosticados": 9,
+            "predicciones": {}
+        },
+        {
+            "slug": "carlos",
+            "nombre": "Carlos",
+            "insignias": [],
+            "aciertos_1x2": 0,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "elegible": true,
+            "ganador": false,
+            "perdedor": true,
+            "puntos": -1,
+            "pronosticados": 9,
+            "predicciones": {}
         },
         {
             "slug": "iván",
