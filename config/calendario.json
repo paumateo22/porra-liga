@@ -1059,6 +1059,14 @@
     ],
     "J14": [
         {
+            "id": 16421127,
+            "local": "Levante UD",
+            "visitante": "Real Racing Club",
+            "id_escudo_local": 2849,
+            "id_escudo_visitante": 2835,
+            "fecha": "2026-11-27T21:00:00"
+        },
+        {
             "id": 16421120,
             "local": "Betis",
             "visitante": "Rayo",
@@ -1113,14 +1121,6 @@
             "id_escudo_local": 2821,
             "id_escudo_visitante": 2819,
             "fecha": "2026-11-29T18:30:00"
-        },
-        {
-            "id": 16421127,
-            "local": "Levante UD",
-            "visitante": "Real Racing Club",
-            "id_escudo_local": 2849,
-            "id_escudo_visitante": 2835,
-            "fecha": "2026-11-29T20:00:00"
         },
         {
             "id": 16462479,
