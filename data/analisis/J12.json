@@ -123,7 +123,7 @@
         },
         "16421105": {
             "goles_local": 0,
-            "goles_visitante": 1,
+            "goles_visitante": 2,
             "estado": "inprogress"
         },
         "16421102": {
@@ -158,12 +158,12 @@
             "nombre": "Álvaro",
             "insignias": [],
             "aciertos_1x2": 4,
-            "aciertos_exactos": 1,
+            "aciertos_exactos": 2,
             "bonus": 0,
             "elegible": true,
             "ganador": true,
             "perdedor": false,
-            "puntos": 6,
+            "puntos": 7,
             "pronosticados": 10,
             "predicciones": {
                 "16421109": {
@@ -193,8 +193,8 @@
                 "16421105": {
                     "pronostico": "0-2",
                     "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         },
@@ -387,12 +387,12 @@
             "nombre": "Aitor",
             "insignias": [],
             "aciertos_1x2": 1,
-            "aciertos_exactos": 0,
+            "aciertos_exactos": 1,
             "bonus": 0,
             "elegible": true,
             "ganador": false,
             "perdedor": true,
-            "puntos": 0,
+            "puntos": 1,
             "pronosticados": 9,
             "predicciones": {
                 "16421103": {
@@ -416,8 +416,8 @@
                 "16421105": {
                     "pronostico": "0-2",
                     "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         }

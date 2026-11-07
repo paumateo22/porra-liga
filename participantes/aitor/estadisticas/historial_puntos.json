@@ -2,12 +2,12 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 66,
-    "puntos_partidos": 65,
+    "puntos_totales": 67,
+    "puntos_partidos": 66,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 1,
     "aciertos_1x2": 57,
-    "aciertos_exactos": 8,
+    "aciertos_exactos": 9,
     "partidos_pronosticados": 119,
     "jornadas_jugadas": 12,
     "jornadas_ganadas": 5,
@@ -973,9 +973,9 @@
             }
         },
         "J12": {
-            "puntos": 0,
+            "puntos": 1,
             "aciertos_1x2": 1,
-            "aciertos_exactos": 0,
+            "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
             "perdedor": true,
@@ -1007,10 +1007,10 @@
                 "Valencia_vs_Real Madrid": {
                     "id": 16421105,
                     "pronostico": "0-2",
-                    "real": "0-1",
+                    "real": "0-2",
                     "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         }
