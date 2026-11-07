@@ -2,16 +2,16 @@
     "participante": "carlos",
     "nombre": "Carlos",
     "insignias": [],
-    "puntos_totales": 59,
+    "puntos_totales": 60,
     "puntos_partidos": 59,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 0,
+    "puntos_ganador_perdedor": 1,
     "aciertos_1x2": 52,
     "aciertos_exactos": 7,
     "partidos_pronosticados": 119,
     "jornadas_jugadas": 12,
     "jornadas_ganadas": 3,
-    "jornadas_perdidas": 3,
+    "jornadas_perdidas": 2,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -465,12 +465,12 @@
             }
         },
         "J06": {
-            "puntos": 2,
+            "puntos": 3,
             "aciertos_1x2": 3,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
-            "perdedor": true,
+            "perdedor": false,
             "detalle": {
                 "Real Sociedad_vs_Celta": {
                     "id": 16416340,
@@ -484,14 +484,6 @@
                     "id": 16416345,
                     "pronostico": "1-2",
                     "real": "2-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
-                "Elche_vs_Real Madrid": {
-                    "id": 16416342,
-                    "pronostico": "1-1",
-                    "real": "2-3",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
@@ -1011,6 +1003,14 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
+                },
+                "Osasuna_vs_Athletic": {
+                    "id": 16421106,
+                    "pronostico": "1-2",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         }

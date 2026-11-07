@@ -2,11 +2,11 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 66,
-    "puntos_partidos": 65,
+    "puntos_totales": 65,
+    "puntos_partidos": 64,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 57,
+    "aciertos_1x2": 56,
     "aciertos_exactos": 8,
     "partidos_pronosticados": 119,
     "jornadas_jugadas": 12,
@@ -465,8 +465,8 @@
             }
         },
         "J06": {
-            "puntos": 8,
-            "aciertos_1x2": 6,
+            "puntos": 7,
+            "aciertos_1x2": 5,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": true,
@@ -484,14 +484,6 @@
                     "id": 16416345,
                     "pronostico": "2-0",
                     "real": "2-1",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                },
-                "Elche_vs_Real Madrid": {
-                    "id": 16416342,
-                    "pronostico": "0-4",
-                    "real": "2-3",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
@@ -1007,6 +999,14 @@
                 "Espanyol_vs_Deportivo de A Coruña": {
                     "id": 16421108,
                     "pronostico": "1-0",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Osasuna_vs_Athletic": {
+                    "id": 16421106,
+                    "pronostico": "1-2",
                     "real": "0-0",
                     "acierto_1x2": false,
                     "acierto_exacto": false,

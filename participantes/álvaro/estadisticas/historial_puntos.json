@@ -2,11 +2,11 @@
     "participante": "álvaro",
     "nombre": "Álvaro",
     "insignias": [],
-    "puntos_totales": 62,
-    "puntos_partidos": 60,
+    "puntos_totales": 63,
+    "puntos_partidos": 61,
     "bonus_rendimiento": 2,
     "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 47,
+    "aciertos_1x2": 48,
     "aciertos_exactos": 13,
     "partidos_pronosticados": 109,
     "jornadas_jugadas": 11,
@@ -488,14 +488,6 @@
                     "acierto_exacto": false,
                     "puntos": 0
                 },
-                "Elche_vs_Real Madrid": {
-                    "id": 16416342,
-                    "pronostico": "3-0",
-                    "real": "2-3",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "Atlético_vs_Osasuna": {
                     "id": 16416335,
                     "pronostico": "1-0",
@@ -891,8 +883,8 @@
             }
         },
         "J12": {
-            "puntos": 3,
-            "aciertos_1x2": 2,
+            "puntos": 4,
+            "aciertos_1x2": 3,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": true,
@@ -916,6 +908,14 @@
                 },
                 "Espanyol_vs_Deportivo de A Coruña": {
                     "id": 16421108,
+                    "pronostico": "1-1",
+                    "real": "0-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "Osasuna_vs_Athletic": {
+                    "id": 16421106,
                     "pronostico": "1-1",
                     "real": "0-0",
                     "acierto_1x2": true,
