@@ -7,16 +7,16 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 80,
-    "puntos_partidos": 76,
+    "puntos_totales": 78,
+    "puntos_partidos": 75,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 4,
-    "aciertos_1x2": 60,
+    "puntos_ganador_perdedor": 3,
+    "aciertos_1x2": 59,
     "aciertos_exactos": 16,
     "partidos_pronosticados": 120,
     "jornadas_jugadas": 12,
     "jornadas_ganadas": 5,
-    "jornadas_perdidas": 1,
+    "jornadas_perdidas": 2,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -986,12 +986,12 @@
             }
         },
         "J12": {
-            "puntos": 1,
-            "aciertos_1x2": 1,
+            "puntos": -1,
+            "aciertos_1x2": 0,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
-            "perdedor": false,
+            "perdedor": true,
             "detalle": {
                 "Sevilla_vs_Alavés": {
                     "id": 16421109,
@@ -1004,10 +1004,10 @@
                 "Málaga CF_vs_Real Racing Club": {
                     "id": 16421103,
                     "pronostico": "1-1",
-                    "real": "0-0",
-                    "acierto_1x2": true,
+                    "real": "1-0",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 }
             }
         }
