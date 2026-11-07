@@ -7,11 +7,11 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 77,
-    "puntos_partidos": 74,
+    "puntos_totales": 78,
+    "puntos_partidos": 75,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 3,
-    "aciertos_1x2": 58,
+    "aciertos_1x2": 59,
     "aciertos_exactos": 16,
     "partidos_pronosticados": 120,
     "jornadas_jugadas": 12,
@@ -978,8 +978,8 @@
             }
         },
         "J12": {
-            "puntos": 1,
-            "aciertos_1x2": 1,
+            "puntos": 2,
+            "aciertos_1x2": 2,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -1020,10 +1020,10 @@
                 "Valencia_vs_Real Madrid": {
                     "id": 16421105,
                     "pronostico": "0-3",
-                    "real": "0-0",
-                    "acierto_1x2": false,
+                    "real": "0-1",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }

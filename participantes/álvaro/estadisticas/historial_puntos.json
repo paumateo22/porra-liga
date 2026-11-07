@@ -2,11 +2,11 @@
     "participante": "álvaro",
     "nombre": "Álvaro",
     "insignias": [],
-    "puntos_totales": 64,
-    "puntos_partidos": 62,
+    "puntos_totales": 65,
+    "puntos_partidos": 63,
     "bonus_rendimiento": 2,
     "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 48,
+    "aciertos_1x2": 49,
     "aciertos_exactos": 14,
     "partidos_pronosticados": 109,
     "jornadas_jugadas": 11,
@@ -875,8 +875,8 @@
             }
         },
         "J12": {
-            "puntos": 5,
-            "aciertos_1x2": 3,
+            "puntos": 6,
+            "aciertos_1x2": 4,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": true,
@@ -917,10 +917,10 @@
                 "Valencia_vs_Real Madrid": {
                     "id": 16421105,
                     "pronostico": "0-2",
-                    "real": "0-0",
-                    "acierto_1x2": false,
+                    "real": "0-1",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }
