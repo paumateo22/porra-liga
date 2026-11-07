@@ -2,15 +2,15 @@
     "participante": "álvaro",
     "nombre": "Álvaro",
     "insignias": [],
-    "puntos_totales": 61,
-    "puntos_partidos": 60,
+    "puntos_totales": 64,
+    "puntos_partidos": 62,
     "bonus_rendimiento": 2,
-    "puntos_ganador_perdedor": -1,
-    "aciertos_1x2": 47,
-    "aciertos_exactos": 13,
+    "puntos_ganador_perdedor": 0,
+    "aciertos_1x2": 48,
+    "aciertos_exactos": 14,
     "partidos_pronosticados": 109,
     "jornadas_jugadas": 11,
-    "jornadas_ganadas": 1,
+    "jornadas_ganadas": 2,
     "jornadas_perdidas": 2,
     "punto_partida": 0,
     "por_jornada": {
@@ -883,11 +883,11 @@
             }
         },
         "J12": {
-            "puntos": 2,
-            "aciertos_1x2": 2,
-            "aciertos_exactos": 0,
+            "puntos": 5,
+            "aciertos_1x2": 3,
+            "aciertos_exactos": 1,
             "bonus": 0,
-            "ganador": false,
+            "ganador": true,
             "perdedor": false,
             "detalle": {
                 "Sevilla_vs_Alavés": {
@@ -917,10 +917,10 @@
                 "Osasuna_vs_Athletic": {
                     "id": 16421106,
                     "pronostico": "1-1",
-                    "real": "0-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
+                    "real": "1-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         }
