@@ -7,16 +7,16 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 78,
-    "puntos_partidos": 75,
+    "puntos_totales": 80,
+    "puntos_partidos": 76,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 3,
-    "aciertos_1x2": 59,
+    "puntos_ganador_perdedor": 4,
+    "aciertos_1x2": 60,
     "aciertos_exactos": 16,
     "partidos_pronosticados": 120,
     "jornadas_jugadas": 12,
     "jornadas_ganadas": 5,
-    "jornadas_perdidas": 2,
+    "jornadas_perdidas": 1,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -473,14 +473,6 @@
                     "id": 16416340,
                     "pronostico": "2-1",
                     "real": "0-0",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
-                "Rayo_vs_Espanyol": {
-                    "id": 16416345,
-                    "pronostico": "1-1",
-                    "real": "2-1",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
@@ -994,12 +986,12 @@
             }
         },
         "J12": {
-            "puntos": -1,
-            "aciertos_1x2": 0,
+            "puntos": 1,
+            "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
-            "perdedor": true,
+            "perdedor": false,
             "detalle": {
                 "Sevilla_vs_Alavés": {
                     "id": 16421109,
@@ -1008,6 +1000,14 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
+                },
+                "Málaga CF_vs_Real Racing Club": {
+                    "id": 16421103,
+                    "pronostico": "1-1",
+                    "real": "0-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         }

@@ -10,8 +10,8 @@
     "aciertos_exactos": 7,
     "partidos_pronosticados": 119,
     "jornadas_jugadas": 12,
-    "jornadas_ganadas": 5,
-    "jornadas_perdidas": 4,
+    "jornadas_ganadas": 4,
+    "jornadas_perdidas": 3,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -457,11 +457,11 @@
             }
         },
         "J06": {
-            "puntos": 8,
-            "aciertos_1x2": 6,
+            "puntos": 6,
+            "aciertos_1x2": 5,
             "aciertos_exactos": 1,
             "bonus": 0,
-            "ganador": true,
+            "ganador": false,
             "perdedor": false,
             "detalle": {
                 "Real Sociedad_vs_Celta": {
@@ -471,14 +471,6 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
-                },
-                "Rayo_vs_Espanyol": {
-                    "id": 16416345,
-                    "pronostico": "2-0",
-                    "real": "2-1",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
                 },
                 "Alavés_vs_Valencia": {
                     "id": 16416334,
@@ -989,13 +981,22 @@
             }
         },
         "J12": {
-            "puntos": -1,
-            "aciertos_1x2": 0,
+            "puntos": 1,
+            "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
-            "perdedor": true,
-            "detalle": {}
+            "perdedor": false,
+            "detalle": {
+                "Málaga CF_vs_Real Racing Club": {
+                    "id": 16421103,
+                    "pronostico": "1-1",
+                    "real": "0-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                }
+            }
         }
     }
 }
