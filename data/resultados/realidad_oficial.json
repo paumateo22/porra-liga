@@ -3181,6 +3181,17 @@
             "estado": "notstarted"
         },
         {
+            "id": 16462692,
+            "local": "Levante UD",
+            "visitante": "Osasuna",
+            "id_escudo_local": 2849,
+            "id_escudo_visitante": 2820,
+            "fecha": "2027-03-21T20:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
             "id": 16462694,
             "local": "Rayo",
             "visitante": "FC Barcelona",
@@ -3640,17 +3651,6 @@
             "estado": "notstarted"
         },
         {
-            "id": 16462542,
-            "local": "Real Madrid",
-            "visitante": "Elche",
-            "id_escudo_local": 2829,
-            "id_escudo_visitante": 2846,
-            "fecha": "2027-04-21T21:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
             "id": 16462539,
             "local": "Real Racing Club",
             "visitante": "Málaga CF",
@@ -3808,6 +3808,17 @@
         }
     ],
     "J35": [
+        {
+            "id": 16416357,
+            "local": "Alavés",
+            "visitante": "Levante UD",
+            "id_escudo_local": 2885,
+            "id_escudo_visitante": 2849,
+            "fecha": "2027-05-09T21:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
         {
             "id": 16416361,
             "local": "Athletic",
