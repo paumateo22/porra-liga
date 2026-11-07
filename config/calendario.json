@@ -1805,6 +1805,22 @@
     ],
     "J23": [
         {
+            "id": 16462564,
+            "local": "Real Sociedad",
+            "visitante": "Real Madrid",
+            "id_escudo_local": 2824,
+            "id_escudo_visitante": 2829,
+            "fecha": "2026-12-02T19:00:00"
+        },
+        {
+            "id": 16462558,
+            "local": "FC Barcelona",
+            "visitante": "Atlético",
+            "id_escudo_local": 2817,
+            "id_escudo_visitante": 2836,
+            "fecha": "2026-12-02T21:30:00"
+        },
+        {
             "id": 16462540,
             "local": "Alavés",
             "visitante": "Celta",
@@ -1853,27 +1869,11 @@
             "fecha": "2027-02-07T20:00:00"
         },
         {
-            "id": 16462558,
-            "local": "FC Barcelona",
-            "visitante": "Atlético",
-            "id_escudo_local": 2817,
-            "id_escudo_visitante": 2836,
-            "fecha": "2027-02-07T20:00:00"
-        },
-        {
             "id": 16462561,
             "local": "Getafe",
             "visitante": "Villarreal",
             "id_escudo_local": 2859,
             "id_escudo_visitante": 2819,
-            "fecha": "2027-02-07T20:00:00"
-        },
-        {
-            "id": 16462564,
-            "local": "Real Sociedad",
-            "visitante": "Real Madrid",
-            "id_escudo_local": 2824,
-            "id_escudo_visitante": 2829,
             "fecha": "2027-02-07T20:00:00"
         },
         {
