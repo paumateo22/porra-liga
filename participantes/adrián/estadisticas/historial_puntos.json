@@ -2,11 +2,11 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 64,
-    "puntos_partidos": 63,
+    "puntos_totales": 65,
+    "puntos_partidos": 64,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 54,
+    "aciertos_1x2": 55,
     "aciertos_exactos": 9,
     "partidos_pronosticados": 118,
     "jornadas_jugadas": 12,
@@ -973,8 +973,8 @@
             }
         },
         "J12": {
-            "puntos": 1,
-            "aciertos_1x2": 1,
+            "puntos": 2,
+            "aciertos_1x2": 2,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -1007,10 +1007,10 @@
                 "Osasuna_vs_Athletic": {
                     "id": 16421106,
                     "pronostico": "2-3",
-                    "real": "0-0",
-                    "acierto_1x2": false,
+                    "real": "0-1",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }
