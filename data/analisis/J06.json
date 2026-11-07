@@ -9,10 +9,6 @@
                 "nombre": "Aitor"
             },
             {
-                "slug": "iván",
-                "nombre": "Iván"
-            },
-            {
                 "slug": "manu",
                 "nombre": "Manu"
             }
@@ -49,14 +45,6 @@
             "visitante": "Osasuna",
             "id_escudo_local": 2836,
             "id_escudo_visitante": 2820,
-            "fecha": "2026-09-16T19:00:00"
-        },
-        {
-            "id": 16416343,
-            "local": "Deportivo de A Coruña",
-            "visitante": "Sevilla",
-            "id_escudo_local": 2832,
-            "id_escudo_visitante": 2833,
             "fecha": "2026-09-16T19:00:00"
         },
         {
@@ -106,11 +94,6 @@
         "16416335": {
             "goles_local": 4,
             "goles_visitante": 0,
-            "estado": "finished"
-        },
-        "16416343": {
-            "goles_local": 0,
-            "goles_visitante": 1,
             "estado": "finished"
         },
         "16416346": {
@@ -171,12 +154,6 @@
                     "acierto_exacto": false,
                     "puntos": 1
                 },
-                "16416343": {
-                    "pronostico": "1-0",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "16416346": {
                     "pronostico": "6-1",
                     "acierto_1x2": true,
@@ -188,74 +165,6 @@
                     "acierto_1x2": true,
                     "acierto_exacto": true,
                     "puntos": 2
-                },
-                "16416338": {
-                    "pronostico": "1-2",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                },
-                "17122851": {
-                    "pronostico": "1-2",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                }
-            }
-        },
-        {
-            "slug": "iván",
-            "nombre": "Iván",
-            "insignias": [
-                {
-                    "emoji": "⭐",
-                    "descripcion": "Mundial 2026"
-                }
-            ],
-            "aciertos_1x2": 5,
-            "aciertos_exactos": 0,
-            "bonus": 0,
-            "elegible": true,
-            "ganador": true,
-            "perdedor": false,
-            "puntos": 6,
-            "pronosticados": 10,
-            "predicciones": {
-                "16416340": {
-                    "pronostico": "2-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
-                "16416345": {
-                    "pronostico": "1-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
-                "16416335": {
-                    "pronostico": "2-0",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                },
-                "16416343": {
-                    "pronostico": "1-2",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                },
-                "16416346": {
-                    "pronostico": "4-1",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                },
-                "16416336": {
-                    "pronostico": "2-1",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
                 },
                 "16416338": {
                     "pronostico": "1-2",
@@ -301,12 +210,6 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
-                },
-                "16416343": {
-                    "pronostico": "2-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
                 },
                 "16416346": {
                     "pronostico": "4-1",
@@ -365,12 +268,6 @@
                     "acierto_exacto": false,
                     "puntos": 1
                 },
-                "16416343": {
-                    "pronostico": "1-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "16416346": {
                     "pronostico": "3-1",
                     "acierto_1x2": true,
@@ -385,6 +282,68 @@
                 },
                 "16416338": {
                     "pronostico": "0-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "17122851": {
+                    "pronostico": "1-2",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                }
+            }
+        },
+        {
+            "slug": "iván",
+            "nombre": "Iván",
+            "insignias": [
+                {
+                    "emoji": "⭐",
+                    "descripcion": "Mundial 2026"
+                }
+            ],
+            "aciertos_1x2": 4,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "elegible": true,
+            "ganador": false,
+            "perdedor": false,
+            "puntos": 4,
+            "pronosticados": 10,
+            "predicciones": {
+                "16416340": {
+                    "pronostico": "2-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "16416345": {
+                    "pronostico": "1-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "16416335": {
+                    "pronostico": "2-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "16416346": {
+                    "pronostico": "4-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "16416336": {
+                    "pronostico": "2-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "16416338": {
+                    "pronostico": "1-2",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
@@ -432,12 +391,6 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
-                },
-                "16416343": {
-                    "pronostico": "2-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
                 },
                 "16416346": {
                     "pronostico": "3-0",
@@ -489,12 +442,6 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
-                },
-                "16416343": {
-                    "pronostico": "2-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
                 },
                 "16416346": {
                     "pronostico": "5-1",
@@ -553,12 +500,6 @@
                     "acierto_exacto": false,
                     "puntos": 1
                 },
-                "16416343": {
-                    "pronostico": "1-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "16416346": {
                     "pronostico": "4-1",
                     "acierto_1x2": true,
@@ -612,12 +553,6 @@
                 },
                 "16416335": {
                     "pronostico": "1-2",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
-                "16416343": {
-                    "pronostico": "1-1",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0

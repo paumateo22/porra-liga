@@ -496,14 +496,6 @@
                     "acierto_exacto": false,
                     "puntos": 1
                 },
-                "Deportivo de A Coruña_vs_Sevilla": {
-                    "id": 16416343,
-                    "pronostico": "1-0",
-                    "real": "0-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "FC Barcelona_vs_Real Racing Club": {
                     "id": 16416346,
                     "pronostico": "6-1",
@@ -1008,6 +1000,14 @@
                     "id": 16421106,
                     "pronostico": "1-2",
                     "real": "1-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Valencia_vs_Real Madrid": {
+                    "id": 16421105,
+                    "pronostico": "0-2",
+                    "real": "0-0",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
