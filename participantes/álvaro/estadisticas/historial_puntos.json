@@ -2,12 +2,12 @@
     "participante": "álvaro",
     "nombre": "Álvaro",
     "insignias": [],
-    "puntos_totales": 64,
-    "puntos_partidos": 63,
+    "puntos_totales": 66,
+    "puntos_partidos": 65,
     "bonus_rendimiento": 2,
     "puntos_ganador_perdedor": -1,
-    "aciertos_1x2": 48,
-    "aciertos_exactos": 15,
+    "aciertos_1x2": 49,
+    "aciertos_exactos": 16,
     "partidos_pronosticados": 109,
     "jornadas_jugadas": 11,
     "jornadas_ganadas": 2,
@@ -875,9 +875,9 @@
             }
         },
         "J12": {
-            "puntos": 10,
-            "aciertos_1x2": 6,
-            "aciertos_exactos": 3,
+            "puntos": 12,
+            "aciertos_1x2": 7,
+            "aciertos_exactos": 4,
             "bonus": 0,
             "ganador": true,
             "perdedor": false,
@@ -957,10 +957,10 @@
                 "Atlético_vs_FC Barcelona": {
                     "id": 16421101,
                     "pronostico": "1-2",
-                    "real": "1-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
+                    "real": "1-2",
+                    "acierto_1x2": true,
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         }

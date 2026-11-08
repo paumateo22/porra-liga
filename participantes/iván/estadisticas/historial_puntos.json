@@ -7,11 +7,11 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 83,
-    "puntos_partidos": 79,
+    "puntos_totales": 84,
+    "puntos_partidos": 80,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 4,
-    "aciertos_1x2": 61,
+    "aciertos_1x2": 62,
     "aciertos_exactos": 18,
     "partidos_pronosticados": 120,
     "jornadas_jugadas": 12,
@@ -978,8 +978,8 @@
             }
         },
         "J12": {
-            "puntos": 7,
-            "aciertos_1x2": 5,
+            "puntos": 8,
+            "aciertos_1x2": 6,
             "aciertos_exactos": 2,
             "bonus": 0,
             "ganador": false,
@@ -1060,10 +1060,10 @@
                 "Atlético_vs_FC Barcelona": {
                     "id": 16421101,
                     "pronostico": "1-3",
-                    "real": "1-1",
-                    "acierto_1x2": false,
+                    "real": "1-2",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }

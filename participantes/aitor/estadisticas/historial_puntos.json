@@ -2,11 +2,11 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 68,
-    "puntos_partidos": 67,
+    "puntos_totales": 69,
+    "puntos_partidos": 68,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 58,
+    "aciertos_1x2": 59,
     "aciertos_exactos": 9,
     "partidos_pronosticados": 119,
     "jornadas_jugadas": 12,
@@ -973,8 +973,8 @@
             }
         },
         "J12": {
-            "puntos": 5,
-            "aciertos_1x2": 4,
+            "puntos": 6,
+            "aciertos_1x2": 5,
             "aciertos_exactos": 2,
             "bonus": 0,
             "ganador": false,
@@ -1047,10 +1047,10 @@
                 "Atlético_vs_FC Barcelona": {
                     "id": 16421101,
                     "pronostico": "2-3",
-                    "real": "1-1",
-                    "acierto_1x2": false,
+                    "real": "1-2",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }
