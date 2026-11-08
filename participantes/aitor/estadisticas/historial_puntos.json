@@ -2,12 +2,12 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 68,
-    "puntos_partidos": 67,
+    "puntos_totales": 69,
+    "puntos_partidos": 68,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 1,
     "aciertos_1x2": 59,
-    "aciertos_exactos": 8,
+    "aciertos_exactos": 9,
     "partidos_pronosticados": 119,
     "jornadas_jugadas": 12,
     "jornadas_ganadas": 5,
@@ -981,9 +981,9 @@
             }
         },
         "J12": {
-            "puntos": 4,
+            "puntos": 5,
             "aciertos_1x2": 4,
-            "aciertos_exactos": 1,
+            "aciertos_exactos": 2,
             "bonus": 0,
             "ganador": false,
             "perdedor": true,
@@ -1047,10 +1047,10 @@
                 "Villarreal_vs_Getafe": {
                     "id": 16421110,
                     "pronostico": "2-0",
-                    "real": "1-0",
+                    "real": "2-0",
                     "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         }
