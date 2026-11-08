@@ -3866,17 +3866,6 @@
     ],
     "J36": [
         {
-            "id": 16462589,
-            "local": "Atlético",
-            "visitante": "Rayo",
-            "id_escudo_local": 2836,
-            "id_escudo_visitante": 2818,
-            "fecha": "2027-05-16T21:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
             "id": 16462592,
             "local": "Deportivo de A Coruña",
             "visitante": "Alavés",
@@ -3943,33 +3932,11 @@
             "estado": "notstarted"
         },
         {
-            "id": 16462610,
-            "local": "Real Madrid",
-            "visitante": "Real Racing Club",
-            "id_escudo_local": 2829,
-            "id_escudo_visitante": 2835,
-            "fecha": "2027-05-16T21:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
             "id": 16462613,
             "local": "Real Sociedad",
             "visitante": "FC Barcelona",
             "id_escudo_local": 2824,
             "id_escudo_visitante": 2817,
-            "fecha": "2027-05-16T21:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
-            "id": 16462616,
-            "local": "Sevilla",
-            "visitante": "Villarreal",
-            "id_escudo_local": 2833,
-            "id_escudo_visitante": 2819,
             "fecha": "2027-05-16T21:00:00",
             "goles_local": null,
             "goles_visitante": null,
