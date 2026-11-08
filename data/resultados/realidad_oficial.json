@@ -627,28 +627,6 @@
             "estado": "finished"
         },
         {
-            "id": 16416346,
-            "local": "FC Barcelona",
-            "visitante": "Real Racing Club",
-            "id_escudo_local": 2817,
-            "id_escudo_visitante": 2835,
-            "fecha": "2026-09-16T21:30:00",
-            "goles_local": 7,
-            "goles_visitante": 2,
-            "estado": "finished"
-        },
-        {
-            "id": 16416336,
-            "local": "Betis",
-            "visitante": "Getafe",
-            "id_escudo_local": 2816,
-            "id_escudo_visitante": 2859,
-            "fecha": "2026-09-17T19:00:00",
-            "goles_local": 1,
-            "goles_visitante": 0,
-            "estado": "finished"
-        },
-        {
             "id": 16416338,
             "local": "Málaga CF",
             "visitante": "Villarreal",
@@ -1316,8 +1294,8 @@
             "id_escudo_local": 2821,
             "id_escudo_visitante": 2849,
             "fecha": "2026-11-08T18:30:00",
-            "goles_local": null,
-            "goles_visitante": null,
+            "goles_local": 0,
+            "goles_visitante": 0,
             "estado": "notstarted"
         },
         {
@@ -1327,9 +1305,9 @@
             "id_escudo_local": 2819,
             "id_escudo_visitante": 2859,
             "fecha": "2026-11-08T18:30:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
+            "goles_local": 0,
+            "goles_visitante": 0,
+            "estado": "inprogress"
         },
         {
             "id": 16421101,
