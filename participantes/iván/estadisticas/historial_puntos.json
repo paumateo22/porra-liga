@@ -7,11 +7,11 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 79,
-    "puntos_partidos": 76,
+    "puntos_totales": 78,
+    "puntos_partidos": 75,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 3,
-    "aciertos_1x2": 59,
+    "aciertos_1x2": 58,
     "aciertos_exactos": 17,
     "partidos_pronosticados": 120,
     "jornadas_jugadas": 12,
@@ -470,8 +470,8 @@
             }
         },
         "J06": {
-            "puntos": 4,
-            "aciertos_1x2": 4,
+            "puntos": 3,
+            "aciertos_1x2": 3,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -492,14 +492,6 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
-                },
-                "Atlético_vs_Osasuna": {
-                    "id": 16416335,
-                    "pronostico": "2-0",
-                    "real": "4-0",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
                 },
                 "FC Barcelona_vs_Real Racing Club": {
                     "id": 16416346,
@@ -1024,6 +1016,14 @@
                     "acierto_1x2": true,
                     "acierto_exacto": true,
                     "puntos": 2
+                },
+                "Elche_vs_Betis": {
+                    "id": 16421102,
+                    "pronostico": "1-2",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         }

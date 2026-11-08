@@ -127,9 +127,9 @@
             "estado": "finished"
         },
         "16421102": {
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
+            "goles_local": 0,
+            "goles_visitante": 0,
+            "estado": "inprogress"
         },
         "16421107": {
             "goles_local": null,
@@ -195,6 +195,63 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
+                },
+                "16421102": {
+                    "pronostico": "1-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                }
+            }
+        },
+        {
+            "slug": "adrián",
+            "nombre": "Adrián",
+            "insignias": [],
+            "aciertos_1x2": 3,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "elegible": true,
+            "ganador": false,
+            "perdedor": false,
+            "puntos": 3,
+            "pronosticados": 10,
+            "predicciones": {
+                "16421109": {
+                    "pronostico": "2-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "16421103": {
+                    "pronostico": "1-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "16421108": {
+                    "pronostico": "1-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "16421106": {
+                    "pronostico": "2-3",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "16421105": {
+                    "pronostico": "2-4",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "16421102": {
+                    "pronostico": "2-2",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         },
@@ -234,6 +291,12 @@
                     "acierto_1x2": true,
                     "acierto_exacto": true,
                     "puntos": 2
+                },
+                "16421102": {
+                    "pronostico": "2-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         },
@@ -284,6 +347,12 @@
                     "acierto_1x2": true,
                     "acierto_exacto": true,
                     "puntos": 2
+                },
+                "16421102": {
+                    "pronostico": "1-2",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         },
@@ -334,51 +403,12 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
-                }
-            }
-        },
-        {
-            "slug": "adrián",
-            "nombre": "Adrián",
-            "insignias": [],
-            "aciertos_1x2": 2,
-            "aciertos_exactos": 0,
-            "bonus": 0,
-            "elegible": true,
-            "ganador": false,
-            "perdedor": false,
-            "puntos": 2,
-            "pronosticados": 10,
-            "predicciones": {
-                "16421109": {
-                    "pronostico": "2-1",
+                },
+                "16421102": {
+                    "pronostico": "1-2",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
-                },
-                "16421103": {
-                    "pronostico": "1-0",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
-                "16421108": {
-                    "pronostico": "1-1",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                },
-                "16421106": {
-                    "pronostico": "2-3",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
-                "16421105": {
-                    "pronostico": "2-4",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
                 }
             }
         },
@@ -418,6 +448,12 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
+                },
+                "16421102": {
+                    "pronostico": "0-2",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         }

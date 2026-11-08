@@ -2,16 +2,16 @@
     "participante": "carlos",
     "nombre": "Carlos",
     "insignias": [],
-    "puntos_totales": 62,
-    "puntos_partidos": 61,
+    "puntos_totales": 60,
+    "puntos_partidos": 60,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 53,
+    "puntos_ganador_perdedor": 0,
+    "aciertos_1x2": 52,
     "aciertos_exactos": 8,
     "partidos_pronosticados": 119,
     "jornadas_jugadas": 12,
     "jornadas_ganadas": 3,
-    "jornadas_perdidas": 2,
+    "jornadas_perdidas": 3,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -465,12 +465,12 @@
             }
         },
         "J06": {
-            "puntos": 3,
-            "aciertos_1x2": 3,
+            "puntos": 1,
+            "aciertos_1x2": 2,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
-            "perdedor": false,
+            "perdedor": true,
             "detalle": {
                 "Real Sociedad_vs_Celta": {
                     "id": 16416340,
@@ -487,14 +487,6 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
-                },
-                "Atlético_vs_Osasuna": {
-                    "id": 16416335,
-                    "pronostico": "2-0",
-                    "real": "4-0",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
                 },
                 "FC Barcelona_vs_Real Racing Club": {
                     "id": 16416346,
@@ -1011,6 +1003,14 @@
                     "acierto_1x2": true,
                     "acierto_exacto": true,
                     "puntos": 2
+                },
+                "Elche_vs_Betis": {
+                    "id": 16421102,
+                    "pronostico": "2-1",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         }
