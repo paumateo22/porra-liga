@@ -7,11 +7,11 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 74,
-    "puntos_partidos": 71,
+    "puntos_totales": 73,
+    "puntos_partidos": 70,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 3,
-    "aciertos_1x2": 59,
+    "aciertos_1x2": 58,
     "aciertos_exactos": 12,
     "partidos_pronosticados": 120,
     "jornadas_jugadas": 12,
@@ -1002,8 +1002,8 @@
             }
         },
         "J12": {
-            "puntos": 6,
-            "aciertos_1x2": 5,
+            "puntos": 5,
+            "aciertos_1x2": 4,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": true,
@@ -1060,10 +1060,10 @@
                 "Real Sociedad_vs_Rayo": {
                     "id": 16421107,
                     "pronostico": "2-2",
-                    "real": "0-0",
-                    "acierto_1x2": true,
+                    "real": "1-0",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 }
             }
         }

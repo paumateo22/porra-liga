@@ -7,15 +7,15 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 83,
-    "puntos_partidos": 79,
+    "puntos_totales": 85,
+    "puntos_partidos": 80,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 4,
-    "aciertos_1x2": 62,
+    "puntos_ganador_perdedor": 5,
+    "aciertos_1x2": 63,
     "aciertos_exactos": 17,
     "partidos_pronosticados": 120,
     "jornadas_jugadas": 12,
-    "jornadas_ganadas": 5,
+    "jornadas_ganadas": 6,
     "jornadas_perdidas": 1,
     "punto_partida": 0,
     "por_jornada": {
@@ -1002,11 +1002,11 @@
             }
         },
         "J12": {
-            "puntos": 4,
-            "aciertos_1x2": 3,
+            "puntos": 6,
+            "aciertos_1x2": 4,
             "aciertos_exactos": 1,
             "bonus": 0,
-            "ganador": false,
+            "ganador": true,
             "perdedor": false,
             "detalle": {
                 "Sevilla_vs_Alavés": {
@@ -1060,10 +1060,10 @@
                 "Real Sociedad_vs_Rayo": {
                     "id": 16421107,
                     "pronostico": "2-0",
-                    "real": "0-0",
-                    "acierto_1x2": false,
+                    "real": "1-0",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }

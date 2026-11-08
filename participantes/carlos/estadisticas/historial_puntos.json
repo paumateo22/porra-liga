@@ -2,11 +2,11 @@
     "participante": "carlos",
     "nombre": "Carlos",
     "insignias": [],
-    "puntos_totales": 60,
-    "puntos_partidos": 61,
+    "puntos_totales": 61,
+    "puntos_partidos": 62,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": -1,
-    "aciertos_1x2": 53,
+    "aciertos_1x2": 54,
     "aciertos_exactos": 8,
     "partidos_pronosticados": 119,
     "jornadas_jugadas": 12,
@@ -997,8 +997,8 @@
             }
         },
         "J12": {
-            "puntos": 2,
-            "aciertos_1x2": 2,
+            "puntos": 3,
+            "aciertos_1x2": 3,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
@@ -1047,10 +1047,10 @@
                 "Real Sociedad_vs_Rayo": {
                     "id": 16421107,
                     "pronostico": "3-1",
-                    "real": "0-0",
-                    "acierto_1x2": false,
+                    "real": "1-0",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }
