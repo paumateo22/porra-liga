@@ -427,6 +427,38 @@
             "fecha": "2026-09-15T19:00:00"
         },
         {
+            "id": 16416334,
+            "local": "Alavés",
+            "visitante": "Valencia",
+            "id_escudo_local": 2885,
+            "id_escudo_visitante": 2828,
+            "fecha": "2026-09-15T20:00:00"
+        },
+        {
+            "id": 16416342,
+            "local": "Elche",
+            "visitante": "Real Madrid",
+            "id_escudo_local": 2846,
+            "id_escudo_visitante": 2829,
+            "fecha": "2026-09-15T21:30:00"
+        },
+        {
+            "id": 16416335,
+            "local": "Atlético",
+            "visitante": "Osasuna",
+            "id_escudo_local": 2836,
+            "id_escudo_visitante": 2820,
+            "fecha": "2026-09-16T19:00:00"
+        },
+        {
+            "id": 16416343,
+            "local": "Deportivo de A Coruña",
+            "visitante": "Sevilla",
+            "id_escudo_local": 2832,
+            "id_escudo_visitante": 2833,
+            "fecha": "2026-09-16T19:00:00"
+        },
+        {
             "id": 16416346,
             "local": "FC Barcelona",
             "visitante": "Real Racing Club",
