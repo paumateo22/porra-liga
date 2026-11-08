@@ -2,11 +2,11 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 67,
-    "puntos_partidos": 66,
+    "puntos_totales": 68,
+    "puntos_partidos": 67,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 58,
+    "aciertos_1x2": 59,
     "aciertos_exactos": 8,
     "partidos_pronosticados": 119,
     "jornadas_jugadas": 12,
@@ -997,8 +997,8 @@
             }
         },
         "J12": {
-            "puntos": 0,
-            "aciertos_1x2": 1,
+            "puntos": 1,
+            "aciertos_1x2": 2,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -1039,10 +1039,10 @@
                 "Elche_vs_Betis": {
                     "id": 16421102,
                     "pronostico": "0-2",
-                    "real": "0-0",
-                    "acierto_1x2": false,
+                    "real": "0-1",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }
