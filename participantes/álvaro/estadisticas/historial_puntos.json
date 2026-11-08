@@ -2,11 +2,11 @@
     "participante": "álvaro",
     "nombre": "Álvaro",
     "insignias": [],
-    "puntos_totales": 64,
-    "puntos_partidos": 62,
+    "puntos_totales": 65,
+    "puntos_partidos": 63,
     "bonus_rendimiento": 2,
     "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 48,
+    "aciertos_1x2": 49,
     "aciertos_exactos": 14,
     "partidos_pronosticados": 109,
     "jornadas_jugadas": 11,
@@ -883,8 +883,8 @@
             }
         },
         "J12": {
-            "puntos": 8,
-            "aciertos_1x2": 5,
+            "puntos": 9,
+            "aciertos_1x2": 6,
             "aciertos_exactos": 2,
             "bonus": 0,
             "ganador": true,
@@ -957,10 +957,10 @@
                 "Villarreal_vs_Getafe": {
                     "id": 16421110,
                     "pronostico": "2-0",
-                    "real": "0-0",
-                    "acierto_1x2": false,
+                    "real": "1-0",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }

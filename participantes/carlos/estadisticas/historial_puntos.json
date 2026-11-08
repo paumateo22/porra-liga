@@ -2,11 +2,11 @@
     "participante": "carlos",
     "nombre": "Carlos",
     "insignias": [],
-    "puntos_totales": 63,
-    "puntos_partidos": 62,
+    "puntos_totales": 64,
+    "puntos_partidos": 63,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 54,
+    "aciertos_1x2": 55,
     "aciertos_exactos": 8,
     "partidos_pronosticados": 119,
     "jornadas_jugadas": 12,
@@ -981,8 +981,8 @@
             }
         },
         "J12": {
-            "puntos": 5,
-            "aciertos_1x2": 4,
+            "puntos": 6,
+            "aciertos_1x2": 5,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
@@ -1047,10 +1047,10 @@
                 "Villarreal_vs_Getafe": {
                     "id": 16421110,
                     "pronostico": "2-0",
-                    "real": "0-0",
-                    "acierto_1x2": false,
+                    "real": "1-0",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }

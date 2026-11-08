@@ -7,11 +7,11 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 70,
-    "puntos_partidos": 68,
+    "puntos_totales": 71,
+    "puntos_partidos": 69,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 2,
-    "aciertos_1x2": 56,
+    "aciertos_1x2": 57,
     "aciertos_exactos": 12,
     "partidos_pronosticados": 120,
     "jornadas_jugadas": 12,
@@ -986,8 +986,8 @@
             }
         },
         "J12": {
-            "puntos": 4,
-            "aciertos_1x2": 4,
+            "puntos": 5,
+            "aciertos_1x2": 5,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -1060,10 +1060,10 @@
                 "Villarreal_vs_Getafe": {
                     "id": 16421110,
                     "pronostico": "2-0",
-                    "real": "0-0",
-                    "acierto_1x2": false,
+                    "real": "1-0",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }
