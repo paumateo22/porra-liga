@@ -2,11 +2,11 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 66,
-    "puntos_partidos": 66,
+    "puntos_totales": 64,
+    "puntos_partidos": 64,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 57,
+    "aciertos_1x2": 55,
     "aciertos_exactos": 9,
     "partidos_pronosticados": 118,
     "jornadas_jugadas": 12,
@@ -465,8 +465,8 @@
             }
         },
         "J06": {
-            "puntos": 4,
-            "aciertos_1x2": 4,
+            "puntos": 2,
+            "aciertos_1x2": 2,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -503,22 +503,6 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
-                },
-                "FC Barcelona_vs_Real Racing Club": {
-                    "id": 16416346,
-                    "pronostico": "5-1",
-                    "real": "7-2",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                },
-                "Betis_vs_Getafe": {
-                    "id": 16416336,
-                    "pronostico": "3-1",
-                    "real": "1-0",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
                 },
                 "Málaga CF_vs_Villarreal": {
                     "id": 16416338,
@@ -1043,6 +1027,14 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
+                },
+                "Villarreal_vs_Getafe": {
+                    "id": 16421110,
+                    "pronostico": "3-1",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         }

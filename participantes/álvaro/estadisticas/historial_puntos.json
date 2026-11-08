@@ -2,12 +2,12 @@
     "participante": "álvaro",
     "nombre": "Álvaro",
     "insignias": [],
-    "puntos_totales": 65,
-    "puntos_partidos": 63,
+    "puntos_totales": 62,
+    "puntos_partidos": 60,
     "bonus_rendimiento": 2,
     "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 49,
-    "aciertos_exactos": 14,
+    "aciertos_1x2": 47,
+    "aciertos_exactos": 13,
     "partidos_pronosticados": 109,
     "jornadas_jugadas": 11,
     "jornadas_ganadas": 2,
@@ -465,9 +465,9 @@
             }
         },
         "J06": {
-            "puntos": 5,
-            "aciertos_1x2": 4,
-            "aciertos_exactos": 1,
+            "puntos": 2,
+            "aciertos_1x2": 2,
+            "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
             "perdedor": false,
@@ -519,22 +519,6 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
-                },
-                "FC Barcelona_vs_Real Racing Club": {
-                    "id": 16416346,
-                    "pronostico": "3-1",
-                    "real": "7-2",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                },
-                "Betis_vs_Getafe": {
-                    "id": 16416336,
-                    "pronostico": "1-0",
-                    "real": "1-0",
-                    "acierto_1x2": true,
-                    "acierto_exacto": true,
-                    "puntos": 2
                 },
                 "Málaga CF_vs_Villarreal": {
                     "id": 16416338,
@@ -958,6 +942,14 @@
                     "id": 16421107,
                     "pronostico": "1-1",
                     "real": "1-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Villarreal_vs_Getafe": {
+                    "id": 16421110,
+                    "pronostico": "2-0",
+                    "real": "0-0",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0

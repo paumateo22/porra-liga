@@ -2,11 +2,11 @@
     "participante": "manu",
     "nombre": "Manu",
     "insignias": [],
-    "puntos_totales": 46,
-    "puntos_partidos": 40,
+    "puntos_totales": 44,
+    "puntos_partidos": 38,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 2,
-    "aciertos_1x2": 37,
+    "aciertos_1x2": 35,
     "aciertos_exactos": 3,
     "partidos_pronosticados": 70,
     "jornadas_jugadas": 7,
@@ -285,8 +285,8 @@
             }
         },
         "J06": {
-            "puntos": 7,
-            "aciertos_1x2": 6,
+            "puntos": 5,
+            "aciertos_1x2": 4,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": true,
@@ -339,22 +339,6 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
-                },
-                "FC Barcelona_vs_Real Racing Club": {
-                    "id": 16416346,
-                    "pronostico": "4-1",
-                    "real": "7-2",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                },
-                "Betis_vs_Getafe": {
-                    "id": 16416336,
-                    "pronostico": "2-1",
-                    "real": "1-0",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
                 },
                 "Málaga CF_vs_Villarreal": {
                     "id": 16416338,
