@@ -1580,6 +1580,17 @@
     ],
     "J15": [
         {
+            "id": 16462485,
+            "local": "Alavés",
+            "visitante": "Espanyol",
+            "id_escudo_local": 2885,
+            "id_escudo_visitante": 2814,
+            "fecha": "2026-12-04T21:00:00",
+            "goles_local": null,
+            "goles_visitante": null,
+            "estado": "notstarted"
+        },
+        {
             "id": 16462504,
             "local": "Real Racing Club",
             "visitante": "Deportivo de A Coruña",
@@ -1652,17 +1663,6 @@
             "id_escudo_local": 2859,
             "id_escudo_visitante": 2828,
             "fecha": "2026-12-06T18:30:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
-        },
-        {
-            "id": 16462485,
-            "local": "Alavés",
-            "visitante": "Espanyol",
-            "id_escudo_local": 2885,
-            "id_escudo_visitante": 2814,
-            "fecha": "2026-12-06T20:00:00",
             "goles_local": null,
             "goles_visitante": null,
             "estado": "notstarted"
