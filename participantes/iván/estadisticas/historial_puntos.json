@@ -7,15 +7,15 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 87,
-    "puntos_partidos": 83,
+    "puntos_totales": 85,
+    "puntos_partidos": 82,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 4,
-    "aciertos_1x2": 65,
+    "puntos_ganador_perdedor": 3,
+    "aciertos_1x2": 64,
     "aciertos_exactos": 18,
-    "partidos_pronosticados": 120,
-    "jornadas_jugadas": 12,
-    "jornadas_ganadas": 5,
+    "partidos_pronosticados": 130,
+    "jornadas_jugadas": 13,
+    "jornadas_ganadas": 4,
     "jornadas_perdidas": 1,
     "punto_partida": 0,
     "por_jornada": {
@@ -560,21 +560,13 @@
             }
         },
         "J07": {
-            "puntos": 9,
-            "aciertos_1x2": 5,
+            "puntos": 7,
+            "aciertos_1x2": 4,
             "aciertos_exactos": 3,
             "bonus": 0,
-            "ganador": true,
+            "ganador": false,
             "perdedor": false,
             "detalle": {
-                "Espanyol_vs_Elche": {
-                    "id": 16416299,
-                    "pronostico": "1-2",
-                    "real": "1-3",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                },
                 "Osasuna_vs_Rayo": {
                     "id": 16416305,
                     "pronostico": "1-1",
@@ -1088,6 +1080,24 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
+                }
+            }
+        },
+        "J13": {
+            "puntos": 0,
+            "aciertos_1x2": 0,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "ganador": false,
+            "perdedor": false,
+            "detalle": {
+                "Athletic_vs_Espanyol": {
+                    "id": 16421112,
+                    "pronostico": "3-1",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         }
