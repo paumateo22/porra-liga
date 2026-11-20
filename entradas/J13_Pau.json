@@ -1,0 +1,87 @@
+{
+    "participante": "Pau",
+    "jornada": 13,
+    "generado": "2026-11-20T11:57:44",
+    "predicciones": [
+        {
+            "id": 16421112,
+            "local": "Athletic",
+            "visitante": "Espanyol",
+            "fecha": "2026-11-20T21:00:00",
+            "goles_local": 2,
+            "goles_visitante": 1
+        },
+        {
+            "id": 16421111,
+            "local": "Alavés",
+            "visitante": "Deportivo de A Coruña",
+            "fecha": "2026-11-21T14:00:00",
+            "goles_local": 1,
+            "goles_visitante": 2
+        },
+        {
+            "id": 16421119,
+            "local": "Rayo",
+            "visitante": "Valencia",
+            "fecha": "2026-11-21T16:15:00",
+            "goles_local": 1,
+            "goles_visitante": 1
+        },
+        {
+            "id": 16421125,
+            "local": "Sevilla",
+            "visitante": "Betis",
+            "fecha": "2026-11-21T18:30:00",
+            "goles_local": 1,
+            "goles_visitante": 2
+        },
+        {
+            "id": 16421116,
+            "local": "Real Madrid",
+            "visitante": "Celta",
+            "fecha": "2026-11-21T21:00:00",
+            "goles_local": 3,
+            "goles_visitante": 1
+        },
+        {
+            "id": 16421113,
+            "local": "FC Barcelona",
+            "visitante": "Villarreal",
+            "fecha": "2026-11-22T14:00:00",
+            "goles_local": 4,
+            "goles_visitante": 2
+        },
+        {
+            "id": 16421114,
+            "local": "Real Racing Club",
+            "visitante": "Real Sociedad",
+            "fecha": "2026-11-22T16:15:00",
+            "goles_local": 0,
+            "goles_visitante": 2
+        },
+        {
+            "id": 16421117,
+            "local": "Osasuna",
+            "visitante": "Málaga CF",
+            "fecha": "2026-11-22T18:30:00",
+            "goles_local": 1,
+            "goles_visitante": 0
+        },
+        {
+            "id": 16421115,
+            "local": "Getafe",
+            "visitante": "Atlético",
+            "fecha": "2026-11-22T21:00:00",
+            "goles_local": 1,
+            "goles_visitante": 2
+        },
+        {
+            "id": 16421118,
+            "local": "Levante UD",
+            "visitante": "Elche",
+            "fecha": "2026-11-23T21:00:00",
+            "goles_local": 2,
+            "goles_visitante": 1
+        }
+    ]
+}
