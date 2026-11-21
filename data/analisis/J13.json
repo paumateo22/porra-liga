@@ -2,7 +2,30 @@
     "clave": "J13",
     "jornada": 13,
     "cerrada": false,
-    "resultado_jornada": null,
+    "resultado_jornada": {
+        "ganadores": [
+            {
+                "slug": "aitor",
+                "nombre": "Aitor"
+            },
+            {
+                "slug": "iván",
+                "nombre": "Iván"
+            },
+            {
+                "slug": "pau",
+                "nombre": "Pau"
+            }
+        ],
+        "perdedores": [
+            {
+                "slug": "adrián",
+                "nombre": "Adrián"
+            }
+        ],
+        "ganador_seguro": false,
+        "perdedor_seguro": false
+    },
     "partidos": [
         {
             "id": 16421112,
@@ -103,7 +126,7 @@
         },
         "16421125": {
             "goles_local": 0,
-            "goles_visitante": 0,
+            "goles_visitante": 1,
             "estado": "inprogress"
         },
         "16421116": {
@@ -139,55 +162,16 @@
     },
     "jugadores": [
         {
-            "slug": "adrián",
-            "nombre": "Adrián",
-            "insignias": [],
-            "aciertos_1x2": 0,
-            "aciertos_exactos": 0,
-            "bonus": 0,
-            "elegible": true,
-            "ganador": false,
-            "perdedor": false,
-            "puntos": 0,
-            "pronosticados": 10,
-            "predicciones": {
-                "16421112": {
-                    "pronostico": "2-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
-                "16421111": {
-                    "pronostico": "1-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
-                "16421119": {
-                    "pronostico": "2-2",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
-                "16421125": {
-                    "pronostico": "3-2",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                }
-            }
-        },
-        {
             "slug": "aitor",
             "nombre": "Aitor",
             "insignias": [],
-            "aciertos_1x2": 0,
-            "aciertos_exactos": 0,
+            "aciertos_1x2": 1,
+            "aciertos_exactos": 1,
             "bonus": 0,
             "elegible": true,
-            "ganador": false,
+            "ganador": true,
             "perdedor": false,
-            "puntos": 0,
+            "puntos": 3,
             "pronosticados": 10,
             "predicciones": {
                 "16421112": {
@@ -210,9 +194,9 @@
                 },
                 "16421125": {
                     "pronostico": "0-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
+                    "acierto_1x2": true,
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         },
@@ -225,13 +209,13 @@
                     "descripcion": "Mundial 2026"
                 }
             ],
-            "aciertos_1x2": 0,
+            "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "bonus": 0,
             "elegible": true,
-            "ganador": false,
+            "ganador": true,
             "perdedor": false,
-            "puntos": 0,
+            "puntos": 2,
             "pronosticados": 10,
             "predicciones": {
                 "16421112": {
@@ -254,9 +238,9 @@
                 },
                 "16421125": {
                     "pronostico": "1-2",
-                    "acierto_1x2": false,
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         },
@@ -269,13 +253,13 @@
                     "descripcion": "Liga 2023/24"
                 }
             ],
-            "aciertos_1x2": 0,
+            "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "bonus": 0,
             "elegible": true,
-            "ganador": false,
+            "ganador": true,
             "perdedor": false,
-            "puntos": 0,
+            "puntos": 2,
             "pronosticados": 10,
             "predicciones": {
                 "16421112": {
@@ -298,6 +282,45 @@
                 },
                 "16421125": {
                     "pronostico": "1-2",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                }
+            }
+        },
+        {
+            "slug": "adrián",
+            "nombre": "Adrián",
+            "insignias": [],
+            "aciertos_1x2": 0,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "elegible": true,
+            "ganador": false,
+            "perdedor": true,
+            "puntos": -1,
+            "pronosticados": 10,
+            "predicciones": {
+                "16421112": {
+                    "pronostico": "2-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "16421111": {
+                    "pronostico": "1-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "16421119": {
+                    "pronostico": "2-2",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "16421125": {
+                    "pronostico": "3-2",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0

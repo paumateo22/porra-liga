@@ -7,15 +7,15 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 87,
-    "puntos_partidos": 83,
+    "puntos_totales": 89,
+    "puntos_partidos": 84,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 4,
-    "aciertos_1x2": 65,
+    "puntos_ganador_perdedor": 5,
+    "aciertos_1x2": 66,
     "aciertos_exactos": 18,
     "partidos_pronosticados": 130,
     "jornadas_jugadas": 13,
-    "jornadas_ganadas": 5,
+    "jornadas_ganadas": 6,
     "jornadas_perdidas": 1,
     "punto_partida": 0,
     "por_jornada": {
@@ -1068,11 +1068,11 @@
             }
         },
         "J13": {
-            "puntos": 0,
-            "aciertos_1x2": 0,
+            "puntos": 2,
+            "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "bonus": 0,
-            "ganador": false,
+            "ganador": true,
             "perdedor": false,
             "detalle": {
                 "Athletic_vs_Espanyol": {
@@ -1102,10 +1102,10 @@
                 "Sevilla_vs_Betis": {
                     "id": 16421125,
                     "pronostico": "1-2",
-                    "real": "0-0",
-                    "acierto_1x2": false,
+                    "real": "0-1",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }

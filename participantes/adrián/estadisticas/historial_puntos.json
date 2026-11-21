@@ -2,16 +2,16 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 66,
+    "puntos_totales": 65,
     "puntos_partidos": 67,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": -1,
+    "puntos_ganador_perdedor": -2,
     "aciertos_1x2": 58,
     "aciertos_exactos": 9,
     "partidos_pronosticados": 128,
     "jornadas_jugadas": 13,
     "jornadas_ganadas": 2,
-    "jornadas_perdidas": 3,
+    "jornadas_perdidas": 4,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -1047,12 +1047,12 @@
             }
         },
         "J13": {
-            "puntos": 0,
+            "puntos": -1,
             "aciertos_1x2": 0,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
-            "perdedor": false,
+            "perdedor": true,
             "detalle": {
                 "Athletic_vs_Espanyol": {
                     "id": 16421112,
@@ -1081,7 +1081,7 @@
                 "Sevilla_vs_Betis": {
                     "id": 16421125,
                     "pronostico": "3-2",
-                    "real": "0-0",
+                    "real": "0-1",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
