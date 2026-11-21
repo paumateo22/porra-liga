@@ -2,15 +2,15 @@
     "participante": "javi",
     "nombre": "Javi",
     "insignias": [],
-    "puntos_totales": 26,
+    "puntos_totales": 27,
     "puntos_partidos": 29,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": -3,
+    "puntos_ganador_perdedor": -2,
     "aciertos_1x2": 26,
     "aciertos_exactos": 3,
     "partidos_pronosticados": 69,
     "jornadas_jugadas": 7,
-    "jornadas_ganadas": 1,
+    "jornadas_ganadas": 2,
     "jornadas_perdidas": 4,
     "punto_partida": 0,
     "por_jornada": {
@@ -547,21 +547,13 @@
             }
         },
         "J07": {
-            "puntos": 5,
+            "puntos": 6,
             "aciertos_1x2": 4,
             "aciertos_exactos": 1,
             "bonus": 0,
-            "ganador": false,
+            "ganador": true,
             "perdedor": false,
             "detalle": {
-                "Celta_vs_Real Racing Club": {
-                    "id": 16416344,
-                    "pronostico": "1-2",
-                    "real": "5-0",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "Sevilla_vs_FC Barcelona": {
                     "id": 16416349,
                     "pronostico": "2-5",

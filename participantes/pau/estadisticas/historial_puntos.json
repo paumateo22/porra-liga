@@ -7,11 +7,11 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 75,
-    "puntos_partidos": 73,
+    "puntos_totales": 74,
+    "puntos_partidos": 72,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 2,
-    "aciertos_1x2": 60,
+    "aciertos_1x2": 59,
     "aciertos_exactos": 13,
     "partidos_pronosticados": 130,
     "jornadas_jugadas": 13,
@@ -560,21 +560,13 @@
             }
         },
         "J07": {
-            "puntos": 9,
-            "aciertos_1x2": 5,
+            "puntos": 8,
+            "aciertos_1x2": 4,
             "aciertos_exactos": 3,
             "bonus": 0,
             "ganador": true,
             "perdedor": false,
             "detalle": {
-                "Celta_vs_Real Racing Club": {
-                    "id": 16416344,
-                    "pronostico": "3-2",
-                    "real": "5-0",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                },
                 "Sevilla_vs_FC Barcelona": {
                     "id": 16416349,
                     "pronostico": "1-4",
