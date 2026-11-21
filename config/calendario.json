@@ -493,14 +493,6 @@
     ],
     "J07": [
         {
-            "id": 16416344,
-            "local": "Celta",
-            "visitante": "Real Racing Club",
-            "id_escudo_local": 2821,
-            "id_escudo_visitante": 2835,
-            "fecha": "2026-09-19T18:30:00"
-        },
-        {
             "id": 16416349,
             "local": "Sevilla",
             "visitante": "FC Barcelona",
