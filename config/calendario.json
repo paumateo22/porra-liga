@@ -485,14 +485,6 @@
     ],
     "J07": [
         {
-            "id": 16416337,
-            "local": "Athletic",
-            "visitante": "Alavés",
-            "id_escudo_local": 2825,
-            "id_escudo_visitante": 2885,
-            "fecha": "2026-09-19T16:15:00"
-        },
-        {
             "id": 16416344,
             "local": "Celta",
             "visitante": "Real Racing Club",
