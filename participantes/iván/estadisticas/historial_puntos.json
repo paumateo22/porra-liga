@@ -7,15 +7,15 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 85,
-    "puntos_partidos": 81,
+    "puntos_totales": 83,
+    "puntos_partidos": 80,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 4,
-    "aciertos_1x2": 64,
+    "puntos_ganador_perdedor": 3,
+    "aciertos_1x2": 63,
     "aciertos_exactos": 17,
     "partidos_pronosticados": 130,
     "jornadas_jugadas": 13,
-    "jornadas_ganadas": 5,
+    "jornadas_ganadas": 4,
     "jornadas_perdidas": 1,
     "punto_partida": 0,
     "por_jornada": {
@@ -1068,11 +1068,11 @@
             }
         },
         "J13": {
-            "puntos": 2,
-            "aciertos_1x2": 1,
+            "puntos": 0,
+            "aciertos_1x2": 0,
             "aciertos_exactos": 0,
             "bonus": 0,
-            "ganador": true,
+            "ganador": false,
             "perdedor": false,
             "detalle": {
                 "Athletic_vs_Espanyol": {
@@ -1094,10 +1094,10 @@
                 "Rayo_vs_Valencia": {
                     "id": 16421119,
                     "pronostico": "1-1",
-                    "real": "0-0",
-                    "acierto_1x2": true,
+                    "real": "0-1",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 }
             }
         }
