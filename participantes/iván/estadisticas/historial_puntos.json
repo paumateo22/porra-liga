@@ -7,11 +7,11 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 86,
-    "puntos_partidos": 82,
+    "puntos_totales": 87,
+    "puntos_partidos": 83,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 4,
-    "aciertos_1x2": 64,
+    "aciertos_1x2": 65,
     "aciertos_exactos": 18,
     "partidos_pronosticados": 130,
     "jornadas_jugadas": 13,
@@ -1060,8 +1060,8 @@
             }
         },
         "J13": {
-            "puntos": 0,
-            "aciertos_1x2": 0,
+            "puntos": 1,
+            "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -1102,10 +1102,10 @@
                 "Real Madrid_vs_Celta": {
                     "id": 16421116,
                     "pronostico": "2-0",
-                    "real": "1-1",
-                    "acierto_1x2": false,
+                    "real": "2-1",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }

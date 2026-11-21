@@ -2,11 +2,11 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 70,
-    "puntos_partidos": 70,
+    "puntos_totales": 71,
+    "puntos_partidos": 71,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 60,
+    "aciertos_1x2": 61,
     "aciertos_exactos": 10,
     "partidos_pronosticados": 129,
     "jornadas_jugadas": 13,
@@ -1047,8 +1047,8 @@
             }
         },
         "J13": {
-            "puntos": 0,
-            "aciertos_1x2": 0,
+            "puntos": 1,
+            "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -1089,10 +1089,10 @@
                 "Real Madrid_vs_Celta": {
                     "id": 16421116,
                     "pronostico": "3-1",
-                    "real": "1-1",
-                    "acierto_1x2": false,
+                    "real": "2-1",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }

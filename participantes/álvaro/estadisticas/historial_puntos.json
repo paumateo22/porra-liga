@@ -2,11 +2,11 @@
     "participante": "álvaro",
     "nombre": "Álvaro",
     "insignias": [],
-    "puntos_totales": 69,
-    "puntos_partidos": 67,
+    "puntos_totales": 70,
+    "puntos_partidos": 68,
     "bonus_rendimiento": 2,
     "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 51,
+    "aciertos_1x2": 52,
     "aciertos_exactos": 16,
     "partidos_pronosticados": 115,
     "jornadas_jugadas": 12,
@@ -957,8 +957,8 @@
             }
         },
         "J13": {
-            "puntos": 0,
-            "aciertos_1x2": 0,
+            "puntos": 1,
+            "aciertos_1x2": 1,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -967,10 +967,10 @@
                 "Real Madrid_vs_Celta": {
                     "id": 16421116,
                     "pronostico": "2-0",
-                    "real": "1-1",
-                    "acierto_1x2": false,
+                    "real": "2-1",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }
