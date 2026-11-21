@@ -2,15 +2,15 @@
     "participante": "javi",
     "nombre": "Javi",
     "insignias": [],
-    "puntos_totales": 27,
+    "puntos_totales": 26,
     "puntos_partidos": 29,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": -2,
+    "puntos_ganador_perdedor": -3,
     "aciertos_1x2": 26,
     "aciertos_exactos": 3,
     "partidos_pronosticados": 69,
     "jornadas_jugadas": 7,
-    "jornadas_ganadas": 2,
+    "jornadas_ganadas": 1,
     "jornadas_perdidas": 4,
     "punto_partida": 0,
     "por_jornada": {
@@ -284,30 +284,6 @@
             "ganador": false,
             "perdedor": false,
             "detalle": {
-                "Betis_vs_Real Madrid": {
-                    "id": 16416315,
-                    "pronostico": "1-3",
-                    "real": "1-0",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
-                "Athletic_vs_Atlético": {
-                    "id": 16416317,
-                    "pronostico": "0-2",
-                    "real": "3-0",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
-                "Rayo_vs_Real Racing Club": {
-                    "id": 16416321,
-                    "pronostico": "0-2",
-                    "real": "3-2",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "Villarreal_vs_Deportivo de A Coruña": {
                     "id": 16416324,
                     "pronostico": "2-1",
@@ -547,13 +523,45 @@
             }
         },
         "J07": {
-            "puntos": 6,
+            "puntos": 5,
             "aciertos_1x2": 4,
             "aciertos_exactos": 1,
             "bonus": 0,
-            "ganador": true,
+            "ganador": false,
             "perdedor": false,
             "detalle": {
+                "Espanyol_vs_Elche": {
+                    "id": 16416299,
+                    "pronostico": "2-0",
+                    "real": "1-3",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Osasuna_vs_Rayo": {
+                    "id": 16416305,
+                    "pronostico": "2-0",
+                    "real": "1-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Athletic_vs_Alavés": {
+                    "id": 16416337,
+                    "pronostico": "2-1",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Celta_vs_Real Racing Club": {
+                    "id": 16416344,
+                    "pronostico": "1-2",
+                    "real": "5-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
                 "Sevilla_vs_FC Barcelona": {
                     "id": 16416349,
                     "pronostico": "2-5",
