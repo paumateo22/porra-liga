@@ -538,14 +538,6 @@
             "ganador": true,
             "perdedor": false,
             "detalle": {
-                "Osasuna_vs_Rayo": {
-                    "id": 16416305,
-                    "pronostico": "2-1",
-                    "real": "1-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "Athletic_vs_Alavés": {
                     "id": 16416337,
                     "pronostico": "2-0",
@@ -1066,6 +1058,14 @@
                     "id": 16421112,
                     "pronostico": "2-1",
                     "real": "0-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Alavés_vs_Deportivo de A Coruña": {
+                    "id": 16421111,
+                    "pronostico": "1-1",
+                    "real": "1-0",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0

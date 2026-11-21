@@ -2,12 +2,12 @@
     "participante": "álvaro",
     "nombre": "Álvaro",
     "insignias": [],
-    "puntos_totales": 69,
-    "puntos_partidos": 68,
+    "puntos_totales": 67,
+    "puntos_partidos": 66,
     "bonus_rendimiento": 2,
     "puntos_ganador_perdedor": -1,
-    "aciertos_1x2": 51,
-    "aciertos_exactos": 17,
+    "aciertos_1x2": 50,
+    "aciertos_exactos": 16,
     "partidos_pronosticados": 109,
     "jornadas_jugadas": 11,
     "jornadas_ganadas": 2,
@@ -547,21 +547,13 @@
             }
         },
         "J07": {
-            "puntos": 5,
-            "aciertos_1x2": 3,
-            "aciertos_exactos": 3,
+            "puntos": 3,
+            "aciertos_1x2": 2,
+            "aciertos_exactos": 2,
             "bonus": 0,
             "ganador": false,
             "perdedor": true,
             "detalle": {
-                "Osasuna_vs_Rayo": {
-                    "id": 16416305,
-                    "pronostico": "1-1",
-                    "real": "1-1",
-                    "acierto_1x2": true,
-                    "acierto_exacto": true,
-                    "puntos": 2
-                },
                 "Athletic_vs_Alavés": {
                     "id": 16416337,
                     "pronostico": "2-1",
