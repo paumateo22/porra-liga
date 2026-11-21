@@ -104,7 +104,7 @@
         "16421125": {
             "goles_local": 0,
             "goles_visitante": 0,
-            "estado": "notstarted"
+            "estado": "inprogress"
         },
         "16421116": {
             "goles_local": null,
@@ -168,6 +168,12 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
+                },
+                "16421125": {
+                    "pronostico": "3-2",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         },
@@ -198,6 +204,12 @@
                 },
                 "16421119": {
                     "pronostico": "2-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "16421125": {
+                    "pronostico": "0-1",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
@@ -239,6 +251,12 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
+                },
+                "16421125": {
+                    "pronostico": "1-2",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         },
@@ -274,6 +292,12 @@
                 },
                 "16421119": {
                     "pronostico": "1-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "16421125": {
+                    "pronostico": "1-2",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
