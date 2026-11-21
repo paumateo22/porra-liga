@@ -2,15 +2,15 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 74,
-    "puntos_partidos": 73,
+    "puntos_totales": 71,
+    "puntos_partidos": 71,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 62,
-    "aciertos_exactos": 11,
+    "puntos_ganador_perdedor": 0,
+    "aciertos_1x2": 61,
+    "aciertos_exactos": 10,
     "partidos_pronosticados": 129,
     "jornadas_jugadas": 13,
-    "jornadas_ganadas": 5,
+    "jornadas_ganadas": 4,
     "jornadas_perdidas": 4,
     "punto_partida": 0,
     "por_jornada": {
@@ -1055,11 +1055,11 @@
             }
         },
         "J13": {
-            "puntos": 3,
-            "aciertos_1x2": 1,
-            "aciertos_exactos": 1,
+            "puntos": 0,
+            "aciertos_1x2": 0,
+            "aciertos_exactos": 0,
             "bonus": 0,
-            "ganador": true,
+            "ganador": false,
             "perdedor": false,
             "detalle": {
                 "Athletic_vs_Espanyol": {
@@ -1089,10 +1089,10 @@
                 "Sevilla_vs_Betis": {
                     "id": 16421125,
                     "pronostico": "0-1",
-                    "real": "0-1",
-                    "acierto_1x2": true,
-                    "acierto_exacto": true,
-                    "puntos": 2
+                    "real": "1-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         }
