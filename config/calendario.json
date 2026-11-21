@@ -485,14 +485,6 @@
     ],
     "J07": [
         {
-            "id": 16416305,
-            "local": "Osasuna",
-            "visitante": "Rayo",
-            "id_escudo_local": 2820,
-            "id_escudo_visitante": 2818,
-            "fecha": "2026-09-19T14:00:00"
-        },
-        {
             "id": 16416337,
             "local": "Athletic",
             "visitante": "Alavés",
