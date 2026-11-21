@@ -2,16 +2,16 @@
     "participante": "álvaro",
     "nombre": "Álvaro",
     "insignias": [],
-    "puntos_totales": 71,
+    "puntos_totales": 70,
     "puntos_partidos": 69,
     "bonus_rendimiento": 2,
-    "puntos_ganador_perdedor": 0,
+    "puntos_ganador_perdedor": -1,
     "aciertos_1x2": 52,
     "aciertos_exactos": 17,
-    "partidos_pronosticados": 109,
-    "jornadas_jugadas": 11,
+    "partidos_pronosticados": 115,
+    "jornadas_jugadas": 12,
     "jornadas_ganadas": 2,
-    "jornadas_perdidas": 2,
+    "jornadas_perdidas": 3,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -963,6 +963,15 @@
                     "puntos": 2
                 }
             }
+        },
+        "J13": {
+            "puntos": -1,
+            "aciertos_1x2": 0,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "ganador": false,
+            "perdedor": true,
+            "detalle": {}
         }
     }
 }
