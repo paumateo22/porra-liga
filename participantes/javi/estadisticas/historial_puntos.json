@@ -546,14 +546,6 @@
             "ganador": false,
             "perdedor": false,
             "detalle": {
-                "Athletic_vs_Alavés": {
-                    "id": 16416337,
-                    "pronostico": "2-1",
-                    "real": "0-0",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "Celta_vs_Real Racing Club": {
                     "id": 16416344,
                     "pronostico": "1-2",

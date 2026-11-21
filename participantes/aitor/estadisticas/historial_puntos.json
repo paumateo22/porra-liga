@@ -2,16 +2,16 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 74,
+    "puntos_totales": 73,
     "puntos_partidos": 72,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 2,
+    "puntos_ganador_perdedor": 1,
     "aciertos_1x2": 62,
     "aciertos_exactos": 10,
     "partidos_pronosticados": 129,
     "jornadas_jugadas": 13,
     "jornadas_ganadas": 5,
-    "jornadas_perdidas": 3,
+    "jornadas_perdidas": 4,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -554,14 +554,6 @@
             "ganador": false,
             "perdedor": false,
             "detalle": {
-                "Athletic_vs_Alavés": {
-                    "id": 16416337,
-                    "pronostico": "2-1",
-                    "real": "0-0",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "Celta_vs_Real Racing Club": {
                     "id": 16416344,
                     "pronostico": "1-2",
@@ -1055,12 +1047,12 @@
             }
         },
         "J13": {
-            "puntos": 0,
+            "puntos": -1,
             "aciertos_1x2": 0,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
-            "perdedor": false,
+            "perdedor": true,
             "detalle": {
                 "Athletic_vs_Espanyol": {
                     "id": 16421112,
@@ -1074,6 +1066,14 @@
                     "id": 16421111,
                     "pronostico": "1-1",
                     "real": "3-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Rayo_vs_Valencia": {
+                    "id": 16421119,
+                    "pronostico": "2-1",
+                    "real": "0-0",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
