@@ -22,14 +22,6 @@
             "ganador": true,
             "perdedor": false,
             "detalle": {
-                "Alavés_vs_Getafe": {
-                    "id": 16421047,
-                    "pronostico": "1-3",
-                    "real": "3-0",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "Sevilla_vs_Rayo": {
                     "id": 16421052,
                     "pronostico": "2-0",
