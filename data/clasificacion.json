@@ -1,6 +1,6 @@
 {
     "competicion": "LaLiga 2026-27",
-    "generado": "2026-11-21T23:04:18",
+    "generado": "2026-11-22T12:01:15",
     "jornadas_calculadas": [
         "J01",
         "J02",
@@ -283,15 +283,15 @@
             "slug": "aitor",
             "nombre": "Aitor",
             "insignias": [],
-            "puntos_totales": 71,
-            "puntos_partidos": 71,
+            "puntos_totales": 73,
+            "puntos_partidos": 72,
             "bonus_rendimiento": 0,
-            "puntos_ganador_perdedor": 0,
-            "aciertos_1x2": 61,
+            "puntos_ganador_perdedor": 1,
+            "aciertos_1x2": 62,
             "aciertos_exactos": 10,
             "partidos_pronosticados": 129,
             "jornadas_jugadas": 13,
-            "jornadas_ganadas": 4,
+            "jornadas_ganadas": 5,
             "jornadas_perdidas": 4,
             "punto_partida": 0,
             "por_jornada": {
@@ -320,11 +320,11 @@
                     "perdedor": false
                 },
                 "J04": {
-                    "puntos": 3,
-                    "aciertos_1x2": 3,
+                    "puntos": 5,
+                    "aciertos_1x2": 4,
                     "aciertos_exactos": 0,
                     "bonus": 0,
-                    "ganador": false,
+                    "ganador": true,
                     "perdedor": false
                 },
                 "J05": {
@@ -521,15 +521,15 @@
             "slug": "adrián",
             "nombre": "Adrián",
             "insignias": [],
-            "puntos_totales": 66,
-            "puntos_partidos": 67,
+            "puntos_totales": 68,
+            "puntos_partidos": 68,
             "bonus_rendimiento": 0,
-            "puntos_ganador_perdedor": -1,
-            "aciertos_1x2": 58,
+            "puntos_ganador_perdedor": 0,
+            "aciertos_1x2": 59,
             "aciertos_exactos": 9,
             "partidos_pronosticados": 128,
             "jornadas_jugadas": 13,
-            "jornadas_ganadas": 2,
+            "jornadas_ganadas": 3,
             "jornadas_perdidas": 3,
             "punto_partida": 0,
             "por_jornada": {
@@ -558,11 +558,11 @@
                     "perdedor": false
                 },
                 "J04": {
-                    "puntos": 4,
-                    "aciertos_1x2": 3,
+                    "puntos": 6,
+                    "aciertos_1x2": 4,
                     "aciertos_exactos": 1,
                     "bonus": 0,
-                    "ganador": false,
+                    "ganador": true,
                     "perdedor": false
                 },
                 "J05": {
