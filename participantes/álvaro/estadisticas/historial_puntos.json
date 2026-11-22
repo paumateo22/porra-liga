@@ -2,15 +2,15 @@
     "participante": "álvaro",
     "nombre": "Álvaro",
     "insignias": [],
-    "puntos_totales": 73,
-    "puntos_partidos": 70,
+    "puntos_totales": 71,
+    "puntos_partidos": 69,
     "bonus_rendimiento": 2,
-    "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 54,
+    "puntos_ganador_perdedor": 0,
+    "aciertos_1x2": 53,
     "aciertos_exactos": 16,
     "partidos_pronosticados": 115,
     "jornadas_jugadas": 12,
-    "jornadas_ganadas": 3,
+    "jornadas_ganadas": 2,
     "jornadas_perdidas": 2,
     "punto_partida": 0,
     "por_jornada": {
@@ -965,11 +965,11 @@
             }
         },
         "J13": {
-            "puntos": 4,
-            "aciertos_1x2": 3,
+            "puntos": 2,
+            "aciertos_1x2": 2,
             "aciertos_exactos": 0,
             "bonus": 0,
-            "ganador": true,
+            "ganador": false,
             "perdedor": false,
             "detalle": {
                 "Real Madrid_vs_Celta": {
@@ -991,10 +991,10 @@
                 "Real Racing Club_vs_Real Sociedad": {
                     "id": 16421114,
                     "pronostico": "1-1",
-                    "real": "2-2",
-                    "acierto_1x2": true,
+                    "real": "3-2",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 }
             }
         }
