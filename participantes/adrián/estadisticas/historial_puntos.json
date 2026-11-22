@@ -2,15 +2,15 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 71,
-    "puntos_partidos": 70,
+    "puntos_totales": 69,
+    "puntos_partidos": 69,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 1,
+    "puntos_ganador_perdedor": 0,
     "aciertos_1x2": 61,
-    "aciertos_exactos": 9,
+    "aciertos_exactos": 8,
     "partidos_pronosticados": 128,
     "jornadas_jugadas": 13,
-    "jornadas_ganadas": 4,
+    "jornadas_ganadas": 3,
     "jornadas_perdidas": 3,
     "punto_partida": 0,
     "por_jornada": {
@@ -515,11 +515,11 @@
             }
         },
         "J07": {
-            "puntos": 7,
-            "aciertos_1x2": 5,
-            "aciertos_exactos": 1,
+            "puntos": 4,
+            "aciertos_1x2": 4,
+            "aciertos_exactos": 0,
             "bonus": 0,
-            "ganador": true,
+            "ganador": false,
             "perdedor": false,
             "detalle": {
                 "Espanyol_vs_Elche": {
@@ -577,14 +577,6 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
-                },
-                "Deportivo de A Coruña_vs_Betis": {
-                    "id": 16416313,
-                    "pronostico": "1-1",
-                    "real": "1-1",
-                    "acierto_1x2": true,
-                    "acierto_exacto": true,
-                    "puntos": 2
                 },
                 "Villarreal_vs_Levante UD": {
                     "id": 16416294,
@@ -1047,8 +1039,8 @@
             }
         },
         "J13": {
-            "puntos": 4,
-            "aciertos_1x2": 3,
+            "puntos": 5,
+            "aciertos_1x2": 4,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": true,
@@ -1114,6 +1106,14 @@
                     "id": 16421117,
                     "pronostico": "2-1",
                     "real": "1-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "Getafe_vs_Atlético": {
+                    "id": 16421115,
+                    "pronostico": "1-1",
+                    "real": "0-0",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1

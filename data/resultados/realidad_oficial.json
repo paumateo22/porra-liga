@@ -728,17 +728,6 @@
             "estado": "finished"
         },
         {
-            "id": 16416313,
-            "local": "Deportivo de A Coruña",
-            "visitante": "Betis",
-            "id_escudo_local": 2832,
-            "id_escudo_visitante": 2816,
-            "fecha": "2026-09-20T18:30:00",
-            "goles_local": 1,
-            "goles_visitante": 1,
-            "estado": "finished"
-        },
-        {
             "id": 16416294,
             "local": "Villarreal",
             "visitante": "Levante UD",
@@ -1419,7 +1408,7 @@
             "fecha": "2026-11-22T21:00:00",
             "goles_local": 0,
             "goles_visitante": 0,
-            "estado": "notstarted"
+            "estado": "inprogress"
         },
         {
             "id": 16421118,

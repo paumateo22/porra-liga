@@ -7,15 +7,15 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 91,
+    "puntos_totales": 90,
     "puntos_partidos": 85,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 6,
+    "puntos_ganador_perdedor": 5,
     "aciertos_1x2": 67,
     "aciertos_exactos": 18,
     "partidos_pronosticados": 130,
     "jornadas_jugadas": 13,
-    "jornadas_ganadas": 6,
+    "jornadas_ganadas": 5,
     "jornadas_perdidas": 0,
     "punto_partida": 0,
     "por_jornada": {
@@ -599,14 +599,6 @@
                     "acierto_exacto": false,
                     "puntos": 0
                 },
-                "Deportivo de A Coruña_vs_Betis": {
-                    "id": 16416313,
-                    "pronostico": "1-2",
-                    "real": "1-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "Villarreal_vs_Levante UD": {
                     "id": 16416294,
                     "pronostico": "3-1",
@@ -1068,11 +1060,11 @@
             }
         },
         "J13": {
-            "puntos": 4,
+            "puntos": 3,
             "aciertos_1x2": 3,
             "aciertos_exactos": 0,
             "bonus": 0,
-            "ganador": true,
+            "ganador": false,
             "perdedor": false,
             "detalle": {
                 "Athletic_vs_Espanyol": {
@@ -1138,6 +1130,14 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
+                },
+                "Getafe_vs_Atlético": {
+                    "id": 16421115,
+                    "pronostico": "0-3",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         }

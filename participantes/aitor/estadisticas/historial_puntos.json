@@ -594,14 +594,6 @@
                     "acierto_exacto": false,
                     "puntos": 0
                 },
-                "Deportivo de A Coruña_vs_Betis": {
-                    "id": 16416313,
-                    "pronostico": "1-2",
-                    "real": "1-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "Villarreal_vs_Levante UD": {
                     "id": 16416294,
                     "pronostico": "2-0",
@@ -1122,6 +1114,14 @@
                     "id": 16421117,
                     "pronostico": "1-1",
                     "real": "1-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Getafe_vs_Atlético": {
+                    "id": 16421115,
+                    "pronostico": "0-4",
+                    "real": "0-0",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
