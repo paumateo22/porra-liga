@@ -7,12 +7,12 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 92,
-    "puntos_partidos": 86,
+    "puntos_totales": 93,
+    "puntos_partidos": 87,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 6,
     "aciertos_1x2": 68,
-    "aciertos_exactos": 18,
+    "aciertos_exactos": 19,
     "partidos_pronosticados": 130,
     "jornadas_jugadas": 13,
     "jornadas_ganadas": 6,
@@ -1060,9 +1060,9 @@
             }
         },
         "J13": {
-            "puntos": 5,
+            "puntos": 6,
             "aciertos_1x2": 4,
-            "aciertos_exactos": 0,
+            "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": true,
             "perdedor": false,
@@ -1134,10 +1134,10 @@
                 "Getafe_vs_Atlético": {
                     "id": 16421115,
                     "pronostico": "0-3",
-                    "real": "0-2",
+                    "real": "0-3",
                     "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         }

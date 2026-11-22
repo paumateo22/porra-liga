@@ -1,6 +1,6 @@
 {
     "competicion": "LaLiga 2026-27",
-    "generado": "2026-11-22T21:31:10",
+    "generado": "2026-11-22T22:55:10",
     "jornadas_calculadas": [
         "J01",
         "J02",
@@ -32,12 +32,12 @@
                     "descripcion": "Mundial 2026"
                 }
             ],
-            "puntos_totales": 92,
-            "puntos_partidos": 86,
+            "puntos_totales": 93,
+            "puntos_partidos": 87,
             "bonus_rendimiento": 0,
             "puntos_ganador_perdedor": 6,
             "aciertos_1x2": 68,
-            "aciertos_exactos": 18,
+            "aciertos_exactos": 19,
             "partidos_pronosticados": 130,
             "jornadas_jugadas": 13,
             "jornadas_ganadas": 6,
@@ -141,9 +141,9 @@
                     "perdedor": false
                 },
                 "J13": {
-                    "puntos": 5,
+                    "puntos": 6,
                     "aciertos_1x2": 4,
-                    "aciertos_exactos": 0,
+                    "aciertos_exactos": 1,
                     "bonus": 0,
                     "ganador": true,
                     "perdedor": false
