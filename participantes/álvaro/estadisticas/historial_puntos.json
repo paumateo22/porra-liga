@@ -2,16 +2,16 @@
     "participante": "álvaro",
     "nombre": "Álvaro",
     "insignias": [],
-    "puntos_totales": 74,
-    "puntos_partidos": 71,
+    "puntos_totales": 71,
+    "puntos_partidos": 70,
     "bonus_rendimiento": 2,
-    "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 54,
+    "puntos_ganador_perdedor": -1,
+    "aciertos_1x2": 53,
     "aciertos_exactos": 17,
     "partidos_pronosticados": 115,
     "jornadas_jugadas": 12,
-    "jornadas_ganadas": 3,
-    "jornadas_perdidas": 2,
+    "jornadas_ganadas": 2,
+    "jornadas_perdidas": 3,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -965,12 +965,12 @@
             }
         },
         "J13": {
-            "puntos": 4,
-            "aciertos_1x2": 3,
+            "puntos": 1,
+            "aciertos_1x2": 2,
             "aciertos_exactos": 0,
             "bonus": 0,
-            "ganador": true,
-            "perdedor": false,
+            "ganador": false,
+            "perdedor": true,
             "detalle": {
                 "Real Madrid_vs_Celta": {
                     "id": 16421116,
@@ -999,10 +999,10 @@
                 "Osasuna_vs_Málaga CF": {
                     "id": 16421117,
                     "pronostico": "1-1",
-                    "real": "0-0",
-                    "acierto_1x2": true,
+                    "real": "1-0",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 }
             }
         }
