@@ -2,11 +2,11 @@
     "participante": "álvaro",
     "nombre": "Álvaro",
     "insignias": [],
-    "puntos_totales": 70,
-    "puntos_partidos": 68,
+    "puntos_totales": 71,
+    "puntos_partidos": 69,
     "bonus_rendimiento": 2,
     "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 52,
+    "aciertos_1x2": 53,
     "aciertos_exactos": 16,
     "partidos_pronosticados": 115,
     "jornadas_jugadas": 12,
@@ -973,8 +973,8 @@
             }
         },
         "J13": {
-            "puntos": 1,
-            "aciertos_1x2": 1,
+            "puntos": 2,
+            "aciertos_1x2": 2,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -991,10 +991,10 @@
                 "FC Barcelona_vs_Villarreal": {
                     "id": 16421113,
                     "pronostico": "2-0",
-                    "real": "2-2",
-                    "acierto_1x2": false,
+                    "real": "3-2",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }

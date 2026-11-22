@@ -1,6 +1,6 @@
 {
     "competicion": "LaLiga 2026-27",
-    "generado": "2026-11-22T15:28:11",
+    "generado": "2026-11-22T15:34:09",
     "jornadas_calculadas": [
         "J01",
         "J02",
@@ -32,11 +32,11 @@
                     "descripcion": "Mundial 2026"
                 }
             ],
-            "puntos_totales": 84,
-            "puntos_partidos": 81,
+            "puntos_totales": 85,
+            "puntos_partidos": 82,
             "bonus_rendimiento": 0,
             "puntos_ganador_perdedor": 3,
-            "aciertos_1x2": 64,
+            "aciertos_1x2": 65,
             "aciertos_exactos": 17,
             "partidos_pronosticados": 130,
             "jornadas_jugadas": 13,
@@ -141,8 +141,8 @@
                     "perdedor": false
                 },
                 "J13": {
-                    "puntos": 1,
-                    "aciertos_1x2": 1,
+                    "puntos": 2,
+                    "aciertos_1x2": 2,
                     "aciertos_exactos": 0,
                     "bonus": 0,
                     "ganador": false,
@@ -155,11 +155,11 @@
             "slug": "aitor",
             "nombre": "Aitor",
             "insignias": [],
-            "puntos_totales": 73,
-            "puntos_partidos": 72,
+            "puntos_totales": 74,
+            "puntos_partidos": 73,
             "bonus_rendimiento": 0,
             "puntos_ganador_perdedor": 1,
-            "aciertos_1x2": 62,
+            "aciertos_1x2": 63,
             "aciertos_exactos": 10,
             "partidos_pronosticados": 129,
             "jornadas_jugadas": 13,
@@ -264,8 +264,8 @@
                     "perdedor": true
                 },
                 "J13": {
-                    "puntos": 1,
-                    "aciertos_1x2": 1,
+                    "puntos": 2,
+                    "aciertos_1x2": 2,
                     "aciertos_exactos": 0,
                     "bonus": 0,
                     "ganador": false,
@@ -283,11 +283,11 @@
                     "descripcion": "Liga 2023/24"
                 }
             ],
-            "puntos_totales": 72,
-            "puntos_partidos": 71,
+            "puntos_totales": 73,
+            "puntos_partidos": 72,
             "bonus_rendimiento": 0,
             "puntos_ganador_perdedor": 1,
-            "aciertos_1x2": 59,
+            "aciertos_1x2": 60,
             "aciertos_exactos": 12,
             "partidos_pronosticados": 130,
             "jornadas_jugadas": 13,
@@ -392,8 +392,8 @@
                     "perdedor": false
                 },
                 "J13": {
-                    "puntos": 1,
-                    "aciertos_1x2": 1,
+                    "puntos": 2,
+                    "aciertos_1x2": 2,
                     "aciertos_exactos": 0,
                     "bonus": 0,
                     "ganador": false,
@@ -406,11 +406,11 @@
             "slug": "álvaro",
             "nombre": "Álvaro",
             "insignias": [],
-            "puntos_totales": 70,
-            "puntos_partidos": 68,
+            "puntos_totales": 71,
+            "puntos_partidos": 69,
             "bonus_rendimiento": 2,
             "puntos_ganador_perdedor": 0,
-            "aciertos_1x2": 52,
+            "aciertos_1x2": 53,
             "aciertos_exactos": 16,
             "partidos_pronosticados": 115,
             "jornadas_jugadas": 12,
@@ -507,8 +507,8 @@
                     "perdedor": false
                 },
                 "J13": {
-                    "puntos": 1,
-                    "aciertos_1x2": 1,
+                    "puntos": 2,
+                    "aciertos_1x2": 2,
                     "aciertos_exactos": 0,
                     "bonus": 0,
                     "ganador": false,
@@ -521,11 +521,11 @@
             "slug": "adrián",
             "nombre": "Adrián",
             "insignias": [],
-            "puntos_totales": 68,
-            "puntos_partidos": 68,
+            "puntos_totales": 69,
+            "puntos_partidos": 69,
             "bonus_rendimiento": 0,
             "puntos_ganador_perdedor": 0,
-            "aciertos_1x2": 59,
+            "aciertos_1x2": 60,
             "aciertos_exactos": 9,
             "partidos_pronosticados": 128,
             "jornadas_jugadas": 13,
@@ -630,8 +630,8 @@
                     "perdedor": true
                 },
                 "J13": {
-                    "puntos": 1,
-                    "aciertos_1x2": 1,
+                    "puntos": 2,
+                    "aciertos_1x2": 2,
                     "aciertos_exactos": 0,
                     "bonus": 0,
                     "ganador": false,
