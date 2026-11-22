@@ -7,15 +7,15 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 75,
-    "puntos_partidos": 74,
+    "puntos_totales": 77,
+    "puntos_partidos": 75,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 61,
+    "puntos_ganador_perdedor": 2,
+    "aciertos_1x2": 62,
     "aciertos_exactos": 13,
     "partidos_pronosticados": 130,
     "jornadas_jugadas": 13,
-    "jornadas_ganadas": 3,
+    "jornadas_ganadas": 4,
     "jornadas_perdidas": 2,
     "punto_partida": 0,
     "por_jornada": {
@@ -1060,11 +1060,11 @@
             }
         },
         "J13": {
-            "puntos": 4,
-            "aciertos_1x2": 3,
+            "puntos": 6,
+            "aciertos_1x2": 4,
             "aciertos_exactos": 1,
             "bonus": 0,
-            "ganador": false,
+            "ganador": true,
             "perdedor": false,
             "detalle": {
                 "Athletic_vs_Espanyol": {
@@ -1134,10 +1134,10 @@
                 "Getafe_vs_Atlético": {
                     "id": 16421115,
                     "pronostico": "1-2",
-                    "real": "0-0",
-                    "acierto_1x2": false,
+                    "real": "0-1",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }
