@@ -2,16 +2,16 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 74,
+    "puntos_totales": 73,
     "puntos_partidos": 73,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 1,
+    "puntos_ganador_perdedor": 0,
     "aciertos_1x2": 63,
     "aciertos_exactos": 10,
     "partidos_pronosticados": 129,
     "jornadas_jugadas": 13,
     "jornadas_ganadas": 5,
-    "jornadas_perdidas": 4,
+    "jornadas_perdidas": 5,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -594,14 +594,6 @@
                     "acierto_exacto": false,
                     "puntos": 0
                 },
-                "Atlético_vs_Real Madrid": {
-                    "id": 16416339,
-                    "pronostico": "1-2",
-                    "real": "2-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "Deportivo de A Coruña_vs_Betis": {
                     "id": 16416313,
                     "pronostico": "1-2",
@@ -1063,12 +1055,12 @@
             }
         },
         "J13": {
-            "puntos": 2,
+            "puntos": 1,
             "aciertos_1x2": 2,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
-            "perdedor": false,
+            "perdedor": true,
             "detalle": {
                 "Athletic_vs_Espanyol": {
                     "id": 16421112,
@@ -1117,6 +1109,14 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
+                },
+                "Real Racing Club_vs_Real Sociedad": {
+                    "id": 16421114,
+                    "pronostico": "0-3",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         }
