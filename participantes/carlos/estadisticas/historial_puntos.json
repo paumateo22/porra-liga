@@ -2,15 +2,15 @@
     "participante": "carlos",
     "nombre": "Carlos",
     "insignias": [],
-    "puntos_totales": 65,
-    "puntos_partidos": 65,
+    "puntos_totales": 63,
+    "puntos_partidos": 64,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 56,
+    "puntos_ganador_perdedor": -1,
+    "aciertos_1x2": 55,
     "aciertos_exactos": 9,
     "partidos_pronosticados": 119,
     "jornadas_jugadas": 12,
-    "jornadas_ganadas": 3,
+    "jornadas_ganadas": 2,
     "jornadas_perdidas": 3,
     "punto_partida": 0,
     "por_jornada": {
@@ -555,11 +555,11 @@
             }
         },
         "J07": {
-            "puntos": 5,
-            "aciertos_1x2": 4,
+            "puntos": 3,
+            "aciertos_1x2": 3,
             "aciertos_exactos": 0,
             "bonus": 0,
-            "ganador": true,
+            "ganador": false,
             "perdedor": false,
             "detalle": {
                 "Espanyol_vs_Elche": {
@@ -593,14 +593,6 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
-                },
-                "Getafe_vs_Málaga CF": {
-                    "id": 16416303,
-                    "pronostico": "2-0",
-                    "real": "1-0",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
                 },
                 "Atlético_vs_Real Madrid": {
                     "id": 16416339,
