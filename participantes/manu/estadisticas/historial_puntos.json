@@ -2,11 +2,11 @@
     "participante": "manu",
     "nombre": "Manu",
     "insignias": [],
-    "puntos_totales": 40,
-    "puntos_partidos": 36,
+    "puntos_totales": 39,
+    "puntos_partidos": 35,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 34,
+    "aciertos_1x2": 33,
     "aciertos_exactos": 2,
     "partidos_pronosticados": 70,
     "jornadas_jugadas": 7,
@@ -375,8 +375,8 @@
             }
         },
         "J07": {
-            "puntos": 2,
-            "aciertos_1x2": 2,
+            "puntos": 1,
+            "aciertos_1x2": 1,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
@@ -421,14 +421,6 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
-                },
-                "Villarreal_vs_Levante UD": {
-                    "id": 16416294,
-                    "pronostico": "3-2",
-                    "real": "3-1",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
                 },
                 "Valencia_vs_Real Sociedad": {
                     "id": 16416297,

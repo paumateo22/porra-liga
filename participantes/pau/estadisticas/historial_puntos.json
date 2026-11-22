@@ -7,16 +7,16 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 73,
-    "puntos_partidos": 72,
+    "puntos_totales": 70,
+    "puntos_partidos": 70,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 1,
-    "aciertos_1x2": 60,
-    "aciertos_exactos": 12,
+    "puntos_ganador_perdedor": 0,
+    "aciertos_1x2": 59,
+    "aciertos_exactos": 11,
     "partidos_pronosticados": 130,
     "jornadas_jugadas": 13,
     "jornadas_ganadas": 3,
-    "jornadas_perdidas": 2,
+    "jornadas_perdidas": 3,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -560,9 +560,9 @@
             }
         },
         "J07": {
-            "puntos": 5,
-            "aciertos_1x2": 3,
-            "aciertos_exactos": 2,
+            "puntos": 3,
+            "aciertos_1x2": 2,
+            "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
             "perdedor": false,
@@ -603,14 +603,6 @@
                     "id": 16416313,
                     "pronostico": "1-1",
                     "real": "1-1",
-                    "acierto_1x2": true,
-                    "acierto_exacto": true,
-                    "puntos": 2
-                },
-                "Villarreal_vs_Levante UD": {
-                    "id": 16416294,
-                    "pronostico": "3-1",
-                    "real": "3-1",
                     "acierto_1x2": true,
                     "acierto_exacto": true,
                     "puntos": 2
@@ -1068,12 +1060,12 @@
             }
         },
         "J13": {
-            "puntos": 2,
+            "puntos": 1,
             "aciertos_1x2": 2,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
-            "perdedor": false,
+            "perdedor": true,
             "detalle": {
                 "Athletic_vs_Espanyol": {
                     "id": 16421112,
@@ -1127,6 +1119,14 @@
                     "id": 16421114,
                     "pronostico": "0-2",
                     "real": "3-2",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Osasuna_vs_Málaga CF": {
+                    "id": 16421117,
+                    "pronostico": "1-0",
+                    "real": "0-0",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0

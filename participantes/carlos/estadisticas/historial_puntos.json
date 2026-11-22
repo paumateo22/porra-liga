@@ -2,11 +2,11 @@
     "participante": "carlos",
     "nombre": "Carlos",
     "insignias": [],
-    "puntos_totales": 63,
-    "puntos_partidos": 64,
+    "puntos_totales": 62,
+    "puntos_partidos": 63,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": -1,
-    "aciertos_1x2": 55,
+    "aciertos_1x2": 54,
     "aciertos_exactos": 9,
     "partidos_pronosticados": 119,
     "jornadas_jugadas": 12,
@@ -555,8 +555,8 @@
             }
         },
         "J07": {
-            "puntos": 3,
-            "aciertos_1x2": 3,
+            "puntos": 2,
+            "aciertos_1x2": 2,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -601,14 +601,6 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
-                },
-                "Villarreal_vs_Levante UD": {
-                    "id": 16416294,
-                    "pronostico": "2-0",
-                    "real": "3-1",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
                 },
                 "Valencia_vs_Real Sociedad": {
                     "id": 16416297,

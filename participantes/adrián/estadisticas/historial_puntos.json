@@ -2,16 +2,16 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 69,
-    "puntos_partidos": 69,
+    "puntos_totales": 67,
+    "puntos_partidos": 68,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 60,
+    "puntos_ganador_perdedor": -1,
+    "aciertos_1x2": 59,
     "aciertos_exactos": 9,
     "partidos_pronosticados": 128,
     "jornadas_jugadas": 13,
     "jornadas_ganadas": 3,
-    "jornadas_perdidas": 3,
+    "jornadas_perdidas": 4,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -539,8 +539,8 @@
             }
         },
         "J07": {
-            "puntos": 6,
-            "aciertos_1x2": 4,
+            "puntos": 5,
+            "aciertos_1x2": 3,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": true,
@@ -585,14 +585,6 @@
                     "acierto_1x2": true,
                     "acierto_exacto": true,
                     "puntos": 2
-                },
-                "Villarreal_vs_Levante UD": {
-                    "id": 16416294,
-                    "pronostico": "2-1",
-                    "real": "3-1",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
                 },
                 "Valencia_vs_Real Sociedad": {
                     "id": 16416297,
@@ -1047,12 +1039,12 @@
             }
         },
         "J13": {
-            "puntos": 2,
+            "puntos": 1,
             "aciertos_1x2": 2,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
-            "perdedor": false,
+            "perdedor": true,
             "detalle": {
                 "Athletic_vs_Espanyol": {
                     "id": 16421112,
@@ -1106,6 +1098,14 @@
                     "id": 16421114,
                     "pronostico": "0-2",
                     "real": "3-2",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Osasuna_vs_Málaga CF": {
+                    "id": 16421117,
+                    "pronostico": "2-1",
+                    "real": "0-0",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
