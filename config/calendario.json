@@ -279,30 +279,6 @@
             "fecha": "2026-09-05T21:00:00"
         },
         {
-            "id": 16416325,
-            "local": "Valencia",
-            "visitante": "FC Barcelona",
-            "id_escudo_local": 2828,
-            "id_escudo_visitante": 2817,
-            "fecha": "2026-09-06T16:15:00"
-        },
-        {
-            "id": 16416318,
-            "local": "Alavés",
-            "visitante": "Osasuna",
-            "id_escudo_local": 2885,
-            "id_escudo_visitante": 2820,
-            "fecha": "2026-09-06T18:30:00"
-        },
-        {
-            "id": 16416320,
-            "local": "Málaga CF",
-            "visitante": "Levante UD",
-            "id_escudo_local": 2830,
-            "id_escudo_visitante": 2849,
-            "fecha": "2026-09-06T18:30:00"
-        },
-        {
             "id": 16416323,
             "local": "Espanyol",
             "visitante": "Sevilla",
@@ -525,11 +501,43 @@
             "fecha": "2026-09-19T18:30:00"
         },
         {
+            "id": 16416349,
+            "local": "Sevilla",
+            "visitante": "FC Barcelona",
+            "id_escudo_local": 2833,
+            "id_escudo_visitante": 2817,
+            "fecha": "2026-09-19T21:00:00"
+        },
+        {
+            "id": 16416303,
+            "local": "Getafe",
+            "visitante": "Málaga CF",
+            "id_escudo_local": 2859,
+            "id_escudo_visitante": 2830,
+            "fecha": "2026-09-20T14:00:00"
+        },
+        {
+            "id": 16416339,
+            "local": "Atlético",
+            "visitante": "Real Madrid",
+            "id_escudo_local": 2836,
+            "id_escudo_visitante": 2829,
+            "fecha": "2026-09-20T16:15:00"
+        },
+        {
             "id": 16416313,
             "local": "Deportivo de A Coruña",
             "visitante": "Betis",
             "id_escudo_local": 2832,
             "id_escudo_visitante": 2816,
+            "fecha": "2026-09-20T18:30:00"
+        },
+        {
+            "id": 16416294,
+            "local": "Villarreal",
+            "visitante": "Levante UD",
+            "id_escudo_local": 2819,
+            "id_escudo_visitante": 2849,
             "fecha": "2026-09-20T18:30:00"
         },
         {
