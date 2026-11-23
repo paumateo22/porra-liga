@@ -2,12 +2,12 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 71,
-    "puntos_partidos": 71,
+    "puntos_totales": 72,
+    "puntos_partidos": 72,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
     "aciertos_1x2": 62,
-    "aciertos_exactos": 9,
+    "aciertos_exactos": 10,
     "partidos_pronosticados": 128,
     "jornadas_jugadas": 13,
     "jornadas_ganadas": 3,
@@ -539,11 +539,11 @@
             }
         },
         "J07": {
-            "puntos": 7,
-            "aciertos_1x2": 5,
+            "puntos": 5,
+            "aciertos_1x2": 4,
             "aciertos_exactos": 1,
             "bonus": 0,
-            "ganador": true,
+            "ganador": false,
             "perdedor": false,
             "detalle": {
                 "Espanyol_vs_Elche": {
@@ -614,14 +614,6 @@
                     "id": 16416294,
                     "pronostico": "2-1",
                     "real": "3-1",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                },
-                "Valencia_vs_Real Sociedad": {
-                    "id": 16416297,
-                    "pronostico": "1-3",
-                    "real": "2-3",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
@@ -1071,11 +1063,11 @@
             }
         },
         "J13": {
-            "puntos": 3,
-            "aciertos_1x2": 3,
-            "aciertos_exactos": 0,
+            "puntos": 6,
+            "aciertos_1x2": 4,
+            "aciertos_exactos": 1,
             "bonus": 0,
-            "ganador": false,
+            "ganador": true,
             "perdedor": false,
             "detalle": {
                 "Athletic_vs_Espanyol": {
@@ -1149,6 +1141,14 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
+                },
+                "Levante UD_vs_Elche": {
+                    "id": 16421118,
+                    "pronostico": "0-0",
+                    "real": "0-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         }

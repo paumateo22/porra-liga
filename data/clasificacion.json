@@ -1,6 +1,6 @@
 {
     "competicion": "LaLiga 2026-27",
-    "generado": "2026-11-23T18:49:13",
+    "generado": "2026-11-23T21:04:15",
     "jornadas_calculadas": [
         "J01",
         "J02",
@@ -283,16 +283,16 @@
             "slug": "aitor",
             "nombre": "Aitor",
             "insignias": [],
-            "puntos_totales": 76,
-            "puntos_partidos": 75,
+            "puntos_totales": 74,
+            "puntos_partidos": 74,
             "bonus_rendimiento": 0,
-            "puntos_ganador_perdedor": 1,
-            "aciertos_1x2": 65,
+            "puntos_ganador_perdedor": 0,
+            "aciertos_1x2": 64,
             "aciertos_exactos": 10,
             "partidos_pronosticados": 129,
             "jornadas_jugadas": 13,
             "jornadas_ganadas": 5,
-            "jornadas_perdidas": 4,
+            "jornadas_perdidas": 5,
             "punto_partida": 0,
             "por_jornada": {
                 "J01": {
@@ -344,8 +344,8 @@
                     "perdedor": false
                 },
                 "J07": {
-                    "puntos": 2,
-                    "aciertos_1x2": 3,
+                    "puntos": 1,
+                    "aciertos_1x2": 2,
                     "aciertos_exactos": 0,
                     "bonus": 0,
                     "ganador": false,
@@ -392,12 +392,12 @@
                     "perdedor": true
                 },
                 "J13": {
-                    "puntos": 3,
+                    "puntos": 2,
                     "aciertos_1x2": 3,
                     "aciertos_exactos": 0,
                     "bonus": 0,
                     "ganador": false,
-                    "perdedor": false
+                    "perdedor": true
                 }
             }
         },
@@ -406,11 +406,11 @@
             "slug": "álvaro",
             "nombre": "Álvaro",
             "insignias": [],
-            "puntos_totales": 72,
-            "puntos_partidos": 71,
+            "puntos_totales": 73,
+            "puntos_partidos": 72,
             "bonus_rendimiento": 2,
             "puntos_ganador_perdedor": -1,
-            "aciertos_1x2": 54,
+            "aciertos_1x2": 55,
             "aciertos_exactos": 17,
             "partidos_pronosticados": 115,
             "jornadas_jugadas": 12,
@@ -507,8 +507,8 @@
                     "perdedor": false
                 },
                 "J13": {
-                    "puntos": 1,
-                    "aciertos_1x2": 2,
+                    "puntos": 2,
+                    "aciertos_1x2": 3,
                     "aciertos_exactos": 0,
                     "bonus": 0,
                     "ganador": false,
@@ -521,12 +521,12 @@
             "slug": "adrián",
             "nombre": "Adrián",
             "insignias": [],
-            "puntos_totales": 71,
-            "puntos_partidos": 71,
+            "puntos_totales": 72,
+            "puntos_partidos": 72,
             "bonus_rendimiento": 0,
             "puntos_ganador_perdedor": 0,
             "aciertos_1x2": 62,
-            "aciertos_exactos": 9,
+            "aciertos_exactos": 10,
             "partidos_pronosticados": 128,
             "jornadas_jugadas": 13,
             "jornadas_ganadas": 3,
@@ -582,11 +582,11 @@
                     "perdedor": false
                 },
                 "J07": {
-                    "puntos": 7,
-                    "aciertos_1x2": 5,
+                    "puntos": 5,
+                    "aciertos_1x2": 4,
                     "aciertos_exactos": 1,
                     "bonus": 0,
-                    "ganador": true,
+                    "ganador": false,
                     "perdedor": false
                 },
                 "J08": {
@@ -630,11 +630,11 @@
                     "perdedor": true
                 },
                 "J13": {
-                    "puntos": 3,
-                    "aciertos_1x2": 3,
-                    "aciertos_exactos": 0,
+                    "puntos": 6,
+                    "aciertos_1x2": 4,
+                    "aciertos_exactos": 1,
                     "bonus": 0,
-                    "ganador": false,
+                    "ganador": true,
                     "perdedor": false
                 }
             }
@@ -834,11 +834,11 @@
             "slug": "javi",
             "nombre": "Javi",
             "insignias": [],
-            "puntos_totales": 26,
-            "puntos_partidos": 29,
+            "puntos_totales": 25,
+            "puntos_partidos": 28,
             "bonus_rendimiento": 0,
             "puntos_ganador_perdedor": -3,
-            "aciertos_1x2": 26,
+            "aciertos_1x2": 25,
             "aciertos_exactos": 3,
             "partidos_pronosticados": 69,
             "jornadas_jugadas": 7,
@@ -895,8 +895,8 @@
                     "perdedor": true
                 },
                 "J07": {
-                    "puntos": 5,
-                    "aciertos_1x2": 4,
+                    "puntos": 4,
+                    "aciertos_1x2": 3,
                     "aciertos_exactos": 1,
                     "bonus": 0,
                     "ganador": false,

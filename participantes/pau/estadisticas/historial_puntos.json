@@ -638,14 +638,6 @@
                     "acierto_1x2": true,
                     "acierto_exacto": true,
                     "puntos": 2
-                },
-                "Valencia_vs_Real Sociedad": {
-                    "id": 16416297,
-                    "pronostico": "2-1",
-                    "real": "2-3",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
                 }
             }
         },
@@ -1170,6 +1162,14 @@
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
+                },
+                "Levante UD_vs_Elche": {
+                    "id": 16421118,
+                    "pronostico": "2-1",
+                    "real": "0-0",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         }
