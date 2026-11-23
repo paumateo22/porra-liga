@@ -1,6 +1,6 @@
 {
     "competicion": "LaLiga 2026-27",
-    "generado": "2026-11-23T13:19:11",
+    "generado": "2026-11-23T18:49:13",
     "jornadas_calculadas": [
         "J01",
         "J02",
@@ -160,15 +160,15 @@
                     "descripcion": "Liga 2023/24"
                 }
             ],
-            "puntos_totales": 78,
-            "puntos_partidos": 76,
+            "puntos_totales": 81,
+            "puntos_partidos": 78,
             "bonus_rendimiento": 0,
-            "puntos_ganador_perdedor": 2,
-            "aciertos_1x2": 63,
-            "aciertos_exactos": 13,
+            "puntos_ganador_perdedor": 3,
+            "aciertos_1x2": 64,
+            "aciertos_exactos": 14,
             "partidos_pronosticados": 130,
             "jornadas_jugadas": 13,
-            "jornadas_ganadas": 4,
+            "jornadas_ganadas": 5,
             "jornadas_perdidas": 2,
             "punto_partida": 0,
             "por_jornada": {
@@ -221,11 +221,11 @@
                     "perdedor": false
                 },
                 "J07": {
-                    "puntos": 6,
-                    "aciertos_1x2": 4,
-                    "aciertos_exactos": 2,
+                    "puntos": 9,
+                    "aciertos_1x2": 5,
+                    "aciertos_exactos": 3,
                     "bonus": 0,
-                    "ganador": false,
+                    "ganador": true,
                     "perdedor": false
                 },
                 "J08": {
@@ -521,15 +521,15 @@
             "slug": "adrián",
             "nombre": "Adrián",
             "insignias": [],
-            "puntos_totales": 68,
-            "puntos_partidos": 69,
+            "puntos_totales": 71,
+            "puntos_partidos": 71,
             "bonus_rendimiento": 0,
-            "puntos_ganador_perdedor": -1,
-            "aciertos_1x2": 61,
-            "aciertos_exactos": 8,
+            "puntos_ganador_perdedor": 0,
+            "aciertos_1x2": 62,
+            "aciertos_exactos": 9,
             "partidos_pronosticados": 128,
             "jornadas_jugadas": 13,
-            "jornadas_ganadas": 2,
+            "jornadas_ganadas": 3,
             "jornadas_perdidas": 3,
             "punto_partida": 0,
             "por_jornada": {
@@ -582,11 +582,11 @@
                     "perdedor": false
                 },
                 "J07": {
-                    "puntos": 4,
-                    "aciertos_1x2": 4,
-                    "aciertos_exactos": 0,
+                    "puntos": 7,
+                    "aciertos_1x2": 5,
+                    "aciertos_exactos": 1,
                     "bonus": 0,
-                    "ganador": false,
+                    "ganador": true,
                     "perdedor": false
                 },
                 "J08": {
