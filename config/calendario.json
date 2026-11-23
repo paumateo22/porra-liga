@@ -279,6 +279,30 @@
             "fecha": "2026-09-05T21:00:00"
         },
         {
+            "id": 16416325,
+            "local": "Valencia",
+            "visitante": "FC Barcelona",
+            "id_escudo_local": 2828,
+            "id_escudo_visitante": 2817,
+            "fecha": "2026-09-06T16:15:00"
+        },
+        {
+            "id": 16416318,
+            "local": "Alavés",
+            "visitante": "Osasuna",
+            "id_escudo_local": 2885,
+            "id_escudo_visitante": 2820,
+            "fecha": "2026-09-06T18:30:00"
+        },
+        {
+            "id": 16416320,
+            "local": "Málaga CF",
+            "visitante": "Levante UD",
+            "id_escudo_local": 2830,
+            "id_escudo_visitante": 2849,
+            "fecha": "2026-09-06T18:30:00"
+        },
+        {
             "id": 16416323,
             "local": "Espanyol",
             "visitante": "Sevilla",
@@ -1199,6 +1223,22 @@
     ],
     "J16": [
         {
+            "id": 16462544,
+            "local": "Villarreal",
+            "visitante": "Rayo",
+            "id_escudo_local": 2819,
+            "id_escudo_visitante": 2818,
+            "fecha": "2026-12-12T16:15:00"
+        },
+        {
+            "id": 16462523,
+            "local": "Deportivo de A Coruña",
+            "visitante": "Athletic",
+            "id_escudo_local": 2832,
+            "id_escudo_visitante": 2825,
+            "fecha": "2026-12-13T16:15:00"
+        },
+        {
             "id": 16462517,
             "local": "Atlético",
             "visitante": "Valencia",
@@ -1212,14 +1252,6 @@
             "visitante": "Real Racing Club",
             "id_escudo_local": 2816,
             "id_escudo_visitante": 2835,
-            "fecha": "2026-12-13T20:00:00"
-        },
-        {
-            "id": 16462523,
-            "local": "Deportivo de A Coruña",
-            "visitante": "Athletic",
-            "id_escudo_local": 2832,
-            "id_escudo_visitante": 2825,
             "fecha": "2026-12-13T20:00:00"
         },
         {
@@ -1268,14 +1300,6 @@
             "visitante": "Getafe",
             "id_escudo_local": 2824,
             "id_escudo_visitante": 2859,
-            "fecha": "2026-12-13T20:00:00"
-        },
-        {
-            "id": 16462544,
-            "local": "Villarreal",
-            "visitante": "Rayo",
-            "id_escudo_local": 2819,
-            "id_escudo_visitante": 2818,
             "fecha": "2026-12-13T20:00:00"
         }
     ],
