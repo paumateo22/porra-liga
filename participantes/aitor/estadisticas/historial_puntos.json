@@ -2,16 +2,16 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 74,
-    "puntos_partidos": 74,
+    "puntos_totales": 76,
+    "puntos_partidos": 75,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 64,
+    "puntos_ganador_perdedor": 1,
+    "aciertos_1x2": 65,
     "aciertos_exactos": 10,
     "partidos_pronosticados": 129,
     "jornadas_jugadas": 13,
     "jornadas_ganadas": 5,
-    "jornadas_perdidas": 5,
+    "jornadas_perdidas": 4,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -1071,12 +1071,12 @@
             }
         },
         "J13": {
-            "puntos": 2,
-            "aciertos_1x2": 3,
+            "puntos": 4,
+            "aciertos_1x2": 4,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
-            "perdedor": true,
+            "perdedor": false,
             "detalle": {
                 "Athletic_vs_Espanyol": {
                     "id": 16421112,
@@ -1153,10 +1153,10 @@
                 "Levante UD_vs_Elche": {
                     "id": 16421118,
                     "pronostico": "0-2",
-                    "real": "0-0",
-                    "acierto_1x2": false,
+                    "real": "0-1",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }

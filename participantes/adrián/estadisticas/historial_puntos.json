@@ -2,15 +2,15 @@
     "participante": "adrián",
     "nombre": "Adrián",
     "insignias": [],
-    "puntos_totales": 72,
-    "puntos_partidos": 72,
+    "puntos_totales": 69,
+    "puntos_partidos": 70,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 62,
-    "aciertos_exactos": 10,
+    "puntos_ganador_perdedor": -1,
+    "aciertos_1x2": 61,
+    "aciertos_exactos": 9,
     "partidos_pronosticados": 128,
     "jornadas_jugadas": 13,
-    "jornadas_ganadas": 3,
+    "jornadas_ganadas": 2,
     "jornadas_perdidas": 3,
     "punto_partida": 0,
     "por_jornada": {
@@ -1063,11 +1063,11 @@
             }
         },
         "J13": {
-            "puntos": 6,
-            "aciertos_1x2": 4,
-            "aciertos_exactos": 1,
+            "puntos": 3,
+            "aciertos_1x2": 3,
+            "aciertos_exactos": 0,
             "bonus": 0,
-            "ganador": true,
+            "ganador": false,
             "perdedor": false,
             "detalle": {
                 "Athletic_vs_Espanyol": {
@@ -1145,10 +1145,10 @@
                 "Levante UD_vs_Elche": {
                     "id": 16421118,
                     "pronostico": "0-0",
-                    "real": "0-0",
-                    "acierto_1x2": true,
-                    "acierto_exacto": true,
-                    "puntos": 2
+                    "real": "0-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
                 }
             }
         }

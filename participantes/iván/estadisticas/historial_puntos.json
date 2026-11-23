@@ -7,11 +7,11 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 93,
-    "puntos_partidos": 88,
+    "puntos_totales": 94,
+    "puntos_partidos": 89,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 5,
-    "aciertos_1x2": 69,
+    "aciertos_1x2": 70,
     "aciertos_exactos": 19,
     "partidos_pronosticados": 130,
     "jornadas_jugadas": 13,
@@ -1084,8 +1084,8 @@
             }
         },
         "J13": {
-            "puntos": 6,
-            "aciertos_1x2": 4,
+            "puntos": 7,
+            "aciertos_1x2": 5,
             "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": true,
@@ -1166,10 +1166,10 @@
                 "Levante UD_vs_Elche": {
                     "id": 16421118,
                     "pronostico": "1-2",
-                    "real": "0-0",
-                    "acierto_1x2": false,
+                    "real": "0-1",
+                    "acierto_1x2": true,
                     "acierto_exacto": false,
-                    "puntos": 0
+                    "puntos": 1
                 }
             }
         }
