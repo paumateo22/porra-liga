@@ -549,6 +549,14 @@
             "fecha": "2026-09-20T16:15:00"
         },
         {
+            "id": 16416313,
+            "local": "Deportivo de A Coruña",
+            "visitante": "Betis",
+            "id_escudo_local": 2832,
+            "id_escudo_visitante": 2816,
+            "fecha": "2026-09-20T18:30:00"
+        },
+        {
             "id": 16416294,
             "local": "Villarreal",
             "visitante": "Levante UD",
