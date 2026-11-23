@@ -2,12 +2,12 @@
     "participante": "javi",
     "nombre": "Javi",
     "insignias": [],
-    "puntos_totales": 23,
-    "puntos_partidos": 26,
+    "puntos_totales": 26,
+    "puntos_partidos": 29,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": -3,
-    "aciertos_1x2": 24,
-    "aciertos_exactos": 2,
+    "aciertos_1x2": 26,
+    "aciertos_exactos": 3,
     "partidos_pronosticados": 69,
     "jornadas_jugadas": 7,
     "jornadas_ganadas": 1,
@@ -277,9 +277,9 @@
             }
         },
         "J04": {
-            "puntos": 1,
-            "aciertos_1x2": 1,
-            "aciertos_exactos": 0,
+            "puntos": 4,
+            "aciertos_1x2": 3,
+            "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
             "perdedor": false,
@@ -312,6 +312,30 @@
                     "id": 16416324,
                     "pronostico": "2-1",
                     "real": "2-3",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Valencia_vs_FC Barcelona": {
+                    "id": 16416325,
+                    "pronostico": "0-5",
+                    "real": "0-5",
+                    "acierto_1x2": true,
+                    "acierto_exacto": true,
+                    "puntos": 2
+                },
+                "Alavés_vs_Osasuna": {
+                    "id": 16416318,
+                    "pronostico": "2-1",
+                    "real": "5-2",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "Málaga CF_vs_Levante UD": {
+                    "id": 16416320,
+                    "pronostico": "1-0",
+                    "real": "0-0",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0

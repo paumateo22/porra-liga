@@ -2,11 +2,11 @@
     "participante": "álvaro",
     "nombre": "Álvaro",
     "insignias": [],
-    "puntos_totales": 71,
-    "puntos_partidos": 70,
+    "puntos_totales": 72,
+    "puntos_partidos": 71,
     "bonus_rendimiento": 2,
     "puntos_ganador_perdedor": -1,
-    "aciertos_1x2": 53,
+    "aciertos_1x2": 54,
     "aciertos_exactos": 17,
     "partidos_pronosticados": 115,
     "jornadas_jugadas": 12,
@@ -285,8 +285,8 @@
             }
         },
         "J04": {
-            "puntos": 4,
-            "aciertos_1x2": 2,
+            "puntos": 5,
+            "aciertos_1x2": 3,
             "aciertos_exactos": 2,
             "bonus": 0,
             "ganador": false,
@@ -320,6 +320,30 @@
                     "id": 16416324,
                     "pronostico": "3-1",
                     "real": "2-3",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Valencia_vs_FC Barcelona": {
+                    "id": 16416325,
+                    "pronostico": "0-2",
+                    "real": "0-5",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "Alavés_vs_Osasuna": {
+                    "id": 16416318,
+                    "pronostico": "1-1",
+                    "real": "5-2",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
+                "Málaga CF_vs_Levante UD": {
+                    "id": 16416320,
+                    "pronostico": "1-0",
+                    "real": "0-0",
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
