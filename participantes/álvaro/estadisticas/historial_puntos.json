@@ -2,12 +2,12 @@
     "participante": "álvaro",
     "nombre": "Álvaro",
     "insignias": [],
-    "puntos_totales": 72,
-    "puntos_partidos": 71,
+    "puntos_totales": 74,
+    "puntos_partidos": 73,
     "bonus_rendimiento": 2,
     "puntos_ganador_perdedor": -1,
-    "aciertos_1x2": 54,
-    "aciertos_exactos": 17,
+    "aciertos_1x2": 55,
+    "aciertos_exactos": 18,
     "partidos_pronosticados": 115,
     "jornadas_jugadas": 12,
     "jornadas_ganadas": 2,
@@ -981,9 +981,9 @@
             }
         },
         "J13": {
-            "puntos": 1,
-            "aciertos_1x2": 2,
-            "aciertos_exactos": 0,
+            "puntos": 3,
+            "aciertos_1x2": 3,
+            "aciertos_exactos": 1,
             "bonus": 0,
             "ganador": false,
             "perdedor": true,
@@ -1031,10 +1031,10 @@
                 "Levante UD_vs_Elche": {
                     "id": 16421118,
                     "pronostico": "1-1",
-                    "real": "0-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
+                    "real": "1-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": true,
+                    "puntos": 2
                 }
             }
         }
