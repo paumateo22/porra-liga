@@ -1,7 +1,7 @@
 {
     "clave": "J13",
     "jornada": 13,
-    "cerrada": false,
+    "cerrada": true,
     "resultado_jornada": {
         "ganadores": [
             {
@@ -27,8 +27,8 @@
                 "nombre": "Álvaro"
             }
         ],
-        "ganador_seguro": false,
-        "perdedor_seguro": false
+        "ganador_seguro": true,
+        "perdedor_seguro": true
     },
     "partidos": [
         {
@@ -161,7 +161,7 @@
         "16421118": {
             "goles_local": 1,
             "goles_visitante": 1,
-            "estado": "inprogress"
+            "estado": "finished"
         }
     },
     "jugadores": [
