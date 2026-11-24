@@ -2,11 +2,11 @@
     "participante": "aitor",
     "nombre": "Aitor",
     "insignias": [],
-    "puntos_totales": 74,
-    "puntos_partidos": 74,
+    "puntos_totales": 75,
+    "puntos_partidos": 75,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 0,
-    "aciertos_1x2": 64,
+    "aciertos_1x2": 65,
     "aciertos_exactos": 10,
     "partidos_pronosticados": 129,
     "jornadas_jugadas": 13,
@@ -555,8 +555,8 @@
             }
         },
         "J07": {
-            "puntos": 1,
-            "aciertos_1x2": 2,
+            "puntos": 2,
+            "aciertos_1x2": 3,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -630,6 +630,14 @@
                     "id": 16416294,
                     "pronostico": "2-0",
                     "real": "3-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
+                "Valencia_vs_Real Sociedad": {
+                    "id": 16416297,
+                    "pronostico": "0-3",
+                    "real": "2-3",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1
