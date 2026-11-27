@@ -2,16 +2,16 @@
     "participante": "carlos",
     "nombre": "Carlos",
     "insignias": [],
-    "puntos_totales": 66,
+    "puntos_totales": 65,
     "puntos_partidos": 66,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": 0,
+    "puntos_ganador_perdedor": -1,
     "aciertos_1x2": 57,
     "aciertos_exactos": 9,
-    "partidos_pronosticados": 119,
-    "jornadas_jugadas": 12,
+    "partidos_pronosticados": 129,
+    "jornadas_jugadas": 13,
     "jornadas_ganadas": 3,
-    "jornadas_perdidas": 3,
+    "jornadas_perdidas": 4,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -645,21 +645,13 @@
             }
         },
         "J08": {
-            "puntos": 8,
-            "aciertos_1x2": 6,
+            "puntos": 6,
+            "aciertos_1x2": 5,
             "aciertos_exactos": 2,
             "bonus": 0,
             "ganador": false,
-            "perdedor": false,
+            "perdedor": true,
             "detalle": {
-                "Málaga CF_vs_Espanyol": {
-                    "id": 16421062,
-                    "pronostico": "2-2",
-                    "real": "1-1",
-                    "acierto_1x2": true,
-                    "acierto_exacto": false,
-                    "puntos": 1
-                },
                 "Alavés_vs_Atlético": {
                     "id": 16421056,
                     "pronostico": "0-2",
@@ -1072,6 +1064,24 @@
                     "id": 16421101,
                     "pronostico": "3-4",
                     "real": "1-2",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                }
+            }
+        },
+        "J14": {
+            "puntos": 1,
+            "aciertos_1x2": 1,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "ganador": false,
+            "perdedor": false,
+            "detalle": {
+                "Levante UD_vs_Real Racing Club": {
+                    "id": 16421127,
+                    "pronostico": "2-2",
+                    "real": "0-0",
                     "acierto_1x2": true,
                     "acierto_exacto": false,
                     "puntos": 1

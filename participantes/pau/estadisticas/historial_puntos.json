@@ -7,14 +7,14 @@
             "descripcion": "Liga 2023/24"
         }
     ],
-    "puntos_totales": 81,
-    "puntos_partidos": 78,
+    "puntos_totales": 82,
+    "puntos_partidos": 79,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 3,
-    "aciertos_1x2": 64,
+    "aciertos_1x2": 65,
     "aciertos_exactos": 14,
-    "partidos_pronosticados": 130,
-    "jornadas_jugadas": 13,
+    "partidos_pronosticados": 140,
+    "jornadas_jugadas": 14,
     "jornadas_ganadas": 5,
     "jornadas_perdidas": 2,
     "punto_partida": 0,
@@ -657,14 +657,6 @@
             "ganador": true,
             "perdedor": false,
             "detalle": {
-                "Málaga CF_vs_Espanyol": {
-                    "id": 16421062,
-                    "pronostico": "1-2",
-                    "real": "1-1",
-                    "acierto_1x2": false,
-                    "acierto_exacto": false,
-                    "puntos": 0
-                },
                 "Alavés_vs_Atlético": {
                     "id": 16421056,
                     "pronostico": "1-2",
@@ -1178,6 +1170,24 @@
                     "acierto_1x2": false,
                     "acierto_exacto": false,
                     "puntos": 0
+                }
+            }
+        },
+        "J14": {
+            "puntos": 1,
+            "aciertos_1x2": 1,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "ganador": false,
+            "perdedor": false,
+            "detalle": {
+                "Levante UD_vs_Real Racing Club": {
+                    "id": 16421127,
+                    "pronostico": "2-2",
+                    "real": "0-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         }

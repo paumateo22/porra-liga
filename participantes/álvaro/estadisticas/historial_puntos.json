@@ -2,14 +2,14 @@
     "participante": "álvaro",
     "nombre": "Álvaro",
     "insignias": [],
-    "puntos_totales": 74,
-    "puntos_partidos": 73,
+    "puntos_totales": 75,
+    "puntos_partidos": 74,
     "bonus_rendimiento": 2,
     "puntos_ganador_perdedor": -1,
-    "aciertos_1x2": 55,
+    "aciertos_1x2": 56,
     "aciertos_exactos": 18,
-    "partidos_pronosticados": 115,
-    "jornadas_jugadas": 12,
+    "partidos_pronosticados": 125,
+    "jornadas_jugadas": 13,
     "jornadas_ganadas": 2,
     "jornadas_perdidas": 3,
     "punto_partida": 0,
@@ -1043,6 +1043,24 @@
                     "acierto_1x2": true,
                     "acierto_exacto": true,
                     "puntos": 2
+                }
+            }
+        },
+        "J14": {
+            "puntos": 1,
+            "aciertos_1x2": 1,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "ganador": false,
+            "perdedor": false,
+            "detalle": {
+                "Levante UD_vs_Real Racing Club": {
+                    "id": 16421127,
+                    "pronostico": "1-1",
+                    "real": "0-0",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
                 }
             }
         }
