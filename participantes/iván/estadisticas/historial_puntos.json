@@ -7,11 +7,11 @@
             "descripcion": "Mundial 2026"
         }
     ],
-    "puntos_totales": 91,
-    "puntos_partidos": 87,
+    "puntos_totales": 90,
+    "puntos_partidos": 86,
     "bonus_rendimiento": 0,
     "puntos_ganador_perdedor": 4,
-    "aciertos_1x2": 69,
+    "aciertos_1x2": 68,
     "aciertos_exactos": 18,
     "partidos_pronosticados": 140,
     "jornadas_jugadas": 14,
@@ -1174,8 +1174,8 @@
             }
         },
         "J14": {
-            "puntos": 1,
-            "aciertos_1x2": 1,
+            "puntos": 0,
+            "aciertos_1x2": 0,
             "aciertos_exactos": 0,
             "bonus": 0,
             "ganador": false,
@@ -1184,10 +1184,10 @@
                 "Levante UD_vs_Real Racing Club": {
                     "id": 16421127,
                     "pronostico": "1-1",
-                    "real": "0-0",
-                    "acierto_1x2": true,
+                    "real": "1-0",
+                    "acierto_1x2": false,
                     "acierto_exacto": false,
-                    "puntos": 1
+                    "puntos": 0
                 }
             }
         }

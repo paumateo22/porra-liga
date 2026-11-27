@@ -1,6 +1,6 @@
 {
     "competicion": "LaLiga 2026-27",
-    "generado": "2026-11-27T21:04:12",
+    "generado": "2026-11-27T21:46:11",
     "jornadas_calculadas": [
         "J01",
         "J02",
@@ -33,11 +33,11 @@
                     "descripcion": "Mundial 2026"
                 }
             ],
-            "puntos_totales": 91,
-            "puntos_partidos": 87,
+            "puntos_totales": 90,
+            "puntos_partidos": 86,
             "bonus_rendimiento": 0,
             "puntos_ganador_perdedor": 4,
-            "aciertos_1x2": 69,
+            "aciertos_1x2": 68,
             "aciertos_exactos": 18,
             "partidos_pronosticados": 140,
             "jornadas_jugadas": 14,
@@ -150,8 +150,8 @@
                     "perdedor": false
                 },
                 "J14": {
-                    "puntos": 1,
-                    "aciertos_1x2": 1,
+                    "puntos": 0,
+                    "aciertos_1x2": 0,
                     "aciertos_exactos": 0,
                     "bonus": 0,
                     "ganador": false,
@@ -169,11 +169,11 @@
                     "descripcion": "Liga 2023/24"
                 }
             ],
-            "puntos_totales": 82,
-            "puntos_partidos": 79,
+            "puntos_totales": 81,
+            "puntos_partidos": 78,
             "bonus_rendimiento": 0,
             "puntos_ganador_perdedor": 3,
-            "aciertos_1x2": 65,
+            "aciertos_1x2": 64,
             "aciertos_exactos": 14,
             "partidos_pronosticados": 140,
             "jornadas_jugadas": 14,
@@ -286,8 +286,8 @@
                     "perdedor": false
                 },
                 "J14": {
-                    "puntos": 1,
-                    "aciertos_1x2": 1,
+                    "puntos": 0,
+                    "aciertos_1x2": 0,
                     "aciertos_exactos": 0,
                     "bonus": 0,
                     "ganador": false,
@@ -423,11 +423,11 @@
             "slug": "álvaro",
             "nombre": "Álvaro",
             "insignias": [],
-            "puntos_totales": 75,
-            "puntos_partidos": 74,
+            "puntos_totales": 74,
+            "puntos_partidos": 73,
             "bonus_rendimiento": 2,
             "puntos_ganador_perdedor": -1,
-            "aciertos_1x2": 56,
+            "aciertos_1x2": 55,
             "aciertos_exactos": 18,
             "partidos_pronosticados": 125,
             "jornadas_jugadas": 13,
@@ -532,8 +532,8 @@
                     "perdedor": true
                 },
                 "J14": {
-                    "puntos": 1,
-                    "aciertos_1x2": 1,
+                    "puntos": 0,
+                    "aciertos_1x2": 0,
                     "aciertos_exactos": 0,
                     "bonus": 0,
                     "ganador": false,
@@ -546,11 +546,11 @@
             "slug": "adrián",
             "nombre": "Adrián",
             "insignias": [],
-            "puntos_totales": 74,
-            "puntos_partidos": 73,
+            "puntos_totales": 73,
+            "puntos_partidos": 72,
             "bonus_rendimiento": 0,
             "puntos_ganador_perdedor": 1,
-            "aciertos_1x2": 64,
+            "aciertos_1x2": 63,
             "aciertos_exactos": 9,
             "partidos_pronosticados": 138,
             "jornadas_jugadas": 14,
@@ -663,8 +663,8 @@
                     "perdedor": false
                 },
                 "J14": {
-                    "puntos": 1,
-                    "aciertos_1x2": 1,
+                    "puntos": 0,
+                    "aciertos_1x2": 0,
                     "aciertos_exactos": 0,
                     "bonus": 0,
                     "ganador": false,
@@ -677,11 +677,11 @@
             "slug": "carlos",
             "nombre": "Carlos",
             "insignias": [],
-            "puntos_totales": 65,
-            "puntos_partidos": 66,
+            "puntos_totales": 64,
+            "puntos_partidos": 65,
             "bonus_rendimiento": 0,
             "puntos_ganador_perdedor": -1,
-            "aciertos_1x2": 57,
+            "aciertos_1x2": 56,
             "aciertos_exactos": 9,
             "partidos_pronosticados": 129,
             "jornadas_jugadas": 13,
@@ -786,8 +786,8 @@
                     "perdedor": false
                 },
                 "J14": {
-                    "puntos": 1,
-                    "aciertos_1x2": 1,
+                    "puntos": 0,
+                    "aciertos_1x2": 0,
                     "aciertos_exactos": 0,
                     "bonus": 0,
                     "ganador": false,
