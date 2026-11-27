@@ -160,6 +160,20 @@
             }
         },
         {
+            "slug": "aitor",
+            "nombre": "Aitor",
+            "insignias": [],
+            "aciertos_1x2": 0,
+            "aciertos_exactos": 0,
+            "bonus": 0,
+            "elegible": true,
+            "ganador": false,
+            "perdedor": false,
+            "puntos": 0,
+            "pronosticados": 9,
+            "predicciones": {}
+        },
+        {
             "slug": "carlos",
             "nombre": "Carlos",
             "insignias": [],
