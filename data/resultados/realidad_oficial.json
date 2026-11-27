@@ -796,17 +796,6 @@
     ],
     "J08": [
         {
-            "id": 16421062,
-            "local": "Málaga CF",
-            "visitante": "Espanyol",
-            "id_escudo_local": 2830,
-            "id_escudo_visitante": 2814,
-            "fecha": "2026-10-09T21:00:00",
-            "goles_local": 1,
-            "goles_visitante": 1,
-            "estado": "finished"
-        },
-        {
             "id": 16421056,
             "local": "Alavés",
             "visitante": "Atlético",
@@ -1474,9 +1463,9 @@
             "id_escudo_local": 2849,
             "id_escudo_visitante": 2835,
             "fecha": "2026-11-27T21:00:00",
-            "goles_local": null,
-            "goles_visitante": null,
-            "estado": "notstarted"
+            "goles_local": 0,
+            "goles_visitante": 0,
+            "estado": "inprogress"
         },
         {
             "id": 16421120,
