@@ -1,7 +1,7 @@
 {
     "clave": "J08",
     "jornada": 8,
-    "cerrada": false,
+    "cerrada": true,
     "resultado_jornada": {
         "ganadores": [
             {
@@ -19,18 +19,10 @@
                 "nombre": "Adrián"
             }
         ],
-        "ganador_seguro": false,
-        "perdedor_seguro": false
+        "ganador_seguro": true,
+        "perdedor_seguro": true
     },
     "partidos": [
-        {
-            "id": 16421062,
-            "local": "Málaga CF",
-            "visitante": "Espanyol",
-            "id_escudo_local": 2830,
-            "id_escudo_visitante": 2814,
-            "fecha": "2026-10-09T21:00:00"
-        },
         {
             "id": 16421056,
             "local": "Alavés",
