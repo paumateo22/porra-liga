@@ -575,6 +575,14 @@
     ],
     "J08": [
         {
+            "id": 16421062,
+            "local": "Málaga CF",
+            "visitante": "Espanyol",
+            "id_escudo_local": 2830,
+            "id_escudo_visitante": 2814,
+            "fecha": "2026-10-09T21:00:00"
+        },
+        {
             "id": 16421056,
             "local": "Alavés",
             "visitante": "Atlético",
@@ -2255,14 +2263,6 @@
             "fecha": "2027-03-14T20:00:00"
         },
         {
-            "id": 16462685,
-            "local": "Málaga CF",
-            "visitante": "Rayo",
-            "id_escudo_local": 2830,
-            "id_escudo_visitante": 2818,
-            "fecha": "2027-03-14T20:00:00"
-        },
-        {
             "id": 16462686,
             "local": "Osasuna",
             "visitante": "Celta",
@@ -2720,14 +2720,6 @@
             "visitante": "Sevilla",
             "id_escudo_local": 2821,
             "id_escudo_visitante": 2833,
-            "fecha": "2027-05-02T21:00:00"
-        },
-        {
-            "id": 16462563,
-            "local": "Deportivo de A Coruña",
-            "visitante": "Real Racing Club",
-            "id_escudo_local": 2832,
-            "id_escudo_visitante": 2835,
             "fecha": "2027-05-02T21:00:00"
         },
         {
