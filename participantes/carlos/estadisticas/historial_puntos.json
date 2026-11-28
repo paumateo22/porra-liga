@@ -2,16 +2,16 @@
     "participante": "carlos",
     "nombre": "Carlos",
     "insignias": [],
-    "puntos_totales": 64,
-    "puntos_partidos": 65,
+    "puntos_totales": 66,
+    "puntos_partidos": 66,
     "bonus_rendimiento": 0,
-    "puntos_ganador_perdedor": -1,
-    "aciertos_1x2": 56,
+    "puntos_ganador_perdedor": 0,
+    "aciertos_1x2": 57,
     "aciertos_exactos": 9,
     "partidos_pronosticados": 129,
     "jornadas_jugadas": 13,
     "jornadas_ganadas": 3,
-    "jornadas_perdidas": 4,
+    "jornadas_perdidas": 3,
     "punto_partida": 0,
     "por_jornada": {
         "J01": {
@@ -645,13 +645,21 @@
             }
         },
         "J08": {
-            "puntos": 6,
-            "aciertos_1x2": 5,
+            "puntos": 8,
+            "aciertos_1x2": 6,
             "aciertos_exactos": 2,
             "bonus": 0,
             "ganador": false,
-            "perdedor": true,
+            "perdedor": false,
             "detalle": {
+                "Málaga CF_vs_Espanyol": {
+                    "id": 16421062,
+                    "pronostico": "2-2",
+                    "real": "1-1",
+                    "acierto_1x2": true,
+                    "acierto_exacto": false,
+                    "puntos": 1
+                },
                 "Alavés_vs_Atlético": {
                     "id": 16421056,
                     "pronostico": "0-2",

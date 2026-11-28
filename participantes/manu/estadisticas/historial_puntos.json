@@ -472,6 +472,14 @@
             "ganador": false,
             "perdedor": false,
             "detalle": {
+                "Málaga CF_vs_Espanyol": {
+                    "id": 16421062,
+                    "pronostico": "1-2",
+                    "real": "1-1",
+                    "acierto_1x2": false,
+                    "acierto_exacto": false,
+                    "puntos": 0
+                },
                 "Alavés_vs_Atlético": {
                     "id": 16421056,
                     "pronostico": "2-3",
